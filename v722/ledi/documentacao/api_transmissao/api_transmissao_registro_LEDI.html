@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>API para transmissão de registros no formato LEDI</title>
+  <meta name="description" content="1. Objetivo">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/ledi/documentacao/api_transmissao/api_transmissao_registro_LEDI.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 7.2.2</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface" href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a></li>
+          
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.2</a></li>
+          
+        
+          
+            <li><a title="API para transmissão de registros no formato LEDI" href="/ledi/documentacao/api_transmissao/api_transmissao_registro_LEDI.html">API para transmissão de registros no formato LEDI</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface" href="/ledi/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Layout e-SUS APS de Dados e Interface)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 7.2.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.2</a>
+      <ul>
+        
+          <li  class="has-subitems">
+          
+            <a title="Estrutura dos arquivos" href="/ledi/documentacao/estrutura_arquivos/index.html">
+              Estrutura dos arquivos
+            </a>
+          </li>
+        
+          <li  class="has-subitems">
+          
+            <a title="Referências" href="/ledi/documentacao/referencias/index.html">
+              Referências
+            </a>
+          </li>
+        
+          <li  class="has-subitems">
+          
+            <a title="Regras" href="/ledi/documentacao/regras/index.html">
+              Regras
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="API para transmissão de registros no formato LEDI" href="/ledi/documentacao/api_transmissao/api_transmissao_registro_LEDI.html">
+              API para transmissão de registros no formato LEDI
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Registros Thrift / XSD por ficha" href="/ledi/documentacao/thrift-xsd.html">
+              Registros Thrift / XSD por ficha
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Principais alterações entre versões recentes" href="/ledi/documentacao/principais_alteracoes.html">
+              Principais alterações entre versões recentes
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">API para transmissão de registros no formato LEDI</h1>
+    <p class="post-meta">
+      <a class="btn" href="/pdf.html?include=/ledi/documentacao/api_transmissao/api_transmissao_registro_LEDI.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 08/07/2025</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="1-objetivo">1. Objetivo</h1>
+
+<p>Este documento apresenta as etapas necessárias para conseguir enviar registros no formato LEDI via API.</p>
+
+<h1 id="2-gera-o-da-credencial">2. Geração da credencial</h1>
+
+<p><strong>1. </strong> A geração das credenciais deve estar habilitada somente para as instalações que possuam HTTPS configurado.</p>
+
+<p><strong>2. </strong> A geração da credencial deve ser feita pelo Administrador da Instalação no módulo &quot;Integração &gt; Credenciais de integração&quot;. Sendo necessário informar os seguintes dados dos integradores:</p>
+
+<ul>
+<li>Para cadastro de &quot;Pessoa física&quot; o registro deve conter as seguintes informações da pessoa que será responsável pela integração: Nome, CPF, E-mail e Nome da credencial;</li>
+<li>Para cadastro de &quot;Pessoa jurídica&quot; o registro deve conter as seguintes informações da pessoa que será responsável pela integração: Nome, CNPJ, E-mail e Nome da credencial.</li>
+</ul>
+
+<p><strong>3. </strong> Após realizar o cadastro de um integrador o sistema deve gerar o usuário e a senha que serão utilizados na autenticação da API. Sendo o Administrador da Instalação responsável por repassar essas informações para os integradores. Não deve ser possível recuperar um usuário e senha gerados previamente, caso o usuário e a senha sejam perdidos é necessário gerar outra credencial.</p>
+
+<h1 id="3-endpoint-vari-veis-e-respostas-da-api">3. Endpoint, variáveis e respostas da API</h1>
+
+<p><strong>4. </strong> A API possui dois endpoints disponíveis: &quot;[url_instalacao]/api/recebimento/login&quot; e &quot;[url_instalacao]/api/v1/recebimento/ficha&quot;.</p>
+
+<!-- REGRA OCULTA POIS API NÃO FOI PUBLICADA EM PRODUÇÃO - QUANDO RECOLOCAR - NECESSÁRIO VOLTAR O CONTADOR E LINK -->
+
+<!-- Foi criada uma nova link api_autenticacao_v1. Recomenda-se utilizar o novo endpoint para realizar a autenticação, pois ele permite o uso mais amplo das APIs disponíveis. -->
+
+<p><strong>5. </strong> O endpoint &quot;/api/recebimento/login&quot; deve ser utilizado para realizar a autenticação do envio através da requisição do tipo POST. Sendo aceitas as variáveis &quot;usuario&quot; e &quot;senha&quot;. As respostas possíveis são:</p>
+
+<ul>
+<li>Resposta de sucesso: a API deve retornar um cookie chamado &quot;JSESSIONID&quot;. Esse cookie deve ser enviado em requisições futuras como forma de autenticação;</li>
+<li>Resposta de erro: deve ser retornado um código e mensagem do erro.</li>
+</ul>
+
+<p><strong>6. </strong> O endpoint &quot;/api/v1/recebimento/ficha&quot; deve ser utilizado para realizar o envio dos registros no formato LEDI através da requisição do tipo POST. Sendo aceito a variável ficha. O valor da variável deve ser um arquivo serializado em binário e o nome desse arquivo deve ser &quot;uuid do registro eletrônico no formato LEDI&quot; + &quot;.esus&quot;. Segue um exemplo de ficha nomeada corretamente: &quot;0000007-cfdd9b1b-2c4d-4759-b254-76564ec219f3.esus&quot;.</p>
+
+<p><strong>7. </strong> As respostas possíveis para o endpoint &quot;/api/v1/recebimento/ficha&quot; são:</p>
+
+<ul>
+<li>Respostas de sucesso: deve ser retornado o status 200;</li>
+<li>Resposta de erro: deve ser retornado um código e uma mensagem do erro. Informando quais informações devem ser corrigidas para que a ficha seja aceita.</li>
+</ul>
+
+<p><strong>8. </strong> Sugere-se que o erro retornado pela API seja armazenado pelo próprio integrador. Possibilitando assim correção de registros no formato LEDI que foram enviadas com erro.</p>
+
+<h1 id="4-reposit-rio-p-blico-no-github-com-exemplos-de-serializa-o-e-envio-de-informa-es-via-api">4. Repositório público no Github com exemplos de serialização e envio de informações via API</h1>
+
+<p><strong>9. </strong> O <a href="https://github.com/laboratoriobridge/esusab-integracao/tree/master/thrift-exemplo">repositório</a> contém explicações detalhadas sobre como serializar os registros e transmiti-los via API de transmissão. Serão disponibilizados exemplos na linguagem java.</p>
+
+<h1 id="5-exemplos-de-requisi-o">5. Exemplos de requisição</h1>
+
+<p><img src="img/api_login.png" alt="Protótipo 1 - Requisição POST no endpoint de autenticação" title="Protótipo 1 - Autenticação na API de tramissão de registros no formato LEDI"> <em>Protótipo 1 - Requisição POST no endpoint de autenticação</em></p>
+
+<p><img src="img/api_recebimento_ficha.png" alt="Protótipo 2 - Requisição POST para envio de registros no formato LEDI " title="Protótipo 2 - Envio de registros no formato LEDI através da API de tramissão de registros no formato LEDI"> <em>Protótipo 2 - Requisição POST para envio de registros no formato LEDI</em></p>
+
+<h1 id="6-fluxograma">6. Fluxograma</h1>
+
+<p><strong>10. </strong> O propósito desse fluxograma é facilitar a compreensão do funcionamento da API. </p>
+
+<p><img src="img/fluxo_api_recebimento.png" alt="Fluxograma 1 - Fluxograma para facilitar a compreensão do funcionamento da API " title="Fluxograma 1 - Fluxograma para facilitar a compreensão do funcionamento da API"> <em>Fluxograma 1 - Fluxograma para facilitar a compreensão do funcionamento da API</em></p>
+
+<h1 id="7-dicion-rio-de-dados">7. Dicionário de dados</h1>
+
+<p><strong>11. </strong> Relação de endpoint, tipos de requisição e parâmetros:</p>
+
+<table><thead>
+<tr>
+<th>Endpoint</th>
+<th>Tipo de requisição</th>
+<th>Parâmetros</th>
+<th>Observação</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>api/recebimento/login</td>
+<td>POST</td>
+<td>usuario</td>
+<td>Utilizando o usuário fornecido nas credenciais geradas pelo PEC para a autenticação da API</td>
+</tr>
+<tr>
+<td>api/recebimento/login</td>
+<td>POST</td>
+<td>senha</td>
+<td>Utilizando a senha fornecida nas credenciais geradas pelo PEC para a autenticação da API</td>
+</tr>
+<tr>
+<td>api/v1/recebimento/ficha</td>
+<td>POST</td>
+<td>ficha</td>
+<td>Enviar o path dos modelos de informação do LEDI  na requisição. O nome do arquivo deve ser “uuidDadoSerializado”, que está presente no modelo de informação</td>
+</tr>
+</tbody></table>
+
+<p><strong>12. </strong> Erros que podem ser retornados pelo endpoint &quot;/api/recebimento/login&quot;:</p>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Mensagem</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Serviço indisponível</td>
+<td>Ocorre quando a flag relacionada a API de transmissão está inativa</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Usuário ou senha inválidos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Credencial inativa</td>
+<td>-</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Essa instalação foi desativada. Para acessar a nova instalação é necessário acessar o link: [NOVO_LINK_UNIFICACAO_BASE]</td>
+<td>Ocorre quando a instalação foi unificada</td>
+</tr>
+</tbody></table>
+
+<p><strong>13. </strong> Erros que podem ser retornados pelo endpoint &quot;/api/v1/recebimento/ficha&quot;:</p>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Mensagem</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Erro de validação</td>
+<td>Ocorre quando a ficha possui erros de validação em relação ao LEDI</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Várias, vai sinalizar erro com o formato do arquivo recebido</td>
+<td>Ocorre ao tentar deserializar o arquivo em thrift ou xml. Exemplo de erro: sistema recebe um arquivo zip que não é esperado</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Erro ao desserializar ficha</td>
+<td>Ocorre quando acontece um erro inesperado na deserialização de um arquivo thrift</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Erro ao ler ficha</td>
+<td>Ocorre quando acontece um erro ao tentar ler bytes recebidos da ficha</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Erro inesperado ao receber ficha</td>
+<td>Ocorre em quaisquer outros erros não mapeados acima</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/js/lunr.min.js"></script>
+
+    <script src="/js/site.js" type="text/javascript"></script>    
+    <script src="/js/search-index.js" type="text/javascript"></script>
+    <script src="/js/busca.js"></script>
+  </body>
+</html>
