@@ -41,7 +41,7 @@
 
       searchResults.innerHTML += appendString;
     } else {
-      searchResults.innerHTML += '<div align="center"><img src="/img/searchNoResults.png"></div>';
+      searchResults.innerHTML += '<div align="center"><img src="/v722/img/searchNoResults.png"></div>';
     }
   }
 
