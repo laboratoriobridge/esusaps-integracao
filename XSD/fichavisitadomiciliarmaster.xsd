@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaVisitaDomiciliarChild="http://esus.ufsc.br/fichavisitadomiciliarchild" xmlns:fichaVisitaDomiciliarMaster="http://esus.ufsc.br/fichavisitadomiciliarmaster" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/unicalotacaoheader" targetNamespace="http://esus.ufsc.br/fichavisitadomiciliarmaster" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fichaVisitaDomiciliarChild="http://esus.ufsc.br/fichavisitadomiciliarchild" xmlns:fichaVisitaDomiciliarMaster="http://esus.ufsc.br/fichavisitadomiciliarmaster" xmlns:ivcf="http://esus.ufsc.br/ivcf" xmlns:unicaLotacaoHeader="http://esus.ufsc.br/unicalotacaoheader" targetNamespace="http://esus.ufsc.br/fichavisitadomiciliarmaster" version="1.0">
 
   <xs:import namespace="http://esus.ufsc.br/unicalotacaoheader" schemaLocation="unicalotacaoheader.xsd"/>
+
+  <xs:import namespace="http://esus.ufsc.br/ivcf" schemaLocation="ivcf.xsd"/>
 
   <xs:import namespace="http://esus.ufsc.br/fichavisitadomiciliarchild" schemaLocation="fichavisitadomiciliarchild.xsd"/>
 

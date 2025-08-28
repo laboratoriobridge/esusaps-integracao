@@ -31,6 +31,7 @@ struct FichaVisitaDomiciliarChildThrift {
 	20:optional double latitude;
 	21:optional double longitude;
 	22:optional string uuidOrigemCadastroDomiciliar;
+	23:optional common.IvcfThrift ivcf;
 }
 
 struct FichaVisitaDomiciliarMasterThrift {

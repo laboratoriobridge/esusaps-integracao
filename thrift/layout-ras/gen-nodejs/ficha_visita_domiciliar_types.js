@@ -34,6 +34,7 @@ FichaVisitaDomiciliarChildThrift = module.exports.FichaVisitaDomiciliarChildThri
   this.latitude = null;
   this.longitude = null;
   this.uuidOrigemCadastroDomiciliar = null;
+  this.ivcf = null;
   if (args) {
     if (args.turno !== undefined && args.turno !== null) {
       this.turno = args.turno;
@@ -100,6 +101,9 @@ FichaVisitaDomiciliarChildThrift = module.exports.FichaVisitaDomiciliarChildThri
     }
     if (args.uuidOrigemCadastroDomiciliar !== undefined && args.uuidOrigemCadastroDomiciliar !== null) {
       this.uuidOrigemCadastroDomiciliar = args.uuidOrigemCadastroDomiciliar;
+    }
+    if (args.ivcf !== undefined && args.ivcf !== null) {
+      this.ivcf = new common_ttypes.IvcfThrift(args.ivcf);
     }
   }
 };
@@ -284,6 +288,14 @@ FichaVisitaDomiciliarChildThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 23:
+      if (ftype == Thrift.Type.STRUCT) {
+        this.ivcf = new common_ttypes.IvcfThrift();
+        this.ivcf.read(input);
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -412,6 +424,11 @@ FichaVisitaDomiciliarChildThrift.prototype.write = function(output) {
   if (this.uuidOrigemCadastroDomiciliar !== null && this.uuidOrigemCadastroDomiciliar !== undefined) {
     output.writeFieldBegin('uuidOrigemCadastroDomiciliar', Thrift.Type.STRING, 22);
     output.writeString(this.uuidOrigemCadastroDomiciliar);
+    output.writeFieldEnd();
+  }
+  if (this.ivcf !== null && this.ivcf !== undefined) {
+    output.writeFieldBegin('ivcf', Thrift.Type.STRUCT, 23);
+    this.ivcf.write(output);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

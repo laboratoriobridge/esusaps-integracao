@@ -44,6 +44,7 @@ class FichaVisitaDomiciliarChildThrift:
    - latitude
    - longitude
    - uuidOrigemCadastroDomiciliar
+   - ivcf
   """
 
   thrift_spec = (
@@ -70,9 +71,10 @@ class FichaVisitaDomiciliarChildThrift:
     (20, TType.DOUBLE, 'latitude', None, None, ), # 20
     (21, TType.DOUBLE, 'longitude', None, None, ), # 21
     (22, TType.STRING, 'uuidOrigemCadastroDomiciliar', None, None, ), # 22
+    (23, TType.STRUCT, 'ivcf', (br.gov.saude.esusab.ras.common.ttypes.IvcfThrift, br.gov.saude.esusab.ras.common.ttypes.IvcfThrift.thrift_spec), None, ), # 23
   )
 
-  def __init__(self, turno=None, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, statusVisitaCompartilhadaOutroProfissional=None, motivosVisita=None, desfecho=None, microArea=None, stForaArea=None, tipoDeImovel=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, cpfCidadao=None, pressaoSistolica=None, pressaoDiastolica=None, temperatura=None, tipoGlicemia=None, glicemia=None, latitude=None, longitude=None, uuidOrigemCadastroDomiciliar=None,):
+  def __init__(self, turno=None, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, statusVisitaCompartilhadaOutroProfissional=None, motivosVisita=None, desfecho=None, microArea=None, stForaArea=None, tipoDeImovel=None, pesoAcompanhamentoNutricional=None, alturaAcompanhamentoNutricional=None, cpfCidadao=None, pressaoSistolica=None, pressaoDiastolica=None, temperatura=None, tipoGlicemia=None, glicemia=None, latitude=None, longitude=None, uuidOrigemCadastroDomiciliar=None, ivcf=None,):
     self.turno = turno
     self.numProntuario = numProntuario
     self.cnsCidadao = cnsCidadao
@@ -95,6 +97,7 @@ class FichaVisitaDomiciliarChildThrift:
     self.latitude = latitude
     self.longitude = longitude
     self.uuidOrigemCadastroDomiciliar = uuidOrigemCadastroDomiciliar
+    self.ivcf = ivcf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -220,6 +223,12 @@ class FichaVisitaDomiciliarChildThrift:
           self.uuidOrigemCadastroDomiciliar = iprot.readString()
         else:
           iprot.skip(ftype)
+      elif fid == 23:
+        if ftype == TType.STRUCT:
+          self.ivcf = br.gov.saude.esusab.ras.common.ttypes.IvcfThrift()
+          self.ivcf.read(iprot)
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -321,6 +330,10 @@ class FichaVisitaDomiciliarChildThrift:
       oprot.writeFieldBegin('uuidOrigemCadastroDomiciliar', TType.STRING, 22)
       oprot.writeString(self.uuidOrigemCadastroDomiciliar)
       oprot.writeFieldEnd()
+    if self.ivcf is not None:
+      oprot.writeFieldBegin('ivcf', TType.STRUCT, 23)
+      self.ivcf.write(oprot)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -352,6 +365,7 @@ class FichaVisitaDomiciliarChildThrift:
     value = (value * 31) ^ hash(self.latitude)
     value = (value * 31) ^ hash(self.longitude)
     value = (value * 31) ^ hash(self.uuidOrigemCadastroDomiciliar)
+    value = (value * 31) ^ hash(self.ivcf)
     return value
 
   def __repr__(self):

@@ -75,6 +75,8 @@ type
     procedure SetLongitude( const Value: Double);
     function GetUuidOrigemCadastroDomiciliar: string;
     procedure SetUuidOrigemCadastroDomiciliar( const Value: string);
+    function GetIvcf: IIvcfThrift;
+    procedure SetIvcf( const Value: IIvcfThrift);
 
     property Turno: Int64 read GetTurno write SetTurno;
     property NumProntuario: string read GetNumProntuario write SetNumProntuario;
@@ -98,6 +100,7 @@ type
     property Latitude: Double read GetLatitude write SetLatitude;
     property Longitude: Double read GetLongitude write SetLongitude;
     property UuidOrigemCadastroDomiciliar: string read GetUuidOrigemCadastroDomiciliar write SetUuidOrigemCadastroDomiciliar;
+    property Ivcf: IIvcfThrift read GetIvcf write SetIvcf;
 
     function Get__isset_Turno: Boolean;
     function Get__isset_NumProntuario: Boolean;
@@ -121,6 +124,7 @@ type
     function Get__isset_Latitude: Boolean;
     function Get__isset_Longitude: Boolean;
     function Get__isset_UuidOrigemCadastroDomiciliar: Boolean;
+    function Get__isset_Ivcf: Boolean;
 
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
@@ -144,6 +148,7 @@ type
     property __isset_Latitude: Boolean read Get__isset_Latitude;
     property __isset_Longitude: Boolean read Get__isset_Longitude;
     property __isset_UuidOrigemCadastroDomiciliar: Boolean read Get__isset_UuidOrigemCadastroDomiciliar;
+    property __isset_Ivcf: Boolean read Get__isset_Ivcf;
   end;
 
   TFichaVisitaDomiciliarChildThriftImpl = class(TInterfacedObject, IBase, IFichaVisitaDomiciliarChildThrift)
@@ -170,6 +175,7 @@ type
     FLatitude: Double;
     FLongitude: Double;
     FUuidOrigemCadastroDomiciliar: string;
+    FIvcf: IIvcfThrift;
     
     F__isset_Turno: Boolean;
     F__isset_NumProntuario: Boolean;
@@ -193,6 +199,7 @@ type
     F__isset_Latitude: Boolean;
     F__isset_Longitude: Boolean;
     F__isset_UuidOrigemCadastroDomiciliar: Boolean;
+    F__isset_Ivcf: Boolean;
     
     function GetTurno: Int64;
     procedure SetTurno( const Value: Int64);
@@ -238,6 +245,8 @@ type
     procedure SetLongitude( const Value: Double);
     function GetUuidOrigemCadastroDomiciliar: string;
     procedure SetUuidOrigemCadastroDomiciliar( const Value: string);
+    function GetIvcf: IIvcfThrift;
+    procedure SetIvcf( const Value: IIvcfThrift);
 
     function Get__isset_Turno: Boolean;
     function Get__isset_NumProntuario: Boolean;
@@ -261,6 +270,7 @@ type
     function Get__isset_Latitude: Boolean;
     function Get__isset_Longitude: Boolean;
     function Get__isset_UuidOrigemCadastroDomiciliar: Boolean;
+    function Get__isset_Ivcf: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -294,6 +304,7 @@ type
     property Latitude: Double read GetLatitude write SetLatitude;
     property Longitude: Double read GetLongitude write SetLongitude;
     property UuidOrigemCadastroDomiciliar: string read GetUuidOrigemCadastroDomiciliar write SetUuidOrigemCadastroDomiciliar;
+    property Ivcf: IIvcfThrift read GetIvcf write SetIvcf;
 
     // isset
     property __isset_Turno: Boolean read Get__isset_Turno;
@@ -318,6 +329,7 @@ type
     property __isset_Latitude: Boolean read Get__isset_Latitude;
     property __isset_Longitude: Boolean read Get__isset_Longitude;
     property __isset_UuidOrigemCadastroDomiciliar: Boolean read Get__isset_UuidOrigemCadastroDomiciliar;
+    property __isset_Ivcf: Boolean read Get__isset_Ivcf;
   end;
 
   IFichaVisitaDomiciliarMasterThrift = interface(IBase)
@@ -753,6 +765,22 @@ begin
   Result := F__isset_UuidOrigemCadastroDomiciliar;
 end;
 
+function TFichaVisitaDomiciliarChildThriftImpl.GetIvcf: IIvcfThrift;
+begin
+  Result := FIvcf;
+end;
+
+procedure TFichaVisitaDomiciliarChildThriftImpl.SetIvcf( const Value: IIvcfThrift);
+begin
+  F__isset_Ivcf := True;
+  FIvcf := Value;
+end;
+
+function TFichaVisitaDomiciliarChildThriftImpl.Get__isset_Ivcf: Boolean;
+begin
+  Result := F__isset_Ivcf;
+end;
+
 procedure TFichaVisitaDomiciliarChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -974,6 +1002,16 @@ begin
           if (field_.Type_ = TType.String_) then
           begin
             UuidOrigemCadastroDomiciliar := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        23: begin
+          if (field_.Type_ = TType.Struct) then
+          begin
+            Ivcf := TIvcfThriftImpl.Create;
+            Ivcf.Read(iprot);
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1206,6 +1244,15 @@ begin
     oprot.WriteString(UuidOrigemCadastroDomiciliar);
     oprot.WriteFieldEnd();
   end;
+  if (Ivcf <> nil) and __isset_Ivcf then
+  begin
+    field_.Name := 'ivcf';
+    field_.Type_  := TType.Struct;
+    field_.ID := 23;
+    oprot.WriteFieldBegin(field_);
+    Ivcf.Write(oprot);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1349,6 +1396,12 @@ begin
       _first6 := FALSE;
       _sb5.Append('UuidOrigemCadastroDomiciliar: ');
       _sb5.Append(UuidOrigemCadastroDomiciliar);
+    end;
+    if (Ivcf <> nil) and __isset_Ivcf then begin
+      if not _first6 then _sb5.Append(',');
+      _first6 := FALSE;
+      _sb5.Append('Ivcf: ');
+      if (Ivcf = nil) then _sb5.Append('<null>') else _sb5.Append(Ivcf.ToString());
     end;
     _sb5.Append(')');
     Result := _sb5.ToString;

@@ -41,29 +41,31 @@ var GoUnusedProtection__ int
 //  - Latitude
 //  - Longitude
 //  - UuidOrigemCadastroDomiciliar
+//  - Ivcf
 type FichaVisitaDomiciliarChildThrift struct {
-	Turno                                      *int64   `thrift:"turno,1" json:"turno,omitempty"`
-	NumProntuario                              *string  `thrift:"numProntuario,2" json:"numProntuario,omitempty"`
-	CnsCidadao                                 *string  `thrift:"cnsCidadao,3" json:"cnsCidadao,omitempty"`
-	DtNascimento                               *int64   `thrift:"dtNascimento,4" json:"dtNascimento,omitempty"`
-	Sexo                                       *int64   `thrift:"sexo,5" json:"sexo,omitempty"`
-	StatusVisitaCompartilhadaOutroProfissional *bool    `thrift:"statusVisitaCompartilhadaOutroProfissional,6" json:"statusVisitaCompartilhadaOutroProfissional,omitempty"`
-	MotivosVisita                              []int64  `thrift:"motivosVisita,7" json:"motivosVisita,omitempty"`
-	Desfecho                                   *int64   `thrift:"desfecho,8" json:"desfecho,omitempty"`
-	MicroArea                                  *string  `thrift:"microArea,9" json:"microArea,omitempty"`
-	StForaArea                                 *bool    `thrift:"stForaArea,10" json:"stForaArea,omitempty"`
-	TipoDeImovel                               *int64   `thrift:"tipoDeImovel,11" json:"tipoDeImovel,omitempty"`
-	PesoAcompanhamentoNutricional              *float64 `thrift:"pesoAcompanhamentoNutricional,12" json:"pesoAcompanhamentoNutricional,omitempty"`
-	AlturaAcompanhamentoNutricional            *float64 `thrift:"alturaAcompanhamentoNutricional,13" json:"alturaAcompanhamentoNutricional,omitempty"`
-	CpfCidadao                                 *string  `thrift:"cpfCidadao,14" json:"cpfCidadao,omitempty"`
-	PressaoSistolica                           *int32   `thrift:"pressaoSistolica,15" json:"pressaoSistolica,omitempty"`
-	PressaoDiastolica                          *int32   `thrift:"pressaoDiastolica,16" json:"pressaoDiastolica,omitempty"`
-	Temperatura                                *float64 `thrift:"temperatura,17" json:"temperatura,omitempty"`
-	TipoGlicemia                               *int64   `thrift:"tipoGlicemia,18" json:"tipoGlicemia,omitempty"`
-	Glicemia                                   *int32   `thrift:"glicemia,19" json:"glicemia,omitempty"`
-	Latitude                                   *float64 `thrift:"latitude,20" json:"latitude,omitempty"`
-	Longitude                                  *float64 `thrift:"longitude,21" json:"longitude,omitempty"`
-	UuidOrigemCadastroDomiciliar               *string  `thrift:"uuidOrigemCadastroDomiciliar,22" json:"uuidOrigemCadastroDomiciliar,omitempty"`
+	Turno                                      *int64             `thrift:"turno,1" json:"turno,omitempty"`
+	NumProntuario                              *string            `thrift:"numProntuario,2" json:"numProntuario,omitempty"`
+	CnsCidadao                                 *string            `thrift:"cnsCidadao,3" json:"cnsCidadao,omitempty"`
+	DtNascimento                               *int64             `thrift:"dtNascimento,4" json:"dtNascimento,omitempty"`
+	Sexo                                       *int64             `thrift:"sexo,5" json:"sexo,omitempty"`
+	StatusVisitaCompartilhadaOutroProfissional *bool              `thrift:"statusVisitaCompartilhadaOutroProfissional,6" json:"statusVisitaCompartilhadaOutroProfissional,omitempty"`
+	MotivosVisita                              []int64            `thrift:"motivosVisita,7" json:"motivosVisita,omitempty"`
+	Desfecho                                   *int64             `thrift:"desfecho,8" json:"desfecho,omitempty"`
+	MicroArea                                  *string            `thrift:"microArea,9" json:"microArea,omitempty"`
+	StForaArea                                 *bool              `thrift:"stForaArea,10" json:"stForaArea,omitempty"`
+	TipoDeImovel                               *int64             `thrift:"tipoDeImovel,11" json:"tipoDeImovel,omitempty"`
+	PesoAcompanhamentoNutricional              *float64           `thrift:"pesoAcompanhamentoNutricional,12" json:"pesoAcompanhamentoNutricional,omitempty"`
+	AlturaAcompanhamentoNutricional            *float64           `thrift:"alturaAcompanhamentoNutricional,13" json:"alturaAcompanhamentoNutricional,omitempty"`
+	CpfCidadao                                 *string            `thrift:"cpfCidadao,14" json:"cpfCidadao,omitempty"`
+	PressaoSistolica                           *int32             `thrift:"pressaoSistolica,15" json:"pressaoSistolica,omitempty"`
+	PressaoDiastolica                          *int32             `thrift:"pressaoDiastolica,16" json:"pressaoDiastolica,omitempty"`
+	Temperatura                                *float64           `thrift:"temperatura,17" json:"temperatura,omitempty"`
+	TipoGlicemia                               *int64             `thrift:"tipoGlicemia,18" json:"tipoGlicemia,omitempty"`
+	Glicemia                                   *int32             `thrift:"glicemia,19" json:"glicemia,omitempty"`
+	Latitude                                   *float64           `thrift:"latitude,20" json:"latitude,omitempty"`
+	Longitude                                  *float64           `thrift:"longitude,21" json:"longitude,omitempty"`
+	UuidOrigemCadastroDomiciliar               *string            `thrift:"uuidOrigemCadastroDomiciliar,22" json:"uuidOrigemCadastroDomiciliar,omitempty"`
+	Ivcf                                       *common.IvcfThrift `thrift:"ivcf,23" json:"ivcf,omitempty"`
 }
 
 func NewFichaVisitaDomiciliarChildThrift() *FichaVisitaDomiciliarChildThrift {
@@ -264,6 +266,15 @@ func (p *FichaVisitaDomiciliarChildThrift) GetUuidOrigemCadastroDomiciliar() str
 	}
 	return *p.UuidOrigemCadastroDomiciliar
 }
+
+var FichaVisitaDomiciliarChildThrift_Ivcf_DEFAULT *common.IvcfThrift
+
+func (p *FichaVisitaDomiciliarChildThrift) GetIvcf() *common.IvcfThrift {
+	if !p.IsSetIvcf() {
+		return FichaVisitaDomiciliarChildThrift_Ivcf_DEFAULT
+	}
+	return p.Ivcf
+}
 func (p *FichaVisitaDomiciliarChildThrift) IsSetTurno() bool {
 	return p.Turno != nil
 }
@@ -350,6 +361,10 @@ func (p *FichaVisitaDomiciliarChildThrift) IsSetLongitude() bool {
 
 func (p *FichaVisitaDomiciliarChildThrift) IsSetUuidOrigemCadastroDomiciliar() bool {
 	return p.UuidOrigemCadastroDomiciliar != nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) IsSetIvcf() bool {
+	return p.Ivcf != nil
 }
 
 func (p *FichaVisitaDomiciliarChildThrift) Read(iprot thrift.TProtocol) error {
@@ -452,6 +467,10 @@ func (p *FichaVisitaDomiciliarChildThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 22:
 			if err := p.readField22(iprot); err != nil {
+				return err
+			}
+		case 23:
+			if err := p.readField23(iprot); err != nil {
 				return err
 			}
 		default:
@@ -680,6 +699,14 @@ func (p *FichaVisitaDomiciliarChildThrift) readField22(iprot thrift.TProtocol) e
 	return nil
 }
 
+func (p *FichaVisitaDomiciliarChildThrift) readField23(iprot thrift.TProtocol) error {
+	p.Ivcf = &common.IvcfThrift{}
+	if err := p.Ivcf.Read(iprot); err != nil {
+		return thrift.PrependError(fmt.Sprintf("%T error reading struct: ", p.Ivcf), err)
+	}
+	return nil
+}
+
 func (p *FichaVisitaDomiciliarChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaVisitaDomiciliarChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -748,6 +775,9 @@ func (p *FichaVisitaDomiciliarChildThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField22(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField23(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -1092,6 +1122,21 @@ func (p *FichaVisitaDomiciliarChildThrift) writeField22(oprot thrift.TProtocol) 
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 22:uuidOrigemCadastroDomiciliar: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) writeField23(oprot thrift.TProtocol) (err error) {
+	if p.IsSetIvcf() {
+		if err := oprot.WriteFieldBegin("ivcf", thrift.STRUCT, 23); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 23:ivcf: ", p), err)
+		}
+		if err := p.Ivcf.Write(oprot); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T error writing struct: ", p.Ivcf), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 23:ivcf: ", p), err)
 		}
 	}
 	return err

@@ -45,6 +45,7 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
     private double _latitude;
     private double _longitude;
     private string _uuidOrigemCadastroDomiciliar;
+    private br.gov.saude.esusab.ras.common.IvcfThrift _ivcf;
 
     public long Turno
     {
@@ -332,6 +333,19 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
       }
     }
 
+    public br.gov.saude.esusab.ras.common.IvcfThrift Ivcf
+    {
+      get
+      {
+        return _ivcf;
+      }
+      set
+      {
+        __isset.ivcf = true;
+        this._ivcf = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -360,6 +374,7 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
       public bool latitude;
       public bool longitude;
       public bool uuidOrigemCadastroDomiciliar;
+      public bool ivcf;
     }
 
     public FichaVisitaDomiciliarChildThrift() {
@@ -540,6 +555,14 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
             case 22:
               if (field.Type == TType.String) {
                 UuidOrigemCadastroDomiciliar = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 23:
+              if (field.Type == TType.Struct) {
+                Ivcf = new br.gov.saude.esusab.ras.common.IvcfThrift();
+                Ivcf.Read(iprot);
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -748,6 +771,14 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
           oprot.WriteString(UuidOrigemCadastroDomiciliar);
           oprot.WriteFieldEnd();
         }
+        if (Ivcf != null && __isset.ivcf) {
+          field.Name = "ivcf";
+          field.Type = TType.Struct;
+          field.ID = 23;
+          oprot.WriteFieldBegin(field);
+          Ivcf.Write(oprot);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -891,6 +922,12 @@ namespace br.gov.saude.esusab.ras.visitadomiciliar
         __first = false;
         __sb.Append("UuidOrigemCadastroDomiciliar: ");
         __sb.Append(UuidOrigemCadastroDomiciliar);
+      }
+      if (Ivcf != null && __isset.ivcf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("Ivcf: ");
+        __sb.Append(Ivcf== null ? "<null>" : Ivcf.ToString());
       }
       __sb.Append(")");
       return __sb.ToString();

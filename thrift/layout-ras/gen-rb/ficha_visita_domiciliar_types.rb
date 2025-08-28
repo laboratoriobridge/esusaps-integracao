@@ -38,6 +38,7 @@ module Br
               LATITUDE = 20
               LONGITUDE = 21
               UUIDORIGEMCADASTRODOMICILIAR = 22
+              IVCF = 23
 
               FIELDS = {
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
@@ -61,7 +62,8 @@ module Br
                 GLICEMIA => {:type => ::Thrift::Types::I32, :name => 'glicemia', :optional => true},
                 LATITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'latitude', :optional => true},
                 LONGITUDE => {:type => ::Thrift::Types::DOUBLE, :name => 'longitude', :optional => true},
-                UUIDORIGEMCADASTRODOMICILIAR => {:type => ::Thrift::Types::STRING, :name => 'uuidOrigemCadastroDomiciliar', :optional => true}
+                UUIDORIGEMCADASTRODOMICILIAR => {:type => ::Thrift::Types::STRING, :name => 'uuidOrigemCadastroDomiciliar', :optional => true},
+                IVCF => {:type => ::Thrift::Types::STRUCT, :name => 'ivcf', :class => ::Br::Gov::Saude::Esusab::Ras::Common::IvcfThrift, :optional => true}
               }
 
               def struct_fields; FIELDS; end

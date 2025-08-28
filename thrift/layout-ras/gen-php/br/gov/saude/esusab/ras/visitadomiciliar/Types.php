@@ -108,6 +108,10 @@ class FichaVisitaDomiciliarChildThrift {
    * @var string
    */
   public $uuidOrigemCadastroDomiciliar = null;
+  /**
+   * @var \br\gov\saude\esusab\ras\common\IvcfThrift
+   */
+  public $ivcf = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -204,6 +208,11 @@ class FichaVisitaDomiciliarChildThrift {
           'var' => 'uuidOrigemCadastroDomiciliar',
           'type' => TType::STRING,
           ),
+        23 => array(
+          'var' => 'ivcf',
+          'type' => TType::STRUCT,
+          'class' => '\br\gov\saude\esusab\ras\common\IvcfThrift',
+          ),
         );
     }
     if (is_array($vals)) {
@@ -272,6 +281,9 @@ class FichaVisitaDomiciliarChildThrift {
       }
       if (isset($vals['uuidOrigemCadastroDomiciliar'])) {
         $this->uuidOrigemCadastroDomiciliar = $vals['uuidOrigemCadastroDomiciliar'];
+      }
+      if (isset($vals['ivcf'])) {
+        $this->ivcf = $vals['ivcf'];
       }
     }
   }
@@ -459,6 +471,14 @@ class FichaVisitaDomiciliarChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 23:
+          if ($ftype == TType::STRUCT) {
+            $this->ivcf = new \br\gov\saude\esusab\ras\common\IvcfThrift();
+            $xfer += $this->ivcf->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -592,6 +612,14 @@ class FichaVisitaDomiciliarChildThrift {
     if ($this->uuidOrigemCadastroDomiciliar !== null) {
       $xfer += $output->writeFieldBegin('uuidOrigemCadastroDomiciliar', TType::STRING, 22);
       $xfer += $output->writeString($this->uuidOrigemCadastroDomiciliar);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->ivcf !== null) {
+      if (!is_object($this->ivcf)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('ivcf', TType::STRUCT, 23);
+      $xfer += $this->ivcf->write($output);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://esus.ufsc.br/fichavisitadomiciliarchild" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ivcf="http://esus.ufsc.br/ivcf" targetNamespace="http://esus.ufsc.br/fichavisitadomiciliarchild" version="1.0">
+  
+  <xs:import namespace="http://esus.ufsc.br/ivcf" schemaLocation="ivcf.xsd"/>
 
   <xs:complexType name="fichaVisitaDomiciliarChildTransport">
     <xs:sequence>
@@ -25,6 +27,7 @@
       <xs:element maxOccurs="1" minOccurs="0" name="latitude" type="xs:double"/>
       <xs:element maxOccurs="1" minOccurs="0" name="longitude" type="xs:double"/>
       <xs:element minOccurs="0" name="uuidOrigemCadastroDomiciliar" type="xs:string"/>
+      <xs:element minOccurs="0" name="ivcf" type="ivcf:ivcfTransport"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

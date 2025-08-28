@@ -74,6 +74,23 @@
 			<latitude>89.12345678</latitude>
 			<longitude>179.12345678</longitude>
 			<uuidOrigemCadastroDomiciliar>39ffaee0-9534-478e-9013-b79166da684l</uuidOrigemCadastroDomiciliar>
+			<ivcf>
+				<resultado>1</resultado>
+				<hasSgIdade>true</hasSgIdade>
+				<hasSgPercepcaoSaude>false</hasSgPercepcaoSaude>
+				<hasSgAvdInstrumental>false</hasSgAvdInstrumental>
+				<hasSgAvdBasica>false</hasSgAvdBasica>
+				<hasSgCognicao>false</hasSgCognicao>
+				<hasSgHumor>false</hasSgHumor>
+				<hasSgAlcancePreensaoPinca>false</hasSgAlcancePreensaoPinca>
+				<hasSgCapAerobicaMuscular>false</hasSgCapAerobicaMuscular>
+				<hasSgMarcha>false</hasSgMarcha>
+				<hasSgContinencia>false</hasSgContinencia>
+				<hasSgVisao>false</hasSgVisao>
+				<hasSgAudicao>false</hasSgAudicao>
+				<hasSgComorbidade>false</hasSgComorbidade>
+				<dataResultado>1562511600000</dataResultado> 
+			</ivcf>
 		</visitasDomiciliares>
 		<visitasDomiciliares>
 			<turno>3</turno>
