@@ -39,6 +39,8 @@ namespace br.gov.saude.esusab.ras.vacinacao
     private string _anvisaProtocoloEstudo;
     private string _anvisaProtocoloVersao;
     private string _anvisaNumeroRegistro;
+    private long _viaAdministracao;
+    private long _localAplicacao;
 
     public long Imunobiologico
     {
@@ -248,6 +250,32 @@ namespace br.gov.saude.esusab.ras.vacinacao
       }
     }
 
+    public long ViaAdministracao
+    {
+      get
+      {
+        return _viaAdministracao;
+      }
+      set
+      {
+        __isset.viaAdministracao = true;
+        this._viaAdministracao = value;
+      }
+    }
+
+    public long LocalAplicacao
+    {
+      get
+      {
+        return _localAplicacao;
+      }
+      set
+      {
+        __isset.localAplicacao = true;
+        this._localAplicacao = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -270,6 +298,8 @@ namespace br.gov.saude.esusab.ras.vacinacao
       public bool anvisaProtocoloEstudo;
       public bool anvisaProtocoloVersao;
       public bool anvisaNumeroRegistro;
+      public bool viaAdministracao;
+      public bool localAplicacao;
     }
 
     public VacinaRowThrift() {
@@ -398,6 +428,20 @@ namespace br.gov.saude.esusab.ras.vacinacao
             case 16:
               if (field.Type == TType.String) {
                 AnvisaNumeroRegistro = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 17:
+              if (field.Type == TType.I64) {
+                ViaAdministracao = iprot.ReadI64();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 18:
+              if (field.Type == TType.I64) {
+                LocalAplicacao = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -551,6 +595,22 @@ namespace br.gov.saude.esusab.ras.vacinacao
           oprot.WriteString(AnvisaNumeroRegistro);
           oprot.WriteFieldEnd();
         }
+        if (__isset.viaAdministracao) {
+          field.Name = "viaAdministracao";
+          field.Type = TType.I64;
+          field.ID = 17;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(ViaAdministracao);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.localAplicacao) {
+          field.Name = "localAplicacao";
+          field.Type = TType.I64;
+          field.ID = 18;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(LocalAplicacao);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -658,6 +718,18 @@ namespace br.gov.saude.esusab.ras.vacinacao
         __first = false;
         __sb.Append("AnvisaNumeroRegistro: ");
         __sb.Append(AnvisaNumeroRegistro);
+      }
+      if (__isset.viaAdministracao) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("ViaAdministracao: ");
+        __sb.Append(ViaAdministracao);
+      }
+      if (__isset.localAplicacao) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("LocalAplicacao: ");
+        __sb.Append(LocalAplicacao);
       }
       __sb.Append(")");
       return __sb.ToString();

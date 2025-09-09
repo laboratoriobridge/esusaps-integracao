@@ -26,6 +26,8 @@ struct VacinaRowThrift {
 	14:optional string anvisaProtocoloEstudo;
 	15:optional string anvisaProtocoloVersao;
 	16:optional string anvisaNumeroRegistro;
+	17:optional i64 viaAdministracao;
+	18:optional i64 localAplicacao;
 }
 
 struct FichaVacinacaoChildThrift {

@@ -33,7 +33,7 @@ public class ExemploFichaVacinacaoThrift {
 		dadoTransporteThrift.setDadoSerializado(fichaSerializada);
 
 		// Não esquecer de informar a versão da ficha a ser exportada (não é a versão do e-SUS AB)
-		VersaoThrift versaoThrift = new VersaoThrift(7, 2, 2);
+		VersaoThrift versaoThrift = new VersaoThrift(7, 3, 0);
 		dadoTransporteThrift.setVersao(versaoThrift);
 
 		return dadoTransporteThrift;
@@ -182,13 +182,15 @@ public class ExemploFichaVacinacaoThrift {
 		vacina1.setFabricante("BUILD SUSTAINABILITY");
 		vacina1.setStRegistroAnterior(false);
 		vacina1.setGrupoAtendimento(84);
+		vacina1.setViaAdministracao(1);
+		vacina1.setLocalAplicacao(17);
 		vacina1.setStAplicadoExterior(false);
 		vacina1.setCboPrescritorCodigo2002("225124");
 		vacina1.setCid10MotivoIndicacao("E511");
 		vacina1.setStPesquisaClinica(true);
 		vacina1.setAnvisaNumeroRegistro("ABC123");
-		vacina1.setAnvisaProtocoloEstudoNumeroRegistro("202508");
-		vacina1.setAnvisaProtocoloVersaoNumeroRegistro("V10");
+		vacina1.setAnvisaProtocoloEstudo("202508");
+		vacina1.setAnvisaProtocoloVersao("V10");
 		vacinas1.add(vacina1);
 
 		VacinaRowThrift vacina2 = new VacinaRowThrift();
@@ -198,6 +200,8 @@ public class ExemploFichaVacinacaoThrift {
 		vacina2.setLote("ABC");
 		vacina2.setFabricante("AMERICAN JOIN ULTIMATE");
 		vacina2.setStRegistroAnterior(false);
+		vacina2.setViaAdministracao(5);
+		vacina2.setLocalAplicacao(1);
 		vacina2.setGrupoAtendimento(84);
 		vacina2.setStAplicadoExterior(false);
 		vacina2.setStPesquisaClinica(false);
@@ -232,6 +236,8 @@ private static List<VacinaRowThrift> getVacinas2() {
 		vacina3.setDose(9);
 		vacina3.setLote("ABC");
 		vacina3.setFabricante("AMERICAN JOIN ULTIMATE");
+		vacina3.setViaAdministracao(3);
+		vacina3.setLocalAplicacao(3);
 		vacina3.setStRegistroAnterior(false);
 		vacina3.setGrupoAtendimento(5);
 		vacina3.setStAplicadoExterior(true);
@@ -245,6 +251,8 @@ private static List<VacinaRowThrift> getVacinas2() {
 		vacina4.setLote("ABCD");
 		vacina4.setFabricante("PFIZER/BIONTECH");
 		vacina4.setStRegistroAnterior(false);
+		vacina1.setViaAdministracao(6);
+		vacina1.setLocalAplicacao(6);
 		vacina4.setGrupoAtendimento(95);
 		vacina4.setStAplicadoExterior(false);
 		vacina4.setStPesquisaClinica(false);

@@ -64,6 +64,10 @@ type
     procedure SetAnvisaProtocoloVersao( const Value: string);
     function GetAnvisaNumeroRegistro: string;
     procedure SetAnvisaNumeroRegistro( const Value: string);
+    function GetViaAdministracao: Int64;
+    procedure SetViaAdministracao( const Value: Int64);
+    function GetLocalAplicacao: Int64;
+    procedure SetLocalAplicacao( const Value: Int64);
 
     property Imunobiologico: Int64 read GetImunobiologico write SetImunobiologico;
     property EstrategiaVacinacao: Int64 read GetEstrategiaVacinacao write SetEstrategiaVacinacao;
@@ -81,6 +85,8 @@ type
     property AnvisaProtocoloEstudo: string read GetAnvisaProtocoloEstudo write SetAnvisaProtocoloEstudo;
     property AnvisaProtocoloVersao: string read GetAnvisaProtocoloVersao write SetAnvisaProtocoloVersao;
     property AnvisaNumeroRegistro: string read GetAnvisaNumeroRegistro write SetAnvisaNumeroRegistro;
+    property ViaAdministracao: Int64 read GetViaAdministracao write SetViaAdministracao;
+    property LocalAplicacao: Int64 read GetLocalAplicacao write SetLocalAplicacao;
 
     function Get__isset_Imunobiologico: Boolean;
     function Get__isset_EstrategiaVacinacao: Boolean;
@@ -98,6 +104,8 @@ type
     function Get__isset_AnvisaProtocoloEstudo: Boolean;
     function Get__isset_AnvisaProtocoloVersao: Boolean;
     function Get__isset_AnvisaNumeroRegistro: Boolean;
+    function Get__isset_ViaAdministracao: Boolean;
+    function Get__isset_LocalAplicacao: Boolean;
 
     property __isset_Imunobiologico: Boolean read Get__isset_Imunobiologico;
     property __isset_EstrategiaVacinacao: Boolean read Get__isset_EstrategiaVacinacao;
@@ -115,6 +123,8 @@ type
     property __isset_AnvisaProtocoloEstudo: Boolean read Get__isset_AnvisaProtocoloEstudo;
     property __isset_AnvisaProtocoloVersao: Boolean read Get__isset_AnvisaProtocoloVersao;
     property __isset_AnvisaNumeroRegistro: Boolean read Get__isset_AnvisaNumeroRegistro;
+    property __isset_ViaAdministracao: Boolean read Get__isset_ViaAdministracao;
+    property __isset_LocalAplicacao: Boolean read Get__isset_LocalAplicacao;
   end;
 
   TVacinaRowThriftImpl = class(TInterfacedObject, IBase, IVacinaRowThrift)
@@ -135,6 +145,8 @@ type
     FAnvisaProtocoloEstudo: string;
     FAnvisaProtocoloVersao: string;
     FAnvisaNumeroRegistro: string;
+    FViaAdministracao: Int64;
+    FLocalAplicacao: Int64;
     
     F__isset_Imunobiologico: Boolean;
     F__isset_EstrategiaVacinacao: Boolean;
@@ -152,6 +164,8 @@ type
     F__isset_AnvisaProtocoloEstudo: Boolean;
     F__isset_AnvisaProtocoloVersao: Boolean;
     F__isset_AnvisaNumeroRegistro: Boolean;
+    F__isset_ViaAdministracao: Boolean;
+    F__isset_LocalAplicacao: Boolean;
     
     function GetImunobiologico: Int64;
     procedure SetImunobiologico( const Value: Int64);
@@ -185,6 +199,10 @@ type
     procedure SetAnvisaProtocoloVersao( const Value: string);
     function GetAnvisaNumeroRegistro: string;
     procedure SetAnvisaNumeroRegistro( const Value: string);
+    function GetViaAdministracao: Int64;
+    procedure SetViaAdministracao( const Value: Int64);
+    function GetLocalAplicacao: Int64;
+    procedure SetLocalAplicacao( const Value: Int64);
 
     function Get__isset_Imunobiologico: Boolean;
     function Get__isset_EstrategiaVacinacao: Boolean;
@@ -202,6 +220,8 @@ type
     function Get__isset_AnvisaProtocoloEstudo: Boolean;
     function Get__isset_AnvisaProtocoloVersao: Boolean;
     function Get__isset_AnvisaNumeroRegistro: Boolean;
+    function Get__isset_ViaAdministracao: Boolean;
+    function Get__isset_LocalAplicacao: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -229,6 +249,8 @@ type
     property AnvisaProtocoloEstudo: string read GetAnvisaProtocoloEstudo write SetAnvisaProtocoloEstudo;
     property AnvisaProtocoloVersao: string read GetAnvisaProtocoloVersao write SetAnvisaProtocoloVersao;
     property AnvisaNumeroRegistro: string read GetAnvisaNumeroRegistro write SetAnvisaNumeroRegistro;
+    property ViaAdministracao: Int64 read GetViaAdministracao write SetViaAdministracao;
+    property LocalAplicacao: Int64 read GetLocalAplicacao write SetLocalAplicacao;
 
     // isset
     property __isset_Imunobiologico: Boolean read Get__isset_Imunobiologico;
@@ -247,6 +269,8 @@ type
     property __isset_AnvisaProtocoloEstudo: Boolean read Get__isset_AnvisaProtocoloEstudo;
     property __isset_AnvisaProtocoloVersao: Boolean read Get__isset_AnvisaProtocoloVersao;
     property __isset_AnvisaNumeroRegistro: Boolean read Get__isset_AnvisaNumeroRegistro;
+    property __isset_ViaAdministracao: Boolean read Get__isset_ViaAdministracao;
+    property __isset_LocalAplicacao: Boolean read Get__isset_LocalAplicacao;
   end;
 
   IFichaVacinacaoChildThrift = interface(IBase)
@@ -804,6 +828,38 @@ begin
   Result := F__isset_AnvisaNumeroRegistro;
 end;
 
+function TVacinaRowThriftImpl.GetViaAdministracao: Int64;
+begin
+  Result := FViaAdministracao;
+end;
+
+procedure TVacinaRowThriftImpl.SetViaAdministracao( const Value: Int64);
+begin
+  F__isset_ViaAdministracao := True;
+  FViaAdministracao := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_ViaAdministracao: Boolean;
+begin
+  Result := F__isset_ViaAdministracao;
+end;
+
+function TVacinaRowThriftImpl.GetLocalAplicacao: Int64;
+begin
+  Result := FLocalAplicacao;
+end;
+
+procedure TVacinaRowThriftImpl.SetLocalAplicacao( const Value: Int64);
+begin
+  F__isset_LocalAplicacao := True;
+  FLocalAplicacao := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_LocalAplicacao: Boolean;
+begin
+  Result := F__isset_LocalAplicacao;
+end;
+
 procedure TVacinaRowThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -961,6 +1017,24 @@ begin
           if (field_.Type_ = TType.String_) then
           begin
             AnvisaNumeroRegistro := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        17: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            ViaAdministracao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        18: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            LocalAplicacao := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1131,6 +1205,24 @@ begin
     oprot.WriteString(AnvisaNumeroRegistro);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_ViaAdministracao) then
+  begin
+    field_.Name := 'viaAdministracao';
+    field_.Type_  := TType.I64;
+    field_.ID := 17;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(ViaAdministracao);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_LocalAplicacao) then
+  begin
+    field_.Name := 'localAplicacao';
+    field_.Type_  := TType.I64;
+    field_.ID := 18;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(LocalAplicacao);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1238,6 +1330,18 @@ begin
       _first1 := FALSE;
       _sb0.Append('AnvisaNumeroRegistro: ');
       _sb0.Append(AnvisaNumeroRegistro);
+    end;
+    if (__isset_ViaAdministracao) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('ViaAdministracao: ');
+      _sb0.Append(ViaAdministracao);
+    end;
+    if (__isset_LocalAplicacao) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('LocalAplicacao: ');
+      _sb0.Append(LocalAplicacao);
     end;
     _sb0.Append(')');
     Result := _sb0.ToString;
