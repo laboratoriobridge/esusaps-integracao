@@ -37,14 +37,14 @@
                 <lote>DEF01</lote>
                 <fabricante>BUILD SUSTAINABILITY</fabricante>
                 <grupoAtendimento>84</grupoAtendimento>
-                <viaAdministracao>1</viaAdministracao>
-                <localAplicacao>17</localAplicacao>
                 <stRegistroAnterior>false</stRegistroAnterior>
                 <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
                 <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
                 <cid10MotivoIndicacao>A09</cid10MotivoIndicacao>
                 <stPesquisaClinica>false</stPesquisaClinica>
                 <stAplicadoExterior>false</stAplicadoExterior>
+                <viaAdministracao>1</viaAdministracao>
+                <localAplicacao>17</localAplicacao>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440000</uuidRnds>
             </vacinas>
             <dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
@@ -68,14 +68,14 @@
                 <lote>DEF01</lote>
                 <fabricante>BUILD SUSTAINABILITY</fabricante>
                 <grupoAtendimento>99</grupoAtendimento>
-                <viaAdministracao>5</viaAdministracao>
-                <localAplicacao>1</localAplicacao>
                 <stRegistroAnterior>false</stRegistroAnterior>
                 <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
                 <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
                 <cid10MotivoIndicacao>Z23</cid10MotivoIndicacao>
                 <stPesquisaClinica>false</stPesquisaClinica>
                 <stAplicadoExterior>false</stAplicadoExterior>
+                <viaAdministracao>5</viaAdministracao>
+                <localAplicacao>1</localAplicacao>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440002</uuidRnds>
             </vacinas>
             <vacinas>
@@ -117,8 +117,8 @@
         <nomeOuRazaoSocial>ADMINISTRADOR INSTALAÇÃO</nomeOuRazaoSocial>
         <fone>8216756527</fone>
         <email>prof@esus.br</email>
-        <versaoSistema>5.4.10</versaoSistema>
+        <versaoSistema>5.4.14</versaoSistema>
         <nomeBancoDados>Oracle</nomeBancoDados>
     </ns2:originadora>
-    <versao major="7" minor="2" revision="2"/>
+    <versao major="7" minor="3" revision="0"/>
 </ns3:dadoTransporteTransportXml>
