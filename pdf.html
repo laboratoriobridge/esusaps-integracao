@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.2.3</span>
+        <span class="label">versão 7.3.0</span>
       
     </a>
 
@@ -141,7 +141,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 7.2.3
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 7.3.0
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -2189,7 +2189,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 7.2.3</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 7.3.0</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -3077,8 +3077,13 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>5.4.14 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 7.3.0</a></td>
+<td>09/09/2025</td>
+</tr>
+<tr>
 <td>5.4.12 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 7.2.3</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v723/">LEDI APS 7.2.3</a></td>
 <td>21/08/2025</td>
 </tr>
 <tr>
@@ -3372,17 +3377,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 7.2.3</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 7.3.0</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 7.2.3.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 7.3.0.</p>
 
-<p>A versão <strong>LEDI APS</strong> 7.2.3 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.4.12 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 7.3.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.4.14 ou superior.</p>
 
-<p>Confira as principais alterações na versão 7.2.3 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações na versão 7.3.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -22703,6 +22708,61 @@
 </tbody></table>
 
 <p><strong>Regra:</strong> Só pode ser preenchido e se torna obrigatório se <a href="/ledi/documentacao/estrutura_arquivos/#12-stpesquisaclinica">stPesquisaClinica</a> = <code>true</code>;</p>
+
+<h3 id="16-viaadministracao">#16 viaAdministracao</h3>
+
+<p>Via de administração do imunobiológico aplicado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#viaadministracao">Via de administração</a>.</p>
+
+<h3 id="17-localaplicacao">#17 localAplicacao</h3>
+
+<p>Local em que o imunobiológico foi aplicado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<p>Os dados do campo &quot;Local de aplicação&quot; são validados de acordo com o campo &quot;Via de administração&quot;.</p>
+
+<ul>
+<li>Se <code>Via de administração</code> = <code>Endovenosa</code>, o campo deve ser preenchido com o valor = <code>Rede venosa</code>;</li>
+<li>Se <code>Via de administração</code> = <code>Intramuscular</code> ou <code>Intramuscular Profunda</code>, o campo deve ser preenchido com um dos valores = <code>Vastolateral da coxa direito</code>, <code>Vastolateral da coxa esquerdo</code>, <code>Deltóide direito</code>, <code>Deltóide esquerdo</code>, <code>Dorso glúteo direito</code>, <code>Dorso glúteo esquerdo</code>, <code>Vastolateral da coxa direito</code>, <code>Vastolateral da coxa esquerdo</code>, <code>Ventro glúteo direito</code>, <code>Ventro glúteo esquerdo</code>, <code>Outro</code>;</li>
+<li>Se <code>Via de administração</code> = <code>Intradérmica</code> ou <code>Subcutânea</code>, o campo deve ser preenchido com um dos valores = <code>Face ânterolateral externa da coxa direito</code>, <code>Face ânterolateral externa da coxa esquerdo</code>, <code>Face ânterolateral externo do antebraço direito</code>, <code>Face ânterolateral externo do antebraço esquerdo</code>, <code>Face ânterolateral externa do braço direito</code>, <code>Face ânterolateral externa do braço esquerdo</code>, <code>Face externa superior do braço direito</code>, <code>Face externa superior do braço esquerdo</code>, <code>Face externa inferior do braço direito</code>, <code>Face externa inferior do braço esquerdo</code>, <code>Outro</code>;</li>
+<li>Se <code>Via de administração</code> = <code>Oral</code>, o campo deve ser preenchido com o valor = <code>Boca</code>;</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localaplicacao">Local de aplicação</a>.</p>
 
       </article>
 
@@ -54268,13 +54328,13 @@
 <td>minor</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 2</td>
+<td>Valor único = 3</td>
 </tr>
 <tr>
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 3</td>
+<td>Valor único = 0</td>
 </tr>
 </tbody></table>
 
@@ -66393,122 +66453,122 @@
 </tr>
 <tr>
 <td>59</td>
-<td>Profilaxia/Tratamento com 1 frasco-ampola/ampola</td>
+<td>Profilaxia/Tratamento com 1 unidade</td>
 <td>P/T1</td>
 </tr>
 <tr>
 <td>60</td>
-<td>Profilaxia/Tratamento com 2 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 2 unidades</td>
 <td>P/T2</td>
 </tr>
 <tr>
 <td>61</td>
-<td>Profilaxia/Tratamento com 3 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 3 unidades</td>
 <td>P/T3</td>
 </tr>
 <tr>
 <td>62</td>
-<td>Profilaxia/Tratamento com 4 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 4 unidades</td>
 <td>P/T4</td>
 </tr>
 <tr>
 <td>63</td>
-<td>Profilaxia/Tratamento com 5 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 5 unidades</td>
 <td>P/T5</td>
 </tr>
 <tr>
 <td>64</td>
-<td>Profilaxia/Tratamento com 6 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 6 unidades</td>
 <td>P/T6</td>
 </tr>
 <tr>
 <td>65</td>
-<td>Profilaxia/Tratamento com 7 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 7 unidades</td>
 <td>P/T7</td>
 </tr>
 <tr>
 <td>66</td>
-<td>Profilaxia/Tratamento com 8 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 8 unidades</td>
 <td>P/T8</td>
 </tr>
 <tr>
 <td>67</td>
-<td>Profilaxia/Tratamento com 9 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 9 unidades</td>
 <td>P/T9</td>
 </tr>
 <tr>
 <td>68</td>
-<td>Profilaxia/Tratamento com 10 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 10 unidades</td>
 <td>P/T10</td>
 </tr>
 <tr>
 <td>69</td>
-<td>Profilaxia/Tratamento com 11 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 11 unidades</td>
 <td>P/T11</td>
 </tr>
 <tr>
 <td>70</td>
-<td>Profilaxia/Tratamento com 12 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 12 unidades</td>
 <td>P/T12</td>
 </tr>
 <tr>
 <td>71</td>
-<td>Profilaxia/Tratamento com 13 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 13 unidades</td>
 <td>P/T13</td>
 </tr>
 <tr>
 <td>72</td>
-<td>Profilaxia/Tratamento com 14 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 14 unidades</td>
 <td>P/T14</td>
 </tr>
 <tr>
 <td>73</td>
-<td>Profilaxia/Tratamento com 15 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 15 unidades</td>
 <td>P/T15</td>
 </tr>
 <tr>
 <td>74</td>
-<td>Profilaxia/Tratamento com 16 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 16 unidades</td>
 <td>P/T16</td>
 </tr>
 <tr>
 <td>75</td>
-<td>Profilaxia/Tratamento com 17 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 17 unidades</td>
 <td>P/T17</td>
 </tr>
 <tr>
 <td>76</td>
-<td>Profilaxia/Tratamento com 18 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 18 unidades</td>
 <td>P/T18</td>
 </tr>
 <tr>
 <td>77</td>
-<td>Profilaxia/Tratamento com 19 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 19 unidades</td>
 <td>P/T19</td>
 </tr>
 <tr>
 <td>78</td>
-<td>Profilaxia/Tratamento com 20 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 20 unidades</td>
 <td>P/T20</td>
 </tr>
 <tr>
 <td>79</td>
-<td>Profilaxia/Tratamento com 21 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 21 unidades</td>
 <td>P/T21</td>
 </tr>
 <tr>
 <td>80</td>
-<td>Profilaxia/Tratamento com 22 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 22 unidades</td>
 <td>P/T22</td>
 </tr>
 <tr>
 <td>81</td>
-<td>Profilaxia/Tratamento com 23 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 23 unidades</td>
 <td>P/T23</td>
 </tr>
 <tr>
 <td>82</td>
-<td>Profilaxia/Tratamento com 24 frascos-ampolas/ampolas</td>
+<td>Profilaxia/Tratamento com 24 unidades</td>
 <td>P/T24</td>
 </tr>
 </tbody></table>
@@ -67157,13 +67217,13 @@
 </tr>
 <tr>
 <td>115</td>
-<td>Nirsevimabe 50mg</td>
-<td>NIRSEVIMABE 50mg</td>
+<td>Nirsevimabe 0,5ml</td>
+<td>NIRSEVIMABE 0,5ml</td>
 </tr>
 <tr>
 <td>116</td>
-<td>Nirsevimabe 100mg</td>
-<td>NIRSEVIMABE 100mg</td>
+<td>Nirsevimabe 1,0ml</td>
+<td>NIRSEVIMABE 1,0ml</td>
 </tr>
 </tbody></table>
 
@@ -72920,6 +72980,134 @@
 <tr>
 <td>225350</td>
 <td>Médico neurofisiologista clínico</td>
+</tr>
+</tbody></table>
+
+<h2 id="viaadministracao">viaAdministracao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>ENDOVENOSA</td>
+</tr>
+<tr>
+<td>2</td>
+<td>INTRADÉRMICA</td>
+</tr>
+<tr>
+<td>3</td>
+<td>INTRAMUSCULAR</td>
+</tr>
+<tr>
+<td>4</td>
+<td>INTRAMUSCULAR PROFUNDA</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ORAL</td>
+</tr>
+<tr>
+<td>6</td>
+<td>SUBCUTÂNEA</td>
+</tr>
+</tbody></table>
+
+<h2 id="localaplicacao">localAplicacao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>BOCA</td>
+</tr>
+<tr>
+<td>2</td>
+<td>DELTÓIDE DIREITO</td>
+</tr>
+<tr>
+<td>3</td>
+<td>DELTÓIDE ESQUERDO</td>
+</tr>
+<tr>
+<td>4</td>
+<td>DORSO GLÚTEO DIREITO</td>
+</tr>
+<tr>
+<td>5</td>
+<td>DORSO GLÚTEO ESQUERDO</td>
+</tr>
+<tr>
+<td>6</td>
+<td>FACE ANTEROLATERAL EXTERNA DA COXA DIREITA</td>
+</tr>
+<tr>
+<td>7</td>
+<td>FACE ANTEROLATERAL EXTERNA DA COXA ESQUERDA</td>
+</tr>
+<tr>
+<td>8</td>
+<td>FACE ANTEROLATERAL EXTERNA DO BRAÇO DIREITO</td>
+</tr>
+<tr>
+<td>9</td>
+<td>FACE ANTEROLATERAL EXTERNA DO BRAÇO ESQUERDO</td>
+</tr>
+<tr>
+<td>10</td>
+<td>FACE ANTEROLATERAL EXTERNA DO ANTEBRAÇO DIREITO</td>
+</tr>
+<tr>
+<td>11</td>
+<td>FACE ANTEROLATERAL EXTERNA DO ANTEBRAÇO ESQUERDO</td>
+</tr>
+<tr>
+<td>12</td>
+<td>FACE EXTERNA INFERIOR DO BRAÇO DIREITO</td>
+</tr>
+<tr>
+<td>13</td>
+<td>FACE EXTERNA INFERIOR DO BRAÇO ESQUERDO</td>
+</tr>
+<tr>
+<td>14</td>
+<td>FACE EXTERNA SUPERIOR DO BRAÇO DIREITO</td>
+</tr>
+<tr>
+<td>15</td>
+<td>FACE EXTERNA SUPERIOR DO BRAÇO ESQUERDO</td>
+</tr>
+<tr>
+<td>16</td>
+<td>OUTRO</td>
+</tr>
+<tr>
+<td>17</td>
+<td>REDE VENOSA</td>
+</tr>
+<tr>
+<td>18</td>
+<td>VASTO LATERAL DA COXA DIREITA</td>
+</tr>
+<tr>
+<td>19</td>
+<td>VASTO LATERAL DA COXA ESQUERDA</td>
+</tr>
+<tr>
+<td>20</td>
+<td>VENTRO GLÚTEO DIREITO</td>
+</tr>
+<tr>
+<td>21</td>
+<td>VENTRO GLÚTEO ESQUERDO</td>
 </tr>
 </tbody></table>
 
@@ -111639,19 +111827,27 @@
 </tr>
 <tr>
 <td>115</td>
-<td>Nirsevimabe 50mg</td>
+<td>Nirsevimabe 0,5ml</td>
 <td>2</td>
 <td>Especial</td>
-<td>9</td>
-<td>DU</td>
+<td>59</td>
+<td>P/T1</td>
 </tr>
 <tr>
 <td>116</td>
-<td>Nirsevimabe 100mg</td>
+<td>Nirsevimabe 1,0ml</td>
 <td>2</td>
 <td>Especial</td>
-<td>9</td>
-<td>DU</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Nirsevimabe 1,0ml</td>
+<td>2</td>
+<td>Especial</td>
+<td>60</td>
+<td>P/T2</td>
 </tr>
 </tbody></table>
 
@@ -112316,6 +112512,16 @@
 
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as últimas versões do LEDI APS:</p>
+
+<h2 id="vers-o-7-3-0">Versão 7.3.0</h2>
+
+<h3 id="1-atualiza-es-em-regras-vacinais">1. Atualizações em regras vacinais</h3>
+
+<p>Foram atualizadas as regras para aplicação do imunobiológico &quot;Nirsevimabe 0,5ml (cód. 115)&quot;, &quot;Nirsevimabe 1,0ml (cód. 116)&quot; e suas nomenclaturas, e alteração da descrição das siglas das doses relacionadas aos códigos de 59 a 82 para Unidades.</p>
+
+<h3 id="2-novos-campos-na-ficha-de-vacina-o">2. Novos campos na Ficha de Vacinação</h3>
+
+<p>Inclusão dos campos &quot;Via de administração&quot; e &quot;Local de aplicação&quot; na Ficha de Vacinação.</p>
 
 <h2 id="vers-o-7-2-3">Versão 7.2.3</h2>
 
