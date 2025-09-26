@@ -28,6 +28,8 @@ VacinaRowThrift = module.exports.VacinaRowThrift = function(args) {
   this.anvisaProtocoloEstudo = null;
   this.anvisaProtocoloVersao = null;
   this.anvisaNumeroRegistro = null;
+  this.viaAdministracao = null;
+  this.localAplicacao = null;
   if (args) {
     if (args.imunobiologico !== undefined && args.imunobiologico !== null) {
       this.imunobiologico = args.imunobiologico;
@@ -76,6 +78,12 @@ VacinaRowThrift = module.exports.VacinaRowThrift = function(args) {
     }
     if (args.anvisaNumeroRegistro !== undefined && args.anvisaNumeroRegistro !== null) {
       this.anvisaNumeroRegistro = args.anvisaNumeroRegistro;
+    }
+    if (args.viaAdministracao !== undefined && args.viaAdministracao !== null) {
+      this.viaAdministracao = args.viaAdministracao;
+    }
+    if (args.localAplicacao !== undefined && args.localAplicacao !== null) {
+      this.localAplicacao = args.localAplicacao;
     }
   }
 };
@@ -205,6 +213,20 @@ VacinaRowThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 17:
+      if (ftype == Thrift.Type.I64) {
+        this.viaAdministracao = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
+      case 18:
+      if (ftype == Thrift.Type.I64) {
+        this.localAplicacao = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -294,6 +316,16 @@ VacinaRowThrift.prototype.write = function(output) {
   if (this.anvisaNumeroRegistro !== null && this.anvisaNumeroRegistro !== undefined) {
     output.writeFieldBegin('anvisaNumeroRegistro', Thrift.Type.STRING, 16);
     output.writeString(this.anvisaNumeroRegistro);
+    output.writeFieldEnd();
+  }
+  if (this.viaAdministracao !== null && this.viaAdministracao !== undefined) {
+    output.writeFieldBegin('viaAdministracao', Thrift.Type.I64, 17);
+    output.writeI64(this.viaAdministracao);
+    output.writeFieldEnd();
+  }
+  if (this.localAplicacao !== null && this.localAplicacao !== undefined) {
+    output.writeFieldBegin('localAplicacao', Thrift.Type.I64, 18);
+    output.writeI64(this.localAplicacao);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

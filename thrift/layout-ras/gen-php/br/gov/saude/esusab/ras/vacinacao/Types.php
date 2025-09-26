@@ -84,6 +84,14 @@ class VacinaRowThrift {
    * @var string
    */
   public $anvisaNumeroRegistro = null;
+  /**
+   * @var int
+   */
+  public $viaAdministracao = null;
+  /**
+   * @var int
+   */
+  public $localAplicacao = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -152,6 +160,14 @@ class VacinaRowThrift {
           'var' => 'anvisaNumeroRegistro',
           'type' => TType::STRING,
           ),
+        17 => array(
+          'var' => 'viaAdministracao',
+          'type' => TType::I64,
+          ),
+        18 => array(
+          'var' => 'localAplicacao',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -202,6 +218,12 @@ class VacinaRowThrift {
       }
       if (isset($vals['anvisaNumeroRegistro'])) {
         $this->anvisaNumeroRegistro = $vals['anvisaNumeroRegistro'];
+      }
+      if (isset($vals['viaAdministracao'])) {
+        $this->viaAdministracao = $vals['viaAdministracao'];
+      }
+      if (isset($vals['localAplicacao'])) {
+        $this->localAplicacao = $vals['localAplicacao'];
       }
     }
   }
@@ -337,6 +359,20 @@ class VacinaRowThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 17:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->viaAdministracao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 18:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->localAplicacao);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -428,6 +464,16 @@ class VacinaRowThrift {
     if ($this->anvisaNumeroRegistro !== null) {
       $xfer += $output->writeFieldBegin('anvisaNumeroRegistro', TType::STRING, 16);
       $xfer += $output->writeString($this->anvisaNumeroRegistro);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->viaAdministracao !== null) {
+      $xfer += $output->writeFieldBegin('viaAdministracao', TType::I64, 17);
+      $xfer += $output->writeI64($this->viaAdministracao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->localAplicacao !== null) {
+      $xfer += $output->writeFieldBegin('localAplicacao', TType::I64, 18);
+      $xfer += $output->writeI64($this->localAplicacao);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

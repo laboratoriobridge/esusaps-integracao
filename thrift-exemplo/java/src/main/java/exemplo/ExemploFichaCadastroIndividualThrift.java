@@ -96,11 +96,8 @@ public class ExemploFichaCadastroIndividualThrift {
 		thriftCadIndividual.setTpCdsOrigem(1);
 		thriftCadIndividual.setUuid(UUID.randomUUID().toString());
 		thriftCadIndividual.setUuidFichaOriginadora(UUID.randomUUID().toString());
-		thriftCadIndividual.setUuidCidadao(UUID.randomUUID().toString());
 		thriftCadIndividual.setSaidaCidadaoCadastro(getSaidaCidadaoCadastro());
 		thriftCadIndividual.setHeaderTransport(getHeaderTransport());
-		thriftCadIndividual.setStatusCadastroIndividualInativo(false);
-		thriftCadIndividual.setStatusGeradoAutomaticamente(true);
 		thriftCadIndividual.setInformacoesSocioEconomicas(getInformacoesSocioEconomicas());
 
 		return thriftCadIndividual;

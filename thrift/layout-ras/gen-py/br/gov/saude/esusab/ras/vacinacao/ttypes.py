@@ -38,6 +38,8 @@ class VacinaRowThrift:
    - anvisaProtocoloEstudo
    - anvisaProtocoloVersao
    - anvisaNumeroRegistro
+   - viaAdministracao
+   - localAplicacao
   """
 
   thrift_spec = (
@@ -58,9 +60,11 @@ class VacinaRowThrift:
     (14, TType.STRING, 'anvisaProtocoloEstudo', None, None, ), # 14
     (15, TType.STRING, 'anvisaProtocoloVersao', None, None, ), # 15
     (16, TType.STRING, 'anvisaNumeroRegistro', None, None, ), # 16
+    (17, TType.I64, 'viaAdministracao', None, None, ), # 17
+    (18, TType.I64, 'localAplicacao', None, None, ), # 18
   )
 
-  def __init__(self, imunobiologico=None, estrategiaVacinacao=None, dose=None, lote=None, fabricante=None, grupoAtendimento=None, stRegistroAnterior=None, dataRegistroAnterior=None, stAplicadoExterior=None, uuidRnds=None, cboPrescritorCodigo2002=None, cid10MotivoIndicacao=None, stPesquisaClinica=None, anvisaProtocoloEstudo=None, anvisaProtocoloVersao=None, anvisaNumeroRegistro=None,):
+  def __init__(self, imunobiologico=None, estrategiaVacinacao=None, dose=None, lote=None, fabricante=None, grupoAtendimento=None, stRegistroAnterior=None, dataRegistroAnterior=None, stAplicadoExterior=None, uuidRnds=None, cboPrescritorCodigo2002=None, cid10MotivoIndicacao=None, stPesquisaClinica=None, anvisaProtocoloEstudo=None, anvisaProtocoloVersao=None, anvisaNumeroRegistro=None, viaAdministracao=None, localAplicacao=None,):
     self.imunobiologico = imunobiologico
     self.estrategiaVacinacao = estrategiaVacinacao
     self.dose = dose
@@ -77,6 +81,8 @@ class VacinaRowThrift:
     self.anvisaProtocoloEstudo = anvisaProtocoloEstudo
     self.anvisaProtocoloVersao = anvisaProtocoloVersao
     self.anvisaNumeroRegistro = anvisaNumeroRegistro
+    self.viaAdministracao = viaAdministracao
+    self.localAplicacao = localAplicacao
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -167,6 +173,16 @@ class VacinaRowThrift:
           self.anvisaNumeroRegistro = iprot.readString()
         else:
           iprot.skip(ftype)
+      elif fid == 17:
+        if ftype == TType.I64:
+          self.viaAdministracao = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 18:
+        if ftype == TType.I64:
+          self.localAplicacao = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -241,6 +257,14 @@ class VacinaRowThrift:
       oprot.writeFieldBegin('anvisaNumeroRegistro', TType.STRING, 16)
       oprot.writeString(self.anvisaNumeroRegistro)
       oprot.writeFieldEnd()
+    if self.viaAdministracao is not None:
+      oprot.writeFieldBegin('viaAdministracao', TType.I64, 17)
+      oprot.writeI64(self.viaAdministracao)
+      oprot.writeFieldEnd()
+    if self.localAplicacao is not None:
+      oprot.writeFieldBegin('localAplicacao', TType.I64, 18)
+      oprot.writeI64(self.localAplicacao)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -266,6 +290,8 @@ class VacinaRowThrift:
     value = (value * 31) ^ hash(self.anvisaProtocoloEstudo)
     value = (value * 31) ^ hash(self.anvisaProtocoloVersao)
     value = (value * 31) ^ hash(self.anvisaNumeroRegistro)
+    value = (value * 31) ^ hash(self.viaAdministracao)
+    value = (value * 31) ^ hash(self.localAplicacao)
     return value
 
   def __repr__(self):
