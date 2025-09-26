@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.2.3</span>
+        <span class="label">versão 7.3.0</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.2.3" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.2.3</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.3.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.3.0</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.2.3" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.3.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 7.2.3)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.3.0)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fv.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 13/08/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 16/09/2025</span>
       
     </p>
   </header>
@@ -1068,6 +1068,61 @@
 </tbody></table>
 
 <p><strong>Regra:</strong> Só pode ser preenchido e se torna obrigatório se <a href="#12-stpesquisaclinica">stPesquisaClinica</a> = <code>true</code>;</p>
+
+<h3 id="16-viaadministracao">#16 viaAdministracao</h3>
+
+<p>Via de administração do imunobiológico aplicado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#viaadministracao-para-imunobiol-gicos">Via de administração</a>.</p>
+
+<h3 id="17-localaplicacao">#17 localAplicacao</h3>
+
+<p>Local em que o imunobiológico foi aplicado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<p>Os dados do campo &quot;Local de aplicação&quot; são validados de acordo com o campo &quot;Via de administração&quot;.</p>
+
+<ul>
+<li>Se <code>Via de administração</code> = <code>Endovenosa</code>, o campo deve ser preenchido com o valor = <code>Rede venosa</code>;</li>
+<li>Se <code>Via de administração</code> = <code>Intramuscular</code> ou <code>Intramuscular Profunda</code>, o campo deve ser preenchido com um dos valores = <code>Vastolateral da coxa direito</code>, <code>Vastolateral da coxa esquerdo</code>, <code>Deltóide direito</code>, <code>Deltóide esquerdo</code>, <code>Dorso glúteo direito</code>, <code>Dorso glúteo esquerdo</code>, <code>Vastolateral da coxa direito</code>, <code>Vastolateral da coxa esquerdo</code>, <code>Ventro glúteo direito</code>, <code>Ventro glúteo esquerdo</code>, <code>Outro</code>;</li>
+<li>Se <code>Via de administração</code> = <code>Intradérmica</code> ou <code>Subcutânea</code>, o campo deve ser preenchido com um dos valores = <code>Face ânterolateral externa da coxa direito</code>, <code>Face ânterolateral externa da coxa esquerdo</code>, <code>Face ânterolateral externo do antebraço direito</code>, <code>Face ânterolateral externo do antebraço esquerdo</code>, <code>Face ânterolateral externa do braço direito</code>, <code>Face ânterolateral externa do braço esquerdo</code>, <code>Face externa superior do braço direito</code>, <code>Face externa superior do braço esquerdo</code>, <code>Face externa inferior do braço direito</code>, <code>Face externa inferior do braço esquerdo</code>, <code>Outro</code>;</li>
+<li>Se <code>Via de administração</code> = <code>Oral</code>, o campo deve ser preenchido com o valor = <code>Boca</code>;</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localaplicacao">Local de aplicação</a>.</p>
 
   </article>
 
