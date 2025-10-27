@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ficha de Visita Domiciliar e Territorial</title>
+  <meta name="description" content="FichaVisitaDomiciliarMaster">
+
+  <link rel="stylesheet" href="/v731/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/v731/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html">
+  <link rel="icon" type="image/png" href="/v731/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/v731/">
+      <img src="/v731/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 7.3.1</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/v731/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/v731/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/v731/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface" href="/v731/ledi/index.html">Layout e-SUS APS de Dados e Interface</a></li>
+          
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.3.1" href="/v731/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.3.1</a></li>
+          
+        
+          
+            <li><a title="Estrutura dos arquivos" href="/v731/ledi/documentacao/estrutura_arquivos/index.html">Estrutura dos arquivos</a></li>
+          
+        
+          
+            <li><a title="Ficha de Visita Domiciliar e Territorial" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html">Ficha de Visita Domiciliar e Territorial</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/v731/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.3.1" href="/v731/ledi/documentacao/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.3.1)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Estrutura dos arquivos" href="/v731/ledi/documentacao/estrutura_arquivos/index.html">Estrutura dos arquivos</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Camada de Transporte de Dados" href="/v731/ledi/documentacao/estrutura_arquivos/camada-transporte.html">
+              Camada de Transporte de Dados
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Cabeçalho (headerTransport)" href="/v731/ledi/documentacao/estrutura_arquivos/header-transport.html">
+              Cabeçalho (headerTransport)
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Individual" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">
+              Ficha de Cadastro Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Domiciliar e Territorial" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">
+              Ficha de Cadastro Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Individual" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">
+              Ficha de Atendimento Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Odontológico Individual" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">
+              Ficha de Atendimento Odontológico Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atividade Coletiva" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fac.html">
+              Ficha de Atividade Coletiva
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Procedimentos" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fp.html">
+              Ficha de Procedimentos
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Ficha de Visita Domiciliar e Territorial" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html">
+              Ficha de Visita Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Marcadores de Consumo Alimentar" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-mca.html">
+              Marcadores de Consumo Alimentar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Avaliação de Elegibilidade" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fae.html">
+              Ficha de Avaliação de Elegibilidade
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Domiciliar" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fad.html">
+              Ficha de Atendimento Domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha complementar - Síndrome neurológica por Zika / Microcefalia" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fczm.html">
+              Ficha complementar - Síndrome neurológica por Zika / Microcefalia
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Vacinação" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fv.html">
+              Ficha de Vacinação
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cuidado Compartilhado" href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html">
+              Ficha de Cuidado Compartilhado
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ficha de Visita Domiciliar e Territorial</h1>
+    <p class="post-meta">
+      <a class="btn" href="/v731/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 16/09/2025</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h2 id="fichavisitadomiciliarmaster">FichaVisitaDomiciliarMaster</h2>
+
+<h3 id="1-uuidficha">#1 uuidFicha</h3>
+
+<p>Código UUID para identificar a ficha na base de dados nacional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
+
+<p>Tipo de origem dos dados do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+
+<h3 id="3-headertransport">#3 headerTransport</h3>
+
+<p>Profissional que realizou a visita.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>UnicaLotacaoHeader</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/v731/ledi/documentacao/regras/cbo.html#ficha-de-visita-domiciliar-e-territorial">Tabela 7 - CBOs que podem registrar ficha de visita domiciliar e territorial</a> podem ser adicionadas no campo CBO do profissional.</p>
+
+<p><strong>Referência:</strong> <a href="/v731/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
+
+<h3 id="4-visitasdomiciliares">#4 visitasDomiciliares</h3>
+
+<p>Lista de Fichas de Visita Domiciliar e Territorial.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;FichaVisitaDomiciliarChild&gt;</td>
+<td>Sim</td>
+<td>0</td>
+<td>99</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#fichavisitadomiciliarchild">FichaVisitaDomiciliarChild</a>.</p>
+
+<h2 id="fichavisitadomiciliarchild">FichaVisitaDomiciliarChild</h2>
+
+<h3 id="1-turno">#1 turno</h3>
+
+<p>Código do turno onde aconteceu o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v731/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+
+<h3 id="2-numprontuario">#2 numProntuario</h3>
+
+<p>Número do prontuário do cidadão na UBS.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>0</td>
+<td>30</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Somente letras e números;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso.</li>
+</ul>
+
+<h3 id="3-cnscidadao">#3 cnsCidadao</h3>
+
+<p>CNS do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Validado pelo algoritmo;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Para visita periódica ou visita domiciliar para controle vetorial preencher este campo com o CNS do responsável familiar;</li>
+<li>Não pode ser preenchido se o campo <a href="#14-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
+
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/v731/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+
+<h3 id="4-dtnascimento">#4 dtNascimento</h3>
+
+<p>Data de nascimento do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="/v731/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/v731/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li><p>É de preenchimento obrigatório somente se <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>01</code> Domicílio, <code>07</code> Abrigo, <code>08</code> Instituição de longa permanência para idosos, <code>09</code> Unidade prisional, <code>10</code> Unidade de medida sócio educativa, <code>11</code> Delegacia ou <code>99</code> Outros <strong>e</strong> pelo menos uma das condições a seguir seja obedecida:</p>
+
+<ul>
+<li>Campo &quot;CNS do cidadão&quot;;</li>
+<li>Campo &quot;Sexo&quot;;</li>
+<li>Campo <a href="#7-motivosvisita">motivosVisita</a> possuir qualquer opção dos grupos <code>#BUSCA_ATIVA</code> ou <code>#ACOMPANHAMENTO</code> inserida;</li>
+<li>Campo <a href="#7-motivosvisita">motivosVisita</a> possuir pelo menos uma das opções <code>25</code> Egresso de internação ou <code>31</code> Orientação / Prevenção inseridas;</li>
+<li>Pelo menos um dos campos <a href="#12-pesoacompanhamentonutricional">pesoAcompanhamentoNutricional</a> e <a href="#13-alturaacompanhamentonutricional">alturaAcompanhamentoNutricional</a> for preenchido.</li>
+</ul></li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="5-sexo">#5 sexo</h3>
+
+<p>Código do sexo do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> Comércio, <code>03</code> Terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li><p>É de preenchimento obrigatório somente se <a href="#11-tipodeimovel">tipoDeImovel</a> =<code>01</code> Domicílio, <code>07</code> Abrigo, <code>08</code> Instituição de longa permanência para idosos, <code>09</code> Unidade prisional, <code>10</code> Unidade de medida sócio educativa, <code>11</code> Delegacia ou <code>99</code> Outros <strong>e</strong> pelo menos uma das condições a seguir seja obedecida:</p>
+
+<ul>
+<li>Campo &quot;CNS do cidadão&quot;;</li>
+<li>Campo &quot;Data de nascimento&quot;;</li>
+<li>Campo <a href="#7-motivosvisita">motivosVisita</a> possuir qualquer opção dos grupos <code>#BUSCA_ATIVA</code> ou <code>#ACOMPANHAMENTO</code> inserida;</li>
+<li>Campo <a href="#7-motivosvisita">motivosVisita</a> possuir pelo menos uma das opções <code>25</code> Egresso de internação ou <code>31</code> Orientação / Prevenção inseridas;</li>
+<li>Pelo menos um dos campos <a href="#12-pesoacompanhamentonutricional">pesoAcompanhamentoNutricional</a> e <a href="#13-alturaacompanhamentonutricional">alturaAcompanhamentoNutricional</a> estiver preenchido.</li>
+</ul></li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/v731/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+
+<h3 id="6-statusvisitacompartilhadaoutroprofissional">#6 statusVisitaCompartilhadaOutroProfissional</h3>
+
+<p>Marcador que indica se a visita foi compartilhada com outro profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="7-motivosvisita">#7 motivosVisita</h3>
+
+<p>Código dos motivos da visita.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;Long&gt;</td>
+<td>Condicional</td>
+<td>0</td>
+<td>36</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada;</li>
+<li><p>Se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso, então as opções selecionadas deste campo só podem ser:</p>
+
+<ul>
+<li><code>1</code> Cadastramento / Atualização;</li>
+<li><code>34</code> Ação educativa;</li>
+<li><code>35</code> Imóvel com foco;</li>
+<li><code>36</code> Ação mecânica;</li>
+<li><code>37</code> Tratamento focal;</li>
+<li><code>27</code> Convite para atividades coletivas / campanha de saúde;</li>
+<li><code>31</code> Orientação / Prevenção;</li>
+<li><code>28</code> Outros.</li>
+</ul></li>
+<li><p>As opções <code>5 (Gestante)</code> e <code>6 (Puérpera)</code> não podem ser informadas se o <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p></li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/v731/ledi/documentacao/referencias/dicionario.html#motivovisita">MotivoVisita</a>.</p>
+
+<h3 id="8-desfecho">#8 desfecho</h3>
+
+<p>Código dos resultados da ação de visita.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v731/ledi/documentacao/referencias/dicionario.html#desfecho">Desfecho</a>.</p>
+
+<h3 id="9-microarea">#9 microarea</h3>
+
+<p>Microárea na qual o cidadão se encontra.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não deve ser preenchido se o campo <a href="#10-stforaarea">stForaArea</a> = <code>true</code>. Caso contrário, o preenchimento é obrigatório.</p>
+
+<h3 id="10-stforaarea">#10 stForaArea</h3>
+
+<p>Marcador que indica que o cidadão está fora da área.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="11-tipodeimovel">#11 tipoDeImovel</h3>
+
+<p>Indica o tipo de imóvel do domicílio.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v731/ledi/documentacao/referencias/dicionario.html#tipodeimovel">tipoDeImovel</a>.</p>
+
+<h3 id="12-pesoacompanhamentonutricional">#12 pesoAcompanhamentoNutricional</h3>
+
+<p>Peso do cidadão em Quilogramas.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números e ponto (<code>.</code>);</li>
+<li>Máximo de 3 casas decimais;</li>
+<li>Valor mínimo 0.5 e máximo 500;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
+</ul>
+
+<h3 id="13-alturaacompanhamentonutricional">#13 alturaAcompanhamentoNutricional</h3>
+
+<p>Altura do cidadão em centímetros.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>2</td>
+<td>5</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números e ponto (<code>.</code>);</li>
+<li>Máximo de 1 casa decimal;</li>
+<li>Valor mínimo 20 e máximo 250;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
+</ul>
+
+<h3 id="14-cpfcidadao">#14 cpfCidadao</h3>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Para visita periódica ou visita domiciliar para controle vetorial preencher este campo com o CPF do responsável familiar;</li>
+<li>Não pode ser preenchido se o campo <a href="#3-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
+
+<h3 id="15-pressaosistolica">#15 pressaoSistolica</h3>
+
+<p>Pressão sistólica do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#16-pressaodiastolica">pressaoDiastolica</a>;</li>
+<li>Valor mínimo 0 e máximo 999;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
+</ul>
+
+<h3 id="16-pressaodiastolica">#16 pressaoDiastolica</h3>
+
+<p>Pressão diastólica do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#15-pressaosistolica">pressaoSistolica</a>.</li>
+<li>Valor mínimo 0 e máximo 999;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
+</ul>
+
+<h3 id="17-temperatura">#17 temperatura</h3>
+
+<p>Aferição de temperatura do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>0</td>
+<td>4</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Este campo só aceita valores entre 20 e 45;</li>
+<li>Máximo de 1 casa decimal;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
+</ul>
+
+<h3 id="18-glicemia">#18 glicemia</h3>
+
+<p>Glicemia capilar do cidadão em mg/dL.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Este campo só aceita valores entre 0 e 800;</li>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#19-tipoglicemia">tipoGlicemia</a>;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
+</ul>
+
+<h3 id="19-tipoglicemia">#19 tipoGlicemia</h3>
+
+<p>Momento da coleta da glicemia capilar.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#18-glicemia">glicemia</a>;</li>
+<li>Não deve ser preenchido se o campo <a href="#11-tipodeimovel">tipoDeImovel</a> = <code>02</code> comércio, <code>03</code> terreno baldio, <code>04</code> Ponto Estratégico, <code>05</code> Escola, <code>06</code> Creche ou <code>12</code> Estabelecimento religioso;</li>
+<li>Não deve ser preenchido caso o campo <a href="#8-desfecho">desfecho</a> = <code>3</code> Ausente ou <code>2</code> Visita Recusada.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/v731/ledi/documentacao/referencias/dicionario.html#tipoglicemiacapilar">TipoGlicemiaCapilar</a>.</p>
+
+<h3 id="20-latitude">#20 latitude</h3>
+
+<p>Informação da latitude do imóvel onde a visita foi realizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Condicional</td>
+<td>-</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="#21-longitude">longitude</a> for preenchido;</li>
+<li>Os valores são limitados por -90 a 90 e apresentam até 8 casas decimais.</li>
+</ul>
+
+<h3 id="21-longitude">#21 longitude</h3>
+
+<p>Informação da longitude do imóvel onde a visita foi realizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Condicional</td>
+<td>-</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>É de preenchimento obrigatório se o campo <a href="#20-latitude">latitude</a> for preenchido;</li>
+<li>Os valores são limitados por -180 a 180 e apresentam até 8 casas decimais.</li>
+</ul>
+
+<h3 id="22-uuidorigemcadastrodomiciliar">#22 uuidOrigemCadastroDomiciliar</h3>
+
+<p>Código UUID Origem da ficha de cadastro domiciliar onde a visita foi realizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Quando preenchido, deverá ser informado o valor do campo <a href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#11-uuidfichaoriginadora">UUID origem da ficha de cadastro domiciliar</a> pertencente à <a href="/v731/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">Ficha de Cadastro Domiciliar e Territorial</a>.</p>
+
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h3 id="23-ivcf">#23 ivcf</h3>
+
+<p>Registro de IVCF-20 (Índice de Vulnerabilidade Clínico-Funcional).</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Ivcf</td>
+<td>Não</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Só pode ser preenchido se a idade do cidadão na data do atendimento for 60 anos ou mais.</p>
+
+<p><strong>Referência:</strong> <a href="#ivcf">ivcf</a>.</p>
+
+<h2 id="ivcf">IVCF</h2>
+
+<h3 id="1-resultado">#1 resultado</h3>
+
+<p>Resultado em pontos do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Valor mínimo 0 e máximo 40.</p>
+
+<h3 id="2-hassgidade">#2 hasSgIdade</h3>
+
+<p>Indicador de alteração na dimensão &quot;Idade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="3-hassgpercepcaosaude">#3 hasSgPercepcaoSaude</h3>
+
+<p>Indicador de alteração na dimensão &quot;Percepção da saúde&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="4-hassgavdinstrumental">#4 hasSgAvdInstrumental</h3>
+
+<p>Indicador de alteração na dimensão &quot;AVD Instrumental&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="5-hassgavdbasica">#5 hasSgAvdBasica</h3>
+
+<p>Indicador de alteração na dimensão &quot;AVD Básica&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="6-hassgcognicao">#6 hasSgCognicao</h3>
+
+<p>Indicador de alteração na dimensão &quot;Cognição&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="7-hassghumor">#7 hasSgHumor</h3>
+
+<p>Indicador de alteração na dimensão &quot;Humor&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="8-hassgalcancepreensaopinca">#8 hasSgAlcancePreensaoPinca</h3>
+
+<p>Indicador de alteração na dimensão &quot;Alcance, preensão e pinça&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="9-hassgcapaerobicamuscular">#9 hasSgCapAerobicaMuscular</h3>
+
+<p>Indicador de alteração na dimensão &quot;Capacidade aeróbica e/ou muscular&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="10-hassgmarcha">#10 hasSgMarcha</h3>
+
+<p>Indicador de alteração na dimensão &quot;Marcha&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="11-hassgcontinencia">#11 hasSgContinencia</h3>
+
+<p>Indicador de alteração na dimensão &quot;Continência esfincteriana&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="12-hassgvisao">#12 hasSgVisao</h3>
+
+<p>Indicador de alteração na dimensão &quot;Visão&quot;, do grupo &quot;Comunicação&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="13-hassgaudicao">#13 hasSgAudicao</h3>
+
+<p>Indicador de alteração na dimensão &quot;Audição&quot;, do grupo &quot;Comunicação&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="14-hassgcomorbidade">#14 hasSgComorbidade</h3>
+
+<p>Indicador de alteração na dimensão &quot;Comorbidade múltipla&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="15-dataresultado">#15 dataResultado</h3>
+
+<p>Data do registro do IVCF-20.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à data atual;</li>
+<li>Não pode ser posterior à dataHoraFinalAtendimento.</li>
+<li>A diferença entre a dataAtendimento e a dataNascimento deve ser maior ou igual a 60 anos. </li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/v731/js/lunr.min.js"></script>
+
+    <script src="/v731/js/site.js" type="text/javascript"></script>    
+    <script src="/v731/js/search-index.js" type="text/javascript"></script>
+    <script src="/v731/js/busca.js"></script>
+  </body>
+</html>
