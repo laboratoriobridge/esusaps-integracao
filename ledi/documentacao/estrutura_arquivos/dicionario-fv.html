@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.3.1</span>
+        <span class="label">versão 7.3.2</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.3.1" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.3.1</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.3.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.3.2</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.3.1" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.3.2" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 7.3.1)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.3.2)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fv.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 01/10/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 27/10/2025</span>
       
     </p>
   </header>
@@ -814,15 +814,13 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Apenas <code>letras</code>, <code>números</code>, <code>/</code>, <code>.</code>, <code>espaço simples</code> e <code>-</code>;</li>
+<li>É permitido o envio apenas de fabricantes que constam na listagem de referência;;</li>
 <li>É de preenchimento obrigatório se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>85</code>, o campo deve ser preenchido com o valor = <code>OXFORD-ASTRAZENECA</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>86</code>, o campo deve ser preenchido com o valor = <code>SINOVAC/BUTANTAN</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>87</code>, o campo deve ser preenchido com o valor = <code>PFIZER/BIONTECH</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>88</code>, o campo deve ser preenchido com o valor = <code>JANSSEN-CILAG</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>89</code>, o campo deve ser preenchido com o valor = <code>ASTRAZENECA-ChAdOx1-S</code>;</li>
-<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>95</code>, o campo deve ser preenchido com o valor = <code>GAMALEYA-SPUTNIK-V</code>;</li>
-<li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>96</code>, o campo deve ser preenchido com o valor = <code>BHARAT-COVAXIN</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>97</code>, o campo deve ser preenchido com o valor = <code>MODERNA</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>98</code>, o campo deve ser preenchido com o valor = <code>SINOVAC-CORONAVAC</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>99</code> ou <code>102</code> o campo deve ser preenchido com o valor = <code>BIONTECH</code>;</li>
@@ -830,6 +828,8 @@
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>112</code> o campo deve ser preenchido com o valor = <code>SERUM-INDIA</code>;</li>
 <li>Se o campo <a href="#1-imunobiologico">Imunobiológico</a> = <code>114</code> o campo deve ser preenchido com o valor = <code>BEIJING</code>.</li>
 </ul>
+
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#fabricante">Fabricante</a>.</p>
 
 <h3 id="6-grupoatendimento">#6 grupoAtendimento</h3>
 
@@ -946,13 +946,17 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Não</td>
+<td>Condicional</td>
 <td>-</td>
 <td>-</td>
 </tr>
 </tbody></table>
 
-<p>Referência: CBOs prescritores.</p>
+<p>Regra: </p>
+
+<ul>
+<li>Obrigatório se <a href="#2-estrategiavacinacao">estrategiaVacinacao</a> = <code>02- Especial</code>;</li>
+</ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#cboprescritor">CBOs específicos</a>.</p>
 
@@ -1107,7 +1111,7 @@
 <td>Long</td>
 <td>Sim</td>
 <td>1</td>
-<td>1</td>
+<td>2</td>
 </tr>
 </tbody></table>
 
