@@ -1,0 +1,3562 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ficha de Atendimento Individual</title>
+  <meta name="description" content="FichaAtendimentoIndividualMaster">
+
+  <link rel="stylesheet" href="/v730/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/v730/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">
+  <link rel="icon" type="image/png" href="/v730/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/v730/">
+      <img src="/v730/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 7.3.0</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/v730/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/v730/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/v730/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface" href="/v730/ledi/index.html">Layout e-SUS APS de Dados e Interface</a></li>
+          
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.3.0" href="/v730/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.3.0</a></li>
+          
+        
+          
+            <li><a title="Estrutura dos arquivos" href="/v730/ledi/documentacao/estrutura_arquivos/index.html">Estrutura dos arquivos</a></li>
+          
+        
+          
+            <li><a title="Ficha de Atendimento Individual" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">Ficha de Atendimento Individual</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/v730/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.3.0" href="/v730/ledi/documentacao/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.3.0)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Estrutura dos arquivos" href="/v730/ledi/documentacao/estrutura_arquivos/index.html">Estrutura dos arquivos</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Camada de Transporte de Dados" href="/v730/ledi/documentacao/estrutura_arquivos/camada-transporte.html">
+              Camada de Transporte de Dados
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Cabeçalho (headerTransport)" href="/v730/ledi/documentacao/estrutura_arquivos/header-transport.html">
+              Cabeçalho (headerTransport)
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Individual" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">
+              Ficha de Cadastro Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Domiciliar e Territorial" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">
+              Ficha de Cadastro Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Ficha de Atendimento Individual" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">
+              Ficha de Atendimento Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Odontológico Individual" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">
+              Ficha de Atendimento Odontológico Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atividade Coletiva" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fac.html">
+              Ficha de Atividade Coletiva
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Procedimentos" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fp.html">
+              Ficha de Procedimentos
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Visita Domiciliar e Territorial" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html">
+              Ficha de Visita Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Marcadores de Consumo Alimentar" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-mca.html">
+              Marcadores de Consumo Alimentar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Avaliação de Elegibilidade" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fae.html">
+              Ficha de Avaliação de Elegibilidade
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Domiciliar" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fad.html">
+              Ficha de Atendimento Domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha complementar - Síndrome neurológica por Zika / Microcefalia" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fczm.html">
+              Ficha complementar - Síndrome neurológica por Zika / Microcefalia
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Vacinação" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fv.html">
+              Ficha de Vacinação
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cuidado Compartilhado" href="/v730/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html">
+              Ficha de Cuidado Compartilhado
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ficha de Atendimento Individual</h1>
+    <p class="post-meta">
+      <a class="btn" href="/v730/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fai.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 26/08/2025</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h2 id="fichaatendimentoindividualmaster">FichaAtendimentoIndividualMaster</h2>
+
+<h3 id="1-headertransport">#1 headerTransport</h3>
+
+<p>Profissionais que realizaram o atendimento</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>VariasLotacoesHeader</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/v730/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a> podem ser adicionadas no campo CBO do profissional principal.</p>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
+
+<h3 id="2-atendimentosindividuais">#2 atendimentosIndividuais</h3>
+
+<p>Registro individualizado dos atendimentos.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;FichaAtendimentoIndividualChild&gt;</td>
+<td>Sim</td>
+<td>1</td>
+<td>99</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#fichaatendimentoindividualchild">FichaAtendimentoIndividualChild</a>.</p>
+
+<h3 id="3-uuidficha">#3 uuidFicha</h3>
+
+<p>Código UUID para identificar a ficha na base de dados nacional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h3 id="4-tpcdsorigem">#4 tpCdsOrigem</h3>
+
+<p>Tipo de origem dos dados do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+
+<h2 id="fichaatendimentoindividualchild">FichaAtendimentoIndividualChild</h2>
+
+<h3 id="1-numeroprontuario">#1 numeroProntuario</h3>
+
+<p>Número do prontuário.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>0</td>
+<td>30</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Apenas letras e números são aceitos.</p>
+
+<h3 id="2-cnscidadao">#2 cnsCidadao</h3>
+
+<p>CNS do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>CNS validado de acordo com o <a href="/v730/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</li>
+<li>Não pode ser preenchido se o campo <a href="#24-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
+
+<h3 id="3-datanascimento">#3 dataNascimento</h3>
+
+<p>Data de nascimento do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não pode ser posterior à <a href="/v730/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/v730/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="4-localdeatendimento">#4 localDeAtendimento</h3>
+
+<p>Código do local onde o atendimento foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+
+<h3 id="5-sexo">#5 sexo</h3>
+
+<p>Código do sexo do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+
+<h3 id="6-turno">#6 turno</h3>
+
+<p>Código do turno em que o atendimento foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+
+<h3 id="7-tipoatendimento">#7 tipoAtendimento</h3>
+
+<p>Código do tipo de atendimento realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Apenas as opções <code>1</code>, <code>2</code>, <code>4</code>, <code>5</code> ou <code>6</code> são aceitas.</p>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
+
+<h3 id="8-medicoes">#8 medicoes</h3>
+
+<p>Lista de medições registradas no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Medicoes</td>
+<td>Não</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#medicoes">medicoes</a>.</p>
+
+<h3 id="9-aleitamentomaterno">#9 aleitamentoMaterno</h3>
+
+<p>Código do marcador referente ao aleitamento materno.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#aleitamentomaterno">AleitamentoMaterno</a>.</p>
+
+<h3 id="10-dumdagestante">#10 dumDaGestante</h3>
+
+<p>Data da última menstruação da gestante.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido quando <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code>;</li>
+<li>Não pode ser superior à <a href="/v730/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch Wikipedia</a> em milissegundos.</p>
+
+<h3 id="11-idadegestacional">#11 idadeGestacional</h3>
+
+<p>Idade gestacional em semanas.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras</strong></p>
+
+<ul>
+<li>Não pode ser preenchido quando <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code>;</li>
+<li>Valor mínimo 1 e máximo 42.</li>
+</ul>
+
+<h3 id="12-atencaodomiciliarmodalidade">#12 atencaoDomiciliarModalidade</h3>
+
+<p>Código do modalidade AD do cidadão atendido.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>3</code>.</p>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#modalidadead">ModalidadeAD</a>.</p>
+
+<h3 id="13-exame">#13 exame</h3>
+
+<p>Lista de exames solicitados e/ou avaliados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;exame&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>100</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#exame">Exames</a>.</p>
+
+<h3 id="14-vacinaemdia">#14 vacinaEmDia</h3>
+
+<p>Marcador referente a vacinação em dia do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="15-ficouemobservacao">#15 ficouEmObservacao</h3>
+
+<p>Marcador referente se o cidadão ficou em observação no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="16-emultis">#16 emultis</h3>
+
+<p>Código das ações realizadas pelas Equipes Multiprofissionais na Atenção Primária à Saúde.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;Long&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#emulti">eMulti</a>.</p>
+
+<h3 id="17-condutas">#17 condutas</h3>
+
+<p>Código das condutas adotadas no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;Long&gt;</td>
+<td>Sim</td>
+<td>1</td>
+<td>12</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não deve conter duas condutas iguais.</p>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#condutaencaminhamento">CondutaEncaminhamento</a>.</p>
+
+<h3 id="18-stgravidezplanejada">#18 stGravidezPlanejada</h3>
+
+<p>Marcador que indica se a gravidez é planejada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não pode ser preenchido quando <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
+
+<h3 id="19-nugestasprevias">#19 nuGestasPrevias</h3>
+
+<p>Número de gestações prévias.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não pode ser preenchido quando <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
+
+<h3 id="20-nupartos">#20 nuPartos</h3>
+
+<p>Número de partos que a mulher já teve.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não pode ser preenchido quando <a href="#5-sexo">Sexo</a> = <code>0 (masculino)</code>.</p>
+
+<h3 id="21-racionalidadesaude">#21 racionalidadeSaude</h3>
+
+<p>Código da racionalidade em saúde utilizada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#racionalidadesaude">racionalidadeSaude</a>.</p>
+
+<h3 id="22-datahorainicialatendimento">#22 dataHoraInicialAtendimento</h3>
+
+<p>Data e hora do início do atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser anterior à <a href="/v730/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Não pode ser posterior à <a href="#23-datahorafinalatendimento">dataHoraFinalAtendimento</a> e à data atual.</li>
+</ul>
+
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="23-datahorafinalatendimento">#23 dataHoraFinalAtendimento</h3>
+
+<p>Data e hora do fim do atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser anterior à <a href="#22-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser posterior à data atual.</li>
+</ul>
+
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="24-cpfcidadao">#24 cpfCidadao</h3>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
+
+<h3 id="25-medicamentos">#25 Medicamentos</h3>
+
+<p>Lista de medicamentos prescritos durante o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;medicamentos&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#medicamentos">medicamentos</a>.</p>
+
+<h3 id="26-encaminhamentos">#26 Encaminhamentos</h3>
+
+<p>Lista com os encaminhamentos realizados durante o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;encaminhamentos&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Não pode ter itens duplicados na lista. Serão considerados duplicados os itens que tiverem a mesma <a href="#1-especialidade">especialidade</a> e <a href="#2-hipotesediagnosticocid10">hipoteseDiagnosticoCID10</a> ou a mesma <a href="#1-especialidade">especialidade</a> e <a href="#3-hipotesediagnosticociap2">hipoteseDiagnosticoCIAP2</a>;</li>
+<li>Todos os encaminhamentos devem ser preenchidos somente com CID10 ou com CIAP2, de acordo com a <a href="/v730/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a>;</li>
+<li>Ao preencher este grupo, é obrigatório o preenchimento do campo <a href="#17-condutas">condutas</a> com o valor <code>4 - Encaminhamento para serviço especializado</code>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="#encaminhamentos">encaminhamentos</a>.</p>
+
+<h3 id="27-resultadosexames">#27 resultadosExames</h3>
+
+<p>Lista de exames e seus resultados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;resultadosExames&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#resultadosexames">resultadosExames</a>.</p>
+
+<h3 id="28-problemascondicoes">#28 problemasCondicoes</h3>
+
+<p>Situações de saúde avaliadas no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>problemacondicao</td>
+<td>Sim</td>
+<td>1</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#problemacondicao">problemacondicao</a>.</p>
+
+<h3 id="29-tipoparticipacaocidadao">#29 tipoParticipacaoCidadao</h3>
+
+<p>Código para identificar se o tipo de participação do cidadão foi síncrono ou assíncrono.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>As participações possíveis são: NAO_PARTICIPOU (1L, &quot;Não participou&quot;), PRESENCIAL (2L, &quot;Presencial&quot;), CHAMADA_DE_VIDEO(3L, &quot;Chamada de vídeo&quot;), CHAMADA_DE_VOZ (4L, &quot;Chamada de voz&quot;), EMAIL (5L, &quot;E-mail&quot;), MENSAGEM(6L, &quot;Mensagem&quot;), OUTROS (7L, &quot;Outros&quot;).</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
+
+<h3 id="30-tipoparticipacaoprofissionalconvidado">#30 tipoParticipacaoProfissionalConvidado</h3>
+
+<p>Código para identificar se o tipo de participação do profissional convidado foi síncrono ou assíncrono.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>As participações possíveis são: NAO_PARTICIPOU (1L, &quot;Não participou&quot;), PRESENCIAL (2L, &quot;Presencial&quot;), CHAMADA_DE_VIDEO(3L, &quot;Chamada de vídeo&quot;), CHAMADA_DE_VOZ (4L, &quot;Chamada de voz&quot;), EMAIL (5L, &quot;E-mail&quot;), MENSAGEM(6L, &quot;Mensagem&quot;), OUTROS (7L, &quot;Outros&quot;).</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#tipoparticipacaoatendimento">Tipo de participação no atendimento</a>.</p>
+
+<h3 id="31-ivcf">#31 ivcf</h3>
+
+<p>Registro de IVCF-20 (Índice de Vulnerabilidade Clínico-Funcional).</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Ivcf</td>
+<td>Não</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Só pode ser preenchido se a idade do cidadão na data do atendimento for 60 anos ou mais.</p>
+
+<p><strong>Referência:</strong> <a href="#ivcf">ivcf</a>.</p>
+
+<h3 id="32-solicitacoesoci">#32 solicitacoesOci</h3>
+
+<p>Lista de procedimentos SIGTAP de Oferta de Cuidado Integrado (OCI) solicitados.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;solicitacoesOci&gt;</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Em um mesmo atendimento, não deve haver duplicidade de itens na lista. Cada procedimento de OCI deve ser registrado apenas uma vez.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="#solicitacoesoci">SolicitacoesOci</a>.</p>
+
+<h2 id="exame">Exame</h2>
+
+<h3 id="1-codigoexame">#1 codigoExame</h3>
+
+<p>Código do exame solicitado ou avaliado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Só é possível inserir exames cujo grupo é igual a <code>02 - Procedimentos com finalidade diagnóstica</code> ou exames que estejam presentes na tabela <a href="#listaexames">ListaExames</a>, neste caso, se o exame não tiver uma referência no SIGTAP, deve ser informado o código <strong>AB</strong> do exame;</li>
+<li>Não pode conter exames repetidos.</li>
+</ul>
+
+<p><strong>Referências:</strong></p>
+
+<ul>
+<li>Tabela do SIGTAP, competência 02/2024 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
+<li><a href="#listaexames">ListaExames</a>.</li>
+</ul>
+
+<p>Observações:</p>
+
+<ul>
+<li>Inserir o código do exame SIGTAP sem ponto ou hífen, ex: <code>0214010015</code>;</li>
+<li>Inserir o código do exame AB em caracteres maiúsculos, sem espaços, ex: <code>ABEX022</code>.</li>
+</ul>
+
+<h3 id="2-solicitadoavaliado">#2 solicitadoAvaliado</h3>
+
+<p>Código do indicador se o exame foi <code>Solicitado</code> e / ou <code>Avaliado</code>.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;String&gt;</td>
+<td>Sim</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#situacaoexame">SituacaoExame</a>.</p>
+
+<h2 id="solicitacoesoci">SolicitacoesOci</h2>
+
+<h3 id="1-codigosigtap">#1 codigoSigtap</h3>
+
+<p>Código SIGTAP do procedimento de Oferta de Cuidado Integrado (OCI) solicitado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Só é possível inserir procedimentos SIGTAP cujo grupo é igual a <code>09 - Procedimentos para Ofertas de Cuidados Integrados</code>.</li>
+<li>Em um mesmo atendimento, não deve haver duplicidade de itens na lista. Cada procedimento de OCI deve ser registrado apenas uma vez.</li>
+<li>O código do procedimento SIGTAP deve ser inserido sem ponto ou hífen, ex: <code>0901010014</code>;</li>
+</ul>
+
+<p><strong>Referências:</strong></p>
+
+<ul>
+<li>Tabela do SIGTAP, competência 01/2025 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>;</li>
+</ul>
+
+<p>Observações:</p>
+
+<ul>
+<li>Embora os Procedimentos para Ofertas de Cuidados Integrados estejam disponíveis a partir da competência 01/2025, a atualização geral dos procedimentos do sistema ainda corresponde à competência 02/2024.</li>
+</ul>
+
+<h2 id="problemacondicao">ProblemaCondicao</h2>
+
+<h3 id="1-uuidproblema">#1 uuidProblema</h3>
+
+<p>Código identificador único do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>0</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="#4-ciap">ciap</a>;</li>
+<li>Se torna obrigatório caso preenchido <a href="#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="#6-situacao">situacao</a>.</li>
+</ul>
+
+<h3 id="2-uuidevolucaoproblema">#2 uuidEvolucaoProblema</h3>
+
+<p>Código identificador único da evolução do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>0</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="#4-ciap">ciap</a>;</li>
+<li>Se torna obrigatório caso preenchido <a href="#1-uuidproblema">uuidProblema</a>, <a href="#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="#6-situacao">situacao</a>.</li>
+</ul>
+
+<h3 id="3-cosequencialevolucao">#3 coSequencialEvolucao</h3>
+
+<p>Código sequencial da evolução dentro do próprio problema e condição atual.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>8</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>A primeira evolução do problema ou condição possui o valor 1, as evoluções subsequentes incrementam de 1 em 1;</li>
+<li>Não é recomendado repetir dentro do mesmo problema ou condição;</li>
+<li>É recomendado que o valor do sequencial seja reiniciado para cada problema ou condição novo;</li>
+<li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="#4-ciap">ciap</a>;</li>
+<li>Se torna obrigatório caso preenchido <a href="#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="#1-uuidproblema">uuidProblema</a> ou <a href="#6-situacao">situacao</a>.</li>
+</ul>
+
+<h3 id="4-ciap">#4 ciap</h3>
+
+<p>Código da CIAP registrada no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não deve repetir a mesma CIAP2 ou Código AB;</li>
+<li>Pode ser preenchido com Código AB da <a href="#listaciapcondicaoavaliada">ListaCiapCondicaoAvaliada</a>;</li>
+<li>Não pode conter nenhum dos itens listados no grupo Procedimentos da Tabela CIAP2;</li>
+<li>Não é permitida CIAP2 relacionada ao pré-natal com uma CID de desfecho de gestação (exemplo: CIAP2 &quot;GRAVIDEZ DE ALTO RISCO - W84&quot; relacionada a CID10 &quot;PARTO ÚNICO ESPONTÂNEO - O80&quot;);</li>
+<li>Não é permitida CIAP2 relacionada ao pré-natal caso a idade seja inferior a 9 anos;</li>
+<li>A CIAP2 &quot;GRAVIDEZ - W78&quot; só pode ser vinculada a uma CID10 da familia Z34; </li>
+<li>O código deve ser inserido em caracteres maiúsculos, sem espaços;</li>
+<li>Se torna obrigatório caso o campo <a href="#5-cid10">cid10</a> não seja preenchido.</li>
+</ul>
+
+<h3 id="5-cid10">#5 cid10</h3>
+
+<p>Código da CID10 registrada no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não deve repetir a mesma CID10;</li>
+<li>Não é permitida mais que uma CID10 da familia Z34 na mesma ficha;</li>
+<li>Se torna obrigatório caso o campo <a href="#4-ciap">ciap</a> não seja preenchido.</li>
+</ul>
+
+<h3 id="6-situacao">#6 situacao</h3>
+
+<p>Situação do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Quando a <a href="#4-ciap">ciap</a> informada for &quot;GRAVIDEZ - W78&quot; não é permitido preencher a situação com o valor &quot;1 - Latente&quot;;</li>
+<li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="#4-ciap">ciap</a>;</li>
+<li>Apenas valores de <code>0</code> a <code>2</code>;</li>
+<li>Se torna obrigatório caso preenchido <a href="#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="#1-uuidproblema">uuidProblema</a> ou <a href="#3-cosequencialevolucao">coSequencialEvolucao</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#situacaoproblemascondicoes">SituacaoProblemasCondicoes</a>.</p>
+
+<h3 id="7-datainicioproblema">#7 dataInicioProblema</h3>
+
+<p>Data de inicio do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Deve ser igual ou posterior a <a href="#3-datanascimento">dataNascimento</a>;</li>
+<li>Deve ser anterior ou igual <a href="/v730/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="#4-ciap">ciap</a>.</li>
+</ul>
+
+<h3 id="8-datafimproblema">#8 dataFimProblema</h3>
+
+<p>Data de finalização do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Se torna obrigatório quando o campo <a href="#6-situacao">situacao</a> possuir o valor &quot;2 - Resolvido&quot;;</li>
+<li>Deve ser igual ou posterior a <a href="#3-datanascimento">dataNascimento</a>;</li>
+<li>Deve ser anterior ou igual <a href="/v730/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Deve ser posterior ou igual a <a href="#7-datainicioproblema">dataInicioProblema</a>;</li>
+<li>Não é permitido o preenchimento caso seja informado um Código AB no campo <a href="#4-ciap">ciap</a>.</li>
+</ul>
+
+<h3 id="9-isavaliado">#9 isAvaliado</h3>
+
+<p>Indicador se o problema ou condição foi avaliado durante o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="ivcf">IVCF</h2>
+
+<h3 id="1-resultado">#1 resultado</h3>
+
+<p>Resultado em pontos do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Valor mínimo 0 e máximo 40.</p>
+
+<h3 id="2-hassgidade">#2 hasSgIdade</h3>
+
+<p>Indicador de alteração na dimensão &quot;Idade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="3-hassgpercepcaosaude">#3 hasSgPercepcaoSaude</h3>
+
+<p>Indicador de alteração na dimensão &quot;Percepção da saúde&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="4-hassgavdinstrumental">#4 hasSgAvdInstrumental</h3>
+
+<p>Indicador de alteração na dimensão &quot;AVD Instrumental&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="5-hassgavdbasica">#5 hasSgAvdBasica</h3>
+
+<p>Indicador de alteração na dimensão &quot;AVD Básica&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="6-hassgcognicao">#6 hasSgCognicao</h3>
+
+<p>Indicador de alteração na dimensão &quot;Cognição&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="7-hassghumor">#7 hasSgHumor</h3>
+
+<p>Indicador de alteração na dimensão &quot;Humor&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="8-hassgalcancepreensaopinca">#8 hasSgAlcancePreensaoPinca</h3>
+
+<p>Indicador de alteração na dimensão &quot;Alcance, preensão e pinça&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="9-hassgcapaerobicamuscular">#9 hasSgCapAerobicaMuscular</h3>
+
+<p>Indicador de alteração na dimensão &quot;Capacidade aeróbica e/ou muscular&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="10-hassgmarcha">#10 hasSgMarcha</h3>
+
+<p>Indicador de alteração na dimensão &quot;Marcha&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="11-hassgcontinencia">#11 hasSgContinencia</h3>
+
+<p>Indicador de alteração na dimensão &quot;Continência esfincteriana&quot;, do grupo &quot;Mobilidade&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="12-hassgvisao">#12 hasSgVisao</h3>
+
+<p>Indicador de alteração na dimensão &quot;Visão&quot;, do grupo &quot;Comunicação&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="13-hassgaudicao">#13 hasSgAudicao</h3>
+
+<p>Indicador de alteração na dimensão &quot;Audição&quot;, do grupo &quot;Comunicação&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="14-hassgcomorbidade">#14 hasSgComorbidade</h3>
+
+<p>Indicador de alteração na dimensão &quot;Comorbidade múltipla&quot;.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="15-dataresultado">#15 dataResultado</h3>
+
+<p>Data do registro do IVCF-20.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à data atual;</li>
+<li>Não pode ser posterior à dataHoraFinalAtendimento.</li>
+<li>A diferença entre a dataAtendimento e a dataNascimento deve ser maior ou igual a 60 anos. </li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h2 id="medicamentos">Medicamentos</h2>
+
+<p><strong>Regra:</strong> Não é possível adicionar mais de um registro de medicamento com todos os campos iguais. </p>
+
+<h3 id="1-codigocatmat">#1 codigoCatmat</h3>
+
+<p>Código identificador do medicamento/princípio ativo.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>20</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Deve ser preenchido com o valor presente na coluna <strong>Código CATMAT</strong> da <a href="/v730/ledi/documentacao/referencias/tabela_catmat.html">Tabela de Medicamentos CATMAT</a>.</p>
+
+<h3 id="2-viaadministracao">#2 viaAdministracao</h3>
+
+<p>A via em que o medicamento/princípio ativo entrará em contato com o organismo.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#viaadministracao">viaAdministracao</a>.</p>
+
+<h3 id="3-dose">#3 dose</h3>
+
+<p>Dose em que o medicamento/princípio ativo deve ser administrado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>100</td>
+</tr>
+</tbody></table>
+
+<h3 id="4-doseunica">#4 doseUnica</h3>
+
+<p>Indica que será uma única dose.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Este campo só pode ser marcado como &quot;Verdadeiro&quot; caso o campo <a href="#5-usocontinuo">usoContinuo</a> estiver marcado com a opção &quot;Falso&quot;.</p>
+
+<h3 id="5-usocontinuo">#5 usoContinuo</h3>
+
+<p>Indica que é de uso contínuo.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Este campo só pode ser marcado como &quot;Verdadeiro&quot; caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado com a opção &quot;Falso&quot;.</p>
+
+<h3 id="6-dosefrequenciatipo">#6 doseFrequenciaTipo</h3>
+
+<p>Tipo da frequência da dose.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;;</li>
+<li>Caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Falso&quot;, este campo é de preenchimento obrigatório.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#dosefrequenciatipo">doseFrequenciaTipo</a>.</p>
+
+<h3 id="7-dosefrequencia">#7 doseFrequencia</h3>
+
+<p>Refere-se ao valor do tipo de frequência da dose.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>99</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;;</li>
+<li>Se o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>1 - Turno</code>, então deve ser preenchido com a descrição do turno conforme essa <a href="/v730/ledi/documentacao/referencias/dicionario.html#turno">tabela</a>, complementando a informação com o preenchimento dos campos <a href="#8-dosefrequenciaquantidade">doseFrequenciaQuantidade</a> e <a href="#9-dosefrequenciaunidademedida">doseFrequenciaUnidadeMedida</a>;</li>
+<li>Se o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>2 - Frequência</code>, então deve ser preenchido com o <strong>número de vezes</strong> que a dose deverá ser administrada, complementando a informação com o preenchimento dos campos <a href="#8-dosefrequenciaquantidade">doseFrequenciaQuantidade</a> e <a href="#9-dosefrequenciaunidademedida">doseFrequenciaUnidadeMedida</a>;</li>
+<li>Se o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>3 - Intervalo</code>, então deve ser preenchido com o <strong>intervalo de horas</strong> que a dose deverá ser administrada.</li>
+</ul>
+
+<h3 id="8-dosefrequenciaquantidade">#8 doseFrequenciaQuantidade</h3>
+
+<p>Refere-se à periodicidade em que a dose será administrada.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>999</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;;</li>
+<li>Não pode ser preenchido caso o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>3 - Intervalo</code>;</li>
+<li>É de preenchimento obrigatório caso o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> for <code>1 - Turno</code> ou <code>2 - Frequência</code>.</li>
+</ul>
+
+<h3 id="9-dosefrequenciaunidademedida">#9 doseFrequenciaUnidadeMedida</h3>
+
+<p>Unidade de tempo associada à quantidade da frequência da dose.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;;</li>
+<li>Não pode ser preenchido caso o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> = <code>3 - Intervalo</code>;</li>
+<li>É de preenchimento obrigatório caso o campo <a href="#6-dosefrequenciatipo">doseFrequenciaTipo</a> for <code>1 - Turno</code> ou <code>2 - Frequência</code>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#dosefrequenciaunidademedida">doseFrequenciaUnidadeMedida</a>.</p>
+
+<h3 id="10-dtiniciotratamento">#10 dtInicioTratamento</h3>
+
+<p>Data de início do tratamento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não pode ser anterior à <a href="/v730/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="11-duracaotratamento">#11 duracaoTratamento</h3>
+
+<p>Tempo de duração do tratamento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>999</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;;</li>
+<li>Não pode ser preenchido caso o campo <a href="#12-duracaotratamentomedida">duracaoTratamentoMedida</a> = <code>4 - Indeterminado</code>;</li>
+<li>O valor deste campo deve ser maior que o valor do campo <a href="#8-dosefrequenciaquantidade">doseFrequenciaQuantidade</a>, respeitando as devidas unidades de medidas.</li>
+</ul>
+
+<h3 id="12-duracaotratamentomedida">#12 duracaoTratamentoMedida</h3>
+
+<p>Unidade de medida para o tempo de duração do tratamento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;.</p>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#duracaotratamentomedida">duracaoTratamentoMedida</a>.</p>
+
+<h3 id="13-quantidadereceitada">#13 quantidadeReceitada</h3>
+
+<p>Quantidade receitada do medicamento/princípio ativo.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>999</td>
+</tr>
+</tbody></table>
+
+<h3 id="15-qtdosemanha">#15 qtDoseManha</h3>
+
+<p>Quantidade de doses do medicamento/princípio ativo a ser administrada pelo paciente durante o turno da manhã.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>25</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;.</li>
+<li>É obrigatório preencher no mínimo 2 turnos.</li>
+<li>A quantidade de doses por turno (manhã, tarde, noite) pode ser separada por barra ou vírgula.</li>
+</ul>
+
+<h3 id="16-qtdosetarde">#16 qtDoseTarde</h3>
+
+<p>Quantidade de doses do medicamento/princípio ativo a ser administrada pelo paciente durante o turno da tarde.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>25</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;.</li>
+<li>É obrigatório preencher no mínimo 2 turnos.</li>
+<li>A quantidade de doses por turno (manhã, tarde, noite) pode ser separada por barra ou vírgula.</li>
+</ul>
+
+<h3 id="17-qtdosenoite">#17 qtDoseNoite</h3>
+
+<p>Quantidade de doses do medicamento/princípio ativo a ser administrada pelo paciente durante o turno da noite.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>25</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong></p>
+
+<ul>
+<li>Não pode ser preenchido caso o campo <a href="#4-doseunica">doseUnica</a> estiver marcado como &quot;Verdadeiro&quot;.</li>
+<li>É obrigatório preencher no mínimo 2 turnos.</li>
+<li>A quantidade de doses por turno (manhã, tarde, noite) pode ser separada por barra ou vírgula.</li>
+</ul>
+
+<h2 id="encaminhamentos">Encaminhamentos</h2>
+
+<h3 id="1-especialidade">#1 especialidade</h3>
+
+<p>Especialidade em que o cidadão será encaminhado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#especialidadeencaminhamentoatendimentoindividual">especialidadeEncaminhamentoAtendimentoIndividual</a>.</p>
+
+<h3 id="2-hipotesediagnosticocid10">#2 hipoteseDiagnosticoCID10</h3>
+
+<p>Hipótese/diagnóstico do encaminhamento com relação à tabela CID10.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Este campo só poderá ser preenchido caso o profissional for habilitado a informar CID10 conforme apresentado na tabela <a href="/v730/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a>;</li>
+<li>Deve ser preenchida somente CID10 permitida para o <a href="#5-sexo">Sexo</a> do cidadão;</li>
+<li>Não pode ser preenchido se o campo <a href="#3-hipotesediagnosticociap2">hipoteseDiagnosticoCIAP2</a> for preenchido;</li>
+<li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#3-hipotesediagnosticociap2">hipoteseDiagnosticoCIAP2</a> não estiver preenchido.</li>
+</ul>
+
+<h3 id="3-hipotesediagnosticociap2">#3 hipoteseDiagnosticoCIAP2</h3>
+
+<p>Hipótese/diagnóstico do encaminhamento com relação à tabela CIAP2.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Este campo só deverá ser preenchido caso o profissional <strong>não</strong> for habilitado a informar CID10 conforme apresentado na tabela <a href="/v730/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a>;</li>
+<li>Deve ser preenchida somente CIAP2 permitida para o <a href="#5-sexo">Sexo</a> do cidadão;</li>
+<li>Deve conter somente CIAP2 que possuem relação com uma CID10, conforme listado na planilha <a href="/v730/ledi/documentacao/referencias/relacao_ciap_cid.html">CIAP2 x CID10 mais frequentes</a>;</li>
+<li>Não pode ser preenchido se o campo <a href="#2-hipotesediagnosticocid10">hipoteseDiagnosticoCID10</a> for preenchido;</li>
+<li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#2-hipotesediagnosticocid10">hipoteseDiagnosticoCID10</a> não estiver preenchido.</li>
+</ul>
+
+<h3 id="4-classificacaorisco">#4 classificacaoRisco</h3>
+
+<p>Refere-se à classificação de risco.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#classificacaorisco">classificacaoRisco</a>.</p>
+
+<h2 id="resultadosexames">ResultadosExames</h2>
+
+<h3 id="1-exame">#1 exame</h3>
+
+<p>Código do exame.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Somente é permitido exames presentes na <a href="/v730/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a>;</li>
+<li>Se o exame não tiver uma referência no SIGTAP, deve ser informado o código <strong>AB</strong> do exame.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a>.</p>
+
+<p>Observações:</p>
+
+<ul>
+<li>Inserir o código do exame SIGTAP sem ponto ou hífen, ex: <code>0211070270</code>;</li>
+<li>Inserir o código do exame AB em caracteres maiúsculos, sem espaços, ex: <code>ABEX022</code>.</li>
+</ul>
+
+<h3 id="2-datasolicitacao">#2 dataSolicitacao</h3>
+
+<p>Refere-se à data da solicitação do exame específico.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="#22-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="#3-datanascimento">dataNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="3-datarealizacao">#3 dataRealizacao</h3>
+
+<p>Refere-se à data da realização do exame específico.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="#22-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="#2-datasolicitacao">dataSolicitacao</a>;</li>
+<li>Não pode ser anterior à <a href="#3-datanascimento">dataNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="4-dataresultado">#4 dataResultado</h3>
+
+<p>Refere-se à data do resultado do exame específico.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não pode ser posterior à <a href="#22-datahorainicialatendimento">dataHoraInicialAtendimento</a>;</li>
+<li>Não pode ser anterior à <a href="#3-datarealizacao">dataRealizacao</a>;</li>
+<li>Não pode ser anterior à <a href="#3-datanascimento">dataNascimento</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="5-resultadoexame">#5 resultadoExame</h3>
+
+<p>Refere-se ao resultado do exame.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;resultadoExame&gt;</td>
+<td>Sim</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Para os exames <code>02.05.02.014-3 - Ultrassonografia obstétrica (ABEX024)</code>, <code>02.05.02.015-1 - Ultrassonografia obstétrica c/ doppler colorido e pulsado</code> e <code>02.05.01.005-9 - Ultrassonografia doppler de fluxo obstétrico</code> o campo <code>tipoResultado</code> deve ser preenchido pelo menos com o valor <code>3 - Semanas</code> ou <code>4 - Data</code> e não pode ser informado o <code>tipoResultado</code> = <code>1 - Valor</code>;</li>
+<li>Para os demais exames da <a href="/v730/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a> somente poderá ser informado o <code>tipoResultado</code> = <code>1 - Valor</code>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="#resultadoexame">resultadoExame</a>.</p>
+
+<h2 id="resultadoexame">resultadoExame</h2>
+
+<h3 id="1-tiporesultado">#1 tipoResultado</h3>
+
+<p>Refere-se ao nome do campo que apresentará o resultado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Deve ser preenchido com o respectivo valor da coluna <strong>Estrutura do resultado do exame</strong> da <a href="/v730/ledi/documentacao/referencias/exames_estruturados.html">Lista de exames com resultado estruturado</a> correspondente ao <a href="#1-exame">exame</a>.</p>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#tiporesultadoexame">tipoResultadoExame</a>.</p>
+
+<h3 id="2-valorresultado">#2 valorResultado</h3>
+
+<p>Refere-se ao resultado do exame propriamente dito e está relacionado com a informação do campo <a href="#1-tiporesultado">tipoResultado</a>.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Se o campo <a href="#1-tiporesultado">tipoResultado</a> for igual a <code>1 - Valor</code> e o valor do campo <a href="#1-exame">exame</a> for:
+
+<ul>
+<li><code>0211070270</code>, <code>0211070149</code> ou <code>ABEX020</code>, então preencher com os valores da tabela <a href="/v730/ledi/documentacao/referencias/dicionario.html#testeorelhinha">testeOrelhinha</a>;</li>
+<li><code>0205020178</code>, então preencher com os valores da tabela <a href="/v730/ledi/documentacao/referencias/dicionario.html#ustransfontanela">usTransfontanela</a>;</li>
+<li><code>0206010079</code>, então preencher com os valores da tabela <a href="/v730/ledi/documentacao/referencias/dicionario.html#tomografiacomputadorizada">tomografiaComputadorizada</a>;</li>
+<li><code>0207010064</code>, então preencher com os valores da tabela <a href="/v730/ledi/documentacao/referencias/dicionario.html#ressonanciamagnetica">ressonanciaMagnetica</a>;</li>
+<li><code>0211060100</code> ou <code>ABPG013</code>, então preencher com os valores da tabela <a href="/v730/ledi/documentacao/referencias/dicionario.html#examefundoolho">exameFundoOlho</a>;</li>
+<li><code>ABEX022</code>, então preencher com os valores da tabela <a href="/v730/ledi/documentacao/referencias/dicionario.html#testeolhinho">testeOlhinho</a>;</li>
+<li><code>0202020509</code>, então preencher com os valores da tabela <a href="/v730/ledi/documentacao/referencias/dicionario.html#provalaco">provaLaco</a>;</li>
+<li><code>0202010503</code> ou <code>ABEX008</code>, então preencher com os valores de <code>0,00</code> a <code>100,00</code>;</li>
+<li><code>0202010295</code> ou <code>ABEX002</code>, então preencher com os valores de <code>1,00</code> a <code>10000,00</code>;</li>
+<li><code>0202010279</code> ou <code>ABEX007</code>, então preencher com os valores de <code>1,00</code> a <code>10000,00</code>;</li>
+<li><code>0202010287</code> ou <code>ABEX009</code>, então preencher com os valores de <code>1,00</code> a <code>10000,00</code>;</li>
+<li><code>0202010678</code>, então preencher com os valores de <code>1,00</code> a <code>10000,00</code>;</li>
+<li><code>0202010317</code> ou <code>ABEX003</code>, então preencher com os valores de <code>0,10</code> a <code>500,00</code>;</li>
+<li><code>0202050025</code>, então preencher com os valores de <code>0,001</code> a <code>1000,000</code>.</li>
+</ul></li>
+<li>Se o campo <a href="#1-tiporesultado">tipoResultado</a> for igual a <code>2 - Dias</code> e o valor do campo <a href="#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 6</code>;</li>
+<li>Se o campo <a href="#1-tiporesultado">tipoResultado</a> for igual a <code>3 - Semanas</code> e o valor do campo <a href="#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com valores de <code>0 a 42</code>; </li>
+<li>Se o campo <a href="#1-tiporesultado">tipoResultado</a> for igual a <code>4 - Data</code> e o valor do campo <a href="#1-exame">exame</a> for <code>02.05.02.014-3 (ABEX024)</code>, <code>02.05.02.015-1</code> ou <code>02.05.01.005-9</code>, este campo deve ser preenchido com uma data seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a> e a data não pode ser anterior à <a href="#3-datarealizacao">dataRealizacao</a>.</li>
+</ul>
+
+<h2 id="profissionalfinalizadorobservacao">profissionalFinalizadorObservacao</h2>
+
+<h3 id="1-profissionalcns">#1 profissionalCNS</h3>
+
+<p>CNS do profissional finalizador da observação.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>CNS validado de acordo com o <a href="/v730/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</li>
+<li>Somente fichas de profissionais com vínculo com o respectivo município são consideradas válidas.</li>
+</ul>
+
+<h3 id="2-cbocodigo_2002">#2 cboCodigo_2002</h3>
+
+<p>Código do CBO do profissional finalizador.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>6</td>
+<td>6</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Esse registro só deve aceitar CBOs de grupo de médicos ou enfermeiros</li>
+</ul>
+
+<h3 id="3-cnes">#3 cnes</h3>
+
+<p>Código do CNES da unidade de saúde que o profissional está lotado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>7</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Pode ser preenchido com qualquer CNES pertencente ao respectivo município.</li>
+</ul>
+
+<h3 id="4-ine">#4 ine</h3>
+
+<p>Código INE da equipe do profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>10</td>
+<td>10</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Pode ser preenchido com qualquer INE pertencente ao respectivo município.</li>
+</ul>
+
+<h2 id="medicoes">medicoes</h2>
+
+<h3 id="1-circunferenciaabdominal">#1 circunferenciaAbdominal</h3>
+
+<p>Circunferência abdominal do cidadão em centímetros.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>0</td>
+<td>5</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números e ponto (<code>.</code>);</li>
+<li>Máximo de 1 casa decimal;</li>
+<li>Valor mínimo 0.0 e máximo 99999.</li>
+</ul>
+
+<h3 id="2-perimetropanturrilha">#2 perimetroPanturrilha</h3>
+
+<p>Perímetro da panturrilha do cidadão em centímetros.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>0</td>
+<td>5</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números e ponto (<code>.</code>);</li>
+<li>Máximo de 1 casa decimal;</li>
+<li>Valor mínimo 10.0 e máximo 99.0.</li>
+</ul>
+
+<h3 id="3-pressaoarterialsistolica">#3 pressaoArterialSistolica</h3>
+
+<p>Pressão arterial sistólica do cidadão em mmHg.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#4-pressaoarterialdiastolica">pressaoArterialDiastolica</a>.</li>
+<li>Valor mínimo 0 e máximo 999;</li>
+</ul>
+
+<h3 id="4-pressaoarterialdiastolica">#4 pressaoArterialDiastolica</h3>
+
+<p>Pressão arterial diastólica do cidadão em mmHg.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#3-pressaoarterialsistolica">pressaoArterialSistolica</a>.</li>
+<li>Valor mínimo 0 e máximo 999;</li>
+</ul>
+
+<h3 id="5-frequenciarespiratoria">#5 frequenciaRespiratoria</h3>
+
+<p>Frequência respiratória do cidadão em MPM.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números inteiros;</li>
+<li>Valor mínimo 0 e máximo 200.</li>
+</ul>
+
+<h3 id="6-frequenciacardiaca">#6 frequenciaCardiaca</h3>
+
+<p>Frequência cardíaca do cidadão em BPM.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números inteiros;</li>
+<li>Valor mínimo 0 e máximo 999.</li>
+</ul>
+
+<h3 id="7-temperatura">#7 temperatura</h3>
+
+<p>Temperatura do cidadão em ºC.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>0</td>
+<td>4</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números e ponto (<code>.</code>);</li>
+<li>Máximo de 1 casa decimal;</li>
+<li>Valor mínimo 20.0 e máximo 45.0.</li>
+</ul>
+
+<h3 id="8-saturacaoo2">#8 saturacaoO2</h3>
+
+<p>Saturação de oxigênio do cidadão em percentual.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números inteiros;</li>
+<li>Valor mínimo 0 e máximo 100.</li>
+</ul>
+
+<h3 id="9-glicemiacapilar">#9 glicemiaCapilar</h3>
+
+<p>Glicemia capilar do cidadão em mg/dL.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números inteiros;</li>
+<li>Valor mínimo 0 e máximo 800;</li>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#10-tipoglicemiacapilar">tipoGlicemiaCapilar</a>.</li>
+</ul>
+
+<h3 id="10-tipoglicemiacapilar">#10 tipoGlicemiaCapilar</h3>
+
+<p>Momento da coleta da glicemia capilar.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas as opções <code>0</code>, <code>1</code>, <code>2</code> ou <code>3</code> são aceitas.</li>
+<li>Caso este campo seja preenchido, torna-se obrigatório o preenchimento do campo <a href="#9-glicemiacapilar">glicemiaCapilar</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/v730/ledi/documentacao/referencias/dicionario.html#tipoglicemiacapilar">TipoGlicemiaCapilar</a>.</p>
+
+<h3 id="11-peso">#11 peso</h3>
+
+<p>Peso do cidadão em quilogramas.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>0</td>
+<td>7</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números e ponto (<code>.</code>);</li>
+<li>Máximo de 3 casas decimais;</li>
+<li>Valor mínimo 0.5 e máximo 500.</li>
+</ul>
+
+<h3 id="12-altura">#12 altura</h3>
+
+<p>Altura do cidadão em centímetros.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>0</td>
+<td>5</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números e ponto (<code>.</code>);</li>
+<li>Máximo de 1 casa decimal;</li>
+<li>Valor mínimo 20 e máximo 250.</li>
+</ul>
+
+<h3 id="13-perimetrocefalico">#13 perimetroCefalico</h3>
+
+<p>Perímetro cefálico do cidadão em centímetros.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Double</td>
+<td>Não</td>
+<td>0</td>
+<td>5</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas números e ponto (<code>.</code>);</li>
+<li>Máximo de 1 casa decimal;</li>
+<li>Valor mínimo 10.0 e máximo 200.0.</li>
+</ul>
+
+<h2 id="listaciapcondicaoavaliada">ListaCiapCondicaoAvaliada</h2>
+
+<table><thead>
+<tr>
+<th>CIAP2 relacionada</th>
+<th>Descrição AB</th>
+<th>Código AB</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>R96</td>
+<td>Asma</td>
+<td>ABP009</td>
+</tr>
+<tr>
+<td>T91</td>
+<td>Beribéri</td>
+<td>ABP008</td>
+</tr>
+<tr>
+<td>A77</td>
+<td>Dengue</td>
+<td>ABP019</td>
+</tr>
+<tr>
+<td>T91</td>
+<td>Desnutrição</td>
+<td>ABP008</td>
+</tr>
+<tr>
+<td>T90</td>
+<td>Diabetes</td>
+<td>ABP006</td>
+</tr>
+<tr>
+<td>R95</td>
+<td>DPOC</td>
+<td>ABP010</td>
+</tr>
+<tr>
+<td>A78</td>
+<td>Hanseníase</td>
+<td>ABP018</td>
+</tr>
+<tr>
+<td>K86</td>
+<td>Hipertensão Arterial</td>
+<td>ABP005</td>
+</tr>
+<tr>
+<td>A78</td>
+<td>IST</td>
+<td>ABP020</td>
+</tr>
+<tr>
+<td>T82</td>
+<td>Obesidade</td>
+<td>ABP007</td>
+</tr>
+<tr>
+<td>W78</td>
+<td>Pré-natal</td>
+<td>ABP001</td>
+</tr>
+<tr>
+<td>A98</td>
+<td>Puericultura</td>
+<td>ABP004</td>
+</tr>
+<tr>
+<td>W18</td>
+<td>Puerpério (até 42 dias)</td>
+<td>ABP002</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Rastreamento de Câncer de mama</td>
+<td>ABP023</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Rastreamento de Câncer do colo do útero</td>
+<td>ABP022</td>
+</tr>
+<tr>
+<td>K22</td>
+<td>Rastreamento de Risco cardiovascular</td>
+<td>ABP024</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Reabilitação</td>
+<td>ABP015</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Saúde Mental</td>
+<td>ABP014</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Saúde Sexual e Reprodutiva</td>
+<td>ABP003</td>
+</tr>
+<tr>
+<td>P17</td>
+<td>Tabagismo</td>
+<td>ABP011</td>
+</tr>
+<tr>
+<td>A70</td>
+<td>Tuberculose</td>
+<td>ABP017</td>
+</tr>
+<tr>
+<td>P16</td>
+<td>Usuário de álcool</td>
+<td>ABP012</td>
+</tr>
+<tr>
+<td>P19</td>
+<td>Usuário de outras drogas</td>
+<td>ABP013</td>
+</tr>
+</tbody></table>
+
+<h2 id="listaexames">ListaExames</h2>
+
+<table><thead>
+<tr>
+<th>Código SIGTAP*</th>
+<th>Descrição AB</th>
+<th>Código AB correspondente</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>02.02.01.029-5</td>
+<td>Colesterol total</td>
+<td>ABEX002</td>
+</tr>
+<tr>
+<td>02.02.01.031-7</td>
+<td>Creatinina</td>
+<td>ABEX003</td>
+</tr>
+<tr>
+<td>02.02.05.001-7</td>
+<td>EAS / EQU</td>
+<td>ABEX027</td>
+</tr>
+<tr>
+<td>02.11.02.003-6</td>
+<td>Eletrocardiograma</td>
+<td>ABEX004</td>
+</tr>
+<tr>
+<td>02.02.02.035-5</td>
+<td>Eletroforese de Hemoglobina</td>
+<td>ABEX030</td>
+</tr>
+<tr>
+<td>02.11.08.005-5</td>
+<td>Espirometria</td>
+<td>ABEX005</td>
+</tr>
+<tr>
+<td>02.02.08.011-0</td>
+<td>Exame de escarro</td>
+<td>ABEX006</td>
+</tr>
+<tr>
+<td>02.02.01.047-3</td>
+<td>Glicemia</td>
+<td>ABEX026</td>
+</tr>
+<tr>
+<td>02.02.01.027-9</td>
+<td>HDL</td>
+<td>ABEX007</td>
+</tr>
+<tr>
+<td>02.02.01.050-3</td>
+<td>Hemoglobina glicada</td>
+<td>ABEX008</td>
+</tr>
+<tr>
+<td>02.02.02.038-0</td>
+<td>Hemograma</td>
+<td>ABEX028</td>
+</tr>
+<tr>
+<td>02.02.01.028-7</td>
+<td>LDL</td>
+<td>ABEX009</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Retinografia/Fundo de olho com oftalmologista</td>
+<td>ABEX013</td>
+</tr>
+<tr>
+<td>02.02.03.063-6</td>
+<td>Sorologia de Hepatite B</td>
+<td>-</td>
+</tr>
+<tr>
+<td>02.02.03.067-9</td>
+<td>Sorologia de Hepatite C</td>
+<td>-</td>
+</tr>
+<tr>
+<td>02.02.03.068-7</td>
+<td>Sorologia de Hepatite D</td>
+<td>-</td>
+</tr>
+<tr>
+<td>02.02.03.111-0</td>
+<td>Sorologia de Sífilis (VDRL)</td>
+<td>ABEX019</td>
+</tr>
+<tr>
+<td>02.02.03.090-3</td>
+<td>Sorologia para Dengue</td>
+<td>ABEX016</td>
+</tr>
+<tr>
+<td>02.02.03.030-0</td>
+<td>Sorologia para HIV</td>
+<td>ABEX018</td>
+</tr>
+<tr>
+<td>02.02.12.009-0</td>
+<td>Teste indireto de antiglobulina humana (TIA)</td>
+<td>ABEX031</td>
+</tr>
+<tr>
+<td>02.11.07.014-9</td>
+<td>Teste da orelhinha</td>
+<td>ABEX020</td>
+</tr>
+<tr>
+<td>02.02.06.021-7</td>
+<td>Teste de gravidez</td>
+<td>ABEX023</td>
+</tr>
+<tr>
+<td>Não possui</td>
+<td>Teste do olhinho</td>
+<td>ABEX022</td>
+</tr>
+<tr>
+<td>02.02.11.005-2</td>
+<td>Teste do pezinho</td>
+<td>ABEX021</td>
+</tr>
+<tr>
+<td>02.05.02.014-3</td>
+<td>Ultrassonografia obstétrica</td>
+<td>ABEX024</td>
+</tr>
+<tr>
+<td>02.02.08.008-0</td>
+<td>Urocultura</td>
+<td>ABEX029</td>
+</tr>
+</tbody></table>
+
+<p><em>* Procedimentos pertencentes a competência <strong>09/2020</strong> do SIGTAP.</em></p>
+
+<h2 id="especialidadeencaminhamentoatendimentoindividual">especialidadeEncaminhamentoAtendimentoIndividual</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Especialidade</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>CONSULTA EM ACUPUNTURA</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CONSULTA EM ALERGIA E IMUNOLOGIA</td>
+</tr>
+<tr>
+<td>3</td>
+<td>CONSULTA EM ANESTESIOLOGIA</td>
+</tr>
+<tr>
+<td>4</td>
+<td>CONSULTA EM ANGIOLOGIA</td>
+</tr>
+<tr>
+<td>5</td>
+<td>CONSULTA EM CIRURGIA ONCOLÓGICA</td>
+</tr>
+<tr>
+<td>6</td>
+<td>CONSULTA EM CARDIOLOGIA</td>
+</tr>
+<tr>
+<td>7</td>
+<td>CONSULTA EM CIRURGIA CARDÍACA</td>
+</tr>
+<tr>
+<td>8</td>
+<td>CONSULTA EM CIRURGIA GERAL</td>
+</tr>
+<tr>
+<td>9</td>
+<td>CONSULTA EM CIRURGIA REPARADORA</td>
+</tr>
+<tr>
+<td>10</td>
+<td>CONSULTA EM CIRURGIA PEDIÁTRICA</td>
+</tr>
+<tr>
+<td>11</td>
+<td>CONSULTA EM CIRURGIA PLÁSTICA</td>
+</tr>
+<tr>
+<td>12</td>
+<td>CONSULTA EM CIRURGIA TORÁCICA</td>
+</tr>
+<tr>
+<td>13</td>
+<td>CONSULTA EM DERMATOLOGIA</td>
+</tr>
+<tr>
+<td>14</td>
+<td>CONSULTA MÉDICA EM SAÚDE DO TRABALHADOR</td>
+</tr>
+<tr>
+<td>15</td>
+<td>CONSULTA EM CIRURGIA VASCULAR</td>
+</tr>
+<tr>
+<td>16</td>
+<td>CONSULTA EM ENDOCRINOLOGIA</td>
+</tr>
+<tr>
+<td>17</td>
+<td>CONSULTA EM FISIATRIA</td>
+</tr>
+<tr>
+<td>18</td>
+<td>CONSULTA EM GASTROENTEROLOGIA</td>
+</tr>
+<tr>
+<td>19</td>
+<td>CONSULTA EM CLÍNICA GERAL</td>
+</tr>
+<tr>
+<td>20</td>
+<td>CONSULTA EM GENÉTICA MÉDICA</td>
+</tr>
+<tr>
+<td>21</td>
+<td>CONSULTA EM GERIATRIA</td>
+</tr>
+<tr>
+<td>22</td>
+<td>CONSULTA EM GINECOLOGIA E OBSTETRÍCIA</td>
+</tr>
+<tr>
+<td>23</td>
+<td>CONSULTA EM CIRURGIA GINECOLÓGICA</td>
+</tr>
+<tr>
+<td>24</td>
+<td>CONSULTA EM UROGINECOLOGIA</td>
+</tr>
+<tr>
+<td>25</td>
+<td>CONSULTA EM HEMATOLOGIA</td>
+</tr>
+<tr>
+<td>26</td>
+<td>CONSULTA EM HOMEOPATIA</td>
+</tr>
+<tr>
+<td>27</td>
+<td>CONSULTA EM INFECTOLOGIA</td>
+</tr>
+<tr>
+<td>28</td>
+<td>CONSULTA EM MASTOLOGIA</td>
+</tr>
+<tr>
+<td>29</td>
+<td>CONSULTA EM NEFROLOGIA</td>
+</tr>
+<tr>
+<td>30</td>
+<td>CONSULTA EM CIRURGIA NEUROLÓGICA</td>
+</tr>
+<tr>
+<td>31</td>
+<td>CONSULTA EM NEUROLOGIA</td>
+</tr>
+<tr>
+<td>32</td>
+<td>CONSULTA EM NEUROPEDIATRIA</td>
+</tr>
+<tr>
+<td>33</td>
+<td>CONSULTA EM NUTROLOGIA</td>
+</tr>
+<tr>
+<td>34</td>
+<td>CONSULTA EM OFTALMOLOGIA</td>
+</tr>
+<tr>
+<td>35</td>
+<td>CONSULTA EM CIRURGIA OFTALMOLÓGICA</td>
+</tr>
+<tr>
+<td>36</td>
+<td>CONSULTA EM ONCOLOGIA</td>
+</tr>
+<tr>
+<td>37</td>
+<td>CONSULTA EM ORTOPEDIA</td>
+</tr>
+<tr>
+<td>38</td>
+<td>CONSULTA EM TRAUMATOLOGIA</td>
+</tr>
+<tr>
+<td>39</td>
+<td>CONSULTA EM CIRURGIA ORTOPÉDICA</td>
+</tr>
+<tr>
+<td>40</td>
+<td>CONSULTA EM OTORRINOLARINGOLOGIA</td>
+</tr>
+<tr>
+<td>41</td>
+<td>CONSULTA EM CIRURGIA OTORRINOLARINGOLOGIA</td>
+</tr>
+<tr>
+<td>42</td>
+<td>CONSULTA EM PROCTOLOGIA</td>
+</tr>
+<tr>
+<td>43</td>
+<td>CONSULTA EM PEDIATRIA</td>
+</tr>
+<tr>
+<td>44</td>
+<td>CONSULTA EM NEONATOLOGIA</td>
+</tr>
+<tr>
+<td>45</td>
+<td>CONSULTA EM PNEUMOLOGIA</td>
+</tr>
+<tr>
+<td>46</td>
+<td>CONSULTA EM TISIOLOGIA</td>
+</tr>
+<tr>
+<td>47</td>
+<td>CONSULTA EM PSIQUIATRIA</td>
+</tr>
+<tr>
+<td>48</td>
+<td>CONSULTA EM REUMATOLOGIA</td>
+</tr>
+<tr>
+<td>49</td>
+<td>CONSULTA EM UROLOGIA</td>
+</tr>
+<tr>
+<td>50</td>
+<td>CONSULTA EM ANDROLOGIA</td>
+</tr>
+<tr>
+<td>51</td>
+<td>CONSULTA EM CIRURGIA UROLÓGICA</td>
+</tr>
+<tr>
+<td>52</td>
+<td>CONSULTA EM CIRURGIA POSTECTOMIA</td>
+</tr>
+<tr>
+<td>53</td>
+<td>CONSULTA EM HEPATOLOGIA</td>
+</tr>
+<tr>
+<td>54</td>
+<td>CONSULTA EM REABILITAÇÃO FÍSICA</td>
+</tr>
+<tr>
+<td>55</td>
+<td>CONSULTA EM FISIOTERAPIA</td>
+</tr>
+<tr>
+<td>56</td>
+<td>CONSULTA EM NUTRIÇÃO</td>
+</tr>
+<tr>
+<td>57</td>
+<td>CONSULTA EM FONOAUDIOLOGIA</td>
+</tr>
+<tr>
+<td>58</td>
+<td>CONSULTA EM TERAPIA OCUPACIONAL</td>
+</tr>
+<tr>
+<td>59</td>
+<td>CONSULTA EM PSICOLOGIA</td>
+</tr>
+<tr>
+<td>60</td>
+<td>CONSULTA EM SEXOLOGIA</td>
+</tr>
+<tr>
+<td>61</td>
+<td>CONSULTA EM ASSISTENCIA SOCIAL</td>
+</tr>
+<tr>
+<td>62</td>
+<td>CONSULTA EM ODONTOLOGIA</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/v730/js/lunr.min.js"></script>
+
+    <script src="/v730/js/site.js" type="text/javascript"></script>    
+    <script src="/v730/js/search-index.js" type="text/javascript"></script>
+    <script src="/v730/js/busca.js"></script>
+  </body>
+</html>

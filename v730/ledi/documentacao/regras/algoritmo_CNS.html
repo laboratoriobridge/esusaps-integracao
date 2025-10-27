@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Validar CNS</title>
+  <meta name="description" content="O CNS deve ser validado conforme alguma das rotinas abaixo:">
+
+  <link rel="stylesheet" href="/v730/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/v730/ledi/documentacao/regras/algoritmo_CNS.html">
+  <link rel="icon" type="image/png" href="/v730/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/v730/">
+      <img src="/v730/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 7.3.0</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/v730/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/v730/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/v730/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface" href="/v730/ledi/index.html">Layout e-SUS APS de Dados e Interface</a></li>
+          
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.3.0" href="/v730/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.3.0</a></li>
+          
+        
+          
+            <li><a title="Regras" href="/v730/ledi/documentacao/regras/index.html">Regras</a></li>
+          
+        
+          
+            <li><a title="Validar CNS" href="/v730/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/v730/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.3.0" href="/v730/ledi/documentacao/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.3.0)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Regras" href="/v730/ledi/documentacao/regras/index.html">Regras</a>
+      <ul>
+        
+          <li class="active">
+          
+            <a title="Validar CNS" href="/v730/ledi/documentacao/regras/algoritmo_CNS.html">
+              Validar CNS
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Validar nome" href="/v730/ledi/documentacao/regras/validar_nome.html">
+              Validar nome
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Grupos de CBOs x Tipo de ficha" href="/v730/ledi/documentacao/regras/cbo.html">
+              Grupos de CBOs x Tipo de ficha
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Regras de vacinação" href="/v730/ledi/documentacao/regras/validar_regras_vacinacao.html">
+              Regras de vacinação
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Validar CNS</h1>
+    <p class="post-meta">
+      <a class="btn" href="/v730/pdf.html?include=/ledi/documentacao/regras/algoritmo_CNS.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 24/03/2025</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <p>O CNS deve ser validado conforme alguma das rotinas abaixo:</p>
+
+<h3 id="1-rotina-de-valida-o-de-n-meros-que-iniciam-com-1-ou-2">1. Rotina de validação de Números que iniciam com <strong>1</strong> ou <strong>2</strong>:</h3>
+<div class="highlight"><pre><code class="language-java" data-lang="java">
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">validaCns</span><span class="o">(</span><span class="nc">String</span> <span class="n">cns</span><span class="o">){</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">length</span><span class="o">()</span> <span class="o">!=</span> <span class="mi">15</span><span class="o">){</span>
+            <span class="k">return</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="kt">float</span> <span class="n">soma</span><span class="o">;</span>
+        <span class="kt">float</span> <span class="n">resto</span><span class="o">,</span> <span class="n">dv</span><span class="o">;</span>
+        <span class="nc">String</span> <span class="n">pis</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
+        <span class="nc">String</span> <span class="n">resultado</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
+        <span class="n">pis</span> <span class="o">=</span> <span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">11</span><span class="o">);</span>
+
+        <span class="n">soma</span> <span class="o">=</span> <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">15</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">14</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">13</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">12</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">11</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span><span class="mi">6</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">10</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span><span class="mi">7</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">9</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">7</span><span class="o">,</span><span class="mi">8</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">8</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span><span class="mi">9</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">7</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">9</span><span class="o">,</span><span class="mi">10</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">6</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">11</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">5</span><span class="o">);</span>
+
+        <span class="n">resto</span> <span class="o">=</span> <span class="n">soma</span> <span class="o">%</span> <span class="mi">11</span><span class="o">;</span>
+        <span class="n">dv</span> <span class="o">=</span> <span class="mi">11</span> <span class="o">-</span> <span class="n">resto</span><span class="o">;</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">dv</span> <span class="o">==</span> <span class="mi">11</span><span class="o">){</span>
+            <span class="n">dv</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">dv</span> <span class="o">==</span> <span class="mi">10</span><span class="o">){</span>
+            <span class="n">soma</span> <span class="o">=</span> <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">15</span><span class="o">)</span> <span class="o">+</span>
+                   <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">14</span><span class="o">)</span> <span class="o">+</span>
+                   <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">13</span><span class="o">)</span> <span class="o">+</span>
+                   <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">12</span><span class="o">)</span> <span class="o">+</span>
+                   <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">11</span><span class="o">)</span> <span class="o">+</span>
+                   <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span><span class="mi">6</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">10</span><span class="o">)</span> <span class="o">+</span>
+                   <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span><span class="mi">7</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">9</span><span class="o">)</span> <span class="o">+</span>
+                   <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">7</span><span class="o">,</span><span class="mi">8</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">8</span><span class="o">)</span> <span class="o">+</span>
+                   <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span><span class="mi">9</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">7</span><span class="o">)</span> <span class="o">+</span>
+                   <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">9</span><span class="o">,</span><span class="mi">10</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">6</span><span class="o">)</span> <span class="o">+</span>
+                   <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">pis</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">11</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">5</span><span class="o">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">;</span>
+
+            <span class="n">resto</span> <span class="o">=</span> <span class="n">soma</span> <span class="o">%</span> <span class="mi">11</span><span class="o">;</span>
+            <span class="n">dv</span> <span class="o">=</span> <span class="mi">11</span> <span class="o">-</span> <span class="n">resto</span><span class="o">;</span>
+            <span class="n">resultado</span> <span class="o">=</span> <span class="n">pis</span> <span class="o">+</span> <span class="s">"001"</span> <span class="o">+</span> <span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">((</span><span class="kt">int</span><span class="o">)</span><span class="n">dv</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">else</span><span class="o">{</span>
+            <span class="n">resultado</span> <span class="o">=</span> <span class="n">pis</span> <span class="o">+</span> <span class="s">"000"</span> <span class="o">+</span> <span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">((</span><span class="kt">int</span><span class="o">)</span><span class="n">dv</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="k">if</span> <span class="o">(!</span> <span class="n">cns</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">resultado</span><span class="o">)){</span>
+            <span class="k">return</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">else</span><span class="o">{</span>
+        <span class="k">return</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+
+</code></pre></div>
+<h3 id="2-rotina-de-valida-o-de-n-meros-que-iniciam-com-7-8-ou-9">2. Rotina de validação de Números que iniciam com <strong>7</strong>, <strong>8</strong> ou <strong>9</strong>:</h3>
+<div class="highlight"><pre><code class="language-java" data-lang="java">
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">validaCnsProv</span><span class="o">(</span><span class="nc">String</span> <span class="n">cns</span><span class="o">){</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">length</span><span class="o">()</span> <span class="o">!=</span> <span class="mi">15</span><span class="o">){</span>
+            <span class="k">return</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="kt">float</span> <span class="n">dv</span><span class="o">;</span>
+        <span class="kt">float</span> <span class="n">resto</span><span class="o">,</span><span class="n">soma</span><span class="o">;</span>
+
+        <span class="n">soma</span> <span class="o">=</span> <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">15</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">14</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">13</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">12</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">11</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span><span class="mi">6</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">10</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span><span class="mi">7</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">9</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">7</span><span class="o">,</span><span class="mi">8</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">8</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span><span class="mi">9</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">7</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">9</span><span class="o">,</span><span class="mi">10</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">6</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">11</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">5</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">11</span><span class="o">,</span><span class="mi">12</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">4</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">12</span><span class="o">,</span><span class="mi">13</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">3</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">13</span><span class="o">,</span><span class="mi">14</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">2</span><span class="o">)</span> <span class="o">+</span>
+               <span class="o">((</span><span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">14</span><span class="o">,</span><span class="mi">15</span><span class="o">)).</span><span class="na">intValue</span><span class="o">())</span> <span class="o">*</span> <span class="mi">1</span><span class="o">);</span>
+
+        <span class="n">resto</span> <span class="o">=</span> <span class="n">soma</span> <span class="o">%</span> <span class="mi">11</span><span class="o">;</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">resto</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">){</span>
+            <span class="k">return</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">else</span><span class="o">{</span>
+        <span class="k">return</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+
+</code></pre></div>
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/v730/js/lunr.min.js"></script>
+
+    <script src="/v730/js/site.js" type="text/javascript"></script>    
+    <script src="/v730/js/search-index.js" type="text/javascript"></script>
+    <script src="/v730/js/busca.js"></script>
+  </body>
+</html>
