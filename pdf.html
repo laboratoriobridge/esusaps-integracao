@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.3.2</span>
+        <span class="label">versão 7.3.3</span>
       
     </a>
 
@@ -141,7 +141,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 7.3.2
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 7.3.3
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -2189,7 +2189,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 7.3.2</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 7.3.3</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -3077,8 +3077,13 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>5.4.20 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 7.3.3</a></td>
+<td>23/10/2025</td>
+</tr>
+<tr>
 <td>5.4.17 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 7.3.2</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v732/">LEDI APS 7.3.2</a></td>
 <td>09/10/2025</td>
 </tr>
 <tr>
@@ -3387,17 +3392,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 7.3.2</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 7.3.3</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 7.3.2.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 7.3.3.</p>
 
-<p>A versão <strong>LEDI APS</strong> 7.3.2 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.4.17 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 7.3.3 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.4.20 ou superior.</p>
 
-<p>Confira as principais alterações na versão 7.3.2 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações na versão 7.3.3 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -8603,6 +8608,8 @@
 </tr>
 </tbody></table>
 
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/estrutura_arquivos/#profissionalfinalizadorobservacao">profissionalFinalizadorObservacao</a>.</p>
+
 <h3 id="16-emultis">#16 emultis</h3>
 
 <p>Código das ações realizadas pelas Equipes Multiprofissionais na Atenção Primária à Saúde.</p>
@@ -10465,6 +10472,7 @@
 <ul>
 <li>CNS validado de acordo com o <a href="/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</li>
 <li>Somente fichas de profissionais com vínculo com o respectivo município são consideradas válidas.</li>
+<li>O campo <a href="/ledi/documentacao/estrutura_arquivos/#profissionalfinalizadorobservacao">profissionalFinalizadorObservacao</a> é opcional, mesmo colocando <strong>true</strong> no campo <a href="/ledi/documentacao/estrutura_arquivos/#15-ficouemobservacao">ficouEmObservacao</a>.</li>
 </ul>
 
 <h3 id="2-cbocodigo_2002">#2 cboCodigo_2002</h3>
@@ -22544,8 +22552,8 @@
 <tr>
 <td>String</td>
 <td>Condicional</td>
-<td>1</td>
-<td>60</td>
+<td>-</td>
+<td>-</td>
 </tr>
 </tbody></table>
 
@@ -22712,7 +22720,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -54436,7 +54444,7 @@
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 2</td>
+<td>Valor único = 3</td>
 </tr>
 </tbody></table>
 
@@ -67391,7 +67399,7 @@
 </tr>
 <tr>
 <td>35979</td>
-<td>BHARAT-COVAXIN</td>
+<td>BHARAT BIOTECH</td>
 </tr>
 <tr>
 <td>166</td>
@@ -113012,6 +113020,16 @@
 
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as últimas versões do LEDI APS:</p>
+
+<h2 id="vers-o-7-3-3">Versão 7.3.3</h2>
+
+<h3 id="1-atualiza-o-nas-regras-da-ficha-de-atendimento-individual">1. Atualização nas regras da Ficha de Atendimento Individual</h3>
+
+<p>A documentação da Ficha de Atendimento Individual foi atualizada para incluir a referência entre os campos <code>ficouEmObservacao</code> e <code>profissionalFinalizadorObservacao</code>. O campo <code>ficouEmObservacao</code> agora tem a indicação de vínculo com <code>profissionalFinalizadorObservacao</code>, e este é descrito como opcional.</p>
+
+<h3 id="2-atualiza-es-em-regras-vacinais">2. Atualizações em regras vacinais</h3>
+
+<p>Atualização dos nomes dos fabricantes relacionados aos imunobiológicos de Covid-19.</p>
 
 <h2 id="vers-o-7-3-2">Versão 7.3.2</h2>
 
