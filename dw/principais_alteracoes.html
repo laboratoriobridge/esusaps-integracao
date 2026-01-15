@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.3.3</span>
+        <span class="label">versão 7.3.4</span>
       
     </a>
 
@@ -169,7 +169,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/principais_alteracoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 16/09/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 15/01/2026</span>
       
     </p>
   </header>
@@ -177,17 +177,21 @@
   <article class="post-content">
     <p>Este documento relata as principais alterações entre as versões do DW.</p>
 
+<h3 id="principais-altera-es-da-v-5-4-22-para-a-v-5-4-23-do-e-sus-aps">Principais alterações da v.5.4.22 para a v.5.4.23 do e-SUS APS:</h3>
+
+<p><strong>1. </strong> As tabelas relacionadas aos relatórios operacionais serão descontinuadas em versões futuras.</p>
+
 <h3 id="principais-altera-es-da-v-5-4-7-para-a-v-5-4-8-do-e-sus-aps">Principais alterações da v.5.4.7 para a v.5.4.8 do e-SUS APS:</h3>
 
-<p><strong>1. </strong> Inclusão da coluna <code>co_fat_cidadao_pec</code> na <code>tb_acomp_cidadaos_vinculados</code>.</p>
+<p><strong>2. </strong> Inclusão da coluna <code>co_fat_cidadao_pec</code> na <code>tb_acomp_cidadaos_vinculados</code>.</p>
 
 <h3 id="principais-altera-es-da-v-5-4-6-para-a-v-5-4-7-do-e-sus-aps">Principais alterações da v.5.4.6 para a v.5.4.7 do e-SUS APS:</h3>
 
-<p><strong>2. </strong> Inclusão da tabela <code>tb_fat_solicitacao_oci</code>, populada sempre que atendimentos individuais e odontológicos com algum registro de procedimentos do grupo <code>09 - Procedimento para Oferta de Cuidado Integrado</code> são processados.</p>
+<p><strong>3. </strong> Inclusão da tabela <code>tb_fat_solicitacao_oci</code>, populada sempre que atendimentos individuais e odontológicos com algum registro de procedimentos do grupo <code>09 - Procedimento para Oferta de Cuidado Integrado</code> são processados.</p>
 
 <h3 id="principais-altera-es-da-v-5-4-0-para-a-v-5-4-1-do-e-sus-aps">Principais alterações da v.5.4.0 para a v.5.4.1 do e-SUS APS:</h3>
 
-<p><strong>3. </strong> Inclusão de campos nas <code>tb_fat_atd_ind_procedimentos</code>, <code>tb_fat_atend_odonto_proced</code> e <code>tb_fat_atend_odonto_exames</code>:</p>
+<p><strong>4. </strong> Inclusão de campos nas <code>tb_fat_atd_ind_procedimentos</code>, <code>tb_fat_atend_odonto_proced</code> e <code>tb_fat_atend_odonto_exames</code>:</p>
 
 <ul>
 <li>co_dim_faixa_etaria: Código da faixa etária. Campo <code>co_seq_dim_faixa_etaria</code> da <code>tb_dim_faixa_etaria</code>;</li>
@@ -199,7 +203,7 @@
 
 <h3 id="principais-altera-es-da-v-5-3-25-para-a-v-5-3-26-do-e-sus-aps">Principais alterações da v.5.3.25 para a v.5.3.26 do e-SUS APS:</h3>
 
-<p><strong>4. </strong> Inclusão de campos na <code>tb_acomp_cidadaos_vinculados</code>:</p>
+<p><strong>5. </strong> Inclusão de campos na <code>tb_acomp_cidadaos_vinculados</code>:</p>
 
 <ul>
 <li>co_cds_domicilio: Código identificador do domicílio ao qual o cidadão está vinculado;</li>
@@ -209,7 +213,7 @@
 
 <h3 id="principais-altera-es-da-v-5-3-20-para-a-v-5-3-21-do-e-sus-aps">Principais alterações da v.5.3.20 para a v.5.3.21 do e-SUS APS:</h3>
 
-<p><strong>5. </strong> Inclusão da tabela <code>tb_dim_grau_vulnerabilidade</code>:</p>
+<p><strong>6. </strong> Inclusão da tabela <code>tb_dim_grau_vulnerabilidade</code>:</p>
 
 <ul>
 <li>co_seq_dim_grau_vulnerabilidade: Código de identificação sequencial;</li>
@@ -219,11 +223,11 @@
 
 <h3 id="principais-altera-es-da-v-5-3-14-para-a-v-5-3-15-do-e-sus-aps">Principais alterações da v.5.3.14 para a v.5.3.15 do e-SUS APS:</h3>
 
-<p><strong>6. </strong> Inclusão da tabela <code>tb_dim_situacao_problema</code>, contendo todas as possíveis situações que podem ser preenchidas na lista de problemas e condições.</p>
+<p><strong>7. </strong> Inclusão da tabela <code>tb_dim_situacao_problema</code>, contendo todas as possíveis situações que podem ser preenchidas na lista de problemas e condições.</p>
 
-<p><strong>7. </strong> Renomeação da tabela <code>tb_fat_atend_dom_condicao_aval</code> para <code>tb_fat_atend_dom_prob_cond</code>.</p>
+<p><strong>8. </strong> Renomeação da tabela <code>tb_fat_atend_dom_condicao_aval</code> para <code>tb_fat_atend_dom_prob_cond</code>.</p>
 
-<p><strong>8. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_problemas</code>, <code>tb_fat_atend_odonto_problemas</code> e <code>tb_fat_atend_dom_prob_cond</code>:</p>
+<p><strong>9. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_problemas</code>, <code>tb_fat_atend_odonto_problemas</code> e <code>tb_fat_atend_dom_prob_cond</code>:</p>
 
 <ul>
 <li>nu_uuid_problema: Código identificador único do problema ou condição;</li>
@@ -235,7 +239,7 @@
 <li>st_avaliado: Indicador se o problema ou condição foi avaliado durante o atendimento.</li>
 </ul>
 
-<p><strong>9. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_medicamentos</code> e <code>tb_fat_atend_odonto_medicamentos</code>:</p>
+<p><strong>10. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_medicamentos</code> e <code>tb_fat_atend_odonto_medicamentos</code>:</p>
 
 <ul>
 <li>qt_dose_manha;</li>
@@ -245,7 +249,7 @@
 
 <h3 id="principais-altera-es-da-v-5-3-6-para-a-v-5-3-7-do-e-sus-aps">Principais alterações da v.5.3.6 para a v.5.3.7 do e-SUS APS:</h3>
 
-<p><strong>10. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atendimento_individual</code>, <code>tb_fat_proced_atend</code> e <code>tb_fat_atendimento_odonto</code>:</p>
+<p><strong>11. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atendimento_individual</code>, <code>tb_fat_proced_atend</code> e <code>tb_fat_atendimento_odonto</code>:</p>
 
 <ul>
 <li>nu_medicao_circ_abdominal: Circunferência abdominal do cidadão em centímetros;</li>
@@ -265,7 +269,7 @@
 
 <h3 id="principais-altera-es-da-v-5-2-36-para-a-v-5-2-37-do-e-sus-aps">Principais alterações da v.5.2.36 para a v.5.2.37 do e-SUS APS:</h3>
 
-<p><strong>11. </strong> Inclusão do detalhamento dos fatos:</p>
+<p><strong>12. </strong> Inclusão do detalhamento dos fatos:</p>
 
 <ul>
 <li><a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a>;</li>
@@ -274,15 +278,15 @@
 
 <h3 id="principais-altera-es-da-v5-2-33-para-a-v-5-2-34-do-e-sus-aps">Principais alterações da v5.2.33 para a v.5.2.34 do e-SUS APS:</h3>
 
-<p><strong>12. </strong> Inclusão da seção de <a href="/dw/visualizacoes/index.html">Visualizações</a>, com a nova <a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">Tabela de acompanhamento de cidadãos vinculados</a>.</p>
+<p><strong>13. </strong> Inclusão da seção de <a href="/dw/visualizacoes/index.html">Visualizações</a>, com a nova <a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">Tabela de acompanhamento de cidadãos vinculados</a>.</p>
 
 <h3 id="principais-altera-es-da-v5-2-16-para-a-v-5-2-17-do-e-sus-aps">Principais alterações da v5.2.16 para a v.5.2.17 do e-SUS APS:</h3>
 
-<p><strong>13. </strong> No contexto de <a href="/dw/fatos/cuidado_compartilhado/index.html">Cuidado compartilhado</a> foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: <code>tb_fat_cuidado_compartilhado</code>.</p>
+<p><strong>14. </strong> No contexto de <a href="/dw/fatos/cuidado_compartilhado/index.html">Cuidado compartilhado</a> foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: <code>tb_fat_cuidado_compartilhado</code>.</p>
 
-<p><strong>14. </strong> Para contextualizar as informações da tabela <code>tb_fat_cuidado_compartilhado</code>, foram criadas as seguintes tabelas de dimensão: <code>tb_dim_conduta_cuidado</code>e <code>tb_dim_prioridade_cuidado</code>.</p>
+<p><strong>15. </strong> Para contextualizar as informações da tabela <code>tb_fat_cuidado_compartilhado</code>, foram criadas as seguintes tabelas de dimensão: <code>tb_dim_conduta_cuidado</code>e <code>tb_dim_prioridade_cuidado</code>.</p>
 
-<p><strong>15. </strong> Inclusão do tipo de ficha &quot;ESUS PEC Cuidado compartilhado&quot; na <code>tb_dim_tipo_ficha</code>.</p>
+<p><strong>16. </strong> Inclusão do tipo de ficha &quot;ESUS PEC Cuidado compartilhado&quot; na <code>tb_dim_tipo_ficha</code>.</p>
 
 <h3 id="principais-altera-es-da-v5-2-4-para-a-v-5-2-5-do-e-sus-aps">Principais alterações da v5.2.4 para a v.5.2.5 do e-SUS APS:</h3>
 
