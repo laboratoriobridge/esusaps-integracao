@@ -45,6 +45,7 @@
         <ciap>A03</ciap>
         <cid10>A03</cid10>
         <prioridadeCuidado>3</prioridadeCuidado>
+        <reclassificacaoPrioridadeCuidado>2</reclassificacaoPrioridadeCuidado>
         <uuidFichaOrigem>5444430-87a1cc27-7137-415c-b632-425720e1e380</uuidFichaOrigem>
         <tpDadoTranspFichaOrigem>16</tpDadoTranspFichaOrigem>
     </ns4:cuidadoCompartilhadoTransport>
