@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.3.6</span>
+        <span class="label">versão 7.3.7</span>
       
     </a>
 
@@ -141,7 +141,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 7.3.6
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 7.3.7
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -2189,7 +2189,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 7.3.6</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 7.3.7</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -3077,8 +3077,13 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>5.4.29 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 7.3.7</a></td>
+<td>22/01/2026</td>
+</tr>
+<tr>
 <td>5.4.28 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 7.3.6</a></td>
+<td><a href="https://integracao.esusab.ufsc.br/v736/">LEDI APS 7.3.6</a></td>
 <td>15/01/2026</td>
 </tr>
 <tr>
@@ -3407,17 +3412,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 7.3.6</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 7.3.7</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 7.3.6.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 7.3.7.</p>
 
-<p>A versão <strong>LEDI APS</strong> 7.3.6 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.4.28 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 7.3.7 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.4.29 ou superior.</p>
 
-<p>Confira as principais alterações na versão 7.3.6 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações na versão 7.3.7 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -18596,7 +18601,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Requerido se <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> &lt; 6 meses a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Requerido se <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> &lt; 6 meses a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Para registrar a resposta do questionário, o preenchimento de todas as perguntas é obrigatório.</li>
+</ul>
 
 <p><strong>Referência</strong>: <a href="/ledi/documentacao/estrutura_arquivos/#perguntaquestionariocriancasmenoresseismeses">PerguntaQuestionarioCriancasMenoresSeisMeses</a>.</p>
 
@@ -18622,7 +18632,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Requerido se <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> &gt;= 6 meses e &lt;= 23 meses a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Requerido se <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> &gt;= 6 meses e &lt;= 23 meses a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Para registrar a resposta do questionário, o preenchimento de todas as perguntas é obrigatório.</li>
+</ul>
 
 <p><strong>Referência</strong>: <a href="/ledi/documentacao/estrutura_arquivos/#perguntaquestionariocriancasdeseisvintetresmeses">PerguntaQuestionarioCriancasDeSeisVinteTresMeses</a>.</p>
 
@@ -18648,7 +18663,12 @@
 </tr>
 </tbody></table>
 
-<p><strong>Regra:</strong> Requerido se <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> &gt;= 24 meses a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Requerido se <a href="/ledi/documentacao/estrutura_arquivos/#4-datanascimento">dataNascimento</a> &gt;= 24 meses a partir da <a href="/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Para registrar a resposta do questionário, o preenchimento de todas as perguntas é obrigatório.</li>
+</ul>
 
 <p><strong>Referência</strong>: <a href="/ledi/documentacao/estrutura_arquivos/#perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</a>.</p>
 
@@ -101406,7 +101426,7 @@
     <span class="o">}</span>
 
 </code></pre></div>
-<h3 id="2-rotina-de-valida-o-de-n-meros-que-iniciam-com-7-8-ou-9">2. Rotina de validação de Números que iniciam com <strong>7</strong>, <strong>8</strong> ou <strong>9</strong>:</h3>
+<h3 id="2-rotina-de-valida-o-de-n-meros-que-iniciam-com-5-7-8-ou-9">2. Rotina de validação de Números que iniciam com <strong>5</strong>, <strong>7</strong>, <strong>8</strong> ou <strong>9</strong>:</h3>
 <div class="highlight"><pre><code class="language-java" data-lang="java">
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">validaCnsProv</span><span class="o">(</span><span class="nc">String</span> <span class="n">cns</span><span class="o">){</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">cns</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">length</span><span class="o">()</span> <span class="o">!=</span> <span class="mi">15</span><span class="o">){</span>
@@ -112940,6 +112960,12 @@
 
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as últimas versões do LEDI APS:</p>
+
+<h2 id="vers-o-7-3-7">Versão 7.3.7</h2>
+
+<h3 id="1-atualiza-o-da-valida-o-do-cns">1. Atualização da validação do CNS</h3>
+
+<p>Foi atualizada a validação do CNS para aceitar um novo tipo de CNS iniciado com 5.</p>
 
 <h2 id="vers-o-7-3-6">Versão 7.3.6</h2>
 
