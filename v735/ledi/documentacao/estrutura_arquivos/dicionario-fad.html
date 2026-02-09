@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ficha de Atendimento Domiciliar</title>
+  <meta name="description" content="FichaAtendimentoDomiciliarMaster">
+
+  <link rel="stylesheet" href="/v735/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/v735/ledi/documentacao/estrutura_arquivos/dicionario-fad.html">
+  <link rel="icon" type="image/png" href="/v735/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/v735/">
+      <img src="/v735/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 7.3.5</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/v735/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/v735/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/v735/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface" href="/v735/ledi/index.html">Layout e-SUS APS de Dados e Interface</a></li>
+          
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.3.5" href="/v735/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.3.5</a></li>
+          
+        
+          
+            <li><a title="Estrutura dos arquivos" href="/v735/ledi/documentacao/estrutura_arquivos/index.html">Estrutura dos arquivos</a></li>
+          
+        
+          
+            <li><a title="Ficha de Atendimento Domiciliar" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fad.html">Ficha de Atendimento Domiciliar</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/v735/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.3.5" href="/v735/ledi/documentacao/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.3.5)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Estrutura dos arquivos" href="/v735/ledi/documentacao/estrutura_arquivos/index.html">Estrutura dos arquivos</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Camada de Transporte de Dados" href="/v735/ledi/documentacao/estrutura_arquivos/camada-transporte.html">
+              Camada de Transporte de Dados
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Cabeçalho (headerTransport)" href="/v735/ledi/documentacao/estrutura_arquivos/header-transport.html">
+              Cabeçalho (headerTransport)
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Individual" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">
+              Ficha de Cadastro Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Domiciliar e Territorial" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">
+              Ficha de Cadastro Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Individual" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">
+              Ficha de Atendimento Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Odontológico Individual" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">
+              Ficha de Atendimento Odontológico Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atividade Coletiva" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fac.html">
+              Ficha de Atividade Coletiva
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Procedimentos" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fp.html">
+              Ficha de Procedimentos
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Visita Domiciliar e Territorial" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html">
+              Ficha de Visita Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Marcadores de Consumo Alimentar" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-mca.html">
+              Marcadores de Consumo Alimentar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Avaliação de Elegibilidade" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fae.html">
+              Ficha de Avaliação de Elegibilidade
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Ficha de Atendimento Domiciliar" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fad.html">
+              Ficha de Atendimento Domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha complementar - Síndrome neurológica por Zika / Microcefalia" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fczm.html">
+              Ficha complementar - Síndrome neurológica por Zika / Microcefalia
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Vacinação" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fv.html">
+              Ficha de Vacinação
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cuidado Compartilhado" href="/v735/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html">
+              Ficha de Cuidado Compartilhado
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ficha de Atendimento Domiciliar</h1>
+    <p class="post-meta">
+      <a class="btn" href="/v735/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fad.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 06/02/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h2 id="fichaatendimentodomiciliarmaster">FichaAtendimentoDomiciliarMaster</h2>
+
+<h3 id="1-uuidficha">#1 uuidFicha</h3>
+
+<p>Código UUID para identificar a ficha na base de dados nacional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo.</p>
+
+<p><strong>Referência:</strong> Formato canônico. Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h3 id="2-tpcdsorigem">#2 tpCdsOrigem</h3>
+
+<p>Tipo de origem dos dados do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p>Observação: Utilizar valor 3 (sistemas terceiros).</p>
+
+<h3 id="3-atendimentosdomiciliares">#3 atendimentosDomiciliares</h3>
+
+<p>Lista dos atendimentos realizados pelo profissional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;FichaAtendimentoDomiciliarChild&gt;</td>
+<td>Sim</td>
+<td>0</td>
+<td>99</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#fichaatendimentodomiciliarchild">FichaAtendimentoDomiciliarChild</a>.</p>
+
+<h3 id="4-headertransport">#4 headerTransport</h3>
+
+<p>Profissionais que realizaram o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>VariasLotacoesHeader</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/v735/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-domiciliar">Tabela 10 - CBOs que podem registrar ficha de atendimento domiciliar</a> podem ser adicionadas no campo CBO do profissional principal.</p>
+
+<p><strong>Referência:</strong> <a href="/v735/ledi/documentacao/estrutura_arquivos/header-transport.html#variaslotacoesheader">VariasLotacoesHeader</a>.</p>
+
+<h2 id="fichaatendimentodomiciliarchild">FichaAtendimentoDomiciliarChild</h2>
+
+<h3 id="1-turno">#1 turno</h3>
+
+<p>Código do turno onde aconteceu o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v735/ledi/documentacao/referencias/dicionario.html#turno">Turno</a>.</p>
+
+<h3 id="2-cnscidadao">#2 cnsCidadao</h3>
+
+<p>CNS do cidadão que recebeu atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Validado pelo algoritmo;</li>
+<li>Não pode ser preenchido se o campo <a href="#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
+
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/v735/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+
+<h3 id="3-datanascimento">#3 dataNascimento</h3>
+
+<p>Data de nascimento do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não pode ser posterior à <a href="/v735/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior à 130 anos a partir da <a href="/v735/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="4-sexo">#4 sexo</h3>
+
+<p>Código do sexo do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong>    <a href="/v735/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+
+<h3 id="5-localdeatendimento">#5 localDeAtendimento</h3>
+
+<p>Código do local onde o atendimento foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v735/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+
+<h3 id="6-atencaodomiciliarmodalidade">#6 atencaoDomiciliarModalidade</h3>
+
+<p>Código da modalidade AD do cidadão atendido.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Apenas as opções <code>1</code>, <code>2</code> e <code>3</code> são aceitas;</li>
+<li>Não pode ser preenchido se o campo <a href="#7-tipoatendimento">tipoAtendimento</a> = <code>9 - Visita domiciliar pós-óbito</code>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/v735/ledi/documentacao/referencias/dicionario.html#modalidadead">ModalidadeAD</a>.</p>
+
+<h3 id="7-tipoatendimento">#7 tipoAtendimento</h3>
+
+<p>Código do tipo de atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Apenas as opções <code>7</code>, <code>8</code> ou <code>9</code> são aceitas.</p>
+
+<p><strong>Referência:</strong> <a href="/v735/ledi/documentacao/referencias/dicionario.html#tipodeatendimento">TipoDeAtendimento</a>.</p>
+
+<h3 id="8-condicoesavaliadas">#8 condicoesAvaliadas</h3>
+
+<p>Condições avaliadas do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;Long&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>24</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não pode ser preenchido se o campo <a href="#7-tipoatendimento">tipoAtendimento</a> = <code>9 - Visita domiciliar pós-óbito</code>.</p>
+
+<p><strong>Referência:</strong> <a href="#condi-es-avaliadas">Condições Avaliadas</a>.</p>
+
+<h3 id="9-problemascondicoes">#9 problemasCondicoes</h3>
+
+<p>Situações de saúde avaliadas no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>problemacondicao</td>
+<td>Sim</td>
+<td>1</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="#problemacondicao">problemacondicao</a>.</p>
+
+<h3 id="10-procedimentos">#10 procedimentos</h3>
+
+<p>Código dos procedimentos registrados no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;String&gt;</td>
+<td>Não</td>
+<td>0</td>
+<td>30</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Se o campo <a href="#7-tipoatendimento">tipoAtendimento</a> = <code>9 - Visita domiciliar pós-óbito</code>, os procedimentos listados na Ficha de Atendimento Domiciliar são bloqueados para seleção;</li>
+<li>Não pode conter procedimentos repetidos;</li>
+<li>Podem ser informados os procedimentos pertencentes aos grupos <code>01 - Ações de promoção e prevenção em saúde</code>, <code>02 - Procedimentos com finalidade diagnóstica</code>, <code>03 - Procedimentos clínicos</code>, <code>04 - Procedimentos cirúrgicos</code> ou ao subgrupo <code>04 - Telessaúde</code>, pertencente ao grupo <code>08 - Ações complementares da atenção à saúde</code>;</li>
+<li>Não pode ser preenchido com o procedimento <code>03.01.05.010-4 - Visita domiciliar pós-óbito</code>. Esta informação deve ser registrada através do campo <a href="#7-tipoatendimento">tipoAtendimento</a>, opção <code>9 - Visita domiciliar pós-óbito</code>.</li>
+</ul>
+
+<p><strong>Referência:</strong> Tabela do SIGTAP, competência 11/2025 disponível em: <a href="http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar">Tabela Unificada SIGTAP</a>.</p>
+
+<p>Observação: Inserir o código do procedimento SIGTAP sem ponto ou hífen, ex: <code>0214010015</code>.</p>
+
+<h3 id="11-condutadesfecho">#11 condutaDesfecho</h3>
+
+<p>Código do desfecho do atendimento do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v735/ledi/documentacao/referencias/dicionario.html#condutadesfecho">CondutaDesfecho</a>.</p>
+
+<h3 id="12-cpfcidadao">#12 cpfCidadao</h3>
+
+<p>CPF do cidadão que recebeu o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
+</ul>
+
+<h2 id="problemacondicao">ProblemaCondicao</h2>
+
+<h3 id="1-uuidproblema">#1 uuidProblema</h3>
+
+<p>Código identificador único do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>0</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Se torna obrigatório caso preenchido <a href="#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="#6-situacao">situacao</a>.</li>
+</ul>
+
+<h3 id="2-uuidevolucaoproblema">#2 uuidEvolucaoProblema</h3>
+
+<p>Código identificador único da evolução do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>0</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Se torna obrigatório caso preenchido <a href="#1-uuidproblema">uuidProblema</a>, <a href="#3-cosequencialevolucao">coSequencialEvolucao</a> ou <a href="#6-situacao">situacao</a>.</li>
+</ul>
+
+<h3 id="3-cosequencialevolucao">#3 coSequencialEvolucao</h3>
+
+<p>Código sequencial da evolução dentro do próprio problema e condição atual.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>0</td>
+<td>8</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>A primeira evolução do problema ou condição possui o valor 1, as evoluções subsequentes incrementam de 1 em 1;</li>
+<li>Não é recomendado repetir dentro do mesmo problema ou condição;</li>
+<li>É recomendado que o valor do sequencial seja reiniciado para cada problema ou condição novo;</li>
+<li>Se torna obrigatório caso preenchido <a href="#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="#1-uuidproblema">uuidProblema</a> ou <a href="#6-situacao">situacao</a>.</li>
+</ul>
+
+<h3 id="4-ciap">#4 ciap</h3>
+
+<p>Código da CIAP registrada no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>0</td>
+<td>22</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não deve repetir a mesma CIAP2;</li>
+<li>Não pode conter nenhum dos itens listados no grupo Procedimentos da Tabela CIAP2;</li>
+<li>Não é permitida CIAP2 relacionada ao pré-natal com uma CID de desfecho de gestação (exemplo: CIAP2 &quot;GRAVIDEZ DE ALTO RISCO - W84&quot; relacionada a CID10 &quot;PARTO ÚNICO ESPONTÂNEO - O80&quot;);</li>
+<li>Não é permitida CIAP2 relacionada ao pré-natal caso a idade seja inferior a 9 anos;</li>
+<li>A CIAP2 &quot;GRAVIDEZ - W78&quot; só pode ser vinculada a uma CID10 da familia Z34; </li>
+<li>O código deve ser inserido em caracteres maiúsculos, sem espaços;</li>
+<li>Se torna obrigatório caso o campo <a href="#5-cid10">cid10</a> não seja preenchido.</li>
+</ul>
+
+<h3 id="5-cid10">#5 cid10</h3>
+
+<p>Código da CID10 registrada no atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Não deve repetir a mesma CID10;</li>
+<li>Não é permitida mais que uma CID10 da familia Z34 na mesma ficha;</li>
+<li>Se torna obrigatório caso o campo <a href="#4-ciap">ciap</a> não seja preenchido.</li>
+</ul>
+
+<h3 id="6-situacao">#6 situacao</h3>
+
+<p>Situação do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Quando a <a href="#4-ciap">ciap</a> informada for &quot;GRAVIDEZ - W78&quot; não é permitido preencher a situação com o valor &quot;1 - Latente&quot;;</li>
+<li>Apenas valores de <code>0</code> a <code>2</code>;</li>
+<li>Se torna obrigatório caso preenchido <a href="#2-uuidevolucaoproblema">uuidEvolucaoProblema</a>, <a href="#1-uuidproblema">uuidProblema</a> ou <a href="#3-cosequencialevolucao">coSequencialEvolucao</a>.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="/v735/ledi/documentacao/referencias/dicionario.html#situacaoproblemascondicoes">SituacaoProblemasCondicoes</a>.</p>
+
+<h3 id="7-datainicioproblema">#7 dataInicioProblema</h3>
+
+<p>Data de inicio do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Deve ser igual ou posterior a <a href="#3-datanascimento">dataNascimento</a>;</li>
+<li>Deve ser anterior ou igual <a href="/v735/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</li>
+</ul>
+
+<h3 id="8-datafimproblema">#8 dataFimProblema</h3>
+
+<p>Data de finalização do problema ou condição.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Se torna obrigatório quando o campo <a href="#6-situacao">situacao</a> possuir o valor &quot;2 - Resolvido&quot;;</li>
+<li>Deve ser igual ou posterior a <a href="#3-datanascimento">dataNascimento</a>;</li>
+<li>Deve ser anterior ou igual <a href="/v735/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Deve ser posterior ou igual a <a href="#7-datainicioproblema">dataInicioProblema</a>.</li>
+</ul>
+
+<h3 id="9-isavaliado">#9 isAvaliado</h3>
+
+<p>Indicador se o problema ou condição foi avaliado durante o atendimento.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="condi-es-avaliadas">Condições avaliadas</h2>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Acamado</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Domiciliado</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Úlceras / Feridas (grau III ou IV)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Acompanhamento nutricional</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Uso de sonda naso-gástrica - SNG</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Uso de sonda naso-enteral - SNE</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Uso de gastrostomia</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Uso de colostomia</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Uso de cistostomia</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Uso de sonda vesical de demora - SVD</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Acompanhamento pré-operatório</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Acompanhamento pós-operatório</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Adaptação ao uso de órtese / prótese</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Reabilitação domiciliar</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Cuidados paliativos oncológico</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Cuidados paliativos não-oncológico</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Oxigenoterapia domiciliar</td>
+<td>17</td>
+</tr>
+<tr>
+<td>Uso de traqueostomia</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Uso de aspirador de vias aéreas para higiene brônquica</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Suporte ventilatório não invasivo - CPAP</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Suporte ventilatório não invasivo - BiPAP</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Diálise peritonial</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Paracentese</td>
+<td>23</td>
+</tr>
+<tr>
+<td>Medicação parenteral</td>
+<td>24</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/v735/js/lunr.min.js"></script>
+
+    <script src="/v735/js/site.js" type="text/javascript"></script>    
+    <script src="/v735/js/search-index.js" type="text/javascript"></script>
+    <script src="/v735/js/busca.js"></script>
+  </body>
+</html>
