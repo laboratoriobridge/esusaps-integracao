@@ -1,0 +1,6951 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Regras de vacinação</title>
+  <meta name="description" content="Na tabela abaixo, é possível visualizar os imunobiológicos que podem ser registradas com atendimento corrente. Caso o imunobiológico não esteja nessa tabela ...">
+
+  <link rel="stylesheet" href="/v735/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/v735/ledi/documentacao/regras/validar_regras_vacinacao.html">
+  <link rel="icon" type="image/png" href="/v735/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/v735/">
+      <img src="/v735/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 7.3.5</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/v735/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/v735/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/v735/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface" href="/v735/ledi/index.html">Layout e-SUS APS de Dados e Interface</a></li>
+          
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.3.5" href="/v735/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.3.5</a></li>
+          
+        
+          
+            <li><a title="Regras" href="/v735/ledi/documentacao/regras/index.html">Regras</a></li>
+          
+        
+          
+            <li><a title="Regras de vacinação" href="/v735/ledi/documentacao/regras/validar_regras_vacinacao.html">Regras de vacinação</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/v735/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.3.5" href="/v735/ledi/documentacao/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.3.5)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Regras" href="/v735/ledi/documentacao/regras/index.html">Regras</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Validar CNS" href="/v735/ledi/documentacao/regras/algoritmo_CNS.html">
+              Validar CNS
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Validar nome" href="/v735/ledi/documentacao/regras/validar_nome.html">
+              Validar nome
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Grupos de CBOs x Tipo de ficha" href="/v735/ledi/documentacao/regras/cbo.html">
+              Grupos de CBOs x Tipo de ficha
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Regras de vacinação" href="/v735/ledi/documentacao/regras/validar_regras_vacinacao.html">
+              Regras de vacinação
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Regras de vacinação</h1>
+    <p class="post-meta">
+      <a class="btn" href="/v735/pdf.html?include=/ledi/documentacao/regras/validar_regras_vacinacao.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 15/01/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <p>Na tabela abaixo, é possível visualizar os imunobiológicos que podem ser registradas com atendimento corrente. Caso o imunobiológico não esteja nessa tabela só pode ser enviado como uma Transcrição de caderneta.</p>
+
+<table><thead>
+<tr>
+<th>Código do Imunobiológico</th>
+<th>Nome do imunobiológico</th>
+<th>Código RNDS da estratégia</th>
+<th>Estratégia</th>
+<th>Código da dose</th>
+<th>Sigla da dose</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>2</td>
+<td>Especial</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus) (Loxosceles, Phoneutria, Tityus)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Vacina difteria e tétano infantil</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Vacina difteria e tétano infantil</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Vacina difteria e tétano infantil</td>
+<td>2</td>
+<td>Especial</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Vacina difteria e tétano infantil</td>
+<td>2</td>
+<td>Especial</td>
+<td>7</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>1</td>
+<td>Rotina</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>32</td>
+<td>D1REV</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>33</td>
+<td>D2REV</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>34</td>
+<td>D3REV</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>49</td>
+<td>D1D</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>50</td>
+<td>D2D</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>51</td>
+<td>D3D</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>52</td>
+<td>D4D</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>53</td>
+<td>D1REVD</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>54</td>
+<td>D2REVD</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>55</td>
+<td>D3REVD</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>56</td>
+<td>D4REVD</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>1</td>
+<td>Rotina</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Vacina BCG</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Vacina BCG</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Vacina BCG</td>
+<td>2</td>
+<td>Especial</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Vacina BCG</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Vacina BCG</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Vacina Hib</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Vacina Hib</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Vacina Hib</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Vacina Hib</td>
+<td>2</td>
+<td>Especial</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Vacina Hib</td>
+<td>2</td>
+<td>Especial</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Vacina Hib</td>
+<td>2</td>
+<td>Especial</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>2</td>
+<td>Especial</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>2</td>
+<td>Especial</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Vacina pneumo 23</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Vacina pneumo 23</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Vacina pneumo 23</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Vacina pneumo 23</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Vacina pneumo 23</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Vacina pneumo 23</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>1</td>
+<td>Rotina</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>1</td>
+<td>Rotina</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>2</td>
+<td>Especial</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>2</td>
+<td>Especial</td>
+<td>7</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>2</td>
+<td>Especial</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>57</td>
+<td>D0</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>57</td>
+<td>D0</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>57</td>
+<td>D0</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>1</td>
+<td>Rotina</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>1</td>
+<td>Rotina</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>1</td>
+<td>Rotina</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>2</td>
+<td>Especial</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>28</td>
+<td>vacina oral poliomielite bivalente</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>28</td>
+<td>vacina oral poliomielite bivalente</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Vacina penta acelular (DTPa/VIP/Hib)</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Vacina penta acelular (DTPa/VIP/Hib)</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Vacina penta acelular (DTPa/VIP/Hib)</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Vacina penta acelular (DTPa/VIP/Hib)</td>
+<td>2</td>
+<td>Especial</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Vacina febre tifóide</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Vacina febre tifóide</td>
+<td>1</td>
+<td>Rotina</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>2</td>
+<td>Especial</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>2</td>
+<td>Especial</td>
+<td>57</td>
+<td>D0</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>57</td>
+<td>D0</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Vacina Dupla Viral</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>57</td>
+<td>D0</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Vacina Dupla Viral</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>57</td>
+<td>D0</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
+<td>11</td>
+<td>Pré-exposição</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
+<td>11</td>
+<td>Pré-exposição</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
+<td>11</td>
+<td>Pré-exposição</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
+<td>12</td>
+<td>Pós-exposição</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
+<td>12</td>
+<td>Pós-exposição</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
+<td>12</td>
+<td>Pós-exposição</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
+<td>12</td>
+<td>Pós-exposição</td>
+<td>4</td>
+<td>D4</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
+<td>13</td>
+<td>Reexposição</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
+<td>13</td>
+<td>Reexposição</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
+<td>13</td>
+<td>Reexposição</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
+<td>13</td>
+<td>Reexposição</td>
+<td>4</td>
+<td>D4</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>1</td>
+<td>Rotina</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>2</td>
+<td>Especial</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>7</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>2</td>
+<td>Especial</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>7</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Vacina hexa (DTPa/HepB/VIP/Hib)</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Vacina hexa (DTPa/HepB/VIP/Hib)</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Vacina hexa (DTPa/HepB/VIP/Hib)</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Vacina hexa (DTPa/HepB/VIP/Hib)</td>
+<td>2</td>
+<td>Especial</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Vacina hexa (DTPa/HepB/VIP/Hib)</td>
+<td>2</td>
+<td>Especial</td>
+<td>7</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Vacina hexa (DTPa/HepB/VIP/Hib)</td>
+<td>2</td>
+<td>Especial</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Vacina hexa (DTPa/HepB/VIP/Hib)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Vacina hexa (DTPa/HepB/VIP/Hib)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Vacina hexa (DTPa/HepB/VIP/Hib)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Vacina rotavírus</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Vacina rotavírus</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Vacina rotavírus</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Vacina rotavírus</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Vacina rotavírus</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Vacina rotavírus</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Vacina rotavírus</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Vacina rotavírus</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>1</td>
+<td>Rotina</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>1</td>
+<td>Rotina</td>
+<td>7</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>7</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>7</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>7</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>7</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Vacina DTPa infantil</td>
+<td>2</td>
+<td>Especial</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Vacina DTPa infantil</td>
+<td>2</td>
+<td>Especial</td>
+<td>7</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Vacina hepatite A infantil  </td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Vacina hepatite A infantil  </td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Vacina hepatite A infantil  </td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Vacina hepatite A infantil  </td>
+<td>2</td>
+<td>Especial</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Vacina hepatite A infantil  </td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Vacina hepatite A infantil  </td>
+<td>4</td>
+<td>Intensificação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Vacina hepatite A infantil  </td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Vacina sarampo, caxumba, rubéola e varicela</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Vacina sarampo, caxumba, rubéola e varicela</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Vacina sarampo, caxumba, rubéola e varicela</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Vacina sarampo, caxumba, rubéola e varicela</td>
+<td>2</td>
+<td>Especial</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Vacina sarampo, caxumba, rubéola e varicela</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Vacina sarampo, caxumba, rubéola e varicela</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Vacina sarampo, caxumba, rubéola e varicela</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Vacina sarampo, caxumba, rubéola e varicela</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Vacina dTpa adulto</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Vacina dTpa adulto</td>
+<td>1</td>
+<td>Rotina</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Vacina dTpa adulto</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Vacina dTpa adulto</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Vacina dTpa adulto</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Vacina dTpa adulto</td>
+<td>2</td>
+<td>Especial</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Vacina dTpa adulto</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Vacina dTpa adulto</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Vacina dTpa adulto</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Vacina dTpa adulto</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Vacina dTpa adulto</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>1</td>
+<td>Rotina</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>2</td>
+<td>Especial</td>
+<td>6</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>2</td>
+<td>Especial</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Vacina HPV quadrivalente</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Vacina HPV quadrivalente</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Vacina HPV quadrivalente</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Vacina HPV quadrivalente</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Vacina HPV quadrivalente</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Vacina HPV quadrivalente</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>61</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>62</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>63</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>64</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>65</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>66</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>67</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>68</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>69</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>70</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>71</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>72</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>73</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>74</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>75</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>76</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>77</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>78</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>79</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>80</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>81</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>7</td>
+<td>Soroterapia</td>
+<td>82</td>
+<td>P/T24</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>1</td>
+<td>Rotina</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>2</td>
+<td>Especial</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>38</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>75</td>
+<td>vacina cólera oral</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Vacina hepatite A  adulto</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Vacina hepatite A  adulto</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>2</td>
+<td>Especial</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>2</td>
+<td>Especial</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>2</td>
+<td>Especial</td>
+<td>32</td>
+<td>D1REV</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>2</td>
+<td>Especial</td>
+<td>33</td>
+<td>D2REV</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>2</td>
+<td>Especial</td>
+<td>34</td>
+<td>D3REV</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>1</td>
+<td>Rotina</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>2</td>
+<td>Especial</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>2</td>
+<td>Especial</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>2</td>
+<td>Especial</td>
+<td>32</td>
+<td>D1REV</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>2</td>
+<td>Especial</td>
+<td>33</td>
+<td>D2REV</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>2</td>
+<td>Especial</td>
+<td>34</td>
+<td>D3REV</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>1</td>
+<td>Rotina</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>2</td>
+<td>Especial</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>2</td>
+<td>Especial</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>2</td>
+<td>Especial</td>
+<td>32</td>
+<td>D1REV</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>2</td>
+<td>Especial</td>
+<td>33</td>
+<td>D2REV</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>2</td>
+<td>Especial</td>
+<td>34</td>
+<td>D3REV</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>100</td>
+<td>Vacina varíola símia (atenuada)</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>100</td>
+<td>Vacina varíola símia (atenuada)</td>
+<td>3</td>
+<td>Bloqueio</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>100</td>
+<td>Vacina varíola símia (atenuada)</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>100</td>
+<td>Vacina varíola símia (atenuada)</td>
+<td>4</td>
+<td>Intensificação</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>1</td>
+<td>Rotina</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>1</td>
+<td>Rotina</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>2</td>
+<td>Especial</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>2</td>
+<td>Especial</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>2</td>
+<td>Especial</td>
+<td>32</td>
+<td>D1REV</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>2</td>
+<td>Especial</td>
+<td>33</td>
+<td>D2REV</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>2</td>
+<td>Especial</td>
+<td>34</td>
+<td>D3REV</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Vacina dengue</td>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Vacina dengue</td>
+<td>1</td>
+<td>Rotina</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Vacina dengue</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Vacina dengue</td>
+<td>14</td>
+<td>Vacinação escolar</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>108</td>
+<td>Vacina Vírus Sincicial Respiratório A e B</td>
+<td>1</td>
+<td>Rotina</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>1</td>
+<td>Rotina</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>1</td>
+<td>Rotina</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>2</td>
+<td>Especial</td>
+<td>1</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>2</td>
+<td>Especial</td>
+<td>3</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>2</td>
+<td>Especial</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>2</td>
+<td>Especial</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>2</td>
+<td>Especial</td>
+<td>32</td>
+<td>D1REV</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>2</td>
+<td>Especial</td>
+<td>33</td>
+<td>D2REV</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>2</td>
+<td>Especial</td>
+<td>34</td>
+<td>D3REV</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>8</td>
+<td>D</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>10</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>113</td>
+<td>Vacina chikungunya (recombinante e atenuada)</td>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>9</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>115</td>
+<td>Nirsevimabe 0,5ml</td>
+<td>2</td>
+<td>Especial</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Nirsevimabe 1,0ml</td>
+<td>2</td>
+<td>Especial</td>
+<td>59</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Nirsevimabe 1,0ml</td>
+<td>2</td>
+<td>Especial</td>
+<td>60</td>
+<td>P/T2</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/v735/js/lunr.min.js"></script>
+
+    <script src="/v735/js/site.js" type="text/javascript"></script>    
+    <script src="/v735/js/search-index.js" type="text/javascript"></script>
+    <script src="/v735/js/busca.js"></script>
+  </body>
+</html>
