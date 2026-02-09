@@ -1,0 +1,8479 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dicionário de dados</title>
+  <meta name="description" content="AbastecimentoDeAgua">
+
+  <link rel="stylesheet" href="/v736/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/v736/ledi/documentacao/referencias/dicionario.html">
+  <link rel="icon" type="image/png" href="/v736/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/v736/">
+      <img src="/v736/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 7.3.6</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/v736/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/v736/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/v736/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface" href="/v736/ledi/index.html">Layout e-SUS APS de Dados e Interface</a></li>
+          
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.3.6" href="/v736/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.3.6</a></li>
+          
+        
+          
+            <li><a title="Referências" href="/v736/ledi/documentacao/referencias/index.html">Referências</a></li>
+          
+        
+          
+            <li><a title="Dicionário de dados" href="/v736/ledi/documentacao/referencias/dicionario.html">Dicionário de dados</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/v736/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.3.6" href="/v736/ledi/documentacao/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.3.6)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Referências" href="/v736/ledi/documentacao/referencias/index.html">Referências</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Municípios" href="/v736/ledi/documentacao/referencias/municipios.html">
+              Municípios
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Países" href="/v736/ledi/documentacao/referencias/paises.html">
+              Países
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="UFs" href="/v736/ledi/documentacao/referencias/uf.html">
+              UFs
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Versão" href="/v736/ledi/documentacao/referencias/versao.html">
+              Versão
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="CBOs" href="/v736/ledi/documentacao/referencias/cbo_disponiveis.html">
+              CBOs
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Dicionário de dados" href="/v736/ledi/documentacao/referencias/dicionario.html">
+              Dicionário de dados
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de Medicamentos CATMAT" href="/v736/ledi/documentacao/referencias/tabela_catmat.html">
+              Tabela de Medicamentos CATMAT
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Relação entre CIAP2 e CID10" href="/v736/ledi/documentacao/referencias/relacao_ciap_cid.html">
+              Relação entre CIAP2 e CID10
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Lista de exames com resultado estruturado" href="/v736/ledi/documentacao/referencias/exames_estruturados.html">
+              Lista de exames com resultado estruturado
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Dicionário de dados</h1>
+    <p class="post-meta">
+      <a class="btn" href="/v736/pdf.html?include=/ledi/documentacao/referencias/dicionario.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 09/02/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h2 id="abastecimentodeagua">AbastecimentoDeAgua</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>117</td>
+<td>Rede encanada até o domicílio - Sistema de abastecimento público (municipal ou estadual)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>214</td>
+<td>Rede encanada até o domicílio - Sistema de abastecimento próprio da aldeia (SESAI)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>118</td>
+<td>Poço / Nascente no domicílio</td>
+<td>-</td>
+</tr>
+<tr>
+<td>119</td>
+<td>Cisterna - Água de chuva</td>
+<td>-</td>
+</tr>
+<tr>
+<td>120</td>
+<td>Carro pipa</td>
+<td>-</td>
+</tr>
+<tr>
+<td>215</td>
+<td>Captação direta de água do rio</td>
+<td>-</td>
+</tr>
+<tr>
+<td>216</td>
+<td>Captação direta de poço coletivo</td>
+<td>-</td>
+</tr>
+<tr>
+<td>217</td>
+<td>Ponto de abastecimento coletivo - chafariz</td>
+<td>-</td>
+</tr>
+<tr>
+<td>121</td>
+<td>Outro</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="acessohigiene">AcessoHigiene</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>42</td>
+<td>Banho</td>
+<td>-</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Acesso a sanitário</td>
+<td>-</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Higiene bucal</td>
+<td>-</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Outros</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="aleitamentomaterno">AleitamentoMaterno</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Exclusivo</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Predominante</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Complementado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Inexistente</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="animalnodomicilio">AnimalNoDomicilio</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>128</td>
+<td>Gato</td>
+<td>-</td>
+</tr>
+<tr>
+<td>129</td>
+<td>Cachorro</td>
+<td>-</td>
+</tr>
+<tr>
+<td>130</td>
+<td>Pássaro</td>
+<td>-</td>
+</tr>
+<tr>
+<td>223</td>
+<td>Macaco</td>
+<td>-</td>
+</tr>
+<tr>
+<td>224</td>
+<td>Galinha</td>
+<td>-</td>
+</tr>
+<tr>
+<td>225</td>
+<td>Porco</td>
+<td>-</td>
+</tr>
+<tr>
+<td>226</td>
+<td>Répteis</td>
+<td>-</td>
+</tr>
+<tr>
+<td>132</td>
+<td>Outros</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="atencaodomiciliarprocedencia">AtencaoDomiciliarProcedencia</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Atenção Básica</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Internação hospitalar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Urgência e emergência</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13</td>
+<td>CACON / UNACON</td>
+<td>-</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Iniciativa do paciente ou terceiros</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Outros</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="conclusaodestinoelegivel">ConclusaoDestinoElegivel</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Admissão na própria EMAD</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Encaminhado para outra EMAD</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Encaminhado para a Atenção Básica (AD1)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Outro encaminhamento</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="conclusaodestinoinelegivel">ConclusaoDestinoInelegivel</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Instabilidade clínica</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Necessidade propedêutica</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Outro motivo</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ausência de cuidador</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Outras condições sociais</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="condicaodeposseeusodaterra">CondicaoDePosseEUsoDaTerra</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>101</td>
+<td>Proprietário</td>
+<td>-</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Parceiro(a) / Meeiro(a)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Assentado(a)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Posseiro</td>
+<td>-</td>
+</tr>
+<tr>
+<td>105</td>
+<td>Arrendatário(a)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>106</td>
+<td>Comodatário(a)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>107</td>
+<td>Beneficiário(a) do banco da terra</td>
+<td>-</td>
+</tr>
+<tr>
+<td>208</td>
+<td>Terra indígena demarcada</td>
+<td>-</td>
+</tr>
+<tr>
+<td>209</td>
+<td>Terra não demarcada</td>
+<td>-</td>
+</tr>
+<tr>
+<td>108</td>
+<td>Não se aplica</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="condutadesfecho">CondutaDesfecho</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>7</td>
+<td>Permanência</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Alta administrativa</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Alta clínica</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Óbito</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Atenção Básica (AD1)</td>
+<td>#ENCAMINHAMENTO</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Serviço de urgência e emergência</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Serviço de internação hospitalar</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="condutaencaminhamento">CondutaEncaminhamento</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Retorno para consulta agendada</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Retorno para cuidado continuado / programado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Agendamento para grupos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Agendamento para eMulti</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Alta do episódio</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Encaminhamento interno no dia</td>
+<td>#ENCAMINHAMENTO</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Encaminhamento para serviço especializado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Encaminhamento para CAPS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Encaminhamento para internação hospitalar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Encaminhamento para urgência</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Encaminhamento para serviço de atenção domiciliar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Encaminhamento intersetorial</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="condutaencaminhamentoodonto">CondutaEncaminhamentoOdonto</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>16</td>
+<td>Retorno para consulta agendada</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Agendamento para outros profissionais AB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Agendamento para eMulti</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Agendamento para grupos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Tratamento concluído</td>
+<td>-</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Alta do episódio</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Atendimento à pacientes com necessidades especiais</td>
+<td>ENCAMINHAMENTO</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cirurgia BMF</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Endodontia</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Estomatologia</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Implantodontia</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Odontopediatria</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Ortodontia / Ortopedia</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Periodontia</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Prótese dentária</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Radiologia</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Outros</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="consideracaopeso">ConsideracaoPeso</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>21</td>
+<td>Abaixo do peso</td>
+<td>-</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Peso adequado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Acima do peso</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="cuidadorcidadao">CuidadorCidadao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Não possui</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cônjuge / Companheiro</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Filho / Enteado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Pai / Mãe</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Avô(ó)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Neto</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Irmão(ã)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Outro</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="cursomaiselevado">CursoMaisElevado</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>51</td>
+<td>Creche</td>
+<td>-</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Pré-escola (exceto CA)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>53</td>
+<td>Classe de alfabetização - CA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Ensino fundamental 1ª a 4ª séries</td>
+<td>-</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Ensino fundamental 5ª a 8ª séries</td>
+<td>-</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Ensino fundamental completo</td>
+<td>-</td>
+</tr>
+<tr>
+<td>61</td>
+<td>Ensino fundamental especial</td>
+<td>-</td>
+</tr>
+<tr>
+<td>58</td>
+<td>Ensino fundamental EJA - séries iniciais (supletivo 1ª a 4ª)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Ensino fundamental EJA - séries finais (supletivo 5ª a 8ª)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>60</td>
+<td>Ensino médio, médio 2º ciclo (científico, técnico e etc)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Ensino médio especial</td>
+<td>-</td>
+</tr>
+<tr>
+<td>62</td>
+<td>Ensino médio EJA (supletivo)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>63</td>
+<td>Superior, aperfeiçoamento, especialização, mestrado, doutorado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>64</td>
+<td>Alfabetização para adultos (Mobral, etc)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>65</td>
+<td>Nenhum</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="deficienciacidadao">DeficienciaCidadao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>12</td>
+<td>Auditiva</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Visual</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Intelectual / Cognitiva</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Física</td>
+<td>-</td>
+</tr>
+<tr>
+<td>232</td>
+<td>TEA</td>
+<td>-</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Outra</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="desfecho">Desfecho</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Visita realizada</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Visita recusada</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ausente</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="destinodolixo">DestinoDoLixo</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>93</td>
+<td>Coletado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>95</td>
+<td>Céu aberto</td>
+<td>-</td>
+</tr>
+<tr>
+<td>221</td>
+<td>Queimado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>222</td>
+<td>Enterrado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>96</td>
+<td>Outro</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="doencacardiaca">DoencaCardiaca</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>24</td>
+<td>Insuficiência cardíaca</td>
+<td>-</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Outro</td>
+<td>-</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Não sabe</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="doencarespiratoria">DoencaRespiratoria</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>30</td>
+<td>Asma</td>
+<td>-</td>
+</tr>
+<tr>
+<td>31</td>
+<td>DPOC / Enfisema</td>
+<td>-</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Outro</td>
+<td>-</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Não sabe</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="dose">Dose</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Abreviatura</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>1ª Dose</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2ª Dose</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3ª Dose</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4ª Dose</td>
+<td>D4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5ª Dose</td>
+<td>D5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1º Reforço</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2º Reforço</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Dose</td>
+<td>D</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Única</td>
+<td>DU</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Revacinação</td>
+<td>REV</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Tratamento com uma dose</td>
+<td>T1</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Tratamento com duas doses</td>
+<td>T2</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Tratamento com três doses</td>
+<td>T3</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Tratamento com quatro doses</td>
+<td>T4</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Tratamento com cinco doses</td>
+<td>T5</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Tratamento com seis doses</td>
+<td>T6</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Tratamento com sete doses</td>
+<td>T7</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Tratamento com oito doses</td>
+<td>T8</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Tratamento com nove doses</td>
+<td>T9</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Tratamento com dez doses</td>
+<td>T10</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Tratamento com onze doses</td>
+<td>T11</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Tratamento com doze doses</td>
+<td>T12</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Tratamento com treze doses</td>
+<td>T13</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Tratamento com quatorze doses</td>
+<td>T14</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Tratamento com quinze doses</td>
+<td>T15</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Tratamento com dezesseis doses</td>
+<td>T16</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Tratamento com dezessete doses</td>
+<td>T17</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Tratamento com dezoito doses</td>
+<td>T18</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Tratamento com dezenove doses</td>
+<td>T19</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Tratamento com vinte doses</td>
+<td>T20</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Tratamento com vinte quatro doses</td>
+<td>T24</td>
+</tr>
+<tr>
+<td>32</td>
+<td>1ª Dose Revacinação</td>
+<td>D1REV</td>
+</tr>
+<tr>
+<td>33</td>
+<td>2ª Dose Revacinação</td>
+<td>D2REV</td>
+</tr>
+<tr>
+<td>34</td>
+<td>3ª Dose Revacinação</td>
+<td>D3REV</td>
+</tr>
+<tr>
+<td>35</td>
+<td>4ª Dose Revacinação</td>
+<td>D4REV</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Dose Inicial</td>
+<td>DI</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Dose Adicional</td>
+<td>DA</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Reforço</td>
+<td>REF</td>
+</tr>
+<tr>
+<td>39</td>
+<td>3º Reforço</td>
+<td>R3</td>
+</tr>
+<tr>
+<td>40</td>
+<td>4º Reforço</td>
+<td>R4</td>
+</tr>
+<tr>
+<td>41</td>
+<td>5º Reforço</td>
+<td>R5</td>
+</tr>
+<tr>
+<td>42</td>
+<td>6º Reforço</td>
+<td>R6</td>
+</tr>
+<tr>
+<td>43</td>
+<td>5ª Dose Revacinacao</td>
+<td>D5REV</td>
+</tr>
+<tr>
+<td>44</td>
+<td>1ª Dose Fracionada</td>
+<td>D1F</td>
+</tr>
+<tr>
+<td>45</td>
+<td>2ª Dose Fracionada</td>
+<td>D2F</td>
+</tr>
+<tr>
+<td>46</td>
+<td>3ª Dose Fracionada</td>
+<td>D3F</td>
+</tr>
+<tr>
+<td>47</td>
+<td>4ª Dose Fracionada</td>
+<td>D4F</td>
+</tr>
+<tr>
+<td>48</td>
+<td>5ª Dose Fracionada</td>
+<td>D5F</td>
+</tr>
+<tr>
+<td>49</td>
+<td>1ª Dose Dobrada</td>
+<td>D1D</td>
+</tr>
+<tr>
+<td>50</td>
+<td>2ª Dose Dobrada</td>
+<td>D2D</td>
+</tr>
+<tr>
+<td>51</td>
+<td>3ª Dose Dobrada</td>
+<td>D3D</td>
+</tr>
+<tr>
+<td>52</td>
+<td>4ª Dose Dobrada</td>
+<td>D4D</td>
+</tr>
+<tr>
+<td>53</td>
+<td>1ª Dose Revacinação Dobrada</td>
+<td>D1REVD</td>
+</tr>
+<tr>
+<td>54</td>
+<td>2ª Dose Revacinação Dobrada</td>
+<td>D2REVD</td>
+</tr>
+<tr>
+<td>55</td>
+<td>3ª Dose Revacinação Dobrada</td>
+<td>D3REVD</td>
+</tr>
+<tr>
+<td>56</td>
+<td>4ª Dose Revacinação Dobrada</td>
+<td>D4REVD</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Dose Zero</td>
+<td>D0</td>
+</tr>
+<tr>
+<td>58</td>
+<td>Reforço Zero</td>
+<td>R0</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Profilaxia/Tratamento com 1 unidade</td>
+<td>P/T1</td>
+</tr>
+<tr>
+<td>60</td>
+<td>Profilaxia/Tratamento com 2 unidades</td>
+<td>P/T2</td>
+</tr>
+<tr>
+<td>61</td>
+<td>Profilaxia/Tratamento com 3 unidades</td>
+<td>P/T3</td>
+</tr>
+<tr>
+<td>62</td>
+<td>Profilaxia/Tratamento com 4 unidades</td>
+<td>P/T4</td>
+</tr>
+<tr>
+<td>63</td>
+<td>Profilaxia/Tratamento com 5 unidades</td>
+<td>P/T5</td>
+</tr>
+<tr>
+<td>64</td>
+<td>Profilaxia/Tratamento com 6 unidades</td>
+<td>P/T6</td>
+</tr>
+<tr>
+<td>65</td>
+<td>Profilaxia/Tratamento com 7 unidades</td>
+<td>P/T7</td>
+</tr>
+<tr>
+<td>66</td>
+<td>Profilaxia/Tratamento com 8 unidades</td>
+<td>P/T8</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Profilaxia/Tratamento com 9 unidades</td>
+<td>P/T9</td>
+</tr>
+<tr>
+<td>68</td>
+<td>Profilaxia/Tratamento com 10 unidades</td>
+<td>P/T10</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Profilaxia/Tratamento com 11 unidades</td>
+<td>P/T11</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Profilaxia/Tratamento com 12 unidades</td>
+<td>P/T12</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Profilaxia/Tratamento com 13 unidades</td>
+<td>P/T13</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Profilaxia/Tratamento com 14 unidades</td>
+<td>P/T14</td>
+</tr>
+<tr>
+<td>73</td>
+<td>Profilaxia/Tratamento com 15 unidades</td>
+<td>P/T15</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Profilaxia/Tratamento com 16 unidades</td>
+<td>P/T16</td>
+</tr>
+<tr>
+<td>75</td>
+<td>Profilaxia/Tratamento com 17 unidades</td>
+<td>P/T17</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Profilaxia/Tratamento com 18 unidades</td>
+<td>P/T18</td>
+</tr>
+<tr>
+<td>77</td>
+<td>Profilaxia/Tratamento com 19 unidades</td>
+<td>P/T19</td>
+</tr>
+<tr>
+<td>78</td>
+<td>Profilaxia/Tratamento com 20 unidades</td>
+<td>P/T20</td>
+</tr>
+<tr>
+<td>79</td>
+<td>Profilaxia/Tratamento com 21 unidades</td>
+<td>P/T21</td>
+</tr>
+<tr>
+<td>80</td>
+<td>Profilaxia/Tratamento com 22 unidades</td>
+<td>P/T22</td>
+</tr>
+<tr>
+<td>81</td>
+<td>Profilaxia/Tratamento com 23 unidades</td>
+<td>P/T23</td>
+</tr>
+<tr>
+<td>82</td>
+<td>Profilaxia/Tratamento com 24 unidades</td>
+<td>P/T24</td>
+</tr>
+</tbody></table>
+
+<h2 id="estrategiavacinacao">EstrategiaVacinacao</h2>
+
+<table><thead>
+<tr>
+<th>Código e-SUS APS</th>
+<th>Descrição</th>
+<th>Código RNDS</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Rotina</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Especial</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bloqueio</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Intensificação</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Campanha indiscriminada</td>
+<td>5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Campanha seletiva</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soroterapia</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Serviço privado</td>
+<td>8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Monitoramento das Estratégias de Vacinação</td>
+<td>9</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Pesquisa</td>
+<td>10</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Pré-exposição</td>
+<td>11</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Pós-exposição</td>
+<td>12</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Reexposição</td>
+<td>13</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Vacinação escolar</td>
+<td>14</td>
+</tr>
+</tbody></table>
+
+<h2 id="formadeescoamentodobanheiroousanitario">FormaDeEscoamentoDoBanheiroOuSanitario</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>122</td>
+<td>Rede coletora de esgoto ou pluvial</td>
+<td>-</td>
+</tr>
+<tr>
+<td>123</td>
+<td>Fossa séptica</td>
+<td>-</td>
+</tr>
+<tr>
+<td>124</td>
+<td>Fossa rudimentar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>125</td>
+<td>Direto para um rio, lago ou mar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>126</td>
+<td>Céu aberto</td>
+<td>-</td>
+</tr>
+<tr>
+<td>127</td>
+<td>Outra forma</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="fornecimentoodonto">FornecimentoOdonto</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Escova dental</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Creme dental</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Fio dental</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="imunobiologico">Imunobiologico</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Sigla</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Imunoglobulina humana antitétano</td>
+<td>IGHAT</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Soro antitetânico</td>
+<td>SAT</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soro antiaracnídico (Loxosceles, Phoneutria, Tityus)</td>
+<td>SAAR</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Soro antiescorpiônico</td>
+<td>SAESC</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Vacina difteria e tétano infantil</td>
+<td>DT</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Soro antielapídico</td>
+<td>SAELA</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Soro antirrábico</td>
+<td>SAR</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Soro antibotrópico (pentavalente)</td>
+<td>SABR</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vacina hepatite B</td>
+<td>HB</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Soro antidiftérico</td>
+<td>SAD</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Soro antibotrópico (pentavalente) e anticrotálico</td>
+<td>SABC</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Soro antibotrópico (pentavalente) e antilaquético</td>
+<td>SABL</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Vacina meningocócica AC</td>
+<td>Meningo AC</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vacina febre amarela</td>
+<td>VFA</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Vacina BCG</td>
+<td>BCG</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Soro anticrotálico</td>
+<td>SAC</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Vacina Hib</td>
+<td>Hib</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Vacina raiva embrião de galinha</td>
+<td>VR</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Imunoglobulina humana antivaricela</td>
+<td>IGHAVZ</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Imunoglobulina humana anti-hepatite B</td>
+<td>IGHAHB</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Vacina pneumo 23</td>
+<td>VPP23</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Vacina polio injetável</td>
+<td>VIP</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Imunoglobulina humana antirrábica</td>
+<td>IGHAR</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Vacina sarampo, caxumba, rubéola</td>
+<td>SCR</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Vacina difteria e tétano adulto</td>
+<td>dT</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Vacina pneumo 10</td>
+<td>VPC10</td>
+</tr>
+<tr>
+<td>28</td>
+<td>vacina oral poliomielite bivalente</td>
+<td>VOPb</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Vacina penta acelular (DTPa/VIP/Hib)</td>
+<td>PENTA acelular</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Vacina febre tifóide</td>
+<td>FTp</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Soro antiloxoscélico (trivalente)</td>
+<td>SALOX</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Soro antilonômico</td>
+<td>SALON</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Vacina influenza trivalente</td>
+<td>INF3</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vacina varicela</td>
+<td>VZ</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Vacina hepatite A</td>
+<td>HA</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Vacina Dupla Viral</td>
+<td>SR</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Vacina raiva</td>
+<td>Vero</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Soro antibotulínico (trivalente)</td>
+<td>SBOTULTRI</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Vacina DTP/Hib</td>
+<td>Tetra</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Vacina pneumocócica 7V</td>
+<td>Pncc7V</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Vacina meningo C</td>
+<td>MenC</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Vacina penta (DTP/HepB/Hib)</td>
+<td>PENTA</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Vacina hexa (DTPa/HepB/VIP/Hib)</td>
+<td>Hexa acelular</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Vacina influenza A (H1N1) (inativada, fragmentada)</td>
+<td>INFH1N1-2009</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Vacina rotavírus</td>
+<td>ROTA</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vacina DTP</td>
+<td>DTP</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Vacina DTPa infantil</td>
+<td>DTPa</td>
+</tr>
+<tr>
+<td>51</td>
+<td>Vacina febre tifóide (atenuada)</td>
+<td>Fta</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Vacina hepatite A infantil</td>
+<td>HAinf</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Vacina sarampo, caxumba, rubéola e varicela</td>
+<td>SCRV</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Vacina dTpa adulto</td>
+<td>dTpa</td>
+</tr>
+<tr>
+<td>58</td>
+<td>Vacina tetra acelular DTPa/VIP</td>
+<td>DTPa/VIP</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Vacina pneumo 13</td>
+<td>VPC13</td>
+</tr>
+<tr>
+<td>60</td>
+<td>Vacina HPV bivalente</td>
+<td>HPV2</td>
+</tr>
+<tr>
+<td>61</td>
+<td>Vacina toxóide tetânico</td>
+<td>TT</td>
+</tr>
+<tr>
+<td>62</td>
+<td>Vacina hepatite A e B infantil</td>
+<td>HA-HBinf</td>
+</tr>
+<tr>
+<td>63</td>
+<td>Vacina hepatite A e B adulto</td>
+<td>HA-HBad</td>
+</tr>
+<tr>
+<td>64</td>
+<td>Vacina influenza trivalente ID</td>
+<td>INF3-ID</td>
+</tr>
+<tr>
+<td>65</td>
+<td>Vacina rotavírus pentavalente</td>
+<td>ROTA5</td>
+</tr>
+<tr>
+<td>66</td>
+<td>Vacina meningocócica B/C</td>
+<td>MEN BC</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Vacina HPV quadrivalente</td>
+<td>HPV4</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Soro antibotulínico AB (bivalente)</td>
+<td>SAB</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Vacina sarampo</td>
+<td>Sarampo</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Vacina rubéola</td>
+<td>Rubeola</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Vacina gripe</td>
+<td>Gripe Sazonal</td>
+</tr>
+<tr>
+<td>73</td>
+<td>Vacina quádrupla viral</td>
+<td>Quadrupla Viral</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Vacina meningo ACWY</td>
+<td>MenACWY</td>
+</tr>
+<tr>
+<td>75</td>
+<td>Vacina cólera oral</td>
+<td>VCO</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Vacina herpes-zóster (atenuada)</td>
+<td>VHZ</td>
+</tr>
+<tr>
+<td>77</td>
+<td>Vacina influenza tetravalente</td>
+<td>INF4</td>
+</tr>
+<tr>
+<td>78</td>
+<td>Vacina meningo B</td>
+<td>MenB</td>
+</tr>
+<tr>
+<td>82</td>
+<td>Vacina dengue (recombinante e atenuada)</td>
+<td>Dengue</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Vacina hepatite A  adulto</td>
+<td>HAad</td>
+</tr>
+<tr>
+<td>84</td>
+<td>Vacina febre amarela fracionada</td>
+<td>VFA-F</td>
+</tr>
+<tr>
+<td>85</td>
+<td>Vacina COVID-19-recombinante, AstraZeneca/Fiocruz (Covishield)</td>
+<td>COVID-19 ASTRAZENECA/FIOCRUZ - COVISHIELD</td>
+</tr>
+<tr>
+<td>86</td>
+<td>Vacina COVID-19-inativada, Sinovac/Butantan (Coronavac)</td>
+<td>COVID-19 SINOVAC/BUTANTAN - CORONAVAC</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)</td>
+<td>COVID-19 PFIZER - COMIRNATY</td>
+</tr>
+<tr>
+<td>88</td>
+<td>Vacina COVID-19-recombinante, Janssen (Ad26.COV2.S)</td>
+<td>COVID-19 JANSSEN - Ad26.COV2.S</td>
+</tr>
+<tr>
+<td>89</td>
+<td>Vacina COVID-19-recombinante, AstraZeneca/Covax (ChAdOx1-S)</td>
+<td>COVID-19 ASTRAZENECA - ChAdOx1-S</td>
+</tr>
+<tr>
+<td>93</td>
+<td>Vacina HPV nonavalente</td>
+<td>HPV9</td>
+</tr>
+<tr>
+<td>97</td>
+<td>vacina COVID-19-RNAm, Moderna (Spikevax)</td>
+<td>COVID-19 MODERNA - SPIKEVAX</td>
+</tr>
+<tr>
+<td>98</td>
+<td>Vacina COVID-19-inativada, Sinovac (Coronavac)</td>
+<td>COVID-19 SINOVAC - CORONAVAC</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica</td>
+<td>COVID-19 PFIZER - COMIRNATY PEDIÁTRICA</td>
+</tr>
+<tr>
+<td>100</td>
+<td>Vacina varíola símia (atenuada)</td>
+<td>VVS</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Vacina Herpes-Zoster (recombinante)</td>
+<td>VHZR</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty)  pediátrica menor de 5 anos</td>
+<td>COVID-19 PFIZER - COMIRNATY PEDIÁTRICA MENOR DE 5 ANOS</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Vacina COVID-19-RNAm, Pfizer (Comirnaty) bivalente</td>
+<td>COVID-19 PFIZER - COMIRNATY BIVALENTE</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Vacina dengue (atenuada)</td>
+<td>DNG</td>
+</tr>
+<tr>
+<td>105</td>
+<td>Vacina Covid-19-RNAm, Moderna (Spikevax) bivalente</td>
+<td>COVID-19 MODERNA - SPIKEVAX BIVALENTE</td>
+</tr>
+<tr>
+<td>106</td>
+<td>Vacina pneumo 15</td>
+<td>VPC15</td>
+</tr>
+<tr>
+<td>107</td>
+<td>Vacina Pneumo 20</td>
+<td>VPC20</td>
+</tr>
+<tr>
+<td>108</td>
+<td>Vacina Vírus Sincicial Respiratório A e B (recombinante)</td>
+<td>VVSR-Rec</td>
+</tr>
+<tr>
+<td>109</td>
+<td>Vacina vírus sincicial respiratório (recombinante, adjuvada)</td>
+<td>VVSR-RecAdj</td>
+</tr>
+<tr>
+<td>110</td>
+<td>Vacina Influenza Tetravalente - Alta Dosagem</td>
+<td>INF4-alta dosagem</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Vacina Tetra Acelular dTpa/VIP</td>
+<td>dTpa/VIP</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Vacina Covid-19-recombinante, Serum/Zalika</td>
+<td>COVID-19 SERUM/ZALIKA</td>
+</tr>
+<tr>
+<td>113</td>
+<td>Vacina chikungunya (recombinante e atenuada)</td>
+<td>CHIK-A</td>
+</tr>
+<tr>
+<td>114</td>
+<td>Vacina Covid-19-inativada, Sinopharm</td>
+<td>COVID-19 SINOPHARM</td>
+</tr>
+<tr>
+<td>115</td>
+<td>Nirsevimabe 0,5ml</td>
+<td>NIRSEVIMABE 0,5ml</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Nirsevimabe 1,0ml</td>
+<td>NIRSEVIMABE 1,0ml</td>
+</tr>
+</tbody></table>
+
+<h2 id="fabricante">Fabricante</h2>
+
+<table><thead>
+<tr>
+<th>Código RNDS</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>36271</td>
+<td>ABBOTT-HOLAN</td>
+</tr>
+<tr>
+<td>42507</td>
+<td>ADIUM</td>
+</tr>
+<tr>
+<td>33713</td>
+<td>AMYIN</td>
+</tr>
+<tr>
+<td>29909</td>
+<td>ASTRAZENECA</td>
+</tr>
+<tr>
+<td>161</td>
+<td>AVENTIS</td>
+</tr>
+<tr>
+<td>33502</td>
+<td>BAV-NORDIC</td>
+</tr>
+<tr>
+<td>608</td>
+<td>BAXTER</td>
+</tr>
+<tr>
+<td>239</td>
+<td>BAYER CO</td>
+</tr>
+<tr>
+<td>18190</td>
+<td>BB-NCIPD</td>
+</tr>
+<tr>
+<td>26513</td>
+<td>BEHRING</td>
+</tr>
+<tr>
+<td>44805</td>
+<td>BEIJING</td>
+</tr>
+<tr>
+<td>2769</td>
+<td>BERNA</td>
+</tr>
+<tr>
+<td>168</td>
+<td>BERNE</td>
+</tr>
+<tr>
+<td>35979</td>
+<td>BHARAT</td>
+</tr>
+<tr>
+<td>166</td>
+<td>BIKEN</td>
+</tr>
+<tr>
+<td>16763</td>
+<td>BIOFARMA</td>
+</tr>
+<tr>
+<td>28425</td>
+<td>BIOGENESIS BAGO SAUDE ANIMAL LTDA</td>
+</tr>
+<tr>
+<td>13219</td>
+<td>BIOGENESIS-BAGO S/A</td>
+</tr>
+<tr>
+<td>17934</td>
+<td>BIOLOGICAL</td>
+</tr>
+<tr>
+<td>712</td>
+<td>BIOMERIEUX</td>
+</tr>
+<tr>
+<td>44618</td>
+<td>BIONTECH</td>
+</tr>
+<tr>
+<td>3521</td>
+<td>BIOVET</td>
+</tr>
+<tr>
+<td>28738</td>
+<td>BOEHRINGER</td>
+</tr>
+<tr>
+<td>152</td>
+<td>BUTANTAN</td>
+</tr>
+<tr>
+<td>42489</td>
+<td>CATALENT</td>
+</tr>
+<tr>
+<td>162</td>
+<td>CHIRON SPA</td>
+</tr>
+<tr>
+<td>28290</td>
+<td>PFIZER-BELGICA</td>
+</tr>
+<tr>
+<td>45686</td>
+<td>CORIXA-GSK</td>
+</tr>
+<tr>
+<td>1913</td>
+<td>CPPI</td>
+</tr>
+<tr>
+<td>10534</td>
+<td>CRUCELL</td>
+</tr>
+<tr>
+<td>2260</td>
+<td>CSL</td>
+</tr>
+<tr>
+<td>1659</td>
+<td>CYANAMID</td>
+</tr>
+<tr>
+<td>156</td>
+<td>DADO B.</td>
+</tr>
+<tr>
+<td>37646</td>
+<td>EMERGENT</td>
+</tr>
+<tr>
+<td>30357</td>
+<td>EQUIPLEX</td>
+</tr>
+<tr>
+<td>27816</td>
+<td>EUBIOLOGI</td>
+</tr>
+<tr>
+<td>151</td>
+<td>F.A.P.</td>
+</tr>
+<tr>
+<td>31101</td>
+<td>FARMACE</td>
+</tr>
+<tr>
+<td>169</td>
+<td>FINLAY</td>
+</tr>
+<tr>
+<td>149</td>
+<td>FIOCRUZ</td>
+</tr>
+<tr>
+<td>150</td>
+<td>FUNED</td>
+</tr>
+<tr>
+<td>35977</td>
+<td>GAMALEYA</td>
+</tr>
+<tr>
+<td>38</td>
+<td>GAMALEYA-SPUTNIK-V</td>
+</tr>
+<tr>
+<td>43499</td>
+<td>GC-BIOPHARMA</td>
+</tr>
+<tr>
+<td>28289</td>
+<td>GLAXO-BIO</td>
+</tr>
+<tr>
+<td>160</td>
+<td>GREENCROSS</td>
+</tr>
+<tr>
+<td>12551</td>
+<td>GRIFOLS</td>
+</tr>
+<tr>
+<td>27880</td>
+<td>GSK-BRASIL</td>
+</tr>
+<tr>
+<td>43202</td>
+<td>GSK-FRANCA</td>
+</tr>
+<tr>
+<td>43175</td>
+<td>GSK-SRL</td>
+</tr>
+<tr>
+<td>9406</td>
+<td>HALEXISTAR</td>
+</tr>
+<tr>
+<td>2560</td>
+<td>HEBER</td>
+</tr>
+<tr>
+<td>39262</td>
+<td>IDT BIOLOGIKA</td>
+</tr>
+<tr>
+<td>2250</td>
+<td>IIMUNO</td>
+</tr>
+<tr>
+<td>235</td>
+<td>INCQS</td>
+</tr>
+<tr>
+<td>18189</td>
+<td>INTERVAX</td>
+</tr>
+<tr>
+<td>141</td>
+<td>IVB</td>
+</tr>
+<tr>
+<td>30587</td>
+<td>JANSSEN</td>
+</tr>
+<tr>
+<td>44781</td>
+<td>JUBILANT</td>
+</tr>
+<tr>
+<td>28211</td>
+<td>KAMADA</td>
+</tr>
+<tr>
+<td>12572</td>
+<td>KEDRION</td>
+</tr>
+<tr>
+<td>43897</td>
+<td>KI BIOPHARMA</td>
+</tr>
+<tr>
+<td>164</td>
+<td>LGCHEMICAL</td>
+</tr>
+<tr>
+<td>22942</td>
+<td>LGLIFE</td>
+</tr>
+<tr>
+<td>165</td>
+<td>MERCK</td>
+</tr>
+<tr>
+<td>42931</td>
+<td>MERCK SHARP &amp; DOHME FARMACEUTICA LTDA - SAO PAULO/SP</td>
+</tr>
+<tr>
+<td>25538</td>
+<td>MERCK-CAMPI</td>
+</tr>
+<tr>
+<td>26313</td>
+<td>MERCK-GO</td>
+</tr>
+<tr>
+<td>27883</td>
+<td>MERCK-RJ</td>
+</tr>
+<tr>
+<td>2901</td>
+<td>MERIAL</td>
+</tr>
+<tr>
+<td>44779</td>
+<td>MIBE</td>
+</tr>
+<tr>
+<td>35978</td>
+<td>MODERNA BIOTECH</td>
+</tr>
+<tr>
+<td>42430</td>
+<td>MODERNA SWITZERLAND GMBH</td>
+</tr>
+<tr>
+<td>42932</td>
+<td>MSD-LLC</td>
+</tr>
+<tr>
+<td>10885</td>
+<td>NI</td>
+</tr>
+<tr>
+<td>2355</td>
+<td>NOVARTIS</td>
+</tr>
+<tr>
+<td>29909</td>
+<td>OXFORD-ASTRAZENECA</td>
+</tr>
+<tr>
+<td>28303</td>
+<td>PANACEA</td>
+</tr>
+<tr>
+<td>44329</td>
+<td>PATHEON</td>
+</tr>
+<tr>
+<td>142</td>
+<td>PFIZER</td>
+</tr>
+<tr>
+<td>45086</td>
+<td>PFIZER-IRLANDA</td>
+</tr>
+<tr>
+<td>28290</td>
+<td>PFIZER/BIONTECH</td>
+</tr>
+<tr>
+<td>42488</td>
+<td>ROVI-PHARMA</td>
+</tr>
+<tr>
+<td>28251</td>
+<td>SANMEDLEY</td>
+</tr>
+<tr>
+<td>2862</td>
+<td>SANPASTEUR</td>
+</tr>
+<tr>
+<td>163</td>
+<td>SERUM-INDIA</td>
+</tr>
+<tr>
+<td>167</td>
+<td>SEVAC</td>
+</tr>
+<tr>
+<td>13688</td>
+<td>SHANTHA</td>
+</tr>
+<tr>
+<td>42490</td>
+<td>SINOVAC BIOTECH CO LTD</td>
+</tr>
+<tr>
+<td>29501</td>
+<td>SINOVAC LIFE SCIENCE CO LTD</td>
+</tr>
+<tr>
+<td>29501</td>
+<td>SINOVAC/BUTANTAN</td>
+</tr>
+<tr>
+<td>42655</td>
+<td>SK-BIOSCEN</td>
+</tr>
+<tr>
+<td>159</td>
+<td>SMITHKLINE</td>
+</tr>
+<tr>
+<td>39263</td>
+<td>TAKEDA</td>
+</tr>
+<tr>
+<td>45240</td>
+<td>TAKEDA-JAPAO</td>
+</tr>
+<tr>
+<td>153</td>
+<td>TECPAR</td>
+</tr>
+<tr>
+<td>28283</td>
+<td>VINS</td>
+</tr>
+<tr>
+<td>11347</td>
+<td>VIRBAC</td>
+</tr>
+<tr>
+<td>2263</td>
+<td>WYETH-LTDA</td>
+</tr>
+<tr>
+<td>45915</td>
+<td>SINOVAC DALIAN VACCINE TECHNOLOGY CO., LTD.</td>
+</tr>
+</tbody></table>
+
+<h2 id="localdeatendimento">LocalDeAtendimento</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>UBS</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Unidade móvel</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rua</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Domicílio</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Escola / Creche</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Outros</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Polo (academia da saúde)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Instituição / Abrigo</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Unidade prisional ou congêneres</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Unidade socioeducativa</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Hospital</td>
+<td>Utilizado apenas na Ficha de Atendimento Domiciliar</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Unidade de pronto atendimento</td>
+<td>Utilizado apenas na Ficha de Atendimento Domiciliar</td>
+</tr>
+<tr>
+<td>13</td>
+<td>CACON / UNACON</td>
+<td>Utilizado apenas na Ficha de Atendimento Domiciliar</td>
+</tr>
+<tr>
+<td>16</td>
+<td>UBSI</td>
+<td>-</td>
+</tr>
+<tr>
+<td>17</td>
+<td>UBSI Fluvial</td>
+<td>-</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Sede de polo base tipo I</td>
+<td>-</td>
+</tr>
+<tr>
+<td>19</td>
+<td>CASAI</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="localizacaodamoradia">LocalizacaoDaMoradia</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>83</td>
+<td>Urbana</td>
+<td>-</td>
+</tr>
+<tr>
+<td>84</td>
+<td>Rural</td>
+<td>-</td>
+</tr>
+<tr>
+<td>205</td>
+<td>Periurbana</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="materialpredominantenaconstrucao">MaterialPredominanteNaConstrucao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>109</td>
+<td>Alvenaria com revestimento</td>
+<td>-</td>
+</tr>
+<tr>
+<td>110</td>
+<td>Alvenaria sem revestimento</td>
+<td>-</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Taipa com revestimento</td>
+<td>-</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Taipa sem revestimento</td>
+<td>-</td>
+</tr>
+<tr>
+<td>113</td>
+<td>Madeira emparelhada</td>
+<td>-</td>
+</tr>
+<tr>
+<td>114</td>
+<td>Material aproveitado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>115</td>
+<td>Palha</td>
+<td>-</td>
+</tr>
+<tr>
+<td>210</td>
+<td>Lona</td>
+<td>-</td>
+</tr>
+<tr>
+<td>211</td>
+<td>Misto/Diferentes materiais</td>
+<td>-</td>
+</tr>
+<tr>
+<td>212</td>
+<td>Caule de palmeira</td>
+<td>-</td>
+</tr>
+<tr>
+<td>213</td>
+<td>Sem parede</td>
+<td>-</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Outro material</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="modalidadead">ModalidadeAD</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>AD 1</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>AD 2</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>AD 3</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Inelegível</td>
+<td>Utilizado apenas na Ficha de Avaliação de Elegibilidade</td>
+</tr>
+</tbody></table>
+
+<h2 id="motivosaida">MotivoSaida</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>135</td>
+<td>Óbito</td>
+<td>-</td>
+</tr>
+<tr>
+<td>136</td>
+<td>Mudança de território</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="motivovisita">MotivoVisita</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Cadastramento / Atualização</td>
+<td>#TIPO_VISITA</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Visita periódica</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Consulta</td>
+<td>#BUSCA_ATIVA</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Exame</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Vacina</td>
+<td>-</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Condicionalidades do bolsa família</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Gestante</td>
+<td>#ACOMPANHAMENTO</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Puérpera</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Recém-nascido</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Criança</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Pessoa com desnutrição</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Pessoa em reabilitação ou com deficiência</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Pessoa com hipertensão</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Pessoa com diabetes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Pessoa com asma</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Pessoa com DPOC / enfisema</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Pessoa com câncer</td>
+<td>-</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Pessoa com outras doenças crônicas</td>
+<td>-</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Pessoa com hanseníase</td>
+<td>-</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Pessoa com tuberculose</td>
+<td>-</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Sintomáticos respiratórios</td>
+<td>-</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Tabagista</td>
+<td>-</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Domiciliados / Acamados</td>
+<td>-</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Condições de vulnerabilidade social</td>
+<td>-</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Condicionalidades do bolsa família</td>
+<td>-</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Saúde mental</td>
+<td>-</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Usuário de álcool</td>
+<td>-</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Usuário de outras drogas</td>
+<td>-</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Pessoa idosa</td>
+<td>-</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Ação educativa</td>
+<td>#CONTROLE_AMBIENTAL_E_VETORIAL</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Imóvel com foco</td>
+<td>-</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Ação mecânica</td>
+<td>-</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Tratamento focal</td>
+<td>-</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Egresso de internação</td>
+<td>#OUTROS</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Convite para atividades coletivas / campanha de saúde</td>
+<td>-</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Orientação / Prevenção</td>
+<td>-</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Outros</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="nacionalidade">Nacionalidade</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Brasileira</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Naturalizado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Estrangeiro</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="emulti">eMulti</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Avaliação / Diagnóstico</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Procedimentos clínicos terapêuticos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Prescrição terapêutica</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="orientacaosexual">OrientacaoSexual</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>148</td>
+<td>Heterossexual</td>
+<td>-</td>
+</tr>
+<tr>
+<td>154</td>
+<td>Bissexual</td>
+<td>-</td>
+</tr>
+<tr>
+<td>196</td>
+<td>Gay</td>
+<td>-</td>
+</tr>
+<tr>
+<td>197</td>
+<td>Lésbica</td>
+<td>-</td>
+</tr>
+<tr>
+<td>198</td>
+<td>Assexual</td>
+<td>-</td>
+</tr>
+<tr>
+<td>199</td>
+<td>Panssexual</td>
+<td>-</td>
+</tr>
+<tr>
+<td>155</td>
+<td>Outro</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="origemalimentacao">OrigemAlimentacao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>37</td>
+<td>Restaurante popular</td>
+<td>-</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Doação grupo religioso</td>
+<td>-</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Doação restaurante</td>
+<td>-</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Doação popular</td>
+<td>-</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Outros</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="temasparasaude">TemasParaSaude</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>29</td>
+<td>Ações de combate ao <em>Aedes aegypti</em></td>
+<td>-</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Agravos e Doenças Negligenciadas</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Alimentação saudável</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Autocuidado de pessoas com doenças crônicas</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Cidadania e direitos humanos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Prevenção ao uso de álcool, tabaco e outras drogas</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Envelhecimento / Climatério / Andropausa / Etc</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Plantas medicinais / Fitoterapia</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Prevenção da violência e promoção da cultura da paz</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Saúde ambiental</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Saúde bucal</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Saúde do trabalhador</td>
+<td>-</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Saúde mental</td>
+<td>-</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Saúde sexual e reprodutiva</td>
+<td>-</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Semana saúde na escola</td>
+<td>-</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Amamentação</td>
+<td>-</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Alimentação complementar saudável</td>
+<td>-</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Outros</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="praticasemsaude">PraticasEmSaude</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>20</td>
+<td>Antropometria</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Aplicação tópica de flúor</td>
+<td>-</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Desenvolvimento da linguagem</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Escovação dental supervisionada</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Práticas corporais e Atividade física</td>
+<td>-</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Programa Nacional de Controle do Tabagismo 1</td>
+<td>-</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Programa Nacional de Controle do Tabagismo 2</td>
+<td>-</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Programa Nacional de Controle do Tabagismo 3</td>
+<td>-</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Programa Nacional de Controle do Tabagismo 4</td>
+<td>-</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Saúde auditiva</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Saúde ocular</td>
+<td>-</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Verificação da situação vacinal</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Outras</td>
+<td>-</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Outro procedimento coletivo</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="problemarins">ProblemaRins</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>27</td>
+<td>Insuficiência renal</td>
+<td>-</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Outro</td>
+<td>-</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Não sabe</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="publicoalvo">PublicoAlvo</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Comunidade em geral</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Criança de 0 a 3 anos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Criança de 4 a 5 anos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Criança de 6 a 11 anos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Adolescente</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Mulher</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Gestante</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Homem</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Familiares</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Pessoa idosa</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Pessoas com doenças crônicas</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Usuário de tabaco</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Usuário de álcool</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Usuário de outras drogas</td>
+<td>-</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Portador com sofrimento ou transtorno mental</td>
+<td>-</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Profissional da educação</td>
+<td>-</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Outros</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="quantasvezesalimentacao">QuantasVezesAlimentacao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>34</td>
+<td>1 vez</td>
+<td>-</td>
+</tr>
+<tr>
+<td>35</td>
+<td>2 ou 3 vezes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>36</td>
+<td>mais de 3 vezes</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="racacor">RacaCor</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Branca</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Preta</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Parda</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Amarela</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Indígena</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="relacaoparentesco">RelacaoParentesco</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>137</td>
+<td>Cônjuge / Companheiro(a)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>138</td>
+<td>Filho(a)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>139</td>
+<td>Enteado(a)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>140</td>
+<td>Neto(a) / Bisneto(a)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>141</td>
+<td>Pai / Mãe</td>
+<td>-</td>
+</tr>
+<tr>
+<td>142</td>
+<td>Sogro(a)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>143</td>
+<td>Irmão / Irmã</td>
+<td>-</td>
+</tr>
+<tr>
+<td>144</td>
+<td>Genro / Nora</td>
+<td>-</td>
+</tr>
+<tr>
+<td>145</td>
+<td>Outro parente</td>
+<td>-</td>
+</tr>
+<tr>
+<td>146</td>
+<td>Não parente</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="rendafamiliar">RendaFamiliar</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>1/4 de salário mínimo</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Meio salário mínimo</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Um salário mínimo</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dois salários mínimos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Três salários mínimos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Quatro salários mínimos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Acima de quatro salários mínimos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Ausência de renda</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="responsavelcrianca">ResponsavelCrianca</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Adulto responsável</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Outra(s) criança(s)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>133</td>
+<td>Adolescente</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sozinha</td>
+<td>-</td>
+</tr>
+<tr>
+<td>134</td>
+<td>Creche</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Outro</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="sexo">Sexo</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>Masculino</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Feminino</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ignorado</td>
+<td>Apenas quando não foi informado o sexo do cidadão.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Indeterminado</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="situacaodemoradia">SituacaoDeMoradia</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>75</td>
+<td>Próprio</td>
+<td>-</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Financiado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>77</td>
+<td>Alugado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>78</td>
+<td>Arrendado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>79</td>
+<td>Cedido</td>
+<td>-</td>
+</tr>
+<tr>
+<td>80</td>
+<td>Ocupação</td>
+<td>-</td>
+</tr>
+<tr>
+<td>81</td>
+<td>Situação de rua</td>
+<td>-</td>
+</tr>
+<tr>
+<td>204</td>
+<td>Temporária</td>
+<td>-</td>
+</tr>
+<tr>
+<td>82</td>
+<td>Outra</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="situacaoexame">SituacaoExame</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>&quot;S&quot;</td>
+<td>Solicitado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>&quot;A&quot;</td>
+<td>Avaliado</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="situacaoproblemascondicoes">SituacaoProblemasCondicoes</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>Ativo</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Latente</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Resolvido</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="situacaomercadotrabalho">SituacaoMercadoTrabalho</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>66</td>
+<td>Empregador</td>
+<td>-</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Assalariado com carteira de trabalho</td>
+<td>-</td>
+</tr>
+<tr>
+<td>68</td>
+<td>Assalariado sem carteira de trabalho</td>
+<td>-</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Autônomo com previdência social</td>
+<td>-</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Autônomo sem previdência social</td>
+<td>-</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Aposentado / Pensionista</td>
+<td>-</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Desempregado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>73</td>
+<td>Não trabalha</td>
+<td>-</td>
+</tr>
+<tr>
+<td>147</td>
+<td>Servidor público / Militar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Outro</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="temasparareuniao">TemasParaReuniao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Questões administrativas / funcionamento</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Processo de trabalho</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Diagnóstico / Monitoramento do território</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Planejamento / Monitoramento das ações da equipe</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Discussão de caso ou projeto terapêutico singular</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Educação permanente</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Outros</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="temposituacaoderua">TempoSituacaoDeRua</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>17</td>
+<td>Menos de 6 meses</td>
+<td>-</td>
+</tr>
+<tr>
+<td>18</td>
+<td>6 a 12 meses</td>
+<td>-</td>
+</tr>
+<tr>
+<td>19</td>
+<td>1 a 5 anos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Mais de 5 anos</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipoatividadecoletiva">TipoAtividadeColetiva</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Reunião de equipe</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Reunião com outras equipes de saúde</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Reunião intersetorial / Conselho local de saúde / Controle social</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Educação em saúde</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Atendimento em grupo</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Avaliação / Procedimento coletivo</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Mobilização social</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipodadoserializado">TipoDadoSerializado</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>2</td>
+<td>Ficha de Cadastro Individual</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ficha de Cadastro Domiciliar e Territorial</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ficha de Atendimento Individual</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ficha de Atendimento Odontológico</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Ficha de Atividade Coletiva</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Ficha de Procedimentos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Ficha de Visita Domiciliar e Territorial</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Ficha de Atendimento Domiciliar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Ficha de Avaliação de Elegibilidade</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Marcadores de Consumo Alimentar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Ficha complementar - Síndrome neurológica por Zika / Microcefalia</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Ficha de Vacinação</td>
+<td>-</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Ficha de Cuidado Compartilhado</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipodeacessoaodomicilio">TipoDeAcessoAoDomicilio</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>89</td>
+<td>Pavimento</td>
+<td>-</td>
+</tr>
+<tr>
+<td>90</td>
+<td>Chão batido</td>
+<td>-</td>
+</tr>
+<tr>
+<td>91</td>
+<td>Fluvial</td>
+<td>-</td>
+</tr>
+<tr>
+<td>92</td>
+<td>Outro</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipodeatendimento">TipoDeAtendimento</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Consulta agendada programada / Cuidado continuado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Consulta agendada</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Escuta inicial / Orientação</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Consulta no dia</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Atendimento de urgência</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Atendimento programado</td>
+<td>Utilizado apenas nas Fichas de Atendimento Domiciliar</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Atendimento não programado</td>
+<td>Utilizado apenas nas Fichas de Atendimento Domiciliar</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Visita domiciliar pós-óbito</td>
+<td>Utilizado apenas nas Fichas de Atendimento Domiciliar</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipodeconsultaodonto">TipoDeConsultaOdonto</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Primeira consulta odontológica programática</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Consulta de retorno em odontologia</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Consulta de manutenção em odontologia</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipodedomicilio">TipoDeDomicilio</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>85</td>
+<td>Casa</td>
+<td>-</td>
+</tr>
+<tr>
+<td>86</td>
+<td>Apartamento</td>
+<td>-</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Cômodo</td>
+<td>-</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Maloca</td>
+<td>-</td>
+</tr>
+<tr>
+<td>207</td>
+<td>Improvisado</td>
+<td>-</td>
+</tr>
+<tr>
+<td>88</td>
+<td>Outro</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipoorigemenergiaeletrica">TipoOrigemEnergiaEletrica</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>227</td>
+<td>Gerador comunitário</td>
+<td>-</td>
+</tr>
+<tr>
+<td>228</td>
+<td>Gerador individual</td>
+<td>-</td>
+</tr>
+<tr>
+<td>229</td>
+<td>Fotovoltaica individual</td>
+<td>-</td>
+</tr>
+<tr>
+<td>230</td>
+<td>Concessionária</td>
+<td>-</td>
+</tr>
+<tr>
+<td>231</td>
+<td>Fotovoltaica comunitária</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="aguaconsumodomicilio">AguaConsumoDomicilio</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>98</td>
+<td>Fervida</td>
+<td>-</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Clorada</td>
+<td>-</td>
+</tr>
+<tr>
+<td>152</td>
+<td>Mineral</td>
+<td>-</td>
+</tr>
+<tr>
+<td>218</td>
+<td>Filtrada com filtro de barro</td>
+<td>-</td>
+</tr>
+<tr>
+<td>219</td>
+<td>Filtrada por outro tipo de filtro</td>
+<td>-</td>
+</tr>
+<tr>
+<td>220</td>
+<td>Clorada intradomiciliar com hipoclorito de sódio</td>
+<td>-</td>
+</tr>
+<tr>
+<td>100</td>
+<td>Sem tratamento</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="turno">Turno</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Manhã</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Tarde</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Noite</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="vigilanciaemsaudebucal">VigilanciaEmSaudeBucal</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Abscesso dento alveolar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Alteração em tecidos moles</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dor de dente</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Fendas / Fissuras lábio palatais</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Fluorose dentária moderada / severa</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Traumatismo dento alveolar</td>
+<td>-</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Não identificado</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="identidadegenerocidadao">identidadeGeneroCidadao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>149</td>
+<td>Homem transgênero</td>
+<td>-</td>
+</tr>
+<tr>
+<td>150</td>
+<td>Mulher transgênero</td>
+<td>-</td>
+</tr>
+<tr>
+<td>156</td>
+<td>Travesti</td>
+<td>-</td>
+</tr>
+<tr>
+<td>200</td>
+<td>Homem cisgênero</td>
+<td>-</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Mulher cisgênero</td>
+<td>-</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Não-binário</td>
+<td>-</td>
+</tr>
+<tr>
+<td>151</td>
+<td>Outro</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="etnia">etnia</h2>
+
+<p>A coluna &quot;Código CADSUS&quot; é uma referência ao código utilizado no manual <a href="Especificacao_CADSUS.pdf" title="Clique para visualizar o documento de Especificação Técnica para integração PIX/PDQ">
+<img src="img/pdf.jpg" width="20" height="20"/>
+</a>.</p>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Código CADSUS</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>0001</td>
+<td>ACONA (WAKONAS, NACONAS, JAKONA, ACORANES)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0002</td>
+<td>AIKANA (AIKANA, MAS SAKA,TUBARAO)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0003</td>
+<td>AJURU</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0004</td>
+<td>AKUNSU (AKUNT&#39;&#39;SU)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0005</td>
+<td>AMANAYE</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0006</td>
+<td>AMONDAWA</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0007</td>
+<td>ANAMBE</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0008</td>
+<td>APARAI (APALAI)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0009</td>
+<td>APIAKA (APIACA)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0010</td>
+<td>APINAYE (APINAJE/APINAIE/APINAGE)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0011</td>
+<td>APURINA (APORINA, IPURINA, IPURINA, IPURINAN)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>0012</td>
+<td>ARANA (ARACUAI DO VALE DO JEQUITINHONHA)</td>
+</tr>
+<tr>
+<td>13</td>
+<td>0013</td>
+<td>ARAPASO (ARAPACO)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>0014</td>
+<td>ARARA DE RONDONIA (KARO, URUCU, URUKU)</td>
+</tr>
+<tr>
+<td>15</td>
+<td>0015</td>
+<td>ARARA DO ACRE (SHAWANAUA, AMAWAKA)</td>
+</tr>
+<tr>
+<td>16</td>
+<td>0016</td>
+<td>ARARA DO ARIPUANA (ARARA DO BEIRADAO/ARI-PUANA)</td>
+</tr>
+<tr>
+<td>17</td>
+<td>0017</td>
+<td>ARARA DO PARA (UKARAGMA, UKARAMMA)</td>
+</tr>
+<tr>
+<td>18</td>
+<td>0018</td>
+<td>ARAWETE (ARAUETE)</td>
+</tr>
+<tr>
+<td>19</td>
+<td>0019</td>
+<td>ARIKAPU (ARICAPU, ARIKAPO, MASUBI, MAXUBI)</td>
+</tr>
+<tr>
+<td>20</td>
+<td>0020</td>
+<td>ARIKEM (ARIQUEN, ARIQUEME, ARIKEME)</td>
+</tr>
+<tr>
+<td>21</td>
+<td>0021</td>
+<td>ARIKOSE (ARICOBE)</td>
+</tr>
+<tr>
+<td>22</td>
+<td>0022</td>
+<td>ARUA</td>
+</tr>
+<tr>
+<td>23</td>
+<td>0023</td>
+<td>ARUAK (ARAWAK)</td>
+</tr>
+<tr>
+<td>24</td>
+<td>0024</td>
+<td>ASHANINKA (KAMPA)</td>
+</tr>
+<tr>
+<td>25</td>
+<td>0025</td>
+<td>ASURINI DO TOCANTINS (AKUAWA/AKWAWA)</td>
+</tr>
+<tr>
+<td>26</td>
+<td>0026</td>
+<td>ASURINI DO XINGU (AWAETE)</td>
+</tr>
+<tr>
+<td>27</td>
+<td>0027</td>
+<td>ATIKUM (ATICUM)</td>
+</tr>
+<tr>
+<td>28</td>
+<td>0028</td>
+<td>AVA - CANOEIRO</td>
+</tr>
+<tr>
+<td>29</td>
+<td>0029</td>
+<td>AWETI (AUETI/AUETO)</td>
+</tr>
+<tr>
+<td>30</td>
+<td>0030</td>
+<td>BAKAIRI (KURA, BACAIRI)</td>
+</tr>
+<tr>
+<td>31</td>
+<td>0031</td>
+<td>BANAWA YAFI (BANAWA, BANAWA-JAFI)</td>
+</tr>
+<tr>
+<td>32</td>
+<td>0032</td>
+<td>BANIWA (BANIUA, BANIVA, WALIMANAI, WAKUENAI)</td>
+</tr>
+<tr>
+<td>33</td>
+<td>0033</td>
+<td>BARA (WAIPINOMAKA)</td>
+</tr>
+<tr>
+<td>34</td>
+<td>0034</td>
+<td>BARASANA (HANERA)</td>
+</tr>
+<tr>
+<td>35</td>
+<td>0035</td>
+<td>BARE</td>
+</tr>
+<tr>
+<td>36</td>
+<td>0036</td>
+<td>BORORO (BOE)</td>
+</tr>
+<tr>
+<td>37</td>
+<td>0037</td>
+<td>BOTOCUDO (GEREN)</td>
+</tr>
+<tr>
+<td>38</td>
+<td>0038</td>
+<td>CANOE</td>
+</tr>
+<tr>
+<td>39</td>
+<td>0039</td>
+<td>CASSUPA</td>
+</tr>
+<tr>
+<td>40</td>
+<td>0040</td>
+<td>CHAMACOCO</td>
+</tr>
+<tr>
+<td>41</td>
+<td>0041</td>
+<td>CHIQUITANO (XIQUITANO)</td>
+</tr>
+<tr>
+<td>42</td>
+<td>0042</td>
+<td>CIKIYANA (SIKIANA)</td>
+</tr>
+<tr>
+<td>43</td>
+<td>0043</td>
+<td>CINTA LARGA (MATETAMAE)</td>
+</tr>
+<tr>
+<td>44</td>
+<td>0044</td>
+<td>COLUMBIARA (CORUMBIARA)</td>
+</tr>
+<tr>
+<td>45</td>
+<td>0045</td>
+<td>DENI</td>
+</tr>
+<tr>
+<td>46</td>
+<td>0046</td>
+<td>DESANA (DESANA, DESANO, DESSANO, WIRA, UMUKOMASA)</td>
+</tr>
+<tr>
+<td>47</td>
+<td>0047</td>
+<td>DIAHUI (JAHOI, JAHUI, DIARROI)</td>
+</tr>
+<tr>
+<td>48</td>
+<td>0048</td>
+<td>ENAWENE-NAWE (SALUMA)</td>
+</tr>
+<tr>
+<td>49</td>
+<td>0049</td>
+<td>FULNI-O</td>
+</tr>
+<tr>
+<td>50</td>
+<td>0050</td>
+<td>GALIBI (GALIBI DO OIAPOQUE, KARINHA)</td>
+</tr>
+<tr>
+<td>51</td>
+<td>0051</td>
+<td>GALIBI MARWORNO (GALIBI DO UACA, ARUA)</td>
+</tr>
+<tr>
+<td>52</td>
+<td>0052</td>
+<td>GAVIAO DE RONDONIA (DIGUT)</td>
+</tr>
+<tr>
+<td>53</td>
+<td>0053</td>
+<td>GAVIAO KRIKATEJE</td>
+</tr>
+<tr>
+<td>54</td>
+<td>0054</td>
+<td>GAVIAO PARKATEJE (PARKATEJE)</td>
+</tr>
+<tr>
+<td>55</td>
+<td>0055</td>
+<td>GAVIAO PUKOBIE (PUKOBIE, PYKOPJE, GAVIAO DO MARANHAO)</td>
+</tr>
+<tr>
+<td>56</td>
+<td>0056</td>
+<td>GUAJA (AWA, AVA)</td>
+</tr>
+<tr>
+<td>57</td>
+<td>0057</td>
+<td>GUAJAJARA (TENETEHARA)</td>
+</tr>
+<tr>
+<td>58</td>
+<td>0058</td>
+<td>GUARANI KAIOWA (PAI TAVYTERA)</td>
+</tr>
+<tr>
+<td>59</td>
+<td>0059</td>
+<td>GUARANI M&#39;&#39;BYA</td>
+</tr>
+<tr>
+<td>60</td>
+<td>0060</td>
+<td>GUARANI NANDEVA (AVAKATUETE, CHIRIPA,NHANDEWA, AVA GUARANI)</td>
+</tr>
+<tr>
+<td>61</td>
+<td>0061</td>
+<td>GUATO</td>
+</tr>
+<tr>
+<td>62</td>
+<td>0062</td>
+<td>HIMARIMA (HIMERIMA)</td>
+</tr>
+<tr>
+<td>63</td>
+<td>0063</td>
+<td>INGARIKO (INGARICO, AKAWAIO, KAPON)</td>
+</tr>
+<tr>
+<td>64</td>
+<td>0064</td>
+<td>IRANXE (IRANTXE)</td>
+</tr>
+<tr>
+<td>65</td>
+<td>0065</td>
+<td>ISSE</td>
+</tr>
+<tr>
+<td>66</td>
+<td>0066</td>
+<td>JABOTI (JABUTI, KIPIU, YABYTI)</td>
+</tr>
+<tr>
+<td>67</td>
+<td>0067</td>
+<td>JAMAMADI (YAMAMADI, DJEOROMITXI)</td>
+</tr>
+<tr>
+<td>68</td>
+<td>0068</td>
+<td>JARAWARA</td>
+</tr>
+<tr>
+<td>69</td>
+<td>0069</td>
+<td>JIRIPANCO (JERIPANCO, GERIPANCO)</td>
+</tr>
+<tr>
+<td>70</td>
+<td>0070</td>
+<td>JUMA (YUMA)</td>
+</tr>
+<tr>
+<td>71</td>
+<td>0071</td>
+<td>JURUNA</td>
+</tr>
+<tr>
+<td>72</td>
+<td>0072</td>
+<td>JURUTI (YURITI)</td>
+</tr>
+<tr>
+<td>73</td>
+<td>0073</td>
+<td>KAAPOR (URUBU-KAAPOR, KA&#39;&#39;APOR, KAAPORTE)</td>
+</tr>
+<tr>
+<td>74</td>
+<td>0074</td>
+<td>KADIWEU (CADUVEO, CADIUEU)</td>
+</tr>
+<tr>
+<td>75</td>
+<td>0075</td>
+<td>KAIABI (CAIABI, KAYABI)</td>
+</tr>
+<tr>
+<td>76</td>
+<td>0076</td>
+<td>KAIMBE (CAIMBE)</td>
+</tr>
+<tr>
+<td>77</td>
+<td>0077</td>
+<td>KAINGANG (CAINGANGUE)</td>
+</tr>
+<tr>
+<td>78</td>
+<td>0078</td>
+<td>KAIXANA (CAIXANA)</td>
+</tr>
+<tr>
+<td>79</td>
+<td>0079</td>
+<td>KALABASSA (CALABASSA, CALABACAS)</td>
+</tr>
+<tr>
+<td>80</td>
+<td>0080</td>
+<td>KALANCO</td>
+</tr>
+<tr>
+<td>81</td>
+<td>0081</td>
+<td>KALAPALO (CALAPALO)</td>
+</tr>
+<tr>
+<td>82</td>
+<td>0082</td>
+<td>KAMAYURA (CAMAIURA, KAMAIURA)</td>
+</tr>
+<tr>
+<td>83</td>
+<td>0083</td>
+<td>KAMBA (CAMBA)</td>
+</tr>
+<tr>
+<td>84</td>
+<td>0084</td>
+<td>KAMBEBA (CAMBEBA, OMAGUA)</td>
+</tr>
+<tr>
+<td>85</td>
+<td>0085</td>
+<td>KAMBIWA (CAMBIUA)</td>
+</tr>
+<tr>
+<td>86</td>
+<td>0086</td>
+<td>KAMBIWA PIPIPA (PIPIPA)</td>
+</tr>
+<tr>
+<td>87</td>
+<td>0087</td>
+<td>KAMPE</td>
+</tr>
+<tr>
+<td>88</td>
+<td>0088</td>
+<td>KANAMANTI (KANAMATI, CANAMANTI)</td>
+</tr>
+<tr>
+<td>89</td>
+<td>0089</td>
+<td>KANAMARI (CANAMARI, KANAMARY, TUKUNA)</td>
+</tr>
+<tr>
+<td>90</td>
+<td>0090</td>
+<td>KANELA APANIEKRA (CANELA)</td>
+</tr>
+<tr>
+<td>91</td>
+<td>0091</td>
+<td>KANELA RANKOKAMEKRA (CANELA)</td>
+</tr>
+<tr>
+<td>92</td>
+<td>0092</td>
+<td>KANINDE</td>
+</tr>
+<tr>
+<td>93</td>
+<td>0093</td>
+<td>KANOE (CANOE)</td>
+</tr>
+<tr>
+<td>94</td>
+<td>0094</td>
+<td>KANTARURE (CANTARURE)</td>
+</tr>
+<tr>
+<td>95</td>
+<td>0095</td>
+<td>KAPINAWA (CAPINAUA)</td>
+</tr>
+<tr>
+<td>96</td>
+<td>0096</td>
+<td>KARAJA (CARAJA)</td>
+</tr>
+<tr>
+<td>97</td>
+<td>0097</td>
+<td>KARAJA/JAVAE (JAVAE)</td>
+</tr>
+<tr>
+<td>98</td>
+<td>0098</td>
+<td>KARAJA/XAMBIOA (KARAJA DO NORTE)</td>
+</tr>
+<tr>
+<td>99</td>
+<td>0099</td>
+<td>KARAPANA (CARAPANA, MUTEAMASA, UKOPINOPONA)</td>
+</tr>
+<tr>
+<td>100</td>
+<td>0100</td>
+<td>KARAPOTO (CARAPOTO)</td>
+</tr>
+<tr>
+<td>101</td>
+<td>0101</td>
+<td>KARIPUNA (CARIPUNA)</td>
+</tr>
+<tr>
+<td>102</td>
+<td>0102</td>
+<td>KARIPUNA DO AMAPA (CARIPUNA)</td>
+</tr>
+<tr>
+<td>103</td>
+<td>0103</td>
+<td>KARIRI (CARIRI)</td>
+</tr>
+<tr>
+<td>104</td>
+<td>0104</td>
+<td>KARIRI-XOCO (CARIRI-CHOCO)</td>
+</tr>
+<tr>
+<td>105</td>
+<td>0105</td>
+<td>KARITIANA (CARITIANA)</td>
+</tr>
+<tr>
+<td>106</td>
+<td>0106</td>
+<td>KATAWIXI (KATAUIXI,KATAWIN, KATAWISI, CATAUICHI)</td>
+</tr>
+<tr>
+<td>107</td>
+<td>0107</td>
+<td>KATUENA (CATUENA, KATWENA)</td>
+</tr>
+<tr>
+<td>108</td>
+<td>0108</td>
+<td>KATUKINA (PEDA DJAPA)</td>
+</tr>
+<tr>
+<td>109</td>
+<td>0109</td>
+<td>KATUKINA DO ACRE</td>
+</tr>
+<tr>
+<td>110</td>
+<td>0110</td>
+<td>KAXARARI (CAXARARI)</td>
+</tr>
+<tr>
+<td>111</td>
+<td>0111</td>
+<td>KAXINAWA (HUNI-KUIN, CASHINAUA, CAXINAUA)</td>
+</tr>
+<tr>
+<td>112</td>
+<td>0112</td>
+<td>KAXIXO</td>
+</tr>
+<tr>
+<td>113</td>
+<td>0113</td>
+<td>KAXUYANA (CAXUIANA)</td>
+</tr>
+<tr>
+<td>114</td>
+<td>0114</td>
+<td>KAYAPO (CAIAPO)</td>
+</tr>
+<tr>
+<td>115</td>
+<td>0115</td>
+<td>KAYAPO KARARAO (KARARAO)</td>
+</tr>
+<tr>
+<td>116</td>
+<td>0116</td>
+<td>KAYAPO TXUKAHAMAE (TXUKAHAMAE)</td>
+</tr>
+<tr>
+<td>117</td>
+<td>0117</td>
+<td>KAYAPO XICRIM (XIKRIN)</td>
+</tr>
+<tr>
+<td>118</td>
+<td>0118</td>
+<td>KAYUISANA (CAIXANA, CAUIXANA, KAIXANA)</td>
+</tr>
+<tr>
+<td>119</td>
+<td>0119</td>
+<td>KINIKINAWA (GUAN, KOINUKOEN, KINIKINAO)</td>
+</tr>
+<tr>
+<td>120</td>
+<td>0120</td>
+<td>KIRIRI</td>
+</tr>
+<tr>
+<td>121</td>
+<td>0121</td>
+<td>KOCAMA (COCAMA, KOKAMA)</td>
+</tr>
+<tr>
+<td>122</td>
+<td>0122</td>
+<td>KOKUIREGATEJE</td>
+</tr>
+<tr>
+<td>123</td>
+<td>0123</td>
+<td>KORUBO</td>
+</tr>
+<tr>
+<td>124</td>
+<td>0124</td>
+<td>KRAHO (CRAO, KRAO)</td>
+</tr>
+<tr>
+<td>125</td>
+<td>0125</td>
+<td>KREJE (KRENYE)</td>
+</tr>
+<tr>
+<td>126</td>
+<td>0126</td>
+<td>KRENAK (BORUN, CRENAQUE)</td>
+</tr>
+<tr>
+<td>127</td>
+<td>0127</td>
+<td>KRIKATI (KRINKATI)</td>
+</tr>
+<tr>
+<td>128</td>
+<td>0128</td>
+<td>KUBEO (CUBEO, COBEWA, KUBEWA, PAMIWA, CUBEU)</td>
+</tr>
+<tr>
+<td>129</td>
+<td>0129</td>
+<td>KUIKURO (KUIKURU, CUICURO)</td>
+</tr>
+<tr>
+<td>130</td>
+<td>0130</td>
+<td>KUJUBIM (KUYUBI, CUJUBIM)</td>
+</tr>
+<tr>
+<td>131</td>
+<td>0131</td>
+<td>KULINA PANO (CULINA)</td>
+</tr>
+<tr>
+<td>132</td>
+<td>0132</td>
+<td>KULINA/MADIHA (CULINA, MADIJA, MADIHA)</td>
+</tr>
+<tr>
+<td>133</td>
+<td>0133</td>
+<td>KURIPAKO (CURIPACO, CURRIPACO, CORIPACO, WAKUENAI)</td>
+</tr>
+<tr>
+<td>134</td>
+<td>0134</td>
+<td>KURUAIA (CURUAIA)</td>
+</tr>
+<tr>
+<td>135</td>
+<td>0135</td>
+<td>KWAZA (COAIA, KOAIA)</td>
+</tr>
+<tr>
+<td>136</td>
+<td>0136</td>
+<td>MACHINERI (MANCHINERI, MANXINERI)</td>
+</tr>
+<tr>
+<td>137</td>
+<td>0137</td>
+<td>MACURAP (MAKURAP)</td>
+</tr>
+<tr>
+<td>138</td>
+<td>0138</td>
+<td>MAKU DOW (DOW)</td>
+</tr>
+<tr>
+<td>139</td>
+<td>0139</td>
+<td>MAKU HUPDA (HUPDA)</td>
+</tr>
+<tr>
+<td>140</td>
+<td>0140</td>
+<td>MAKU NADEB (NADEB)</td>
+</tr>
+<tr>
+<td>141</td>
+<td>0141</td>
+<td>MAKU YUHUPDE (YUHUPDE)</td>
+</tr>
+<tr>
+<td>142</td>
+<td>0142</td>
+<td>MAKUNA (MACUNA, YEBA-MASA)</td>
+</tr>
+<tr>
+<td>143</td>
+<td>0143</td>
+<td>MAKUXI (MACUXI, MACHUSI, PEMON)</td>
+</tr>
+<tr>
+<td>144</td>
+<td>0144</td>
+<td>MARIMAM (MARIMA)</td>
+</tr>
+<tr>
+<td>145</td>
+<td>0145</td>
+<td>MARUBO</td>
+</tr>
+<tr>
+<td>146</td>
+<td>0146</td>
+<td>MATIPU</td>
+</tr>
+<tr>
+<td>147</td>
+<td>0147</td>
+<td>MATIS</td>
+</tr>
+<tr>
+<td>148</td>
+<td>0148</td>
+<td>MATSE (MAYORUNA)</td>
+</tr>
+<tr>
+<td>149</td>
+<td>0149</td>
+<td>MAXAKALI (MAXACALI)</td>
+</tr>
+<tr>
+<td>150</td>
+<td>0150</td>
+<td>MAYA (MAYA)</td>
+</tr>
+<tr>
+<td>151</td>
+<td>0151</td>
+<td>MAYTAPU</td>
+</tr>
+<tr>
+<td>152</td>
+<td>0152</td>
+<td>MEHINAKO (MEINAKU, MEINACU)</td>
+</tr>
+<tr>
+<td>153</td>
+<td>0153</td>
+<td>MEKEN (MEQUEM, MEKHEM, MICHENS)</td>
+</tr>
+<tr>
+<td>154</td>
+<td>0154</td>
+<td>MENKY (MYKY, MUNKU, MENKI, MYNKY)</td>
+</tr>
+<tr>
+<td>155</td>
+<td>0155</td>
+<td>MIRANHA (MIRANHA, MIRANA)</td>
+</tr>
+<tr>
+<td>156</td>
+<td>0156</td>
+<td>MIRITI TAPUIA (MIRITI-TAPUYA, BUIA-TAPUYA)</td>
+</tr>
+<tr>
+<td>157</td>
+<td>0157</td>
+<td>MUNDURUKU (MUNDURUCU)</td>
+</tr>
+<tr>
+<td>158</td>
+<td>0158</td>
+<td>MURA</td>
+</tr>
+<tr>
+<td>159</td>
+<td>0159</td>
+<td>NAHUKWA (NAFUQUA)</td>
+</tr>
+<tr>
+<td>160</td>
+<td>0160</td>
+<td>NAMBIKWARA DO CAMPO (HALOTESU, KITHAULU, WAKALITESU, SAWENTES, MANDUKA)</td>
+</tr>
+<tr>
+<td>161</td>
+<td>0161</td>
+<td>NAMBIKWARA DO NORTE (NEGAROTE ,MAMAINDE, LATUNDE, SABANE E MANDUKA, TAWANDE)</td>
+</tr>
+<tr>
+<td>162</td>
+<td>0162</td>
+<td>NAMBIKWARA DO SUL (WASUSU ,HAHAINTESU, ALANTESU, WAIKISU, ALAKETESU, WASUSU, SARARE)</td>
+</tr>
+<tr>
+<td>163</td>
+<td>0163</td>
+<td>NARAVUTE (NARUVOTO)</td>
+</tr>
+<tr>
+<td>164</td>
+<td>0164</td>
+<td>NAWA (NAUA)</td>
+</tr>
+<tr>
+<td>165</td>
+<td>0165</td>
+<td>NUKINI (NUQUINI, NUKUINI)</td>
+</tr>
+<tr>
+<td>166</td>
+<td>0166</td>
+<td>OFAIE (OFAYE-XAVANTE)</td>
+</tr>
+<tr>
+<td>167</td>
+<td>0167</td>
+<td>ORO WIN</td>
+</tr>
+<tr>
+<td>168</td>
+<td>0168</td>
+<td>PAIAKU (JENIPAPO-KANINDE)</td>
+</tr>
+<tr>
+<td>169</td>
+<td>0169</td>
+<td>PAKAA NOVA (WARI, PACAAS NOVOS)</td>
+</tr>
+<tr>
+<td>170</td>
+<td>0170</td>
+<td>PALIKUR (AUKWAYENE, AUKUYENE, PALIKU&#39;&#39;ENE)</td>
+</tr>
+<tr>
+<td>171</td>
+<td>0171</td>
+<td>PANARA (KRENHAKARORE , KRENAKORE, KRENA-KARORE)</td>
+</tr>
+<tr>
+<td>172</td>
+<td>0172</td>
+<td>PANKARARE (PANCARARE)</td>
+</tr>
+<tr>
+<td>173</td>
+<td>0173</td>
+<td>PANKARARU (PANCARARU)</td>
+</tr>
+<tr>
+<td>174</td>
+<td>0174</td>
+<td>PANKARARU KALANKO (KALANKO)</td>
+</tr>
+<tr>
+<td>175</td>
+<td>0175</td>
+<td>PANKARARU KARUAZU (KARUAZU)</td>
+</tr>
+<tr>
+<td>176</td>
+<td>0176</td>
+<td>PANKARU (PANCARU)</td>
+</tr>
+<tr>
+<td>177</td>
+<td>0177</td>
+<td>PARAKANA (PARACANA, APITEREWA, AWAETE)</td>
+</tr>
+<tr>
+<td>178</td>
+<td>0178</td>
+<td>PARECI (PARESI, HALITI)</td>
+</tr>
+<tr>
+<td>179</td>
+<td>0179</td>
+<td>PARINTINTIN</td>
+</tr>
+<tr>
+<td>180</td>
+<td>0180</td>
+<td>PATAMONA (KAPON)</td>
+</tr>
+<tr>
+<td>181</td>
+<td>0181</td>
+<td>PATAXO</td>
+</tr>
+<tr>
+<td>182</td>
+<td>0182</td>
+<td>PATAXO HA-HA-HAE</td>
+</tr>
+<tr>
+<td>183</td>
+<td>0183</td>
+<td>PAUMARI (PALMARI)</td>
+</tr>
+<tr>
+<td>184</td>
+<td>0184</td>
+<td>PAUMELENHO</td>
+</tr>
+<tr>
+<td>185</td>
+<td>0185</td>
+<td>PIRAHA (MURA PIRAHA)</td>
+</tr>
+<tr>
+<td>186</td>
+<td>0186</td>
+<td>PIRATUAPUIA (PIRATAPUYA, PIRATAPUYO, PIRA-TAPUYA, WAIKANA)</td>
+</tr>
+<tr>
+<td>187</td>
+<td>0187</td>
+<td>PITAGUARI</td>
+</tr>
+<tr>
+<td>188</td>
+<td>0188</td>
+<td>POTIGUARA</td>
+</tr>
+<tr>
+<td>189</td>
+<td>0189</td>
+<td>POYANAWA (POIANAUA)</td>
+</tr>
+<tr>
+<td>190</td>
+<td>0190</td>
+<td>RIKBAKTSA (CANOEIROS, ERIGPAKTSA)</td>
+</tr>
+<tr>
+<td>191</td>
+<td>0191</td>
+<td>SAKURABIAT(MEKENS, SAKIRABIAP, SAKIRABIAR)</td>
+</tr>
+<tr>
+<td>192</td>
+<td>0192</td>
+<td>SATERE-MAWE (SATERE-MAUE)</td>
+</tr>
+<tr>
+<td>193</td>
+<td>0193</td>
+<td>SHANENAWA (KATUKINA)</td>
+</tr>
+<tr>
+<td>194</td>
+<td>0194</td>
+<td>SIRIANO (SIRIA-MASA)</td>
+</tr>
+<tr>
+<td>195</td>
+<td>0195</td>
+<td>SURIANA</td>
+</tr>
+<tr>
+<td>196</td>
+<td>0196</td>
+<td>SURUI DE RONDONIA (PAITER)</td>
+</tr>
+<tr>
+<td>197</td>
+<td>0197</td>
+<td>SURUI DO PARA (AIKEWARA)</td>
+</tr>
+<tr>
+<td>198</td>
+<td>0198</td>
+<td>SUYA (SUIA/KISEDJE)</td>
+</tr>
+<tr>
+<td>199</td>
+<td>0199</td>
+<td>TAPAYUNA (BEICO-DE-PAU)</td>
+</tr>
+<tr>
+<td>200</td>
+<td>0200</td>
+<td>TAPEBA</td>
+</tr>
+<tr>
+<td>201</td>
+<td>0201</td>
+<td>TAPIRAPE (TAPI&#39;&#39;IRAPE)</td>
+</tr>
+<tr>
+<td>202</td>
+<td>0202</td>
+<td>TAPUIA (TAPUIA-XAVANTE, TAPUIO)</td>
+</tr>
+<tr>
+<td>203</td>
+<td>0203</td>
+<td>TARIANO (TARIANA, TALIASERI)</td>
+</tr>
+<tr>
+<td>204</td>
+<td>0204</td>
+<td>TAUREPANG (TAULIPANG, PEMON, AREKUNA, PAGEYN)</td>
+</tr>
+<tr>
+<td>205</td>
+<td>0205</td>
+<td>TEMBE</td>
+</tr>
+<tr>
+<td>206</td>
+<td>0206</td>
+<td>TENHARIM</td>
+</tr>
+<tr>
+<td>207</td>
+<td>0207</td>
+<td>TERENA</td>
+</tr>
+<tr>
+<td>208</td>
+<td>0208</td>
+<td>TICUNA (TIKUNA, TUKUNA, MAGUTA)</td>
+</tr>
+<tr>
+<td>209</td>
+<td>0209</td>
+<td>TINGUI BOTO</td>
+</tr>
+<tr>
+<td>210</td>
+<td>0210</td>
+<td>TIRIYO EWARHUYANA (TIRIYO, TRIO, TARONA, YAWI, PIANOKOTO)</td>
+</tr>
+<tr>
+<td>211</td>
+<td>0211</td>
+<td>TIRIYO KAH&#39;&#39;YANA (TIRIYO, TRIO, TARONA, YAWI, PIANOKOTO)</td>
+</tr>
+<tr>
+<td>212</td>
+<td>0212</td>
+<td>TIRIYO TSIKUYANA (TIRIYO, TRIO, TARONA, YAWI, PIANOKOTO)</td>
+</tr>
+<tr>
+<td>213</td>
+<td>0213</td>
+<td>TORA</td>
+</tr>
+<tr>
+<td>214</td>
+<td>0214</td>
+<td>TREMEMBE</td>
+</tr>
+<tr>
+<td>215</td>
+<td>0215</td>
+<td>TRUKA</td>
+</tr>
+<tr>
+<td>216</td>
+<td>0216</td>
+<td>TRUMAI</td>
+</tr>
+<tr>
+<td>217</td>
+<td>0217</td>
+<td>TSOHOM DJAPA (TSUNHUM-DJAPA)</td>
+</tr>
+<tr>
+<td>218</td>
+<td>0218</td>
+<td>TUKANO (TUCANO, YE&#39;&#39;PA-MASA, DASEA)</td>
+</tr>
+<tr>
+<td>219</td>
+<td>0219</td>
+<td>TUMBALALA</td>
+</tr>
+<tr>
+<td>220</td>
+<td>0220</td>
+<td>TUNAYANA</td>
+</tr>
+<tr>
+<td>221</td>
+<td>0221</td>
+<td>TUPARI</td>
+</tr>
+<tr>
+<td>222</td>
+<td>0222</td>
+<td>TUPINAMBA</td>
+</tr>
+<tr>
+<td>223</td>
+<td>0223</td>
+<td>TUPINIQUIM</td>
+</tr>
+<tr>
+<td>224</td>
+<td>0224</td>
+<td>TURIWARA</td>
+</tr>
+<tr>
+<td>225</td>
+<td>0225</td>
+<td>TUXA</td>
+</tr>
+<tr>
+<td>226</td>
+<td>0226</td>
+<td>TUYUKA (TUIUCA, DOKAPUARA, UTAPINOMAKAPHONA)</td>
+</tr>
+<tr>
+<td>227</td>
+<td>0227</td>
+<td>TXIKAO (TXICAO, IKPENG)</td>
+</tr>
+<tr>
+<td>228</td>
+<td>0228</td>
+<td>UMUTINA (OMOTINA, BARBADOS)</td>
+</tr>
+<tr>
+<td>229</td>
+<td>0229</td>
+<td>URU-EU-WAU-WAU (URUEU-UAU-UAU, URUPAIN, URUPA)</td>
+</tr>
+<tr>
+<td>230</td>
+<td>0230</td>
+<td>WAI WAI HIXKARYANA (HIXKARYANA)</td>
+</tr>
+<tr>
+<td>231</td>
+<td>0231</td>
+<td>WAI WAI KARAFAWYANA (KARAFAWYANA, KARA-PAWYANA)</td>
+</tr>
+<tr>
+<td>232</td>
+<td>0232</td>
+<td>WAI WAI XEREU (XEREU)</td>
+</tr>
+<tr>
+<td>233</td>
+<td>0233</td>
+<td>WAI WAI KATUENA (KATUENA)</td>
+</tr>
+<tr>
+<td>234</td>
+<td>0234</td>
+<td>WAI WAI MAWAYANA (MAWAYANA)</td>
+</tr>
+<tr>
+<td>235</td>
+<td>0235</td>
+<td>WAIAPI (WAYAMPI, OYAMPI, WAYAPY, )</td>
+</tr>
+<tr>
+<td>236</td>
+<td>0236</td>
+<td>WAIMIRI ATROARI (KINA)</td>
+</tr>
+<tr>
+<td>237</td>
+<td>0237</td>
+<td>WANANO (UANANO, WANANA)</td>
+</tr>
+<tr>
+<td>238</td>
+<td>0238</td>
+<td>WAPIXANA (UAPIXANA, VAPIDIANA, WAPISIANA, WAPISHANA)</td>
+</tr>
+<tr>
+<td>239</td>
+<td>0239</td>
+<td>WAREKENA (UAREQUENA, WEREKENA)</td>
+</tr>
+<tr>
+<td>240</td>
+<td>0240</td>
+<td>WASSU</td>
+</tr>
+<tr>
+<td>241</td>
+<td>0241</td>
+<td>WAURA (UAURA, WAUJA)</td>
+</tr>
+<tr>
+<td>242</td>
+<td>0242</td>
+<td>WAYANA (WAIANA, UAIANA)</td>
+</tr>
+<tr>
+<td>243</td>
+<td>0243</td>
+<td>WITOTO (UITOTO, HUITOTO)</td>
+</tr>
+<tr>
+<td>244</td>
+<td>0244</td>
+<td>XAKRIABA (XACRIABA)</td>
+</tr>
+<tr>
+<td>245</td>
+<td>0245</td>
+<td>XAVANTE (A&#39;&#39;UWE, AKWE, AWEN, AKWEN)</td>
+</tr>
+<tr>
+<td>246</td>
+<td>0246</td>
+<td>XERENTE (AKWE, AWEN, AKWEN)</td>
+</tr>
+<tr>
+<td>247</td>
+<td>0247</td>
+<td>XETA</td>
+</tr>
+<tr>
+<td>248</td>
+<td>0248</td>
+<td>XIPAIA (SHIPAYA, XIPAYA)</td>
+</tr>
+<tr>
+<td>249</td>
+<td>0249</td>
+<td>XOKLENG (SHOKLENG, XOCLENG)</td>
+</tr>
+<tr>
+<td>250</td>
+<td>0250</td>
+<td>XOKO (XOCO, CHOCO)</td>
+</tr>
+<tr>
+<td>251</td>
+<td>0251</td>
+<td>XUKURU (XUCURU)</td>
+</tr>
+<tr>
+<td>252</td>
+<td>0252</td>
+<td>XUKURU KARIRI (XUCURU-KARIRI)</td>
+</tr>
+<tr>
+<td>253</td>
+<td>0253</td>
+<td>YAIPIYANA</td>
+</tr>
+<tr>
+<td>254</td>
+<td>0254</td>
+<td>YAMINAWA (JAMINAWA, IAMINAWA)</td>
+</tr>
+<tr>
+<td>255</td>
+<td>0255</td>
+<td>YANOMAMI NINAM (IANOMAMI, IANOAMA, XIRIANA)</td>
+</tr>
+<tr>
+<td>256</td>
+<td>0256</td>
+<td>YANOMAMI SANUMA (IANOMAMI, IANOAMA, XIRIANA)</td>
+</tr>
+<tr>
+<td>257</td>
+<td>0257</td>
+<td>YANOMAMI YANOMAM (IANOMAMI, IANOAMA, XIRIANA)</td>
+</tr>
+<tr>
+<td>258</td>
+<td>0258</td>
+<td>YAWALAPITI (IAUALAPITI)</td>
+</tr>
+<tr>
+<td>259</td>
+<td>0259</td>
+<td>YAWANAWA (IAUANAUA)</td>
+</tr>
+<tr>
+<td>260</td>
+<td>0260</td>
+<td>YEKUANA (MAIONGON, YE&#39;&#39;KUANA, YEKWANA, MAYONGONG)</td>
+</tr>
+<tr>
+<td>261</td>
+<td>0261</td>
+<td>YUDJA (JURUNA, YURUNA)</td>
+</tr>
+<tr>
+<td>262</td>
+<td>0262</td>
+<td>ZO&#39;&#39;E (POTURU)</td>
+</tr>
+<tr>
+<td>263</td>
+<td>0263</td>
+<td>ZORO (PAGEYN)</td>
+</tr>
+<tr>
+<td>264</td>
+<td>0264</td>
+<td>ZURUAHA (SOROWAHA, SURUWAHA)</td>
+</tr>
+<tr>
+<td>265</td>
+<td>X265</td>
+<td>AHANENAWA</td>
+</tr>
+<tr>
+<td>266</td>
+<td>X266</td>
+<td>AICABA</td>
+</tr>
+<tr>
+<td>267</td>
+<td>X267</td>
+<td>AIKANÃ-KWASÁ</td>
+</tr>
+<tr>
+<td>268</td>
+<td>X268</td>
+<td>AKUNTSU</td>
+</tr>
+<tr>
+<td>269</td>
+<td>X269</td>
+<td>ALANTESU</td>
+</tr>
+<tr>
+<td>271</td>
+<td>X271</td>
+<td>AMAWÁKA</td>
+</tr>
+<tr>
+<td>272</td>
+<td>X272</td>
+<td>ANACÉ</td>
+</tr>
+<tr>
+<td>273</td>
+<td>X273</td>
+<td>APURINÃ</td>
+</tr>
+<tr>
+<td>274</td>
+<td>X274</td>
+<td>ARANÃ</td>
+</tr>
+<tr>
+<td>275</td>
+<td>X275</td>
+<td>ARAPAÇO</td>
+</tr>
+<tr>
+<td>276</td>
+<td>X276</td>
+<td>ARARA APOLIMA</td>
+</tr>
+<tr>
+<td>277</td>
+<td>X277</td>
+<td>ARARA DO ARIPUANA</td>
+</tr>
+<tr>
+<td>278</td>
+<td>X278</td>
+<td>ARIPUANÁ</td>
+</tr>
+<tr>
+<td>279</td>
+<td>X279</td>
+<td>ASSURINI</td>
+</tr>
+<tr>
+<td>280</td>
+<td>X280</td>
+<td>AWUARÁ</td>
+</tr>
+<tr>
+<td>281</td>
+<td>X281</td>
+<td>BORBA</td>
+</tr>
+<tr>
+<td>282</td>
+<td>X282</td>
+<td>CABIXI</td>
+</tr>
+<tr>
+<td>283</td>
+<td>X283</td>
+<td>CAMARARÉ</td>
+</tr>
+<tr>
+<td>284</td>
+<td>X284</td>
+<td>CAMASURI</td>
+</tr>
+<tr>
+<td>285</td>
+<td>X285</td>
+<td>CARA PRETA</td>
+</tr>
+<tr>
+<td>286</td>
+<td>X286</td>
+<td>CHARRUA</td>
+</tr>
+<tr>
+<td>287</td>
+<td>X287</td>
+<td>CUJUBIM</td>
+</tr>
+<tr>
+<td>288</td>
+<td>X288</td>
+<td>DAW</td>
+</tr>
+<tr>
+<td>289</td>
+<td>X289</td>
+<td>GAVIÃO</td>
+</tr>
+<tr>
+<td>290</td>
+<td>X290</td>
+<td>GUARANI</td>
+</tr>
+<tr>
+<td>291</td>
+<td>X291</td>
+<td>HALANTESU</td>
+</tr>
+<tr>
+<td>292</td>
+<td>X292</td>
+<td>HALOTESU</td>
+</tr>
+<tr>
+<td>293</td>
+<td>X293</td>
+<td>HENGATÚ</td>
+</tr>
+<tr>
+<td>294</td>
+<td>X294</td>
+<td>HIXKARYANA</td>
+</tr>
+<tr>
+<td>295</td>
+<td>X295</td>
+<td>HUPDE</td>
+</tr>
+<tr>
+<td>296</td>
+<td>X296</td>
+<td>HUPDES</td>
+</tr>
+<tr>
+<td>297</td>
+<td>X297</td>
+<td>IAUANAUA</td>
+</tr>
+<tr>
+<td>298</td>
+<td>X298</td>
+<td>IAUARETE AÇU</td>
+</tr>
+<tr>
+<td>299</td>
+<td>X299</td>
+<td>IKPENG</td>
+</tr>
+<tr>
+<td>300</td>
+<td>X300</td>
+<td>INAMBU</td>
+</tr>
+<tr>
+<td>301</td>
+<td>X301</td>
+<td>INHABARANA</td>
+</tr>
+<tr>
+<td>302</td>
+<td>X302</td>
+<td>JAVAE</td>
+</tr>
+<tr>
+<td>303</td>
+<td>X303</td>
+<td>JENIPAPO</td>
+</tr>
+<tr>
+<td>304</td>
+<td>X304</td>
+<td>JENIPAPO-KANINDE</td>
+</tr>
+<tr>
+<td>305</td>
+<td>X305</td>
+<td>JIAHOI</td>
+</tr>
+<tr>
+<td>306</td>
+<td>X306</td>
+<td>KAIOWA</td>
+</tr>
+<tr>
+<td>307</td>
+<td>X307</td>
+<td>KAMPA</td>
+</tr>
+<tr>
+<td>308</td>
+<td>X308</td>
+<td>KANELA</td>
+</tr>
+<tr>
+<td>309</td>
+<td>X309</td>
+<td>KARAFAWYANA</td>
+</tr>
+<tr>
+<td>310</td>
+<td>X310</td>
+<td>KARARAO</td>
+</tr>
+<tr>
+<td>311</td>
+<td>X311</td>
+<td>KARUBO</td>
+</tr>
+<tr>
+<td>312</td>
+<td>X312</td>
+<td>KASSUPÁ</td>
+</tr>
+<tr>
+<td>313</td>
+<td>X313</td>
+<td>KATITHÃULU</td>
+</tr>
+<tr>
+<td>314</td>
+<td>X314</td>
+<td>KATOKIN</td>
+</tr>
+<tr>
+<td>315</td>
+<td>X315</td>
+<td>KATUKINA PANO</td>
+</tr>
+<tr>
+<td>316</td>
+<td>X316</td>
+<td>KATUKINA PEDA DJAPA</td>
+</tr>
+<tr>
+<td>317</td>
+<td>X317</td>
+<td>KATUKINA SHANENAUWA</td>
+</tr>
+<tr>
+<td>318</td>
+<td>X318</td>
+<td>KAXAGO</td>
+</tr>
+<tr>
+<td>319</td>
+<td>X319</td>
+<td>KAYABI</td>
+</tr>
+<tr>
+<td>320</td>
+<td>X320</td>
+<td>KINÃ (WAIMIRI-ATROARI)</td>
+</tr>
+<tr>
+<td>321</td>
+<td>X321</td>
+<td>KIRIRI-BARRA</td>
+</tr>
+<tr>
+<td>322</td>
+<td>X322</td>
+<td>KITHÃULU</td>
+</tr>
+<tr>
+<td>323</td>
+<td>X323</td>
+<td>KOIAIÁ</td>
+</tr>
+<tr>
+<td>324</td>
+<td>X324</td>
+<td>KOIUPANKÁ</td>
+</tr>
+<tr>
+<td>325</td>
+<td>X325</td>
+<td>KONTANAWA</td>
+</tr>
+<tr>
+<td>326</td>
+<td>X326</td>
+<td>KRAHÔ KANELA</td>
+</tr>
+<tr>
+<td>327</td>
+<td>X327</td>
+<td>KULINA</td>
+</tr>
+<tr>
+<td>328</td>
+<td>X328</td>
+<td>LATUNDÊ</td>
+</tr>
+<tr>
+<td>329</td>
+<td>X329</td>
+<td>MAKU</td>
+</tr>
+<tr>
+<td>330</td>
+<td>X330</td>
+<td>MAKUNAMBÉ</td>
+</tr>
+<tr>
+<td>331</td>
+<td>X331</td>
+<td>MAMAINDÊ</td>
+</tr>
+<tr>
+<td>332</td>
+<td>X332</td>
+<td>MAMURI</td>
+</tr>
+<tr>
+<td>333</td>
+<td>X333</td>
+<td>MANACAPURU</td>
+</tr>
+<tr>
+<td>334</td>
+<td>X334</td>
+<td>MANAIRISSU</td>
+</tr>
+<tr>
+<td>335</td>
+<td>X335</td>
+<td>MANCHINERI</td>
+</tr>
+<tr>
+<td>336</td>
+<td>X336</td>
+<td>MANDUCA</td>
+</tr>
+<tr>
+<td>337</td>
+<td>X337</td>
+<td>MARIBONDO</td>
+</tr>
+<tr>
+<td>338</td>
+<td>X338</td>
+<td>MASSAKA</td>
+</tr>
+<tr>
+<td>339</td>
+<td>X339</td>
+<td>MAWAYANA</td>
+</tr>
+<tr>
+<td>340</td>
+<td>X340</td>
+<td>MAWÉ</td>
+</tr>
+<tr>
+<td>341</td>
+<td>X341</td>
+<td>MAYORUNA</td>
+</tr>
+<tr>
+<td>342</td>
+<td>X342</td>
+<td>MIQUELENO</td>
+</tr>
+<tr>
+<td>343</td>
+<td>X343</td>
+<td>MOKURIÑ</td>
+</tr>
+<tr>
+<td>344</td>
+<td>X344</td>
+<td>MON ORO WARAM</td>
+</tr>
+<tr>
+<td>345</td>
+<td>X345</td>
+<td>MUTUM</td>
+</tr>
+<tr>
+<td>346</td>
+<td>X346</td>
+<td>MYKY</td>
+</tr>
+<tr>
+<td>347</td>
+<td>X347</td>
+<td>NADEB</td>
+</tr>
+<tr>
+<td>348</td>
+<td>X348</td>
+<td>NAMBIKWARA</td>
+</tr>
+<tr>
+<td>349</td>
+<td>X349</td>
+<td>NEGAROTÊ</td>
+</tr>
+<tr>
+<td>350</td>
+<td>X350</td>
+<td>NHENGATU</td>
+</tr>
+<tr>
+<td>351</td>
+<td>X351</td>
+<td>OFAIE XAVANTE</td>
+</tr>
+<tr>
+<td>352</td>
+<td>X352</td>
+<td>ONÇA</td>
+</tr>
+<tr>
+<td>353</td>
+<td>X353</td>
+<td>ORO AT</td>
+</tr>
+<tr>
+<td>354</td>
+<td>X354</td>
+<td>ORO EO</td>
+</tr>
+<tr>
+<td>355</td>
+<td>X355</td>
+<td>ORO JOWIN</td>
+</tr>
+<tr>
+<td>356</td>
+<td>X356</td>
+<td>ORO MIYLIN</td>
+</tr>
+<tr>
+<td>357</td>
+<td>X357</td>
+<td>ORO MON</td>
+</tr>
+<tr>
+<td>358</td>
+<td>X358</td>
+<td>ORO NÁO</td>
+</tr>
+<tr>
+<td>359</td>
+<td>X359</td>
+<td>ORO WAM</td>
+</tr>
+<tr>
+<td>360</td>
+<td>X360</td>
+<td>ORO WARAM</td>
+</tr>
+<tr>
+<td>361</td>
+<td>X361</td>
+<td>ORO WARAM XIJEIN</td>
+</tr>
+<tr>
+<td>362</td>
+<td>X362</td>
+<td>PACA</td>
+</tr>
+<tr>
+<td>363</td>
+<td>X363</td>
+<td>PANKARÁ</td>
+</tr>
+<tr>
+<td>364</td>
+<td>X364</td>
+<td>PAPAGAIO</td>
+</tr>
+<tr>
+<td>365</td>
+<td>X365</td>
+<td>PAYAYÁ</td>
+</tr>
+<tr>
+<td>366</td>
+<td>X366</td>
+<td>PIPIPAN</td>
+</tr>
+<tr>
+<td>367</td>
+<td>X367</td>
+<td>PIRATA</td>
+</tr>
+<tr>
+<td>368</td>
+<td>X368</td>
+<td>PUROBORÁ</td>
+</tr>
+<tr>
+<td>369</td>
+<td>X369</td>
+<td>SABANÊ</td>
+</tr>
+<tr>
+<td>370</td>
+<td>X370</td>
+<td>SANUMA</td>
+</tr>
+<tr>
+<td>371</td>
+<td>X371</td>
+<td>SAWENTESÚ</td>
+</tr>
+<tr>
+<td>372</td>
+<td>X372</td>
+<td>SILCY-TAPUYA</td>
+</tr>
+<tr>
+<td>373</td>
+<td>X373</td>
+<td>SIUCI</td>
+</tr>
+<tr>
+<td>374</td>
+<td>X374</td>
+<td>TABAJARA</td>
+</tr>
+<tr>
+<td>375</td>
+<td>X375</td>
+<td>TAKUARA</td>
+</tr>
+<tr>
+<td>376</td>
+<td>X376</td>
+<td>TATU</td>
+</tr>
+<tr>
+<td>377</td>
+<td>X377</td>
+<td>TAWANDÊ</td>
+</tr>
+<tr>
+<td>378</td>
+<td>X378</td>
+<td>TEFÉ</td>
+</tr>
+<tr>
+<td>379</td>
+<td>X379</td>
+<td>TIMBIRA</td>
+</tr>
+<tr>
+<td>380</td>
+<td>X380</td>
+<td>TORÁ DO BAIXO GRANDE</td>
+</tr>
+<tr>
+<td>381</td>
+<td>X381</td>
+<td>TSUNHUM-DJAPÁ</td>
+</tr>
+<tr>
+<td>382</td>
+<td>X382</td>
+<td>TUBARÃO</td>
+</tr>
+<tr>
+<td>383</td>
+<td>X383</td>
+<td>TUPAIU</td>
+</tr>
+<tr>
+<td>384</td>
+<td>X384</td>
+<td>TUPI</td>
+</tr>
+<tr>
+<td>385</td>
+<td>X385</td>
+<td>TUPINAMBÁ DE BELMONTE</td>
+</tr>
+<tr>
+<td>386</td>
+<td>X386</td>
+<td>URUBU</td>
+</tr>
+<tr>
+<td>387</td>
+<td>X387</td>
+<td>URUBU KAAPOR</td>
+</tr>
+<tr>
+<td>388</td>
+<td>X388</td>
+<td>URUPÁ</td>
+</tr>
+<tr>
+<td>389</td>
+<td>X389</td>
+<td>WAI WAI</td>
+</tr>
+<tr>
+<td>390</td>
+<td>X390</td>
+<td>WAIKISU</td>
+</tr>
+<tr>
+<td>391</td>
+<td>X391</td>
+<td>WAKALITESÚ</td>
+</tr>
+<tr>
+<td>392</td>
+<td>X392</td>
+<td>WASSUSU</td>
+</tr>
+<tr>
+<td>393</td>
+<td>X393</td>
+<td>XEREU</td>
+</tr>
+<tr>
+<td>394</td>
+<td>X394</td>
+<td>XI EIN</td>
+</tr>
+<tr>
+<td>395</td>
+<td>X395</td>
+<td>XICRIN</td>
+</tr>
+<tr>
+<td>396</td>
+<td>X396</td>
+<td>XIPAYA</td>
+</tr>
+<tr>
+<td>397</td>
+<td>X397</td>
+<td>XIRIANA</td>
+</tr>
+<tr>
+<td>398</td>
+<td>X398</td>
+<td>XIRUAI</td>
+</tr>
+<tr>
+<td>399</td>
+<td>X399</td>
+<td>YEPAMASSÃ</td>
+</tr>
+<tr>
+<td>400</td>
+<td>X400</td>
+<td>TIRIYÓ</td>
+</tr>
+<tr>
+<td>401</td>
+<td>X401</td>
+<td>YANOMAMI</td>
+</tr>
+<tr>
+<td>402</td>
+<td>X402</td>
+<td>ARARA</td>
+</tr>
+<tr>
+<td>403</td>
+<td>X403</td>
+<td>SAKIRIABAR</td>
+</tr>
+<tr>
+<td>404</td>
+<td>X404</td>
+<td>TATZ</td>
+</tr>
+<tr>
+<td>405</td>
+<td>X405</td>
+<td>SEM INFORMACAO</td>
+</tr>
+<tr>
+<td>406</td>
+<td>0304</td>
+<td>PURI</td>
+</tr>
+<tr>
+<td>407</td>
+<td>0315</td>
+<td>WARAO</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipodeimovel">tipoDeImovel</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Domicílio</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Comércio</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Terreno baldio</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ponto Estratégico (cemitério, borracharia, ferro-velho, depósito de sucata ou materiais de construção, garagem de ônibus ou veículo de grande porte, casa de farinha)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Escola</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Creche</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Abrigo</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Instituição de longa permanência para idosos</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Unidade prisional</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Unidade de medida sócio educativa</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Delegacia</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Estabelecimento religioso</td>
+</tr>
+<tr>
+<td>13</td>
+<td>CASAI</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Outros</td>
+</tr>
+</tbody></table>
+
+<h2 id="racionalidadesaude">racionalidadeSaude</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Medicina Tradicional Chinesa</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Antroposofia aplicada à saúde</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Homeopatia</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Fitoterapia</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ayurveda</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Outra</td>
+</tr>
+</tbody></table>
+
+<h2 id="testeolhinho">testeOlhinho</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Presente bilateral</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Duvidoso ou ausente</td>
+</tr>
+</tbody></table>
+
+<h2 id="examefundoolho">exameFundoOlho</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>3</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Alterado</td>
+</tr>
+</tbody></table>
+
+<h2 id="testeorelhinha">testeOrelhinha</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>5</td>
+<td>Passou</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Falhou</td>
+</tr>
+</tbody></table>
+
+<h2 id="ustransfontanela">usTransfontanela</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>7</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Sugestivo de infecção congênita</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Outras alterações</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Indeterminado</td>
+</tr>
+</tbody></table>
+
+<h2 id="tomografiacomputadorizada">tomografiaComputadorizada</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>11</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Sugestivo de infecção congênita</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Outras alterações</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Indeterminado</td>
+</tr>
+</tbody></table>
+
+<h2 id="ressonanciamagnetica">ressonanciaMagnetica</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>15</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Sugestivo de infecção congênita</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Outras alterações</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Indeterminado</td>
+</tr>
+</tbody></table>
+
+<h2 id="provalaco">provaLaco</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>19</td>
+<td>Positivo</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Negativo</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Inconclusivo</td>
+</tr>
+</tbody></table>
+
+<h2 id="povocomunidadetradicional">povoComunidadeTradicional</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>157</td>
+<td>Agroextrativistas - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>158</td>
+<td>Caatingueiros - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>159</td>
+<td>Caiçaras - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>160</td>
+<td>Cerrado - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>161</td>
+<td>Ciganos - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>162</td>
+<td>Comunidades de fundo e fecho de pasto - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>163</td>
+<td>Extrativistas - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>164</td>
+<td>Faxinalenses - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>165</td>
+<td>Geraizeiros - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>166</td>
+<td>Marisqueiros - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>167</td>
+<td>Pantaneiros - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>168</td>
+<td>Pescadores artesanais - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>169</td>
+<td>Pomeranos - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>170</td>
+<td>Povos indígenas - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>171</td>
+<td>Povos quilombolas - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>172</td>
+<td>Quebradeiras de coco babaçu - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>173</td>
+<td>Retireiros - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>174</td>
+<td>Ribeirinhos - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>175</td>
+<td>Seringueiros - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>176</td>
+<td>Povos de terreiro / Matriz africana - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>177</td>
+<td>Vazanteiros - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>178</td>
+<td>Outros - Povos ou Comunidades Tradicionais</td>
+</tr>
+<tr>
+<td>179</td>
+<td>Acampada - População Campo, Floresta e Águas</td>
+</tr>
+<tr>
+<td>180</td>
+<td>Andirobeiras - População Campo, Floresta e Águas</td>
+</tr>
+<tr>
+<td>182</td>
+<td>Assentada - População Campo, Floresta e Águas</td>
+</tr>
+<tr>
+<td>183</td>
+<td>Camponeses - População Campo, Floresta e Águas</td>
+</tr>
+<tr>
+<td>184</td>
+<td>Castanheiras - População Campo, Floresta e Águas</td>
+</tr>
+<tr>
+<td>185</td>
+<td>Catadores de mangaba - População Campo, Floresta e Águas</td>
+</tr>
+<tr>
+<td>186</td>
+<td>Isqueiros - População Campo, Floresta e Águas</td>
+</tr>
+<tr>
+<td>187</td>
+<td>Jangadeiros - População Campo, Floresta e Águas</td>
+</tr>
+<tr>
+<td>189</td>
+<td>Morroquianos - População Campo, Floresta e Águas</td>
+</tr>
+<tr>
+<td>190</td>
+<td>Populações atingidas por barragens - População Campo, Floresta e Águas</td>
+</tr>
+<tr>
+<td>193</td>
+<td>Trabalhadores rurais assalariados - População Campo, Floresta e Águas</td>
+</tr>
+<tr>
+<td>194</td>
+<td>Trabalhadores rurais temporários - População Campo, Floresta e Águas</td>
+</tr>
+<tr>
+<td>195</td>
+<td>Varjeiros - População Campo, Floresta e Águas</td>
+</tr>
+</tbody></table>
+
+<h2 id="dosefrequenciatipo">doseFrequenciaTipo</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Turno</td>
+<td><a href="#turno">Turno</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Frequência</td>
+<td>Vezes ao dia</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Intervalo</td>
+<td>Intervalo de horas</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Fracionada</td>
+<td>Quantidade por turno</td>
+</tr>
+</tbody></table>
+
+<h2 id="dosefrequenciaunidademedida">doseFrequenciaUnidadeMedida</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Dia(s)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Semana(s)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mês/Meses</td>
+</tr>
+</tbody></table>
+
+<h2 id="duracaotratamentomedida">duracaoTratamentoMedida</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Dia(s)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Semana(s)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mês/Meses</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Indeterminado</td>
+</tr>
+</tbody></table>
+
+<h2 id="viaadministracao">viaAdministracao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>Oral</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Parenteral</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Local</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Outros</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Bucal</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Capilar</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Dermatológica</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Epidural</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Inalatória</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Inalatória por via nasal</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Inalatória por via oral</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Intra-arterial</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Intra-articular</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Intradérmica</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Intramuscular</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Intratecal</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Intrauterina</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Intravenosa</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Irrigação</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Nasal</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Oftálmica</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Otológica</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Retal</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Subcutânea</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Sublingual</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Transdérmica</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Uretral</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Vaginal</td>
+</tr>
+</tbody></table>
+
+<h2 id="classificacaorisco">classificacaoRisco</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>Emergência</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Urgência</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Prioritário</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Eletivo</td>
+</tr>
+</tbody></table>
+
+<h2 id="grupodeatendimento">GrupoDeAtendimento</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Código RNDS</th>
+<th>Situação</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>5</td>
+<td>QUILOMBOLA</td>
+<td>000601</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>6</td>
+<td>POPULAÇÃO PRIVADA DE LIBERDADE</td>
+<td>001501</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>10</td>
+<td>OUTROS GRUPOS</td>
+<td>999999</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>13</td>
+<td>FUNCIONÁRIO DO SISTEMA DE PRIVAÇÃO DE LIBERDADE</td>
+<td>001401</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>31</td>
+<td>CAMINHONEIRO</td>
+<td>001002</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>32</td>
+<td>COLETIVO RODOVIÁRIO PASSAGEIROS URBANO E DE LONGO CURSO</td>
+<td>001003</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>33</td>
+<td>TRABALHADORES PORTUÁRIOS</td>
+<td>001301</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>34</td>
+<td>HEMOGLOBINOPATIA GRAVE</td>
+<td>000101</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>35</td>
+<td>NEOPLASIAS</td>
+<td>000102</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>36</td>
+<td>DIABETES MELLITUS</td>
+<td>000103</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>37</td>
+<td>PNEUMOPATIAS CRÔNICAS GRAVES</td>
+<td>000104</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>38</td>
+<td>DOENÇA RENAL CRÔNICA</td>
+<td>000105</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>39</td>
+<td>DOENÇAS CARDIOVASCULARES E CEREBROVASCULARES</td>
+<td>000106</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>40</td>
+<td>HIPERTENSÃO DE DIFÍCIL CONTROLE OU COM COMPLICAÇÕES/LESÃO DE ÓRGÃO ALVO</td>
+<td>000107</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>41</td>
+<td>INDIVÍDUOS TRANSPLANTADOS DE ÓRGÃO SÓLIDO</td>
+<td>000108</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>42</td>
+<td>OBESIDADE GRAVE (IMC≥40)</td>
+<td>000109</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>43</td>
+<td>PESSOAS DE 18 A 64 ANOS</td>
+<td>000201</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>44</td>
+<td>PESSOAS DE 65 A 69 ANOS</td>
+<td>000202</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>45</td>
+<td>PESSOAS DE 70 A 74 ANOS</td>
+<td>000203</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>46</td>
+<td>PESSOAS DE 75 A 79 ANOS</td>
+<td>000204</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>47</td>
+<td>PESSOAS DE 80 ANOS OU MAIS</td>
+<td>000205</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>48</td>
+<td>PESSOAS DE 60 ANOS OU MAIS, INSTITUCIONALIZADAS</td>
+<td>000301</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>49</td>
+<td>MARINHA DO BRASIL - MB</td>
+<td>000401</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>50</td>
+<td>EXÉRCITO BRASILEIRO - EB</td>
+<td>000402</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>51</td>
+<td>FORÇA AÉREA BRASILEIRA - FAB</td>
+<td>000403</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>52</td>
+<td>BOMBEIRO CIVIL</td>
+<td>000501</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>53</td>
+<td>BOMBEIRO MILITAR</td>
+<td>000502</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>54</td>
+<td>GUARDA MUNICIPAL</td>
+<td>000503</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>55</td>
+<td>POLICIAL RODOVIÁRIO FEDERAL</td>
+<td>000504</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>56</td>
+<td>POLICIAL CIVIL</td>
+<td>000505</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>57</td>
+<td>POLICIAL FEDERAL</td>
+<td>000506</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>58</td>
+<td>POLICIAL MILITAR</td>
+<td>000507</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>59</td>
+<td>RIBEIRINHA</td>
+<td>000602</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>60</td>
+<td>POVOS INDÍGENAS EM TERRAS INDÍGENAS</td>
+<td>000701</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>61</td>
+<td>ENSINO BÁSICO</td>
+<td>000801</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>62</td>
+<td>ENSINO SUPERIOR</td>
+<td>000802</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>63</td>
+<td>AUXILIAR DE VETERINÁRIO</td>
+<td>000901</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>64</td>
+<td>BIÓLOGO</td>
+<td>000902</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>65</td>
+<td>BIOMÉDICO</td>
+<td>000903</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>66</td>
+<td>COZINHEIRO E AUXILIARES</td>
+<td>000904</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>67</td>
+<td>CUIDADOR DE IDOSOS</td>
+<td>000905</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>68</td>
+<td>DOULA/PARTEIRA</td>
+<td>000906</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>69</td>
+<td>ENFERMEIRO(A)</td>
+<td>000907</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>70</td>
+<td>FARMACÊUTICO</td>
+<td>000908</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>71</td>
+<td>FISIOTERAPEUTAS</td>
+<td>000909</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>72</td>
+<td>FONOAUDIÓLOGO</td>
+<td>000910</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>73</td>
+<td>FUNCIONÁRIO DO SISTEMA FUNERÁRIO QUE TENHAM CONTATO COM CADÁVERES POTENCIALMENTE CONTAMINADOS</td>
+<td>000911</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>74</td>
+<td>MÉDICO</td>
+<td>000912</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>75</td>
+<td>MÉDICO VETERINÁRIO</td>
+<td>000913</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>76</td>
+<td>MOTORISTA DE AMBULÂNCIA</td>
+<td>000914</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>77</td>
+<td>NUTRICIONISTA</td>
+<td>000915</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>78</td>
+<td>ODONTOLOGISTA</td>
+<td>000916</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>79</td>
+<td>PROFISSIONAIS E AUXILIARES DE LIMPEZA</td>
+<td>000917</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>80</td>
+<td>PROFISSIONAIS DE EDUCAÇÃO FÍSICA</td>
+<td>000918</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>81</td>
+<td>PSICÓLOGO</td>
+<td>000919</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>82</td>
+<td>RECEPCIONISTA</td>
+<td>000920</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>83</td>
+<td>SEGURANÇA</td>
+<td>000921</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>84</td>
+<td>ASSISTENTE SOCIAL</td>
+<td>000922</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>85</td>
+<td>TÉCNICO DE ENFERMAGEM</td>
+<td>000923</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>86</td>
+<td>TÉCNICO DE VETERINÁRIO</td>
+<td>000924</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>87</td>
+<td>TERAPEUTA OCUPACIONAL</td>
+<td>000925</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>88</td>
+<td>AÉREO</td>
+<td>001001</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>89</td>
+<td>FERROVIÁRIO</td>
+<td>001004</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>90</td>
+<td>METROVIÁRIO</td>
+<td>001005</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>91</td>
+<td>AQUAVIÁRIO</td>
+<td>001006</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>92</td>
+<td>PESSOAS COM DEFICIÊNCIA INSTITUCIONALIZADAS</td>
+<td>001101</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>93</td>
+<td>PESSOAS COM DEFICIÊNCIA PERMANENTE</td>
+<td>001102</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>94</td>
+<td>PESSOAS EM SITUAÇÃO DE RUA</td>
+<td>001201</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>95</td>
+<td>TRABALHADORES INDUSTRIAIS</td>
+<td>001601</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>96</td>
+<td>SÍNDROME DE DOWN</td>
+<td>000110</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>97</td>
+<td>AUXILIAR DE ENFERMAGEM</td>
+<td>000927</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>98</td>
+<td>TÉCNICO DE ODONTOLOGIA</td>
+<td>000928</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>99</td>
+<td>ACADÊMICOS/ESTUDANTES EM ESTÁGIO EM ESTABELECIMENTOS DE SAÚDE</td>
+<td>000929</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>100</td>
+<td>OUTROS IMUNOCOMPROMETIDOS</td>
+<td>000111</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>101</td>
+<td>INDIVÍDUOS TRANSPLANTADOS DE MEDULA ÓSSEA</td>
+<td>000112</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>102</td>
+<td>CIRROSE HEPÁTICA</td>
+<td>000114</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>103</td>
+<td>DOENÇA NEUROLÓGICA CRÔNICA</td>
+<td>000115</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>104</td>
+<td>DOENÇA CARDIOVASCULAR</td>
+<td>000116</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>105</td>
+<td>PESSOAS DE 12 A 17 ANOS</td>
+<td>000206</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>106</td>
+<td>OUTROS PROFISSIONAIS DE SAÚDE</td>
+<td>000926</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>107</td>
+<td>AGENTE DE COMBATE A ENDEMIAS - ACE</td>
+<td>000930</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>108</td>
+<td>AGENTE COMUNITÁRIO DE SAÚDE - ACS</td>
+<td>000931</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>109</td>
+<td>AUXILIAR EM SAÚDE BUCAL - ASB</td>
+<td>000932</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>110</td>
+<td>TÉCNICO EM SAÚDE BUCAL - TSB</td>
+<td>000933</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>111</td>
+<td>TRABALHADORES DE LIMPEZA URBANA E MANEJO DE RESÍDUOS SÓLIDOS</td>
+<td>001701</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>112</td>
+<td>GESTANTE</td>
+<td>001801</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>113</td>
+<td>PUÉRPERA</td>
+<td>001901</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>114</td>
+<td>PESSOAS DE 5 A 11 ANOS</td>
+<td>000207</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>115</td>
+<td>CRIANÇAS QUILOMBOLAS</td>
+<td>000603</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>116</td>
+<td>CRIANÇAS RIBEIRINHAS</td>
+<td>000604</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>117</td>
+<td>CRIANÇAS INDÍGENAS</td>
+<td>000702</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>118</td>
+<td>PESSOAS DE 3 A 4 ANOS</td>
+<td>000208</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>119</td>
+<td>PESSOAS DE 6 MESES A 2 ANOS</td>
+<td>000209</td>
+<td>Inativo</td>
+</tr>
+<tr>
+<td>120</td>
+<td>IMUNOCOMPROMETIDOS</td>
+<td>000117</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>121</td>
+<td>FAIXA ETÁRIA</td>
+<td>000210</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>122</td>
+<td>POVOS INDÍGENAS VIVENDO EM TERRAS INDÍGENAS</td>
+<td>000703</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>123</td>
+<td>POVOS INDÍGENAS VIVENDO FORA DAS TERRAS INDÍGENAS</td>
+<td>000704</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>124</td>
+<td>ADOLESCENTES CUMPRINDO MEDIDAS SOCIOEDUCATIVAS</td>
+<td>001502</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>125</td>
+<td>PESSOAS INSTITUCIONALIZADAS</td>
+<td>000302</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>126</td>
+<td>TRISSOMIAS</td>
+<td>000118</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>127</td>
+<td>OUTROS GRUPOS</td>
+<td>000926</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>128</td>
+<td>PREMATURIDADE</td>
+<td>000120</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>129</td>
+<td>ANOMALIAS DE VIAS AÉREAS</td>
+<td>000121</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>130</td>
+<td>OBESIDADE (SCORE-Z ACIMA DE +2)</td>
+<td>000122</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>131</td>
+<td>ERROS INATOS DA IMUNIDADE (EII)</td>
+<td>000123</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>132</td>
+<td>DOENÇA HEPÁTICA CRÔNICA</td>
+<td>000119</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>133</td>
+<td>POPULAÇÃO RURAL</td>
+<td>002001</td>
+<td>Ativo</td>
+</tr>
+</tbody></table>
+
+<h2 id="tiporesultadoexame">tipoResultadoExame</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Valor</td>
+<td>Usado quando o resultado do exame é um número</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dias</td>
+<td>Usado quando o resultado do exame é apresentado em quantidade de dias</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Semanas</td>
+<td>Usado quando o resultado do exame é apresentado em quantidade de semanas</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Data</td>
+<td>Usado quando o resultado do exame é uma data</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipoparticipacaoatendimento">tipoParticipacaoAtendimento</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Não participou</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado não participou de um atendimento</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Presencial</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado participou presencialmente de um atendimento</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Chamada de vídeo</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado participou via chamada de vídeo de um atendimento</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Chamada de voz</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado participou via chamada de voz de um atendimento</td>
+</tr>
+<tr>
+<td>5</td>
+<td>E-mail</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado participou via email de um atendimento</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Mensagem</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado participou via mensagem de um atendimento</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Outros</td>
+<td>Usado para sinalizar que o cidadão ou o profissional convidado participou via algum meio não elencado acima</td>
+</tr>
+</tbody></table>
+
+<h2 id="condutaevolucao">condutaEvolucao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Nova Pergunta</td>
+<td>Deve ser utilzada sempre que o profissional solicitante do cuidado tiver alguma dúvida sobre o caso clínico do cidadão</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pedido de esclarecimento</td>
+<td>Deve ser utilizado sempre que o profissional executante necessitar de mais informações para responder as dúvidas do profissional solicitante</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Teleconsultoria</td>
+<td>Deve ser utilizado sempre que o profissional executante realizar uma teleconsultoria sobre a discussão de caso clínico do cidadão</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Parecer técnico conclusivo</td>
+<td>Essa conduta não pode mais ser registrada via sistema, portanto não deve mais ser utilizada</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Agendado interconsulta sem cidadão</td>
+<td>Deve ser utilizada sempre que ocorrer um agendamento de consulta compartilhada entre dois profissionais sem a presença do cidadão, sendo que a conversa não será mediada por tecnologia</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Agendado consulta presencial com cidadão</td>
+<td>Deve ser utilizada sempre que ocorrer um agendamento presencial com o cidadão</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Trocar profissional referência</td>
+<td>Deve ser utilizada quando o profissional executante da discussão for alterado</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Recondução de cuidado</td>
+<td>Deve ser usado para o profissional executante indicar que o cuidado deve ser feito por outro profissional</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Agendado teleinterconsulta sem cidadão</td>
+<td>Deve ser utilizada sempre que ocorrer um agendamento de consulta compartilhada entre dois profissionais sem a presença do cidadão, sendo a conversa mediada por tecnologia</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Agendado interconsulta com cidadão</td>
+<td>Deve ser utilizada sempre que ocorrer um agendamento de consulta compartilhada entre dois profissionais com a presença do cidadão, sendo que a conversa não será mediada por tecnologia</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Agendado teleinterconsulta com cidadão</td>
+<td>Deve ser utilizada sempre que ocorrer um agendamento de consulta compartilhada entre dois profissionais com a presença do cidadão, sendo a conversa mediada por tecnologia</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Sugerir agendamento para grupo</td>
+<td>Deve ser utilizada sempre que o profissional executante sugerir a participação do cidadão para grupos de atividade coletiva</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Enviar para garantia do acesso</td>
+<td>Deve ser utilizada sempre que o profissional executante deseja realizar um agendamento de consulta, porém não possua disponibilidade no momento</td>
+</tr>
+</tbody></table>
+
+<h2 id="prioridadecuidado">prioridadeCuidado</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Baixa</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Média</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Alta</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Muito alta</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="tipoglicemiacapilar">tipoGlicemiaCapilar</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+<th>Observações</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>Jejum</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Pós-prandial</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pré-prandial</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Não especificado</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h2 id="cboprescritor">cboPrescritor</h2>
+
+<table><thead>
+<tr>
+<th>CBO</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>111325</td>
+<td>Juízo de direito</td>
+</tr>
+<tr>
+<td>111330</td>
+<td>Juízo Federal</td>
+</tr>
+<tr>
+<td>111335</td>
+<td>Auditor Federal de Juiz - Justiça Militar</td>
+</tr>
+<tr>
+<td>111340</td>
+<td>Juiz auditor estadual - Justiça Militar</td>
+</tr>
+<tr>
+<td>111345</td>
+<td>Juiz do trabalho</td>
+</tr>
+<tr>
+<td>223204</td>
+<td>Cirurgia dentista - auditor</td>
+</tr>
+<tr>
+<td>223208</td>
+<td>Cirurgião dentista - clínica geral</td>
+</tr>
+<tr>
+<td>223212</td>
+<td>Cirurgião dentista - endodontista</td>
+</tr>
+<tr>
+<td>223216</td>
+<td>Cirurgião Dentista - Epidemiologista</td>
+</tr>
+<tr>
+<td>223220</td>
+<td>Cirurgião dentista - estomatologista</td>
+</tr>
+<tr>
+<td>223224</td>
+<td>Cirurgião dentista - implantodontista</td>
+</tr>
+<tr>
+<td>223228</td>
+<td>Cirurgião dentista - odontogeriatra</td>
+</tr>
+<tr>
+<td>223232</td>
+<td>Cirurgião dentista - odontologista legal</td>
+</tr>
+<tr>
+<td>223236</td>
+<td>Cirurgião dentista - odontopediatra</td>
+</tr>
+<tr>
+<td>223240</td>
+<td>Cirurgião dentista - ortopedista e ortodontista</td>
+</tr>
+<tr>
+<td>223244</td>
+<td>Cirurgião dentista - patologista bucal</td>
+</tr>
+<tr>
+<td>223248</td>
+<td>Cirurgião dentista - periodontista</td>
+</tr>
+<tr>
+<td>223268</td>
+<td>Cirurgião dentista - traumatologista bucomaxilofacial</td>
+</tr>
+<tr>
+<td>223256</td>
+<td>Cirurgião dentista - protesista</td>
+</tr>
+<tr>
+<td>223260</td>
+<td>Cirurgião dentista - radiologista</td>
+</tr>
+<tr>
+<td>223264</td>
+<td>Cirurgião dentista - reabilitador oral</td>
+</tr>
+<tr>
+<td>223272</td>
+<td>Cirurgião Dentista de Saúde Coletiva</td>
+</tr>
+<tr>
+<td>223276</td>
+<td>Cirurgião dentista - odontologia do trabalho</td>
+</tr>
+<tr>
+<td>223280</td>
+<td>Cirurgião dentista - odontologia</td>
+</tr>
+<tr>
+<td>223284</td>
+<td>Cirurgião deficiente - disfunção temporomandibular e dor orofacial</td>
+</tr>
+<tr>
+<td>223288</td>
+<td>Cirurgião dentista - odontologia para pacientes com necessidades especiais</td>
+</tr>
+<tr>
+<td>223293</td>
+<td>Cirurgião-dentista da estratégia de saúde da família</td>
+</tr>
+<tr>
+<td>223505</td>
+<td>Enfermeiro</td>
+</tr>
+<tr>
+<td>223252</td>
+<td>Cirurgião dentista - protesiólogo bucomaxilofacial</td>
+</tr>
+<tr>
+<td>223540</td>
+<td>Enfermeiro neonatologista</td>
+</tr>
+<tr>
+<td>225103</td>
+<td>Médico infectologista</td>
+</tr>
+<tr>
+<td>225106</td>
+<td>Médico legista</td>
+</tr>
+<tr>
+<td>225109</td>
+<td>Médico nefrologista</td>
+</tr>
+<tr>
+<td>225110</td>
+<td>Médico alergista e imunologista</td>
+</tr>
+<tr>
+<td>225112</td>
+<td>Médico neurologista</td>
+</tr>
+<tr>
+<td>225115</td>
+<td>Médico angiologista</td>
+</tr>
+<tr>
+<td>225118</td>
+<td>Médico nutrologista</td>
+</tr>
+<tr>
+<td>225120</td>
+<td>Médico cardiologista</td>
+</tr>
+<tr>
+<td>225121</td>
+<td>Médico oncologista clínico</td>
+</tr>
+<tr>
+<td>225122</td>
+<td>Médico cancerologista pediátrico</td>
+</tr>
+<tr>
+<td>225124</td>
+<td>Médico pediatra</td>
+</tr>
+<tr>
+<td>225125</td>
+<td>Médico clínico</td>
+</tr>
+<tr>
+<td>225127</td>
+<td>Médico pneumologista</td>
+</tr>
+<tr>
+<td>225130</td>
+<td>Médico de família e comunidade</td>
+</tr>
+<tr>
+<td>225133</td>
+<td>Médico psiquiatra</td>
+</tr>
+<tr>
+<td>225135</td>
+<td>Médico dermatologista</td>
+</tr>
+<tr>
+<td>225136</td>
+<td>Médico reumatologista</td>
+</tr>
+<tr>
+<td>225139</td>
+<td>Médico sanitarista</td>
+</tr>
+<tr>
+<td>225140</td>
+<td>Médico do trabalho</td>
+</tr>
+<tr>
+<td>225142</td>
+<td>Médico da estratégia de saúde da família</td>
+</tr>
+<tr>
+<td>225145</td>
+<td>Médico em medicina de trânsito</td>
+</tr>
+<tr>
+<td>225148</td>
+<td>Médico anatomopatologista</td>
+</tr>
+<tr>
+<td>225150</td>
+<td>Médico em medicina intensiva</td>
+</tr>
+<tr>
+<td>225151</td>
+<td>Médico anestesista</td>
+</tr>
+<tr>
+<td>225154</td>
+<td>Médico Antroposófico</td>
+</tr>
+<tr>
+<td>225155</td>
+<td>Médico endocrinologista e metabologista</td>
+</tr>
+<tr>
+<td>225160</td>
+<td>Médico fisioterapeuta</td>
+</tr>
+<tr>
+<td>225165</td>
+<td>Médico gastroenterologista</td>
+</tr>
+<tr>
+<td>225170</td>
+<td>Médico generalista</td>
+</tr>
+<tr>
+<td>225175</td>
+<td>Médico geneticista</td>
+</tr>
+<tr>
+<td>225180</td>
+<td>Médico geriatra</td>
+</tr>
+<tr>
+<td>225185</td>
+<td>Médico hematologista</td>
+</tr>
+<tr>
+<td>225195</td>
+<td>Médico homeopata</td>
+</tr>
+<tr>
+<td>225203</td>
+<td>Médico em cirurgia vascular</td>
+</tr>
+<tr>
+<td>225210</td>
+<td>Médico com uso cardiovascular</td>
+</tr>
+<tr>
+<td>225215</td>
+<td>Médico massageador de cabeça e pescoço</td>
+</tr>
+<tr>
+<td>225220</td>
+<td>Médico usa aparelho digestivo</td>
+</tr>
+<tr>
+<td>225225</td>
+<td>Médico médico geral</td>
+</tr>
+<tr>
+<td>225230</td>
+<td>Médico usando pediátrico</td>
+</tr>
+<tr>
+<td>225235</td>
+<td>Médico usando plástico</td>
+</tr>
+<tr>
+<td>225240</td>
+<td>Médico usando torácico</td>
+</tr>
+<tr>
+<td>225250</td>
+<td>Médico ginecologista e obstetra</td>
+</tr>
+<tr>
+<td>225255</td>
+<td>Médico mastologista</td>
+</tr>
+<tr>
+<td>225260</td>
+<td>Médico neurocirurgião</td>
+</tr>
+<tr>
+<td>225265</td>
+<td>Médico oftalmologista</td>
+</tr>
+<tr>
+<td>225270</td>
+<td>Médico ortopedista e traumatologista</td>
+</tr>
+<tr>
+<td>225275</td>
+<td>Médico otorrinolaringologista</td>
+</tr>
+<tr>
+<td>225280</td>
+<td>Médico coloproctologista</td>
+</tr>
+<tr>
+<td>225285</td>
+<td>Médico urologista</td>
+</tr>
+<tr>
+<td>225290</td>
+<td>Médico cancerologista cirurgicamente</td>
+</tr>
+<tr>
+<td>225295</td>
+<td>Médico da mão</td>
+</tr>
+<tr>
+<td>225305</td>
+<td>Médico citopatologista</td>
+</tr>
+<tr>
+<td>225310</td>
+<td>Médico em endoscopia</td>
+</tr>
+<tr>
+<td>225315</td>
+<td>Médico em medicina nuclear</td>
+</tr>
+<tr>
+<td>225320</td>
+<td>Médico em radiologia e diagnóstico por imagem</td>
+</tr>
+<tr>
+<td>225325</td>
+<td>Médico patologista</td>
+</tr>
+<tr>
+<td>225330</td>
+<td>Médico radioterapeuta</td>
+</tr>
+<tr>
+<td>225335</td>
+<td>Médico patologista clínico / medicina laboratorial</td>
+</tr>
+<tr>
+<td>225340</td>
+<td>Médico hemoterapeuta</td>
+</tr>
+<tr>
+<td>225345</td>
+<td>Médico hiperbarista</td>
+</tr>
+<tr>
+<td>225350</td>
+<td>Médico neurofisiologista clínico</td>
+</tr>
+</tbody></table>
+
+<h2 id="viaadministracao-para-imunobiol-gicos">viaAdministracao (para imunobiológicos)</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>ENDOVENOSA</td>
+</tr>
+<tr>
+<td>2</td>
+<td>INTRADÉRMICA</td>
+</tr>
+<tr>
+<td>3</td>
+<td>INTRAMUSCULAR</td>
+</tr>
+<tr>
+<td>4</td>
+<td>INTRAMUSCULAR PROFUNDA</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ORAL</td>
+</tr>
+<tr>
+<td>6</td>
+<td>SUBCUTÂNEA</td>
+</tr>
+</tbody></table>
+
+<h2 id="localaplicacao">localAplicacao</h2>
+
+<table><thead>
+<tr>
+<th>Código</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>BOCA</td>
+</tr>
+<tr>
+<td>2</td>
+<td>DELTÓIDE DIREITO</td>
+</tr>
+<tr>
+<td>3</td>
+<td>DELTÓIDE ESQUERDO</td>
+</tr>
+<tr>
+<td>4</td>
+<td>DORSO GLÚTEO DIREITO</td>
+</tr>
+<tr>
+<td>5</td>
+<td>DORSO GLÚTEO ESQUERDO</td>
+</tr>
+<tr>
+<td>6</td>
+<td>FACE ANTEROLATERAL EXTERNA DA COXA DIREITA</td>
+</tr>
+<tr>
+<td>7</td>
+<td>FACE ANTEROLATERAL EXTERNA DA COXA ESQUERDA</td>
+</tr>
+<tr>
+<td>8</td>
+<td>FACE ANTEROLATERAL EXTERNA DO BRAÇO DIREITO</td>
+</tr>
+<tr>
+<td>9</td>
+<td>FACE ANTEROLATERAL EXTERNA DO BRAÇO ESQUERDO</td>
+</tr>
+<tr>
+<td>10</td>
+<td>FACE ANTEROLATERAL EXTERNA DO ANTEBRAÇO DIREITO</td>
+</tr>
+<tr>
+<td>11</td>
+<td>FACE ANTEROLATERAL EXTERNA DO ANTEBRAÇO ESQUERDO</td>
+</tr>
+<tr>
+<td>12</td>
+<td>FACE EXTERNA INFERIOR DO BRAÇO DIREITO</td>
+</tr>
+<tr>
+<td>13</td>
+<td>FACE EXTERNA INFERIOR DO BRAÇO ESQUERDO</td>
+</tr>
+<tr>
+<td>14</td>
+<td>FACE EXTERNA SUPERIOR DO BRAÇO DIREITO</td>
+</tr>
+<tr>
+<td>15</td>
+<td>FACE EXTERNA SUPERIOR DO BRAÇO ESQUERDO</td>
+</tr>
+<tr>
+<td>16</td>
+<td>OUTRO</td>
+</tr>
+<tr>
+<td>17</td>
+<td>REDE VENOSA</td>
+</tr>
+<tr>
+<td>18</td>
+<td>VASTO LATERAL DA COXA DIREITA</td>
+</tr>
+<tr>
+<td>19</td>
+<td>VASTO LATERAL DA COXA ESQUERDA</td>
+</tr>
+<tr>
+<td>20</td>
+<td>VENTRO GLÚTEO DIREITO</td>
+</tr>
+<tr>
+<td>21</td>
+<td>VENTRO GLÚTEO ESQUERDO</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/v736/js/lunr.min.js"></script>
+
+    <script src="/v736/js/site.js" type="text/javascript"></script>    
+    <script src="/v736/js/search-index.js" type="text/javascript"></script>
+    <script src="/v736/js/busca.js"></script>
+  </body>
+</html>
