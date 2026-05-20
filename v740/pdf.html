@@ -1,0 +1,50 @@
+---
+layout: default
+title: Gerar PDF
+icon: icon-pdf
+---
+
+<div class="pdf-select">
+  <a class="pull-right btn" href="javascript: generate()">Imprimir / Gerar PDF</a>
+  <h2>Selecione as páginas que deseja incluir</h2>
+  
+  {% include pdf-select-list.html nav=site.data.navigation %}
+
+  <h2>Informações de capa</h2>
+  <input id="input-titulo-documento" class="input" type="text" placeholder="Título do documento" />  
+  <label>
+    <input type="checkbox" id="chkbx" name="chkbx">
+    Incluir sumário
+  </label>
+
+  <br>
+  <a class="btn primary block large" href="javascript: generate()">Imprimir / Gerar PDF</a>
+</div>
+
+<div class="pdf-content">
+  <div class="capa hidden">
+    <div class="capa-center">
+      <img src="{{ '/img/bridge-logo-lg.png' | prepend: site.baseurl }}" />
+      <h1 id="target-titulo-documento">Título do documento</h1>
+    </div>
+
+    <div class="capa-bottom">
+      <p>Florianópolis</p>
+      <p id="target-date-documento">00 de abril de 3000</p>
+    </div>
+  </div>
+
+  <ol id="summary" class="pdf-summary" style="display:none;">
+    <h1 align="center">SUMÁRIO</h1>
+    <p></p>
+    {% include pdf-summary.html nav=site.data.navigation %}
+  </ol>
+
+  <div class="page-break"></div>
+  {% include pdf-content.html nav=site.data.navigation %}
+</div>
+
+<script src="{{ site.baseurl }}/js/pdf.js" type="text/javascript"></script>
+<form id="pdf-form" action="https://prince.bridge.ufsc.br/build_from_html" method="POST" target="_blank">
+  <input type="hidden" name="body" value="Empty">
+</form>

@@ -1,0 +1,12 @@
+---
+layout: search
+---
+
+<form action="{{ site.baseurl }}/search.html" method="get">
+  <label for="search-box" class="label label-primary">Pesquisar</label>
+  <input type="search" placeholder="Pesquisar..." name="query" id="search-box" autocomplete="off">
+</form>
+
+<div class="searchLoader" id="loading"></div>
+
+<ul id="resultados"></ul>
