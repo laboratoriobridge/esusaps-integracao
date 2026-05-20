@@ -1,6 +1,3 @@
----
-layout: null
----
 (function() {  
   // Inicializando o lunr com os campos em que irá pesquisar.
   var idx = lunr(function () {
@@ -44,7 +41,7 @@ layout: null
 
       searchResults.innerHTML += appendString;
     } else {
-      searchResults.innerHTML += '<div align="center"><img src="{{ site.baseurl }}/img/searchNoResults.png"></div>';
+      searchResults.innerHTML += '<div align="center"><img src="/v740/img/searchNoResults.png"></div>';
     }
   }
 
