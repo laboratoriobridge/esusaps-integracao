@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ficha de Cuidado Compartilhado</title>
+  <meta name="description" content="FichaCuidadoCompartilhado">
+
+  <link rel="stylesheet" href="/v740/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/v740/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html">
+  <link rel="icon" type="image/png" href="/v740/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/v740/">
+      <img src="/v740/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 7.4.0</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/v740/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/v740/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/v740/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface" href="/v740/ledi/index.html">Layout e-SUS APS de Dados e Interface</a></li>
+          
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.4.0" href="/v740/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.4.0</a></li>
+          
+        
+          
+            <li><a title="Estrutura dos arquivos" href="/v740/ledi/documentacao/estrutura_arquivos/index.html">Estrutura dos arquivos</a></li>
+          
+        
+          
+            <li><a title="Ficha de Cuidado Compartilhado" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html">Ficha de Cuidado Compartilhado</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/v740/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.4.0" href="/v740/ledi/documentacao/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Layout e-SUS APS de Dados e Interface Versão 7.4.0)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Estrutura dos arquivos" href="/v740/ledi/documentacao/estrutura_arquivos/index.html">Estrutura dos arquivos</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Camada de Transporte de Dados" href="/v740/ledi/documentacao/estrutura_arquivos/camada-transporte.html">
+              Camada de Transporte de Dados
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Cabeçalho (headerTransport)" href="/v740/ledi/documentacao/estrutura_arquivos/header-transport.html">
+              Cabeçalho (headerTransport)
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Individual" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">
+              Ficha de Cadastro Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Domiciliar e Territorial" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">
+              Ficha de Cadastro Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Individual" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">
+              Ficha de Atendimento Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Odontológico Individual" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">
+              Ficha de Atendimento Odontológico Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atividade Coletiva" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fac.html">
+              Ficha de Atividade Coletiva
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Procedimentos" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fp.html">
+              Ficha de Procedimentos
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Visita Domiciliar e Territorial" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html">
+              Ficha de Visita Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Marcadores de Consumo Alimentar" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-mca.html">
+              Marcadores de Consumo Alimentar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Avaliação de Elegibilidade" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fae.html">
+              Ficha de Avaliação de Elegibilidade
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Domiciliar" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fad.html">
+              Ficha de Atendimento Domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha complementar - Síndrome neurológica por Zika / Microcefalia" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fczm.html">
+              Ficha complementar - Síndrome neurológica por Zika / Microcefalia
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Vacinação" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fv.html">
+              Ficha de Vacinação
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Ficha de Cuidado Compartilhado" href="/v740/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html">
+              Ficha de Cuidado Compartilhado
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ficha de Cuidado Compartilhado</h1>
+    <p class="post-meta">
+      <a class="btn" href="/v740/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 10/04/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h2 id="fichacuidadocompartilhado">FichaCuidadoCompartilhado</h2>
+
+<h3 id="1-uuidevolucao">#1 uuidEvolucao</h3>
+
+<p>Código UUID para identificar a ficha de cuidado compartilhado na base de dados nacional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h3 id="2-lotacaoevolucao">#2 lotacaoEvolucao</h3>
+
+<p>Profissional responsável pela evolução.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LotacaoThrift</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Este profissional obrigatoriamente precisa ser o solicitante ou o executante;</li>
+<li>O Código INE desta lotação deve ser preenchido com a mesma informação do campo <a href="/v740/ledi/documentacao/estrutura_arquivos/camada-transporte.html#5-inedadoserializado">#5 ineDadoSerializado</a>;</li>
+<li>O Código CNES desta lotação deve ser preenchido com a mesma informação do campo <a href="/v740/ledi/documentacao/estrutura_arquivos/camada-transporte.html#3-cnesdadoserializado">#3 cnesDadoSerializado</a>.</li>
+<li>O Código IBGE desta lotação deve ser preenchido com a mesma informação do campo <a href="/v740/ledi/documentacao/estrutura_arquivos/camada-transporte.html#4-codibge">#4 codIbge</a>.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="/v740/ledi/documentacao/estrutura_arquivos/header-transport.html#lotacaothrift">LotacaoThrift</a>.</p>
+
+<h2 id="3-dataevolucao">#3 dataEvolucao</h2>
+
+<p>Data em que foi criado a evolução do Compartilhamento de Cuidado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Esta data não pode ser anterior à data do DataCriacaoCuidado;</li>
+<li>Não pode ser posterior à data atual.</li>
+</ul>
+
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h2 id="4-dataevolucaoanterior">#4 dataEvolucaoAnterior</h2>
+
+<p>Data da última evolução que aconteceu antes desta.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Deve ser obrigatório caso não seja a primeira evolução do cuidado compartilhado, ou seja, quando o valor de <a href="#5-cosequencialevolucao">coSequencialEvolucao</a> seja superior a 1;</li>
+<li>Esta data deve ser posterior à data do DataCriacaoCuidado;</li>
+<li>Esta data deve ser anterior à DataEvolucao;</li>
+<li>Esta data deve ser anterior a data atual.</li>
+</ul>
+
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h2 id="5-cosequencialevolucao">#5 coSequencialEvolucao</h2>
+
+<p>Código sequencial que ordena as evoluções desde a criação deste Cuidado Compartilhado</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Não pode ser menor que 1; </li>
+<li>Não pode ser maior que 999.</li>
+</ul>
+
+<h2 id="6-condutaevolucao">#6 condutaEvolucao</h2>
+
+<p>Nome da conduta adotada na evolução.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Condutas válidas: <a href="/v740/ledi/documentacao/referencias/dicionario.html#condutaevolucao">Condutas</a></li>
+</ul>
+
+<h2 id="7-tpcdsorigem">#7 tpCdsOrigem</h2>
+
+<p>Tipo de origem dos dados do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Utilizar valor 3 (sistemas terceiros).</li>
+</ul>
+
+<h2 id="8-cnscidadao">#8 cnsCidadao</h2>
+
+<p>CNS do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong></p>
+
+<ul>
+<li>CNS validado de acordo com o <a href="/v740/ledi/documentacao/regras/algoritmo_CNS.html">algoritmo de validação</a>;</li>
+<li>Não pode ser preenchido se o campo CPF do cidadao for preenchido.</li>
+</ul>
+
+<h2 id="9-cpfcidadao">#9 cpfCidadao</h2>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong></p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo CNS do cidadao for preenchido.</li>
+</ul>
+
+<h2 id="10-sexocidadao">#10 sexoCidadao</h2>
+
+<p>Código do sexo do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> <a href="/v740/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+
+<h2 id="11-datanascimentocidadao">#11 dataNascimentoCidadao</h2>
+
+<p>Data de nascimento do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Formato &quot;aaaa-mm-dd&quot;;</li>
+<li>Esta data não pode ser posterior à data do DataCriacaoCuidado;</li>
+<li>Não pode ser anterior a 130 anos a partir da data atual.</li>
+</ul>
+
+<h2 id="12-uuidcuidadocompartilhado">#12 uuidCuidadoCompartilhado</h2>
+
+<p>Código UUID para identificar a ficha na base de dados nacional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h2 id="13-solicitante">#13 solicitante</h2>
+
+<p>Profissional solicitante do Cuidado Compartilhado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LotacaoThrift</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Deve ser diferente da lotação do executante. Para fins de comparação, todos os campos do objeto LotacaoThrift serão levados em consideração.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="/v740/ledi/documentacao/estrutura_arquivos/header-transport.html#lotacaothrift">LotacaoThrift</a>.</p>
+
+<p><strong>Observações:</strong> Esta entidade é utilizada para representar o profissional solicitante do Compartilhamento de Cuidado.</p>
+
+<h2 id="14-executante">#14 executante</h2>
+
+<p>Profissional executante do Cuidado Compartilhado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>LotacaoThrift</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Deve ser diferente a lotação do solicitante. Para fins de comparação, todos os campos do objeto LotacaoThrift serão levados em consideração;</li>
+<li>A equipe do executante é validada, tornando obrigatório o INE na LotacaoThrift neste caso.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="/v740/ledi/documentacao/estrutura_arquivos/header-transport.html#lotacaothrift">LotacaoThrift</a>.</p>
+
+<p><strong>Observações:</strong> Esta entidade é utilizada para representar o profissional executante do Compartilhamento de Cuidado.</p>
+
+<h2 id="15-datacriacaocuidado">#15 dataCriacaoCuidado</h2>
+
+<p>Data em que foi criado o Compartilhamento de Cuidado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Não pode ser posterior à data atual;</li>
+<li>Não pode ser anterior a data de nascimento do cidadão;</li>
+<li>Não pode ser anterior que a data 01/07/2023.</li>
+</ul>
+
+<p><strong>Referência:</strong> Deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h2 id="16-cid10">#16 cid10</h2>
+
+<p>Código da CID10 registrada no Compartilhamento de Cuidado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Deve ser apresentada somente CID10 permitida para o <a href="#10-sexocidadao">sexo do cidadão</a>;</li>
+<li>Deve ser obrigatório caso o CIAP2 não seja informado. </li>
+</ul>
+
+<h2 id="17-ciap">#17 ciap</h2>
+
+<p>Código da CIAP registrada no Compartilhamento de Cuidado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> </p>
+
+<ul>
+<li>Deve ser apresentada somente CIAP2 permitida para o <a href="#10-sexocidadao">sexo do cidadão</a>;</li>
+<li>Deve ser obrigatório caso o CID10 não seja informado;</li>
+<li>Inserir o código em caracteres maiúsculos sem espaços.</li>
+</ul>
+
+<h2 id="18-uuidfichaorigem">#18 uuidFichaOrigem;</h2>
+
+<p>Código UUID da ficha que originou o Compartilhamento de Cuidado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Não</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Deve ser obrigatório caso o campo <a href="#19-tpdadotranspfichaorigem">tpDadoTranspFichaOrigem</a> seja informado.</p>
+
+<p><strong>Referência:</strong> Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<p><strong>Observação:</strong> Não obrigatório por conta de sistemas terceiros.</p>
+
+<h2 id="19-tpdadotranspfichaorigem">#19 tpDadoTranspFichaOrigem;</h2>
+
+<p>Informa qual o tipo da ficha que originou o Compartilhamento de Cuidado. </p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Deve ser obrigatório caso o campo <a href="#18-uuidfichaorigem">uuidFichaOrigem</a> seja informado.</p>
+
+<p><strong>Observação:</strong> Valores válidos:</p>
+
+<ul>
+<li>4 = Ficha Atendimento Individual;</li>
+<li>5 = Ficha Atendimento Odontológico;</li>
+<li>7 = Ficha Procedimentos;</li>
+<li>10 = Ficha Atendimento Domiciliar;</li>
+<li>16 = ESUS-PEC Cuidado Compartilhado.</li>
+</ul>
+
+<h2 id="20-prioridadecuidado">#20 prioridadeCuidado</h2>
+
+<p>Classificação de prioridade do Cuidado Compartilhado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p>Referência: <a href="/v740/ledi/documentacao/referencias/dicionario.html#prioridadecuidado">Classificação de Prioridade</a></p>
+
+<h2 id="21-reclassificacaoprioridadecuidado">#21 reclassificacaoPrioridadeCuidado</h2>
+
+<p>Informa qual a nova classificação de prioridade escolhida na evolução, após uma reclassificação de prioridade do Cuidado Compartilhado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Não</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Deve ser diferente do campo <a href="#20-prioridadecuidado">prioridadeCuidado</a> </p>
+
+<p>Referência: <a href="/v740/ledi/documentacao/referencias/dicionario.html#prioridadecuidado">Classificação de Prioridade</a></p>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/v740/js/lunr.min.js"></script>
+
+    <script src="/v740/js/site.js" type="text/javascript"></script>    
+    <script src="/v740/js/search-index.js" type="text/javascript"></script>
+    <script src="/v740/js/busca.js"></script>
+  </body>
+</html>
