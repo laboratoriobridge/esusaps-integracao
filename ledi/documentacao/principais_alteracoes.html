@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.4.2</span>
+        <span class="label">versão 8.4.2</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.4.2</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.4.2</a></li>
           
         
           
@@ -123,7 +123,7 @@
     
 
     <li>
-      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 7.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.4.2</a>
+      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.4.2</a>
       <ul>
         
           <li  class="has-subitems">
@@ -187,13 +187,65 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/principais_alteracoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 18/06/2026</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/07/2026</span>
       
     </p>
   </header>
 
   <article class="post-content">
     <p>Este documento relata as principais alterações entre as últimas versões do LEDI APS:</p>
+
+<h2 id="vers-o-8-4-2">Versão 8.4.2</h2>
+
+<h3 id="1-atualiza-es-em-regras-vacinais">1. Atualizações em regras vacinais</h3>
+
+<p>Inclusão do fabricante &quot;LIBBS FARMACEUTICA LTDA.&quot;.</p>
+
+<h3 id="2-inclus-o-de-novos-itens-para-sele-o-nos-campos-de-tema-para-reuni-o-e-p-blico-alvo-do-registro-de-atividade-coletiva">2. Inclusão de novos itens para seleção nos campos de Tema para reunião e Público-alvo do registro de Atividade coletiva</h3>
+
+<p>Foi incluído o novo item de <strong>Vigilância em saúde</strong> no campo de Temas para reunião e os novos itens <strong>Adolescente em atendimento socioeducativo em meio aberto e Adolescente em atendimento socioeducativo em meio fechado</strong> no campo Público-alvo do registro de Atividade coletiva.</p>
+
+<h2 id="vers-o-8-4-1">Versão 8.4.1</h2>
+
+<h3 id="1-atualiza-o-da-tabela-sigtap-para-compet-ncia-de-05-2026">1. Atualização da tabela SIGTAP para competência de 05/2026</h3>
+
+<p>A tabela de procedimentos SIGTAP do sistema foi atualizada para a competência de 05/2026, trazendo a inclusão e atualização de procedimentos.</p>
+
+<h3 id="2-atualiza-es-em-regras-vacinais">2. Atualizações em regras vacinais</h3>
+
+<p>Atualização das regras para o registro da aplicação do imunobiológico &quot;Vacina inativada poliomielite (cód 22)&quot;, além de ajuste no grupo de atendimento &quot;Outros&quot;.</p>
+
+<h2 id="vers-o-8-4-0">Versão 8.4.0</h2>
+
+<h3 id="1-prioriza-o-do-cpf-como-identificador-principal-da-pessoa">1. Priorização do CPF como identificador principal da pessoa</h3>
+
+<p>Foram incluídos os campos <code>stNaoPossuiCpf</code> e <code>justificativaNaoPossuiCpf</code> nos modelos de dados do Cadastro Individual, Atendimento Individual, Atendimento Odontológico Individual, Procedimentos, Síndrome neurológica por Zika / Microcefalia, Marcadores de Consumo Alimentar e Vacinação para tornar o CPF o identificador principal da pessoa nos registros sendo que, caso não seja informado um CPF, uma justificativa deverá ser registrada.</p>
+
+<h3 id="2-atualiza-o-do-modelo-de-dados-do-cadastro-individual">2. Atualização do modelo de dados do Cadastro individual</h3>
+
+<p>Foram incluídos novos campos de <code>estadoCivil</code>, <code>tipoSanguineo</code> e <code>dnv</code>.</p>
+
+<h3 id="3-atualiza-o-do-modelo-de-dados-do-cadastro-do-im-vel">3. Atualização do modelo de dados do Cadastro do imóvel</h3>
+
+<p>Foi incluído o campo <code>stAtivo</code> no cadastro do imóvel para sinalizar se o cadastro está ativo ou inativo, com o intuito de higienizar das listas os cadastros duplicados ou de imóveis que não existem mais.
+Além disso foi atualizado o campo <code>numeroMembrosFamilia</code> para permitir o registro de valores com até 3 dígitos.</p>
+
+<h3 id="4-atualiza-o-do-modelo-de-dados-da-ficha-de-vacina-o">4. Atualização do modelo de dados da Ficha de Vacinação</h3>
+
+<p>Foi feita adequação estrutural para padronização dos fabricantes de imunobiológicos, passando a utilizar o código da RNDS do fabricante como identificador principal, no novo campo <code>coRndsFabricane</code> ao invés do nome do mesmo no campo <code>fabricante</code>, que foi descontinuado.
+Também foram atualizadas as correspondências entre vias de administração e locais de aplicação utilizados no registro de vacinas, além de adequação estrutural do sistema para padronização desses registros com os respectivos códigos da RNDS.</p>
+
+<h3 id="5-atualiza-o-da-valida-o-de-uso-do-cid-10-em-encaminhamentos">5. Atualização da validação de uso do CID-10 em encaminhamentos</h3>
+
+<p>Foi atualizada a regra de validação do campo de CID-10 nos registros de encaminhamentos. A partir desta versão, deixa de existir a restrição por CBO para utilização do CID-10 no transport, permitindo que todos os profissionais habilitados a realizar um atendimento individual possam informar o código CID-10 nesses registros.</p>
+
+<h3 id="6-inativa-o-de-procedimentos-ab">6. Inativação de procedimentos AB</h3>
+
+<p>Os procedimentos do tipo AB que possuíam equivalência SIGTAP foram inativados para novas seleções no sistema, permanecendo disponíveis para uso apenas os procedimentos SIGTAP correspondentes.</p>
+
+<h3 id="7-inclus-o-do-cbo-mediador-intercultural">7. Inclusão do CBO Mediador Intercultural</h3>
+
+<p>Foi incluído o CBO <code>515335 - Mediador Intercultural</code> na lista de profissionais habilitados para registro de fichas de Cadastro Individual, Cadastro Domiciliar e Territorial e Atividade Coletiva.</p>
 
 <h2 id="vers-o-7-4-2">Versão 7.4.2</h2>
 
@@ -219,7 +271,7 @@
 
 <h3 id="1-atualiza-es-em-regras-vacinais">1. Atualizações em regras vacinais</h3>
 
-<p>Foram atualizadas as regras vacinais para aplicação dos imunobiológicos &quot;Pneumo 20 (cod 107)&quot; e &quot;Varicela (cod 34)&quot;.</p>
+<p>Foram atualizadas as regras vacinais para aplicação dos imunobiológicos &quot;Pneumo 20 (cod 107)&quot;, &quot;Varicela (cod 34)&quot;, &quot;Meningo C (cód. 41)&quot; e &quot;Covid-19-RNAm, Moderna (Spikevax) (cód. 97)&quot;.</p>
 
 <h2 id="vers-o-7-3-7">Versão 7.3.7</h2>
 

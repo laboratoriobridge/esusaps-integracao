@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.4.2</span>
+        <span class="label">versão 8.4.2</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.4.2</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.4.2</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.4.2" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 7.4.2)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 8.4.2)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fai.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 18/06/2026</span>
+        <span class="label" title="Data da última modificação">Alterado em 19/06/2026</span>
       
     </p>
   </header>
@@ -974,7 +974,7 @@
 
 <ul>
 <li>Não pode ter itens duplicados na lista. Serão considerados duplicados os itens que tiverem a mesma <a href="#1-especialidade">especialidade</a> e <a href="#2-hipotesediagnosticocid10">hipoteseDiagnosticoCID10</a> ou a mesma <a href="#1-especialidade">especialidade</a> e <a href="#3-hipotesediagnosticociap2">hipoteseDiagnosticoCIAP2</a>;</li>
-<li>Todos os encaminhamentos devem ser preenchidos somente com CID10 ou com CIAP2, de acordo com a <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a>;</li>
+<li>Todos os encaminhamentos devem ser preenchidos ou com CID10 ou com CIAP2;</li>
 <li>Ao preencher este grupo, é obrigatório o preenchimento do campo <a href="#17-condutas">condutas</a> com o valor <code>4 - Encaminhamento para serviço especializado</code>.</li>
 </ul>
 
@@ -1131,6 +1131,56 @@
 </ul>
 
 <p><strong>Referência:</strong> <a href="#solicitacoesoci">SolicitacoesOci</a>.</p>
+
+<h3 id="33-stnaopossuicpf">#33 stNaoPossuiCpf</h3>
+
+<p>Marcador que indica que o CPF do cidadão não existe ou não está disponível no momento do cadastro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="34-justificativanaopossuicpf">#34 justificativaNaoPossuiCpf</h3>
+
+<p>Justificativa para o cidadão não possuir ou não informar CPF.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>É permitido o envio apenas de justificativas que constam na listagem de referência;</li>
+<li>Não pode ser preenchido se o campo <a href="#33-stnaopossuicpf">stNaoPossuiCpf</a> = <code>false</code>;</li>
+<li>É obrigatório se o campo <a href="#33-stnaopossuicpf">stNaoPossuiCpf</a> = <code>true</code>.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#justificativanaopossuicpf">justificativaNaoPossuiCpf</a>.</p>
 
 <h2 id="exame">Exame</h2>
 
@@ -2258,7 +2308,6 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Este campo só poderá ser preenchido caso o profissional for habilitado a informar CID10 conforme apresentado na tabela <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a>;</li>
 <li>Deve ser preenchida somente CID10 permitida para o <a href="#5-sexo">Sexo</a> do cidadão;</li>
 <li>Não pode ser preenchido se o campo <a href="#3-hipotesediagnosticociap2">hipoteseDiagnosticoCIAP2</a> for preenchido;</li>
 <li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#3-hipotesediagnosticociap2">hipoteseDiagnosticoCIAP2</a> não estiver preenchido.</li>
@@ -2287,7 +2336,6 @@
 <p><strong>Regras:</strong></p>
 
 <ul>
-<li>Este campo só deverá ser preenchido caso o profissional <strong>não</strong> for habilitado a informar CID10 conforme apresentado na tabela <a href="/ledi/documentacao/regras/cbo.html#ficha-de-atendimento-individual">Tabela 3 - CBOs que podem registrar ficha de atendimento individual</a>;</li>
 <li>Deve ser preenchida somente CIAP2 permitida para o <a href="#5-sexo">Sexo</a> do cidadão;</li>
 <li>Deve conter somente CIAP2 que possuem relação com uma CID10, conforme listado na planilha <a href="/ledi/documentacao/referencias/relacao_ciap_cid.html">CIAP2 x CID10 mais frequentes</a>;</li>
 <li>Não pode ser preenchido se o campo <a href="#2-hipotesediagnosticocid10">hipoteseDiagnosticoCID10</a> for preenchido;</li>

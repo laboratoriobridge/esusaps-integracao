@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tabela fato do cadastro domiciliar</title>
+  <meta name="description" content="1. Objetivo">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/dw/fatos/cadastro_domiciliar/tb_fat_cad_domiciliar.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 8.4.2</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
+          
+        
+          
+            <li><a title="Fatos" href="/dw/fatos/index.html">Fatos</a></li>
+          
+        
+          
+            <li><a title="Cadastro domiciliar" href="/dw/fatos/cadastro_domiciliar/index.html">Cadastro domiciliar</a></li>
+          
+        
+          
+            <li><a title="Tabela fato do cadastro domiciliar" href="/dw/fatos/cadastro_domiciliar/tb_fat_cad_domiciliar.html">Tabela fato do cadastro domiciliar</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Fatos" href="/dw/fatos/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Fatos)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Cadastro domiciliar" href="/dw/fatos/cadastro_domiciliar/index.html">Cadastro domiciliar</a>
+      <ul>
+        
+          <li class="active">
+          
+            <a title="Tabela fato do cadastro domiciliar" href="/dw/fatos/cadastro_domiciliar/tb_fat_cad_domiciliar.html">
+              Tabela fato do cadastro domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela fato das famílias do cadastro domiciliar" href="/dw/fatos/cadastro_domiciliar/tb_fat_cad_dom_familia.html">
+              Tabela fato das famílias do cadastro domiciliar
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Tabela fato do cadastro domiciliar</h1>
+    <p class="post-meta">
+      <a class="btn" href="/pdf.html?include=/dw/fatos/cadastro_domiciliar/tb_fat_cad_domiciliar.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 13/07/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="1-objetivo">1. Objetivo</h1>
+
+<p>A tabela <code>tb_fat_cad_domiciliar</code> é populada sempre que os dados de um <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">Cadastro Domiciliar e Territorial</a> são processados.</p>
+
+<h1 id="2-regras">2. Regras</h1>
+
+<p><strong>1. </strong> A <code>tb_fat_cad_domiciliar</code> é preenchida quando são processado(as):</p>
+
+<ul>
+<li>Fichas de cadastro domiciliar recebidas através da importação de sistemas terceiros, outras instalações do PEC e-SUS-APS ou do aplicativo e-SUS Território;</li>
+<li>Registro de um cadastro domiciliar realizado no CDS, no Acompanhamento do Território ou na Reterritorialização.</li>
+</ul>
+
+<h1 id="3-fatos">3. Fatos</h1>
+
+<h2 id="3-1-metadados-dos-fatos">3.1 Metadados dos fatos</h2>
+
+<table><thead>
+<tr>
+<th>Colunas DW</th>
+<th>Referência LEDI</th>
+<th>Referência sistema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_seq_fat_cad_domiciliar</td>
+<td>-</td>
+<td>Código de identificação sequencial criado automaticamente pelo sistema</td>
+</tr>
+<tr>
+<td>nu_uuid_ficha</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#10-uuid">uuid</a></td>
+<td>Identificador universalmente único do registro</td>
+</tr>
+<tr>
+<td>nu_uuid_ficha_origem</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#11-uuidfichaoriginadora">uuidFichaOriginadora</a></td>
+<td>UUID original da ficha de origem. Utilizado para vincular visitas domiciliares ao domicílio cadastrado</td>
+</tr>
+<tr>
+<td>nu_uuid_dado_transp</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/camada-transporte.html#1-uuiddadoserializado">uuidDadoSerializado</a></td>
+<td>Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu_uuid_ficha</td>
+</tr>
+<tr>
+<td>st_recusa_cadastro</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#8-statustermorecusa">statusTermoRecusa</a></td>
+<td>Indica se houve recusa ao cadastramento do domicílio</td>
+</tr>
+<tr>
+<td>st_gerado_automaticamente</td>
+<td>-</td>
+<td>Indica se o registro foi gerado automaticamente pelo sistema</td>
+</tr>
+<tr>
+<td>st_proc_operacionais</td>
+<td>-</td>
+<td>Flag de controle de processamento operacional</td>
+</tr>
+<tr>
+<td>st_processa_familita_terrtro</td>
+<td>-</td>
+<td>Flag de controle de processamento de famílias no território</td>
+</tr>
+<tr>
+<td>st_processo_linha_tempo</td>
+<td>-</td>
+<td>Flag de controle de processamento na linha do tempo</td>
+</tr>
+<tr>
+<td>st_processo_familia</td>
+<td>-</td>
+<td>Flag de controle de processamento de família</td>
+</tr>
+<tr>
+<td>st_familias</td>
+<td>-</td>
+<td>Flag que indica presença de famílias vinculadas ao domicílio</td>
+</tr>
+<tr>
+<td>st_ativo</td>
+<td>-</td>
+<td>Indica se o registro está ativo no sistema</td>
+</tr>
+</tbody></table>
+
+<h2 id="3-2-m-tricas-dos-fatos">3.2 Métricas dos fatos</h2>
+
+<table><thead>
+<tr>
+<th>Colunas DW</th>
+<th>Referência LEDI</th>
+<th>Referência sistema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>qt_morador</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#8-numoradores">nuMoradores</a></td>
+<td>Quantidade de moradores no domicílio</td>
+</tr>
+<tr>
+<td>nu_comodo</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#7-nucomodos">nuComodos</a></td>
+<td>Número de cômodos do domicílio</td>
+</tr>
+<tr>
+<td>nu_micro_area</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#13-microarea">microArea</a></td>
+<td>Número da microárea onde o domicílio está localizado</td>
+</tr>
+<tr>
+<td>st_disp_energia</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#10-stdisponibilidadeenergiaeletrica">stDisponibilidadeEnergiaEletrica</a></td>
+<td>Indica disponibilidade de energia elétrica no domicílio</td>
+</tr>
+<tr>
+<td>st_animal_domiciliar</td>
+<td>-</td>
+<td>Indica presença de animais no domicílio</td>
+</tr>
+<tr>
+<td>qt_animal_domiciliar</td>
+<td>-</td>
+<td>Quantidade de animais no domicílio</td>
+</tr>
+<tr>
+<td>st_animal_gato</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#1-animaisnodomicilio">animaisNoDomicilio</a></td>
+<td>Indica presença de gato no domicílio</td>
+</tr>
+<tr>
+<td>st_animal_cachorro</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#1-animaisnodomicilio">animaisNoDomicilio</a></td>
+<td>Indica presença de cachorro no domicílio</td>
+</tr>
+<tr>
+<td>st_animal_passaro</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#1-animaisnodomicilio">animaisNoDomicilio</a></td>
+<td>Indica presença de pássaro no domicílio</td>
+</tr>
+<tr>
+<td>st_animal_outros</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#1-animaisnodomicilio">animaisNoDomicilio</a></td>
+<td>Indica presença de outros animais no domicílio</td>
+</tr>
+<tr>
+<td>st_animal_macaco</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#1-animaisnodomicilio">animaisNoDomicilio</a></td>
+<td>Indica presença de macaco no domicílio</td>
+</tr>
+<tr>
+<td>st_animal_galinha</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#1-animaisnodomicilio">animaisNoDomicilio</a></td>
+<td>Indica presença de galinha no domicílio</td>
+</tr>
+<tr>
+<td>st_animal_porco</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#1-animaisnodomicilio">animaisNoDomicilio</a></td>
+<td>Indica presença de porco no domicílio</td>
+</tr>
+<tr>
+<td>st_animal_repteis</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#1-animaisnodomicilio">animaisNoDomicilio</a></td>
+<td>Indica presença de répteis no domicílio</td>
+</tr>
+<tr>
+<td>st_outros_prof_vinclds</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#2-stoutrosprofissionaisvinculados">stOutrosProfissionaisVinculados</a></td>
+<td>Indica se existem outros profissionais vinculados ao domicílio</td>
+</tr>
+<tr>
+<td>nu_latitude</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#15-latitude">latitude</a></td>
+<td>Latitude da localização geográfica do domicílio</td>
+</tr>
+<tr>
+<td>nu_longitude</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#16-longitude">longitude</a></td>
+<td>Longitude da localização geográfica do domicílio</td>
+</tr>
+<tr>
+<td>nu_residencia_indigena</td>
+<td>-</td>
+<td>Identificador da residência indígena</td>
+</tr>
+<tr>
+<td>ds_filtro_tipo_renda_familiar</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#5-rendafamiliar">rendaFamiliar</a></td>
+<td>Campo de filtro com os tipos de renda familiar registrados</td>
+</tr>
+<tr>
+<td>nu_cep</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#2-cep">cep</a></td>
+<td>CEP do logradouro do domicílio</td>
+</tr>
+<tr>
+<td>no_logradouro</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#5-nomelogradouro">nomeLogradouro</a></td>
+<td>Nome do logradouro do domicílio</td>
+</tr>
+<tr>
+<td>nu_num_logradouro</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#6-numero">numero</a></td>
+<td>Número do logradouro do domicílio</td>
+</tr>
+<tr>
+<td>no_complemento</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#4-complemento">complemento</a></td>
+<td>Complemento do endereço do domicílio</td>
+</tr>
+<tr>
+<td>no_bairro</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#1-bairro">bairro</a></td>
+<td>Nome do bairro do domicílio</td>
+</tr>
+<tr>
+<td>no_ponto_referencia</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#12-pontoreferencia">pontoReferencia</a></td>
+<td>Ponto de referência do domicílio</td>
+</tr>
+<tr>
+<td>nu_telefone_residencia</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#9-telefoneresidencia">telefoneResidencia</a></td>
+<td>Telefone da residência</td>
+</tr>
+<tr>
+<td>nu_telefone_contato</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#8-telefonecontato">telefoneContato</a></td>
+<td>Telefone de contato do domicílio</td>
+</tr>
+<tr>
+<td>no_instituicao_nome</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#1-nomeinstituicaopermanencia">nomeInstituicaoPermanencia</a></td>
+<td>Nome da instituição de permanência</td>
+</tr>
+<tr>
+<td>no_instituicao_cargo</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#5-cargoinstituicao">cargoInstituicao</a></td>
+<td>Cargo do responsável técnico na instituição de permanência</td>
+</tr>
+<tr>
+<td>nu_instituicao_cns</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#4-cnsresponsaveltecnico">cnsResponsavelTecnico</a></td>
+<td>CNS do responsável técnico da instituição de permanência</td>
+</tr>
+<tr>
+<td>nu_instituicao_telefone</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html#6-telefoneresponsaveltecnico">telefoneResponsavelTecnico</a></td>
+<td>Telefone do responsável técnico da instituição de permanência</td>
+</tr>
+</tbody></table>
+
+<p>Os seguintes campos da tabela armazenam valores criptografados:</p>
+
+<ul>
+<li>nu_cep</li>
+<li>no_logradouro</li>
+<li>nu_num_logradouro</li>
+<li>no_complemento</li>
+<li>no_bairro</li>
+<li>no_ponto_referencia</li>
+<li>nu_telefone_residencia</li>
+<li>nu_telefone_contato</li>
+<li>no_instituicao_nome</li>
+<li>no_instituicao_cargo</li>
+<li>nu_instituicao_cns</li>
+<li>nu_instituicao_telefone</li>
+</ul>
+
+<h1 id="4-dimens-es-da-tabela">4. Dimensões da tabela</h1>
+
+<h2 id="4-1-dimens-es-espec-ficas-dessa-tabela">4.1 Dimensões específicas dessa tabela</h2>
+
+<table><thead>
+<tr>
+<th>Coluna DW</th>
+<th>Dimensão referência</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_dim_tipo_imovel</td>
+<td>Código do tipo de imóvel. Campo <code>co_seq_dim_tipo_imovel</code> da <code>tb_dim_tipo_imovel</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_logradouro</td>
+<td>Código do tipo de logradouro. Campo <code>co_seq_dim_tipo_logradouro</code> da <code>tb_dim_tipo_logradouro</code></td>
+</tr>
+<tr>
+<td>co_dim_municipio_cidadao</td>
+<td>Código do município de localização do domicílio. Campo <code>co_seq_dim_municipio</code> da <code>tb_dim_municipio</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_situacao_moradia</td>
+<td>Código da situação de moradia. Campo <code>co_seq_dim_tipo_situacao_moradia</code> da <code>tb_dim_tipo_situacao_moradia</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_localizacao</td>
+<td>Código da localização (urbana/rural). Campo <code>co_seq_dim_tipo_localizacao</code> da <code>tb_dim_tipo_localizacao</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_domicilio</td>
+<td>Código do tipo de domicílio. Campo <code>co_seq_dim_tipo_domicilio</code> da <code>tb_dim_tipo_domicilio</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_posse_terra</td>
+<td>Código do tipo de posse da terra. Campo <code>co_seq_dim_tipo_posse_terra</code> da <code>tb_dim_tipo_posse_terra</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_acesso_domicilio</td>
+<td>Código do tipo de acesso ao domicílio. Campo <code>co_seq_dim_tipo_acesso_domicilio</code> da <code>tb_dim_tipo_acesso_domicilio</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_material_parede</td>
+<td>Código do tipo de material predominante das paredes. Campo <code>co_seq_dim_tipo_material_parede</code> da <code>tb_dim_tipo_material_parede</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_abastecimento_agua</td>
+<td>Código do tipo de abastecimento de água. Campo <code>co_seq_dim_tipo_abastecimento_agua</code> da <code>tb_dim_tipo_abastecimento_agua</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_tratamento_agua</td>
+<td>Código do tipo de tratamento da água. Campo <code>co_seq_dim_tipo_tratamento_agua</code> da <code>tb_dim_tipo_tratamento_agua</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_escoamento_sanitar</td>
+<td>Código do tipo de escoamento sanitário. Campo <code>co_seq_dim_tipo_escoamento_sanitar</code> da <code>tb_dim_tipo_escoamento_sanitar</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_destino_lixo</td>
+<td>Código do tipo de destino do lixo. Campo <code>co_seq_dim_tipo_destino_lixo</code> da <code>tb_dim_tipo_destino_lixo</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_origem_energ_eletr</td>
+<td>Código do tipo de origem da energia elétrica. Campo <code>co_seq_dim_tipo_origem_energ_elet</code> da <code>tb_dim_tipo_origem_energ_elet</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_endereco</td>
+<td>Código do tipo de endereço. Campo <code>co_seq_dim_tipo_endereco</code> da <code>tb_dim_tipo_endereco</code></td>
+</tr>
+<tr>
+<td>co_dim_aldeia</td>
+<td>Código da aldeia indígena. Campo <code>co_seq_dim_aldeia</code> da <code>tb_dim_aldeia</code></td>
+</tr>
+<tr>
+<td>co_dim_municipio_aldeia</td>
+<td>Código do município da aldeia. Campo <code>co_seq_dim_municipio</code> da <code>tb_dim_municipio</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="4-2-dimens-es-comuns-a-todas-as-tabelas-fato-do-cadastro-domiciliar">4.2 Dimensões comuns a todas as tabelas fato do cadastro domiciliar</h2>
+
+<table><thead>
+<tr>
+<th>Coluna DW</th>
+<th>Dimensão referência</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_dim_municipio</td>
+<td>Código de identificação do município. Campo <code>co_seq_dim_municipio</code> da <code>tb_dim_municipio</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_ficha</td>
+<td>Código de identificação do tipo de ficha. Campo <code>co_seq_dim_tipo_ficha</code> da <code>tb_dim_tipo_ficha</code></td>
+</tr>
+<tr>
+<td>co_dim_profissional</td>
+<td>Código de identificação do profissional responsável. Campo <code>co_seq_dim_profissional</code> da <code>tb_dim_profissional</code></td>
+</tr>
+<tr>
+<td>co_dim_cbo</td>
+<td>Código de identificação do CBO profissional responsável. Campo <code>co_seq_dim_cbo</code> da <code>tb_dim_cbo</code></td>
+</tr>
+<tr>
+<td>co_dim_unidade_saude</td>
+<td>Código de identificação da unidade de saúde do profissional responsável. Campo <code>co_seq_dim_unidade_saude</code> da <code>tb_dim_unidade_saude</code></td>
+</tr>
+<tr>
+<td>co_dim_equipe</td>
+<td>Código de identificação da equipe do profissional responsável. Campo <code>co_seq_dim_equipe</code> da <code>tb_dim_equipe</code></td>
+</tr>
+<tr>
+<td>co_dim_tempo</td>
+<td>Responsável por armazenar as datas de maneira estruturada. Campo <code>co_seq_dim_tempo</code> da <code>tb_dim_tempo</code></td>
+</tr>
+<tr>
+<td>co_dim_tempo_validade</td>
+<td>Armazena a data de validade do cadastro de forma estruturada. Campo <code>co_seq_dim_tempo</code> da <code>tb_dim_tempo</code></td>
+</tr>
+<tr>
+<td>co_dim_tempo_validade_recusa</td>
+<td>Armazena a data de validade em caso de recusa de cadastro. Campo <code>co_seq_dim_tempo</code> da <code>tb_dim_tempo</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_origem_dado_transp</td>
+<td>Código da origem do dado no transporte. Campo <code>co_seq_dim_tp_orgm_dado_transp</code> da <code>tb_dim_tipo_origem_dado_transp</code></td>
+</tr>
+<tr>
+<td>co_dim_cds_tipo_origem</td>
+<td>Código da origem do dado no transporte. Campo <code>co_seq_dim_tipo_origem</code> da <code>tb_dim_tipo_origem</code></td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/js/lunr.min.js"></script>
+
+    <script src="/js/site.js" type="text/javascript"></script>    
+    <script src="/js/search-index.js" type="text/javascript"></script>
+    <script src="/js/busca.js"></script>
+  </body>
+</html>

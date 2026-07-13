@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.4.2</span>
+        <span class="label">versão 8.4.2</span>
       
     </a>
 
@@ -198,7 +198,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/atendimento_odontologico/tb_fat_atend_odonto_encaminham.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 10/11/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/07/2026</span>
       
     </p>
   </header>
@@ -206,7 +206,7 @@
   <article class="post-content">
     <h1 id="1-objetivo">1. Objetivo</h1>
 
-<p>A tabela <code>tb_fat_atend_odonto_encaminham</code> só é preenchida quando são feitos registros de encaminhamento para serviço especializado em um <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">atendimento odontológico</a> e o atendimento em questão é processado.</p>
+<p>A tabela <code>tb_fat_atend_odonto_encaminham</code> só é preenchida quando são processados registros de encaminhamento para serviço especializado feitos em um <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">atendimento odontológico</a> e o atendimento em questão é processado.</p>
 
 <h1 id="2-fatos">2. Fatos</h1>
 
@@ -236,12 +236,12 @@
 </tr>
 <tr>
 <td>nu_uuid_ficha</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#3-uuidficha">uuidFicha</a></td>
-<td>Identificador universalmente único da camada de transporte de dados</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#1-uuidficha">uuidFicha</a></td>
+<td>Identificador universalmente único do registro</td>
 </tr>
 <tr>
 <td>nu_uuid_dado_transp</td>
-<td>-</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/camada-transporte.html#1-uuiddadoserializado">uuidDadoSerializado</a></td>
 <td>Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu_uuid_ficha</td>
 </tr>
 <tr>
@@ -280,12 +280,20 @@
 <td>Código da classificação de risco do encaminhamento. Campo <code>co_seq_dim_classific_risc_enc</code> da <code>tb_dim_classificacao_risc_enc</code></td>
 </tr>
 <tr>
+<td>co_dim_classificacao_prioridad</td>
+<td>Código da classificação de prioridade do encaminhamento. Campo <code>co_seq_dim_prioridade_cuidado</code> da <code>tb_dim_prioridade_cuidado</code></td>
+</tr>
+<tr>
 <td>co_dim_ciap2</td>
 <td>Código do CIAP2 utilizado no encaminhamento. Campo <code>co_seq_dim_ciap2</code> da <code>tb_dim_ciap2</code></td>
 </tr>
 <tr>
 <td>co_dim_cid10</td>
 <td>Código do CID10 utilizado no encaminhamento. Campo <code>co_seq_dim_cid10</code> da <code>tb_dim_cid10</code></td>
+</tr>
+<tr>
+<td>co_dim_cbo_guia_encaminhamento</td>
+<td>Código do CBO do profissional que assina o guia de encaminhamento. Campo <code>co_seq_dim_cbo</code> da <code>tb_dim_cbo</code></td>
 </tr>
 </tbody></table>
 

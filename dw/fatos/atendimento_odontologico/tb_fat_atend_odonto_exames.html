@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.4.2</span>
+        <span class="label">versão 8.4.2</span>
       
     </a>
 
@@ -198,7 +198,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/atendimento_odontologico/tb_fat_atend_odonto_exames.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 16/09/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/07/2026</span>
       
     </p>
   </header>
@@ -206,7 +206,7 @@
   <article class="post-content">
     <h1 id="1-objetivo">1. Objetivo</h1>
 
-<p>A tabela <code>tb_fat_atend_odonto_exames</code> só é preenchida quando são feitos registros de resultado de exame estruturados em um <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">atendimento odontológico</a> e o atendimento em questão é processado.</p>
+<p>A tabela <code>tb_fat_atend_odonto_exames</code> só é preenchida quando são processados registros de resultado de exame estruturados feitos em um <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">atendimento odontológico</a> e o atendimento em questão é processado.</p>
 
 <h1 id="2-regras">2. Regras</h1>
 
@@ -240,12 +240,12 @@
 </tr>
 <tr>
 <td>nu_uuid_ficha</td>
-<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#3-uuidficha">uuidFicha</a></td>
-<td>Identificador universalmente único da camada de transporte de dados</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#1-uuidficha">uuidFicha</a></td>
+<td>Identificador universalmente único do registro</td>
 </tr>
 <tr>
 <td>nu_uuid_dado_transp</td>
-<td>-</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/camada-transporte.html#1-uuiddadoserializado">uuidDadoSerializado</a></td>
 <td>Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu_uuid_ficha</td>
 </tr>
 <tr>
@@ -314,6 +314,11 @@
 <td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#17-datahorainicialatendimento">dataHoraInicialAtendimento</a></td>
 <td>Data e hora do início do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;</td>
 </tr>
+<tr>
+<td>st_resultado_estruturado</td>
+<td>-</td>
+<td>Indica se o resultado do exame foi registrado de forma estruturada</td>
+</tr>
 </tbody></table>
 
 <h1 id="4-dimens-es-da-tabela">4. Dimensões da tabela</h1>
@@ -327,8 +332,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>co_dim_procedimento</td>
-<td>Código SIGTAP dos exames avaliados. Campo <code>co_seq_dim_procedimento</code> da <code>tb_dim_procedimento</code></td>
+<td>co_dim_procedimento_avaliado</td>
+<td>Código SIGTAP do exame avaliado. Campo <code>co_seq_dim_procedimento</code> da <code>tb_dim_procedimento</code></td>
+</tr>
+<tr>
+<td>co_dim_procedimento_solicitado</td>
+<td>Código SIGTAP do exame solicitado. Campo <code>co_seq_dim_procedimento</code> da <code>tb_dim_procedimento</code></td>
 </tr>
 <tr>
 <td>co_dim_sexo</td>
