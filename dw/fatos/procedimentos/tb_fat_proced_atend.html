@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.4.2</span>
+        <span class="label">versão 8.4.2</span>
       
     </a>
 
@@ -177,7 +177,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/procedimentos/tb_fat_proced_atend.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 10/11/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/07/2026</span>
       
     </p>
   </header>
@@ -225,7 +225,7 @@
 </tr>
 <tr>
 <td>nu_uuid_dado_transp</td>
-<td>-</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/camada-transporte.html#1-uuiddadoserializado">uuidDadoSerializado</a></td>
 <td>Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu_uuid_ficha</td>
 </tr>
 <tr>
@@ -339,6 +339,11 @@
 <td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#11-datahorafinalatendimento">dataHoraFinalAtendimento</a></td>
 <td>Data e hora do fim do atendimento no formato &quot;YYYY-MM-DD HH:MM:SS.MMM&quot;</td>
 </tr>
+<tr>
+<td>st_nao_possui_cpf</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#14-stnaopossuicpf">stNaoPossuiCpf</a></td>
+<td>Indica se o cidadão não possui CPF</td>
+</tr>
 </tbody></table>
 
 <h1 id="3-dimens-es-da-tabela">3. Dimensões da tabela</h1>
@@ -353,19 +358,23 @@
 </thead><tbody>
 <tr>
 <td>co_dim_sexo</td>
-<td>Código do sexo. Campo <code>co_seq_dim_fpxa_sexo</code> da <code>tb_dim_sexo</code></td>
+<td>Código do sexo. Campo <code>co_seq_dim_faixa_sexo</code> da <code>tb_dim_sexo</code></td>
 </tr>
 <tr>
 <td>co_dim_turno</td>
-<td>Código do turno do atendimento. Campo <code>co_seq_dim_fpxa_turno</code> da <code>tb_dim_turno</code></td>
+<td>Código do turno do atendimento. Campo <code>co_seq_dim_faixa_turno</code> da <code>tb_dim_turno</code></td>
 </tr>
 <tr>
 <td>co_dim_local_atendimento</td>
 <td>Código do local de atendimento. Campo <code>co_seq_dim_local_atendimento</code> da <code>tb_dim_local_atendimento</code></td>
 </tr>
 <tr>
-<td>co_dim_fpxa_etaria</td>
-<td>Código da fpxa etária. Campo <code>co_seq_dim_fpxa_etaria</code> da <code>tb_dim_fpxa_etaria</code></td>
+<td>co_dim_faixa_etaria</td>
+<td>Código da faixa etária. Campo <code>co_seq_dim_faixa_etaria</code> da <code>tb_dim_faixa_etaria</code></td>
+</tr>
+<tr>
+<td>co_dim_just_nao_possui_cpf</td>
+<td>Código da justificativa de não possuir CPF. Campo <code>co_seq_dim_just_nao_possui_cpf</code> da <code>tb_dim_just_nao_possui_cpf</code></td>
 </tr>
 </tbody></table>
 

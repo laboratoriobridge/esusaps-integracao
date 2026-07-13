@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tabela fato do cadastro individual</title>
+  <meta name="description" content="1. Objetivo">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/dw/fatos/cadastro_individual/tb_fat_cad_individual.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 8.4.2</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
+          
+        
+          
+            <li><a title="Fatos" href="/dw/fatos/index.html">Fatos</a></li>
+          
+        
+          
+            <li><a title="Cadastro individual" href="/dw/fatos/cadastro_individual/index.html">Cadastro individual</a></li>
+          
+        
+          
+            <li><a title="Tabela fato do cadastro individual" href="/dw/fatos/cadastro_individual/tb_fat_cad_individual.html">Tabela fato do cadastro individual</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Fatos" href="/dw/fatos/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Fatos)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Cadastro individual" href="/dw/fatos/cadastro_individual/index.html">Cadastro individual</a>
+      <ul>
+        
+          <li class="active">
+          
+            <a title="Tabela fato do cadastro individual" href="/dw/fatos/cadastro_individual/tb_fat_cad_individual.html">
+              Tabela fato do cadastro individual
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Tabela fato do cadastro individual</h1>
+    <p class="post-meta">
+      <a class="btn" href="/pdf.html?include=/dw/fatos/cadastro_individual/tb_fat_cad_individual.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 13/07/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="1-objetivo">1. Objetivo</h1>
+
+<p>A tabela <code>tb_fat_cad_individual</code> é populada sempre que os dados de um <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">Cadastro Individual do Cidadão</a> são processados.</p>
+
+<h1 id="2-regras">2. Regras</h1>
+
+<p><strong>1. </strong> A <code>tb_fat_cad_individual</code> é preenchida quando são processado(a)s:</p>
+
+<ul>
+<li>Fichas de cadastro individual recebidas através da importação de sistemas terceiros,  outras instalações do PEC e-SUS-APS ou aplicativo e-SUS Território;</li>
+<li>Registro da criação de um cadastro individual no CDS ou no módulo Cadastro individual,</li>
+<li>Registro de atualização de um cadastro individual no CDS, módulo de Cadastro individual, Acompanhamento do Território, Reterritorialização ou Unificação de prontuários.</li>
+</ul>
+
+<h1 id="3-fatos">3. Fatos</h1>
+
+<h2 id="3-1-metadados-dos-fatos">3.1 Metadados dos fatos</h2>
+
+<table><thead>
+<tr>
+<th>Colunas DW</th>
+<th>Referência LEDI</th>
+<th>Referência sistema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_seq_fat_cad_individual</td>
+<td>-</td>
+<td>Código de identificação sequencial criado automaticamente pelo sistema</td>
+</tr>
+<tr>
+<td>nu_uuid_ficha</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#9-uuid">uuid</a></td>
+<td>Identificador universalmente único do registro</td>
+</tr>
+<tr>
+<td>nu_uuid_ficha_origem</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#10-uuidfichaoriginadora">uuidFichaOriginadora</a></td>
+<td>Identificador universalmente único da ficha de origem do cadastro</td>
+</tr>
+<tr>
+<td>nu_uuid_dado_transp</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/camada-transporte.html#1-uuiddadoserializado">uuidDadoSerializado</a></td>
+<td>Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu_uuid_ficha</td>
+</tr>
+<tr>
+<td>nu_cns</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#9-cnscidadao">cnsCidadao</a></td>
+<td>CNS do cidadão</td>
+</tr>
+<tr>
+<td>nu_cpf_cidadao</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#25-cpfcidadao">cpfCidadao</a></td>
+<td>CPF do cidadão criptografado</td>
+</tr>
+<tr>
+<td>nu_cpf_responsavel</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#26-cpfresponsavelfamiliar">cpfResponsavelFamiliar</a></td>
+<td>CPF do responsável familiar criptografado</td>
+</tr>
+<tr>
+<td>nu_cns_responsavel</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#10-cnsresponsavelfamiliar">cnsResponsavelFamiliar</a></td>
+<td>CNS do responsável familiar</td>
+</tr>
+<tr>
+<td>co_fat_cidadao_pec</td>
+<td>-</td>
+<td>Campo <code>co_seq_fat_cidadao_pec</code> da <code>tb_fat_cidadao_pec</code></td>
+</tr>
+<tr>
+<td>co_fat_cidadao_pec_responsvl</td>
+<td>-</td>
+<td>Campo <code>co_seq_fat_cidadao_pec</code> da <code>tb_fat_cidadao_pec</code> referente ao responsável familiar</td>
+</tr>
+</tbody></table>
+
+<h2 id="3-2-m-tricas-dos-fatos">3.2 Métricas dos fatos</h2>
+
+<table><thead>
+<tr>
+<th>Colunas DW</th>
+<th>Referência LEDI</th>
+<th>Referência sistema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>st_recusa_cadastro</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#7-statustermorecusacadastroindividualatencaobasica">statusTermoRecusaCadastroIndividualAtencaoBasica</a></td>
+<td>Status que indica se o cidadão recusou o cadastro</td>
+</tr>
+<tr>
+<td>dt_nascimento</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#3-datanascimentocidadao">dataNascimentoCidadao</a></td>
+<td>Data de nascimento do cidadão</td>
+</tr>
+<tr>
+<td>st_desconhece_mae</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#4-desconhecenomemae">desconheceNomeMae</a></td>
+<td>Status que indica se não há identificação da mãe do cidadão</td>
+</tr>
+<tr>
+<td>st_desconhece_pai</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#19-desconhecenomepai">desconheceNomePai</a></td>
+<td>Status que indica se não há identificação do pai do cidadão</td>
+</tr>
+<tr>
+<td>st_responsavel_familiar</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#16-statusehresponsavel">statusEhResponsavel</a></td>
+<td>Status que indica se o cidadão é o responsável familiar</td>
+</tr>
+<tr>
+<td>st_gestante</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#14-statusehgestante">statusEhGestante</a></td>
+<td>Status que indica se a cidadã está gestante</td>
+</tr>
+<tr>
+<td>st_deficiencia</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#14-statustemalgumadeficiencia">statusTemAlgumaDeficiencia</a></td>
+<td>Status que indica se o cidadão tem alguma deficiência</td>
+</tr>
+<tr>
+<td>st_defi_auditiva <br> st_defi_intelectual_cognitiva <br> st_defi_outra <br> st_defi_visual <br> st_defi_fisica</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#1-deficienciascidadao">deficienciasCidadao</a></td>
+<td>Indica o(s) tipo(s) de deficiência do cidadão</td>
+</tr>
+<tr>
+<td>st_defi_tea</td>
+<td>-</td>
+<td>Indica se o cidadão possui Transtorno do Espectro Autista (TEA)</td>
+</tr>
+<tr>
+<td>st_fumante</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#13-statusehfumante">statusEhFumante</a></td>
+<td>Status que indica se o cidadão é fumante</td>
+</tr>
+<tr>
+<td>st_alcool</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#11-statusehdependentealcool">statusEhDependenteAlcool</a></td>
+<td>Status que indica se o cidadão usa álcool</td>
+</tr>
+<tr>
+<td>st_outra_droga</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#12-statusehdependenteoutrasdrogas">statusEhDependenteOutrasDrogas</a></td>
+<td>Status que indica se o cidadão usa outras drogas</td>
+</tr>
+<tr>
+<td>st_hipertensao_arterial</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#20-statustemhipertensaoarterial">statusTemHipertensaoArterial</a></td>
+<td>Status que indica se o cidadão tem hipertensão arterial</td>
+</tr>
+<tr>
+<td>st_diabete</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#17-statustemdiabetes">statusTemDiabetes</a></td>
+<td>Status que indica se o cidadão tem diabetes</td>
+</tr>
+<tr>
+<td>st_avc</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#24-statusteveavcderrame">statusTeveAvcDerrame</a></td>
+<td>Status que indica se o cidadão já teve AVC/derrame</td>
+</tr>
+<tr>
+<td>st_infarto</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#26-statusteveinfarto">statusTeveInfarto</a></td>
+<td>Status que indica se o cidadão já teve infarto</td>
+</tr>
+<tr>
+<td>st_hanseniase</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#19-statustemhanseniase">statusTemHanseniase</a></td>
+<td>Status que indica se o cidadão tem hanseníase</td>
+</tr>
+<tr>
+<td>st_tuberculose</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#23-statustemtuberculose">statusTemTuberculose</a></td>
+<td>Status que indica se o cidadão tem tuberculose</td>
+</tr>
+<tr>
+<td>st_cancer</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#21-statustemtevecancer">statusTemTeveCancer</a></td>
+<td>Status que indica se o cidadão tem câncer</td>
+</tr>
+<tr>
+<td>st_internacao_12</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#27-statusteveinternadoem12meses">statusTeveInternadoem12Meses</a></td>
+<td>Status que indica se o cidadão esteve internado nos últimos 12 meses</td>
+</tr>
+<tr>
+<td>st_tratamento_psiquiatra</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#30-statusdiagnosticomental">statusDiagnosticoMental</a></td>
+<td>Status que indica se o cidadão está em tratamento psiquiátrico</td>
+</tr>
+<tr>
+<td>st_acamado</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#15-statusestaacamado">statusEstaAcamado</a></td>
+<td>Status que indica se o cidadão está acamado</td>
+</tr>
+<tr>
+<td>st_domiciliado</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#16-statusestadomiciliado">statusEstaDomiciliado</a></td>
+<td>Status que indica se o cidadão está domiciliado</td>
+</tr>
+<tr>
+<td>st_usa_planta_medicinal</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#29-statususaplantasmedicinais">statusUsaPlantasMedicinais</a></td>
+<td>Status que indica se o cidadão usa plantas medicinais</td>
+</tr>
+<tr>
+<td>st_doenca_cardiaca</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#25-statustevedoencacardiaca">statusTeveDoencaCardiaca</a></td>
+<td>Status que indica se o cidadão tem doença cardíaca</td>
+</tr>
+<tr>
+<td>st_doenca_card_insuficiencia <br> st_doenca_card_outro <br> st_doenca_card_n_sabe</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#6-doencacardiaca">doencaCardiaca</a></td>
+<td>Indica o(s) tipo(s) de doença cardíaca do cidadão</td>
+</tr>
+<tr>
+<td>st_doenca_respiratoria</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#18-statustemdoencarespiratoria">statusTemDoencaRespiratoria</a></td>
+<td>Status que indica se o cidadão tem doença respiratória</td>
+</tr>
+<tr>
+<td>st_doenca_respira_asma <br> st_doenca_respira_dpoc_enfisem <br> st_doenca_respira_outra <br> st_doenca_respira_n_sabe</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#7-doencarespiratoria">doencaRespiratoria</a></td>
+<td>Indica o(s) tipo(s) de doença respiratória do cidadão</td>
+</tr>
+<tr>
+<td>st_problema_rins</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#22-statustemtevedoencasrins">statusTemTeveDoencasRins</a></td>
+<td>Status que indica se o cidadão tem problema nos rins</td>
+</tr>
+<tr>
+<td>st_problema_rins_insuficiencia <br> st_problema_rins_outro <br> st_problema_rins_nao_sabe</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#8-doencarins">doencaRins</a></td>
+<td>Indica o(s) tipo(s) de problema renal do cidadão</td>
+</tr>
+<tr>
+<td>st_pic</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#28-statususaoutraspraticasintegrativasoucomplementares">statusUsaOutrasPraticasIntegrativasOuComplementares</a></td>
+<td>Status que indica se o cidadão usa práticas integrativas e complementares em saúde (PIC)</td>
+</tr>
+<tr>
+<td>st_plano_saude_privado</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#13-statuspossuiplanosaudeprivado">statusPossuiPlanoSaudePrivado</a></td>
+<td>Status que indica se o cidadão possui plano de saúde privado</td>
+</tr>
+<tr>
+<td>st_participa_grupo_comunitario</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#12-statusparticipagrupocomunitario">statusParticipaGrupoComunitario</a></td>
+<td>Status que indica se o cidadão participa de algum grupo comunitário</td>
+</tr>
+<tr>
+<td>st_frequenta_creche</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#10-statusfrequentaescola">statusFrequentaEscola</a></td>
+<td>Status que indica se a criança frequenta creche</td>
+</tr>
+<tr>
+<td>st_frequenta_cuidador</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#9-statusfrequentabenzedeira">statusFrequentaBenzedeira</a></td>
+<td>Status que indica se a criança fica com cuidador</td>
+</tr>
+<tr>
+<td>st_comunidade_tradicional</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#11-statusmembropovocomunidadetradicional">statusMembroPovoComunidadeTradicional</a></td>
+<td>Status que indica se o cidadão é membro de comunidade tradicional</td>
+</tr>
+<tr>
+<td>st_morador_rua</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#9-statussituacaorua">statusSituacaoRua</a></td>
+<td>Status que indica se o cidadão é morador de rua</td>
+</tr>
+<tr>
+<td>st_recebe_beneficio</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#8-statusrecebebeneficio">statusRecebeBeneficio</a></td>
+<td>Status que indica se o cidadão recebe algum benefício social</td>
+</tr>
+<tr>
+<td>st_beneficio_bolsa_familia <br> st_beneficio_cesta_alimento <br> st_beneficio_leite_nao_humano <br> st_beneficio_nao_recebe <br> st_beneficio_outros <br> st_beneficio_aposentado <br> st_beneficio_prest_continuada</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#8-statusrecebebeneficio">statusRecebeBeneficio</a></td>
+<td>Indica o(s) tipo(s) de benefício que o cidadão recebe</td>
+</tr>
+<tr>
+<td>st_referencia_familiar</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#7-statuspossuireferenciafamiliar">statusPossuiReferenciaFamiliar</a></td>
+<td>Status que indica se o cidadão é a referência da família no território</td>
+</tr>
+<tr>
+<td>st_acompanhado_instituicao</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#6-statusacompanhadoporoutrainstituicao">statusAcompanhadoPorOutraInstituicao</a></td>
+<td>Status que indica se o cidadão é acompanhado por alguma instituição</td>
+</tr>
+<tr>
+<td>st_visita_familiar_frequente</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#11-statusvisitafamiliarfrequentemente">statusVisitaFamiliarFrequentemente</a></td>
+<td>Status que indica se o cidadão visita a família com frequência</td>
+</tr>
+<tr>
+<td>st_higiene_pessoal_acesso</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#10-statustemacessohigienepessoalsituacaorua">statusTemAcessoHigienePessoalSituacaoRua</a></td>
+<td>Status que indica se o cidadão em situação de rua tem acesso a higiene pessoal</td>
+</tr>
+<tr>
+<td>st_hig_pess_banho <br> st_hig_pess_sanitario <br> st_hig_pess_higiene_bucal <br> st_hig_pess_outros</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#2-higienepessoalsituacaorua">higienePessoalSituacaoRua</a></td>
+<td>Indica o(s) tipo(s) de acesso a higiene pessoal</td>
+</tr>
+<tr>
+<td>st_orig_alimen_restaurante_pop <br> st_orig_alimen_doacao_reli <br> st_orig_alimen_doacao_rest <br> st_orig_alimen_doacao_popular <br> st_orig_alimen_outros</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#3-origemalimentosituacaorua">origemAlimentoSituacaoRua</a></td>
+<td>Indica a(s) origem(ns) da alimentação do cidadão em situação de rua</td>
+</tr>
+<tr>
+<td>st_respons_crianca_adulto_resp <br> st_respons_crianca_outra_crian <br> st_respons_crianca_adolescente <br> st_respons_crianca_sozinha <br> st_respons_crianca_creche <br> st_respons_crianca_outro</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#17-responsavelporcrianca">responsavelPorCrianca</a></td>
+<td>Indica com quem fica a criança de 0 a 9 anos</td>
+</tr>
+<tr>
+<td>st_informar_orientacao_sexual</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#8-statusdesejainformarorientacaosexual">statusDesejaInformarOrientacaoSexual</a></td>
+<td>Status que indica se o cidadão optou por não informar a orientação sexual</td>
+</tr>
+<tr>
+<td>st_informar_identidade_genero</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#16-statusdesejainformaridentidadegenero">statusDesejaInformarIdentidadeGenero</a></td>
+<td>Status que indica se o cidadão optou por não informar a identidade de gênero</td>
+</tr>
+<tr>
+<td>dt_naturalizacao</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#20-dtnaturalizacao">dtNaturalizacao</a></td>
+<td>Data de naturalização do cidadão</td>
+</tr>
+<tr>
+<td>dt_entrada_brasil</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#22-dtentradabrasil">dtEntradaBrasil</a></td>
+<td>Data de entrada no Brasil</td>
+</tr>
+<tr>
+<td>dt_obito</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#2-dataobito">dataObito</a></td>
+<td>Data do óbito do cidadão</td>
+</tr>
+<tr>
+<td>nu_micro_area</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#23-microarea">microarea</a></td>
+<td>Número da microárea onde o cidadão reside</td>
+</tr>
+<tr>
+<td>st_comeu_que_tinha_dnheir_acab</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#2-comeualgunsalimentosquetinhadinheiroacabou">comeuAlgunsAlimentosQueTinhaDinheiroAcabou</a></td>
+<td>Indica se nos últimos três meses o cidadão comeu apenas alguns alimentos que ainda tinha porque o dinheiro acabou</td>
+</tr>
+<tr>
+<td>st_alimentos_acab_sem_dinheiro</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#1-alimentosacabaramantesterdinheirocomprarmais">alimentosAcabaramAntesTerDinheiroComprarMais</a></td>
+<td>Indica se nos últimos três meses os alimentos acabaram antes que houvesse dinheiro para comprar mais</td>
+</tr>
+<tr>
+<td>st_atend_socioeducativo</td>
+<td>-</td>
+<td>Indica se o cidadão está em atendimento socioeducativo</td>
+</tr>
+<tr>
+<td>nu_dnv_cidadao</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#29-dnv">dnv</a></td>
+<td>Número da Declaração de Nascido Vivo do cidadão</td>
+</tr>
+<tr>
+<td>st_nao_possui_cpf</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#30-stnaopossuicpf">stNaoPossuiCpf</a></td>
+<td>Indica se o cidadão não possui CPF</td>
+</tr>
+<tr>
+<td>no_nome</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#7-nomecidadao">nomeCidadao</a></td>
+<td>Nome do cidadão</td>
+</tr>
+<tr>
+<td>no_nome_social</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#1-nomesocial">nomeSocial</a></td>
+<td>Nome social do cidadão</td>
+</tr>
+<tr>
+<td>no_nome_mae</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#8-nomemaecidadao">nomeMaeCidadao</a></td>
+<td>Nome da mãe do cidadão</td>
+</tr>
+<tr>
+<td>no_nome_pai</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#18-nomepaicidadao">nomePaiCidadao</a></td>
+<td>Nome do pai do cidadão</td>
+</tr>
+<tr>
+<td>nu_nis</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#12-numeronispispasep">numeroNisPisPasep</a></td>
+<td>NIS/PIS/PASEP do cidadão</td>
+</tr>
+<tr>
+<td>nu_portaria_naturalizacao</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#21-portarianaturalizacao">portariaNaturalizacao</a></td>
+<td>Número da portaria de naturalização</td>
+</tr>
+<tr>
+<td>nu_celular</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#11-telefonecelular">telefoneCelular</a></td>
+<td>Número de celular do cidadão</td>
+</tr>
+<tr>
+<td>no_email</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#5-emailcidadao">emailCidadao</a></td>
+<td>Endereço de e-mail do cidadão</td>
+</tr>
+<tr>
+<td>nu_obito_do</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#3-numerodo">numeroDO</a></td>
+<td>Número da Declaração de Óbito do cidadão</td>
+</tr>
+<tr>
+<td>no_maternidade_referencia</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#9-maternidadedereferencia">maternidadeDeReferencia</a></td>
+<td>Nome da maternidade de referência</td>
+</tr>
+<tr>
+<td>no_causa_internacao12</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#1-descricaocausainternacaoem12meses">descricaoCausaInternacaoEm12Meses</a></td>
+<td>Descrição da causa de internação nos últimos 12 meses</td>
+</tr>
+<tr>
+<td>no_plantas_medicinais</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#5-descricaoplantasmedicinaisusadas">descricaoPlantasMedicinaisUsadas</a></td>
+<td>Descrição das plantas medicinais utilizadas</td>
+</tr>
+<tr>
+<td>no_outra_condicao1</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#2-descricaooutracondicao1">descricaoOutraCondicao1</a></td>
+<td>Descrição de outra condição de saúde 1</td>
+</tr>
+<tr>
+<td>no_outra_condicao2</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#3-descricaooutracondicao2">descricaoOutraCondicao2</a></td>
+<td>Descrição de outra condição de saúde 2</td>
+</tr>
+<tr>
+<td>no_outra_condicao3</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#4-descricaooutracondicao3">descricaoOutraCondicao3</a></td>
+<td>Descrição de outra condição de saúde 3</td>
+</tr>
+<tr>
+<td>no_acompanhado_instituicao</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#4-outrainstituicaoqueacompanha">outraInstituicaoQueAcompanha</a></td>
+<td>Nome da instituição que acompanha o cidadão</td>
+</tr>
+<tr>
+<td>no_visita_familiar_parentesco</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#1-grauparentescofamiliarfrequentado">grauParentescoFamiliarFrequentado</a></td>
+<td>Grau de parentesco do familiar visitado frequentemente</td>
+</tr>
+<tr>
+<td>st_cidadao_aldeado</td>
+<td>-</td>
+<td>Indica se o cidadão reside em aldeia indígena</td>
+</tr>
+<tr>
+<td>st_ficha_inativa</td>
+<td>-</td>
+<td>Indica se a ficha de cadastro está inativa</td>
+</tr>
+<tr>
+<td>st_gerado_automaticamente</td>
+<td>-</td>
+<td>Indica se o registro foi gerado automaticamente pelo sistema</td>
+</tr>
+<tr>
+<td>st_processo_cidadao</td>
+<td>-</td>
+<td>Indica o processamento do cadastro no contexto do processo do cidadão</td>
+</tr>
+<tr>
+<td>st_processo_linha_tempo</td>
+<td>-</td>
+<td>Indica o processamento do cadastro na linha do tempo do cidadão</td>
+</tr>
+<tr>
+<td>st_proc_operacionais</td>
+<td>-</td>
+<td>Indica dados de processamento operacional do cadastro</td>
+</tr>
+</tbody></table>
+
+<p>Os seguintes campos da tabela armazenam valores criptografados:</p>
+
+<ul>
+<li>no_nome</li>
+<li>no_nome_social</li>
+<li>no_nome_mae</li>
+<li>no_nome_pai</li>
+<li>nu_nis</li>
+<li>nu_portaria_naturalizacao</li>
+<li>nu_celular</li>
+<li>no_email</li>
+<li>nu_obito_do</li>
+<li>no_maternidade_referencia</li>
+<li>no_causa_internacao12</li>
+<li>no_plantas_medicinais</li>
+<li>no_outra_condicao1</li>
+<li>no_outra_condicao2</li>
+<li>no_outra_condicao3</li>
+<li>no_acompanhado_instituicao</li>
+<li>no_visita_familiar_parentesco</li>
+<li>nu_cpf_cidadao</li>
+<li>nu_cpf_responsavel</li>
+</ul>
+
+<h1 id="4-dimens-es-da-tabela">4. Dimensões da tabela</h1>
+
+<h2 id="4-1-dimens-es-espec-ficas-dessa-tabela">4.1 Dimensões específicas dessa tabela</h2>
+
+<table><thead>
+<tr>
+<th>Coluna DW</th>
+<th>Dimensão referência</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_dim_sexo</td>
+<td>Código do sexo do cidadão. Campo <code>co_seq_dim_faixa_sexo</code> da <code>tb_dim_sexo</code></td>
+</tr>
+<tr>
+<td>co_dim_raca_cor</td>
+<td>Código da raça/cor do cidadão. Campo <code>co_seq_dim_raca_cor</code> da <code>tb_dim_raca_cor</code></td>
+</tr>
+<tr>
+<td>co_dim_etnia</td>
+<td>Código da etnia do cidadão. Campo <code>co_seq_dim_etnia</code> da <code>tb_dim_etnia</code></td>
+</tr>
+<tr>
+<td>co_dim_nacionalidade</td>
+<td>Código da nacionalidade do cidadão. Campo <code>co_seq_dim_nacionalidade</code> da <code>tb_dim_nacionalidade</code></td>
+</tr>
+<tr>
+<td>co_dim_pais_nascimento</td>
+<td>Código do país de nascimento do cidadão. Campo <code>co_seq_dim_pais</code> da <code>tb_dim_pais</code></td>
+</tr>
+<tr>
+<td>co_dim_municipio_cidadao</td>
+<td>Código do município de nascimento do cidadão. Campo <code>co_seq_dim_municipio</code> da <code>tb_dim_municipio</code></td>
+</tr>
+<tr>
+<td>co_dim_faixa_etaria</td>
+<td>Código da faixa etária do cidadão. Campo <code>co_seq_dim_faixa_etaria</code> da <code>tb_dim_faixa_etaria</code></td>
+</tr>
+<tr>
+<td>co_dim_frequencia_alimentacao</td>
+<td>Código da frequência de alimentação. Campo <code>co_seq_dim_frequencia_alimentacao</code> da <code>tb_dim_frequencia_alimentacao</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_parentesco</td>
+<td>Código do tipo de parentesco com o responsável familiar. Campo <code>co_seq_dim_tipo_parentesco</code> da <code>tb_dim_tipo_parentesco</code></td>
+</tr>
+<tr>
+<td>co_dim_cbo</td>
+<td>Código do CBO do profissional que realizou o cadastro. Campo <code>co_seq_dim_cbo</code> da <code>tb_dim_cbo</code></td>
+</tr>
+<tr>
+<td>co_dim_cbo_cidadao</td>
+<td>Código do CBO (ocupação) do cidadão. Campo <code>co_seq_dim_cbo</code> da <code>tb_dim_cbo</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_escolaridade</td>
+<td>Código do grau de escolaridade do cidadão. Campo <code>co_seq_dim_tipo_escolaridade</code> da <code>tb_dim_tipo_escolaridade</code></td>
+</tr>
+<tr>
+<td>co_dim_situacao_trabalho</td>
+<td>Código da situação de trabalho do cidadão. Campo <code>co_seq_dim_situacao_trabalho</code> da <code>tb_dim_situacao_trabalho</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_orientacao_sexual</td>
+<td>Código da orientação sexual do cidadão. Campo <code>co_seq_dim_tipo_orientacao_sexual</code> da <code>tb_dim_tipo_orientacao_sexual</code></td>
+</tr>
+<tr>
+<td>co_dim_identidade_genero</td>
+<td>Código da identidade de gênero do cidadão. Campo <code>co_seq_dim_identidade_genero</code> da <code>tb_dim_identidade_genero</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_saida_cadastro</td>
+<td>Código do tipo de saída do cadastro. Campo <code>co_seq_dim_tipo_saida_cadastro</code> da <code>tb_dim_tipo_saida_cadastro</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_condicao_peso</td>
+<td>Código da condição de peso do cidadão. Campo <code>co_seq_dim_tipo_condicao_peso</code> da <code>tb_dim_tipo_condicao_peso</code></td>
+</tr>
+<tr>
+<td>co_dim_tempo_morador_rua</td>
+<td>Código do tempo em situação de rua. Campo <code>co_seq_dim_tempo</code> da <code>tb_dim_tempo</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_sanguineo</td>
+<td>Código do tipo sanguíneo do cidadão. Campo <code>co_seq_dim_tipo_sanguineo</code> da <code>tb_dim_tipo_sanguineo</code></td>
+</tr>
+<tr>
+<td>co_dim_estado_civil</td>
+<td>Código do estado civil do cidadão. Campo <code>co_seq_dim_estado_civil</code> da <code>tb_dim_estado_civil</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_socioeducativo</td>
+<td>Código do tipo de atendimento socioeducativo. Campo <code>co_seq_tipo_socioeducativo</code> da <code>tb_dim_tipo_socioeducativo</code></td>
+</tr>
+<tr>
+<td>co_dim_tempo_socioeducativo</td>
+<td>Código do tempo de atendimento socioeducativo. Campo <code>co_seq_tempo_socioeducativo</code> da <code>tb_dim_tempo_socioeducativo</code></td>
+</tr>
+<tr>
+<td>co_dim_just_nao_possui_cpf</td>
+<td>Código da justificativa de não possuir CPF. Campo <code>co_seq_dim_just_nao_possui_cpf</code> da <code>tb_dim_just_nao_possui_cpf</code></td>
+</tr>
+<tr>
+<td>co_dim_povo_comunidad_trad</td>
+<td>Código do povo ou comunidade tradicional do cidadão. Campo <code>co_seq_dim_povo_comunidad_trad</code> da <code>tb_dim_povo_comunidad_trad</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="4-2-dimens-es-comuns-a-todos-os-fatos-do-cadastro-individual">4.2 Dimensões comuns a todos os fatos do cadastro individual</h2>
+
+<table><thead>
+<tr>
+<th>Coluna DW</th>
+<th>Dimensão referência</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_dim_municipio</td>
+<td>Código de identificação do município. Campo <code>co_seq_dim_municipio</code> da <code>tb_dim_municipio</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_ficha</td>
+<td>Código de identificação do tipo de ficha. Campo <code>co_seq_dim_tipo_ficha</code> da <code>tb_dim_tipo_ficha</code></td>
+</tr>
+<tr>
+<td>co_dim_profissional</td>
+<td>Código de identificação do profissional responsável. Campo <code>co_seq_dim_profissional</code> da <code>tb_dim_profissional</code></td>
+</tr>
+<tr>
+<td>co_dim_unidade_saude</td>
+<td>Código de identificação da unidade de saúde do profissional responsável. Campo <code>co_seq_dim_unidade_saude</code> da <code>tb_dim_unidade_saude</code></td>
+</tr>
+<tr>
+<td>co_dim_equipe</td>
+<td>Código de identificação da equipe do profissional responsável. Campo <code>co_seq_dim_equipe</code> da <code>tb_dim_equipe</code></td>
+</tr>
+<tr>
+<td>co_dim_tempo</td>
+<td>Responsável por armazenar as datas de maneira estruturada. Campo <code>co_seq_dim_tempo</code> da <code>tb_dim_tempo</code></td>
+</tr>
+<tr>
+<td>co_dim_tempo_validade</td>
+<td>Responsável por armazenar a data de validade do cadastro. Campo <code>co_seq_dim_tempo</code> da <code>tb_dim_tempo</code></td>
+</tr>
+<tr>
+<td>co_dim_tempo_validade_recusa</td>
+<td>Responsável por armazenar a data de validade da recusa de cadastro. Campo <code>co_seq_dim_tempo</code> da <code>tb_dim_tempo</code></td>
+</tr>
+<tr>
+<td>co_dim_tipo_origem_dado_transp</td>
+<td>Código da origem do dado no transporte. Campo <code>co_seq_dim_tp_orgm_dado_transp</code> da <code>tb_dim_tipo_origem_dado_transp</code></td>
+</tr>
+<tr>
+<td>co_dim_cds_tipo_origem</td>
+<td>Código da origem do dado no transporte. Campo <code>co_seq_dim_tipo_origem</code> da <code>tb_dim_tipo_origem</code></td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/js/lunr.min.js"></script>
+
+    <script src="/js/site.js" type="text/javascript"></script>    
+    <script src="/js/search-index.js" type="text/javascript"></script>
+    <script src="/js/busca.js"></script>
+  </body>
+</html>

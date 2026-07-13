@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.4.2</span>
+        <span class="label">versão 8.4.2</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.4.2</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.4.2</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.4.2" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 7.4.2)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 8.4.2)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fv.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 09/02/2026</span>
+        <span class="label" title="Data da última modificação">Alterado em 19/06/2026</span>
       
     </p>
   </header>
@@ -412,7 +412,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>15</td>
 <td>15</td>
 </tr>
@@ -422,7 +422,7 @@
 
 <ul>
 <li>Validado por algoritmo;</li>
-<li>Deixa de ser obrigatório se o campo <a href="#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>É de preenchimento obrigatório se o campo <a href="#18-stnaopossuicpf">stNaoPossuiCpf</a> = <code>true</code>;</li>
 <li>Não pode ser preenchido se o campo <a href="#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
 </ul>
 
@@ -647,7 +647,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>11</td>
 <td>11</td>
 </tr>
@@ -657,7 +657,7 @@
 
 <ul>
 <li>Somente CPF válido será aceito;</li>
-<li>Deixa de ser obrigatório se o campo <a href="#3-cnscidadao">cnsCidadao</a> for preenchido.</li>
+<li>É de preenchimento obrigatório se o campo <a href="#18-stnaopossuicpf">stNaoPossuiCpf</a> = <code>false</code>;</li>
 <li>Não pode ser preenchido se o campo <a href="#3-cnscidadao">cnsCidadao</a> for preenchido.</li>
 </ul>
 
@@ -791,9 +791,9 @@
 <li>É de preenchimento obrigatório se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>.</li>
 </ul>
 
-<h3 id="5-fabricante">#5 fabricante</h3>
+<h3 id="5-corndsfabricante">#5 coRndsFabricante</h3>
 
-<p>Nome do fabricante do imunobiológico aplicado na vacinação.</p>
+<p>Código do fabricante do imunobiológico aplicado na vacinação.</p>
 
 <table><thead>
 <tr>
@@ -818,7 +818,7 @@
 <li>É de preenchimento obrigatório se o campo <a href="#7-stregistroanterior">stRegistroAnterior</a> = <code>false</code>.</li>
 </ul>
 
-<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#fabricante">Fabricante</a>.</p>
+<p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#corndsfabricante">Fabricante</a>.</p>
 
 <h3 id="6-grupoatendimento">#6 grupoAtendimento</h3>
 
@@ -1109,13 +1109,69 @@
 <p>Os dados do campo &quot;Local de aplicação&quot; são validados de acordo com o campo &quot;Via de administração&quot;.</p>
 
 <ul>
-<li>Se <code>Via de administração</code> = <code>Endovenosa</code>, o campo deve ser preenchido com o valor = <code>Rede venosa</code>;</li>
-<li>Se <code>Via de administração</code> = <code>Intramuscular</code> ou <code>Intramuscular Profunda</code>, o campo deve ser preenchido com um dos valores = <code>Vastolateral da coxa direito</code>, <code>Vastolateral da coxa esquerdo</code>, <code>Deltóide direito</code>, <code>Deltóide esquerdo</code>, <code>Dorso glúteo direito</code>, <code>Dorso glúteo esquerdo</code>, <code>Vastolateral da coxa direito</code>, <code>Vastolateral da coxa esquerdo</code>, <code>Ventro glúteo direito</code>, <code>Ventro glúteo esquerdo</code>, <code>Outro</code>;</li>
+<li>Se <code>Via de administração</code> = <code>Intravenosa</code>, o campo deve ser preenchido com o valor = <code>Rede venosa</code>;</li>
+<li>Se <code>Via de administração</code> = <code>Intramuscular</code>, o campo deve ser preenchido com um dos valores = <code>Vastolateral da coxa direito</code>, <code>Vastolateral da coxa esquerdo</code>, <code>Deltóide direito</code>, <code>Deltóide esquerdo</code>, <code>Dorso glúteo direito</code>, <code>Dorso glúteo esquerdo</code>, <code>Vastolateral da coxa direito</code>, <code>Vastolateral da coxa esquerdo</code>, <code>Ventro glúteo direito</code>, <code>Ventro glúteo esquerdo</code>, <code>Outro</code>;</li>
 <li>Se <code>Via de administração</code> = <code>Intradérmica</code> ou <code>Subcutânea</code>, o campo deve ser preenchido com um dos valores = <code>Face ânterolateral externa da coxa direito</code>, <code>Face ânterolateral externa da coxa esquerdo</code>, <code>Face ânterolateral externo do antebraço direito</code>, <code>Face ânterolateral externo do antebraço esquerdo</code>, <code>Face ânterolateral externa do braço direito</code>, <code>Face ânterolateral externa do braço esquerdo</code>, <code>Face externa superior do braço direito</code>, <code>Face externa superior do braço esquerdo</code>, <code>Face externa inferior do braço direito</code>, <code>Face externa inferior do braço esquerdo</code>, <code>Outro</code>;</li>
 <li>Se <code>Via de administração</code> = <code>Oral</code>, o campo deve ser preenchido com o valor = <code>Boca</code>;</li>
+<li>Se  <code>Via de administração</code>= <code>Intralesional</code>, o campo deve ser preenchido com o valor <code>Ferimento Local</code>.</li>
 </ul>
 
 <p><strong>Referência:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#localaplicacao">Local de aplicação</a>.</p>
+
+<h3 id="18-stnaopossuicpf">#18 stNaoPossuiCpf</h3>
+
+<p>Marcador que indica que o CPF do cidadão não existe ou não está disponível no momento do cadastro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Deve ser preenchido com <code>false</code> se o campo <a href="#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+</ul>
+
+<h3 id="19-justificativanaopossuicpf">#19 justificativaNaoPossuiCpf</h3>
+
+<p>Justificativa para o cidadão não possuir ou não informar CPF.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>É permitido o envio apenas de justificativas que constam na listagem de referência;</li>
+<li>É de preenchimento obrigatório se o campo <a href="#18-stnaopossuicpf">stNaoPossuiCpf</a> = <code>true</code> e o campo <a href="#12-cpfcidadao">cpfCidadao</a> não for preenchido.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#justificativanaopossuicpf">justificativaNaoPossuiCpf</a>.</p>
 
   </article>
 

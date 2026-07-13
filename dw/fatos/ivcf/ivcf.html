@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.4.2</span>
+        <span class="label">versão 8.4.2</span>
       
     </a>
 
@@ -156,7 +156,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/ivcf/ivcf.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 31/01/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/07/2026</span>
       
     </p>
   </header>
@@ -168,13 +168,14 @@
 
 <h1 id="2-regras">2. Regras</h1>
 
-<p><strong>1. </strong> A <code>tb_fat_ivcf</code> é preenchida quando:</p>
+<p><strong>1. </strong> A <code>tb_fat_ivcf</code> é preenchida quando são processados:</p>
 
 <ul>
-<li>É realizada uma importação de sistemas terceiros ou outras instalações do PEC onde são recebidas fichas de atendimento individual, atendimento odontológico individual e/ou atendimento de procedimentos que possuam registro de IVCF-20;</li>
-<li>É registrado um IVCF-20 em um atendimento individual;</li>
-<li>É registrado um IVCF-20 em um atendimento odontológico individual;</li>
-<li>É registrado um IVCF-20 em um atendimento de procedimentos;</li>
+<li>Registros oriundos de importação de sistemas terceiros ou outras instalações do PEC com fichas de atendimento individual, atendimento odontológico individual, atendimento de procedimentos e/ou visita domiciliar e territorial que possuam registro de IVCF-20;</li>
+<li>Registro de um IVCF-20 em um atendimento individual;</li>
+<li>Registro de um IVCF-20 em um atendimento odontológico individual;</li>
+<li>Registro de um IVCF-20 em um atendimento de procedimentos;</li>
+<li>Registro de um IVCF-20 em uma ficha de visita recebida do aplicativo e-SUS Território.</li>
 </ul>
 
 <!-- Adicionar aqui a parte da FVDT / VD do e-SUS Território quando for integrado-->
@@ -191,8 +192,13 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>co_seq_fat_ivcf</td>
+<td>-</td>
+<td>Código de identificação sequencial criado automaticamente pelo sistema</td>
+</tr>
+<tr>
 <td>nu_uuid_ficha</td>
-<td>uuidFicha</td>
+<td>-</td>
 <td>Identificador universalmente único do registro</td>
 </tr>
 <tr>
@@ -202,19 +208,19 @@
 </tr>
 <tr>
 <td>nu_cpf_cidadao</td>
-<td>cpfCidadao</td>
+<td>-</td>
 <td>CPF do cidadão</td>
 </tr>
 <tr>
 <td>nu_cns_cidadao</td>
-<td>cnsCidadao</td>
+<td>-</td>
 <td>CNS do cidadão</td>
 </tr>
 </tbody></table>
 
 <h2 id="3-2-m-tricas-dos-fatos">3.2 Métricas dos Fatos</h2>
 
-<p>Como as informações presentes nesta ficha são difíceis de serem representadas devido ao seu tamanho, as coluna da tabela receberam nomes genéricos, conforme apresentados na tabela abaixo.</p>
+<p>Como as informações presentes nesta ficha são difíceis de serem representadas devido ao seu tamanho, as colunas da tabela receberam nomes genéricos, conforme apresentados na tabela abaixo.</p>
 
 <table><thead>
 <tr>
@@ -305,7 +311,7 @@
 </tr>
 </tbody></table>
 
-<p>Referências LEDI: <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#ivcf">Ficha de Atendimento Odontológico Individual</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#ivcf">Ficha de Atendimento Individual</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#ivcf">Ficha de Procedimentos</a>.</p>
+<p>Referências LEDI: <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html#27-ivcf">Ficha de Atendimento Odontológico Individual</a>, <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html#31-ivcf">Ficha de Atendimento Individual</a> e <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html#13-ivcf">Ficha de Procedimentos</a>.</p>
 
 <h1 id="4-dimens-es-da-tabela">4. Dimensões da tabela</h1>
 
@@ -325,7 +331,7 @@
 </tr>
 <tr>
 <td>co_dim_unidade_saude</td>
-<td>Código de identificação da unidade de sáude do profissional responsável. Campo <code>co_seq_dim_unidade_saude</code> da <code>tb_dim_unidade_saude</code></td>
+<td>Código de identificação da unidade de saúde do profissional responsável. Campo <code>co_seq_dim_unidade_saude</code> da <code>tb_dim_unidade_saude</code></td>
 </tr>
 <tr>
 <td>co_dim_equipe</td>

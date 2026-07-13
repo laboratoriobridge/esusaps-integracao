@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.4.2</span>
+        <span class="label">versão 8.4.2</span>
       
     </a>
 
@@ -156,7 +156,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/oci/tb_fat_solicitacao_oci.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 16/09/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/07/2026</span>
       
     </p>
   </header>
@@ -168,16 +168,16 @@
 
 <h1 id="2-regras">2. Regras</h1>
 
-<p><strong>1. </strong> A <code>tb_fat_solicitacao_oci</code> é preenchida quando:</p>
+<p><strong>1. </strong> A <code>tb_fat_solicitacao_oci</code> é preenchida quando são processados:</p>
 
 <ul>
-<li>É registrado um código SIGTAP pertencente ao grupo <code>09 - Procedimento para Oferta de Cuidado Integrado</code> em um atendimento individual;</li>
-<li>É registrado um código SIGTAP pertencente ao grupo <code>09 - Procedimento para Oferta de Cuidado Integrado</code> em um atendimento odontológico individual;</li>
+<li>Um código SIGTAP pertencente ao grupo <code>09 - Procedimento para Oferta de Cuidado Integrado</code> registrado em um atendimento individual;</li>
+<li>Um código SIGTAP pertencente ao grupo <code>09 - Procedimento para Oferta de Cuidado Integrado</code> registrado em um atendimento odontológico individual;</li>
 </ul>
 
 <h1 id="3-fatos">3. Fatos</h1>
 
-<h1 id="3-1-metadados-dos-fatos">3.1 Metadados dos fatos</h1>
+<h2 id="3-1-metadados-dos-fatos">3.1 Metadados dos fatos</h2>
 
 <table><thead>
 <tr>
@@ -203,7 +203,7 @@
 </tr>
 <tr>
 <td>nu_uuid_dado_transp</td>
-<td>-</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/camada-transporte.html#1-uuiddadoserializado">uuidDadoSerializado</a></td>
 <td>Identificador universalmente único da camada de transporte de dados</td>
 </tr>
 <tr>
@@ -217,6 +217,10 @@
 <td>CNS do cidadão</td>
 </tr>
 </tbody></table>
+
+<h2 id="3-2-m-tricas-dos-fatos">3.2 Métricas dos fatos</h2>
+
+<p>Esta tabela não possui métricas próprias. Cada registro representa um procedimento OCI vinculado a um atendimento, sendo o próprio procedimento (<code>co_dim_procedimento</code>) a informação central da tabela.</p>
 
 <h1 id="4-dimens-es-da-tabela">4. Dimensões da tabela</h1>
 

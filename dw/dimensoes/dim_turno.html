@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tabela de dimensão de turno</title>
+  <meta name="description" content="1. Objetivo">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/dw/dimensoes/dim_turno.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 8.4.2</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
+          
+        
+          
+            <li><a title="Dimensões" href="/dw/dimensoes/index.html">Dimensões</a></li>
+          
+        
+          
+            <li><a title="Tabela de dimensão de turno" href="/dw/dimensoes/dim_turno.html">Tabela de dimensão de turno</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Data Warehouse Relatórios e-SUS APS PEC)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Dimensões" href="/dw/dimensoes/index.html">Dimensões</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de CBO" href="/dw/dimensoes/dim_cbo.html">
+              Tabela de dimensão de CBO
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de CIAP-2" href="/dw/dimensoes/dim_ciap.html">
+              Tabela de dimensão de CIAP-2
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de CID-10" href="/dw/dimensoes/dim_cid.html">
+              Tabela de dimensão de CID-10
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de UF" href="/dw/dimensoes/dim_uf.html">
+              Tabela de dimensão de UF
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de agrupadores de filtro" href="/dw/dimensoes/dim_agrupador_filtro.html">
+              Tabela de dimensão de agrupadores de filtro
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de aldeia indígena" href="/dw/dimensoes/dim_aldeia.html">
+              Tabela de dimensão de aldeia indígena
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de aleitamento materno" href="/dw/dimensoes/dim_aleitamento.html">
+              Tabela de dimensão de aleitamento materno
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de classificação de prioridade do cuidado compartilhado" href="/dw/dimensoes/dim_prioridade_cuidado.html">
+              Tabela de dimensão de classificação de prioridade do cuidado compartilhado
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de classificação de risco de encaminhamentos" href="/dw/dimensoes/dim_classificacao_risc_enc.html">
+              Tabela de dimensão de classificação de risco de encaminhamentos
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de condição de peso" href="/dw/dimensoes/dim_tipo_condicao_peso.html">
+              Tabela de dimensão de condição de peso
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de condição de posse e uso da terra" href="/dw/dimensoes/dim_tipo_posse_terra.html">
+              Tabela de dimensão de condição de posse e uso da terra
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de condição maternal" href="/dw/dimensoes/dim_condicao_maternal.html">
+              Tabela de dimensão de condição maternal
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de condutas do Atendimento Domiciliar" href="/dw/dimensoes/dim_conduta_ad.html">
+              Tabela de dimensão de condutas do Atendimento Domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de condutas do Cuidado Compartilhado" href="/dw/dimensoes/dim_conduta_cuidado.html">
+              Tabela de dimensão de condutas do Cuidado Compartilhado
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de cuidador" href="/dw/dimensoes/dim_cuidador.html">
+              Tabela de dimensão de cuidador
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de datas" href="/dw/dimensoes/dim_tempo.html">
+              Tabela de dimensão de datas
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de desfecho de visitas" href="/dw/dimensoes/dim_desfecho_visita.html">
+              Tabela de dimensão de desfecho de visitas
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de destino do lixo" href="/dw/dimensoes/dim_tipo_destino_lixo.html">
+              Tabela de dimensão de destino do lixo
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de dose de imunobiológico" href="/dw/dimensoes/dim_dose_dose_imunobiologico.html">
+              Tabela de dimensão de dose de imunobiológico
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de equipes" href="/dw/dimensoes/dim_equipe.html">
+              Tabela de dimensão de equipes
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de especialidades - Atendimento Individual" href="/dw/dimensoes/dim_especialidade.html">
+              Tabela de dimensão de especialidades - Atendimento Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de estabelecimentos do INEP" href="/dw/dimensoes/dim_inep.html">
+              Tabela de dimensão de estabelecimentos do INEP
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de estado civil" href="/dw/dimensoes/dim_estado_civil.html">
+              Tabela de dimensão de estado civil
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de estratégia de vacinação" href="/dw/dimensoes/dim_estrategia_vacinacao.html">
+              Tabela de dimensão de estratégia de vacinação
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de etnia" href="/dw/dimensoes/dim_etnia.html">
+              Tabela de dimensão de etnia
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de faixa etária" href="/dw/dimensoes/dim_faixa_etaria.html">
+              Tabela de dimensão de faixa etária
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de forma farmacêutica" href="/dw/dimensoes/dim_forma_farmaceutica.html">
+              Tabela de dimensão de forma farmacêutica
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de frequência de alimentação" href="/dw/dimensoes/dim_frequencia_alimentacao.html">
+              Tabela de dimensão de frequência de alimentação
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de graus de vulnerabilidade do IVCF-20" href="/dw/dimensoes/dim_grau_vulnerabilidade_ivcf.html">
+              Tabela de dimensão de graus de vulnerabilidade do IVCF-20
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de grupo de atendimento" href="/dw/dimensoes/dim_grupo_atendimento.html">
+              Tabela de dimensão de grupo de atendimento
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de grupos de CBO" href="/dw/dimensoes/dim_grupo_cbo.html">
+              Tabela de dimensão de grupos de CBO
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de identidade de gênero" href="/dw/dimensoes/dim_identidade_genero.html">
+              Tabela de dimensão de identidade de gênero
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de imunobiológico" href="/dw/dimensoes/dim_imunobiologico.html">
+              Tabela de dimensão de imunobiológico
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de justificativa de ausência de CPF" href="/dw/dimensoes/dim_just_nao_possui_cpf.html">
+              Tabela de dimensão de justificativa de ausência de CPF
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de local de aplicação da vacina" href="/dw/dimensoes/dim_local_apl_vacina.html">
+              Tabela de dimensão de local de aplicação da vacina
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de local de atendimento" href="/dw/dimensoes/dim_local_atendimento.html">
+              Tabela de dimensão de local de atendimento
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de material predominante das paredes" href="/dw/dimensoes/dim_tipo_material_parede.html">
+              Tabela de dimensão de material predominante das paredes
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de modalidade AD" href="/dw/dimensoes/dim_modalidade_ad.html">
+              Tabela de dimensão de modalidade AD
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de motivo de saída do cadastro" href="/dw/dimensoes/dim_tipo_saida_cadastro.html">
+              Tabela de dimensão de motivo de saída do cadastro
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de município" href="/dw/dimensoes/dim_municipio.html">
+              Tabela de dimensão de município
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de nacionalidade" href="/dw/dimensoes/dim_nacionalidade.html">
+              Tabela de dimensão de nacionalidade
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de orientação sexual" href="/dw/dimensoes/dim_tipo_orientacao_sexual.html">
+              Tabela de dimensão de orientação sexual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de país" href="/dw/dimensoes/dim_pais.html">
+              Tabela de dimensão de país
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de periodicidade da dose" href="/dw/dimensoes/dim_dose_frequencia_medida.html">
+              Tabela de dimensão de periodicidade da dose
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de povo ou comunidade tradicional" href="/dw/dimensoes/dim_povo_comunidad_trad.html">
+              Tabela de dimensão de povo ou comunidade tradicional
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de procedimentos" href="/dw/dimensoes/dim_procedimento.html">
+              Tabela de dimensão de procedimentos
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de procedências da atenção domiciliar" href="/dw/dimensoes/dim_procedencia_origem.html">
+              Tabela de dimensão de procedências da atenção domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de profissionais" href="/dw/dimensoes/dim_profissional.html">
+              Tabela de dimensão de profissionais
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de práticas integrativas complementares" href="/dw/dimensoes/dim_pic.html">
+              Tabela de dimensão de práticas integrativas complementares
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de racionalidade em saúde" href="/dw/dimensoes/dim_racionalidade_saude.html">
+              Tabela de dimensão de racionalidade em saúde
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de raça e cor" href="/dw/dimensoes/dim_raca_cor.html">
+              Tabela de dimensão de raça e cor
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de referências de cadastro de um mesmo cidadão" href="/dw/dimensoes/dim_cidadao_pec_grupo.html">
+              Tabela de dimensão de referências de cadastro de um mesmo cidadão
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de renda familiar" href="/dw/dimensoes/dim_tipo_renda_familiar.html">
+              Tabela de dimensão de renda familiar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de sexo" href="/dw/dimensoes/dim_sexo.html">
+              Tabela de dimensão de sexo
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de situação de moradia" href="/dw/dimensoes/dim_tipo_situacao_moradia.html">
+              Tabela de dimensão de situação de moradia
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de situação do problema/condição" href="/dw/dimensoes/dim_situacao_problema.html">
+              Tabela de dimensão de situação do problema/condição
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de situação no mercado de trabalho" href="/dw/dimensoes/dim_situacao_trabalho.html">
+              Tabela de dimensão de situação no mercado de trabalho
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tempo de cumprimento de medida socioeducativa" href="/dw/dimensoes/dim_tempo_socioeducativo.html">
+              Tabela de dimensão de tempo de cumprimento de medida socioeducativa
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tempo em situação de rua" href="/dw/dimensoes/dim_tempo_morador_rua.html">
+              Tabela de dimensão de tempo em situação de rua
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de abastecimento de água" href="/dw/dimensoes/dim_tipo_abastecimento_agua.html">
+              Tabela de dimensão de tipo de abastecimento de água
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de acesso ao domicílio" href="/dw/dimensoes/dim_tipo_acesso_domicilio.html">
+              Tabela de dimensão de tipo de acesso ao domicílio
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de atendimento" href="/dw/dimensoes/dim_tipo_atendimento.html">
+              Tabela de dimensão de tipo de atendimento
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de atividade coletiva" href="/dw/dimensoes/dim_tipo_atividade.html">
+              Tabela de dimensão de tipo de atividade coletiva
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de consulta odontológica" href="/dw/dimensoes/dim_tipo_consulta_odonto.html">
+              Tabela de dimensão de tipo de consulta odontológica
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de domicílio" href="/dw/dimensoes/dim_tipo_domicilio.html">
+              Tabela de dimensão de tipo de domicílio
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de elegibilidade para atenção domiciliar" href="/dw/dimensoes/dim_tipo_elegibilidade.html">
+              Tabela de dimensão de tipo de elegibilidade para atenção domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de endereço" href="/dw/dimensoes/dim_tipo_endereco.html">
+              Tabela de dimensão de tipo de endereço
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de escoamento sanitário" href="/dw/dimensoes/dim_tipo_escoamento_sanitar.html">
+              Tabela de dimensão de tipo de escoamento sanitário
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de escolaridade" href="/dw/dimensoes/dim_tipo_escolaridade.html">
+              Tabela de dimensão de tipo de escolaridade
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de ficha" href="/dw/dimensoes/dim_tipo_ficha.html">
+              Tabela de dimensão de tipo de ficha
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de glicemia capilar" href="/dw/dimensoes/dim_tipo_glicemia.html">
+              Tabela de dimensão de tipo de glicemia capilar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de imóvel" href="/dw/dimensoes/dim_tipo_imovel.html">
+              Tabela de dimensão de tipo de imóvel
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de localização da moradia" href="/dw/dimensoes/dim_tipo_localizacao.html">
+              Tabela de dimensão de tipo de localização da moradia
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de logradouro" href="/dw/dimensoes/dim_tipo_logradouro.html">
+              Tabela de dimensão de tipo de logradouro
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de medida socioeducativa" href="/dw/dimensoes/dim_tipo_socioeducativo.html">
+              Tabela de dimensão de tipo de medida socioeducativa
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de origem de energia elétrica" href="/dw/dimensoes/dim_tipo_origem_energ_elet.html">
+              Tabela de dimensão de tipo de origem de energia elétrica
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de origem do dado" href="/dw/dimensoes/dim_tipo_origem.html">
+              Tabela de dimensão de tipo de origem do dado
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de origem do dado transportado" href="/dw/dimensoes/dim_tipo_origem_dado_transp.html">
+              Tabela de dimensão de tipo de origem do dado transportado
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo de parentesco" href="/dw/dimensoes/dim_tipo_parentesco.html">
+              Tabela de dimensão de tipo de parentesco
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipo sanguíneo" href="/dw/dimensoes/dim_tipo_sanguineo.html">
+              Tabela de dimensão de tipo sanguíneo
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tipos de periodicidade da dose" href="/dw/dimensoes/dim_dose_frequencia.html">
+              Tabela de dimensão de tipos de periodicidade da dose
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de tratamento da água para consumo" href="/dw/dimensoes/dim_tipo_tratamento_agua.html">
+              Tabela de dimensão de tratamento da água para consumo
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Tabela de dimensão de turno" href="/dw/dimensoes/dim_turno.html">
+              Tabela de dimensão de turno
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de unidade de medida da duração do tratamento" href="/dw/dimensoes/dim_duracao_tratamento_med.html">
+              Tabela de dimensão de unidade de medida da duração do tratamento
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de unidade de saúde" href="/dw/dimensoes/dim_unidade_saude.html">
+              Tabela de dimensão de unidade de saúde
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de via de administração da vacina" href="/dw/dimensoes/dim_via_adm_vacina.html">
+              Tabela de dimensão de via de administração da vacina
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de via de administração de medicamento" href="/dw/dimensoes/dim_via_administracao.html">
+              Tabela de dimensão de via de administração de medicamento
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão de vinculação entre equipes" href="/dw/dimensoes/dim_vinculacao_equipes.html">
+              Tabela de dimensão de vinculação entre equipes
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de dimensão medicamentos (CATMAT)" href="/dw/dimensoes/dim_catmat.html">
+              Tabela de dimensão medicamentos (CATMAT)
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Tabela de dimensão de turno</h1>
+    <p class="post-meta">
+      <a class="btn" href="/pdf.html?include=/dw/dimensoes/dim_turno.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 13/07/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="1-objetivo">1. Objetivo</h1>
+
+<p>A tabela <code>tb_dim_turno</code> é utilizada para armazenar os turnos do atendimento. Possui como referência o <a href="/ledi/documentacao/referencias/dicionario.html#turno">Turno</a> do LEDI.</p>
+
+<h1 id="2-campos-da-tabela">2. Campos da tabela</h1>
+
+<table><thead>
+<tr>
+<th>Colunas DW</th>
+<th>Referência</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_seq_dim_turno</td>
+<td>Código de identificação sequencial</td>
+</tr>
+<tr>
+<td>nu_identificador</td>
+<td>Número identificador do turno</td>
+</tr>
+<tr>
+<td>ds_turno</td>
+<td>Descrição do turno</td>
+</tr>
+<tr>
+<td>co_ordem</td>
+<td>Código para ordenação</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/js/lunr.min.js"></script>
+
+    <script src="/js/site.js" type="text/javascript"></script>    
+    <script src="/js/search-index.js" type="text/javascript"></script>
+    <script src="/js/busca.js"></script>
+  </body>
+</html>

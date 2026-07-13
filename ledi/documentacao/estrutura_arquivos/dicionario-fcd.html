@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.4.2</span>
+        <span class="label">versão 8.4.2</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 7.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 7.4.2</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.4.2</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 7.4.2" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 7.4.2)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 8.4.2)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 16/09/2025</span>
+        <span class="label" title="Data da última modificação">Alterado em 19/06/2026</span>
       
     </p>
   </header>
@@ -278,7 +278,7 @@
 <td>List&lt;Long&gt;</td>
 <td>Condicional</td>
 <td>0</td>
-<td>4</td>
+<td>8</td>
 </tr>
 </tbody></table>
 
@@ -369,6 +369,7 @@
 
 <ul>
 <li>Só pode ser preenchido se o campo <a href="#12-tipodeimovel">tipoDeImovel</a> = <code>01</code> Domicílio;</li>
+<li>Não pode ser preenchido se o campo <a href="#18-stativo">stAtivo</a> = <code>false</code>;</li>
 <li>Não podem ser cadastradas famílias com o mesmo <a href="#2-numerocnsresponsavel">numeroCnsResponsavel</a>;</li>
 <li>Não pode ser preenchido caso o campo <a href="#8-statustermorecusa">statusTermoRecusa</a> = <code>true</code>.</li>
 </ul>
@@ -441,7 +442,7 @@
 </thead><tbody>
 <tr>
 <td>Boolean</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>-</td>
 <td>-</td>
 </tr>
@@ -694,6 +695,33 @@
 </tbody></table>
 
 <p><strong>Regras:</strong> Utilizar valor 3 (logradouro).</p>
+
+<h3 id="18-stativo">#18 stAtivo</h3>
+
+<p>Indica se o cadastro do imóvel está ativo.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Só pode ser preenchido se o campo <a href="#5-fichaatualizada">fichaAtualizada</a> = <code>true</code>.</li>
+<li>Só pode ser <code>true</code> se não houver famílias no cadastro ou todas as famílias tiverem <a href="#7-stmudanca">stMudanca</a> = <code>true</code>.</li>
+</ul>
 
 <h2 id="enderecolocalpermanencia">EnderecoLocalPermanencia</h2>
 
@@ -1415,7 +1443,7 @@
 <td>Integer</td>
 <td>Não</td>
 <td>0</td>
-<td>2</td>
+<td>3</td>
 </tr>
 </tbody></table>
 

@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 7.4.2</span>
+        <span class="label">versão 8.4.2</span>
       
     </a>
 
@@ -169,7 +169,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/principais_alteracoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 09/02/2026</span>
+        <span class="label" title="Data da última modificação">Alterado em 13/07/2026</span>
       
     </p>
   </header>
@@ -300,7 +300,7 @@
 
 <h3 id="principais-altera-es-da-v4-2-0-para-a-v4-2-1">Principais alterações da v4.2.0 para a v4.2.1:</h3>
 
-<p><strong>1. </strong> No contexto de <a href="/dw/fatos/cadastro_individual.html">Cadastro individual</a> foi incluído o campo <code>co_dim_povo_comunidade_tradicional</code>. Além deste campo, também foi criada a tabela de dimensão <a href="/dw/dimensoes/dim_povo_comunidad_trad.html">tb_dim_povo_comunidade_tradicional</a>.</p>
+<p><strong>1. </strong> No contexto de <a href="/dw/fatos/cadastro_individual/index.html">Cadastro individual</a> foi incluído o campo <code>co_dim_povo_comunidade_tradicional</code>. Além deste campo, também foi criada a tabela de dimensão <a href="/dw/dimensoes/dim_povo_comunidad_trad.html">tb_dim_povo_comunidade_tradicional</a>.</p>
 
 <h3 id="principais-altera-es-da-v4-1-4-para-a-v4-2-0">Principais alterações da v4.1.4 para a v4.2.0:</h3>
 
@@ -311,15 +311,15 @@
 <li><code>tb_fat_atend_odonto_exames</code>.</li>
 </ul>
 
-<p><strong>2. </strong> No contexto de <a href="/dw/fatos/cadastro_domiciliar.html">Cadastro domiciliar</a> foram incluídos os campos <code>nu_latitude</code> e <code>nu_longitude</code>.</p>
+<p><strong>2. </strong> No contexto de <a href="/dw/fatos/cadastro_domiciliar/index.html">Cadastro domiciliar</a> foram incluídos os campos <code>nu_latitude</code> e <code>nu_longitude</code>.</p>
 
-<p><strong>3. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a> foram incluídos os campos <code>nu_latitude</code>, <code>nu_longitude</code> e <code>co_uuid_origem_fcd</code>.</p>
+<p><strong>3. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar/index.html">Visita domiciliar</a> foram incluídos os campos <code>nu_latitude</code>, <code>nu_longitude</code> e <code>co_uuid_origem_fcd</code>.</p>
 
-<p><strong>4. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
+<p><strong>4. </strong> No contexto de <a href="/dw/fatos/vacinacao/index.html">Vacinação</a> foram incluídos os campos <code>st_registro_anterior</code> e <code>co_dim_tempo_vacina_aplicada</code>.</p>
 
 <h3 id="principais-altera-es-da-v4-1-2-para-a-v4-1-4">Principais alterações da v4.1.2 para a v4.1.4:</h3>
 
-<p><strong>1. </strong> No contexto de <a href="/dw/fatos/vacinacao.html">Vacinação</a> foram incluídas as estruturas de dados para registro da informação de grupo de atendimento. Esta informação está armazenada na tabela: <code>tb_fat_vacinacao_vacina</code>.</p>
+<p><strong>1. </strong> No contexto de <a href="/dw/fatos/vacinacao/index.html">Vacinação</a> foram incluídas as estruturas de dados para registro da informação de grupo de atendimento. Esta informação está armazenada na tabela: <code>tb_fat_vacinacao_vacina</code>.</p>
 
 <p><strong>2. </strong> Para contextualizar as informações da tabela <code>tb_fat_vacinacao_vacina</code>, foi criada a seguinte tabela de dimensão: <code>tb_dim_grupo_atendimento</code>.</p>
 
@@ -339,13 +339,13 @@
 <li><code>tb_fat_atend_odonto_encaminhamentos</code>.</li>
 </ul>
 
-<p><strong>3. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar.html">Visita domiciliar</a> foram adicionados os campos <code>nu_medicao_pressao_arterial</code>, <code>nu_medicao_temperatura</code>, <code>co_dim_tipo_glicemia</code> e <code>nu_medicao_glicemia</code>. Além destes campos, também foi criada a tabela de dimensão <a href="/dw/dimensoes/index.html#tb\_dim\_tipo\_glicemia">tb_dim_tipo_glicemia</a>.</p>
+<p><strong>3. </strong> No contexto de <a href="/dw/fatos/visita_domiciliar/index.html">Visita domiciliar</a> foram adicionados os campos <code>nu_medicao_pressao_arterial</code>, <code>nu_medicao_temperatura</code>, <code>co_dim_tipo_glicemia</code> e <code>nu_medicao_glicemia</code>. Além destes campos, também foi criada a tabela de dimensão <a href="/dw/dimensoes/dim_tipo_glicemia.html">tb_dim_tipo_glicemia</a>.</p>
 
 <p><strong>4. </strong> Para contextualizar as informações das tabelas <code>tb_fat_atd_ind_medicamentos</code> e <code>tb_fat_atend_odonto_medicamentos</code>, foram criadas as seguintes tabelas de dimensões:</p>
 
 <ul>
 <li><a href="/dw/dimensoes/dim_catmat.html">tb_dim_catmat</a>;</li>
-<li><a href="/dw/dimensoes/index.html#tb\_dim\_via\_administracao">tb_dim_via_administracao</a>;</li>
+<li><a href="/dw/dimensoes/dim_via_administracao.html">tb_dim_via_administracao</a>;</li>
 <li><a href="/dw/dimensoes/dim_dose_frequencia.html">tb_dim_dose_frequencia</a>;</li>
 <li><a href="/dw/dimensoes/dim_dose_frequencia_medida.html">tb_dim_dose_frequencia_medida</a>;</li>
 <li><a href="/dw/dimensoes/dim_duracao_tratamento_med.html">tb_dim_duracao_tratamento_med</a>.</li>
