@@ -93,16 +93,7 @@ function generate() {
     $('#target-date-documento').html(day + ' de ' + monthNames[monthIndex] + ' de ' + year);
   }
 
-  var host = window.location.hostname;
-  if (host.startsWith('localhost') || host.startsWith('127.0.0.1')) {
-    window.print();
-  } else {
-    var html = $('html').clone();
-    html.find('head').append('<base href="'+window.location+'">');
-
-    $('#pdf-form input').val(html.html());
-    $('#pdf-form').submit();
-  }
+  window.print();
 }
 // checkbox que gera um sumário a página de impressão, com contagem de páginas
 $(document).ready(function () {
