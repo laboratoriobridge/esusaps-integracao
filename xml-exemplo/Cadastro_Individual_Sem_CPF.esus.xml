@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ns3:dadoTransporteTransportXml xmlns:ns2="http://esus.ufsc.br/dadoinstalacao" xmlns:ns3="http://esus.ufsc.br/dadotransporte" xmlns:ns4="http://esus.ufsc.br/cadastroindividual">
-	<uuidDadoSerializado>0019615-ced61f6f-0f37-48df-b894-1d1c729f8ad7</uuidDadoSerializado>
+	<uuidDadoSerializado>0019615-3f0b21c4-9a5e-4f2b-8d7c-6e14a09b52f3</uuidDadoSerializado>
 	<tipoDadoSerializado>2</tipoDadoSerializado>
 	<codIbge>4205407</codIbge>
 	<cnesDadoSerializado>0019615</cnesDadoSerializado>
 	<ineDadoSerializado>0000471828</ineDadoSerializado>
-	<numLote>7</numLote>
+	<numLote>8</numLote>
 	<ns4:cadastroIndividualTransport>
 		<condicoesDeSaude>
 			<descricaoCausaInternacaoEm12Meses>gripe</descricaoCausaInternacaoEm12Meses>
@@ -60,19 +60,19 @@
 			<desconheceNomeMae>false</desconheceNomeMae>
 			<emailCidadao>fci.gmail@gmail.com</emailCidadao>
 			<nacionalidadeCidadao>1</nacionalidadeCidadao>
-			<nomeCidadao>CIDADÃO VALIDAÇÃO LEDI</nomeCidadao>
+			<nomeCidadao>CIDADÃO VALIDAÇÃO LEDI SEM CPF</nomeCidadao>
 			<nomeMaeCidadao>MARTA DOS SANTOS</nomeMaeCidadao>
-			<cpfCidadao>31422733521</cpfCidadao>
-			<stNaoPossuiCpf>false</stNaoPossuiCpf>
-			<estadoCivil>2</estadoCivil>
-			<tipoSanguineo>7</tipoSanguineo>
-			<dnv>12345678901</dnv>
+			<cnsCidadao>898050047989752</cnsCidadao>
+			<stNaoPossuiCpf>true</stNaoPossuiCpf>
+			<justificativaNaoPossuiCpf>5</justificativaNaoPossuiCpf>
+			<estadoCivil>1</estadoCivil>
+			<tipoSanguineo>1</tipoSanguineo>
+			<dnv>10987654321</dnv>
 			<telefoneCelular>99999999999</telefoneCelular>
 			<paisNascimento>31</paisNascimento>
-			<racaCorCidadao>5</racaCorCidadao>
+			<racaCorCidadao>4</racaCorCidadao>
 			<sexoCidadao>1</sexoCidadao>
 			<statusEhResponsavel>true</statusEhResponsavel>
-			<etnia>5</etnia>
 			<nomePaiCidadao>PEDRO DOS SANTOS</nomePaiCidadao>
 			<desconheceNomePai>false</desconheceNomePai>
 			<microArea>01</microArea>
@@ -103,8 +103,8 @@
 		<saidaCidadaoCadastro />
 		<statusTermoRecusaCadastroIndividualAtencaoBasica>false</statusTermoRecusaCadastroIndividualAtencaoBasica>
 		<tpCdsOrigem>3</tpCdsOrigem>
-		<uuid>0019615-ced61f6f-0f37-48df-b894-1d1c729f8ad7</uuid>
-		<uuidFichaOriginadora>0019615-ced61f6f-0f37-48df-b894-1d1c729f8ad7</uuidFichaOriginadora>
+		<uuid>0019615-3f0b21c4-9a5e-4f2b-8d7c-6e14a09b52f3</uuid>
+		<uuidFichaOriginadora>0019615-3f0b21c4-9a5e-4f2b-8d7c-6e14a09b52f3</uuidFichaOriginadora>
 		<headerTransport>
 			<profissionalCNS>700609923387762</profissionalCNS>
 			<cboCodigo_2002>515105</cboCodigo_2002>

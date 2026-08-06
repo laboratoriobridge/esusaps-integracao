@@ -644,6 +644,16 @@ type
     procedure SetCpfCidadao( const Value: string);
     function GetCpfResponsavelFamiliar: string;
     procedure SetCpfResponsavelFamiliar( const Value: string);
+    function GetEstadoCivil: Int64;
+    procedure SetEstadoCivil( const Value: Int64);
+    function GetTipoSanguineo: Int64;
+    procedure SetTipoSanguineo( const Value: Int64);
+    function GetDnv: string;
+    procedure SetDnv( const Value: string);
+    function GetStNaoPossuiCpf: Boolean;
+    procedure SetStNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaNaoPossuiCpf: Int64;
+    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
 
     property NomeSocial: string read GetNomeSocial write SetNomeSocial;
     property CodigoIbgeMunicipioNascimento: string read GetCodigoIbgeMunicipioNascimento write SetCodigoIbgeMunicipioNascimento;
@@ -671,6 +681,11 @@ type
     property StForaArea: Boolean read GetStForaArea write SetStForaArea;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property CpfResponsavelFamiliar: string read GetCpfResponsavelFamiliar write SetCpfResponsavelFamiliar;
+    property EstadoCivil: Int64 read GetEstadoCivil write SetEstadoCivil;
+    property TipoSanguineo: Int64 read GetTipoSanguineo write SetTipoSanguineo;
+    property Dnv: string read GetDnv write SetDnv;
+    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
+    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
 
     function Get__isset_NomeSocial: Boolean;
     function Get__isset_CodigoIbgeMunicipioNascimento: Boolean;
@@ -698,6 +713,11 @@ type
     function Get__isset_StForaArea: Boolean;
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_CpfResponsavelFamiliar: Boolean;
+    function Get__isset_EstadoCivil: Boolean;
+    function Get__isset_TipoSanguineo: Boolean;
+    function Get__isset_Dnv: Boolean;
+    function Get__isset_StNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
 
     property __isset_NomeSocial: Boolean read Get__isset_NomeSocial;
     property __isset_CodigoIbgeMunicipioNascimento: Boolean read Get__isset_CodigoIbgeMunicipioNascimento;
@@ -725,6 +745,11 @@ type
     property __isset_StForaArea: Boolean read Get__isset_StForaArea;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_CpfResponsavelFamiliar: Boolean read Get__isset_CpfResponsavelFamiliar;
+    property __isset_EstadoCivil: Boolean read Get__isset_EstadoCivil;
+    property __isset_TipoSanguineo: Boolean read Get__isset_TipoSanguineo;
+    property __isset_Dnv: Boolean read Get__isset_Dnv;
+    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
+    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
   end;
 
   TIdentificacaoUsuarioCidadaoThriftImpl = class(TInterfacedObject, IBase, IIdentificacaoUsuarioCidadaoThrift)
@@ -755,6 +780,11 @@ type
     FStForaArea: Boolean;
     FCpfCidadao: string;
     FCpfResponsavelFamiliar: string;
+    FEstadoCivil: Int64;
+    FTipoSanguineo: Int64;
+    FDnv: string;
+    FStNaoPossuiCpf: Boolean;
+    FJustificativaNaoPossuiCpf: Int64;
     
     F__isset_NomeSocial: Boolean;
     F__isset_CodigoIbgeMunicipioNascimento: Boolean;
@@ -782,6 +812,11 @@ type
     F__isset_StForaArea: Boolean;
     F__isset_CpfCidadao: Boolean;
     F__isset_CpfResponsavelFamiliar: Boolean;
+    F__isset_EstadoCivil: Boolean;
+    F__isset_TipoSanguineo: Boolean;
+    F__isset_Dnv: Boolean;
+    F__isset_StNaoPossuiCpf: Boolean;
+    F__isset_JustificativaNaoPossuiCpf: Boolean;
     
     function GetNomeSocial: string;
     procedure SetNomeSocial( const Value: string);
@@ -835,6 +870,16 @@ type
     procedure SetCpfCidadao( const Value: string);
     function GetCpfResponsavelFamiliar: string;
     procedure SetCpfResponsavelFamiliar( const Value: string);
+    function GetEstadoCivil: Int64;
+    procedure SetEstadoCivil( const Value: Int64);
+    function GetTipoSanguineo: Int64;
+    procedure SetTipoSanguineo( const Value: Int64);
+    function GetDnv: string;
+    procedure SetDnv( const Value: string);
+    function GetStNaoPossuiCpf: Boolean;
+    procedure SetStNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaNaoPossuiCpf: Int64;
+    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
 
     function Get__isset_NomeSocial: Boolean;
     function Get__isset_CodigoIbgeMunicipioNascimento: Boolean;
@@ -862,6 +907,11 @@ type
     function Get__isset_StForaArea: Boolean;
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_CpfResponsavelFamiliar: Boolean;
+    function Get__isset_EstadoCivil: Boolean;
+    function Get__isset_TipoSanguineo: Boolean;
+    function Get__isset_Dnv: Boolean;
+    function Get__isset_StNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -899,6 +949,11 @@ type
     property StForaArea: Boolean read GetStForaArea write SetStForaArea;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property CpfResponsavelFamiliar: string read GetCpfResponsavelFamiliar write SetCpfResponsavelFamiliar;
+    property EstadoCivil: Int64 read GetEstadoCivil write SetEstadoCivil;
+    property TipoSanguineo: Int64 read GetTipoSanguineo write SetTipoSanguineo;
+    property Dnv: string read GetDnv write SetDnv;
+    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
+    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
 
     // isset
     property __isset_NomeSocial: Boolean read Get__isset_NomeSocial;
@@ -927,6 +982,11 @@ type
     property __isset_StForaArea: Boolean read Get__isset_StForaArea;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_CpfResponsavelFamiliar: Boolean read Get__isset_CpfResponsavelFamiliar;
+    property __isset_EstadoCivil: Boolean read Get__isset_EstadoCivil;
+    property __isset_TipoSanguineo: Boolean read Get__isset_TipoSanguineo;
+    property __isset_Dnv: Boolean read Get__isset_Dnv;
+    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
+    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
   end;
 
   IInformacoesSocioDemograficasThrift = interface(IBase)
@@ -1290,16 +1350,10 @@ type
     procedure SetUuid( const Value: string);
     function GetUuidFichaOriginadora: string;
     procedure SetUuidFichaOriginadora( const Value: string);
-    function GetUuidCidadao: string;
-    procedure SetUuidCidadao( const Value: string);
     function GetSaidaCidadaoCadastro: ISaidaCidadaoCadastroThrift;
     procedure SetSaidaCidadaoCadastro( const Value: ISaidaCidadaoCadastroThrift);
     function GetHeaderTransport: IUnicaLotacaoHeaderThrift;
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
-    function GetStatusCadastroIndividualInativo: Boolean;
-    procedure SetStatusCadastroIndividualInativo( const Value: Boolean);
-    function GetStatusGeradoAutomaticamente: Boolean;
-    procedure SetStatusGeradoAutomaticamente( const Value: Boolean);
     function GetInformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift;
     procedure SetInformacoesSocioEconomicas( const Value: IInformacoesSocioEconomicasThrift);
 
@@ -1312,11 +1366,8 @@ type
     property TpCdsOrigem: Integer read GetTpCdsOrigem write SetTpCdsOrigem;
     property Uuid: string read GetUuid write SetUuid;
     property UuidFichaOriginadora: string read GetUuidFichaOriginadora write SetUuidFichaOriginadora;
-    property UuidCidadao: string read GetUuidCidadao write SetUuidCidadao;
     property SaidaCidadaoCadastro: ISaidaCidadaoCadastroThrift read GetSaidaCidadaoCadastro write SetSaidaCidadaoCadastro;
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
-    property StatusCadastroIndividualInativo: Boolean read GetStatusCadastroIndividualInativo write SetStatusCadastroIndividualInativo;
-    property StatusGeradoAutomaticamente: Boolean read GetStatusGeradoAutomaticamente write SetStatusGeradoAutomaticamente;
     property InformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift read GetInformacoesSocioEconomicas write SetInformacoesSocioEconomicas;
 
     function Get__isset_CondicoesDeSaude: Boolean;
@@ -1327,11 +1378,8 @@ type
     function Get__isset_StatusTermoRecusaCadastroIndividualAtencaoBasica: Boolean;
     function Get__isset_TpCdsOrigem: Boolean;
     function Get__isset_UuidFichaOriginadora: Boolean;
-    function Get__isset_UuidCidadao: Boolean;
     function Get__isset_SaidaCidadaoCadastro: Boolean;
     function Get__isset_HeaderTransport: Boolean;
-    function Get__isset_StatusCadastroIndividualInativo: Boolean;
-    function Get__isset_StatusGeradoAutomaticamente: Boolean;
     function Get__isset_InformacoesSocioEconomicas: Boolean;
 
     property __isset_CondicoesDeSaude: Boolean read Get__isset_CondicoesDeSaude;
@@ -1342,11 +1390,8 @@ type
     property __isset_StatusTermoRecusaCadastroIndividualAtencaoBasica: Boolean read Get__isset_StatusTermoRecusaCadastroIndividualAtencaoBasica;
     property __isset_TpCdsOrigem: Boolean read Get__isset_TpCdsOrigem;
     property __isset_UuidFichaOriginadora: Boolean read Get__isset_UuidFichaOriginadora;
-    property __isset_UuidCidadao: Boolean read Get__isset_UuidCidadao;
     property __isset_SaidaCidadaoCadastro: Boolean read Get__isset_SaidaCidadaoCadastro;
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
-    property __isset_StatusCadastroIndividualInativo: Boolean read Get__isset_StatusCadastroIndividualInativo;
-    property __isset_StatusGeradoAutomaticamente: Boolean read Get__isset_StatusGeradoAutomaticamente;
     property __isset_InformacoesSocioEconomicas: Boolean read Get__isset_InformacoesSocioEconomicas;
   end;
 
@@ -1361,11 +1406,8 @@ type
     FTpCdsOrigem: Integer;
     FUuid: string;
     FUuidFichaOriginadora: string;
-    FUuidCidadao: string;
     FSaidaCidadaoCadastro: ISaidaCidadaoCadastroThrift;
     FHeaderTransport: IUnicaLotacaoHeaderThrift;
-    FStatusCadastroIndividualInativo: Boolean;
-    FStatusGeradoAutomaticamente: Boolean;
     FInformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift;
     
     F__isset_CondicoesDeSaude: Boolean;
@@ -1376,11 +1418,8 @@ type
     F__isset_StatusTermoRecusaCadastroIndividualAtencaoBasica: Boolean;
     F__isset_TpCdsOrigem: Boolean;
     F__isset_UuidFichaOriginadora: Boolean;
-    F__isset_UuidCidadao: Boolean;
     F__isset_SaidaCidadaoCadastro: Boolean;
     F__isset_HeaderTransport: Boolean;
-    F__isset_StatusCadastroIndividualInativo: Boolean;
-    F__isset_StatusGeradoAutomaticamente: Boolean;
     F__isset_InformacoesSocioEconomicas: Boolean;
     
     function GetCondicoesDeSaude: ICondicoesDeSaudeThrift;
@@ -1401,16 +1440,10 @@ type
     procedure SetUuid( const Value: string);
     function GetUuidFichaOriginadora: string;
     procedure SetUuidFichaOriginadora( const Value: string);
-    function GetUuidCidadao: string;
-    procedure SetUuidCidadao( const Value: string);
     function GetSaidaCidadaoCadastro: ISaidaCidadaoCadastroThrift;
     procedure SetSaidaCidadaoCadastro( const Value: ISaidaCidadaoCadastroThrift);
     function GetHeaderTransport: IUnicaLotacaoHeaderThrift;
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
-    function GetStatusCadastroIndividualInativo: Boolean;
-    procedure SetStatusCadastroIndividualInativo( const Value: Boolean);
-    function GetStatusGeradoAutomaticamente: Boolean;
-    procedure SetStatusGeradoAutomaticamente( const Value: Boolean);
     function GetInformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift;
     procedure SetInformacoesSocioEconomicas( const Value: IInformacoesSocioEconomicasThrift);
 
@@ -1422,11 +1455,8 @@ type
     function Get__isset_StatusTermoRecusaCadastroIndividualAtencaoBasica: Boolean;
     function Get__isset_TpCdsOrigem: Boolean;
     function Get__isset_UuidFichaOriginadora: Boolean;
-    function Get__isset_UuidCidadao: Boolean;
     function Get__isset_SaidaCidadaoCadastro: Boolean;
     function Get__isset_HeaderTransport: Boolean;
-    function Get__isset_StatusCadastroIndividualInativo: Boolean;
-    function Get__isset_StatusGeradoAutomaticamente: Boolean;
     function Get__isset_InformacoesSocioEconomicas: Boolean;
   public
     constructor Create;
@@ -1448,11 +1478,8 @@ type
     property TpCdsOrigem: Integer read GetTpCdsOrigem write SetTpCdsOrigem;
     property Uuid: string read GetUuid write SetUuid;
     property UuidFichaOriginadora: string read GetUuidFichaOriginadora write SetUuidFichaOriginadora;
-    property UuidCidadao: string read GetUuidCidadao write SetUuidCidadao;
     property SaidaCidadaoCadastro: ISaidaCidadaoCadastroThrift read GetSaidaCidadaoCadastro write SetSaidaCidadaoCadastro;
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
-    property StatusCadastroIndividualInativo: Boolean read GetStatusCadastroIndividualInativo write SetStatusCadastroIndividualInativo;
-    property StatusGeradoAutomaticamente: Boolean read GetStatusGeradoAutomaticamente write SetStatusGeradoAutomaticamente;
     property InformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift read GetInformacoesSocioEconomicas write SetInformacoesSocioEconomicas;
 
     // isset
@@ -1464,11 +1491,8 @@ type
     property __isset_StatusTermoRecusaCadastroIndividualAtencaoBasica: Boolean read Get__isset_StatusTermoRecusaCadastroIndividualAtencaoBasica;
     property __isset_TpCdsOrigem: Boolean read Get__isset_TpCdsOrigem;
     property __isset_UuidFichaOriginadora: Boolean read Get__isset_UuidFichaOriginadora;
-    property __isset_UuidCidadao: Boolean read Get__isset_UuidCidadao;
     property __isset_SaidaCidadaoCadastro: Boolean read Get__isset_SaidaCidadaoCadastro;
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
-    property __isset_StatusCadastroIndividualInativo: Boolean read Get__isset_StatusCadastroIndividualInativo;
-    property __isset_StatusGeradoAutomaticamente: Boolean read Get__isset_StatusGeradoAutomaticamente;
     property __isset_InformacoesSocioEconomicas: Boolean read Get__isset_InformacoesSocioEconomicas;
   end;
 
@@ -3808,6 +3832,86 @@ begin
   Result := F__isset_CpfResponsavelFamiliar;
 end;
 
+function TIdentificacaoUsuarioCidadaoThriftImpl.GetEstadoCivil: Int64;
+begin
+  Result := FEstadoCivil;
+end;
+
+procedure TIdentificacaoUsuarioCidadaoThriftImpl.SetEstadoCivil( const Value: Int64);
+begin
+  F__isset_EstadoCivil := True;
+  FEstadoCivil := Value;
+end;
+
+function TIdentificacaoUsuarioCidadaoThriftImpl.Get__isset_EstadoCivil: Boolean;
+begin
+  Result := F__isset_EstadoCivil;
+end;
+
+function TIdentificacaoUsuarioCidadaoThriftImpl.GetTipoSanguineo: Int64;
+begin
+  Result := FTipoSanguineo;
+end;
+
+procedure TIdentificacaoUsuarioCidadaoThriftImpl.SetTipoSanguineo( const Value: Int64);
+begin
+  F__isset_TipoSanguineo := True;
+  FTipoSanguineo := Value;
+end;
+
+function TIdentificacaoUsuarioCidadaoThriftImpl.Get__isset_TipoSanguineo: Boolean;
+begin
+  Result := F__isset_TipoSanguineo;
+end;
+
+function TIdentificacaoUsuarioCidadaoThriftImpl.GetDnv: string;
+begin
+  Result := FDnv;
+end;
+
+procedure TIdentificacaoUsuarioCidadaoThriftImpl.SetDnv( const Value: string);
+begin
+  F__isset_Dnv := True;
+  FDnv := Value;
+end;
+
+function TIdentificacaoUsuarioCidadaoThriftImpl.Get__isset_Dnv: Boolean;
+begin
+  Result := F__isset_Dnv;
+end;
+
+function TIdentificacaoUsuarioCidadaoThriftImpl.GetStNaoPossuiCpf: Boolean;
+begin
+  Result := FStNaoPossuiCpf;
+end;
+
+procedure TIdentificacaoUsuarioCidadaoThriftImpl.SetStNaoPossuiCpf( const Value: Boolean);
+begin
+  F__isset_StNaoPossuiCpf := True;
+  FStNaoPossuiCpf := Value;
+end;
+
+function TIdentificacaoUsuarioCidadaoThriftImpl.Get__isset_StNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_StNaoPossuiCpf;
+end;
+
+function TIdentificacaoUsuarioCidadaoThriftImpl.GetJustificativaNaoPossuiCpf: Int64;
+begin
+  Result := FJustificativaNaoPossuiCpf;
+end;
+
+procedure TIdentificacaoUsuarioCidadaoThriftImpl.SetJustificativaNaoPossuiCpf( const Value: Int64);
+begin
+  F__isset_JustificativaNaoPossuiCpf := True;
+  FJustificativaNaoPossuiCpf := Value;
+end;
+
+function TIdentificacaoUsuarioCidadaoThriftImpl.Get__isset_JustificativaNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_JustificativaNaoPossuiCpf;
+end;
+
 procedure TIdentificacaoUsuarioCidadaoThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -4055,6 +4159,51 @@ begin
           if (field_.Type_ = TType.String_) then
           begin
             CpfResponsavelFamiliar := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        28: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            EstadoCivil := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        29: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            TipoSanguineo := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        30: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            Dnv := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        31: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            StNaoPossuiCpf := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        32: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            JustificativaNaoPossuiCpf := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -4315,6 +4464,51 @@ begin
     oprot.WriteString(CpfResponsavelFamiliar);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_EstadoCivil) then
+  begin
+    field_.Name := 'estadoCivil';
+    field_.Type_  := TType.I64;
+    field_.ID := 28;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(EstadoCivil);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_TipoSanguineo) then
+  begin
+    field_.Name := 'tipoSanguineo';
+    field_.Type_  := TType.I64;
+    field_.ID := 29;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(TipoSanguineo);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_Dnv) then
+  begin
+    field_.Name := 'dnv';
+    field_.Type_  := TType.String_;
+    field_.ID := 30;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(Dnv);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_StNaoPossuiCpf) then
+  begin
+    field_.Name := 'stNaoPossuiCpf';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 31;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(StNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_JustificativaNaoPossuiCpf) then
+  begin
+    field_.Name := 'justificativaNaoPossuiCpf';
+    field_.Type_  := TType.I64;
+    field_.ID := 32;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(JustificativaNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -4482,6 +4676,36 @@ begin
       _first30 := FALSE;
       _sb29.Append('CpfResponsavelFamiliar: ');
       _sb29.Append(CpfResponsavelFamiliar);
+    end;
+    if (__isset_EstadoCivil) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('EstadoCivil: ');
+      _sb29.Append(EstadoCivil);
+    end;
+    if (__isset_TipoSanguineo) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('TipoSanguineo: ');
+      _sb29.Append(TipoSanguineo);
+    end;
+    if (__isset_Dnv) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('Dnv: ');
+      _sb29.Append(Dnv);
+    end;
+    if (__isset_StNaoPossuiCpf) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('StNaoPossuiCpf: ');
+      _sb29.Append(StNaoPossuiCpf);
+    end;
+    if (__isset_JustificativaNaoPossuiCpf) then begin
+      if not _first30 then _sb29.Append(',');
+      _first30 := FALSE;
+      _sb29.Append('JustificativaNaoPossuiCpf: ');
+      _sb29.Append(JustificativaNaoPossuiCpf);
     end;
     _sb29.Append(')');
     Result := _sb29.ToString;
@@ -5762,22 +5986,6 @@ begin
   Result := F__isset_UuidFichaOriginadora;
 end;
 
-function TCadastroIndividualThriftImpl.GetUuidCidadao: string;
-begin
-  Result := FUuidCidadao;
-end;
-
-procedure TCadastroIndividualThriftImpl.SetUuidCidadao( const Value: string);
-begin
-  F__isset_UuidCidadao := True;
-  FUuidCidadao := Value;
-end;
-
-function TCadastroIndividualThriftImpl.Get__isset_UuidCidadao: Boolean;
-begin
-  Result := F__isset_UuidCidadao;
-end;
-
 function TCadastroIndividualThriftImpl.GetSaidaCidadaoCadastro: ISaidaCidadaoCadastroThrift;
 begin
   Result := FSaidaCidadaoCadastro;
@@ -5808,38 +6016,6 @@ end;
 function TCadastroIndividualThriftImpl.Get__isset_HeaderTransport: Boolean;
 begin
   Result := F__isset_HeaderTransport;
-end;
-
-function TCadastroIndividualThriftImpl.GetStatusCadastroIndividualInativo: Boolean;
-begin
-  Result := FStatusCadastroIndividualInativo;
-end;
-
-procedure TCadastroIndividualThriftImpl.SetStatusCadastroIndividualInativo( const Value: Boolean);
-begin
-  F__isset_StatusCadastroIndividualInativo := True;
-  FStatusCadastroIndividualInativo := Value;
-end;
-
-function TCadastroIndividualThriftImpl.Get__isset_StatusCadastroIndividualInativo: Boolean;
-begin
-  Result := F__isset_StatusCadastroIndividualInativo;
-end;
-
-function TCadastroIndividualThriftImpl.GetStatusGeradoAutomaticamente: Boolean;
-begin
-  Result := FStatusGeradoAutomaticamente;
-end;
-
-procedure TCadastroIndividualThriftImpl.SetStatusGeradoAutomaticamente( const Value: Boolean);
-begin
-  F__isset_StatusGeradoAutomaticamente := True;
-  FStatusGeradoAutomaticamente := Value;
-end;
-
-function TCadastroIndividualThriftImpl.Get__isset_StatusGeradoAutomaticamente: Boolean;
-begin
-  Result := F__isset_StatusGeradoAutomaticamente;
 end;
 
 function TCadastroIndividualThriftImpl.GetInformacoesSocioEconomicas: IInformacoesSocioEconomicasThrift;
@@ -5964,15 +6140,6 @@ begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
         end;
-        11: begin
-          if (field_.Type_ = TType.String_) then
-          begin
-            UuidCidadao := iprot.ReadString();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
         12: begin
           if (field_.Type_ = TType.Struct) then
           begin
@@ -5988,24 +6155,6 @@ begin
           begin
             HeaderTransport := TUnicaLotacaoHeaderThriftImpl.Create;
             HeaderTransport.Read(iprot);
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        14: begin
-          if (field_.Type_ = TType.Bool_) then
-          begin
-            StatusCadastroIndividualInativo := iprot.ReadBool();
-          end else
-          begin
-            TProtocolUtil.Skip(iprot, field_.Type_);
-          end;
-        end;
-        15: begin
-          if (field_.Type_ = TType.Bool_) then
-          begin
-            StatusGeradoAutomaticamente := iprot.ReadBool();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -6123,15 +6272,6 @@ begin
     oprot.WriteString(UuidFichaOriginadora);
     oprot.WriteFieldEnd();
   end;
-  if (__isset_UuidCidadao) then
-  begin
-    field_.Name := 'uuidCidadao';
-    field_.Type_  := TType.String_;
-    field_.ID := 11;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteString(UuidCidadao);
-    oprot.WriteFieldEnd();
-  end;
   if (SaidaCidadaoCadastro <> nil) and __isset_SaidaCidadaoCadastro then
   begin
     field_.Name := 'saidaCidadaoCadastro';
@@ -6148,24 +6288,6 @@ begin
     field_.ID := 13;
     oprot.WriteFieldBegin(field_);
     HeaderTransport.Write(oprot);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_StatusCadastroIndividualInativo) then
-  begin
-    field_.Name := 'statusCadastroIndividualInativo';
-    field_.Type_  := TType.Bool_;
-    field_.ID := 14;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteBool(StatusCadastroIndividualInativo);
-    oprot.WriteFieldEnd();
-  end;
-  if (__isset_StatusGeradoAutomaticamente) then
-  begin
-    field_.Name := 'statusGeradoAutomaticamente';
-    field_.Type_  := TType.Bool_;
-    field_.ID := 15;
-    oprot.WriteFieldBegin(field_);
-    oprot.WriteBool(StatusGeradoAutomaticamente);
     oprot.WriteFieldEnd();
   end;
   if (InformacoesSocioEconomicas <> nil) and __isset_InformacoesSocioEconomicas then
@@ -6238,10 +6360,6 @@ begin
       _sb47.Append(', UuidFichaOriginadora: ');
       _sb47.Append(UuidFichaOriginadora);
     end;
-    if (__isset_UuidCidadao) then begin
-      _sb47.Append(', UuidCidadao: ');
-      _sb47.Append(UuidCidadao);
-    end;
     if (SaidaCidadaoCadastro <> nil) and __isset_SaidaCidadaoCadastro then begin
       _sb47.Append(', SaidaCidadaoCadastro: ');
       if (SaidaCidadaoCadastro = nil) then _sb47.Append('<null>') else _sb47.Append(SaidaCidadaoCadastro.ToString());
@@ -6249,14 +6367,6 @@ begin
     if (HeaderTransport <> nil) and __isset_HeaderTransport then begin
       _sb47.Append(', HeaderTransport: ');
       if (HeaderTransport = nil) then _sb47.Append('<null>') else _sb47.Append(HeaderTransport.ToString());
-    end;
-    if (__isset_StatusCadastroIndividualInativo) then begin
-      _sb47.Append(', StatusCadastroIndividualInativo: ');
-      _sb47.Append(StatusCadastroIndividualInativo);
-    end;
-    if (__isset_StatusGeradoAutomaticamente) then begin
-      _sb47.Append(', StatusGeradoAutomaticamente: ');
-      _sb47.Append(StatusGeradoAutomaticamente);
     end;
     if (InformacoesSocioEconomicas <> nil) and __isset_InformacoesSocioEconomicas then begin
       _sb47.Append(', InformacoesSocioEconomicas: ');

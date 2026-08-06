@@ -13,6 +13,11 @@
       <xs:element maxOccurs="1" minOccurs="0" name="nomeMaeCidadao" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="cnsCidadao" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="cpfCidadao" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="stNaoPossuiCpf" type="xs:boolean"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="justificativaNaoPossuiCpf" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="estadoCivil" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="tipoSanguineo" type="xs:long"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="dnv" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="cnsResponsavelFamiliar" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="cpfResponsavelFamiliar" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="0" name="telefoneCelular" type="xs:string"/>

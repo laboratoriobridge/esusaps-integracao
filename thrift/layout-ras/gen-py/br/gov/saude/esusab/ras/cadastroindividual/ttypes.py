@@ -739,6 +739,11 @@ class IdentificacaoUsuarioCidadaoThrift:
    - stForaArea
    - cpfCidadao
    - cpfResponsavelFamiliar
+   - estadoCivil
+   - tipoSanguineo
+   - dnv
+   - stNaoPossuiCpf
+   - justificativaNaoPossuiCpf
   """
 
   thrift_spec = (
@@ -770,9 +775,14 @@ class IdentificacaoUsuarioCidadaoThrift:
     (25, TType.BOOL, 'stForaArea', None, None, ), # 25
     (26, TType.STRING, 'cpfCidadao', None, None, ), # 26
     (27, TType.STRING, 'cpfResponsavelFamiliar', None, None, ), # 27
+    (28, TType.I64, 'estadoCivil', None, None, ), # 28
+    (29, TType.I64, 'tipoSanguineo', None, None, ), # 29
+    (30, TType.STRING, 'dnv', None, None, ), # 30
+    (31, TType.BOOL, 'stNaoPossuiCpf', None, None, ), # 31
+    (32, TType.I64, 'justificativaNaoPossuiCpf', None, None, ), # 32
   )
 
-  def __init__(self, nomeSocial=None, codigoIbgeMunicipioNascimento=None, dataNascimentoCidadao=None, desconheceNomeMae=None, emailCidadao=None, nacionalidadeCidadao=None, nomeCidadao=None, nomeMaeCidadao=None, cnsCidadao=None, cnsResponsavelFamiliar=None, telefoneCelular=None, numeroNisPisPasep=None, paisNascimento=None, racaCorCidadao=None, sexoCidadao=None, statusEhResponsavel=None, etnia=None, nomePaiCidadao=None, desconheceNomePai=None, dtNaturalizacao=None, portariaNaturalizacao=None, dtEntradaBrasil=None, microArea=None, stForaArea=None, cpfCidadao=None, cpfResponsavelFamiliar=None,):
+  def __init__(self, nomeSocial=None, codigoIbgeMunicipioNascimento=None, dataNascimentoCidadao=None, desconheceNomeMae=None, emailCidadao=None, nacionalidadeCidadao=None, nomeCidadao=None, nomeMaeCidadao=None, cnsCidadao=None, cnsResponsavelFamiliar=None, telefoneCelular=None, numeroNisPisPasep=None, paisNascimento=None, racaCorCidadao=None, sexoCidadao=None, statusEhResponsavel=None, etnia=None, nomePaiCidadao=None, desconheceNomePai=None, dtNaturalizacao=None, portariaNaturalizacao=None, dtEntradaBrasil=None, microArea=None, stForaArea=None, cpfCidadao=None, cpfResponsavelFamiliar=None, estadoCivil=None, tipoSanguineo=None, dnv=None, stNaoPossuiCpf=None, justificativaNaoPossuiCpf=None,):
     self.nomeSocial = nomeSocial
     self.codigoIbgeMunicipioNascimento = codigoIbgeMunicipioNascimento
     self.dataNascimentoCidadao = dataNascimentoCidadao
@@ -799,6 +809,11 @@ class IdentificacaoUsuarioCidadaoThrift:
     self.stForaArea = stForaArea
     self.cpfCidadao = cpfCidadao
     self.cpfResponsavelFamiliar = cpfResponsavelFamiliar
+    self.estadoCivil = estadoCivil
+    self.tipoSanguineo = tipoSanguineo
+    self.dnv = dnv
+    self.stNaoPossuiCpf = stNaoPossuiCpf
+    self.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -939,6 +954,31 @@ class IdentificacaoUsuarioCidadaoThrift:
           self.cpfResponsavelFamiliar = iprot.readString()
         else:
           iprot.skip(ftype)
+      elif fid == 28:
+        if ftype == TType.I64:
+          self.estadoCivil = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 29:
+        if ftype == TType.I64:
+          self.tipoSanguineo = iprot.readI64()
+        else:
+          iprot.skip(ftype)
+      elif fid == 30:
+        if ftype == TType.STRING:
+          self.dnv = iprot.readString()
+        else:
+          iprot.skip(ftype)
+      elif fid == 31:
+        if ftype == TType.BOOL:
+          self.stNaoPossuiCpf = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 32:
+        if ftype == TType.I64:
+          self.justificativaNaoPossuiCpf = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -1053,6 +1093,26 @@ class IdentificacaoUsuarioCidadaoThrift:
       oprot.writeFieldBegin('cpfResponsavelFamiliar', TType.STRING, 27)
       oprot.writeString(self.cpfResponsavelFamiliar)
       oprot.writeFieldEnd()
+    if self.estadoCivil is not None:
+      oprot.writeFieldBegin('estadoCivil', TType.I64, 28)
+      oprot.writeI64(self.estadoCivil)
+      oprot.writeFieldEnd()
+    if self.tipoSanguineo is not None:
+      oprot.writeFieldBegin('tipoSanguineo', TType.I64, 29)
+      oprot.writeI64(self.tipoSanguineo)
+      oprot.writeFieldEnd()
+    if self.dnv is not None:
+      oprot.writeFieldBegin('dnv', TType.STRING, 30)
+      oprot.writeString(self.dnv)
+      oprot.writeFieldEnd()
+    if self.stNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('stNaoPossuiCpf', TType.BOOL, 31)
+      oprot.writeBool(self.stNaoPossuiCpf)
+      oprot.writeFieldEnd()
+    if self.justificativaNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('justificativaNaoPossuiCpf', TType.I64, 32)
+      oprot.writeI64(self.justificativaNaoPossuiCpf)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -1088,6 +1148,11 @@ class IdentificacaoUsuarioCidadaoThrift:
     value = (value * 31) ^ hash(self.stForaArea)
     value = (value * 31) ^ hash(self.cpfCidadao)
     value = (value * 31) ^ hash(self.cpfResponsavelFamiliar)
+    value = (value * 31) ^ hash(self.estadoCivil)
+    value = (value * 31) ^ hash(self.tipoSanguineo)
+    value = (value * 31) ^ hash(self.dnv)
+    value = (value * 31) ^ hash(self.stNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.justificativaNaoPossuiCpf)
     return value
 
   def __repr__(self):
