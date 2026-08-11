@@ -36,7 +36,7 @@ public class ExemploFichaCadastroIndividualThrift {
 		dadoTransporteThrift.setDadoSerializado(fichaSerializada);
 
 		// Não esquecer de informar a versão da ficha a ser exportada (não é a versão do e-SUS AB)
-		VersaoThrift versaoThrift = new VersaoThrift(5, 4, 0);
+		VersaoThrift versaoThrift = new VersaoThrift(8, 1, 0);
 		dadoTransporteThrift.setVersao(versaoThrift);
 
 		return dadoTransporteThrift;
@@ -184,6 +184,10 @@ public class ExemploFichaCadastroIndividualThrift {
 		identificacaoUsuarioCidadao.setNomeCidadao("Nome Cidadão Fictício");
 		identificacaoUsuarioCidadao.setNomeMaeCidadao("Nome Mãe Cidadão Fictício");
 		identificacaoUsuarioCidadao.setCnsCidadao("231259791070009");
+		identificacaoUsuarioCidadao.setStNaoPossuiCpf(false);
+		identificacaoUsuarioCidadao.setEstadoCivil(2L);
+		identificacaoUsuarioCidadao.setTipoSanguineo(7L);
+		identificacaoUsuarioCidadao.setDnv("12345678901");
 		identificacaoUsuarioCidadao.setCnsResponsavelFamiliar("543210987654321");
 		identificacaoUsuarioCidadao.setTelefoneCelular("48999999999");
 		identificacaoUsuarioCidadao.setNumeroNisPisPasep("98765432100");

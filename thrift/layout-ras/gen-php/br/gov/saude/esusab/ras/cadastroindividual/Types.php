@@ -1324,6 +1324,26 @@ class IdentificacaoUsuarioCidadaoThrift {
    * @var string
    */
   public $cpfResponsavelFamiliar = null;
+  /**
+   * @var int
+   */
+  public $estadoCivil = null;
+  /**
+   * @var int
+   */
+  public $tipoSanguineo = null;
+  /**
+   * @var string
+   */
+  public $dnv = null;
+  /**
+   * @var bool
+   */
+  public $stNaoPossuiCpf = null;
+  /**
+   * @var int
+   */
+  public $justificativaNaoPossuiCpf = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -1432,6 +1452,26 @@ class IdentificacaoUsuarioCidadaoThrift {
           'var' => 'cpfResponsavelFamiliar',
           'type' => TType::STRING,
           ),
+        28 => array(
+          'var' => 'estadoCivil',
+          'type' => TType::I64,
+          ),
+        29 => array(
+          'var' => 'tipoSanguineo',
+          'type' => TType::I64,
+          ),
+        30 => array(
+          'var' => 'dnv',
+          'type' => TType::STRING,
+          ),
+        31 => array(
+          'var' => 'stNaoPossuiCpf',
+          'type' => TType::BOOL,
+          ),
+        32 => array(
+          'var' => 'justificativaNaoPossuiCpf',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -1512,6 +1552,21 @@ class IdentificacaoUsuarioCidadaoThrift {
       }
       if (isset($vals['cpfResponsavelFamiliar'])) {
         $this->cpfResponsavelFamiliar = $vals['cpfResponsavelFamiliar'];
+      }
+      if (isset($vals['estadoCivil'])) {
+        $this->estadoCivil = $vals['estadoCivil'];
+      }
+      if (isset($vals['tipoSanguineo'])) {
+        $this->tipoSanguineo = $vals['tipoSanguineo'];
+      }
+      if (isset($vals['dnv'])) {
+        $this->dnv = $vals['dnv'];
+      }
+      if (isset($vals['stNaoPossuiCpf'])) {
+        $this->stNaoPossuiCpf = $vals['stNaoPossuiCpf'];
+      }
+      if (isset($vals['justificativaNaoPossuiCpf'])) {
+        $this->justificativaNaoPossuiCpf = $vals['justificativaNaoPossuiCpf'];
       }
     }
   }
@@ -1717,6 +1772,41 @@ class IdentificacaoUsuarioCidadaoThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 28:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->estadoCivil);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 29:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->tipoSanguineo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 30:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->dnv);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 31:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->stNaoPossuiCpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 32:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->justificativaNaoPossuiCpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -1858,6 +1948,31 @@ class IdentificacaoUsuarioCidadaoThrift {
     if ($this->cpfResponsavelFamiliar !== null) {
       $xfer += $output->writeFieldBegin('cpfResponsavelFamiliar', TType::STRING, 27);
       $xfer += $output->writeString($this->cpfResponsavelFamiliar);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->estadoCivil !== null) {
+      $xfer += $output->writeFieldBegin('estadoCivil', TType::I64, 28);
+      $xfer += $output->writeI64($this->estadoCivil);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipoSanguineo !== null) {
+      $xfer += $output->writeFieldBegin('tipoSanguineo', TType::I64, 29);
+      $xfer += $output->writeI64($this->tipoSanguineo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dnv !== null) {
+      $xfer += $output->writeFieldBegin('dnv', TType::STRING, 30);
+      $xfer += $output->writeString($this->dnv);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->stNaoPossuiCpf !== null) {
+      $xfer += $output->writeFieldBegin('stNaoPossuiCpf', TType::BOOL, 31);
+      $xfer += $output->writeBool($this->stNaoPossuiCpf);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->justificativaNaoPossuiCpf !== null) {
+      $xfer += $output->writeFieldBegin('justificativaNaoPossuiCpf', TType::I64, 32);
+      $xfer += $output->writeI64($this->justificativaNaoPossuiCpf);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

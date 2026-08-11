@@ -154,6 +154,11 @@ module Br
               STFORAAREA = 25
               CPFCIDADAO = 26
               CPFRESPONSAVELFAMILIAR = 27
+              ESTADOCIVIL = 28
+              TIPOSANGUINEO = 29
+              DNV = 30
+              STNAOPOSSUICPF = 31
+              JUSTIFICATIVANAOPOSSUICPF = 32
 
               FIELDS = {
                 NOMESOCIAL => {:type => ::Thrift::Types::STRING, :name => 'nomeSocial', :optional => true},
@@ -181,7 +186,12 @@ module Br
                 MICROAREA => {:type => ::Thrift::Types::STRING, :name => 'microArea', :optional => true},
                 STFORAAREA => {:type => ::Thrift::Types::BOOL, :name => 'stForaArea', :optional => true},
                 CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
-                CPFRESPONSAVELFAMILIAR => {:type => ::Thrift::Types::STRING, :name => 'cpfResponsavelFamiliar', :optional => true}
+                CPFRESPONSAVELFAMILIAR => {:type => ::Thrift::Types::STRING, :name => 'cpfResponsavelFamiliar', :optional => true},
+                ESTADOCIVIL => {:type => ::Thrift::Types::I64, :name => 'estadoCivil', :optional => true},
+                TIPOSANGUINEO => {:type => ::Thrift::Types::I64, :name => 'tipoSanguineo', :optional => true},
+                DNV => {:type => ::Thrift::Types::STRING, :name => 'dnv', :optional => true},
+                STNAOPOSSUICPF => {:type => ::Thrift::Types::BOOL, :name => 'stNaoPossuiCpf', :optional => true},
+                JUSTIFICATIVANAOPOSSUICPF => {:type => ::Thrift::Types::I64, :name => 'justificativaNaoPossuiCpf', :optional => true}
               }
 
               def struct_fields; FIELDS; end

@@ -83,6 +83,11 @@ struct IdentificacaoUsuarioCidadaoThrift {
 	25:optional bool stForaArea,
 	26:optional string cpfCidadao,
 	27:optional string cpfResponsavelFamiliar;
+	28:optional i64 estadoCivil;
+	29:optional i64 tipoSanguineo;
+	30:optional string dnv;
+	31:optional bool stNaoPossuiCpf;
+	32:optional i64 justificativaNaoPossuiCpf;
 }
 
 struct InformacoesSocioDemograficasThrift {
