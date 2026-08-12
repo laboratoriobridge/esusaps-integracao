@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 8.4.2</span>
+        <span class="label">versão 8.5.0</span>
       
     </a>
 
@@ -213,7 +213,7 @@
 
       <li id="item-layout_ab" data-url="/ledi/documentacao/index.html">
         <label>
-          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 8.4.2
+          <input type="checkbox" value="layout_ab" checked="checked"> Layout e-SUS APS de Dados e Interface Versão 8.5.0
           <small>
             <a onclick="checkById('layout_ab', true); return false;">Marcar todos</a> |
             <a onclick="checkById('layout_ab', false); return false;">Desmarcar todos</a>
@@ -3333,7 +3333,7 @@
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
-  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 8.4.2</a></li>
+  <li id="summary-layout_ab"><a href="#layout_ab">Layout e-SUS APS de Dados e Interface Versão 8.5.0</a></li>
   
       <!-- Cria a lista de itens[páginas] que foram selecionados  -->
 
@@ -4880,8 +4880,13 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>5.5.23 ou superior</td>
+<td><a href="/ledi/documentacao/index.html">LEDI APS 8.5.0</a></td>
+<td>16/07/2026</td>
+</tr>
+<tr>
 <td>5.5.21 ou superior</td>
-<td><a href="/ledi/documentacao/index.html">LEDI APS 8.4.2</a></td>
+<td><a href="https://integracao.esusaps.bridge.ufsc.tech/v842/">LEDI APS 8.4.2</a></td>
 <td>02/07/2026</td>
 </tr>
 <tr>
@@ -5235,17 +5240,17 @@
         
     <div class="post pdf shown" id="layout_ab" data-url="/ledi/documentacao/index.html">
       <header class="post-header">
-        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 8.4.2</h1>
+        <h1 class="post-title">Layout e-SUS APS de Dados e Interface Versão 8.5.0</h1>
       </header>
 
       
 
       <article class="post-content">
-        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 8.4.2.</p>
+        <p>Esta documentação descreve as estruturas de dados, seus atributos e regras utilizadas no <strong>LEDI APS</strong> versão 8.5.0.</p>
 
-<p>A versão <strong>LEDI APS</strong> 8.4.2 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.5.21 ou superior.</p>
+<p>A versão <strong>LEDI APS</strong> 8.5.0 é compatível com o sistema <strong>PEC e-SUS APS</strong> versão 5.5.23 ou superior.</p>
 
-<p>Confira as principais alterações na versão 8.4.2 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
+<p>Confira as principais alterações na versão 8.5.0 <a href="/ledi/documentacao/principais_alteracoes.html">aqui</a>.</p>
 
       </article>
 
@@ -8860,7 +8865,7 @@
 </thead><tbody>
 <tr>
 <td>String</td>
-<td>Condicional</td>
+<td>Não</td>
 <td>0</td>
 <td>2</td>
 </tr>
@@ -20562,6 +20567,57 @@
 
 <p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
 
+<h3 id="24-stnaopossuicpf">#24 stNaoPossuiCpf</h3>
+
+<p>Marcador que indica que o CPF do cidadão não existe ou não está disponível no momento do cadastro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="25-justificativanaopossuicpf">#25 justificativaNaoPossuiCpf</h3>
+
+<p>Justificativa para o cidadão não possuir ou não informar CPF.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>É permitido o envio apenas de justificativas que constam na listagem de referência;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#24-stnaopossuicpf">stNaoPossuiCpf</a> = <code>false</code>;</li>
+<li>É obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#24-stnaopossuicpf">stNaoPossuiCpf</a> = <code>true</code>;</li>
+<li>Não é validado se o campo <a href="/ledi/documentacao/estrutura_arquivos/#17-stnaopossuicpf">stNaoPossuiCpf</a> = <code>null</code>.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#justificativanaopossuicpf">justificativaNaoPossuiCpf</a>.</p>
+
       </article>
 
       <div class="pdf-separator"></div>
@@ -23509,6 +23565,56 @@
 <td>24</td>
 </tr>
 </tbody></table>
+
+<h3 id="17-stnaopossuicpf">#17 stNaoPossuiCpf</h3>
+
+<p>Marcador que indica que o CPF do cidadão não existe ou não está disponível no momento do cadastro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="18-justificativanaopossuicpf">#18 justificativaNaoPossuiCpf</h3>
+
+<p>Justificativa para o cidadão não possuir ou não informar CPF.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>É permitido o envio apenas de justificativas que constam na listagem de referência;</li>
+<li>Não pode ser preenchido se o campo <a href="/ledi/documentacao/estrutura_arquivos/#17-stnaopossuicpf">stNaoPossuiCpf</a> = <code>false</code>;</li>
+<li>É obrigatório se o campo <a href="/ledi/documentacao/estrutura_arquivos/#17-stnaopossuicpf">stNaoPossuiCpf</a> = <code>true</code>;</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#justificativanaopossuicpf">justificativaNaoPossuiCpf</a>.</p>
 
       </article>
 
@@ -111817,13 +111923,13 @@
 <td>minor</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 4</td>
+<td>Valor único = 5</td>
 </tr>
 <tr>
 <td>revision</td>
 <td>Integer</td>
 <td>Sim</td>
-<td>Valor único = 2</td>
+<td>Valor único = 0</td>
 </tr>
 </tbody></table>
 
@@ -124747,6 +124853,11 @@
 <td>116</td>
 <td>Nirsevimabe 1,0ml</td>
 <td>NIRSEVIMABE 1,0ml</td>
+</tr>
+<tr>
+<td>117</td>
+<td>Vacina influenza trivalente - alta dosagem</td>
+<td>INF3-alta dosagem</td>
 </tr>
 </tbody></table>
 
@@ -170766,6 +170877,16 @@
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as últimas versões do LEDI APS:</p>
 
+<h2 id="vers-o-8-5-0">Versão 8.5.0</h2>
+
+<h3 id="1-suporte-ao-cnpj-alfanum-rico">1. Suporte ao CNPJ alfanumérico</h3>
+
+<p>Foi realizada a adequação do LEDI para suportar o novo CNPJ alfanumérico, conforme a Instrução Normativa 2.229 da Receita Federal. A atualização contempla a validação dos CNPJs com letras e números nos 12 primeiros caracteres, mantendo os 2 últimos dígitos como verificadores, com ajustes nas regras de cálculo e validação dos dígitos verificadores.</p>
+
+<h3 id="2-prioriza-o-do-cpf-como-chave-principal-na-ficha-de-atendimento-domiciliar-e-ficha-de-visita-domiciliar-e-territorial">2. Priorização do CPF como chave principal na Ficha de Atendimento Domiciliar e Ficha de Visita Domiciliar e Territorial</h3>
+
+<p>Adição dos campos &quot;Justificativa&quot; e &quot;Cidadão não possui CPF&quot; nas fichas mencionadas. O CPF permanece como chave principal e única para identificação do cidadão, sendo utilizado como critério primário em todos os casos. A exceção só se aplica quando o cidadão não possui CPF, situação em que é obrigatório o preenchimento do campo de justificativa para validar o cadastro sem esse dado.</p>
+
 <h2 id="vers-o-8-4-2">Versão 8.4.2</h2>
 
 <h3 id="1-atualiza-es-em-regras-vacinais">1. Atualizações em regras vacinais</h3>
@@ -171307,21 +171428,29 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
       <article class="post-content">
         <p>Este documento relata as principais alterações entre as versões do DW.</p>
 
+<h3 id="principais-altera-es-da-v-5-5-21-para-a-v-5-5-23-do-e-sus-aps">Principais alterações da v.5.5.21 para a v.5.5.23 do e-SUS APS:</h3>
+
+<p><strong>1. </strong> Foram adicionados os campos st_nao_possui_cpf e co_dim_just_nao_possui_cpf nas tabelas fato de <a href="/dw/fatos/visita_domiciliar/index.html">Visita domiciliar</a> e {link RF-EDW.atendimento_domiciliar %}.</p>
+
+<h3 id="principais-altera-es-da-v-5-4-23-para-a-v-5-5-21-do-e-sus-aps">Principais alterações da v.5.4.23 para a v.5.5.21 do e-SUS APS:</h3>
+
+<p><strong>2. </strong> Toda a documentação do Data Warehouse foi amplamente revisada, atualizada e reformulada.</p>
+
 <h3 id="principais-altera-es-da-v-5-4-22-para-a-v-5-4-23-do-e-sus-aps">Principais alterações da v.5.4.22 para a v.5.4.23 do e-SUS APS:</h3>
 
-<p><strong>1. </strong> As tabelas relacionadas aos relatórios operacionais serão descontinuadas em versões futuras.</p>
+<p><strong>3. </strong> As tabelas relacionadas aos relatórios operacionais serão descontinuadas em versões futuras.</p>
 
 <h3 id="principais-altera-es-da-v-5-4-7-para-a-v-5-4-8-do-e-sus-aps">Principais alterações da v.5.4.7 para a v.5.4.8 do e-SUS APS:</h3>
 
-<p><strong>2. </strong> Inclusão da coluna <code>co_fat_cidadao_pec</code> na <code>tb_acomp_cidadaos_vinculados</code>.</p>
+<p><strong>4. </strong> Inclusão da coluna <code>co_fat_cidadao_pec</code> na <code>tb_acomp_cidadaos_vinculados</code>.</p>
 
 <h3 id="principais-altera-es-da-v-5-4-6-para-a-v-5-4-7-do-e-sus-aps">Principais alterações da v.5.4.6 para a v.5.4.7 do e-SUS APS:</h3>
 
-<p><strong>3. </strong> Inclusão da tabela <code>tb_fat_solicitacao_oci</code>, populada sempre que atendimentos individuais e odontológicos com algum registro de procedimentos do grupo <code>09 - Procedimento para Oferta de Cuidado Integrado</code> são processados.</p>
+<p><strong>5. </strong> Inclusão da tabela <code>tb_fat_solicitacao_oci</code>, populada sempre que atendimentos individuais e odontológicos com algum registro de procedimentos do grupo <code>09 - Procedimento para Oferta de Cuidado Integrado</code> são processados.</p>
 
 <h3 id="principais-altera-es-da-v-5-4-0-para-a-v-5-4-1-do-e-sus-aps">Principais alterações da v.5.4.0 para a v.5.4.1 do e-SUS APS:</h3>
 
-<p><strong>4. </strong> Inclusão de campos nas <code>tb_fat_atd_ind_procedimentos</code>, <code>tb_fat_atend_odonto_proced</code> e <code>tb_fat_atend_odonto_exames</code>:</p>
+<p><strong>6. </strong> Inclusão de campos nas <code>tb_fat_atd_ind_procedimentos</code>, <code>tb_fat_atend_odonto_proced</code> e <code>tb_fat_atend_odonto_exames</code>:</p>
 
 <ul>
 <li>co_dim_faixa_etaria: Código da faixa etária. Campo <code>co_seq_dim_faixa_etaria</code> da <code>tb_dim_faixa_etaria</code>;</li>
@@ -171333,7 +171462,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 
 <h3 id="principais-altera-es-da-v-5-3-25-para-a-v-5-3-26-do-e-sus-aps">Principais alterações da v.5.3.25 para a v.5.3.26 do e-SUS APS:</h3>
 
-<p><strong>5. </strong> Inclusão de campos na <code>tb_acomp_cidadaos_vinculados</code>:</p>
+<p><strong>7. </strong> Inclusão de campos na <code>tb_acomp_cidadaos_vinculados</code>:</p>
 
 <ul>
 <li>co_cds_domicilio: Código identificador do domicílio ao qual o cidadão está vinculado;</li>
@@ -171343,7 +171472,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 
 <h3 id="principais-altera-es-da-v-5-3-20-para-a-v-5-3-21-do-e-sus-aps">Principais alterações da v.5.3.20 para a v.5.3.21 do e-SUS APS:</h3>
 
-<p><strong>6. </strong> Inclusão da tabela <code>tb_dim_grau_vulnerabilidade</code>:</p>
+<p><strong>8. </strong> Inclusão da tabela <code>tb_dim_grau_vulnerabilidade</code>:</p>
 
 <ul>
 <li>co_seq_dim_grau_vulnerabilidade: Código de identificação sequencial;</li>
@@ -171353,11 +171482,11 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 
 <h3 id="principais-altera-es-da-v-5-3-14-para-a-v-5-3-15-do-e-sus-aps">Principais alterações da v.5.3.14 para a v.5.3.15 do e-SUS APS:</h3>
 
-<p><strong>7. </strong> Inclusão da tabela <code>tb_dim_situacao_problema</code>, contendo todas as possíveis situações que podem ser preenchidas na lista de problemas e condições.</p>
+<p><strong>9. </strong> Inclusão da tabela <code>tb_dim_situacao_problema</code>, contendo todas as possíveis situações que podem ser preenchidas na lista de problemas e condições.</p>
 
-<p><strong>8. </strong> Renomeação da tabela <code>tb_fat_atend_dom_condicao_aval</code> para <code>tb_fat_atend_dom_prob_cond</code>.</p>
+<p><strong>10. </strong> Renomeação da tabela <code>tb_fat_atend_dom_condicao_aval</code> para <code>tb_fat_atend_dom_prob_cond</code>.</p>
 
-<p><strong>9. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_problemas</code>, <code>tb_fat_atend_odonto_problemas</code> e <code>tb_fat_atend_dom_prob_cond</code>:</p>
+<p><strong>11. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_problemas</code>, <code>tb_fat_atend_odonto_problemas</code> e <code>tb_fat_atend_dom_prob_cond</code>:</p>
 
 <ul>
 <li>nu_uuid_problema: Código identificador único do problema ou condição;</li>
@@ -171369,7 +171498,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 <li>st_avaliado: Indicador se o problema ou condição foi avaliado durante o atendimento.</li>
 </ul>
 
-<p><strong>10. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_medicamentos</code> e <code>tb_fat_atend_odonto_medicamentos</code>:</p>
+<p><strong>12. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atd_ind_medicamentos</code> e <code>tb_fat_atend_odonto_medicamentos</code>:</p>
 
 <ul>
 <li>qt_dose_manha;</li>
@@ -171379,7 +171508,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 
 <h3 id="principais-altera-es-da-v-5-3-6-para-a-v-5-3-7-do-e-sus-aps">Principais alterações da v.5.3.6 para a v.5.3.7 do e-SUS APS:</h3>
 
-<p><strong>11. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atendimento_individual</code>, <code>tb_fat_proced_atend</code> e <code>tb_fat_atendimento_odonto</code>:</p>
+<p><strong>13. </strong> Inclusão de novos campos nas tabelas de fato <code>tb_fat_atendimento_individual</code>, <code>tb_fat_proced_atend</code> e <code>tb_fat_atendimento_odonto</code>:</p>
 
 <ul>
 <li>nu_medicao_circ_abdominal: Circunferência abdominal do cidadão em centímetros;</li>
@@ -171399,7 +171528,7 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 
 <h3 id="principais-altera-es-da-v-5-2-36-para-a-v-5-2-37-do-e-sus-aps">Principais alterações da v.5.2.36 para a v.5.2.37 do e-SUS APS:</h3>
 
-<p><strong>12. </strong> Inclusão do detalhamento dos fatos:</p>
+<p><strong>14. </strong> Inclusão do detalhamento dos fatos:</p>
 
 <ul>
 <li><a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a>;</li>
@@ -171408,15 +171537,15 @@ Alterações da nomenclatura da Estratégia de código 9, anteriormente denomina
 
 <h3 id="principais-altera-es-da-v5-2-33-para-a-v-5-2-34-do-e-sus-aps">Principais alterações da v5.2.33 para a v.5.2.34 do e-SUS APS:</h3>
 
-<p><strong>13. </strong> Inclusão da seção de <a href="/dw/visualizacoes/index.html">Visualizações</a>, com a nova <a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">Tabela de acompanhamento de cidadãos vinculados</a>.</p>
+<p><strong>15. </strong> Inclusão da seção de <a href="/dw/visualizacoes/index.html">Visualizações</a>, com a nova <a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">Tabela de acompanhamento de cidadãos vinculados</a>.</p>
 
 <h3 id="principais-altera-es-da-v5-2-16-para-a-v-5-2-17-do-e-sus-aps">Principais alterações da v5.2.16 para a v.5.2.17 do e-SUS APS:</h3>
 
-<p><strong>14. </strong> No contexto de <a href="/dw/fatos/cuidado_compartilhado/index.html">Cuidado compartilhado</a> foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: <code>tb_fat_cuidado_compartilhado</code>.</p>
+<p><strong>16. </strong> No contexto de <a href="/dw/fatos/cuidado_compartilhado/index.html">Cuidado compartilhado</a> foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: <code>tb_fat_cuidado_compartilhado</code>.</p>
 
-<p><strong>15. </strong> Para contextualizar as informações da tabela <code>tb_fat_cuidado_compartilhado</code>, foram criadas as seguintes tabelas de dimensão: <code>tb_dim_conduta_cuidado</code>e <code>tb_dim_prioridade_cuidado</code>.</p>
+<p><strong>17. </strong> Para contextualizar as informações da tabela <code>tb_fat_cuidado_compartilhado</code>, foram criadas as seguintes tabelas de dimensão: <code>tb_dim_conduta_cuidado</code>e <code>tb_dim_prioridade_cuidado</code>.</p>
 
-<p><strong>16. </strong> Inclusão do tipo de ficha &quot;ESUS PEC Cuidado compartilhado&quot; na <code>tb_dim_tipo_ficha</code>.</p>
+<p><strong>18. </strong> Inclusão do tipo de ficha &quot;ESUS PEC Cuidado compartilhado&quot; na <code>tb_dim_tipo_ficha</code>.</p>
 
 <h3 id="principais-altera-es-da-v5-2-4-para-a-v-5-2-5-do-e-sus-aps">Principais alterações da v5.2.4 para a v.5.2.5 do e-SUS APS:</h3>
 
@@ -171861,6 +171990,11 @@ Em breve as tabelas utilizadas para os relatórios operacionais serão descontin
 <td>-</td>
 <td>Campo de filtro com os procedimentos registrados no atendimento</td>
 </tr>
+<tr>
+<td>st_nao_possui_cpf</td>
+<td>-</td>
+<td>Indica se o cidadão não possui CPF</td>
+</tr>
 </tbody></table>
 
 <h1 id="4-dimens-es-da-tabela">4. Dimensões da tabela</h1>
@@ -171876,6 +172010,10 @@ Em breve as tabelas utilizadas para os relatórios operacionais serão descontin
 <tr>
 <td>co_dim_faixa_etaria</td>
 <td>Código da faixa etária do cidadão. Campo <code>co_seq_dim_faixa_etaria</code> da <code>tb_dim_faixa_etaria</code></td>
+</tr>
+<tr>
+<td>co_dim_just_nao_possui_cpf</td>
+<td>Código da justificativa de não possuir CPF. Campo <code>co_seq_dim_just_nao_possui_cpf</code> da <code>tb_dim_just_nao_possui_cpf</code></td>
 </tr>
 <tr>
 <td>co_dim_sexo</td>
@@ -181653,6 +181791,11 @@ Em breve as tabelas utilizadas para os relatórios operacionais serão descontin
 <td>-</td>
 <td>Indica se o registro foi processado a partir de uma Ficha de Cadastro Domiciliar</td>
 </tr>
+<tr>
+<td>st_nao_possui_cpf</td>
+<td>-</td>
+<td>Indica se o cidadão não possui CPF</td>
+</tr>
 </tbody></table>
 
 <h1 id="4-dimens-es-da-tabela">4. Dimensões da tabela</h1>
@@ -181706,6 +181849,10 @@ Em breve as tabelas utilizadas para os relatórios operacionais serão descontin
 <tr>
 <td>co_dim_faixa_etaria</td>
 <td>Código da faixa etária do cidadão visitado. Campo <code>co_seq_dim_faixa_etaria</code> da <code>tb_dim_faixa_etaria</code></td>
+</tr>
+<tr>
+<td>co_dim_just_nao_possui_cpf</td>
+<td>Código da justificativa de não possuir CPF. Campo <code>co_seq_dim_just_nao_possui_cpf</code> da <code>tb_dim_just_nao_possui_cpf</code></td>
 </tr>
 <tr>
 <td>co_dim_desfecho_visita</td>

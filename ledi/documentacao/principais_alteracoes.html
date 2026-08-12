@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 8.4.2</span>
+        <span class="label">versão 8.5.0</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.4.2</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 8.5.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.5.0</a></li>
           
         
           
@@ -123,7 +123,7 @@
     
 
     <li>
-      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.4.2</a>
+      <a class="open" title="Layout e-SUS APS de Dados e Interface Versão 8.5.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.5.0</a>
       <ul>
         
           <li  class="has-subitems">
@@ -187,13 +187,23 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/principais_alteracoes.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 13/07/2026</span>
+        <span class="label" title="Data da última modificação">Alterado em 12/08/2026</span>
       
     </p>
   </header>
 
   <article class="post-content">
     <p>Este documento relata as principais alterações entre as últimas versões do LEDI APS:</p>
+
+<h2 id="vers-o-8-5-0">Versão 8.5.0</h2>
+
+<h3 id="1-suporte-ao-cnpj-alfanum-rico">1. Suporte ao CNPJ alfanumérico</h3>
+
+<p>Foi realizada a adequação do LEDI para suportar o novo CNPJ alfanumérico, conforme a Instrução Normativa 2.229 da Receita Federal. A atualização contempla a validação dos CNPJs com letras e números nos 12 primeiros caracteres, mantendo os 2 últimos dígitos como verificadores, com ajustes nas regras de cálculo e validação dos dígitos verificadores.</p>
+
+<h3 id="2-prioriza-o-do-cpf-como-chave-principal-na-ficha-de-atendimento-domiciliar-e-ficha-de-visita-domiciliar-e-territorial">2. Priorização do CPF como chave principal na Ficha de Atendimento Domiciliar e Ficha de Visita Domiciliar e Territorial</h3>
+
+<p>Adição dos campos &quot;Justificativa&quot; e &quot;Cidadão não possui CPF&quot; nas fichas mencionadas. O CPF permanece como chave principal e única para identificação do cidadão, sendo utilizado como critério primário em todos os casos. A exceção só se aplica quando o cidadão não possui CPF, situação em que é obrigatório o preenchimento do campo de justificativa para validar o cadastro sem esse dado.</p>
 
 <h2 id="vers-o-8-4-2">Versão 8.4.2</h2>
 
