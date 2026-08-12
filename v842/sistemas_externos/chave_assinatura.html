@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Chave de assinatura</title>
+  <meta name="description" content="1. Objetivo">
+
+  <link rel="stylesheet" href="/v842/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/v842/sistemas_externos/chave_assinatura.html">
+  <link rel="icon" type="image/png" href="/v842/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/v842/">
+      <img src="/v842/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 8.4.2</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/v842/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/v842/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/v842/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Sistemas externos" href="/v842/sistemas_externos/index.html">Sistemas externos</a></li>
+          
+        
+          
+            <li><a title="Chave de assinatura" href="/v842/sistemas_externos/chave_assinatura.html">Chave de assinatura</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/v842/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Home" href="/v842/" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Home)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Sistemas externos" href="/v842/sistemas_externos/index.html">Sistemas externos</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Sistemas habilitados para iFrame" href="/v842/sistemas_externos/iframe.html">
+              Sistemas habilitados para iFrame
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Chave de assinatura" href="/v842/sistemas_externos/chave_assinatura.html">
+              Chave de assinatura
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Parâmetros dinâmicos de integração" href="/v842/sistemas_externos/parametros_dinamicos.html">
+              Parâmetros dinâmicos de integração
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Chave de assinatura</h1>
+    <p class="post-meta">
+      <a class="btn" href="/v842/pdf.html?include=/sistemas_externos/chave_assinatura.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 12/08/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="1-objetivo">1. Objetivo</h1>
+
+<p>Este documento apresenta detalhes sobre como pode ser realizada a validação de segurança em relação a requisição de acesso realizada pelo Prontuário Eletrônico e-SUS APS.</p>
+
+<p>Durante a configuração do sistema externo, o Prontuário Eletrônico e-SUS APS gera uma chave de assinatura, o objetivo dessa chave de assinatura é permitir que o sistema externo que está sendo acessado valide que a requisição realmente partiu do Prontuário Eletrônico e-SUS APS. A chave de assinatura deve ser obtida através de contato com o administrador da instalação do município. </p>
+
+<h1 id="2-exemplo">2. Exemplo</h1>
+
+<h1 id="verifica-o-de-assinatura-hmac-da-requisi-o">Verificação de Assinatura HMAC da requisição</h1>
+
+<h2 id="exemplo-de-url">Exemplo de URL</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">https://localhost:4000/iframe?documento-profissional=12345&amp;documento-cidadao=67890&amp;cnes=[CNES]&amp;pec_timestamp=1749542182&amp;pec_sign=9e6c598297ba33f47cfccafa4869ec70428ac3c76b0e037ec08daf96d2616c0f
+</code></pre></div>
+<h2 id="como-funciona">Como funciona</h2>
+
+<p><strong>1. </strong> <strong>Parte Base da URL</strong> (usada para assinar):</p>
+<div class="highlight"><pre><code class="language-" data-lang="">https://localhost:4000/iframe?documento-profissional=12345&amp;documento-cidadao=67890&amp;cnes=[CNES]&amp;pec_timestamp=1749542182
+</code></pre></div>
+<p>Esta é a parte que será usada para gerar e verificar a assinatura. Note que ela <strong>termina no timestamp</strong>.</p>
+
+<p><strong>2. </strong> <strong>Timestamp</strong>:</p>
+
+<ul>
+<li>O parâmetro <strong><code>pec_timestamp=1749542182</code></strong> representa o momento da requisição (segundos);</li>
+<li>O sistema pode estabelecer um critério de validade, por exemplo, considerando válidas apenas requisições numa janela de <strong>30 minutos</strong>.</li>
+</ul>
+
+<p><strong>3. </strong> <strong>Assinatura</strong>:</p>
+
+<ul>
+<li>O parâmetro <strong><code>pec_sign=9e6c...6c0f</code></strong> contém a assinatura HMAC-SHA256 da URL;</li>
+<li>A assinatura é calculada usando <strong>toda a URL até o timestamp</strong> (inclusive);</li>
+<li>É usado o algoritmo <strong>HMAC-SHA256</strong> com a chave secreta para gerar a assinatura.</li>
+</ul>
+
+<h2 id="processo-de-verifica-o">Processo de Verificação</h2>
+
+<ol>
+<li>O sistema pega a URL completa e <strong>remove tudo após</strong> <code>&amp;pec_sign=</code>;</li>
+<li>Usa esta URL &quot;limpa&quot; para calcular um novo HMAC;</li>
+<li>Compara o HMAC calculado com o recebido no parâmetro <code>pec_sign</code>;</li>
+<li>Simultaneamente, verifica se o <code>pec_timestamp</code> está dentro de uma janela esperada.</li>
+</ol>
+
+<p>A requisição só é considerada válida se:</p>
+
+<ul>
+<li>A parte da URL até o timestamp gerar a <strong>mesma assinatura</strong> que foi recebida;</li>
+<li>O <strong>timestamp</strong> estiver dentro da janela estabelecida.</li>
+</ul>
+
+<h2 id="implementa-o-de-exemplo-javascript-node-express">Implementação de Exemplo (Javascript/Node/Express)</h2>
+
+<h3 id="c-lculo-do-hmac">Cálculo do HMAC</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">calculateHMAC</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">fullUrl</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="nx">req</span><span class="p">.</span><span class="nx">protocol</span><span class="p">}</span><span class="s2">://</span><span class="p">${</span><span class="nx">req</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">host</span><span class="dl">"</span><span class="p">)}${</span><span class="nx">req</span><span class="p">.</span><span class="nx">originalUrl</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span> <span class="c1">//url assinada no PEC é canônica. Pode ser necessário codificar a url se tiver caracteres especiais.</span>
+  <span class="kd">const</span> <span class="nx">urlToSign</span> <span class="o">=</span> <span class="nx">fullUrl</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">"</span><span class="s2">&amp;pec_sign=</span><span class="dl">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">urlToSign</span><span class="p">,</span>
+    <span class="na">signature</span><span class="p">:</span> <span class="nx">crypto</span>
+      <span class="p">.</span><span class="nx">createHmac</span><span class="p">(</span><span class="dl">"</span><span class="s2">sha256</span><span class="dl">"</span><span class="p">,</span> <span class="nx">HMAC_KEY</span><span class="p">)</span> <span class="c1">//HMAC_KEY corresponde a chave obtida junto ao administrador da instalação</span>
+      <span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">urlToSign</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">digest</span><span class="p">(</span><span class="dl">"</span><span class="s2">hex</span><span class="dl">"</span><span class="p">),</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="verifica-o-do-timestamp">Verificação do Timestamp</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">verifyTimestamp</span><span class="p">(</span><span class="nx">timestamp</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">currentTimeInSeconds</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">timeDiff</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">currentTimeInSeconds</span> <span class="o">-</span> <span class="nx">timestamp</span><span class="p">);</span>
+  <span class="c1">// Permitir diferença de até 30 minutos</span>
+  <span class="k">return</span> <span class="nx">timeDiff</span> <span class="o">&lt;=</span> <span class="mi">1800</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/v842/js/lunr.min.js"></script>
+
+    <script src="/v842/js/site.js" type="text/javascript"></script>    
+    <script src="/v842/js/search-index.js" type="text/javascript"></script>
+    <script src="/v842/js/busca.js"></script>
+  </body>
+</html>

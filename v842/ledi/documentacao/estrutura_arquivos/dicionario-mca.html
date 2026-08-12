@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Marcadores de Consumo Alimentar</title>
+  <meta name="description" content="FichaConsumoAlimentar">
+
+  <link rel="stylesheet" href="/v842/css/main.css">
+  <link rel="canonical" href="http://0.0.0.0:4000/v842/ledi/documentacao/estrutura_arquivos/dicionario-mca.html">
+  <link rel="icon" type="image/png" href="/v842/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/v842/">
+      <img src="/v842/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 8.4.2</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/v842/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/v842/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/v842/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface" href="/v842/ledi/index.html">Layout e-SUS APS de Dados e Interface</a></li>
+          
+        
+          
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/v842/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.4.2</a></li>
+          
+        
+          
+            <li><a title="Estrutura dos arquivos" href="/v842/ledi/documentacao/estrutura_arquivos/index.html">Estrutura dos arquivos</a></li>
+          
+        
+          
+            <li><a title="Marcadores de Consumo Alimentar" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-mca.html">Marcadores de Consumo Alimentar</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/v842/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/v842/ledi/documentacao/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Layout e-SUS APS de Dados e Interface Versão 8.4.2)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Estrutura dos arquivos" href="/v842/ledi/documentacao/estrutura_arquivos/index.html">Estrutura dos arquivos</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Camada de Transporte de Dados" href="/v842/ledi/documentacao/estrutura_arquivos/camada-transporte.html">
+              Camada de Transporte de Dados
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Cabeçalho (headerTransport)" href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html">
+              Cabeçalho (headerTransport)
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Individual" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">
+              Ficha de Cadastro Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cadastro Domiciliar e Territorial" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">
+              Ficha de Cadastro Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Individual" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">
+              Ficha de Atendimento Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Odontológico Individual" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">
+              Ficha de Atendimento Odontológico Individual
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atividade Coletiva" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-fac.html">
+              Ficha de Atividade Coletiva
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Procedimentos" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-fp.html">
+              Ficha de Procedimentos
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Visita Domiciliar e Territorial" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html">
+              Ficha de Visita Domiciliar e Territorial
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Marcadores de Consumo Alimentar" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-mca.html">
+              Marcadores de Consumo Alimentar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Avaliação de Elegibilidade" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-fae.html">
+              Ficha de Avaliação de Elegibilidade
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Atendimento Domiciliar" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-fad.html">
+              Ficha de Atendimento Domiciliar
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha complementar - Síndrome neurológica por Zika / Microcefalia" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-fczm.html">
+              Ficha complementar - Síndrome neurológica por Zika / Microcefalia
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Vacinação" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-fv.html">
+              Ficha de Vacinação
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Ficha de Cuidado Compartilhado" href="/v842/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html">
+              Ficha de Cuidado Compartilhado
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Marcadores de Consumo Alimentar</h1>
+    <p class="post-meta">
+      <a class="btn" href="/v842/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-mca.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 12/08/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h2 id="fichaconsumoalimentar">FichaConsumoAlimentar</h2>
+
+<h3 id="1-headertransport">#1 headerTransport</h3>
+
+<p>Profissional que realizou a visita.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>UnicaLotacaoHeader</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Somente as CBOs apresentadas na <a href="/v842/ledi/documentacao/regras/cbo.html#marcadores-de-consumo-alimentar">Tabela 8 - CBOs que podem registrar marcadores de consumo alimentar</a> podem ser adicionadas no campo CBO do profissional.</p>
+
+<p><strong>Referência:</strong> <a href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html#unicalotacaoheader">UnicaLotacaoHeader</a>.</p>
+
+<h3 id="2-cnscidadao">#2 cnsCidadao</h3>
+
+<p>CNS do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>15</td>
+<td>15</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong></p>
+
+<ul>
+<li>Validado por algoritmo;</li>
+<li>Não pode ser preenchido se o campo <a href="#12-cpfcidadao">cpfCidadao</a> for preenchido.</li>
+<li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#12-cpfcidadao">cpfCidadao</a> não estiver preenchido.</li>
+</ul>
+
+<p><strong>Referência:</strong> O algoritmo de validação está presente em <a href="/v842/ledi/documentacao/regras/algoritmo_CNS.html">Validar CNS</a>.</p>
+
+<h3 id="4-datanascimento">#4 dataNascimento</h3>
+
+<p>Data de nascimento do cidadão no formato epoch time.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Não pode ser posterior a <a href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a> e anterior a 130 anos a partir da <a href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referência:</strong> A data deve ser apresentada seguindo o padrão <a href="https://pt.wikipedia.org/wiki/Era_Unix">Epoch</a>, convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor <a href="https://currentmillis.com/">Current millis</a>.</p>
+
+<h3 id="5-sexo">#5 sexo</h3>
+
+<p>Código do sexo do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Referência</strong>: <a href="/v842/ledi/documentacao/referencias/dicionario.html#sexo">Sexo</a>.</p>
+
+<h3 id="6-localatendimento">#6 localAtendimento</h3>
+
+<p>Código do local onde o atendimento foi realizado.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Apenas valores de <code>1</code> a <code>10</code>.</p>
+
+<p><strong>Referência</strong>: <a href="/v842/ledi/documentacao/referencias/dicionario.html#localdeatendimento">LocalDeAtendimento</a>.</p>
+
+<h3 id="7-perguntasquestionariocriancasmenoresseismeses">#7 perguntasQuestionarioCriancasMenoresSeisMeses</h3>
+
+<p>Marcadores referentes aos cidadãos menores de seis meses de idade.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;PerguntaQuestionarioCriancasMenoresSeisMeses&gt;</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Requerido se <a href="#4-datanascimento">dataNascimento</a> &lt; 6 meses a partir da <a href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Para registrar a resposta do questionário, o preenchimento de todas as perguntas é obrigatório.</li>
+</ul>
+
+<p><strong>Referência</strong>: <a href="#perguntaquestionariocriancasmenoresseismeses">PerguntaQuestionarioCriancasMenoresSeisMeses</a>.</p>
+
+<p><strong>Observação:</strong> Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+
+<h3 id="8-perguntasquestionariocriancasdeseisvintetresmeses">#8 perguntasQuestionarioCriancasDeSeisVinteTresMeses</h3>
+
+<p>Marcadores referentes aos cidadãos que tem entre seis e vinte e três meses de idade.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;PerguntaQuestionarioCriancasDeSeisVinteTresMeses&gt;</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Requerido se <a href="#4-datanascimento">dataNascimento</a> &gt;= 6 meses e &lt;= 23 meses a partir da <a href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Para registrar a resposta do questionário, o preenchimento de todas as perguntas é obrigatório.</li>
+</ul>
+
+<p><strong>Referência</strong>: <a href="#perguntaquestionariocriancasdeseisvintetresmeses">PerguntaQuestionarioCriancasDeSeisVinteTresMeses</a>.</p>
+
+<p><strong>Observação:</strong> Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+
+<h3 id="9-perguntasquestionariocriancascommaisdoisanos">#9 perguntasQuestionarioCriancasComMaisDoisAnos</h3>
+
+<p>Marcadores referentes aos cidadãos que tem vinte e quatro meses ou mais.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;PerguntaQuestionarioCriancasComMaisDoisAnos&gt;</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>Requerido se <a href="#4-datanascimento">dataNascimento</a> &gt;= 24 meses a partir da <a href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>;</li>
+<li>Para registrar a resposta do questionário, o preenchimento de todas as perguntas é obrigatório.</li>
+</ul>
+
+<p><strong>Referência</strong>: <a href="#perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</a>.</p>
+
+<p><strong>Observação:</strong> Os campos <code>#7</code>, <code>#8</code> e <code>#9</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+
+<h3 id="10-uuidficha">#10 uuidFicha</h3>
+
+<p>Código UUID para identificar a ficha na base de dados nacional.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Sim</td>
+<td>36</td>
+<td>44</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> É recomendado concatenar o CNES na frente do UUID, de modo que os 7 dígitos (CNES) + 1 de hífen somados aos 36 (32 caracteres + 4 hífen) do UUID são a limitação de 44 bytes do campo. Formato canônico.</p>
+
+<p><strong>Referência</strong>: Para ver a referência sobre o UUID, acesse: <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID Wikipedia</a>.</p>
+
+<h3 id="11-tpcdsorigem">#11 tpCdsOrigem</h3>
+
+<p>Tipo de origem dos dados do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integer</td>
+<td>Sim</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Utilizar valor 3 (sistemas terceiros).</p>
+
+<h3 id="12-cpfcidadao">#12 cpfCidadao</h3>
+
+<p>CPF do cidadão.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Condicional</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Somente CPF válido será aceito;</li>
+<li>Não pode ser preenchido se o campo <a href="#2-cnscidadao">cnsCidadao</a> for preenchido.</li>
+<li>Este campo é de preenchimento obrigatório apenas se o campo <a href="#2-cnscidadao">cnsCidadao</a> não estiver preenchido.</li>
+</ul>
+
+<h3 id="13-stnaopossuicpf">#13 stNaoPossuiCpf</h3>
+
+<p>Marcador que indica que o CPF do cidadão não existe ou não está disponível no momento do cadastro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Sim</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="14-justificativanaopossuicpf">#14 justificativaNaoPossuiCpf</h3>
+
+<p>Justificativa para o cidadão não possuir ou não informar CPF.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>É permitido o envio apenas de justificativas que constam na listagem de referência;</li>
+<li>Não pode ser preenchido se o campo <a href="#13-stnaopossuicpf">stNaoPossuiCpf</a> = <code>false</code>;</li>
+<li>É obrigatório se o campo <a href="#13-stnaopossuicpf">stNaoPossuiCpf</a> = <code>true</code>.</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="/v842/ledi/documentacao/referencias/dicionario.html#justificativanaopossuicpf">justificativaNaoPossuiCpf</a>.</p>
+
+<h2 id="perguntaquestionariocriancasmenoresseismeses">PerguntaQuestionarioCriancasMenoresSeisMeses</h2>
+
+<h3 id="1-pergunta">#1 pergunta</h3>
+
+<p>Identificador da pergunta referente ao questionário para cidadãos menores de seis meses.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PerguntaCriancasMenoresSeisMesesEnum</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Obrigatório caso a <a href="#4-datanascimento">dataNascimento</a> seja menos que 6 meses anterior à <a href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referência:</strong> <a href="#perguntacriancasmenoresseismesesenum">PerguntaCriancasMenoresSeisMesesEnum</a>.</p>
+
+<h3 id="2-respostaunicaescolha">#2 respostaUnicaEscolha</h3>
+
+<p>Resposta referente à pergunta.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RespostaUnicaEscolhaEnum</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Obrigatório caso a <a href="#4-datanascimento">dataNascimento</a> seja menos que 6 meses anterior à <a href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referência:</strong> <a href="#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
+
+<h2 id="perguntaquestionariocriancasdeseisvintetresmeses">PerguntaQuestionarioCriancasDeSeisVinteTresMeses</h2>
+
+<p><a name = "#1-perguntaquestionariocriancasdeseisvintetresmeses"></a></p>
+
+<h3>#1  pergunta</h3>
+
+<p>Identificador da pergunta referente ao questionário para cidadãos menores de seis meses.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PerguntaCriancasDeSeisVinteTresMesesEnum</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Obrigatório caso a <a href="#4-datanascimento">dataNascimento</a> seja menos que 23 meses e mais que 6 meses anterior à <a href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referência:</strong> <a href="#perguntacriancasdeseisvintetresmesesenum">PerguntaCriancasDeSeisVinteTresMesesEnum</a>.</p>
+
+<p><a name = "#2-respostaunicaescolhacriancasdeseisvintetresmeses"></a></p>
+
+<h3>#2  respostaUnicaEscolha</h3>
+
+<p>Resposta referente a pergunta.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RespostaUnicaEscolhaEnum</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Obrigatório caso a <a href="#4-datanascimento">dataNascimento</a> seja menos que 24 meses e mais que 6 meses anterior à <a href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referência:</strong> <a href="#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
+
+<h2 id="perguntaquestionariocriancascommaisdoisanos">PerguntaQuestionarioCriancasComMaisDoisAnos</h2>
+
+<p><a name = "#1-perguntaquestionariocriancascommaisdoisanos"></a></p>
+
+<h3>#1  pergunta</h3>
+
+<p>Pergunta do questionário de cidadãos que tem vinte e quatro meses ou mais.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PerguntaCriancasComMaisDoisAnosEnum</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Obrigatório caso a <a href="#4-datanascimento">dataNascimento</a> seja mais que 24 meses anterior à <a href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referência:</strong> <a href="#perguntacriancascommaisdoisanosenum">PerguntaCriancasComMaisDoisAnosEnum</a>.</p>
+
+<p><a name = "#2-respostaunicaescolhacriancascommaisdoisanos"></a></p>
+
+<h3>#2  respostaUnicaEscolha</h3>
+
+<p>Resposta referente a pergunta do registro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RespostaUnicaEscolhaEnum</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regra:</strong> Obrigatório caso a <a href="#4-datanascimento">dataNascimento</a> seja mais que 24 meses anterior à <a href="/v842/ledi/documentacao/estrutura_arquivos/header-transport.html#5-dataatendimento">dataAtendimento</a>.</p>
+
+<p><strong>Referência:</strong> <a href="#respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</a>.</p>
+
+<p><strong>Observação:</strong> Os campos <code>#2</code> e <code>#3</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+
+<h3 id="3-respostamultiplaescolha">#3 respostaMultiplaEscolha</h3>
+
+<p>Resposta referente à pergunta do registro acima.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>List&lt;RespostaMultiplaEscolhaEnum&gt;</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong></p>
+
+<ul>
+<li>Deve respeitar as regras das respostas referentes à pergunta;</li>
+<li>Pode ser preenchido somente se a pergunta for 12L.</li>
+</ul>
+
+<p><strong>Referência:</strong> <a href="#respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</a>.</p>
+
+<p><strong>Observação:</strong> Os campos <code>#2</code> e <code>#3</code> são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.</p>
+
+<h2 id="perguntacriancasmenoresseismesesenum">PerguntaCriancasMenoresSeisMesesEnum</h2>
+
+<table><thead>
+<tr>
+<th>Descrição</th>
+<th>Código</th>
+<th>Respostas aceitas</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>A_CRIANCA_ONTEM_TOMOU_LEITE_DO_PEITO</td>
+<td>1</td>
+<td>• 1 - SIM <br> • 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>MINGAU</td>
+<td>3</td>
+<td>• 1 - SIM <br> • 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>AGUA_CHA</td>
+<td>4</td>
+<td>• 1 - SIM <br> • 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>LEITE_VACA</td>
+<td>5</td>
+<td>• 1 - SIM <br> • 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>FORMULA_INFANTIL</td>
+<td>6</td>
+<td>• 1 - SIM <br> • 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>SUCO_FRUTA</td>
+<td>7</td>
+<td>• 1 - SIM <br> • 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>FRUTA</td>
+<td>8</td>
+<td>• 1 - SIM <br> • 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>COMIDA_DE_SAL</td>
+<td>9</td>
+<td>• 1 - SIM <br> • 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>OUTROS_ALIMENTOS_BEBIDAS</td>
+<td>10</td>
+<td>• 1 - SIM <br> • 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+</tbody></table>
+
+<h2 id="perguntacriancasdeseisvintetresmesesenum">PerguntaCriancasDeSeisVinteTresMesesEnum</h2>
+
+<table><thead>
+<tr>
+<th>Descrição</th>
+<th>Código</th>
+<th>Respostas aceitas</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>A_CRIANCA_ONTEM_TOMOU_LEITE_PEITO</td>
+<td>21</td>
+<td>• 1 - SIM <br> • 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>ONTEM_A_CRIANCA_COMEU_FRUTA_INTEIRA_PEDACO_AMASSADO</td>
+<td>22</td>
+<td>• 1 - SIM <br> • 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>SE_SIM_QUANTAS_VEZES <br> <strong>OBS:</strong> Preencher este campo somente se o campo 22 for preenchido com o valor &quot;1 - SIM&quot;</td>
+<td>23</td>
+<td>• 3 - NÃO_SABE <br> • 4 - UMA_VEZ <br> • 5 - DUAS_VEZES <br> • 6 - TRES_VEZES_OU_MAIS</td>
+</tr>
+<tr>
+<td>ONTEM_A_CRIANCA_COMEU_COMIDA_DE_SAL</td>
+<td>24</td>
+<td>• 1 - SIM <br> • 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>SE_COMEU_COMIDA_DE_SAL_QUANTAS_VEZES <br> <strong>OBS:</strong> Preencher este campo somente se o campo 24 for preenchido com o valor &quot;1 - SIM&quot;</td>
+<td>25</td>
+<td>• 3 - NÃO_SABE <br> • 4 - UMA_VEZ <br> • 5 - DUAS_VEZES <br> • 6 - TRES_VEZES_OU_MAIS</td>
+</tr>
+<tr>
+<td>SE_SIM_ESSA_COMIDA_FOI_OFERECIDA <br> <strong>OBS:</strong> Preencher este campo somente se o campo 24 for preenchido com o valor &quot;1 - SIM&quot;</td>
+<td>26</td>
+<td>• 3 - NÃO_SABE <br> • 7 - EM_PEDACOS <br> • 8 - AMASSADA <br> • 9 - PASSADA_NA_PENEIRA <br> • 10 - LIQUIDIFICADA <br> • 11 - SO_O_CALDO</td>
+</tr>
+<tr>
+<td>OUTRO_LEITE_QUE_NAO_LEITE_DO_PEITO</td>
+<td>28</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>MINGAU_COM_LEITE</td>
+<td>29</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>IOGURTE</td>
+<td>30</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>LEGUMES</td>
+<td>31</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>VEGETAL_OU_FRUTAS_COR_ALARANJADA_OU_FOLHAS_ESCURAS</td>
+<td>32</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>VERDURA_DE_FOLHA</td>
+<td>33</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>CARNE</td>
+<td>34</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>FIGADO</td>
+<td>35</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>FEIJAO</td>
+<td>36</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>ARROZ_BATATA_INHAME_MANDIOCA_FARINHA_MACARRAO</td>
+<td>37</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>HAMBURGUER_E_OU_EMBUTIDOS</td>
+<td>38</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>BEBIDAS_ADOCADAS</td>
+<td>39</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>MACARRAO_INSTANTANEO_SALGADINHOS_BISCOITOS</td>
+<td>40</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>BISCOITO_RECHEADO_DOCES_OU_GULOSEIMAS</td>
+<td>41</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+</tbody></table>
+
+<h2 id="perguntacriancascommaisdoisanosenum">PerguntaCriancasComMaisDoisAnosEnum</h2>
+
+<table><thead>
+<tr>
+<th>Descrição</th>
+<th>Código</th>
+<th>Respostas aceitas</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>VOCE_TEM_COSTUME_DE_REALIZAR_AS_REFEICOES_ASSISTINDO_TV_MEXENDO_NO_COMPUTADOR_E_OU_CELULAR</td>
+<td>11</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>QUAIS_REFEICOES_VOCE_FAZ_AO_LONGO_DO_DIA</td>
+<td>12</td>
+<td><a href="#respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</a></td>
+</tr>
+<tr>
+<td>FEIJAO</td>
+<td>14</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>FRUTAS_FRESCAS</td>
+<td>15</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>VERDURAS_E_OU_LEGUMES</td>
+<td>16</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>HAMBURGUER_E_OU_EMBUTIDOS</td>
+<td>17</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>BEBIDAS_ADOCADAS</td>
+<td>18</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>MACARRAO_INSTANTANEO_SALGADINHOS_BISCOITOS</td>
+<td>19</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+<tr>
+<td>BISCOITO_RECHEADO_DOCES_OU_GULOSEIMAS</td>
+<td>20</td>
+<td>• 1 - SIM <br>• 2 - NÃO <br> • 3 - NÃO_SABE</td>
+</tr>
+</tbody></table>
+
+<h2 id="respostaunicaescolhaenum">RespostaUnicaEscolhaEnum</h2>
+
+<table><thead>
+<tr>
+<th>Descrição</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SIM</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NÃO</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NAO_SABE</td>
+<td>3</td>
+</tr>
+<tr>
+<td>UMA_VEZ</td>
+<td>4</td>
+</tr>
+<tr>
+<td>DUAS_VEZES</td>
+<td>5</td>
+</tr>
+<tr>
+<td>TRES_VEZES_OU_MAIS</td>
+<td>6</td>
+</tr>
+<tr>
+<td>EM_PEDACOS</td>
+<td>7</td>
+</tr>
+<tr>
+<td>AMASSADA</td>
+<td>8</td>
+</tr>
+<tr>
+<td>PASSADA_NA_PENEIRA</td>
+<td>9</td>
+</tr>
+<tr>
+<td>LIQUIDIFICADA</td>
+<td>10</td>
+</tr>
+<tr>
+<td>SO_O_CALDO</td>
+<td>11</td>
+</tr>
+</tbody></table>
+
+<h2 id="respostamultiplaescolhaenum">RespostaMultiplaEscolhaEnum</h2>
+
+<table><thead>
+<tr>
+<th>Descrição</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CAFE_DA_MANHA</td>
+<td>12</td>
+</tr>
+<tr>
+<td>LANCHE_DA_MANHA</td>
+<td>13</td>
+</tr>
+<tr>
+<td>ALMOCO</td>
+<td>14</td>
+</tr>
+<tr>
+<td>LANCHE_DA_TARDE</td>
+<td>15</td>
+</tr>
+<tr>
+<td>JANTAR</td>
+<td>16</td>
+</tr>
+<tr>
+<td>CEIA</td>
+<td>17</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/v842/js/lunr.min.js"></script>
+
+    <script src="/v842/js/site.js" type="text/javascript"></script>    
+    <script src="/v842/js/search-index.js" type="text/javascript"></script>
+    <script src="/v842/js/busca.js"></script>
+  </body>
+</html>

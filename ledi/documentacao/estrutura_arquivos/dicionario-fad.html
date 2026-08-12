@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 8.4.2</span>
+        <span class="label">versão 8.5.0</span>
       
     </a>
 
@@ -79,7 +79,7 @@
           
         
           
-            <li><a title="Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.4.2</a></li>
+            <li><a title="Layout e-SUS APS de Dados e Interface Versão 8.5.0" href="/ledi/documentacao/index.html">Layout e-SUS APS de Dados e Interface Versão 8.5.0</a></li>
           
         
           
@@ -119,9 +119,9 @@
   <ul>
     
       <li>
-        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 8.4.2" href="/ledi/documentacao/index.html" class="back-link">
+        <a title="Voltar para Layout e-SUS APS de Dados e Interface Versão 8.5.0" href="/ledi/documentacao/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Layout e-SUS APS de Dados e Interface Versão 8.4.2)</small>
+          <small>(Layout e-SUS APS de Dados e Interface Versão 8.5.0)</small>
         </a>
       </li>
     
@@ -254,7 +254,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/ledi/documentacao/estrutura_arquivos/dicionario-fad.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 18/06/2026</span>
+        <span class="label" title="Data da última modificação">Alterado em 12/08/2026</span>
       
     </p>
   </header>
@@ -1010,6 +1010,56 @@
 <td>24</td>
 </tr>
 </tbody></table>
+
+<h3 id="17-stnaopossuicpf">#17 stNaoPossuiCpf</h3>
+
+<p>Marcador que indica que o CPF do cidadão não existe ou não está disponível no momento do cadastro.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Boolean</td>
+<td>Não</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<h3 id="18-justificativanaopossuicpf">#18 justificativaNaoPossuiCpf</h3>
+
+<p>Justificativa para o cidadão não possuir ou não informar CPF.</p>
+
+<table><thead>
+<tr>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Mínimo</th>
+<th>Máximo</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Long</td>
+<td>Condicional</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p><strong>Regras:</strong> </p>
+
+<ul>
+<li>É permitido o envio apenas de justificativas que constam na listagem de referência;</li>
+<li>Não pode ser preenchido se o campo <a href="#17-stnaopossuicpf">stNaoPossuiCpf</a> = <code>false</code>;</li>
+<li>É obrigatório se o campo <a href="#17-stnaopossuicpf">stNaoPossuiCpf</a> = <code>true</code>;</li>
+</ul>
+
+<p><strong>Referências:</strong> <a href="/ledi/documentacao/referencias/dicionario.html#justificativanaopossuicpf">justificativaNaoPossuiCpf</a>.</p>
 
   </article>
 
