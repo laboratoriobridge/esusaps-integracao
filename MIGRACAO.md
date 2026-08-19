@@ -124,6 +124,27 @@ Com Docker: `cd website && docker compose up`.
 
 ## Sincronizar conteúdo do esus-aps-doc
 
+**Este repositório só publica versão liberada** — o esus-aps-doc está sempre
+à frente, com conteúdo de versões ainda não disponibilizadas. Por isso a
+sincronização é feita a partir do ponto do esus-aps-doc que corresponde à
+versão que se quer publicar (a tag/branch da release), não do HEAD: é o
+passo 2.1 do tutorial, "após a versão estar disponível no site da aps,
+atualizar a branch base ou dar fetch da tag".
+
+Durante a migração as collections vieram do HEAD da `docusaurus-migration`,
+que é onde o conteúdo convertido existe — daí `SITE_VERSION` estar à frente
+do que está no ar. No corte, sincronize do ponto certo e ajuste
+`SITE_VERSION` para a versão que vai ser publicada.
+
+Atenção: o que se sincroniza é `website/collections/` (o Markdown já
+convertido), não `docs/_*` (o fonte Jekyll). Se uma correção foi feita no
+fonte Jekyll, ela só chega aqui depois de rodar o conversor lá:
+
+```bash
+# no esus-aps-doc/website
+npx tsx scripts/migrate-jekyll/index.ts --collection dw --only=principais_alteracoes.md
+```
+
 ```bash
 SRC=../esus-aps-doc/website/collections
 rm -rf website/collections/{integracao,ledi,dw,sistemas_externos}
@@ -162,11 +183,12 @@ Em aberto antes do corte:
    `v<versão>`.
 4. **Congelar a versão atual** em `v850/` antes do corte, seguindo o passo 1
    do tutorial — o processo de versionamento não muda com o Docusaurus.
-5. **Conferir a versão no corte.** O conteúdo em `collections/` está no
-   **LEDI 8.7.0** (sincronizado do esus-aps-doc), enquanto o site Jekyll no
-   ar ainda publica a **8.5.0** — `SITE_VERSION` acompanha o conteúdo
-   empacotado, não o que está no ar. Confirmar qual das duas deve ir pro ar
-   no corte.
+5. **Sincronizar a partir da versão liberada.** O conteúdo em
+   `collections/` está no **LEDI 8.7.0**, vindo do HEAD da
+   `docusaurus-migration`; o site no ar publica a **8.5.0**. Estar à frente
+   é o esperado (ver a seção de sincronização acima) — no corte, trazer o
+   conteúdo do ponto correspondente à versão liberada e acertar
+   `SITE_VERSION`.
 6. **Link do PDF de Especificação CADSUS.** Em
    `ledi/documentacao/referencias/dicionario`, o link para
    `Especificacao_CADSUS.pdf` está como HTML cru

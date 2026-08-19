@@ -156,7 +156,7 @@ Este documento relata as principais alterações entre as versões do DW.
 
 :nr Para contextualizar as informações da tabela `tb_fat_vacinacao_vacina`, foi criada a seguinte tabela de dimensão: `tb_dim_grupo_atendimento`.
 
-### 14. Principais alterações da v4.0.0 para a v4.1.2:
+### Principais alterações da v4.0.0 para a v4.1.2:
 
 :nr{reset=true} No contexto de :link{id=RF-EDW.atendimento_individual} foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:
 
