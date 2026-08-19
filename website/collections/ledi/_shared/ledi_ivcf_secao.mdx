@@ -1,0 +1,131 @@
+### IVCF
+
+#### \#1 resultado
+
+Resultado em pontos do registro.
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Integer | Sim         | 0      | 2      |
+
+**Regra:** Valor mínimo 0 e máximo 40.
+
+#### \#2 hasSgIdade
+
+Indicador de alteração na dimensão "Idade".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#3 hasSgPercepcaoSaude
+
+Indicador de alteração na dimensão "Percepção da saúde".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#4 hasSgAvdInstrumental
+
+Indicador de alteração na dimensão "AVD Instrumental".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#5 hasSgAvdBasica
+
+Indicador de alteração na dimensão "AVD Básica".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#6 hasSgCognicao
+
+Indicador de alteração na dimensão "Cognição".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#7 hasSgHumor
+
+Indicador de alteração na dimensão "Humor".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#8 hasSgAlcancePreensaoPinca
+
+Indicador de alteração na dimensão "Alcance, preensão e pinça", do grupo "Mobilidade".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#9 hasSgCapAerobicaMuscular
+
+Indicador de alteração na dimensão "Capacidade aeróbica e/ou muscular", do grupo "Mobilidade".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#10 hasSgMarcha
+
+Indicador de alteração na dimensão "Marcha", do grupo "Mobilidade".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#11 hasSgContinencia
+
+Indicador de alteração na dimensão "Continência esfincteriana", do grupo "Mobilidade".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#12 hasSgVisao
+
+Indicador de alteração na dimensão "Visão", do grupo "Comunicação".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#13 hasSgAudicao
+
+Indicador de alteração na dimensão "Audição", do grupo "Comunicação".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#14 hasSgComorbidade
+
+Indicador de alteração na dimensão "Comorbidade múltipla".
+
+| Tipo    | Obrigatório | Mínimo | Máximo |
+| ------- | ----------- | ------ | ------ |
+| Boolean | Sim         | -      | -      |
+
+#### \#15 dataResultado
+
+Data do registro do IVCF-20.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+| ---- | ----------- | ------ | ------ |
+| Long | Sim         | -      | -      |
+
+**Regras:**
+
+- Não pode ser posterior à data atual;
+- Não pode ser posterior à dataHoraFinalAtendimento.
+- A diferença entre a dataAtendimento e a dataNascimento deve ser maior ou igual a 60 anos. 
+
+**Referência:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).

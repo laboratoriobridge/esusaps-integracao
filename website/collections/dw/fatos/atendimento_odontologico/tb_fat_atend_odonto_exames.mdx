@@ -1,0 +1,57 @@
+---
+id: RF-EDW.tb_fat_atend_odonto_exames
+title: Tabela fato dos exames do atendimento odontológico
+order: 1
+parent: RF-EDW.atendimento_odontologico_individual
+---
+import MetadadosOdonto from '../../_shared/metadados_odonto.mdx';
+import DimensoesEmComum from '../../_shared/dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atend_odonto_exames` só é preenchida quando são processados registros de resultado de exame estruturados feitos em um :link[atendimento odontológico]{id=dicionario-fao} e o atendimento em questão é processado.
+
+## 2. Regras
+
+:nr A `tb_fat_atend_odonto_exames` é preenchida de acordo com as :link[regras]{id=dicionario-fao anchor=22-resultadosexames}.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Coluna DW                      | Referência LEDI | Referência sistema |
+| ------------------------------ | --------------- | ------------------ |
+| co\_seq\_fat\_atd\_odo\_exames | -               | Código de identificação sequencial dos resultado de exame estruturados registrados |
+<MetadadosOdonto />
+
+### 3.2 Métricas dos Fatos
+
+| Coluna DW             | Referência LEDI | Referência sistema |
+| --------------------- | --------------- | ------------------ |
+| dt\_solicitacao       | :link[dataSolicitacao]{id=dicionario-fao anchor=2-datasolicitacao} | Data de solicitação do exame avaliado |
+| dt\_realizacao        | :link[dataRealizacao]{id=dicionario-fao anchor=3-datarealizacao} | Data de realização do exame avaliado |
+| dt\_resultado         | :link[dataResultado]{id=dicionario-fao anchor=4-dataresultado} | Data de resultado do exame avaliado |
+| nu\_resultado\_valor  | :link[resultadoExame]{id=dicionario-fao anchor=5-resultadoexame} | Resultado do exame avaliado |
+| nu\_resultado\_dia    | :link[resultadoExame]{id=dicionario-fao anchor=5-resultadoexame} | Campo preenchido apenas para resultados de exames que possuem os seguintes códigos SIGTAP: 0205020143, 0205020151 e 0205010059  |
+| nu\_resultado\_semana | :link[resultadoExame]{id=dicionario-fao anchor=5-resultadoexame} | Campo preenchido apenas para resultados de exames que possuem os seguintes códigos SIGTAP: 0205020143, 0205020151 e 0205010059 |
+| dt\_resultado\_data   | :link[resultadoExame]{id=dicionario-fao anchor=5-resultadoexame} | Campo preenchido apenas para resultados de exames que possuem os seguintes códigos SIGTAP: 0205020143, 0205020151 e 0205010059 |
+| dt\_inicial\_atendimento | :link[dataHoraInicialAtendimento]{id=dicionario-fao anchor=17-datahorainicialatendimento} | Data e hora do início do atendimento no formato "YYYY-MM-DD HH:MM:SS.MMM"|
+| st\_resultado\_estruturado | - | Indica se o resultado do exame foi registrado de forma estruturada |
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW                          | Dimensão referência |
+| ---------------------------------- | ------------------- |
+| co\_dim\_procedimento\_avaliado    | Código SIGTAP do exame avaliado. Campo `co_seq_dim_procedimento` da `tb_dim_procedimento` |
+| co\_dim\_procedimento\_solicitado  | Código SIGTAP do exame solicitado. Campo `co_seq_dim_procedimento` da `tb_dim_procedimento` |
+| co\_dim\_sexo | Código do sexo. Campo `co_seq_dim_faixa_sexo` da `tb_dim_sexo` |
+| co\_dim\_turno | Código do turno do atendimento. Campo `co_seq_dim_turno` da `tb_dim_turno` | 
+| co\_dim\_tipo\_atendimento | Código do tipo de atendimento. Campo `co_seq_dim_tipo_atendimento` da `tb_dim_tipo_atendimento` | 
+| co\_dim\_faixa\_etaria | Código da faixa etária. Campo `co_seq_dim_faixa_etaria` da `tb_dim_faixa_etaria` | 
+
+### 4.2 Dimensões comuns a todas as tabelas fato do atendimento odontológico
+
+<DimensoesEmComum />

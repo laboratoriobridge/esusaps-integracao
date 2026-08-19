@@ -1,0 +1,27 @@
+---
+id: RF-EDW.dim_cid
+title: Tabela de dimensão de CID-10
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_cid` é utilizada para armazenar as CID-10. Possui como referência a :link[Classificação Internacional de Doenças - Versão 10]{id=referencias} do LEDI.
+
+## 2. Regras
+
+:nr Quando uma CID-10 é informada em um atendimento a tabela é preenchida.
+
+## 3. Campos da tabela
+
+| Colunas DW | Referência      |
+| ---------- | --------------- |
+| co\_seq\_dim\_cid | Código de identificação sequencial |
+| nu\_cid | Número identificador da CID |
+| no\_cid | Nome da CID |
+| st\_ativo | 0 - Inativo, null ou 1 - Ativo |
+| st\_registro\_valido | <CampoStRegistroValido /> |
+| ds\_filtro | Concatenação entre o número e nome da CID, sem acentos |

@@ -1,0 +1,117 @@
+---
+id: RF-EDW.tb_fat_cad_domiciliar
+title: Tabela fato do cadastro domiciliar
+order: 1
+parent: RF-EDW.cadastro_domiciliar
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_cad_domiciliar` é populada sempre que os dados de um :link[Cadastro Domiciliar e Territorial]{id=dicionario-fcd} são processados.
+
+## 2. Regras
+
+:nr A `tb_fat_cad_domiciliar` é preenchida quando são processado(as):
+
+- Fichas de cadastro domiciliar recebidas através da importação de sistemas terceiros, outras instalações do PEC e-SUS-APS ou do aplicativo e-SUS Território;
+- Registro de um cadastro domiciliar realizado no CDS, no Acompanhamento do Território ou na Reterritorialização.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_cad\_domiciliar | - | Código de identificação sequencial criado automaticamente pelo sistema |
+| nu\_uuid\_ficha | :link[uuid]{id=dicionario-fcd anchor=10-uuid} | Identificador universalmente único do registro |
+| nu\_uuid\_ficha\_origem | :link[uuidFichaOriginadora]{id=dicionario-fcd anchor=11-uuidfichaoriginadora} | UUID original da ficha de origem. Utilizado para vincular visitas domiciliares ao domicílio cadastrado |
+| nu\_uuid\_dado\_transp | :link[uuidDadoSerializado]{id=camada-transporte anchor=1-uuiddadoserializado} | Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu\_uuid\_ficha |
+| st\_recusa\_cadastro | :link[statusTermoRecusa]{id=dicionario-fcd anchor=8-statustermorecusa} | Indica se houve recusa ao cadastramento do domicílio |
+| st\_gerado\_automaticamente | - | Indica se o registro foi gerado automaticamente pelo sistema |
+| st\_proc\_operacionais | - | Flag de controle de processamento operacional |
+| st\_processa\_familita\_terrtro | - | Flag de controle de processamento de famílias no território |
+| st\_processo\_linha\_tempo | - | Flag de controle de processamento na linha do tempo |
+| st\_processo\_familia | - | Flag de controle de processamento de família |
+| st\_familias | - | Flag que indica presença de famílias vinculadas ao domicílio |
+| st\_ativo | - | Indica se o registro está ativo no sistema |
+
+### 3.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| qt\_morador | :link[nuMoradores]{id=dicionario-fcd anchor=8-numoradores} | Quantidade de moradores no domicílio |
+| nu\_comodo | :link[nuComodos]{id=dicionario-fcd anchor=7-nucomodos} | Número de cômodos do domicílio |
+| nu\_micro\_area | :link[microArea]{id=dicionario-fcd anchor=13-microarea} | Número da microárea onde o domicílio está localizado |
+| st\_disp\_energia | :link[stDisponibilidadeEnergiaEletrica]{id=dicionario-fcd anchor=10-stdisponibilidadeenergiaeletrica} | Indica disponibilidade de energia elétrica no domicílio |
+| st\_animal\_domiciliar | - | Indica presença de animais no domicílio |
+| qt\_animal\_domiciliar | - | Quantidade de animais no domicílio |
+| st\_animal\_gato | :link[animaisNoDomicilio]{id=dicionario-fcd anchor=1-animaisnodomicilio} | Indica presença de gato no domicílio |
+| st\_animal\_cachorro | :link[animaisNoDomicilio]{id=dicionario-fcd anchor=1-animaisnodomicilio} | Indica presença de cachorro no domicílio |
+| st\_animal\_passaro | :link[animaisNoDomicilio]{id=dicionario-fcd anchor=1-animaisnodomicilio} | Indica presença de pássaro no domicílio |
+| st\_animal\_outros | :link[animaisNoDomicilio]{id=dicionario-fcd anchor=1-animaisnodomicilio} | Indica presença de outros animais no domicílio |
+| st\_animal\_macaco | :link[animaisNoDomicilio]{id=dicionario-fcd anchor=1-animaisnodomicilio} | Indica presença de macaco no domicílio |
+| st\_animal\_galinha | :link[animaisNoDomicilio]{id=dicionario-fcd anchor=1-animaisnodomicilio} | Indica presença de galinha no domicílio |
+| st\_animal\_porco | :link[animaisNoDomicilio]{id=dicionario-fcd anchor=1-animaisnodomicilio} | Indica presença de porco no domicílio |
+| st\_animal\_repteis | :link[animaisNoDomicilio]{id=dicionario-fcd anchor=1-animaisnodomicilio} | Indica presença de répteis no domicílio |
+| st\_outros\_prof\_vinclds | :link[stOutrosProfissionaisVinculados]{id=dicionario-fcd anchor=2-stoutrosprofissionaisvinculados} | Indica se existem outros profissionais vinculados ao domicílio |
+| nu\_latitude | :link[latitude]{id=dicionario-fcd anchor=15-latitude} | Latitude da localização geográfica do domicílio |
+| nu\_longitude | :link[longitude]{id=dicionario-fcd anchor=16-longitude} | Longitude da localização geográfica do domicílio |
+| nu\_residencia\_indigena | - | Identificador da residência indígena |
+| ds\_filtro\_tipo\_renda\_familiar | :link[rendaFamiliar]{id=dicionario-fcd anchor=5-rendafamiliar} | Campo de filtro com os tipos de renda familiar registrados |
+| nu\_cep | :link[cep]{id=dicionario-fcd anchor=2-cep} | CEP do logradouro do domicílio |
+| no\_logradouro | :link[nomeLogradouro]{id=dicionario-fcd anchor=5-nomelogradouro} | Nome do logradouro do domicílio |
+| nu\_num\_logradouro | :link[numero]{id=dicionario-fcd anchor=6-numero} | Número do logradouro do domicílio |
+| no\_complemento | :link[complemento]{id=dicionario-fcd anchor=4-complemento} | Complemento do endereço do domicílio |
+| no\_bairro | :link[bairro]{id=dicionario-fcd anchor=1-bairro} | Nome do bairro do domicílio |
+| no\_ponto\_referencia | :link[pontoReferencia]{id=dicionario-fcd anchor=12-pontoreferencia} | Ponto de referência do domicílio |
+| nu\_telefone\_residencia | :link[telefoneResidencia]{id=dicionario-fcd anchor=9-telefoneresidencia} | Telefone da residência |
+| nu\_telefone\_contato | :link[telefoneContato]{id=dicionario-fcd anchor=8-telefonecontato} | Telefone de contato do domicílio |
+| no\_instituicao\_nome | :link[nomeInstituicaoPermanencia]{id=dicionario-fcd anchor=1-nomeinstituicaopermanencia} | Nome da instituição de permanência |
+| no\_instituicao\_cargo | :link[cargoInstituicao]{id=dicionario-fcd anchor=5-cargoinstituicao} | Cargo do responsável técnico na instituição de permanência |
+| nu\_instituicao\_cns | :link[cnsResponsavelTecnico]{id=dicionario-fcd anchor=4-cnsresponsaveltecnico} | CNS do responsável técnico da instituição de permanência |
+| nu\_instituicao\_telefone | :link[telefoneResponsavelTecnico]{id=dicionario-fcd anchor=6-telefoneresponsaveltecnico} | Telefone do responsável técnico da instituição de permanência |
+
+Os seguintes campos da tabela armazenam valores criptografados:
+
+- nu\_cep
+- no\_logradouro
+- nu\_num\_logradouro
+- no\_complemento
+- no\_bairro
+- no\_ponto\_referencia
+- nu\_telefone\_residencia
+- nu\_telefone\_contato
+- no\_instituicao\_nome
+- no\_instituicao\_cargo
+- nu\_instituicao\_cns
+- nu\_instituicao\_telefone
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência |
+| --------- | ------------------- |
+| co\_dim\_tipo\_imovel | Código do tipo de imóvel. Campo `co_seq_dim_tipo_imovel` da `tb_dim_tipo_imovel` |
+| co\_dim\_tipo\_logradouro | Código do tipo de logradouro. Campo `co_seq_dim_tipo_logradouro` da `tb_dim_tipo_logradouro` |
+| co\_dim\_municipio\_cidadao | Código do município de localização do domicílio. Campo `co_seq_dim_municipio` da `tb_dim_municipio` |
+| co\_dim\_tipo\_situacao\_moradia | Código da situação de moradia. Campo `co_seq_dim_tipo_situacao_moradia` da `tb_dim_tipo_situacao_moradia` |
+| co\_dim\_tipo\_localizacao | Código da localização (urbana/rural). Campo `co_seq_dim_tipo_localizacao` da `tb_dim_tipo_localizacao` |
+| co\_dim\_tipo\_domicilio | Código do tipo de domicílio. Campo `co_seq_dim_tipo_domicilio` da `tb_dim_tipo_domicilio` |
+| co\_dim\_tipo\_posse\_terra | Código do tipo de posse da terra. Campo `co_seq_dim_tipo_posse_terra` da `tb_dim_tipo_posse_terra` |
+| co\_dim\_tipo\_acesso\_domicilio | Código do tipo de acesso ao domicílio. Campo `co_seq_dim_tipo_acesso_domicilio` da `tb_dim_tipo_acesso_domicilio` |
+| co\_dim\_tipo\_material\_parede | Código do tipo de material predominante das paredes. Campo `co_seq_dim_tipo_material_parede` da `tb_dim_tipo_material_parede` |
+| co\_dim\_tipo\_abastecimento\_agua | Código do tipo de abastecimento de água. Campo `co_seq_dim_tipo_abastecimento_agua` da `tb_dim_tipo_abastecimento_agua` |
+| co\_dim\_tipo\_tratamento\_agua | Código do tipo de tratamento da água. Campo `co_seq_dim_tipo_tratamento_agua` da `tb_dim_tipo_tratamento_agua` |
+| co\_dim\_tipo\_escoamento\_sanitar | Código do tipo de escoamento sanitário. Campo `co_seq_dim_tipo_escoamento_sanitar` da `tb_dim_tipo_escoamento_sanitar` |
+| co\_dim\_tipo\_destino\_lixo | Código do tipo de destino do lixo. Campo `co_seq_dim_tipo_destino_lixo` da `tb_dim_tipo_destino_lixo` |
+| co\_dim\_tipo\_origem\_energ\_eletr | Código do tipo de origem da energia elétrica. Campo `co_seq_dim_tipo_origem_energ_elet` da `tb_dim_tipo_origem_energ_elet` |
+| co\_dim\_tipo\_endereco | Código do tipo de endereço. Campo `co_seq_dim_tipo_endereco` da `tb_dim_tipo_endereco` |
+| co\_dim\_aldeia | Código da aldeia indígena. Campo `co_seq_dim_aldeia` da `tb_dim_aldeia` |
+| co\_dim\_municipio\_aldeia | Código do município da aldeia. Campo `co_seq_dim_municipio` da `tb_dim_municipio` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato do cadastro domiciliar
+
+<DimensoesEmComum />

@@ -1,0 +1,670 @@
+[
+  {
+    "from": "/dw/dimensoes/dim_agrupador_filtro.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_agrupador_filtro"
+  },
+  {
+    "from": "/dw/dimensoes/dim_aldeia.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_aldeia"
+  },
+  {
+    "from": "/dw/dimensoes/dim_aleitamento.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_aleitamento"
+  },
+  {
+    "from": "/dw/dimensoes/dim_catmat.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_catmat"
+  },
+  {
+    "from": "/dw/dimensoes/dim_cbo.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_cbo"
+  },
+  {
+    "from": "/dw/dimensoes/dim_ciap.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_ciap"
+  },
+  {
+    "from": "/dw/dimensoes/dim_cid.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_cid"
+  },
+  {
+    "from": "/dw/dimensoes/dim_cidadao_pec_grupo.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_cidadao_pec_grupo"
+  },
+  {
+    "from": "/dw/dimensoes/dim_classificacao_risc_enc.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_classificacao_risc_enc"
+  },
+  {
+    "from": "/dw/dimensoes/dim_condicao_maternal.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_condicao_maternal"
+  },
+  {
+    "from": "/dw/dimensoes/dim_conduta_ad.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_conduta_ad"
+  },
+  {
+    "from": "/dw/dimensoes/dim_conduta_cuidado.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_conduta_cuidado"
+  },
+  {
+    "from": "/dw/dimensoes/dim_cuidador.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_cuidador"
+  },
+  {
+    "from": "/dw/dimensoes/dim_desfecho_visita.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_desfecho_visita"
+  },
+  {
+    "from": "/dw/dimensoes/dim_dose_dose_imunobiologico.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_dose_imunobiologico"
+  },
+  {
+    "from": "/dw/dimensoes/dim_dose_frequencia_medida.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_dose_frequencia_medida"
+  },
+  {
+    "from": "/dw/dimensoes/dim_dose_frequencia.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_dose_frequencia"
+  },
+  {
+    "from": "/dw/dimensoes/dim_duracao_tratamento_med.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_duracao_tratamento_med"
+  },
+  {
+    "from": "/dw/dimensoes/dim_equipe.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_equipe"
+  },
+  {
+    "from": "/dw/dimensoes/dim_especialidade.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_especialidade"
+  },
+  {
+    "from": "/dw/dimensoes/dim_estado_civil.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_estado_civil"
+  },
+  {
+    "from": "/dw/dimensoes/dim_estrategia_vacinacao.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_estrategia_vacinacao"
+  },
+  {
+    "from": "/dw/dimensoes/dim_etnia.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_etnia"
+  },
+  {
+    "from": "/dw/dimensoes/dim_faixa_etaria.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_faixa_etaria"
+  },
+  {
+    "from": "/dw/dimensoes/dim_forma_farmaceutica.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_forma_farmaceutica"
+  },
+  {
+    "from": "/dw/dimensoes/dim_frequencia_alimentacao.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_frequencia_alimentacao"
+  },
+  {
+    "from": "/dw/dimensoes/dim_grau_vulnerabilidade_ivcf.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_grau_vulnerabilidade_ivcf"
+  },
+  {
+    "from": "/dw/dimensoes/dim_grupo_atendimento.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_grupo_atendimento"
+  },
+  {
+    "from": "/dw/dimensoes/dim_grupo_cbo.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_grupo_cbo"
+  },
+  {
+    "from": "/dw/dimensoes/dim_identidade_genero.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_identidade_genero"
+  },
+  {
+    "from": "/dw/dimensoes/dim_imunobiologico.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_imunobiologico"
+  },
+  {
+    "from": "/dw/dimensoes/dim_inep.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_inep"
+  },
+  {
+    "from": "/dw/dimensoes/dim_just_nao_possui_cpf.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_just_nao_possui_cpf"
+  },
+  {
+    "from": "/dw/dimensoes/dim_local_apl_vacina.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_local_apl_vacina"
+  },
+  {
+    "from": "/dw/dimensoes/dim_local_atendimento.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_local_atendimento"
+  },
+  {
+    "from": "/dw/dimensoes/dim_modalidade_ad.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_modalidade_ad"
+  },
+  {
+    "from": "/dw/dimensoes/dim_municipio.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_municipio"
+  },
+  {
+    "from": "/dw/dimensoes/dim_nacionalidade.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_nacionalidade"
+  },
+  {
+    "from": "/dw/dimensoes/dim_pais.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_pais"
+  },
+  {
+    "from": "/dw/dimensoes/dim_pic.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_pic"
+  },
+  {
+    "from": "/dw/dimensoes/dim_povo_comunidad_trad.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_povo_comunidad_trad"
+  },
+  {
+    "from": "/dw/dimensoes/dim_prioridade_cuidado.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_prioridade_cuidado"
+  },
+  {
+    "from": "/dw/dimensoes/dim_procedencia_origem.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_procedencia_origem"
+  },
+  {
+    "from": "/dw/dimensoes/dim_procedimento.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_procedimento"
+  },
+  {
+    "from": "/dw/dimensoes/dim_profissional.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_profissional"
+  },
+  {
+    "from": "/dw/dimensoes/dim_raca_cor.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_raca_cor"
+  },
+  {
+    "from": "/dw/dimensoes/dim_racionalidade_saude.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_racionalidade_saude"
+  },
+  {
+    "from": "/dw/dimensoes/dim_sexo.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_sexo"
+  },
+  {
+    "from": "/dw/dimensoes/dim_situacao_problema.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_situacao_problema"
+  },
+  {
+    "from": "/dw/dimensoes/dim_situacao_trabalho.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_situacao_trabalho"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tempo_morador_rua.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tempo_morador_rua"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tempo_socioeducativo.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tempo_socioeducativo"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tempo.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tempo"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_abastecimento_agua.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_abastecimento_agua"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_acesso_domicilio.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_acesso_domicilio"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_atendimento.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_atendimento"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_atividade.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_atividade"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_condicao_peso.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_condicao_peso"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_consulta_odonto.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_consulta_odonto"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_destino_lixo.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_destino_lixo"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_domicilio.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_domicilio"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_elegibilidade.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_elegibilidade"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_endereco.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_endereco"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_escoamento_sanitar.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_escoamento_sanitar"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_escolaridade.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_escolaridade"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_ficha.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_ficha"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_glicemia.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_glicemia"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_imovel.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_imovel"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_localizacao.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_localizacao"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_logradouro.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_logradouro"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_material_parede.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_material_parede"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_orientacao_sexual.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_orientacao_sexual"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_origem_dado_transp.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_origem_dado_transp"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_origem_energ_elet.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_origem_energ_elet"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_origem.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_origem"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_parentesco.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_parentesco"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_posse_terra.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_posse_terra"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_renda_familiar.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_renda_familiar"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_saida_cadastro.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_saida_cadastro"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_sanguineo.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_sanguineo"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_situacao_moradia.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_situacao_moradia"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_socioeducativo.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_socioeducativo"
+  },
+  {
+    "from": "/dw/dimensoes/dim_tipo_tratamento_agua.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_tipo_tratamento_agua"
+  },
+  {
+    "from": "/dw/dimensoes/dim_turno.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_turno"
+  },
+  {
+    "from": "/dw/dimensoes/dim_uf.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_uf"
+  },
+  {
+    "from": "/dw/dimensoes/dim_unidade_saude.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_unidade_saude"
+  },
+  {
+    "from": "/dw/dimensoes/dim_via_adm_vacina.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_via_adm_vacina"
+  },
+  {
+    "from": "/dw/dimensoes/dim_via_administracao.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_via_administracao"
+  },
+  {
+    "from": "/dw/dimensoes/dim_vinculacao_equipes.html",
+    "to": "/dw/dimensoes/RF-EDW.dim_vinculacao_equipes"
+  },
+  {
+    "from": "/dw/fatos/atendimento_domiciliar/tb_fat_atend_dom_prob_cond.html",
+    "to": "/dw/fatos/atendimento_domiciliar/RF-EDW.tb_fat_atend_dom_prob_cond"
+  },
+  {
+    "from": "/dw/fatos/atendimento_domiciliar/tb_fat_atend_dom_proced.html",
+    "to": "/dw/fatos/atendimento_domiciliar/RF-EDW.tb_fat_atend_dom_proced"
+  },
+  {
+    "from": "/dw/fatos/atendimento_domiciliar/tb_fat_atendimento_domiciliar.html",
+    "to": "/dw/fatos/atendimento_domiciliar/RF-EDW.tb_fat_atendimento_domiciliar"
+  },
+  {
+    "from": "/dw/fatos/atendimento_individual/tb_fat_atd_ind_encaminhamentos.html",
+    "to": "/dw/fatos/atendimento_individual/RF-EDW.tb_fat_atd_ind_encaminhamentos"
+  },
+  {
+    "from": "/dw/fatos/atendimento_individual/tb_fat_atd_ind_exames.html",
+    "to": "/dw/fatos/atendimento_individual/RF-EDW.tb_fat_atd_ind_exames"
+  },
+  {
+    "from": "/dw/fatos/atendimento_individual/tb_fat_atd_ind_medicamentos.html",
+    "to": "/dw/fatos/atendimento_individual/RF-EDW.tb_fat_atd_ind_medicamentos"
+  },
+  {
+    "from": "/dw/fatos/atendimento_individual/tb_fat_atd_ind_problemas.html",
+    "to": "/dw/fatos/atendimento_individual/RF-EDW.tb_fat_atd_ind_problemas"
+  },
+  {
+    "from": "/dw/fatos/atendimento_individual/tb_fat_atd_ind_procedimentos.html",
+    "to": "/dw/fatos/atendimento_individual/RF-EDW.tb_fat_atd_ind_procedimentos"
+  },
+  {
+    "from": "/dw/fatos/atendimento_individual/tb_fat_atendimento_individual.html",
+    "to": "/dw/fatos/atendimento_individual/RF-EDW.tb_fat_atendimento_individual"
+  },
+  {
+    "from": "/dw/fatos/atendimento_individual/tb_fat_cnslddo_ciddo_fai_cid.html",
+    "to": "/dw/fatos/atendimento_individual/RF-EDW.tb_fat_cnslddo_ciddo_fai_cid"
+  },
+  {
+    "from": "/dw/fatos/atendimento_individual/tb_fat_consolidado_cidadao_fai.html",
+    "to": "/dw/fatos/atendimento_individual/RF-EDW.tb_fat_consolidado_cidadao_fai"
+  },
+  {
+    "from": "/dw/fatos/atendimento_odontologico/tb_fat_atend_odonto_encaminham.html",
+    "to": "/dw/fatos/atendimento_odontologico/RF-EDW.tb_fat_atend_odonto_encaminham"
+  },
+  {
+    "from": "/dw/fatos/atendimento_odontologico/tb_fat_atend_odonto_exames.html",
+    "to": "/dw/fatos/atendimento_odontologico/RF-EDW.tb_fat_atend_odonto_exames"
+  },
+  {
+    "from": "/dw/fatos/atendimento_odontologico/tb_fat_atend_odonto_medicament.html",
+    "to": "/dw/fatos/atendimento_odontologico/RF-EDW.tb_fat_atend_odonto_medicament"
+  },
+  {
+    "from": "/dw/fatos/atendimento_odontologico/tb_fat_atend_odonto_problemas.html",
+    "to": "/dw/fatos/atendimento_odontologico/RF-EDW.tb_fat_atend_odonto_problemas"
+  },
+  {
+    "from": "/dw/fatos/atendimento_odontologico/tb_fat_atend_odonto_proced.html",
+    "to": "/dw/fatos/atendimento_odontologico/RF-EDW.tb_fat_atend_odonto_proced"
+  },
+  {
+    "from": "/dw/fatos/atendimento_odontologico/tb_fat_atendimento_odonto.html",
+    "to": "/dw/fatos/atendimento_odontologico/RF-EDW.tb_fat_atendimento_odonto"
+  },
+  {
+    "from": "/dw/fatos/atendimento_odontologico/tb_fat_consolidado_cidadao_fao.html",
+    "to": "/dw/fatos/atendimento_odontologico/RF-EDW.tb_fat_consolidado_cidadao_fao"
+  },
+  {
+    "from": "/dw/fatos/atividade_coletiva/tb_fat_atividade_coletiva.html",
+    "to": "/dw/fatos/atividade_coletiva/RF-EDW.tb_fat_atividade_coletiva"
+  },
+  {
+    "from": "/dw/fatos/atividade_coletiva/tb_fat_atvdd_coletiva_ext.html",
+    "to": "/dw/fatos/atividade_coletiva/RF-EDW.tb_fat_atvdd_coletiva_ext"
+  },
+  {
+    "from": "/dw/fatos/atividade_coletiva/tb_fat_atvdd_coletiva_int.html",
+    "to": "/dw/fatos/atividade_coletiva/RF-EDW.tb_fat_atvdd_coletiva_int"
+  },
+  {
+    "from": "/dw/fatos/atividade_coletiva/tb_fat_atvdd_coletiva_part.html",
+    "to": "/dw/fatos/atividade_coletiva/RF-EDW.tb_fat_atvdd_coletiva_part"
+  },
+  {
+    "from": "/dw/fatos/atividade_coletiva/tb_fat_atvdd_coletiva_propart.html",
+    "to": "/dw/fatos/atividade_coletiva/RF-EDW.tb_fat_atvdd_coletiva_propart"
+  },
+  {
+    "from": "/dw/fatos/avaliacao_elegibilidade/tb_fat_avaliacao_elegibilidade.html",
+    "to": "/dw/fatos/avaliacao_elegibilidade/RF-EDW.tb_fat_avaliacao_elegibilidade"
+  },
+  {
+    "from": "/dw/fatos/cadastro_domiciliar/tb_fat_cad_dom_familia.html",
+    "to": "/dw/fatos/cadastro_domiciliar/RF-EDW.tb_fat_cad_dom_familia"
+  },
+  {
+    "from": "/dw/fatos/cadastro_domiciliar/tb_fat_cad_domiciliar.html",
+    "to": "/dw/fatos/cadastro_domiciliar/RF-EDW.tb_fat_cad_domiciliar"
+  },
+  {
+    "from": "/dw/fatos/cadastro_individual/tb_fat_cad_individual.html",
+    "to": "/dw/fatos/cadastro_individual/RF-EDW.tb_fat_cad_individual"
+  },
+  {
+    "from": "/dw/fatos/cuidado_compartilhado/tb_fat_cuidado_compartilhado.html",
+    "to": "/dw/fatos/cuidado_compartilhado/RF-EDW.tb_fat_cuidado_compartilhado"
+  },
+  {
+    "from": "/dw/fatos/ficha_complementar/tb_fat_complementar.html",
+    "to": "/dw/fatos/ficha_complementar/RF-EDW.tb_fat_complementar"
+  },
+  {
+    "from": "/dw/fatos/ivcf/ivcf.html",
+    "to": "/dw/fatos/ivcf/RF-EDW.tb_fat_ivcf"
+  },
+  {
+    "from": "/dw/fatos/marcadores_consumo_alimentar/tb_fat_marca_consumo_alimnt.html",
+    "to": "/dw/fatos/marcadores_consumo_alimentar/RF-EDW.tb_fat_marca_consumo_alimnt"
+  },
+  {
+    "from": "/dw/fatos/oci/tb_fat_solicitacao_oci.html",
+    "to": "/dw/fatos/oci/RF-EDW.tb_fat_solicitacao_oci"
+  },
+  {
+    "from": "/dw/fatos/procedimentos/tb_fat_consolidado_cidadao_fp.html",
+    "to": "/dw/fatos/procedimentos/RF-EDW.tb_fat_consolidado_cidadao_fp"
+  },
+  {
+    "from": "/dw/fatos/procedimentos/tb_fat_proced_atend_proced.html",
+    "to": "/dw/fatos/procedimentos/RF-EDW.tb_fat_proced_atend_proced"
+  },
+  {
+    "from": "/dw/fatos/procedimentos/tb_fat_proced_atend.html",
+    "to": "/dw/fatos/procedimentos/RF-EDW.tb_fat_proced_atend"
+  },
+  {
+    "from": "/dw/fatos/procedimentos/tb_fat_procedimento.html",
+    "to": "/dw/fatos/procedimentos/RF-EDW.tb_fat_procedimento"
+  },
+  {
+    "from": "/dw/fatos/vacinacao/tb_fat_vacinacao_vacina.html",
+    "to": "/dw/fatos/vacinacao/RF-EDW.tb_fat_vacinacao_vacina"
+  },
+  {
+    "from": "/dw/fatos/vacinacao/tb_fat_vacinacao.html",
+    "to": "/dw/fatos/vacinacao/RF-EDW.tb_fat_vacinacao"
+  },
+  {
+    "from": "/dw/fatos/visita_domiciliar/tb_fat_visita_domiciliar.html",
+    "to": "/dw/fatos/visita_domiciliar/RF-EDW.tb_fat_visita_domiciliar"
+  },
+  {
+    "from": "/dw/principais_alteracoes.html",
+    "to": "/dw/principais_alteracoes_dw"
+  },
+  {
+    "from": "/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html",
+    "to": "/dw/visualizacoes/RF-EDW.acomp_cidadaos_vinculados"
+  },
+  {
+    "from": "/ledi/documentacao/api_transmissao/api_transmissao_registro_LEDI.html",
+    "to": "/ledi/documentacao/api_transmissao/api_transmissao_registro_LEDI"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/camada-transporte.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/camada-transporte"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-fac.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-fac"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-fad.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-fad"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-fae.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-fae"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-fai.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-fai"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-fao.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-fao"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-fcc.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-fcc"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-fcd"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-fci.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-fci"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-fczm.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-fczm"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-fp.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-fp"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-fv.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-fv"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-fvd"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/dicionario-mca.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/dicionario-mca"
+  },
+  {
+    "from": "/ledi/documentacao/estrutura_arquivos/header-transport.html",
+    "to": "/ledi/documentacao/estrutura_arquivos/headerTransport"
+  },
+  {
+    "from": "/ledi/documentacao/principais_alteracoes.html",
+    "to": "/ledi/documentacao/principais_alteracoes"
+  },
+  {
+    "from": "/ledi/documentacao/referencias/aldeias.html",
+    "to": "/ledi/documentacao/referencias/aldeias"
+  },
+  {
+    "from": "/ledi/documentacao/referencias/cbo_disponiveis.html",
+    "to": "/ledi/documentacao/referencias/cbo"
+  },
+  {
+    "from": "/ledi/documentacao/referencias/dicionario.html",
+    "to": "/ledi/documentacao/referencias/dicionario"
+  },
+  {
+    "from": "/ledi/documentacao/referencias/exames_estruturados.html",
+    "to": "/ledi/documentacao/referencias/exames_estruturados"
+  },
+  {
+    "from": "/ledi/documentacao/referencias/municipios.html",
+    "to": "/ledi/documentacao/referencias/municipios"
+  },
+  {
+    "from": "/ledi/documentacao/referencias/paises.html",
+    "to": "/ledi/documentacao/referencias/paises"
+  },
+  {
+    "from": "/ledi/documentacao/referencias/relacao_ciap_cid.html",
+    "to": "/ledi/documentacao/referencias/relacao_ciap_cid"
+  },
+  {
+    "from": "/ledi/documentacao/referencias/tabela_catmat.html",
+    "to": "/ledi/documentacao/referencias/catmat"
+  },
+  {
+    "from": "/ledi/documentacao/referencias/uf.html",
+    "to": "/ledi/documentacao/referencias/ufs"
+  },
+  {
+    "from": "/ledi/documentacao/referencias/versao.html",
+    "to": "/ledi/documentacao/referencias/versao"
+  },
+  {
+    "from": "/ledi/documentacao/regras/algoritmo_CNS.html",
+    "to": "/ledi/documentacao/regras/algoritmo_CNS"
+  },
+  {
+    "from": "/ledi/documentacao/regras/cbo.html",
+    "to": "/ledi/documentacao/regras/grupo_cbo"
+  },
+  {
+    "from": "/ledi/documentacao/regras/validar_nome.html",
+    "to": "/ledi/documentacao/regras/validar_nome"
+  },
+  {
+    "from": "/ledi/documentacao/regras/validar_regras_vacinacao.html",
+    "to": "/ledi/documentacao/regras/regras_vacinacao"
+  },
+  {
+    "from": "/ledi/documentacao/thrift-xsd.html",
+    "to": "/ledi/documentacao/thrift-xsd"
+  },
+  {
+    "from": "/pdf.html",
+    "to": "/print"
+  },
+  {
+    "from": "/search.html",
+    "to": "/search"
+  },
+  {
+    "from": "/sistemas_externos/chave_assinatura.html",
+    "to": "/sistemas_externos/chave_assinatura"
+  },
+  {
+    "from": "/sistemas_externos/iframe.html",
+    "to": "/sistemas_externos/iframe"
+  },
+  {
+    "from": "/sistemas_externos/parametros_dinamicos.html",
+    "to": "/sistemas_externos/parametros_dinamicos"
+  }
+]

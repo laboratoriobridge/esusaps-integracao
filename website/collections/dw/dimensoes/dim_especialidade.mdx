@@ -1,0 +1,26 @@
+---
+id: RF-EDW.dim_especialidade
+title: Tabela de dimensão de especialidades - Atendimento Individual
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_especialidade` é utilizada para armazenar as especialidades dos encaminhamentos do atendimento individual. Possui como referência as tabelas de :link[Especialidades - Atendimento Individual]{id=dicionario-fai anchor=especialidadeencaminhamentoatendimentoindividual} e :link[Especialidades - Atendimento Odontológico]{id=dicionario-fao anchor=especialidadeencaminhamentoatendimentoodontol-gico} do LEDI.
+
+## 2. Regras
+
+:nr Quando uma especialidade é informada em algum registro, a tabela é preenchida.
+
+## 3. Campos da tabela
+
+| Colunas DW | Referência      |
+| ---------- | --------------- |
+| co\_seq\_dim\_especialidade | Código de identificação sequencial |
+| co\_especialidade | Número identificador da especialidade |
+| ds\_especialidade | Descrição da especialidade |
+| ds\_especialidade_filtro | Descrição da especialidade, sem acentos |
+| st\_registro\_valido | <CampoStRegistroValido /> |
