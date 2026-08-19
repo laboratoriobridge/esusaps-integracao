@@ -1,0 +1,59 @@
+---
+id: RF-EDW.tb_fat_atividade_coletiva
+title: Tabela fato da atividade coletiva
+order: 1
+parent: RF-EDW.atividade_coletiva
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atividade_coletiva` é populada sempre que os dados de uma :link[Atividade Coletiva]{id=dicionario-fac} são processados. Ela representa o cabeçalho da atividade, com os dados gerais do evento.
+
+## 2. Regras
+
+:nr A `tb_fat_atividade_coletiva` é preenchida quando são processado(a)s:
+
+- Fichas de atividade coletiva recebidas através da importação de sistemas terceiros, outras instalações do PEC ou o aplicativo e-SUS Atividade Coletiva;
+- Registros de atividade coletiva no CDS ou no PEC.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_atividade\_coletiva | - | Código de identificação sequencial de atividade coletiva |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fac anchor=1-uuidficha} | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | :link[uuidDadoSerializado]{id=camada-transporte anchor=1-uuiddadoserializado} | Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu\_uuid\_ficha |
+
+### 3.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| nu\_participantes | :link[numParticipantes]{id=dicionario-fac anchor=4-numparticipantes} | Número de cidadãos participantes registrados na seção de participantes |
+| nu\_participantes\_registrados | - | Número de cidadãos participantes registrados na seção de participantes |
+| nu\_avaliacoes\_alteradas | - | Número de avaliações alteradas registradas na seção de participantes |
+| st\_pse\_educacao | :link[pseEducacao]{id=dicionario-fac anchor=18-pseeducacao} | Indica se a atividade foi realizada no âmbito do PSE — Educação |
+| st\_pse\_saude | :link[pseSaude]{id=dicionario-fac anchor=19-psesaude} | Indica se a atividade foi realizada no âmbito do PSE — Saúde |
+| ds\_outra\_localidade | - | Descrição de outra localidade quando o campo "local de atividade" for "Outro" |
+| ds\_filtro\_tema\_reuniao | - | Agrupa todos os identificadores dos temas para reunião informados na atividade coletiva |
+| ds\_filtro\_tema\_para\_saude | - | Agrupa todos os identificadores dos temas para saúde informados na atividade coletiva |
+| ds\_filtro\_public\_alvo | - | Agrupa todos os identificadores dos públicos alvo informados na atividade coletiva |
+| ds\_filtro\_pratica\_em\_saude | - | Agrupa todos os identificadores das práticas em saúde informadas na atividade coletiva |
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência |
+| --------- | ------------------- |
+| co\_dim\_tipo\_atividade | Código do tipo de atividade. Campo `co_seq_dim_tipo_atividade` da `tb_dim_tipo_atividade` |
+| co\_dim\_procedimento | Código do procedimento SIGTAP vinculado. Campo `co_seq_dim_procedimento` da `tb_dim_procedimento` |
+| co\_dim\_undd\_sade\_acdm\_sade | Código da unidade de saúde ou academia da saúde onde ocorreu a atividade. Campo `co_seq_dim_unidade_saude` da `tb_dim_unidade_saude` |
+| co\_dim\_inep | Código INEP da escola onde ocorreu a atividade (PSE). Campo `co_seq_dim_inep` da `tb_dim_inep` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato da atividade coletiva
+
+<DimensoesEmComum />

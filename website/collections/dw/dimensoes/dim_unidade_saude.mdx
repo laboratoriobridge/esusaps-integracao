@@ -1,0 +1,23 @@
+---
+id: RF-EDW.dim_unidade_saude
+title: Tabela de dimensão de unidade de saúde
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_unidade_saude` é utilizada para armazenar os dados das unidades de saúde. Os dados são importados do CNES — Cadastro Nacional de Estabelecimentos de Saúde.
+
+## 2. Campos da tabela
+
+| Colunas DW | Referência |
+| ---------- | ---------- |
+| co\_seq\_dim\_unidade\_saude | Código de identificação sequencial |
+| nu\_cnes | Número do Cadastro Nacional de Estabelecimentos de Saúde |
+| no\_unidade\_saude | Nome da unidade de saúde |
+| no\_bairro | Nome do bairro da unidade de saúde |
+| st\_registro\_valido | <CampoStRegistroValido /> |
+| ds\_filtro | Concatenação de campos para busca, sem acentos |

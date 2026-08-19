@@ -1,0 +1,26 @@
+---
+id: RF-EDW.dim_equipe
+title: Tabela de dimensão de equipes
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_equipe` é utilizada para armazenar as equipes. Os dados são de acordo com o importado no CNES da instalação.
+
+## 2. Regras
+
+:nr Quando uma equipe é informada em algum registro, que não seja o próprio cadastro da equipe, a tabela é preenchida.
+
+## 3. Campos da tabela
+
+| Colunas DW | Referência      |
+| ---------- | --------------- |
+| co\_seq\_dim\_equipe | Código de identificação sequencial |
+| nu\_ine | Número identificador da equipe |
+| no\_equipe | Nome da equipe |
+| st\_registro\_valido | <CampoStRegistroValido /> |
+| ds\_filtro | Concatenação entre o número e nome da equipe, sem acentos |

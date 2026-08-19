@@ -1,0 +1,83 @@
+---
+id: RF-EDW.tb_fat_atendimento_domiciliar
+title: Tabela fato do atendimento domiciliar
+order: 1
+parent: RF-EDW.atendimento_domiciliar
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atendimento_domiciliar` é populada sempre que os dados de um :link[Atendimento Domiciliar]{id=dicionario-fad} são processados. Ela armazena o cabeçalho do atendimento e as condições avaliadas nas opções rápidas.
+
+## 2. Regras
+
+:nr A `tb_fat_atendimento_domiciliar` é preenchida quando são processado(a)s:
+
+- Fichas de atendimento domiciliar recebidas através da importação de sistemas terceiros ou outras instalações do PEC;
+- Registros de atendimento domiciliar realizados no CDS ou no aplicativo e-SUS Atenção Domiciliar.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_atend\_domiciliar | - | Código de identificação sequencial criado automaticamente pelo sistema |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fad anchor=1-uuidficha} | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | - | Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu\_uuid\_ficha |
+| co\_fat\_cidadao\_pec | - | Campo `co_seq_fat_cidadao_pec` da `tb_fat_cidadao_pec` |
+| nu\_cns | :link[cnsCidadao]{id=dicionario-fad anchor=2-cnscidadao} | CNS do cidadão |
+| nu\_cpf\_cidadao | :link[cpfCidadao]{id=dicionario-fad anchor=12-cpfcidadao} | CPF do cidadão |
+| nu\_atendimento | - | Número sequencial do atendimento na ficha |
+
+### 3.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| dt\_nascimento | :link[dataNascimento]{id=dicionario-fad anchor=3-datanascimento} | Data de nascimento do cidadão |
+| st\_condic\_acamado | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica se o cidadão está acamado |
+| st\_condic\_domiciliado | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica se o cidadão está domiciliado |
+| st\_condic\_ulceras\_feridas | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica presença de úlceras/feridas |
+| st\_condic\_acompanham\_nutricion | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica acompanhamento nutricional |
+| st\_condic\_uso\_sonda\_nasogastri | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica uso de sonda nasogástrica |
+| st\_condic\_uso\_sonda\_nasoentera | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica uso de sonda nasoentérica |
+| st\_condic\_uso\_gastrostomia | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica uso de gastrostomia |
+| st\_condic\_uso\_colostomia | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica uso de colostomia |
+| st\_condic\_uso\_cistostomia | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica uso de cistostomia |
+| st\_condic\_uso\_sond\_vesic\_demor | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica uso de sonda vesical de demora |
+| st\_condic\_acomp\_pre\_operatorio | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica acompanhamento pré-operatório |
+| st\_condic\_acomp\_pos\_operatorio | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica acompanhamento pós-operatório |
+| st\_condic\_adapt\_uso\_ortes\_prot | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica adaptação ao uso de órteses/próteses |
+| st\_condic\_reabilita\_domiciliar | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica reabilitação domiciliar |
+| st\_condic\_cuidd\_paliat\_oncolog | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica cuidados paliativos oncológicos |
+| st\_condic\_cuidd\_paliat\_n\_oncol | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica cuidados paliativos não-oncológicos |
+| st\_condic\_oxigenoterapia\_domic | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica uso de oxigenoterapia domiciliar |
+| st\_condic\_uso\_traqueostomia | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica uso de traqueostomia |
+| st\_condic\_uso\_aspir\_via\_aerea | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica aspiração de via aérea |
+| st\_condic\_suport\_ventil\_cpap | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica suporte ventilatório com CPAP |
+| st\_condic\_suport\_ventil\_bipap | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica suporte ventilatório com BiPAP |
+| st\_condic\_dialise\_peritonial | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica diálise peritoneal |
+| st\_condic\_paracentese | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica paracentese |
+| st\_condic\_medicacao\_parenteral | :link[condicoesAvaliadas]{id=dicionario-fad anchor=8-condicoesavaliadas} | Indica uso de medicação parenteral |
+| ds\_filtro\_cids | - | Campo de filtro com os CIDs registrados no atendimento |
+| ds\_filtro\_ciaps | - | Campo de filtro com os CIAPs registrados no atendimento |
+| ds\_filtro\_procedimentos | - | Campo de filtro com os procedimentos registrados no atendimento |
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência |
+| --------- | ------------------- |
+| co\_dim\_faixa\_etaria | Código da faixa etária do cidadão. Campo `co_seq_dim_faixa_etaria` da `tb_dim_faixa_etaria` |
+| co\_dim\_sexo | Código do sexo do cidadão. Campo `co_seq_dim_faixa_sexo` da `tb_dim_sexo` |
+| co\_dim\_local\_atendimento | Código do local de atendimento. Campo `co_seq_dim_local_atendimento` da `tb_dim_local_atendimento` |
+| co\_dim\_tipo\_atendimento | Código do tipo de atendimento. Campo `co_seq_dim_tipo_atendimento` da `tb_dim_tipo_atendimento` |
+| co\_dim\_modalidade\_ad | Código da modalidade de atenção domiciliar. Campo `co_seq_dim_modalidade_ad` da `tb_dim_modalidade_ad` |
+| co\_dim\_conduta\_ad | Código da conduta de atenção domiciliar. Campo `co_seq_dim_conduta_ad` da `tb_dim_conduta_ad` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato do atendimento domiciliar
+
+<DimensoesEmComum />

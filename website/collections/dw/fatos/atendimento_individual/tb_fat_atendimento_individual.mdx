@@ -1,0 +1,123 @@
+---
+id: RF-EDW.tb_fat_atendimento_individual
+title: Tabela fato do atendimento individual
+order: 2
+parent: RF-EDW.atendimento_individual
+---
+import DimensoesEmComum from '../../_shared/dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atendimento_individual` é populada sempre que os dados de um :link[atendimento individual]{id=dicionario-fai} são processados.  
+
+## 2. Regras
+
+:nr A `tb_fat_atendimento_individual` é preenchida quando são processado(a)s:
+
+- Fichas de atendimento individual recebidas através da importação de sistemas terceiros ou outras instalações do PEC;
+- Registro de um atendimento individual;
+- Registro de um atendimento de puericultura;
+- Registro de um atendimento de pré-natal;
+- Registro de uma escuta inicial com profissional de nível superior que não seja de odontologia;
+- Registro de um atendimento individual no CDS.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_atd\_ind | - | Código de identificação sequencial criado automaticamente pelo sistema |
+| co\_fat\_cidadao\_pec | - | Campo `co_seq_fat_cidadao_pec` da `tb_fat_cidadao_pec` |
+| nu\_prontuario | :link[numeroProntuario]{id=dicionario-fai anchor=1-numeroprontuario} | Número do prontuário criptografado |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fai anchor=3-uuidficha}  | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | :link[uuidDadoSerializado]{id=camada-transporte anchor=1-uuiddadoserializado} | Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu\_uuid\_ficha | 
+| nu\_atendimento | - | Uma ficha pode conter mais de um atendimento esse campo é utilizado para ordenar os atendimentos dentro um mesmo envio |
+| nu\_cpf\_cidadao | :link[cpfCidadao]{id=dicionario-fai anchor=24-cpfcidadao} | CPF do cidadão |
+| nu\_cns | :link[cnsCidadao]{id=dicionario-fai anchor=2-cnscidadao} | CNS do cidadão |
+
+### 3.2 Métricas dos Fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| dt\_nascimento | :link[dataNascimento]{id=dicionario-fai anchor=3-datanascimento} | Data de nascimento do cidadão |
+| nu\_medicao\_circ\_abdominal | :link[circunferenciaAbdominal]{id=dicionario-fai anchor=1-circunferenciaabdominal} | Circunferência abdominal do cidadão em centímetros |
+| nu\_medicao\_perim\_pantrlha | :link[perimetroPanturrilha]{id=dicionario-fai anchor=2-perimetropanturrilha} | Perímetro da panturrilha do cidadão em centímetros |
+| nu\_medicao\_pressao\_sistolica | :link[pressaoArterialSistolica]{id=dicionario-fai anchor=3-pressaoarterialsistolica} | Pressão arterial sistólica do cidadão em mmHg |
+| nu\_medicao\_pressao\_diastolica | :link[pressaoArterialDiastolica]{id=dicionario-fai anchor=4-pressaoarterialdiastolica} | Pressão arterial diastólica do cidadão em mmHg |
+| nu\_medicao\_freq\_respiratoria | :link[frequenciaRespiratoria]{id=dicionario-fai anchor=5-frequenciarespiratoria} | Frequência respiratória do cidadão em MPM |
+| nu\_medicao\_freq\_cardiaca | :link[frequenciaCardiaca]{id=dicionario-fai anchor=6-frequenciacardiaca} | Frequência cardíaca do cidadão em BPM |
+| nu\_medicao\_temperatura | :link[temperatura]{id=dicionario-fai anchor=7-temperatura} | Temperatura do cidadão em ºC |
+| nu\_medicao\_saturacao\_o2 | :link[saturacaoO2]{id=dicionario-fai anchor=8-saturacaoo2} | Saturação de oxigênio do cidadão em percentual |
+| nu\_medicao\_glicemia | :link[glicemiaCapilar]{id=dicionario-fai anchor=9-glicemiacapilar} | Glicemia capilar do cidadão em mg/dL |
+| nu\_peso | :link[peso]{id=dicionario-fai anchor=11-peso} | Peso do cidadão em quilogramas |
+| nu\_altura | :link[altura]{id=dicionario-fai anchor=12-altura} | Altura do cidadão em centímetros |
+| nu\_perimetro\_cefalico | :link[perimetroCefalico]{id=dicionario-fai anchor=13-perimetrocefalico} | Perímetro cefálico do cidadão em centímetros |
+| st\_vacinacao\_em\_dia | :link[vacinaEmDia]{id=dicionario-fai anchor=14-vacinaemdia} | Status que indica se a vacinação do cidadão está em dia |
+| st\_gravidez\_planejada | :link[stGravidezPlanejada]{id=dicionario-fai anchor=18-stgravidezplanejada} | Status que indica se a gravidez é planejada |
+| nu\_idade\_gestacional\_semanas | :link[idadeGestacional]{id=dicionario-fai anchor=11-idadegestacional} |Idade gestacional em semanas |
+| nu\_gestas\_previas | :link[nuGestasPrevias]{id=dicionario-fai anchor=19-nugestasprevias} | Número de gestações prévias |
+| nu\_partos | :link[nuPartos]{id=dicionario-fai anchor=20-nupartos}  | Número de partos que a mulher já teve |
+| st\_ficou\_em\_observacao | :link[ficouEmObservacao]{id=dicionario-fai anchor=15-ficouemobservacao} | Status que indica se o cidadão ficou em observação no atendimento |
+| st\_conduta\_manter\_observacao | :link[condutas]{id=dicionario-fai anchor=17-condutas} | Status que indica a conduta automática de manter o cidadão em observação|
+| st\_conduta\_consulta\_agendada | :link[condutas]{id=dicionario-fai anchor=17-condutas} | Status que indica a conduta "Retorno para consulta agendada"|
+| st\_conduta\_cuidd\_conti\_program | :link[condutas]{id=dicionario-fai anchor=17-condutas} | Status que indica a conduta "Retorno para consulta programada / cuidado continuado" |
+| st\_conduta\_agendamento\_grupos | :link[condutas]{id=dicionario-fai anchor=17-condutas} | Status que indica a conduta "Agendamento para grupos" |
+| st\_conduta\_agendamento\_nasf | :link[condutas]{id=dicionario-fai anchor=17-condutas} | Status que indica a conduta "Agendamento para eMulti"|
+| st\_conduta\_alta\_episodio | :link[condutas]{id=dicionario-fai anchor=17-condutas} | Status que indica a conduta "Alta do episódio" |
+| st\_encaminhamento\_serv\_special | :link[Encaminhamentos]{id=dicionario-fai anchor=26-encaminhamentos} | Status que indica o encaminhamento para "Serviço especializado" |
+| st\_encaminhamento\_caps | :link[Encaminhamentos]{id=dicionario-fai anchor=26-encaminhamentos} | Status que indica o encaminhamento para "CAPS" |
+| st\_encaminhamento\_intern\_hospi | :link[Encaminhamentos]{id=dicionario-fai anchor=26-encaminhamentos} | Status que indica o encaminhamento para "Internação hospitalar" |
+| st\_encaminhamento\_urgencia |  :link[Encaminhamentos]{id=dicionario-fai anchor=26-encaminhamentos} | Status que indica o encaminhamento para "Urgência"  |
+| st\_encaminhamento\_servico\_ad | :link[Encaminhamentos]{id=dicionario-fai anchor=26-encaminhamentos} | Status que indica o encaminhamento para "Serviço de Atenção Domiciliar" |
+| st\_encaminhamento\_intersetoria | :link[Encaminhamentos]{id=dicionario-fai anchor=26-encaminhamentos} | Status que indica o encaminhamento para "Intersetorial"  |
+| st\_encaminhamento\_interno\_dia | :link[Encaminhamentos]{id=dicionario-fai anchor=26-encaminhamentos} | Status que indica o encaminhamento onde cidadão foi reinserido na lista de atendimento | 
+| ds\_filtro\_cids | :link[cid10]{id=dicionario-fai anchor=5-cid10} | Agrupa todas as CID 10 registradas no atendimento |
+| ds\_filtro\_ciaps | :link[ciap]{id=dicionario-fai anchor=4-ciap} | Agrupa todas as CIAP registradas no atendimento |
+| ds\_filtro\_proced\_avaliados | :link[exame]{id=dicionario-fai anchor=13-exame} | Agrupa todos os resultados de exames registrados no atendimento |
+| ds\_filtro\_proced\_solicitados |  :link[exame]{id=dicionario-fai anchor=13-exame}| Agrupa todas as solicitações de exames registradas no atendimento |
+| dt\_inicial\_atendimento | :link[dataHoraInicialAtendimento]{id=dicionario-fai anchor=22-datahorainicialatendimento} | Data e hora do início do atendimento no formato "YYYY-MM-DD HH:MM:SS.MMM"|
+| dt\_final\_atendimento | :link[dataHoraFinalAtendimento]{id=dicionario-fai anchor=23-datahorafinalatendimento} | Data e hora do fim do atendimento no formato "YYYY-MM-DD HH:MM:SS.MMM" |
+| st\_conduta\_agendamento\_emulti | :link[condutas]{id=dicionario-fai anchor=17-condutas} | Status que indica a conduta "Agendamento para eMulti" |
+| st\_nasf | - | Indica se o tipo de atendimento foi preenchido em uma versão que continha a antiga estrutura Núcleo de Apoio a Saúde da Família (NASF) |
+| st\_nasf\_avaliacao\_diagnostico  | - | Campo legado que indica se a Avaliação/Diagnóstico foi realizada por uma equipe Nasf durante o atendimento, substituído pelo st\_emulti\_aval\_diagnostico a partir da versão 5.5.0 do LEDI |
+| st\_nasf\_proce\_clin\_terapeutico | - | Campo legado que indica se Procedimentos Clínicos/Terapêuticos foram realizados por uma equipe Nasf durante o atendimento, substituído pelo st\_emulti\_proce\_clin\_terap a partir da versão 5.5.0 do LEDI  |
+| st\_nasf\_prescricao\_terapeutica | - | Campo legado que indica se a Prescrição Terapêutica foi realizada por uma equipe Nasf durante o atendimento, substituído pelo st\_emulti\_presc\_terapeutica a partir da versão 5.5.0 do LEDI |
+| st\_nao\_possui\_cpf | :link[stNaoPossuiCpf]{id=dicionario-fai anchor=33-stnaopossuicpf} | Indica se o cidadão não possui CPF |
+| ds\_filtro\_ciap\_motivo\_consulta | - | Agrupa as CIAPs registradas como motivo de consulta no atendimento |
+| ds\_filtro\_ciap\_plano | - | Agrupa as CIAPs registradas no plano do atendimento |
+| co\_mchat\_risco | - | Classificação de risco do M-CHAT (Checklist para Autismo em Crianças) |
+| co\_mchat\_rf\_risco | - | Classificação de risco do M-CHAT-RF (Checklist para Autismo em Crianças — Revisado com Seguimento) |
+| nu\_mchat\_pontuacao | - | Pontuação obtida no M-CHAT |
+| nu\_mchat\_rf\_pontuacao | - | Pontuação obtida no M-CHAT-RF |
+| st\_mchat\_preenchido | - | Indica se o M-CHAT foi preenchido no atendimento |
+
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência | 
+| --------- | ------------------- | 
+| co\_dim\_racionalidade\_saude | Código da racionalidade em saúde adotada. Campo `co_seq_dim_racionalidade_saude` da `tb_dim_racionalidade_saude` | 
+| co\_dim\_faixa\_etaria | Código da faixa etária. Campo `co_seq_dim_faixa_etaria` da `tb_dim_faixa_etaria` | 
+| co\_dim\_sexo | Código do sexo. Campo `co_seq_dim_faixa_sexo` da `tb_dim_sexo` |
+| co\_dim\_turno | Código do turno do atendimento. Campo `co_seq_dim_turno` da `tb_dim_turno` | 
+| co\_dim\_local\_atendimento | Código do local de atendimento. Campo `co_seq_dim_local_atendimento` da `tb_dim_local_atendimento` |
+| co\_dim\_tipo\_atendimento | Código do tipo de atendimento. Campo `co_seq_dim_tipo_atendimento` da `tb_dim_tipo_atendimento` | 
+| co\_dim\_aleitamento |Código do tipo de aleitamento. Campo `co_seq_dim_faixa_aleitamento` da `tb_dim_aleitamento` | 
+| co\_dim\_tempo\_dum | Código da DUM. Campo `co_seq_dim_tempo_dum` da `tb_dim_tempo_dum` | 
+| co\_dim\_modalidade\_ad | Código da modalidade AD. Campo `co_seq_dim_modalidade_ad` da `tb_dim_modalidade_ad` | 
+| co\_dim\_prof\_finalizador\_obs |  Código do profissional finalizador do atendimento de observação. Campo `co_seq_dim_prof_finalizador_obs` da `tb_dim_prof_finalizador_obs` |
+| co\_dim\_cbo\_finalizador\_obs | Código do CBO do profissional finalizador do atendimento de observação. Campo `co_seq_dim_cbo_finalizador_obs` da `tb_dim_cbo_finalizador_obs` | 
+| co\_dim\_ubs\_finalizador\_obs |Código do unidade de saúde do profissional finalizador do atendimento de observação. Campo `co_seq_dim_ubs_finalizador_obs` da `tb_dim_ubs_finalizador_obs` |
+| co\_dim\_equipe\_finalizador\_obs | Código da equipe do profissional finalizador do atendimento de observação. Campo `co_seq_dim_equipe_finalizador_obs` da `tb_dim_equipe_finalizador_obs` | 
+| co\_dim\_tp\_particip\_cidadao | Código do tipo de participação do cidadão. Campo `co_seq_dim_tp_particip_cidadao` da `tb_dim_tp_particip_cidadao` | 
+| co\_dim\_tp\_particip\_prof\_conv | Código do tipo de participação do profissional convidado. Campo `co_seq_dim_tp_particip_prof_conv` da `tb_dim_tp_particip_prof_conv` | 
+| co\_dim\_tipo\_glicemia | Código do tipo de glicemia. Campo `co_seq_dim_tipo_glicemia` da `tb_dim_tipo_glicemia` |
+| co\_dim\_just\_nao\_possui\_cpf | Código da justificativa de não possuir CPF. Campo `co_seq_dim_just_nao_possui_cpf` da `tb_dim_just_nao_possui_cpf` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato do atendimento individual
+
+<DimensoesEmComum />

@@ -1,0 +1,71 @@
+---
+id: RF-EDW.tb_fat_atvdd_coletiva_int
+title: Tabela fato dos temas para reunião da atividade coletiva
+order: 2
+parent: RF-EDW.atividade_coletiva
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atvdd_coletiva_int` é populada quando o tipo de atividade processada corresponde a uma **reunião de equipe**. Cada registro armazena os temas para reunião e os temas para saúde selecionados nesta modalidade.
+
+## 2. Regras
+
+:nr A `tb_fat_atvdd_coletiva_int` é preenchida quando:
+
+- O tipo de atividade da `tb_fat_atividade_coletiva` refere-se à uma reunião.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_atvdd\_cltv\_int | - | Código de identificação sequencial da atividade em reunião |
+| co\_fat\_atividade\_coletiva | - | Campo `co_seq_fat_atividade_coletiva` da `tb_fat_atividade_coletiva` |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fac anchor=1-uuidficha} | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | - | Identificador universalmente único da camada de transporte de dados |
+
+### 3.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| st\_tema\_reuniao\_quest\_adm\_func | :link[temasParaReuniao]{id=dicionario-fac anchor=8-temasparareuniao} | Indica tema de reunião: questões administrativas/funcionamento |
+| st\_tema\_reuniao\_processo\_traba | :link[temasParaReuniao]{id=dicionario-fac anchor=8-temasparareuniao} | Indica tema de reunião: processo de trabalho |
+| st\_tema\_reuniao\_diag\_monit\_ter | :link[temasParaReuniao]{id=dicionario-fac anchor=8-temasparareuniao} | Indica tema de reunião: diagnóstico e monitoramento do território |
+| st\_tema\_reuniao\_plan\_monit\_equ | :link[temasParaReuniao]{id=dicionario-fac anchor=8-temasparareuniao} | Indica tema de reunião: planejamento e monitoramento das ações da equipe |
+| st\_tema\_reuniao\_disc\_proj\_tera | :link[temasParaReuniao]{id=dicionario-fac anchor=8-temasparareuniao} | Indica tema de reunião: discussão de caso/projeto terapêutico singular |
+| st\_tema\_reuniao\_educa\_permanen | :link[temasParaReuniao]{id=dicionario-fac anchor=8-temasparareuniao} | Indica tema de reunião: educação permanente |
+| st\_tema\_reuniao\_outros | :link[temasParaReuniao]{id=dicionario-fac anchor=8-temasparareuniao} | Indica tema de reunião: outros |
+| st\_tema\_saude\_comb\_aedes\_aegyp | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: combate ao Aedes aegypti |
+| st\_tema\_saude\_agravos\_negligen | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: agravos negligenciados |
+| st\_tema\_saude\_aliment\_saudavel | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: alimentação saudável |
+| st\_tema\_saude\_pess\_doenc\_croni | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: pessoa com doenças crônicas |
+| st\_tema\_saude\_cidad\_dirt\_human | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: cidadania e direitos humanos |
+| st\_tema\_saude\_dependen\_quimica | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: dependência química |
+| st\_tema\_saude\_envelhecimento | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: envelhecimento |
+| st\_tema\_saude\_pant\_medic\_fitot | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: plantas medicinais/fitoterapia |
+| st\_tema\_saude\_preven\_violencia | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: prevenção da violência |
+| st\_tema\_saude\_saude\_ambiental | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: saúde ambiental |
+| st\_tema\_saude\_saude\_bucal | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: saúde bucal |
+| st\_tema\_saude\_saude\_trabalhad | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: saúde do trabalhador |
+| st\_tema\_saude\_saude\_mental | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: saúde mental |
+| st\_tema\_saude\_saude\_sex\_repro | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: saúde sexual e reprodutiva |
+| st\_tema\_saude\_seman\_saud\_esco | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: semana saúde na escola |
+| st\_tema\_saude\_amamentacao | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: amamentação |
+| st\_tema\_saude\_intro\_alimentar | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: introdução alimentar |
+| st\_tema\_saude\_outros | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: outros |
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência |
+| --------- | ------------------- |
+| co\_dim\_tipo\_atividade | Código do tipo de atividade. Campo `co_seq_dim_tipo_atividade` da `tb_dim_tipo_atividade` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato da atividade coletiva
+
+<DimensoesEmComum />

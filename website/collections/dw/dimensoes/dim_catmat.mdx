@@ -1,0 +1,28 @@
+---
+id: RF-EDW.dim_catmat
+title: Tabela de dimensão medicamentos (CATMAT)
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_catmat` é utilizada para armazenar os códigos de medicamentos no padrão CATMAT. Possui como referência a :link[Tabela de medicamentos CATMAT]{id=catmat} do LEDI.
+
+## 2. Regras
+
+:nr A tabela é preenchida sempre que um medicamento é prescrito no atendimento.
+
+## 3. Campos da tabela
+
+| Colunas DW | Referência      |
+| ---------- | --------------- |
+| co\_seq\_dim\_catmat | Código de identificação sequencial |
+| co\_catmat| Número identificador código CATMAT |
+| no\_principio\_ativo | Descrição do princípio ativo |
+| ds\_concentracao | Descrição da concentração do medicamento |
+| ds\_unidade\_fornecimento | Descrição da unidade de fornecimento do medicamento |
+| co\_dim\_forma\_farmaceutica | Código da forma farmacêutica. Campo `co_seq_dim_forma_farmaceutica` da `tb_dim_forma_farmaceutica` |
+| st\_registro\_valido | <CampoStRegistroValido /> |

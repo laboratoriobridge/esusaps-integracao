@@ -1,0 +1,49 @@
+---
+id: RF-EDW.tb_fat_atend_odonto_medicament
+title: Tabela fato dos medicamentos do atendimento odontológico
+order: 1
+parent: RF-EDW.atendimento_odontologico_individual
+---
+import MetadadosOdonto from '../../_shared/metadados_odonto.mdx';
+import DimMedicamentos from '../../_shared/dim_medicamentos.mdx';
+import DimensoesEmComum from '../../_shared/dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atend_odonto_medicament` só é preenchida quando são processados registros de preescrição de medicamentos reitos em um :link[atendimento odontológico]{id=dicionario-fao} e o atendimento em questão é processado.
+
+## 2. Fatos
+
+### 2.1 Metadados dos fatos
+
+| Coluna DW                       | Referência LEDI | Referência sistema |
+| ------------------------------- | --------------- | ------------------ |
+| co\_seq\_fat\_atd\_odo\_medicam | -               | Código de identificação sequencial dos medicamentos registrados |
+<MetadadosOdonto />
+
+### 2.2 Métricas dos Fatos
+
+| Coluna DW               | Referência LEDI | Referência sistema |
+| ----------------------- | --------------- | ------------------ |
+| ds\_dose                | :link[dose]{id=dicionario-fao anchor=3-dose} | Descrição da dose prescrita composta pela quantidade da dose e unidade de medida|
+| st\_dose\_unica         | :link[doseUnica]{id=dicionario-fao anchor=4-doseunica}  | Status que indica se a dose é única |
+| st\_uso\_continuo       | :link[usoContinuo]{id=dicionario-fao anchor=5-usocontinuo} | Status que indica se o medicamento é de uso contínuo |
+| ds\_dose\_frequencia    | :link[doseFrequencia]{id=dicionario-fao anchor=7-dosefrequencia} | Descrição da duração de dias do tratamento |
+| qt\_dose\_frequencia    | :link[doseFrequenciaQuantidade]{id=dicionario-fao anchor=8-dosefrequenciaquantidade} | Descrição da quantidade de unidades de medicamento que devem ser utilizadas em um período específico definido pelo profissional de saúde |
+| qt\_duracao\_tratamento | :link[duracaoTratamento]{id=dicionario-fao anchor=11-duracaotratamento} | Quantidade de dias, semanas ou meses que o tratamento deve durar |
+| qt\_receitada           | :link[quantidadeReceitada]{id=dicionario-fao anchor=13-quantidadereceitada} | Quantidade de medicamentos receitados |
+| dt\_inicio\_tratamento  | :link[dtInicioTratamento]{id=dicionario-fao anchor=10-dtiniciotratamento} | Data de início do tratamento |
+| qt\_dose\_manha         | :link[qtDoseManha]{id=dicionario-fao anchor=15-qtdosemanha} | Quantidade de dose a ser administrada pela manhã |
+| qt\_dose\_tarde         | :link[qtDoseTarde]{id=dicionario-fao anchor=16-qtdosetarde} | Quantidade de dose a ser administrada à tarde |
+| qt\_dose\_noite         | :link[qtDoseNoite]{id=dicionario-fao anchor=17-qtdosenoite} | Quantidade de dose a ser administrada à noite |
+
+## 3. Dimensões da tabela
+
+### 3.1 Dimensões específicas dessa tabela
+
+<DimMedicamentos />
+
+### 3.2 Dimensões comuns a todas as tabelas fato do atendimento odontológico
+
+<DimensoesEmComum />

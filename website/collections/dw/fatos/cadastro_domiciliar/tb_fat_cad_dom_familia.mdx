@@ -1,0 +1,64 @@
+---
+id: RF-EDW.tb_fat_cad_dom_familia
+title: Tabela fato das famílias do cadastro domiciliar
+order: 2
+parent: RF-EDW.cadastro_domiciliar
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_cad_dom_familia` é populada para cada família registrada em um :link[Cadastro Domiciliar e Territorial]{id=dicionario-fcd}. Cada registro representa um núcleo familiar dentro do domicílio e está vinculado à `tb_fat_cad_domiciliar` pelo campo `co_fat_cad_domiciliar`.
+
+## 2. Regras
+
+:nr A `tb_fat_cad_dom_familia` é preenchida quando são processados:
+
+- Fichas de cadastro domiciliar com famílias recebidas através da importação de sistemas terceiros, de outras instalações do PEC e-SUS-APS ou do aplicativo e-SUS Território;
+- Registro de um cadastro domiciliar com famílias no CDS, Acompanhamento do Território ou Reterritorialização.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_cad\_dom\_familia | - | Código de identificação sequencial criado automaticamente pelo sistema |
+| nu\_uuid\_ficha | :link[uuid]{id=dicionario-fcd anchor=10-uuid} | Identificador universalmente único do registro |
+| nu\_uuid\_ficha\_origem | :link[uuidFichaOriginadora]{id=dicionario-fcd anchor=11-uuidfichaoriginadora} | UUID da ficha de origem do domicílio |
+| nu\_uuid\_dado\_transp | :link[uuidDadoSerializado]{id=camada-transporte anchor=1-uuiddadoserializado} | Identificador universalmente único da camada de transporte de dados |
+| co\_fat\_cad\_domiciliar | - | Campo `co_seq_fat_cad_domiciliar` da `tb_fat_cad_domiciliar` ao qual esta família pertence |
+| co\_fat\_cidadao\_pec | - | Campo `co_seq_fat_cidadao_pec` da `tb_fat_cidadao_pec` referente ao responsável familiar |
+| nu\_cns\_responsavel | :link[numeroCnsResponsavel]{id=dicionario-fcd anchor=2-numerocnsresponsavel} | CNS do responsável familiar |
+| st\_recusa\_cadastro | :link[statusTermoRecusa]{id=dicionario-fcd anchor=8-statustermorecusa} | Indica se houve recusa ao cadastramento |
+| st\_normaliza\_ficha\_cadastros | - | Flag de controle de normalização da ficha de cadastros |
+| nu\_cpf\_responsavel | :link[cpfResponsavel]{id=dicionario-fcd anchor=8-cpfresponsavel} | CPF do responsável familiar |
+| nu\_prontuario | :link[numeroProntuario]{id=dicionario-fcd anchor=4-numeroprontuario} | Número do prontuário do responsável familiar |
+
+Os seguintes campos da tabela armazenam valores criptografados:
+
+- nu\_cpf\_responsavel
+- nu\_prontuario
+
+### 3.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| dt\_nascimento | :link[dataNascimentoResponsavel]{id=dicionario-fcd anchor=1-datanascimentoresponsavel} | Data de nascimento do responsável familiar |
+| dt\_inicio\_residencia | :link[resideDesde]{id=dicionario-fcd anchor=6-residedesde} | Data de início de residência da família no domicílio |
+| st\_mudou | :link[stMudanca]{id=dicionario-fcd anchor=7-stmudanca} | Indica se a família se mudou do domicílio |
+| nu\_micro\_area | :link[microArea]{id=dicionario-fcd anchor=13-microarea} | Número da microárea onde a família reside |
+| qt\_membro\_familiar | :link[numeroMembrosFamilia]{id=dicionario-fcd anchor=3-numeromembrosfamilia} | Quantidade de membros da família |
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência |
+| --------- | ------------------- |
+| co\_dim\_tipo\_renda\_familiar | Código do tipo de renda familiar. Campo `co_seq_dim_tipo_renda_familiar` da `tb_dim_tipo_renda_familiar` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato do cadastro domiciliar
+
+<DimensoesEmComum />

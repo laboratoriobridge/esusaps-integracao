@@ -1,0 +1,54 @@
+---
+id: RF-EDW.tb_fat_atvdd_coletiva_part
+title: Tabela fato dos participantes da atividade coletiva
+order: 5
+parent: RF-EDW.atividade_coletiva
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atvdd_coletiva_part` registra os **cidadãos participantes** de uma atividade coletiva. Cada linha representa um participante individual e armazena dados de identificação, antropometria e avaliação.
+
+## 2. Regras
+
+:nr A `tb_fat_atvdd_coletiva_part` é preenchida quando é processado registro de atividade coletiva em que são informados participantes individuais.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_atvdd\_cltv\_part | - | Código de identificação sequencial do cidadão participante de um atividade coletiva |
+| co\_fat\_atividade\_coletiva | - | Campo `co_seq_fat_atividade_coletiva` da `tb_fat_atividade_coletiva` |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fac anchor=1-uuidficha} | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | :link[uuidDadoSerializado]{id=camada-transporte anchor=1-uuiddadoserializado} | Identificador universalmente único da camada de transporte de dados |
+| co\_fat\_cidadao\_pec | - | Campo `co_seq_fat_cidadao_pec` da `tb_fat_cidadao_pec` |
+| nu\_participante\_cns | :link[cnsParticipante]{id=dicionario-fac anchor=1-cnsparticipante} | CNS do participante |
+| nu\_cpf\_participante | :link[cpfParticipante]{id=dicionario-fac anchor=9-cpfparticipante} | CPF do participante |
+
+### 3.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| dt\_participante\_nascimento | :link[dataNascimento]{id=dicionario-fac anchor=2-datanascimento} | Data de nascimento do participante |
+| nu\_participante\_altura | :link[altura]{id=dicionario-fac anchor=5-altura} | Altura do participante em centímetros |
+| nu\_participante\_peso | :link[peso]{id=dicionario-fac anchor=4-peso} | Peso do participante em quilogramas |
+| st\_avaliacao\_alterada | :link[avaliacaoAlterada]{id=dicionario-fac anchor=3-avaliacaoalterada} | Indica se a avaliação do participante está alterada |
+| st\_pcnt\_cessou\_habito\_fumar | :link[cessouHabitoFumar]{id=dicionario-fac anchor=6-cessouhabitofumar} | Indica se o participante cessou o hábito de fumar |
+| st\_pcnt\_abandonou\_grupo | :link[abandonouGrupo]{id=dicionario-fac anchor=7-abandonougrupo} | Indica se o participante abandonou o grupo |
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência |
+| --------- | ------------------- |
+| co\_dim\_tipo\_atividade | Código do tipo de atividade. Campo `co_seq_dim_tipo_atividade` da `tb_dim_tipo_atividade` |
+| co\_dim\_participante\_sexo | Código do sexo do participante. Campo `co_seq_dim_faixa_sexo` da `tb_dim_sexo` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato da atividade coletiva
+
+<DimensoesEmComum />
