@@ -30,6 +30,7 @@ VacinaRowThrift = module.exports.VacinaRowThrift = function(args) {
   this.anvisaNumeroRegistro = null;
   this.viaAdministracao = null;
   this.localAplicacao = null;
+  this.coRndsFabricante = null;
   if (args) {
     if (args.imunobiologico !== undefined && args.imunobiologico !== null) {
       this.imunobiologico = args.imunobiologico;
@@ -84,6 +85,9 @@ VacinaRowThrift = module.exports.VacinaRowThrift = function(args) {
     }
     if (args.localAplicacao !== undefined && args.localAplicacao !== null) {
       this.localAplicacao = args.localAplicacao;
+    }
+    if (args.coRndsFabricante !== undefined && args.coRndsFabricante !== null) {
+      this.coRndsFabricante = args.coRndsFabricante;
     }
   }
 };
@@ -227,6 +231,13 @@ VacinaRowThrift.prototype.read = function(input) {
         input.skip(ftype);
       }
       break;
+      case 19:
+      if (ftype == Thrift.Type.I64) {
+        this.coRndsFabricante = input.readI64();
+      } else {
+        input.skip(ftype);
+      }
+      break;
       default:
         input.skip(ftype);
     }
@@ -326,6 +337,11 @@ VacinaRowThrift.prototype.write = function(output) {
   if (this.localAplicacao !== null && this.localAplicacao !== undefined) {
     output.writeFieldBegin('localAplicacao', Thrift.Type.I64, 18);
     output.writeI64(this.localAplicacao);
+    output.writeFieldEnd();
+  }
+  if (this.coRndsFabricante !== null && this.coRndsFabricante !== undefined) {
+    output.writeFieldBegin('coRndsFabricante', Thrift.Type.I64, 19);
+    output.writeI64(this.coRndsFabricante);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

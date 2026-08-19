@@ -33,9 +33,7 @@
             <vacinas>
                 <imunobiologico>5</imunobiologico>
                 <estrategiaVacinacao>2</estrategiaVacinacao>
-                <dose></dose>
                 <lote>DEF01</lote>
-                <fabricante>BUILD SUSTAINABILITY</fabricante>
                 <grupoAtendimento>84</grupoAtendimento>
                 <stRegistroAnterior>false</stRegistroAnterior>
                 <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
@@ -43,8 +41,8 @@
                 <cid10MotivoIndicacao>A09</cid10MotivoIndicacao>
                 <stPesquisaClinica>false</stPesquisaClinica>
                 <stAplicadoExterior>false</stAplicadoExterior>
-                <viaAdministracao>1</viaAdministracao>
-                <localAplicacao>17</localAplicacao>
+                <viaAdministracao>10898</viaAdministracao>
+                <localAplicacao>16</localAplicacao>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440000</uuidRnds>
             </vacinas>
             <dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
@@ -66,7 +64,6 @@
                 <estrategiaVacinacao>2</estrategiaVacinacao>
                 <dose>1</dose>
                 <lote>DEF01</lote>
-                <fabricante>BUILD SUSTAINABILITY</fabricante>
                 <grupoAtendimento>99</grupoAtendimento>
                 <stRegistroAnterior>false</stRegistroAnterior>
                 <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
@@ -74,16 +71,15 @@
                 <cid10MotivoIndicacao>Z23</cid10MotivoIndicacao>
                 <stPesquisaClinica>false</stPesquisaClinica>
                 <stAplicadoExterior>false</stAplicadoExterior>
-                <viaAdministracao>5</viaAdministracao>
-                <localAplicacao>1</localAplicacao>
+                <viaAdministracao>10907</viaAdministracao>
+                <localAplicacao>9</localAplicacao>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440002</uuidRnds>
             </vacinas>
             <vacinas>
                 <imunobiologico>87</imunobiologico>
-                <estrategiaVacinacao>11</estrategiaVacinacao>
+                <estrategiaVacinacao>2</estrategiaVacinacao>
                 <dose>1</dose>
                 <lote>ABC</lote>
-                <fabricante>PFIZER/BIONTECH</fabricante>
                 <grupoAtendimento>112</grupoAtendimento>
                 <stRegistroAnterior>true</stRegistroAnterior>
                 <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
@@ -95,6 +91,7 @@
                 <anvisaNumeroRegistro>REG-456</anvisaNumeroRegistro>
                 <stAplicadoExterior>true</stAplicadoExterior>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440006</uuidRnds>
+                <coRndsFabricante>142</coRndsFabricante>
             </vacinas>
             <dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
             <dataHoraFinalAtendimento>1551538800000</dataHoraFinalAtendimento>
@@ -120,5 +117,5 @@
         <versaoSistema>5.4.14</versaoSistema>
         <nomeBancoDados>Oracle</nomeBancoDados>
     </ns2:originadora>
-    <versao major="7" minor="3" revision="0"/>
+    <versao major="8" minor="4" revision="0"/>
 </ns3:dadoTransporteTransportXml>
