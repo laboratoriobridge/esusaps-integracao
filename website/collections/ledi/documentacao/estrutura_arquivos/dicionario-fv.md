@@ -1,15 +1,15 @@
 ---
 id: dicionario-fv
-title: Ficha de Vacinação
+title: Modelo de Informação de Vacinação
 order: 14
 parent: estrutura_arquivos
 ---
 
-## FichaVacinacaoMaster
+### FichaVacinacaoMaster
 
-### \#1 uuidFicha
+#### \#1 uuidFicha
 
-Código UUID para identificar a ficha na base de dados nacional.
+Código UUID para identificar o registro na base de dados nacional.
 
 | Tipo   | Obrigatório | Mínimo | Máximo |
 | ------ | ----------- | ------ | ------ |
@@ -19,7 +19,7 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Referência:** Para ver a referência sobre o UUID, acesse [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
-### \#2 tpCdsOrigem
+#### \#2 tpCdsOrigem
 
 Tipo de origem dos dados do registro.
 
@@ -29,7 +29,7 @@ Tipo de origem dos dados do registro.
 
 **Regra:** Utilizar valor 3 (sistemas terceiros).
 
-### \#3 headerTransport
+#### \#3 headerTransport
 
 Profissional que realizou a vacinação.
 
@@ -37,11 +37,11 @@ Profissional que realizou a vacinação.
 | ------------------ | ----------- | ------ | ------ |
 | UnicaLotacaoHeader | Sim         | -      | -      |
 
-**Regra:** Somente as CBOs apresentadas na :link[Tabela 12 - CBOs que podem registrar ficha de vacinação]{id=grupo_cbo anchor=ficha-de-vacina-o} podem ser adicionadas no campo CBO do profissional.
+**Regra:** Somente as CBOs apresentadas na :link[Tabela 12 - CBOs que podem registrar o Modelo de Informação de Vacinação]{id=grupo_cbo anchor=modelo-de-informa-o-de-vacina-o} podem ser adicionadas no campo CBO do profissional.
 
 **Referência:** :link[UnicaLotacaoHeader]{id=headerTransport anchor=unicalotacaoheader}.
 
-### \#4 vacinacoes
+#### \#4 vacinacoes
 
 Lista de registros de Vacinação.
 
@@ -51,9 +51,9 @@ Lista de registros de Vacinação.
 
 **Referência:** [FichaVacinacaoChild](#fichavacinacaochild).
 
-## FichaVacinacaoChild
+### FichaVacinacaoChild
 
-### \#1 turno
+#### \#1 turno
 
 Código do turno onde aconteceu o atendimento.
 
@@ -63,7 +63,7 @@ Código do turno onde aconteceu o atendimento.
 
 **Referência:** :link[Turno]{id=dicionario anchor=turno}.
 
-### \#2 numProntuario
+#### \#2 numProntuario
 
 Número do prontuário do cidadão na UBS.
 
@@ -71,7 +71,7 @@ Número do prontuário do cidadão na UBS.
 | ------ | ----------- | ------ | ------ |
 | String | Não         | 0      | 30     |
 
-### \#3 cnsCidadao
+#### \#3 cnsCidadao
 
 CNS do cidadão.
 
@@ -87,7 +87,7 @@ CNS do cidadão.
 
 **Referência:** O algoritmo de validação está presente em :link{id=algoritmo_CNS}.
 
-### \#4 dtNascimento
+#### \#4 dtNascimento
 
 Data de nascimento do cidadão no formato epoch time.
 
@@ -97,9 +97,9 @@ Data de nascimento do cidadão no formato epoch time.
 
 **Regra:** Não pode ser posterior à :link[dataAtendimento]{id=headerTransport anchor=5-dataatendimento} e anterior à 130 anos a partir da :link[dataAtendimento]{id=headerTransport anchor=5-dataatendimento}.
 
-**Referência:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referência:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#5 sexo
+#### \#5 sexo
 
 Código do sexo do cidadão.
 
@@ -109,7 +109,7 @@ Código do sexo do cidadão.
 
 **Referência:** :link[Sexo]{id=dicionario anchor=sexo}.
 
-### \#6 localAtendimento
+#### \#6 localAtendimento
 
 Código do local onde o atendimento foi realizado.
 
@@ -121,7 +121,7 @@ Código do local onde o atendimento foi realizado.
 
 **Referência:** :link[LocalDeAtendimento]{id=dicionario anchor=localdeatendimento}.
 
-### \#7 viajante
+#### \#7 viajante
 
 Marcador que indica se o cidadão é viajante.
 
@@ -129,7 +129,7 @@ Marcador que indica se o cidadão é viajante.
 | ------- | ----------- | ------ | ------ |
 | Boolean | Sim         | -      | -      |
 
-### \#8 comunicanteHanseniase
+#### \#8 comunicanteHanseniase
 
 Marcador que indica se o cidadão é comunicante de hanseníase.
 
@@ -142,7 +142,7 @@ Marcador que indica se o cidadão é comunicante de hanseníase.
 - O campo somente pode ser preenchido se for registrada uma vacinação com o imunobiológico `15 - BCG`;
 - O campo é de preenchimento obrigatório quando for registrada uma vacinação com o imunobiológico `15 - BCG`.
 
-### \#9 vacinas
+#### \#9 vacinas
 
 Registro das vacinas aplicadas.
 
@@ -158,7 +158,7 @@ Registro das vacinas aplicadas.
 
 **Referência:** [VacinaRowThrift](#vacinarowthrift).
 
-### \#10 dataHoraInicialAtendimento
+#### \#10 dataHoraInicialAtendimento
 
 Data e hora do início do atendimento.
 
@@ -171,9 +171,9 @@ Data e hora do início do atendimento.
 - Não pode ser anterior à :link[dataAtendimento]{id=headerTransport anchor=5-dataatendimento};
 - Não pode ser posterior à [dataHoraFinalAtendimento](#11-datahorafinalatendimento) e à data atual.
 
-**Referência:** Deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referência:** Deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#11 dataHoraFinalAtendimento
+#### \#11 dataHoraFinalAtendimento
 
 Data e hora do fim do atendimento.
 
@@ -186,9 +186,9 @@ Data e hora do fim do atendimento.
 - Não pode ser anterior à [dataHoraInicialAtendimento](#10-datahorainicialatendimento);
 - Não pode ser posterior à data atual.
 
-**Referência:** Deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referência:** Deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#12 cpfCidadao
+#### \#12 cpfCidadao
 
 CPF do cidadão.
 
@@ -202,7 +202,7 @@ CPF do cidadão.
 - É de preenchimento obrigatório se o campo [stNaoPossuiCpf](#18-stnaopossuicpf) = `false`;
 - Não pode ser preenchido se o campo [cnsCidadao](#3-cnscidadao) for preenchido.
 
-### \#13 condicaoMaternal
+#### \#13 condicaoMaternal
 
 Código que indica o tipo de condição maternal.
 
@@ -215,9 +215,9 @@ Código que indica o tipo de condição maternal.
 - Quando o Sexo = 0 (masculino) o campo não deve ser preenchido;
 - Quando o [Sexo](#5-sexo) = `1 (Feminino)` ou [Sexo](#5-sexo) = `5 (Indeterminado)` o campo passa a ser obrigatório e pode receber o valor `1` (Nenhuma), `2` (Gestante) ou `3` (Puérpera);
 
-## VacinaRowThrift
+### VacinaRowThrift
 
-### \#1 imunobiologico
+#### \#1 imunobiologico
 
 Código do imunobiológico aplicado na vacinação.
 
@@ -227,7 +227,7 @@ Código do imunobiológico aplicado na vacinação.
 
 **Referência:** :link[Imunobiologico]{id=dicionario anchor=imunobiologico}.
 
-### \#2 estrategiaVacinacao
+#### \#2 estrategiaVacinacao
 
 Código da estratégia da vacinação.
 
@@ -243,7 +243,7 @@ Código da estratégia da vacinação.
 
 **Referência:** :link[EstrategiaVacinacao]{id=dicionario anchor=estrategiavacinacao}.
 
-### \#3 dose
+#### \#3 dose
 
 Código da dose do imunobiológico aplicado na vacinação.
 
@@ -253,7 +253,7 @@ Código da dose do imunobiológico aplicado na vacinação.
 
 **Referência:** :link[Dose]{id=dicionario anchor=dose}.
 
-### \#4 lote
+#### \#4 lote
 
 Valor do lote do imunobiológico aplicado na vacinação.
 
@@ -266,7 +266,7 @@ Valor do lote do imunobiológico aplicado na vacinação.
 - Apenas `letras`, `números`, `/`, `.` e `-`;
 - É de preenchimento obrigatório se o campo [stRegistroAnterior](#7-stregistroanterior) = `false`.
 
-### \#5 coRndsFabricante
+#### \#5 coRndsFabricante
 
 Código do fabricante do imunobiológico aplicado na vacinação.
 
@@ -281,7 +281,7 @@ Código do fabricante do imunobiológico aplicado na vacinação.
 
 **Referência:** :link[Fabricante]{id=dicionario anchor=corndsfabricante}.
 
-### \#6 grupoAtendimento
+#### \#6 grupoAtendimento
 
 Grupo alvo ao qual o cidadão pertence em vacinações.
 
@@ -296,7 +296,7 @@ Grupo alvo ao qual o cidadão pertence em vacinações.
 
 **Referência:** :link[Grupo de Atendimento]{id=dicionario anchor=grupodeatendimento}.
 
-### \#7 stRegistroAnterior
+#### \#7 stRegistroAnterior
 
 Indica se o imunobiológico foi aplicado em um atendimento anterior.
 
@@ -304,7 +304,7 @@ Indica se o imunobiológico foi aplicado em um atendimento anterior.
 | ------- | ----------- | ------ | ------ |
 | Boolean | Sim         | -      | -      |
 
-### \#8 dataRegistroAnterior
+#### \#8 dataRegistroAnterior
 
 Data em que foi aplicada a vacina.
 
@@ -318,9 +318,9 @@ Data em que foi aplicada a vacina.
 - Não pode ser preenchido se o campo [stRegistroAnterior](#7-stregistroanterior) = `false`;
 - Não pode ser posterior à :link[dataAtendimento]{id=headerTransport anchor=5-dataatendimento} e anterior à [dtNascimento](#4-dtnascimento).
 
-**Referência:** Deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referência:** Deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#9 stAplicadoExterior
+#### \#9 stAplicadoExterior
 
 Utilizado para identificar se o cidadão foi vacinado no exterior.
 
@@ -330,7 +330,7 @@ Utilizado para identificar se o cidadão foi vacinado no exterior.
 
 **Regra:** Só pode ser preenchido se o campo [stRegistroAnterior](#7-stregistroanterior) = `true` e o campo [Imunobiológico](#1-imunobiologico) receber um dos valores `85`, `86`, `87`, `88`, `89`, `95`, `96`, `97`, `98`, `99`, `102`, `103`, `105` ou `112` pertencentes aos imunobiológicos de COVID-19. Nestas condições, é de preenchimento obrigatório.
 
-### \#10 cboPrescritorCodigo2002
+#### \#10 cboPrescritorCodigo2002
 
 Código que indica o CBO do profissional prescritor.
 
@@ -344,7 +344,7 @@ Regra:
 
 **Referência:** :link[CBOs específicos]{id=dicionario anchor=cboprescritor}.
 
-### \#11 cid10MotivoIndicacao
+#### \#11 cid10MotivoIndicacao
 
 Código que indica o CID10 do motivo da prescrição. 
 
@@ -357,7 +357,7 @@ Regra:
 - Obrigatório se [estrategiaVacinacao](#2-estrategiavacinacao) = `02- Especial`;
 - Preencher o campo de string com o código CID10.
 
-### \#12 stPesquisaClinica
+#### \#12 stPesquisaClinica
 
 Código que indica se a aplicação foi feita no contexto de pesquisa clínica. 
 
@@ -365,7 +365,7 @@ Código que indica se a aplicação foi feita no contexto de pesquisa clínica.
 | ------- | ----------- | ------ | ------ |
 | Boolean | Sim         | -      | -      |
 
-### \#13 anvisaProtocoloEstudo
+#### \#13 anvisaProtocoloEstudo
 
 Número do protocolo de estudo da ANVISA. 
 
@@ -375,7 +375,7 @@ Número do protocolo de estudo da ANVISA.
 
 **Regra:** Só pode ser preenchido e se torna obrigatório se [stPesquisaClinica](#12-stpesquisaclinica) = `true`;
 
-### \#14 anvisaProtocoloVersao
+#### \#14 anvisaProtocoloVersao
 
 Número da versão do protocolo da ANVISA. 
 
@@ -385,7 +385,7 @@ Número da versão do protocolo da ANVISA.
 
 **Regra:**  Só pode ser preenchido e se torna obrigatório se [stPesquisaClinica](#12-stpesquisaclinica) = `true`;
 
-### \#15 anvisaNumeroRegistro
+#### \#15 anvisaNumeroRegistro
 
 Número do registro da ANVISA. 
 
@@ -395,7 +395,7 @@ Número do registro da ANVISA.
 
 **Regra:** Só pode ser preenchido e se torna obrigatório se [stPesquisaClinica](#12-stpesquisaclinica) = `true`;
 
-### \#16 viaAdministracao
+#### \#16 viaAdministracao
 
 Via de administração do imunobiológico aplicado.
 
@@ -405,7 +405,7 @@ Via de administração do imunobiológico aplicado.
 
 **Referência:** :link[Via de administração]{id=dicionario anchor=viaadministracao-para-imunobiol-gicos}.
 
-### \#17 localAplicacao
+#### \#17 localAplicacao
 
 Local em que o imunobiológico foi aplicado.
 
@@ -425,7 +425,7 @@ Os dados do campo "Local de aplicação" são validados de acordo com o campo "V
 
 **Referência:** :link[Local de aplicação]{id=dicionario anchor=localaplicacao}.
 
-### \#18 stNaoPossuiCpf
+#### \#18 stNaoPossuiCpf
 
 Marcador que indica que o CPF do cidadão não existe ou não está disponível no momento do cadastro.
 
@@ -437,7 +437,7 @@ Marcador que indica que o CPF do cidadão não existe ou não está disponível 
 
 - Deve ser preenchido com `false` se o campo [cpfCidadao](#12-cpfcidadao) for preenchido.
 
-### \#19 justificativaNaoPossuiCpf
+#### \#19 justificativaNaoPossuiCpf
 
 Justificativa para o cidadão não possuir ou não informar CPF.
 

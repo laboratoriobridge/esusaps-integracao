@@ -87,6 +87,7 @@ A tabela `tb_fat_visita_domiciliar` é populada sempre que os dados de uma :link
 | nu\_latitude | :link[latitude]{id=dicionario-fvd anchor=20-latitude} | Latitude da localização do domicílio visitado |
 | nu\_longitude | :link[longitude]{id=dicionario-fvd anchor=21-longitude} | Longitude da localização do domicílio visitado |
 | st\_processado\_origem\_fcd | - | Indica se o registro foi processado a partir de uma Ficha de Cadastro Domiciliar |
+| st\_nao\_possui\_cpf | - | Indica se o cidadão não possui CPF |
 
 ## 4. Dimensões da tabela
 
@@ -103,6 +104,7 @@ A tabela `tb_fat_visita_domiciliar` é populada sempre que os dados de uma :link
 | co\_dim\_tipo\_imovel | Código do tipo de imóvel visitado. Campo `co_seq_dim_tipo_imovel` da `tb_dim_tipo_imovel` |
 | co\_dim\_sexo | Código do sexo do cidadão visitado. Campo `co_seq_dim_faixa_sexo` da `tb_dim_sexo` |
 | co\_dim\_faixa\_etaria | Código da faixa etária do cidadão visitado. Campo `co_seq_dim_faixa_etaria` da `tb_dim_faixa_etaria` |
+| co\_dim\_just\_nao\_possui\_cpf | Código da justificativa de não possuir CPF. Campo `co_seq_dim_just_nao_possui_cpf` da `tb_dim_just_nao_possui_cpf` |
 | co\_dim\_desfecho\_visita | Código do desfecho da visita. Campo `co_seq_dim_desfecho_visita` da `tb_dim_desfecho_visita` |
 | co\_dim\_tipo\_origem\_dado\_transp | Código da origem do dado no transporte. Campo `co_seq_dim_tp_orgm_dado_transp` da `tb_dim_tipo_origem_dado_transp` |
 | co\_dim\_cds\_tipo\_origem | Código da origem do dado no transporte. Campo `co_seq_dim_tipo_origem` da `tb_dim_tipo_origem` |

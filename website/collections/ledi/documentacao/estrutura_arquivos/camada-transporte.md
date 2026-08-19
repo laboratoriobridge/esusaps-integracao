@@ -5,10 +5,10 @@ order: 0
 parent: estrutura_arquivos
 ---
 
-## DadoTransporte
+### DadoTransporte
 Os atributos do registro transportado devem seguir as regras aqui descritas. Qualquer inconsistência nos dados transportados resultará no descarte da entidade [DadoTransporte](#dadotransporte).
 
-### \#1 uuidDadoSerializado
+#### \#1 uuidDadoSerializado
 
 UUID do dado (identificador "universal" gerado na criação do registro).
 
@@ -20,7 +20,7 @@ UUID do dado (identificador "universal" gerado na criação do registro).
 
 **Referência:** [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
-### \#2 tipoDadoSerializado
+#### \#2 tipoDadoSerializado
 
 Tipo/classe do objeto serializado através do [TBinaryProtocol](https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java).
 
@@ -30,7 +30,7 @@ Tipo/classe do objeto serializado através do [TBinaryProtocol](https://github.c
 
 **Referência:** :link[TipoDadoSerializado]{id=dicionario anchor=tipodadoserializado}.
 
-### \#3 cnesDadoSerializado
+#### \#3 cnesDadoSerializado
 
 Código CNES do estabelecimento de saúde.
 
@@ -38,9 +38,9 @@ Código CNES do estabelecimento de saúde.
 | ---- | ----------- | ------ | ------ |
 | String | Sim | 7 | 7 |
 
-**Regras:** Somente fichas de CNES pertencentes ao respectivo município são consideradas válidas.
+**Regras:** Somente registros de CNES pertencentes ao respectivo município são considerados válidos.
 
-### \#4 codIbge
+#### \#4 codIbge
 
 Código IBGE do dado serializado através do [TBinaryProtocol](https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java).
 
@@ -48,21 +48,21 @@ Código IBGE do dado serializado através do [TBinaryProtocol](https://github.co
 | ---- | ----------- | ------ | ------ |
 | String | Sim | 7 | 7 |
 
-**Regras:** Somente fichas com IBGE ativo na instalação são consideradas válidas.
+**Regras:** Somente registros com IBGE ativo na instalação são considerados válidos.
 
 **Referência:** :link[Municípios]{id=municipios}.
 
-### \#5	ineDadoSerializado
+#### \#5	ineDadoSerializado
 
-Código INE da equipe que gerou a ficha.
+Código INE da equipe que gerou o registro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
 | String | Não | 10 | 10 |
 
-**Regras:** Somente fichas com INE pertencentes ao respectivo município são consideradas válidas.
+**Regras:** Somente registros com INE pertencentes ao respectivo município são considerados válidos.
 
-### \#6	numLote
+#### \#6	numLote
 
 Número do lote para controle interno dos arquivos enviados.
 
@@ -70,15 +70,15 @@ Número do lote para controle interno dos arquivos enviados.
 | ---- | ----------- | ------ | ------ |
 | Long | Não | - | - |
 
-### \#7	dadoSerializado
+#### \#7	dadoSerializado
 
-Dado serializado através do [TBinaryProtocol](https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java) a partir de uma ficha.
+Dado serializado através do [TBinaryProtocol](https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java) a partir de um registro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
 | Binary | Sim | - | - |
 
-### \#8	remetente
+#### \#8	remetente
 
 Identifica a instalação que enviou o dado.
 
@@ -88,7 +88,7 @@ Identifica a instalação que enviou o dado.
 
 **Referência:** [DadoInstalacao](#dadoinstalacao).
 
-### \#9	originadora
+#### \#9	originadora
 
 Identifica a instalação que cadastrou/digitou.
 
@@ -98,7 +98,7 @@ Identifica a instalação que cadastrou/digitou.
 
 **Referência:** [DadoInstalacao](#dadoinstalacao).
 
-### \#10 versao
+#### \#10 versao
 
 Identifica a versão do e-SUS APS.
 
@@ -108,9 +108,9 @@ Identifica a versão do e-SUS APS.
 
 **Referência:** :link[Versão]{id=versao}.
 
-## DadoInstalacao
+### DadoInstalacao
 
-### \#1	contraChave
+#### \#1	contraChave
 
 Identifica o software que gerou o dado (pec/cds, cdsOff ou software de terceiros).
 
@@ -122,7 +122,7 @@ Identifica o software que gerou o dado (pec/cds, cdsOff ou software de terceiros
 
 **Observações:** Campo serve para a identificar o software que gerou / cadastrou / enviou os dados.
 
-### \#2	uuidInstalacao
+#### \#2	uuidInstalacao
 
 É um identificador da instalação do software que gerou o dado. Seja ele o e-SUS ou software de terceiro. Cada e-SUS possui um UUID.
 
@@ -132,7 +132,7 @@ Identifica o software que gerou o dado (pec/cds, cdsOff ou software de terceiros
 
 Observações: Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.
 
-### \#3	cpfOuCnpj
+#### \#3	cpfOuCnpj
 
 CPF do responsável ou CNPJ da empresa responsável.
 
@@ -142,7 +142,7 @@ CPF do responsável ou CNPJ da empresa responsável.
 
 **Observações:** Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.
 
-### \#4	nomeOuRazaoSocial
+#### \#4	nomeOuRazaoSocial
 
 Nome do responsável ou razão social da empresa responsável.
 
@@ -152,7 +152,7 @@ Nome do responsável ou razão social da empresa responsável.
 
 **Observações:** Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.
 
-### \#5	fone
+#### \#5	fone
 
 Telefone da pessoa ou empresa responsável.
 
@@ -162,7 +162,7 @@ Telefone da pessoa ou empresa responsável.
 
 **Observações:** Campo serve para a identificar a instalação que gerou / cadastrou / enviou os dados.
 
-### \#6	email
+#### \#6	email
 
 E-mail da pessoa ou empresa responsável.
 

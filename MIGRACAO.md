@@ -67,48 +67,32 @@ v<versão>/                # HTML congelado de versões anteriores — não migr
 ### Regras de conversão aplicadas no build
 
 O conteúdo em `collections/` é sincronizado do esus-aps-doc sem edição
-manual, então tudo que precisa ser ajustado vira **regra de build** — assim
-a próxima sincronização não desfaz o ajuste. As regras vivem em
-`website/src/remark/`:
+manual, então tudo que precisa ser ajustado vira **regra** — assim a próxima
+sincronização não desfaz o ajuste. As regras se dividem em dois lugares:
+
+- **no conversor do esus-aps-doc** (`website/scripts/migrate-jekyll/`), para
+  o que é forma do conteúdo — é lá, por exemplo, que
+  `normalizeChangelogHeadings` põe cada versão do changelog num nível de
+  heading que entra no menu da direita, e `normalizeSpacelessHeadings`
+  conserta o heading ATX sem espaço que o kramdown aceitava e o CommonMark
+  não;
+- **aqui, em `website/src/remark/`**, para o que depende de resolver contra
+  a árvore de documentos deste site:
 
 | Plugin | O que resolve |
 |---|---|
 | `resolveDocLinks` | `:link{}`/`:url{}` (as tags `{% link %}`/`{% url %}` do Jekyll) e âncoras "à moda kramdown" |
 | `numberedItems` | `:nr` (numeração automática de itens) |
 | `pageVariables` | `:page{field=…}` (`{{ page.x }}` do Jekyll) |
-| `demoteNumberedHeadings` | `# 1. Objetivo` era numeração de seção, não título de página — rebaixa um nível para ganhar `id` e entrar no TOC |
-| `changelogHeadings` | hierarquia das páginas de "principais alterações" (abaixo) |
+| `demoteNumberedHeadings` | `# 1. Objetivo` era numeração de seção, não título de página — rebaixa um nível para ganhar `id` próprio |
 
-#### Hierarquia das páginas de "principais alterações"
-
-No Jekyll o nível de cada heading foi escolhido pelo tamanho da fonte, não
-pela estrutura — e é justamente do nível do heading que o Docusaurus monta o
-menu da direita (TOC, faixa padrão h2–h3). O que veio da conversão:
-
-- **LEDI**: as versões são `###`, mas três alterações também ficaram `###`
-  em vez de `####` — apareciam no menu misturadas às versões;
-- **DW**: todas as versões são `####`, abaixo da faixa do TOC — a página não
-  tinha menu nenhum.
-
-`changelogHeadings.ts` normaliza: **heading de versão vira h2** (único nível
-na faixa do TOC, então o menu lista exatamente uma entrada por versão) e
-**todo heading de alteração vira h4**, achatado num nível só — essas páginas
-são de dois níveis por construção (versão > alteração), e preservar a
-diferença de nível de origem preservaria o erro de digitação, deixando
-alterações irmãs em tamanhos diferentes dentro da mesma versão.
-
-Detalhe de implementação: o plugin roda em `beforeDefaultRemarkPlugins`. O
-TOC é extraído por um plugin interno do `@docusaurus/mdx-loader` que roda
-antes dos `remarkPlugins` normais — de lá, reescrever o nível do heading não
-teria efeito nenhum sobre o menu.
-
-Isso também explica por que `demoteNumberedHeadings` continua nos
-`remarkPlugins` normais (depois da extração do TOC): no resto do site o
-efeito colateral é desejável — o menu enxerga os níveis originais e mostra
-duas camadas (`1. Objetivo` > `1.1 Sub-item`), enquanto o HTML renderizado
-usa os níveis rebaixados. As âncoras são as mesmas nos dois casos, então os
-links continuam válidos. Nas páginas de changelog esse plugin é desligado:
-`changelogHeadings` já é dono da hierarquia delas.
+Uma sutileza que vale conhecer antes de mexer em nível de heading: o menu da
+direita é extraído por um plugin interno do `@docusaurus/mdx-loader` que roda
+**antes** dos `remarkPlugins` normais. Ou seja, quem decide o que entra no
+menu é o nível gravado no arquivo convertido — `demoteNumberedHeadings`, que
+roda depois, muda o `id` e a tag renderizada, não o menu. Por isso a
+normalização dos changelogs é regra do conversor, e não um plugin remark
+daqui.
 
 ### Diferenças em relação ao esus-aps-doc
 
@@ -153,9 +137,10 @@ find website/collections \( -name '*-piloto.*' -o -name 'dicionario-epa.*' \) -d
 
 Já validado:
 
-- build de produção limpo (`npm run build`) e `npm run typecheck` sem erros;
-- menu da direita das páginas de "principais alterações": 27 versões (LEDI)
-  e 17 versões (DW), uma entrada por versão e nada além disso;
+- `npm run build` e `npm run typecheck` passam; o build reporta um único
+  `onBrokenLinks` (o PDF do CADSUS, item 6 abaixo);
+- menu da direita das páginas de "principais alterações": 30 versões (LEDI)
+  e 21 versões (DW), uma entrada por versão e nada além disso;
 - 360 rotas geradas, cobrindo as 193 páginas hoje publicadas fora das
   pastas `v<versão>` (mesma árvore de navegação, mesmos títulos);
 - 167 redirecionamentos de URL antiga (`.html`) para a nova, com origem e
@@ -177,9 +162,17 @@ Em aberto antes do corte:
    `v<versão>`.
 4. **Congelar a versão atual** em `v850/` antes do corte, seguindo o passo 1
    do tutorial — o processo de versionamento não muda com o Docusaurus.
-5. **Ressincronizar o conteúdo na versão certa.** O site Jekyll publica
-   hoje o **LEDI 8.5.0**, mas a branch `docusaurus-migration` do
-   esus-aps-doc — de onde as collections vieram — ainda está no **8.4.2**;
-   `SITE_VERSION` acompanha o conteúdo empacotado, não o que está no ar.
-   Antes do corte, subir o conteúdo do esus-aps-doc para a versão desejada,
-   refazer a sincronização acima e atualizar `SITE_VERSION`.
+5. **Conferir a versão no corte.** O conteúdo em `collections/` está no
+   **LEDI 8.7.0** (sincronizado do esus-aps-doc), enquanto o site Jekyll no
+   ar ainda publica a **8.5.0** — `SITE_VERSION` acompanha o conteúdo
+   empacotado, não o que está no ar. Confirmar qual das duas deve ir pro ar
+   no corte.
+6. **Link do PDF de Especificação CADSUS.** Em
+   `ledi/documentacao/referencias/dicionario`, o link para
+   `Especificacao_CADSUS.pdf` está como HTML cru
+   (`<a href="Especificacao_CADSUS.pdf">`) no conteúdo do esus-aps-doc. HTML
+   cru não passa pelo webpack, então o arquivo não é empacotado e o link
+   aponta pra um caminho que não existe no build — é o único
+   `onBrokenLinks` que o build reporta. Voltar para link markdown
+   (`[![](img/pdf.jpg)](Especificacao_CADSUS.pdf "…")`, como estava antes)
+   resolve; é conteúdo, então a correção é no esus-aps-doc.

@@ -7,19 +7,37 @@ parent: dw
 
 Este documento relata as principais alterações entre as versões do DW.
 
-#### Principais alterações da v.5.4.22 para a v.5.4.23 do e-SUS APS:
+### Principais alterações da v.5.5.25 para a v.5.5.26 do e-SUS APS:
+
+:nr Foram adicionados os campos st\_cidadao\_nao\_possui\_cpf e co\_dim\_just\_nao\_possui\_cpf na tabela fato de :link{id=RF-EDW.tb_fat_avaliacao_elegibilidade} (Avaliação da Elegibilidade).
+
+:nr Foi adicinado o campo st\_prat\_saude\_pnct\_manutencao na tabela fato de :link{id=RF-EDW.tb_fat_atvdd_coletiva_ext}.
+
+### Principais alterações da v.5.5.23 para a v.5.5.25 do e-SUS APS:
+
+:nr Foram adicionados os campos st\_nao\_possui\_cpf e co\_dim\_just\_nao\_possui\_cpf na tabela fato de :link{id=RF-EDW.tb_fat_atvdd_coletiva_part} (participantes da Atividade Coletiva).
+
+### Principais alterações da v.5.5.21 para a v.5.5.23 do e-SUS APS:
+
+:nr Foram adicionados os campos st\_nao\_possui\_cpf e co\_dim\_just\_nao\_possui\_cpf nas tabelas fato de :link{id=RF-EDW.visita_domiciliar} e &#123;link RF-EDW.atendimento_domiciliar %&#125;.
+
+### Principais alterações da v.5.4.23 para a v.5.5.21 do e-SUS APS:
+
+:nr Toda a documentação do Data Warehouse foi amplamente revisada, atualizada e reformulada.
+
+### Principais alterações da v.5.4.22 para a v.5.4.23 do e-SUS APS:
 
 :nr As tabelas relacionadas aos relatórios operacionais serão descontinuadas em versões futuras.
 
-#### Principais alterações da v.5.4.7 para a v.5.4.8 do e-SUS APS:
+### Principais alterações da v.5.4.7 para a v.5.4.8 do e-SUS APS:
 
 :nr Inclusão da coluna `co_fat_cidadao_pec` na `tb_acomp_cidadaos_vinculados`.
 
-#### Principais alterações da v.5.4.6 para a v.5.4.7 do e-SUS APS:
+### Principais alterações da v.5.4.6 para a v.5.4.7 do e-SUS APS:
 
 :nr Inclusão da tabela `tb_fat_solicitacao_oci`, populada sempre que atendimentos individuais e odontológicos com algum registro de procedimentos do grupo `09 - Procedimento para Oferta de Cuidado Integrado` são processados.
 
-#### Principais alterações da v.5.4.0 para a v.5.4.1 do e-SUS APS:
+### Principais alterações da v.5.4.0 para a v.5.4.1 do e-SUS APS:
 
 :nr Inclusão de campos nas `tb_fat_atd_ind_procedimentos`, `tb_fat_atend_odonto_proced` e `tb_fat_atend_odonto_exames`:
 
@@ -29,7 +47,7 @@ Este documento relata as principais alterações entre as versões do DW.
 - co\_dim\_turno: Código do turno do atendimento. Campo `co_seq_dim_turno` da `tb_dim_turno`;
 - co\_dim\_sexo: Código do sexo. Campo `co_seq_dim_faixa_sexo` da `tb_dim_sexo`.
 
-#### Principais alterações da v.5.3.25 para a v.5.3.26 do e-SUS APS:
+### Principais alterações da v.5.3.25 para a v.5.3.26 do e-SUS APS:
 
 :nr Inclusão de campos na `tb_acomp_cidadaos_vinculados`:
 
@@ -37,7 +55,7 @@ Este documento relata as principais alterações entre as versões do DW.
 - ds\_tipo\_localizacao\_domicilio: Descrição da Localização definida no "Cadastro Domiciliar e Territorial" que o cidadão está vinculado;
 - no\_raca\_cor: Nome da :link[Raça/Cor]{id=dicionario anchor=racacor} do cidadão.
 
-#### Principais alterações da v.5.3.20 para a v.5.3.21 do e-SUS APS:
+### Principais alterações da v.5.3.20 para a v.5.3.21 do e-SUS APS:
 
 :nr Inclusão da tabela `tb_dim_grau_vulnerabilidade`:
 
@@ -46,7 +64,7 @@ Este documento relata as principais alterações entre as versões do DW.
 - ds\_grau: Descrição do grau de vulnerabilidade.
 
 
-#### Principais alterações da v.5.3.14 para a v.5.3.15 do e-SUS APS:
+### Principais alterações da v.5.3.14 para a v.5.3.15 do e-SUS APS:
 
 :nr Inclusão da tabela `tb_dim_situacao_problema`, contendo todas as possíveis situações que podem ser preenchidas na lista de problemas e condições.
 
@@ -68,7 +86,7 @@ Este documento relata as principais alterações entre as versões do DW.
 - qt\_dose\_tarde;
 - qt\_dose\_noite.
 
-#### Principais alterações da v.5.3.6 para a v.5.3.7 do e-SUS APS:
+### Principais alterações da v.5.3.6 para a v.5.3.7 do e-SUS APS:
 
 :nr Inclusão de novos campos nas tabelas de fato `tb_fat_atendimento_individual`, `tb_fat_proced_atend` e `tb_fat_atendimento_odonto`:
 
@@ -86,18 +104,18 @@ Este documento relata as principais alterações entre as versões do DW.
 - nu\_altura: Altura do cidadão em centímetros;
 - nu\_perimetro\_cefalico: Perímetro cefálico do cidadão em centímetros.
 
-#### Principais alterações da v.5.2.36 para a v.5.2.37 do e-SUS APS:
+### Principais alterações da v.5.2.36 para a v.5.2.37 do e-SUS APS:
 
 :nr Inclusão do detalhamento dos fatos:
 
 - :link{id=RF-EDW.atendimento_individual};
 - :link{id=RF-EDW.procedimentos}.
 
-#### Principais alterações da v5.2.33 para a v.5.2.34 do e-SUS APS:
+### Principais alterações da v5.2.33 para a v.5.2.34 do e-SUS APS:
 
 :nr Inclusão da seção de :link{id=RF-EDW.visualizacoes}, com a nova :link{id=RF-EDW.acomp_cidadaos_vinculados}.
 
-#### Principais alterações da v5.2.16 para a v.5.2.17 do e-SUS APS:
+### Principais alterações da v5.2.16 para a v.5.2.17 do e-SUS APS:
 
 :nr No contexto de :link{id=RF-EDW.cuidado_compartilhado} foram incluídas as estruturas de dados para registro da informação do cuidado compartilhado. Esta informação está armazenada na tabela: `tb_fat_cuidado_compartilhado`.
 
@@ -105,21 +123,21 @@ Este documento relata as principais alterações entre as versões do DW.
 
 :nr Inclusão do tipo de ficha "ESUS PEC Cuidado compartilhado" na `tb_dim_tipo_ficha`.
 
-#### Principais alterações da v5.2.4 para a v.5.2.5 do e-SUS APS:
+### Principais alterações da v5.2.4 para a v.5.2.5 do e-SUS APS:
 
 :nr{reset=true} Inclusão da tabela de dimensões referente ao vínculo entre equipes: `tb_dim_vinculacao_equipes`.
 
-#### Principais alterações da v4.2.1 para a v4.2.3:
+### Principais alterações da v4.2.1 para a v4.2.3:
 
 :nr{reset=true} No contexto de :link{id=RF-EDW.procedimentos} foram incluídos os campos `nu_peso` e `nu_altura`.
 
 :nr No contexto de :link{id=RF-EDW.atendimento_odontologico_individual} foram incluídos os campos `nu_peso` e `nu_altura`.
 
-#### Principais alterações da v4.2.0 para a v4.2.1:
+### Principais alterações da v4.2.0 para a v4.2.1:
 
 :nr{reset=true} No contexto de :link{id=RF-EDW.cadastro_individual} foi incluído o campo `co_dim_povo_comunidade_tradicional`. Além deste campo, também foi criada a tabela de dimensão :link[tb\_dim\_povo\_comunidade\_tradicional]{id=RF-EDW.dim_povo_comunidad_trad}.
 
-#### Principais alterações da v4.1.4 para a v4.2.0:
+### Principais alterações da v4.1.4 para a v4.2.0:
 
 :nr{reset=true} No contexto de :link{id=RF-EDW.atendimento_individual} e :link{id=RF-EDW.atendimento_odontologico_individual} foram incluídas as estruturas de dados para registro das informações de resultados de exames. Estas informações estão armazenadas nas tabelas:
 
@@ -132,13 +150,13 @@ Este documento relata as principais alterações entre as versões do DW.
 
 :nr No contexto de :link{id=RF-EDW.vacinacao} foram incluídos os campos `st_registro_anterior` e `co_dim_tempo_vacina_aplicada`.
 
-#### Principais alterações da v4.1.2 para a v4.1.4:
+### Principais alterações da v4.1.2 para a v4.1.4:
 
 :nr{reset=true} No contexto de :link{id=RF-EDW.vacinacao} foram incluídas as estruturas de dados para registro da informação de grupo de atendimento. Esta informação está armazenada na tabela: `tb_fat_vacinacao_vacina`.
 
 :nr Para contextualizar as informações da tabela `tb_fat_vacinacao_vacina`, foi criada a seguinte tabela de dimensão: `tb_dim_grupo_atendimento`.
 
-#### 14. Principais alterações da v4.0.0 para a v4.1.2:
+### 14. Principais alterações da v4.0.0 para a v4.1.2:
 
 :nr{reset=true} No contexto de :link{id=RF-EDW.atendimento_individual} foram incluídas as estruturas de dados para registro das informações de prescrição de medicamentos e encaminhamentos. Estas informações estão armazenadas nas tabelas:
 

@@ -32,12 +32,12 @@ Este documento apresenta as etapas necessárias para conseguir enviar registros 
 - Resposta de sucesso: a API deve retornar um cookie chamado "JSESSIONID". Esse cookie deve ser enviado em requisições futuras como forma de autenticação;
 - Resposta de erro: deve ser retornado um código e mensagem do erro.
 
-:nr O endpoint "/api/v1/recebimento/ficha" deve ser utilizado para realizar o envio dos registros no formato LEDI através da requisição do tipo POST. Sendo aceito a variável ficha. O valor da variável deve ser um arquivo serializado em binário e o nome desse arquivo deve ser "uuid do registro eletrônico no formato LEDI" + ".esus". Segue um exemplo de ficha nomeada corretamente: "0000007-cfdd9b1b-2c4d-4759-b254-76564ec219f3.esus".
+:nr O endpoint "/api/v1/recebimento/ficha" deve ser utilizado para realizar o envio dos registros no formato LEDI através da requisição do tipo POST. Sendo aceito a variável ficha. O valor da variável deve ser um arquivo serializado em binário e o nome desse arquivo deve ser "uuid do registro eletrônico no formato LEDI" + ".esus". Segue um exemplo de registro nomeado corretamente: "0000007-cfdd9b1b-2c4d-4759-b254-76564ec219f3.esus".
 
 :nr As respostas possíveis para o endpoint "/api/v1/recebimento/ficha" são:
 
 - Respostas de sucesso: deve ser retornado o status 200;
-- Resposta de erro: deve ser retornado um código e uma mensagem do erro. Informando quais informações devem ser corrigidas para que a ficha seja aceita.
+- Resposta de erro: deve ser retornado um código e uma mensagem do erro. Informando quais informações devem ser corrigidas para que o registro seja aceito.
 
 :nr Sugere-se que o erro retornado pela API seja armazenado pelo próprio integrador. Possibilitando assim correção de registros no formato LEDI que foram enviadas com erro.
 
@@ -81,10 +81,10 @@ Este documento apresenta as etapas necessárias para conseguir enviar registros 
 
 | Código | Mensagem       | Descrição                           |
 |--------|----------------|-------------------------------------|
-| 400    | Erro de validação        | Ocorre quando a ficha possui erros de validação em relação ao LEDI |
+| 400    | Erro de validação | Ocorre quando o registro possui erros de validação em relação ao LEDI |
 | 400    | Várias, vai sinalizar erro com o formato do arquivo recebido           | Ocorre ao tentar deserializar o arquivo em thrift ou xml. Exemplo de erro: sistema recebe um arquivo zip que não é esperado      |
-| 500    | Erro ao desserializar ficha     | Ocorre quando acontece um erro inesperado na deserialização de um arquivo thrift |
-| 500    | Erro ao ler ficha | Ocorre quando acontece um erro ao tentar ler bytes recebidos da ficha |
-| 500    | Erro inesperado ao receber ficha | Ocorre em quaisquer outros erros não mapeados acima |
+| 500    | Erro ao desserializar registro | Ocorre quando acontece um erro inesperado na deserialização de um arquivo thrift |
+| 500    | Erro ao ler registro | Ocorre quando acontece um erro ao tentar ler bytes recebidos do registro |
+| 500    | Erro inesperado ao receber registro | Ocorre em quaisquer outros erros não mapeados acima |
 
 

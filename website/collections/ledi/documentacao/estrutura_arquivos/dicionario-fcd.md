@@ -1,13 +1,13 @@
 ---
 id: dicionario-fcd
-title: Ficha de Cadastro Domiciliar e Territorial
+title: Modelo de Informação de Cadastro Domiciliar e Territorial
 order: 4
 parent: estrutura_arquivos
 ---
 
-## CadastroDomiciliar
+### CadastroDomiciliar
 
-### \#1	animaisNoDomicilio
+#### \#1	animaisNoDomicilio
 Lista de código dos animais no domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -22,7 +22,7 @@ Lista de código dos animais no domicílio.
 
 **Referências:** :link[AnimalNoDomicilio]{id=dicionario anchor=animalnodomicilio}.
 
-### \#2	condicaoMoradia
+#### \#2	condicaoMoradia
 Condições de moradia do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -36,7 +36,7 @@ Condições de moradia do domicílio.
 
 **Referências:** [CondicaoMoradia](#condicaomoradia).
 
-### \#3	enderecoLocalPermanencia
+#### \#3	enderecoLocalPermanencia
 Informações sobre o endereço do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -47,7 +47,7 @@ Informações sobre o endereço do domicílio.
 
 **Referências:** [EnderecoLocalPermanencia](#enderecolocalpermanencia).
 
-### \#4	familias
+#### \#4	familias
 Lista das famílias que residem no domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -63,21 +63,21 @@ Lista das famílias que residem no domicílio.
 
 **Referências:** [FamiliaRow](#familiarow).
 
-### \#5	fichaAtualizada
-Marcador que indica se a ficha é uma atualização.
+#### \#5	fichaAtualizada
+Marcador que indica se o registro é uma atualização.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Boolean|	Sim|	1|	1|
 
-**Regra:** Caso seja uma ficha de atualização, o campo [uuidFichaOriginadora](#11-uuidfichaoriginadora) deve ser preenchido com o UUID da ficha que deu origem ao registro.
+**Regra:** Caso seja um registro de atualização, o campo [uuidFichaOriginadora](#11-uuidfichaoriginadora) deve ser preenchido com o UUID do registro que o originou.
 
-### \#6	quantosAnimaisNoDomicilio
+#### \#6	quantosAnimaisNoDomicilio
 Número de animais no domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
-|String	|Condicional| 	0|	2|
+|String	|Não| 	0|	2|
 
 **Regras:**
 
@@ -87,7 +87,7 @@ Número de animais no domicílio.
 * Não pode ser preenchido com o valor "0" (zero);
 * Deve ser maior ou igual ao número de opções selecionadas no campo [animaisNoDomicilio](#1-animaisnodomicilio).
 
-### \#7	stAnimaisNoDomicilio
+#### \#7	stAnimaisNoDomicilio
 Marcador que indica se existem animais no domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -99,14 +99,14 @@ Marcador que indica se existem animais no domicílio.
 * Só pode ser preenchido se o campo [tipoDeImovel](#12-tipodeimovel) = `01` Domicílio;
 * Não pode ser preenchido se o campo [statusTermoRecusa](#8-statustermorecusa) = `true`.
 
-### \#8	statusTermoRecusa
+#### \#8	statusTermoRecusa
 Marcador que indica se o termo de recusa de cadastro do domicílio foi selecionado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Boolean|	Não|	-|	-|
 
-### \#9	tpCdsOrigem
+#### \#9	tpCdsOrigem
 Tipo de origem dos dados do registro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -115,8 +115,8 @@ Tipo de origem dos dados do registro.
 
 **Regras:** Utilizar valor 3 (sistemas terceiros).
 
-### \#10	uuid
-Código UUID para identificar a ficha na base de dados nacional.
+#### \#10	uuid
+Código UUID para identificar o registro na base de dados nacional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -126,18 +126,18 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Referências:** Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
-### \#11	uuidFichaOriginadora
-Código UUID para identificar a ficha que deu origem ao cadastro do registro.
+#### \#11	uuidFichaOriginadora
+Código UUID para identificar o registro que originou o cadastro atual.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Sim|	36|	44|
 
-**Regra:** Se for uma ficha de atualização, deve ser preenchido com o UUID da ficha que deu origem ao registro. Se for uma ficha de cadastro, este campo deve ser igual ao campo [UUID](#10-uuid).
+**Regra:** Se for um registro de atualização, deve ser preenchido com o UUID do registro que o originou. Se for um registro de cadastro, este campo deve ser igual ao campo [UUID](#10-uuid).
 
 **Referências:** Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
-### \#12 tipoDeImovel
+#### \#12 tipoDeImovel
 Indica o tipo de imóvel do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -146,7 +146,7 @@ Indica o tipo de imóvel do domicílio.
 
 **Referências:** :link[tipoDeImovel]{id=dicionario anchor=tipodeimovel}.
 
-### \#13	instituicaoPermanencia
+#### \#13	instituicaoPermanencia
 Informações referentes a instituição de permanência.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -160,18 +160,18 @@ Informações referentes a instituição de permanência.
 
 **Referências:** [InstituicaoPermanencia](#instituicaopermanencia).
 
-### \#14 headerTransport
+#### \#14 headerTransport
 Informações sobre o profissional e a data do cadastro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---| --- |---  | --- |
 | UnicaLotacaoHeader|	Sim|	-|	-|
 
-**Regras:** Somente as CBOs apresentadas na :link[Tabela 2 - CBOs que podem registrar ficha de cadastro domiciliar e territorial]{id=grupo_cbo anchor=ficha-de-cadastro-domiciliar-e-territorial} podem ser adicionadas no campo CBO do profissional.
+**Regras:** Somente as CBOs apresentadas na :link[Tabela 2 - CBOs que podem registrar o Modelo de Informação de Cadastro Domiciliar e Territorial]{id=grupo_cbo anchor=modelo-de-informa-o-de-cadastro-domiciliar-e-territorial} podem ser adicionadas no campo CBO do profissional.
 
 **Referências:** :link[UnicaLotacaoHeader]{id=headerTransport anchor=unicalotacaoheader}.
 
-### \#15 latitude
+#### \#15 latitude
 
 Informação da latitude do imóvel.
 
@@ -184,7 +184,7 @@ Informação da latitude do imóvel.
 - É de preenchimento obrigatório se o campo [longitude](#16-longitude) for preenchido;
 - Os valores são limitados por -90 a 90 e apresentam até 8 casas decimais.
 
-### \#16 longitude
+#### \#16 longitude
 
 Informação da longitude do imóvel.
 
@@ -197,7 +197,7 @@ Informação da longitude do imóvel.
 - É de preenchimento obrigatório se o campo [latitude](#15-latitude) for preenchido;
 - Os valores são limitados por -180 a 180 e apresentam até 8 casas decimais.
 
-### \#17	tipoEndereco
+#### \#17	tipoEndereco
 Código do tipo de endereço do cadastro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -206,7 +206,7 @@ Código do tipo de endereço do cadastro.
 
 **Regras:** Utilizar valor 3 (logradouro).
 
-### \#18 stAtivo
+#### \#18 stAtivo
 Indica se o cadastro do imóvel está ativo.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -218,16 +218,16 @@ Indica se o cadastro do imóvel está ativo.
 - Só pode ser preenchido se o campo [fichaAtualizada](#5-fichaatualizada) = `true`.
 - Só pode ser `true` se não houver famílias no cadastro ou todas as famílias tiverem [stMudanca](#7-stmudanca) = `true`.
 
-## EnderecoLocalPermanencia
+### EnderecoLocalPermanencia
 
-### \#1	bairro
+#### \#1	bairro
 Bairro onde está localizado o domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Sim|	0|	72|
 
-### \#2	cep
+#### \#2	cep
 CEP do logradouro do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -236,7 +236,7 @@ CEP do logradouro do domicílio.
 
 **Regras:**	Apenas números.
 
-### \#3	codigoIbgeMunicipio
+#### \#3	codigoIbgeMunicipio
 Código IBGE do município.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -245,21 +245,21 @@ Código IBGE do município.
 
 **Referências:** :link[Municipios]{id=municipios}.
 
-### \#4	complemento
+#### \#4	complemento
 Complemento do endereço do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Não|	0|	30|
 
-### \#5	nomeLogradouro
+#### \#5	nomeLogradouro
 Nome do logradouro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String|	Sim|	0|	72|
 
-### \#6	numero
+#### \#6	numero
 Número do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -271,7 +271,7 @@ Número do domicílio.
 * Apenas letras e números;
 * Não pode ser preenchido caso [stSemNumero](#11-stsemnumero) = `true`.
 
-### \#7	numeroDneUf
+#### \#7	numeroDneUf
 Código indexador referente a Unidade Federativa.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -280,7 +280,7 @@ Código indexador referente a Unidade Federativa.
 
 **Referências:** :link[Estados]{id=ufs}.
 
-### \#8	telefoneContato
+#### \#8	telefoneContato
 Telefone para contato.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -289,7 +289,7 @@ Telefone para contato.
 
 **Regras:** Mínimo 10 dígitos, máximo 11 (DDD + 8 ou 9).
 
-### \#9	telefoneResidencia
+#### \#9	telefoneResidencia
 Telefone residencial.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -301,7 +301,7 @@ Telefone residencial.
 - Mínimo de 10 e máximo de 11 dígitos (DDD + 8 ou 9 dígitos);
 - Só pode ser preenchido se o campo [tipoDeImovel](#12-tipodeimovel) = `01` Domicílio.
 
-### \#10	tipoLogradouroNumeroDne
+#### \#10	tipoLogradouroNumeroDne
 Tipo do logradouro onde está o domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -312,21 +312,21 @@ Tipo do logradouro onde está o domicílio.
 
 **Referências:** :link[TipoLogradouro]{id=ufs anchor=tipo-de-logradouro}.
 
-### \#11	stSemNumero
+#### \#11	stSemNumero
 Marcador que indica que o domicílio não possui número.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Boolean|	Não|	-|	-|
 
-### \#12	pontoReferencia
+#### \#12	pontoReferencia
 Indica um ponto de referência para o domicílio do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |String |	Não|	0|	40|
 
-### \#13 microArea
+#### \#13 microArea
 
 Microárea na qual o cidadão se encontra.
 
@@ -336,16 +336,16 @@ Microárea na qual o cidadão se encontra.
 
 **Regras:** Não deve ser preenchido se o campo [stForaArea](#14-stforaarea) = `true`. Caso contrário, o preenchimento é obrigatório.
 
-### \#14 stForaArea
+#### \#14 stForaArea
 Marcador que indica que o cidadão está fora da área.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
 |Boolean |Não |- |- |
 
-## CondicaoMoradia
+### CondicaoMoradia
 
-### \#1	abastecimentoAgua
+#### \#1	abastecimentoAgua
 Código do tipo de abastecimento de água.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -354,7 +354,7 @@ Código do tipo de abastecimento de água.
 
 **Referências:** :link[AbastecimentoDeAgua]{id=dicionario anchor=abastecimentodeagua}.
 
-### \#2	areaProducaoRural
+#### \#2	areaProducaoRural
 Código da condição de posse e uso da terra.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -368,7 +368,7 @@ Código da condição de posse e uso da terra.
 
 **Referências:** :link[CondicaoDePosseEUsoDaTerra]{id=dicionario anchor=condicaodeposseeusodaterra}.
 
-### \#3	destinoLixo
+#### \#3	destinoLixo
 Código do destino do lixo.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -377,7 +377,7 @@ Código do destino do lixo.
 
 **Referências:** :link[DestinoDoLixo]{id=dicionario anchor=destinodolixo}.
 
-### \#4	formaEscoamentoBanheiro
+#### \#4	formaEscoamentoBanheiro
 Código da forma de escoamento do banheiro ou sanitário.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -386,7 +386,7 @@ Código da forma de escoamento do banheiro ou sanitário.
 
 **Referências:** :link[FormaDeEscoamentoDoBanheiroOuSanitario]{id=dicionario anchor=formadeescoamentodobanheiroousanitario}.
 
-### \#5	localizacao
+#### \#5	localizacao
 Código da localização do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -395,7 +395,7 @@ Código da localização do domicílio.
 
 **Referências:** :link[LocalizacaoDaMoradia]{id=dicionario anchor=localizacaodamoradia}.
 
-### \#6	materialPredominanteParedesExtDomicilio
+#### \#6	materialPredominanteParedesExtDomicilio
 Código do tipo de material predominante nas paredes externas do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -406,7 +406,7 @@ Código do tipo de material predominante nas paredes externas do domicílio.
 
 **Referências:** :link[MaterialPredominanteNaConstrucao]{id=dicionario anchor=materialpredominantenaconstrucao}.
 
-### \#7	nuComodos
+#### \#7	nuComodos
 Número de cômodos do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -418,7 +418,7 @@ Número de cômodos do domicílio.
 - Não deve ser preenchido se o campo [tipoDeImovel](#12-tipodeimovel) = `07` Abrigo, `08` Instituição de longa permanência para idosos, `09` Unidade prisional, `10` Unidade de medida socioeducativa, `11` Delegacia ou `13` CASAI.
 - Não pode ser preenchido com o valor "0" (zero).
 
-### \#8	nuMoradores
+#### \#8	nuMoradores
 Número de moradores do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -430,7 +430,7 @@ Número de moradores do domicílio.
 - Não pode ser menor que o número de [familias](#4-familias) cadastradas;
 - Não pode ser menor que o somatório dos valores preenchidos no campo [numeroMembrosFamilia](#3-numeromembrosfamilia), considerando o valor `1` quando este campo não foi informado no cadastro de uma família.
 
-### \#9 situacaoMoradiaPosseTerra
+#### \#9 situacaoMoradiaPosseTerra
 Código da situação de moradia ou de posse da terra.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -442,14 +442,14 @@ Código da situação de moradia ou de posse da terra.
 
 **Referências:** :link[SituacaoDeMoradia]{id=dicionario anchor=situacaodemoradia}.
 
-### \#10 stDisponibilidadeEnergiaEletrica
+#### \#10 stDisponibilidadeEnergiaEletrica
 Marcador que indica se existe disponibilidade de energia elétrica.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Boolean|	Não|	-|	-|
 
-### \#11 tipoAcessoDomicilio
+#### \#11 tipoAcessoDomicilio
 Código do tipo de acesso ao domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -460,7 +460,7 @@ Código do tipo de acesso ao domicílio.
 
 **Referências:** :link[TipoDeAcessoAoDomicilio]{id=dicionario anchor=tipodeacessoaodomicilio}.
 
-### \#12 tipoDomicilio
+#### \#12 tipoDomicilio
 Código do tipo de domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -471,7 +471,7 @@ Código do tipo de domicílio.
 
 **Referências:** :link[TipoDeDomicilio]{id=dicionario anchor=tipodedomicilio}.
 
-### \#13 aguaConsumoDomicilio
+#### \#13 aguaConsumoDomicilio
 Código do tipo do tratamento de água para consumo do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -480,7 +480,7 @@ Código do tipo do tratamento de água para consumo do domicílio.
 
 **Referências:** :link[AguaConsumoDomicilio]{id=dicionario anchor=aguaconsumodomicilio}.
 
-### \#14 tipoOrigemEnergiaEletrica
+#### \#14 tipoOrigemEnergiaEletrica
 Código do tipo de energia elétrica disponível.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -491,22 +491,22 @@ Código do tipo de energia elétrica disponível.
 
 **Referências:** :link[TipoOrigemEnergiaEletrica]{id=dicionario anchor=tipoorigemenergiaeletrica}.
 
-## FamiliaRow
+### FamiliaRow
 
-### \#1	dataNascimentoResponsavel
+#### \#1	dataNascimentoResponsavel
 Data de nascimento, no formato epoch time, do cidadão responsável pela família.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Long|	Não|	-|	-|
 
-**Referências:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referências:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
 **Regras:**
 
 - Não pode ser posterior a :link[dataAtendimento]{id=headerTransport anchor=5-dataatendimento} e anterior a 130 anos a partir da :link[dataAtendimento]{id=headerTransport anchor=5-dataatendimento}.
 
-### \#2	numeroCnsResponsavel
+#### \#2	numeroCnsResponsavel
 CNS do responsável familiar.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -520,7 +520,7 @@ CNS do responsável familiar.
 
 **Referências:** O algoritmo de validação está presente em :link{id=algoritmo_CNS}.
 
-### \#3	numeroMembrosFamilia
+#### \#3	numeroMembrosFamilia
 Quantidade de membros do núcleo familiar.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -529,7 +529,7 @@ Quantidade de membros do núcleo familiar.
 
 **Regras:** Não pode ser preenchido com o valor "0" (zero).
 
-### \#4	numeroProntuario
+#### \#4	numeroProntuario
 Código do prontuário familiar na UBS.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -538,7 +538,7 @@ Código do prontuário familiar na UBS.
 
 **Regras:** Apenas letras e números.
 
-### \#5	rendaFamiliar
+#### \#5	rendaFamiliar
 Código da renda familiar em salários mínimos.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -547,7 +547,7 @@ Código da renda familiar em salários mínimos.
 
 **Referências:** :link[RendaFamiliar]{id=dicionario anchor=rendafamiliar}.
 
-### \#6	resideDesde
+#### \#6	resideDesde
 Mês e ano que a família começou a residir no domicílio, no formato epoch time.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -558,14 +558,14 @@ Mês e ano que a família começou a residir no domicílio, no formato epoch tim
 
 **Referências:** [Epoch Wikipedia](https://pt.wikipedia.org/wiki/Era_Unix) em milissegundos.
 
-### \#7	stMudanca
+#### \#7	stMudanca
 Marcador que indica se a familia mudou-se.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
 |Boolean|	Não|	-|	-|
 
-### \#8 cpfResponsavel
+#### \#8 cpfResponsavel
 
 CPF do responsável.
 
@@ -578,23 +578,23 @@ CPF do responsável.
 - Somente CPF válido será aceito;
 - Não pode ser preenchido se o campo [numeroCnsResponsavel](#2-numerocnsresponsavel) for preenchido.
 
-## InstituicaoPermanencia
+### InstituicaoPermanencia
 
-### \#1 nomeInstituicaoPermanencia
+#### \#1 nomeInstituicaoPermanencia
 Indica o nome da instituição de permanência.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
 |String |Não | 0 | 100 |
 
-### \#2 stOutrosProfissionaisVinculados
+#### \#2 stOutrosProfissionaisVinculados
 Marcador que indica se existem outros profissional de saúde vinculados à instituição (não inclui profissionais da rede pública de saúde).
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
 |Boolean |Não |- |- |
 
-### \#3 nomeResponsavelTecnico
+#### \#3 nomeResponsavelTecnico
 Indica o nome do responsável técnico da instituição de permanência.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -603,7 +603,7 @@ Indica o nome do responsável técnico da instituição de permanência.
 
 **Regras:** As regras de validação de um nome estão descritas em :link{id=validar_nome}.
 
-### \#4 cnsResponsavelTecnico
+#### \#4 cnsResponsavelTecnico
 Indica o CNS do responsável técnico da instituição de permanência.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -612,14 +612,14 @@ Indica o CNS do responsável técnico da instituição de permanência.
 
 **Referências:** O algoritmo de validação está presente em :link{id=algoritmo_CNS}.
 
-### \#5 cargoInstituicao
+#### \#5 cargoInstituicao
 Indica o cargo do responsável técnico da instituição de permanência.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
 |String |Não | 0 | 100 |
 
-### \#6 telefoneResponsavelTecnico
+#### \#6 telefoneResponsavelTecnico
 Indica o telefone para contato do responsável técnico da instituição de permanência.
 
 | Tipo | Obrigatório | Mínimo | Máximo |

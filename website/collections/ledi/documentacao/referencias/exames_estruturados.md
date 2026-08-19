@@ -5,7 +5,7 @@ order: 9
 parent: referencias
 ---
 
-Este documento apresenta a lista de exames que possuem resultados estruturados. Esta lista é utilizado na :link[Ficha de Atendimento Individual]{id=dicionario-fai anchor=27-resultadosexames} e na :link[Ficha de Atendimento Odontológico Individual]{id=dicionario-fao anchor=22-resultadosexames}.
+Este documento apresenta a lista de exames que possuem resultados estruturados. Esta lista é utilizado na :link[Modelo de Informação de Atendimento Individual]{id=dicionario-fai anchor=27-resultadosexames} e na :link[Modelo de Informação de Atendimento Odontológico Individual]{id=dicionario-fao anchor=22-resultadosexames}.
 
 ### Tabela de exames com resultado estruturado
 

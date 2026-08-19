@@ -85,6 +85,7 @@ A tabela `tb_fat_avaliacao_elegibilidade` é populada sempre que os dados de uma
 | no\_referencia\_residencia | :link[pontoReferencia]{id=dicionario-fae anchor=12-pontoreferencia} | Ponto de referência do endereço de residência |
 | nu\_telefone\_residencia | :link[telefoneResidencia]{id=dicionario-fae anchor=9-telefoneresidencia} | Telefone de residência do cidadão |
 | nu\_telefone\_contato | :link[telefoneContato]{id=dicionario-fae anchor=8-telefonecontato} | Telefone de contato do cidadão |
+| st\_cidadao\_nao\_possui\_cpf | :link[stCidadaoNaoPossuiCpf]{id=dicionario-fae anchor=38-stcidadaonaopossuicpf} | Indica se o cidadão não possui CPF |
 
 Os seguintes campos da tabela armazenam valores criptografados:
 
@@ -142,3 +143,4 @@ Os seguintes campos da tabela armazenam valores criptografados:
 | co\_dim\_cid\_sec\_2 | Código do CID10 secundário 2. Campo `co_seq_dim_cid10` da `tb_dim_cid10` |
 | co\_dim\_tipo\_origem\_dado\_transp | Código da origem do dado no transporte. Campo `co_seq_dim_tp_orgm_dado_transp` da `tb_dim_tipo_origem_dado_transp` |
 | co\_dim\_cds\_tipo\_origem | Código da origem do dado no transporte. Campo `co_seq_dim_tipo_origem` da `tb_dim_tipo_origem` |
+| co\_dim\_just\_nao\_possui\_cpf | Código da justificativa de não possuir CPF. Campo `co_seq_dim_just_nao_possui_cpf` da `tb_dim_just_nao_possui_cpf` |

@@ -3,7 +3,6 @@ import type {Root, Heading} from 'mdast';
 import {visit} from 'unist-util-visit';
 import {toString as mdastToString} from 'mdast-util-to-string';
 import type {VFile} from 'vfile';
-import {isChangelogFile} from './changelogHeadings';
 
 /**
  * O tema do Docusaurus nunca dá `id` pra heading `depth === 1` — "H1
@@ -26,10 +25,6 @@ import {isChangelogFile} from './changelogHeadings';
  * do nome de campos de dicionário de dados (ex. "### #1 headerTransport"),
  * não como numeração de seção — a hierarquia de headings ali é
  * intencional e não deve ser mexida.
- *
- * Exceção: as páginas de "principais alterações" têm hierarquia própria,
- * definida por src/remark/changelogHeadings.ts — aplicar os dois em cima
- * da mesma página desfaria o que aquele plugin acabou de arrumar.
  */
 const NUMBERED_HEADING_RE = /^\d+(?:\.\d+)*\.?\s/;
 const EXCLUDED_PATH_SEGMENT = '/ledi/documentacao/estrutura_arquivos/';
@@ -37,7 +32,6 @@ const EXCLUDED_PATH_SEGMENT = '/ledi/documentacao/estrutura_arquivos/';
 export default function remarkDemoteNumberedHeadings() {
   return (tree: Root, file: VFile) => {
     if (file.path?.split(path.sep).join('/').includes(EXCLUDED_PATH_SEGMENT)) return;
-    if (isChangelogFile(file.path)) return;
 
     visit(tree, 'heading', (heading: Heading) => {
       if (heading.depth >= 6) return;

@@ -1,14 +1,14 @@
 ---
 id: dicionario-fcc
-title: Ficha de Cuidado Compartilhado
+title: Modelo de Informação de Cuidado Compartilhado
 order: 15
 parent: estrutura_arquivos
 ---
 
-## FichaCuidadoCompartilhado
+### FichaCuidadoCompartilhado
 
-### \#1	uuidEvolucao
-Código UUID para identificar a ficha de cuidado compartilhado na base de dados nacional.
+#### \#1	uuidEvolucao
+Código UUID para identificar o registro de cuidado compartilhado na base de dados nacional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
@@ -16,7 +16,7 @@ Código UUID para identificar a ficha de cuidado compartilhado na base de dados 
 
 **Referência:** Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
-### \#2 lotacaoEvolucao
+#### \#2 lotacaoEvolucao
 Profissional responsável pela evolução.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -32,7 +32,7 @@ Profissional responsável pela evolução.
 
 **Referências:** :link[LotacaoThrift]{id=headerTransport anchor=lotacaothrift}.
 
-## \#3 dataEvolucao
+### \#3 dataEvolucao
 Data em que foi criado a evolução do Compartilhamento de Cuidado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -44,10 +44,10 @@ Data em que foi criado a evolução do Compartilhamento de Cuidado.
 - Esta data não pode ser anterior à data do DataCriacaoCuidado;
 - Não pode ser posterior à data atual.
 
-**Referência:** Deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referência:** Deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
 
-## \#4 dataEvolucaoAnterior
+### \#4 dataEvolucaoAnterior
 Data da última evolução que aconteceu antes desta.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -61,10 +61,10 @@ Data da última evolução que aconteceu antes desta.
 - Esta data deve ser anterior à DataEvolucao;
 - Esta data deve ser anterior a data atual.
 
-**Referência:** Deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referência:** Deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
 
-## \#5 coSequencialEvolucao
+### \#5 coSequencialEvolucao
 Código sequencial que ordena as evoluções desde a criação deste Cuidado Compartilhado
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -76,7 +76,7 @@ Código sequencial que ordena as evoluções desde a criação deste Cuidado Com
 - Não pode ser menor que 1; 
 - Não pode ser maior que 999.
 
-## \#6 condutaEvolucao
+### \#6 condutaEvolucao
 Nome da conduta adotada na evolução.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -87,7 +87,7 @@ Nome da conduta adotada na evolução.
 
 - Condutas válidas: :link[Condutas]{id=dicionario anchor=condutaevolucao}
 
-## \#7 tpCdsOrigem
+### \#7 tpCdsOrigem
 Tipo de origem dos dados do registro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -98,7 +98,7 @@ Tipo de origem dos dados do registro.
 
 - Utilizar valor 3 (sistemas terceiros).
 
-## \#8 cnsCidadao
+### \#8 cnsCidadao
 CNS do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -110,7 +110,7 @@ CNS do cidadão.
 - CNS validado de acordo com o :link[algoritmo de validação]{id=algoritmo_CNS};
 - Não pode ser preenchido se o campo CPF do cidadao for preenchido.
 
-## \#9 cpfCidadao
+### \#9 cpfCidadao
 CPF do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -122,7 +122,7 @@ CPF do cidadão.
 - Somente CPF válido será aceito;
 - Não pode ser preenchido se o campo CNS do cidadao for preenchido.
 
-## \#10 sexoCidadao
+### \#10 sexoCidadao
 Código do sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -131,7 +131,7 @@ Código do sexo do cidadão.
 
 **Referência:** :link[Sexo]{id=dicionario anchor=sexo}.
 
-## \#11 dataNascimentoCidadao
+### \#11 dataNascimentoCidadao
 Data de nascimento do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -144,8 +144,8 @@ Data de nascimento do cidadão.
 - Esta data não pode ser posterior à data do DataCriacaoCuidado;
 - Não pode ser anterior a 130 anos a partir da data atual.
 
-## \#12 uuidCuidadoCompartilhado
-Código UUID para identificar a ficha na base de dados nacional.
+### \#12 uuidCuidadoCompartilhado
+Código UUID para identificar o registro na base de dados nacional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
@@ -153,7 +153,7 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Referência:** Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
-## \#13 solicitante
+### \#13 solicitante
 Profissional solicitante do Cuidado Compartilhado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -168,7 +168,7 @@ Profissional solicitante do Cuidado Compartilhado.
 
 **Observações:** Esta entidade é utilizada para representar o profissional solicitante do Compartilhamento de Cuidado.
 
-## \#14 executante
+### \#14 executante
 Profissional executante do Cuidado Compartilhado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -184,7 +184,7 @@ Profissional executante do Cuidado Compartilhado.
 
 **Observações:** Esta entidade é utilizada para representar o profissional executante do Compartilhamento de Cuidado.
 
-## \#15 dataCriacaoCuidado
+### \#15 dataCriacaoCuidado
 Data em que foi criado o Compartilhamento de Cuidado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -197,9 +197,9 @@ Data em que foi criado o Compartilhamento de Cuidado.
 - Não pode ser anterior a data de nascimento do cidadão;
 - Não pode ser anterior que a data 01/07/2023.
 
-**Referência:** Deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referência:** Deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-## \#16 cid10
+### \#16 cid10
 Código da CID10 registrada no Compartilhamento de Cuidado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -211,7 +211,7 @@ Código da CID10 registrada no Compartilhamento de Cuidado.
 - Deve ser apresentada somente CID10 permitida para o [sexo do cidadão](#10-sexocidadao);
 - Deve ser obrigatório caso o CIAP2 não seja informado. 
 
-## \#17 ciap
+### \#17 ciap
 Código da CIAP registrada no Compartilhamento de Cuidado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -224,8 +224,8 @@ Código da CIAP registrada no Compartilhamento de Cuidado.
 - Deve ser obrigatório caso o CID10 não seja informado;
 - Inserir o código em caracteres maiúsculos sem espaços.
 
-## \#18 uuidFichaOrigem;
-Código UUID da ficha que originou o Compartilhamento de Cuidado.
+### \#18 uuidFichaOrigem;
+Código UUID do registro que originou o Compartilhamento de Cuidado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
@@ -237,9 +237,9 @@ Código UUID da ficha que originou o Compartilhamento de Cuidado.
 
 **Observação:** Não obrigatório por conta de sistemas terceiros.
 
-## \#19 tpDadoTranspFichaOrigem;
+### \#19 tpDadoTranspFichaOrigem;
 
-Informa qual o tipo da ficha que originou o Compartilhamento de Cuidado. 
+Informa qual o modelo de informação que originou o Compartilhamento de Cuidado. 
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
@@ -249,13 +249,13 @@ Informa qual o tipo da ficha que originou o Compartilhamento de Cuidado.
 
 **Observação:** Valores válidos:
 
-- 4 = Ficha Atendimento Individual;
-- 5 = Ficha Atendimento Odontológico;
-- 7 = Ficha Procedimentos;
-- 10 = Ficha Atendimento Domiciliar;
+- 4 = Modelo de Informação de Atendimento Individual;
+- 5 = Modelo de Informação de Atendimento Odontológico;
+- 7 = Modelo de Informação de Procedimentos;
+- 10 = Modelo de Informação de Atendimento Domiciliar;
 - 16 = ESUS-PEC Cuidado Compartilhado.
 
-## \#20 prioridadeCuidado
+### \#20 prioridadeCuidado
 Classificação de prioridade do Cuidado Compartilhado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -264,7 +264,7 @@ Classificação de prioridade do Cuidado Compartilhado.
 
 Referência: :link[Classificação de Prioridade]{id=dicionario anchor=prioridadecuidado}
 
-## \#21 reclassificacaoPrioridadeCuidado
+### \#21 reclassificacaoPrioridadeCuidado
 Informa qual a nova classificação de prioridade escolhida na evolução, após uma reclassificação de prioridade do Cuidado Compartilhado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |

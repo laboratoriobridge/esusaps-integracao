@@ -5,15 +5,15 @@ order: 1
 parent: layout_ab
 ---
 
-#### Lote
+##### Lote
 
 Um lote é um conjunto de arquivos de dados.
 
-#### Arquivo de dados
+##### Arquivo de dados
 
-Cada arquivo de dados representa uma ficha.
+Cada arquivo de dados representa um registro.
 
-Os arquivos de dados possuem a mesma macro estrutura, referenciada como camada de transporte. A camada de transporte do arquivo de dados independe do tipo da ficha.
+Os arquivos de dados possuem a mesma macro estrutura, referenciada como camada de transporte. A camada de transporte do arquivo de dados independe do modelo de informação do registro.
 
 Quando a integração é realizada através do **Apache Thrift** os arquivos de dados devem ser compactados com extensão ".esus". Cada arquivo representa um dadoTransport serializado através do [TBinaryProtocol](https://github.com/apache/thrift/blob/0.9.2/lib/java/src/org/apache/thrift/protocol/TBinaryProtocol.java).
 
@@ -23,8 +23,8 @@ A estrutura da Camada de Transporte é ilustrada na imagem abaixo:
 
 A definição de cada um dos elementos da Camada de transporte é apresentada no documento :link{id=camada-transporte}.
 
-O dado serializado possui dois componentes: Cabeçalho e Dados da ficha.
+O dado serializado possui dois componentes: Cabeçalho e Dados do registro.
 
 - O dicionário de dados do **Cabeçalho** é definido no documento :link{id=headerTransport};
 
-- Os **Dados da ficha** devem ser estruturados em registros Thrift/XML conforme descrito no documento :link{id=thrift-xsd}.
+- Os **Dados do registro** devem ser estruturados em registros Thrift/XML conforme descrito no documento :link{id=thrift-xsd}.

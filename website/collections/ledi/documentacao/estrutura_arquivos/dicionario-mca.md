@@ -5,9 +5,9 @@ order: 10
 parent: estrutura_arquivos
 ---
 
-## FichaConsumoAlimentar
+### FichaConsumoAlimentar
 
-### \#1 headerTransport
+#### \#1 headerTransport
 
 Profissional que realizou a visita.
 
@@ -19,7 +19,7 @@ Profissional que realizou a visita.
 
 **Referência:** :link[UnicaLotacaoHeader]{id=headerTransport anchor=unicalotacaoheader}.
 
-### \#2 cnsCidadao
+#### \#2 cnsCidadao
 
 CNS do cidadão.
 
@@ -35,7 +35,7 @@ CNS do cidadão.
 
 **Referência:** O algoritmo de validação está presente em :link{id=algoritmo_CNS}.
 
-### \#4 dataNascimento
+#### \#4 dataNascimento
 
 Data de nascimento do cidadão no formato epoch time.
 
@@ -45,9 +45,9 @@ Data de nascimento do cidadão no formato epoch time.
 
 **Regra:** Não pode ser posterior a :link[dataAtendimento]{id=headerTransport anchor=5-dataatendimento} e anterior a 130 anos a partir da :link[dataAtendimento]{id=headerTransport anchor=5-dataatendimento}.
 
-**Referência:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referência:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#5 sexo
+#### \#5 sexo
 
 Código do sexo do cidadão.
 
@@ -57,7 +57,7 @@ Código do sexo do cidadão.
 
 **Referência**: :link[Sexo]{id=dicionario anchor=sexo}.
 
-### \#6 localAtendimento
+#### \#6 localAtendimento
 
 Código do local onde o atendimento foi realizado.
 
@@ -69,7 +69,7 @@ Código do local onde o atendimento foi realizado.
 
 **Referência**: :link[LocalDeAtendimento]{id=dicionario anchor=localdeatendimento}.
 
-### \#7 perguntasQuestionarioCriancasMenoresSeisMeses
+#### \#7 perguntasQuestionarioCriancasMenoresSeisMeses
 
 Marcadores referentes aos cidadãos menores de seis meses de idade.
 
@@ -86,7 +86,7 @@ Marcadores referentes aos cidadãos menores de seis meses de idade.
 
 **Observação:** Os campos `#7`, `#8` e `#9` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
-### \#8 perguntasQuestionarioCriancasDeSeisVinteTresMeses
+#### \#8 perguntasQuestionarioCriancasDeSeisVinteTresMeses
 
 Marcadores referentes aos cidadãos que tem entre seis e vinte e três meses de idade.
 
@@ -103,7 +103,7 @@ Marcadores referentes aos cidadãos que tem entre seis e vinte e três meses de 
 
 **Observação:** Os campos `#7`, `#8` e `#9` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
-### \#9 perguntasQuestionarioCriancasComMaisDoisAnos
+#### \#9 perguntasQuestionarioCriancasComMaisDoisAnos
 
 Marcadores referentes aos cidadãos que tem vinte e quatro meses ou mais.
 
@@ -120,9 +120,9 @@ Marcadores referentes aos cidadãos que tem vinte e quatro meses ou mais.
 
 **Observação:** Os campos `#7`, `#8` e `#9` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
-### \#10 uuidFicha
+#### \#10 uuidFicha
 
-Código UUID para identificar a ficha na base de dados nacional.
+Código UUID para identificar o registro na base de dados nacional.
 
 | Tipo   | Obrigatório | Mínimo | Máximo |
 | ------ | ----------- | ------ | ------ |
@@ -132,7 +132,7 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Referência**: Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally\_unique\_identifier).
 
-### \#11 tpCdsOrigem
+#### \#11 tpCdsOrigem
 
 Tipo de origem dos dados do registro.
 
@@ -142,7 +142,7 @@ Tipo de origem dos dados do registro.
 
 **Regra:** Utilizar valor 3 (sistemas terceiros).
 
-### \#12 cpfCidadao
+#### \#12 cpfCidadao
 
 CPF do cidadão.
 
@@ -156,7 +156,7 @@ CPF do cidadão.
 - Não pode ser preenchido se o campo [cnsCidadao](#2-cnscidadao) for preenchido.
 - Este campo é de preenchimento obrigatório apenas se o campo [cnsCidadao](#2-cnscidadao) não estiver preenchido.
 
-### \#13 stNaoPossuiCpf
+#### \#13 stNaoPossuiCpf
 
 Marcador que indica que o CPF do cidadão não existe ou não está disponível no momento do cadastro.
 
@@ -164,7 +164,7 @@ Marcador que indica que o CPF do cidadão não existe ou não está disponível 
 | ---- | ----------- | ------ | ------ |
 |Boolean | Sim |- |- |
 
-### \#14 justificativaNaoPossuiCpf
+#### \#14 justificativaNaoPossuiCpf
 
 Justificativa para o cidadão não possuir ou não informar CPF.
 
@@ -180,9 +180,9 @@ Justificativa para o cidadão não possuir ou não informar CPF.
 
 **Referências:** :link[justificativaNaoPossuiCpf]{id=dicionario anchor=justificativanaopossuicpf}.
 
-## PerguntaQuestionarioCriancasMenoresSeisMeses
+### PerguntaQuestionarioCriancasMenoresSeisMeses
 
-### \#1 pergunta
+#### \#1 pergunta
 
 Identificador da pergunta referente ao questionário para cidadãos menores de seis meses.
 
@@ -194,7 +194,7 @@ Identificador da pergunta referente ao questionário para cidadãos menores de s
 
 **Referência:** [PerguntaCriancasMenoresSeisMesesEnum](#perguntacriancasmenoresseismesesenum).
 
-### \#2 respostaUnicaEscolha
+#### \#2 respostaUnicaEscolha
 
 Resposta referente à pergunta.
 
@@ -206,7 +206,7 @@ Resposta referente à pergunta.
 
 **Referência:** [RespostaUnicaEscolhaEnum](#respostaunicaescolhaenum).
 
-## PerguntaQuestionarioCriancasDeSeisVinteTresMeses
+### PerguntaQuestionarioCriancasDeSeisVinteTresMeses
 
 <a name = "#1-perguntaquestionariocriancasdeseisvintetresmeses"></a>
 
@@ -236,7 +236,7 @@ Resposta referente a pergunta.
 
 **Referência:** [RespostaUnicaEscolhaEnum](#respostaunicaescolhaenum).
 
-## PerguntaQuestionarioCriancasComMaisDoisAnos
+### PerguntaQuestionarioCriancasComMaisDoisAnos
 
 <a name = "#1-perguntaquestionariocriancascommaisdoisanos"></a>
 
@@ -268,7 +268,7 @@ Resposta referente a pergunta do registro.
 
 **Observação:** Os campos `#2` e `#3` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
-### \#3 respostaMultiplaEscolha
+#### \#3 respostaMultiplaEscolha
 
 Resposta referente à pergunta do registro acima.
 
@@ -285,7 +285,7 @@ Resposta referente à pergunta do registro acima.
 
 **Observação:** Os campos `#2` e `#3` são mutuamente exclusivos, isto é, um e apenas um deles deve não ser nulo.
 
-## PerguntaCriancasMenoresSeisMesesEnum
+### PerguntaCriancasMenoresSeisMesesEnum
 
 | Descrição                                  | Código | Respostas aceitas                             |
 | ------------------------------------------ | ------ | --------------------------------------------- |
@@ -299,7 +299,7 @@ Resposta referente à pergunta do registro acima.
 | COMIDA\_DE\_SAL                            | 9      | • 1 - SIM <br /> • 2 - NÃO <br /> • 3 - NÃO\_SABE |
 | OUTROS\_ALIMENTOS\_BEBIDAS                 | 10     | • 1 - SIM <br /> • 2 - NÃO <br /> • 3 - NÃO\_SABE |
 
-## PerguntaCriancasDeSeisVinteTresMesesEnum
+### PerguntaCriancasDeSeisVinteTresMesesEnum
 
 | Descrição                                                                                                                                | Código | Respostas aceitas                                                                                                                             |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -324,7 +324,7 @@ Resposta referente à pergunta do registro acima.
 | MACARRAO\_INSTANTANEO\_SALGADINHOS\_BISCOITOS                                                                                            | 40     | • 1 - SIM <br />• 2 - NÃO <br /> • 3 - NÃO\_SABE                                                                                                  |
 | BISCOITO\_RECHEADO\_DOCES\_OU\_GULOSEIMAS                                                                                                | 41     | • 1 - SIM <br />• 2 - NÃO <br /> • 3 - NÃO\_SABE                                                                                                  |
 
-## PerguntaCriancasComMaisDoisAnosEnum
+### PerguntaCriancasComMaisDoisAnosEnum
 
 | Descrição                                                                                                | Código | Respostas aceitas                                           |
 | -------------------------------------------------------------------------------------------------------- | ------ | ----------------------------------------------------------- |
@@ -338,7 +338,7 @@ Resposta referente à pergunta do registro acima.
 | MACARRAO\_INSTANTANEO\_SALGADINHOS\_BISCOITOS                                                            | 19     | • 1 - SIM <br />• 2 - NÃO <br /> • 3 - NÃO\_SABE                |
 | BISCOITO\_RECHEADO\_DOCES\_OU\_GULOSEIMAS                                                                | 20     | • 1 - SIM <br />• 2 - NÃO <br /> • 3 - NÃO\_SABE                |
 
-## RespostaUnicaEscolhaEnum
+### RespostaUnicaEscolhaEnum
 
 | Descrição             | Código |
 | --------------------- | ------ |
@@ -354,7 +354,7 @@ Resposta referente à pergunta do registro acima.
 | LIQUIDIFICADA         | 10     |
 | SO\_O\_CALDO          | 11     |
 
-## RespostaMultiplaEscolhaEnum
+### RespostaMultiplaEscolhaEnum
 
 | Descrição         | Código |
 | ----------------- | ------ |

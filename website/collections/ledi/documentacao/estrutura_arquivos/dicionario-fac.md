@@ -1,14 +1,14 @@
 ---
 id: dicionario-fac
-title: Ficha de Atividade Coletiva
+title: Modelo de Informação de Atividade Coletiva
 order: 7
 parent: estrutura_arquivos
 ---
 
-## FichaAtividadeColetiva
+### FichaAtividadeColetiva
 
-### \#1	uuidFicha
-Código UUID para identificar a ficha na base de dados nacional.
+#### \#1	uuidFicha
+Código UUID para identificar o registro na base de dados nacional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
@@ -18,7 +18,7 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Referência:** [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
-### \#2	outraLocalidade
+#### \#2	outraLocalidade
 Descrição do local onde é realizada a atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -30,7 +30,7 @@ Descrição do local onde é realizada a atividade coletiva.
 - Preencher somente um dos campos: :link[outraLocalidade]{id=dicionario-fac anchor=2-outralocalidade}, :link[inep]{id=dicionario-fac anchor=3-inep} ou :link[cnesLocalAtivade]{id=dicionario-fac anchor=12-cneslocalatividade};
 - Não deve ser preenchido se :link[pseEducacao]{id=dicionario-fac anchor=18-pseeducacao} = `true` ou :link[pseSaude]{id=dicionario-fac anchor=19-psesaude} = `true`.
 
-### \#3	inep
+#### \#3	inep
 
 Número INEP da instituição.
 
@@ -45,7 +45,7 @@ Número INEP da instituição.
 
 **Referência:** Os números INEP das instituições de ensino podem ser obtidos a partir do [site do INEP](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar). Faça download do arquivo do **Microdados do Censo Escolar da Educação Básica 2023**. Na pasta "Dados" está contido o arquivo "microdados\_ed\_basica\_2023.csv", que contém a tabela com os dados das instituições. O número INEP da instituição se encontra na coluna "CO\_ENTIDADE".
 
-### \#4	numParticipantes
+#### \#4	numParticipantes
 Número de participantes da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -57,7 +57,7 @@ Número de participantes da atividade.
 - Valores entre 1 e 999;
 - Deve ser maior ou igual a quantidade de participantes inseridos em :link[participantes]{id=dicionario-fac anchor=10-participantes}.
 
-### \#5	numAvaliacoesAlteradas
+#### \#5	numAvaliacoesAlteradas
 Número de avaliações alteradas.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -69,7 +69,7 @@ Número de avaliações alteradas.
 - Valores entre 0 e 999.
 - O valor do campo deve ser igual ao número de participantes que tiveram o campo :link[avaliacaoAlterada]{id=dicionario-fac anchor=3-avaliacaoalterada} = `true`.
 
-### \#6 profissionais
+#### \#6 profissionais
 Lista dos profissionais que participaram da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -80,7 +80,7 @@ Lista dos profissionais que participaram da atividade.
 
 **Referência:** :link[ProfissionalCboRowItem]{id=dicionario-fac anchor=profissionalcborowitem}.
 
-### \#7 atividadeTipo
+#### \#7 atividadeTipo
 Código do tipo da atividade que será realizada.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -100,7 +100,7 @@ Código do tipo da atividade que será realizada.
 
 **Referência**: :link[TipoAtividadeColetiva]{id=dicionario anchor=tipoatividadecoletiva}.
 
-### \#8 temasParaReuniao
+#### \#8 temasParaReuniao
 Temas para reunião.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -115,7 +115,7 @@ Temas para reunião.
 
 **Referência:** :link[TemasParaReuniao]{id=dicionario anchor=temasparareuniao}.
 
-### \#9	publicoAlvo
+#### \#9	publicoAlvo
 Código do público alvo da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -129,7 +129,7 @@ Código do público alvo da atividade.
 
 **Referência:** :link[PublicoAlvo]{id=dicionario anchor=publicoalvo}.
 
-### \#10	participantes
+#### \#10	participantes
 Cidadãos que participaram da atividade coletiva.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -140,7 +140,7 @@ Cidadãos que participaram da atividade coletiva.
 
 **Referência:** :link[ParticipanteRowItem]{id=dicionario-fac anchor=participanterowitem}.
 
-### \#11	tbCdsOrigem
+#### \#11	tbCdsOrigem
 Tipo de origem dos dados do registro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -149,7 +149,7 @@ Tipo de origem dos dados do registro.
 
 **Observação**: Utilizar valor 3 (sistemas terceiros).
 
-### \#12	cnesLocalAtividade
+#### \#12	cnesLocalAtividade
 CNES do local de atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -161,7 +161,7 @@ CNES do local de atividade.
 - Preencher somente um dos campos: :link[outraLocalidade]{id=dicionario-fac anchor=2-outralocalidade}, :link[inep]{id=dicionario-fac anchor=3-inep} ou :link[cnesLocalAtivade]{id=dicionario-fac anchor=12-cneslocalatividade};
 - Não deve ser preenchido se :link[pseEducacao]{id=dicionario-fac anchor=18-pseeducacao} = `true` ou :link[pseSaude]{id=dicionario-fac anchor=19-psesaude} = `true`.
 
-### \#13	procedimento
+#### \#13	procedimento
 Código do SIGTAP do procedimento coletivo realizado.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -172,7 +172,7 @@ Código do SIGTAP do procedimento coletivo realizado.
 
 **Referência:** :link[OutroProcedimentoColetivo]{id=dicionario-fac anchor=outroprocedimentocoletivo}.
 
-### \#14	turno
+#### \#14	turno
 Turno de realização da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -181,18 +181,18 @@ Turno de realização da atividade.
 
 **Referência:** :link[Turno]{id=dicionario anchor=turno}.
 
-### \#15 headerTransport
+#### \#15 headerTransport
 Dados referentes ao profissional responsável e a data do cadastro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
 | UnicaLotacaoHeader | Sim | - | - |
 
-**Regra:** Somente as CBOs apresentadas na :link[Tabela 5 - CBOs que podem registrar ficha de atividade coletiva]{id=grupo_cbo anchor=ficha-de-atividade-coletiva} podem ser adicionadas no campo CBO do profissional.
+**Regra:** Somente as CBOs apresentadas na :link[Tabela 5 - CBOs que podem registrar o Modelo de Informação de Atividade Coletiva]{id=grupo_cbo anchor=modelo-de-informa-o-de-atividade-coletiva} podem ser adicionadas no campo CBO do profissional.
 
 **Referência:** :link[UnicaLotacaoHeader]{id=headerTransport anchor=unicalotacaoheader}.
 
-### \#16	temasParaSaude
+#### \#16	temasParaSaude
 Códigos dos temas para saúde abordados na atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -207,7 +207,7 @@ Códigos dos temas para saúde abordados na atividade.
 
 **Referência:** :link[TemasParaSaude]{id=dicionario anchor=temasparasaude}.
 
-### \#17	praticasEmSaude
+#### \#17	praticasEmSaude
 Códigos das práticas em saúde abordadas na atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -218,7 +218,7 @@ Códigos das práticas em saúde abordadas na atividade.
 
 * Não pode ser preenchido se :link[atividadeTipo]{id=dicionario-fac anchor=7-atividadetipo} = `1`, `2`, `3`, `4` ou `7`;
 * É de preenchimento obrigatório se :link[atividadeTipo]{id=dicionario-fac anchor=7-atividadetipo} = `6`;
-* Os itens `2 - Aplicação tópica de flúor` e `9 - Escovação dental supervisionada` só podem ser utilizados se :link[atividadeTipo]{id=dicionario-fac anchor=7-atividadetipo} = `6`;
+* Os itens `2 - Aplicação tópica de flúor`, `9 - Escovação dental supervisionada` e `33 - Fornecimento de kit bucal` só podem ser utilizados se :link[atividadeTipo]{id=dicionario-fac anchor=7-atividadetipo} = `6`;
 * Os itens:
 
 	- `2 - Aplicação tópica de flúor`;
@@ -228,13 +228,15 @@ Códigos das práticas em saúde abordadas na atividade.
 	- `27 - PNCT* sessão 3`;
 	- `28 - PNCT* sessão 4`;
 	- `24 - Verificação da situação vacinal`;
-	- `30 - Outro procedimento coletivo`.
+	- `30 - Outro procedimento coletivo`;
+	- `33 - Fornecimento de kit bucal`;
+	- `34 - PNCT* manutenção`.
 
 Não podem ser selecionados se :link[pseEducacao]{id=dicionario-fac anchor=18-pseeducacao} = `true` e :link[pseSaude]{id=dicionario-fac anchor=19-psesaude} = `false`.
 
 **Referência:** :link[PraticasEmSaude]{id=dicionario anchor=praticasemsaude}.
 
-### \#18	pseEducacao
+#### \#18	pseEducacao
 Marcador que indica que foram exercidas práticas educativas por um profissional de educação na escola
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -251,7 +253,7 @@ Marcador que indica que foram exercidas práticas educativas por um profissional
 	- O grupo :link[temasParaReuniao]{id=dicionario-fac anchor=8-temasparareuniao} não deve ser preenchido;
 	- Os itens `2 - Aplicação tópica de flúor`, `9 - Escovação dental supervisionada`, `25 - PNCT* sessão 1`, `26 - PNCT* sessão 2`,  `27 - PNCT* sessão 3`,  `28 - PNCT* sessão 4`, `24 - Verificação da situação vacinal` e `30 - Outro procedimento coletivo` do campo :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} não devem ser selecionados;
 
-### \#19	pseSaude
+#### \#19	pseSaude
 Marcador que indica que foram exercidas práticas de saúde por um profissional da saúde na escola.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -263,9 +265,9 @@ Marcador que indica que foram exercidas práticas de saúde por um profissional 
 - Se :link[pseSaude]{id=dicionario-fac anchor=19-psesaude} = `true`, o campo :link[inep]{id=dicionario-fac anchor=3-inep} torna-se obrigatório;
 - Deve receber o valor `true` se :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} = `18 - Semana saúde na escola` e :link[pseEducacao]{id=dicionario-fac anchor=18-pseeducacao} = `false`.
 
-## ParticipanteRowItem
+### ParticipanteRowItem
 
-### \#1	cnsParticipante
+#### \#1	cnsParticipante
 CNS do cidadão que participou da atividade.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -275,12 +277,13 @@ CNS do cidadão que participou da atividade.
 **Regras:**
 
 - CNS validado de acordo com o algoritmo;
-- É de preenchimento obrigatório se :link[atividadeTipo]{id=dicionario-fac anchor=7-atividadetipo} for `5` ou `6`;
-- Não pode ser preenchido se o campo [cpfParticipante](#9-cpfparticipante) for preenchido.
+- É de preenchimento obrigatório se :link[atividadeTipo]{id=dicionario-fac anchor=7-atividadetipo} for `5` ou `6` e [stNaoPossuiCpf](#10-stnaopossuicpf) = `true`;
+- Não pode ser preenchido se o campo [cpfParticipante](#9-cpfparticipante) for preenchido;
+- Só pode ser preenchido se o campo [stNaoPossuiCpf](#10-stnaopossuicpf) = `true`.
 
 **Referência:** O algoritmo de validação está presente em :link{id=algoritmo_CNS}.
 
-### \#2	dataNascimento
+#### \#2	dataNascimento
 Data de nascimento do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -289,16 +292,16 @@ Data de nascimento do cidadão.
 
 **Regra:** Não pode ser posterior a :link[dataAtendimento]{id=headerTransport anchor=5-dataatendimento} e anterior a 130 anos a partir da :link[dataAtendimento]{id=headerTransport anchor=5-dataatendimento}.
 
-**Referência:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referência:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#3	avaliacaoAlterada
+#### \#3	avaliacaoAlterada
 Marcador que indica que a avaliação do cidadão teve um valor diferente dos considerados normais.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
 | Boolean | Não | - | - |
 
-### \#4	peso
+#### \#4	peso
 Peso do cidadão em quilogramas.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -311,7 +314,7 @@ Peso do cidadão em quilogramas.
 * Máximo de 3 casas decimais;
 * Valor mínimo 0.5 e máximo 500.
 
-### \#5	altura
+#### \#5	altura
 Altura do cidadão em centímetros.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -324,7 +327,7 @@ Altura do cidadão em centímetros.
 * Máximo de 1 casa decimal;
 * Valor mínimo 20 e máximo 250.
 
-### \#6	cessouHabitoFumar
+#### \#6	cessouHabitoFumar
 Marcação se o cidadão cessou o hábito de fumar.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -333,7 +336,7 @@ Marcação se o cidadão cessou o hábito de fumar.
 
 **Regra:** Não deve ser preenchido se o campo :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} for diferente de `25`, `26`, `27` ou `28` (referentes ao PNCT).
 
-### \#7	abandonouGrupo
+#### \#7	abandonouGrupo
 Marcação se o cidadão abandonou o grupo de tabagismo.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -342,7 +345,7 @@ Marcação se o cidadão abandonou o grupo de tabagismo.
 
 **Regra:** Não deve ser preenchido se o campo :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} for diferente de `25`, `26`, `27` ou `28` (referentes ao PNCT).
 
-## \#8	sexo
+### \#8	sexo
 Sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -351,7 +354,7 @@ Sexo do cidadão.
 
 **Referência:** :link[Sexo]{id=dicionario anchor=sexo}.
 
-### \#9 cpfParticipante
+#### \#9 cpfParticipante
 
 CPF do participante.
 
@@ -362,12 +365,37 @@ CPF do participante.
 **Regras:** 
 
 - Somente CPF válido será aceito;
-- É de preenchimento obrigatório se :link[atividadeTipo]{id=dicionario-fac anchor=7-atividadetipo} for `5` ou `6`;
-- Não pode ser preenchido se o campo [cnsParticipante](#1-cnsparticipante) for preenchido.
+- É de preenchimento obrigatório se :link[atividadeTipo]{id=dicionario-fac anchor=7-atividadetipo} for `5` ou `6` e [stNaoPossuiCpf](#10-stnaopossuicpf) = `false`;
+- Não pode ser preenchido se o campo [cnsParticipante](#1-cnsparticipante) for preenchido;
+- Não pode ser preenchido se o campo [stNaoPossuiCpf](#10-stnaopossuicpf) = `true`.
 
-## ProfissionalCboRowItem
+#### \#10 stNaoPossuiCpf
 
-### \#1 cnsProfissional
+Marcador que indica que o CPF do participante não existe ou não está disponível no momento do cadastro.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+| ---- | ----------- | ------ | ------ |
+| Boolean | Não | - | - |
+
+#### \#11 justificativaNaoPossuiCpf
+
+Justificativa para o participante não possuir ou não informar CPF.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+| ---- | ----------- | ------ | ------ |
+| Long | Condicional | - | - |
+
+**Regras:**
+
+- É permitido o envio apenas de justificativas que constam na listagem de referência;
+- Não pode ser preenchido se o campo [stNaoPossuiCpf](#10-stnaopossuicpf) = `false`;
+- É obrigatório se o campo [stNaoPossuiCpf](#10-stnaopossuicpf) = `true`.
+
+**Referências:** :link[justificativaNaoPossuiCpf]{id=dicionario anchor=justificativanaopossuicpf}.
+
+### ProfissionalCboRowItem
+
+#### \#1 cnsProfissional
 CNS do profissional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -380,7 +408,7 @@ CNS do profissional.
 
 **Observação:** Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva
 
-### \#2 codigoCbo2002
+#### \#2 codigoCbo2002
 Código CBO do profissional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -391,7 +419,7 @@ Código CBO do profissional.
 
 **Observação:** Esta entidade é utilizada para representar os profissionais que participaram da atividade coletiva.
 
-## OutroProcedimentoColetivo
+### OutroProcedimentoColetivo
 
 | Código SIGTAP* | Descrição |
 | -------------- | --------- |
@@ -453,4 +481,4 @@ Código CBO do profissional.
 | 01.01.05.002-0 | TERAPIA COMUNITÁRIA |
 | 03.07.01.007-4 | TRATAMENTO RESTAURADOR ATRAUMÁTICO (TRA/ART)	|
 | 01.01.05.004-6 | YOGA |
-_* Procedimentos pertencentes a competência **03/2026** do SIGTAP._
+_* Procedimentos pertencentes a competência **06/2026** do SIGTAP._

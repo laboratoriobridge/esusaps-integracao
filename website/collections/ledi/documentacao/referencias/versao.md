@@ -10,8 +10,8 @@ parent: referencias
 | Coluna | Tipo	| Obrigatório | Regra |
 | ------ | ---- | ----------- | ----- |
 | major | Integer | Sim | Valor único = 8 |
-| minor | Integer | Sim | Valor único = 4 |
-| revision | Integer | Sim | Valor único = 2 |
+| minor | Integer | Sim | Valor único = 7 |
+| revision | Integer | Sim | Valor único = 0 |
 
 #### Padrão de versionamento
 

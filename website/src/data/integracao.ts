@@ -8,12 +8,11 @@
  * selo "versão x.y.z" ao lado do título no cabeçalho. Atualizar aqui é o
  * equivalente ao passo 2.10 do tutorial de publicação.
  *
- * Acompanha o conteúdo em `collections/`, não o que está no ar: o site
- * Jekyll publica 8.5.0, mas a branch `docusaurus-migration` do esus-aps-doc
- * (de onde o conteúdo veio) ainda está em 8.4.2. Ressincronizar o conteúdo
- * e subir este número são o mesmo passo — ver ../../MIGRACAO.md.
+ * Acompanha o conteúdo em `collections/`, sincronizado do esus-aps-doc — o
+ * site Jekyll no ar ainda publica a 8.5.0. Ressincronizar o conteúdo e
+ * subir este número são o mesmo passo; ver ../../MIGRACAO.md.
  */
-export const SITE_VERSION = '8.4.2';
+export const SITE_VERSION = '8.7.0';
 
 export const COLLECTION_LABELS: Record<string, string> = {
   integracao: 'Integração e-SUS APS',

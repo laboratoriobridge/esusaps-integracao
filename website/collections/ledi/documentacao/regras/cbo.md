@@ -1,17 +1,17 @@
 ---
 id: grupo_cbo
-title: Grupos de CBOs x Tipo de ficha
+title: Grupos de CBOs por Modelo de Informação
 order: 3
 parent: regras
 ---
 
 As CBOs devem ser sempre referenciadas através de seu **código**.
 
-Para cada tipo de ficha é definido um grupo de CBOs que podem ser utilizadas na lotação principal, conforme apresentado nas tabelas abaixo.
+Para cada modelo de informação é definido um grupo de CBOs que podem ser utilizadas na lotação principal, conforme apresentado nas tabelas abaixo.
 
 Se o código da CBO do profissional não estiver listado, verifique pela descrição pois pode existir um código definitivo ou mais atual para esta CBO.
 
-## Ficha de cadastro individual
+## Modelo de Informação de Cadastro Individual
 
 | Código 2002 | Nome |
 | ----------- | ---- |
@@ -139,9 +139,9 @@ Se o código da CBO do profissional não estiver listado, verifique pela descri�
 | 422210 | TELEOPERADOR |
 | 223905 | TERAPEUTA OCUPACIONAL |
 | 515120 | VISITADOR SANITÁRIO |
-*Tabela 1 - CBOs que podem registrar ficha de cadastro individual*
+*Tabela 1 - CBOs que podem registrar o Modelo de Informação de Cadastro Individual*
 
-## Ficha de cadastro domiciliar e territorial
+## Modelo de Informação de Cadastro Domiciliar e Territorial
 
 | Código 2002 | Nome |
 | ----------- | ---- |
@@ -260,9 +260,9 @@ Se o código da CBO do profissional não estiver listado, verifique pela descri�
 | 322425 | TÉCNICO EM SAÚDE BUCAL DA ESTRATÉGIA DE SAÚDE DA FAMÍLIA |
 | 223905 | TERAPEUTA OCUPACIONAL |
 | 515120 | VISITADOR SANITÁRIO |
-*Tabela 2 - CBOs que podem registrar ficha de cadastro domiciliar e territorial*
+*Tabela 2 - CBOs que podem registrar o Modelo de Informação de Cadastro Domiciliar e Territorial*
 
-## Ficha de atendimento individual
+## Modelo de Informação de Atendimento Individual
 
 | Código 2002 | Nome |
 | ----------- | ---- |
@@ -330,9 +330,9 @@ Se o código da CBO do profissional não estiver listado, verifique pela descri�
 | 251530 | PSICÓLOGO SOCIAL |
 | 226105 | QUIROPRAXISTA |
 | 223905 | TERAPEUTA OCUPACIONAL |
-*Tabela 3 - CBOs que podem registrar ficha de atendimento individual*
+*Tabela 3 - CBOs que podem registrar o Modelo de Informação de Atendimento Individual*
 
-## Ficha de atendimento odontológico individual 
+## Modelo de Informação de Atendimento Odontológico Individual 
 
 | Código 2002 | Nome | 
 | ----------- | ---- |
@@ -363,9 +363,9 @@ Se o código da CBO do profissional não estiver listado, verifique pela descri�
 | 223293 | CIRURGIÃO-DENTISTA DA ESTRATÉGIA DE SAÚDE DA FAMÍLIA |
 | 322405 | TÉCNICO EM SAÚDE BUCAL |
 | 322425 | TÉCNICO EM SAÚDE BUCAL DA ESTRATÉGIA DE SAÚDE DA FAMÍLIA |
-*Tabela 4 - CBOs que podem registrar ficha de atendimento odontológico individual*
+*Tabela 4 - CBOs que podem registrar o Modelo de Informação de Atendimento Odontológico Individual*
 
-## Ficha de atividade coletiva 
+## Modelo de Informação de Atividade Coletiva 
 
 | Código 2002 | Nome |
 | ----------- | ---- |
@@ -486,9 +486,9 @@ Se o código da CBO do profissional não estiver listado, verifique pela descri�
 | 223905 | TERAPEUTA OCUPACIONAL |
 |322125  | TERAPEUTA HOLÍSTICO |
 | 515120 | VISITADOR SANITÁRIO |
-*Tabela 5 - CBOs que podem registrar ficha de atividade coletiva*
+*Tabela 5 - CBOs que podem registrar o Modelo de Informação de Atividade Coletiva*
 
-## Ficha de procedimentos 
+## Modelo de Informação de Procedimentos 
 
 | Código 2002 | Nome |
 | ----------- | ---- |
@@ -575,9 +575,9 @@ Se o código da CBO do profissional não estiver listado, verifique pela descri�
 | 223905 | TERAPEUTA OCUPACIONAL |
 |322125  | TERAPEUTA HOLÍSTICO |
 | 515120 | VISITADOR SANITÁRIO |
-*Tabela 6 - CBOs que podem registrar ficha de procedimentos*
+*Tabela 6 - CBOs que podem registrar o Modelo de Informação de Procedimentos*
 
-## Ficha de visita domiciliar e territorial 
+## Modelo de Informação de Visita Domiciliar e Territorial 
 
 | Código 2002 | Nome |
 | ----------- | ---- |
@@ -588,7 +588,7 @@ Se o código da CBO do profissional não estiver listado, verifique pela descri�
 | 515125 | AGENTE INDIGENA DE SAUDE |
 | 322255 | TÉCNICO EM AGENTE COMUNITÁRIO DE SAÚDE |
 | 515120 | VISITADOR SANITÁRIO |
-*Tabela 7 - CBOs que podem registrar ficha de visita domiciliar e territorial*
+*Tabela 7 - CBOs que podem registrar o Modelo de Informação de Visita Domiciliar e Territorial*
 
 ## Marcadores de consumo alimentar 
 
@@ -702,7 +702,7 @@ Se o código da CBO do profissional não estiver listado, verifique pela descri�
 | 515120 | VISITADOR SANITÁRIO |
 *Tabela 8 - CBOs que podem registrar marcadores de consumo alimentar*
 
-## Ficha de avaliação de elegibilidade 
+## Modelo de Informação de Avaliação de Elegibilidade 
 
 | Código 2002 | Nome |
 | ----------- | ---- |
@@ -761,9 +761,9 @@ Se o código da CBO do profissional não estiver listado, verifique pela descri�
 | 225270 | MEDICO ORTOPEDISTA E TRAUMATOLOGISTA |
 | 225275 | MEDICO OTORRINOLARINGOLOGISTA |
 | 225285 | MEDICO UROLOGISTA |
-*Tabela 9 - CBOs que podem registrar ficha de avaliação de elegibilidade*
+*Tabela 9 - CBOs que podem registrar o Modelo de Informação de Avaliação de Elegibilidade*
 
-## Ficha de atendimento domiciliar 
+## Modelo de Informação de Atendimento Domiciliar 
 
 | Código 2002 | Nome |
 | ----------- | ---- |
@@ -866,9 +866,9 @@ Se o código da CBO do profissional não estiver listado, verifique pela descri�
 | 322405 | TECNICO EM SAUDE BUCAL |
 | 322425 | TECNICO EM SAUDE BUCAL DA ESTRATEGIA DE SAUDE DA FAMILIA |
 | 223905 | TERAPEUTA OCUPACIONAL |
-*Tabela 10 - CBOs que podem registrar ficha de atendimento domiciliar*
+*Tabela 10 - CBOs que podem registrar o Modelo de Informação de Atendimento Domiciliar*
 
-## Ficha complementar - Síndrome neurológica por Zika / Microcefalia 
+## Modelo de Informação Complementar - Síndrome Neurológica por Zika / Microcefalia 
 
 | Código 2002 | Nome |
 | ----------- | ---- |
@@ -934,10 +934,10 @@ Se o código da CBO do profissional não estiver listado, verifique pela descri�
 | 251530 | PSICÓLOGO SOCIAL
 | 226105 | QUIROPRAXISTA |
 | 223905 | TERAPEUTA OCUPACIONAL
-*Tabela 11 - CBOs que podem registrar ficha complementar - Síndrome neurológica por Zika / Microcefalia*
+*Tabela 11 - CBOs que podem registrar o Modelo de Informação Complementar - Síndrome Neurológica por Zika / Microcefalia*
 
 
-## Ficha de vacinação
+## Modelo de Informação de Vacinação
 
 | Código 2002 | Nome |
 | ----------- | ---- |
@@ -1031,4 +1031,4 @@ Se o código da CBO do profissional não estiver listado, verifique pela descri�
 | 322210      | TÉCNICO DE ENFERMAGEM DE TERAPIA INTENSIVA               |
 | 322215      | TÉCNICO DE ENFERMAGEM DO TRABALHO                        |
 | 322220      | TÉCNICO DE ENFERMAGEM PSIQUIÁTRICA                       |
-*Tabela 12 - CBOs que podem registrar ficha de vacinação*
+*Tabela 12 - CBOs que podem registrar o Modelo de Informação de Vacinação*

@@ -7,6 +7,48 @@ parent: layout_ab
 
 Este documento relata as principais alterações entre as últimas versões do LEDI APS:
 
+### Versão 8.7.0
+
+#### 1. Inclusão de novo item "PNCT manutenção" em AC
+
+Foi incluído o item **"PNCT manutenção"** no campo **Práticas em saúde** da Atividade coletiva, também disponível nos relatórios de produção e em seus filtros personalizados.
+
+#### 2. Despriorização do CPF na Ficha de Avaliação de Elegibilidade
+
+Adição dos campos **"Cidadão não possui CPF"** e **"Justificativa"** na Ficha de Avaliação de Elegibilidade. O CPF permanece como identificador prioritário do cidadão. A exceção se aplica quando o cidadão não possui CPF, situação em que é obrigatório o preenchimento do campo de justificativa para validar o cadastro sem esse dado.
+
+### Versão 8.6.0
+
+#### 1. Atualização da base de endereços 2026
+
+A base de endereços do sistema foi atualizada, mantendo os dados de localidades em conformidade com a versão de 2026.
+
+#### 2. Atualização da tabela SIGTAP para competência de 06/2026
+
+Atualização da tabela de procedimentos SIGTAP para a competência de 06/2026, trazendo inclusões de procedimentos.
+
+#### 3. Inclusão de novo item de Fornecimento de kit bucal em AC
+
+Foi incluído o item **Fornecimento de kit bucal** no campo **Práticas em saúde** da Atividade Coletiva, também disponível nos relatórios de produção e em seus filtros personalizados.
+
+#### 4. Priorização do CPF como chave principal na Ficha de Atividade Coletiva
+
+Adição dos campos "Justificativa" e "Cidadão não possui CPF" na relação de participantes da Ficha de Atividade Coletiva. O CPF permanece como chave principal e única para identificação do participante, sendo utilizado como critério primário em todos os casos. A exceção só se aplica quando o participante não possui CPF, situação em que é sugerido o preenchimento do campo de justificativa para validar o cadastro sem esse dado.
+
+### Versão 8.5.0
+
+#### 1. Suporte ao CNPJ alfanumérico
+
+Foi realizada a adequação do LEDI para suportar o novo CNPJ alfanumérico, conforme a Instrução Normativa 2.229 da Receita Federal. A atualização contempla a validação dos CNPJs com letras e números nos 12 primeiros caracteres, mantendo os 2 últimos dígitos como verificadores, com ajustes nas regras de cálculo e validação dos dígitos verificadores.
+
+#### 2. Priorização do CPF como chave principal na Ficha de Atendimento Domiciliar e Ficha de Visita Domiciliar e Territorial
+
+Adição dos campos "Justificativa" e "Cidadão não possui CPF" nas fichas mencionadas. O CPF permanece como chave principal e única para identificação do cidadão, sendo utilizado como critério primário em todos os casos. A exceção só se aplica quando o cidadão não possui CPF, situação em que é obrigatório o preenchimento do campo de justificativa para validar o cadastro sem esse dado.
+
+#### 3. Substituição do conceito de "Ficha"
+
+Foi substituído o termo "ficha" por "modelo de informação" ou "registro" (a depender do contexto) em todas as páginas da documentação. Nomes de atributos ou valores do sistema em si não foram alterados.
+
 ### Versão 8.4.2
 
 #### 1. Atualizações em regras vacinais
@@ -37,12 +79,11 @@ Foram incluídos os campos `stNaoPossuiCpf` e `justificativaNaoPossuiCpf` nos mo
 
 Foram incluídos novos campos de `estadoCivil`, `tipoSanguineo` e `dnv`.
 
-#### 3. Atualização do modelo de dados do Cadastro do imóvel
+#### 3. Atualização no modelo de dados do Cadastro do imóvel
 
-Foi incluído o campo `stAtivo` no cadastro do imóvel para sinalizar se o cadastro está ativo ou inativo, com o intuito de higienizar das listas os cadastros duplicados ou de imóveis que não existem mais.
-Além disso foi atualizado o campo `numeroMembrosFamilia` para permitir o registro de valores com até 3 dígitos.
+Foi atualizado o campo `numeroMembrosFamilia` para permitir o registro de valores com até 3 dígitos.
 
-#### 4. Atualização do modelo de dados da Ficha de Vacinação
+#### 4. Atualização do modelo de dados de Vacinação
 
 Foi feita adequação estrutural para padronização dos fabricantes de imunobiológicos, passando a utilizar o código da RNDS do fabricante como identificador principal, no novo campo `coRndsFabricane` ao invés do nome do mesmo no campo `fabricante`, que foi descontinuado.
 Também foram atualizadas as correspondências entre vias de administração e locais de aplicação utilizados no registro de vacinas, além de adequação estrutural do sistema para padronização desses registros com os respectivos códigos da RNDS.
@@ -57,7 +98,7 @@ Os procedimentos do tipo AB que possuíam equivalência SIGTAP foram inativados 
 
 #### 7. Inclusão do CBO Mediador Intercultural 
 
-Foi incluído o CBO `515335 - Mediador Intercultural` na lista de profissionais habilitados para registro de fichas de Cadastro Individual, Cadastro Domiciliar e Territorial e Atividade Coletiva.
+Foi incluído o CBO `515335 - Mediador Intercultural` na lista de profissionais habilitados para registro dos Modelos de Informação de Cadastro Individual, Cadastro Domiciliar e Territorial e Atividade Coletiva.
 
 ### Versão 7.4.2
 
@@ -113,15 +154,15 @@ Foram atualizadas as regras para aplicação dos imunobiológicos "Nirsevimabe 0
 
 A tabela de procedimentos SIGTAP do sistema foi atualizada para a competência de 10/2025. Sendo assim, tivemos a inclusão e atualização de procedimentos.
 
-#### 3. Atualização em validação dos problemas e condições na Ficha de Atendimento individual
+#### 3. Atualização em validação dos problemas e condições no Modelo de Informação de Atendimento Individual
 
-Foi atualizada a `ListaCiapCondicaoAvaliada` do grupo `ProblemaCondicao`. Somente os códigos AB presentes nessa listagem poderão ser transmitidos na ficha de atendimento individual.
+Foi atualizada a `ListaCiapCondicaoAvaliada` do grupo `ProblemaCondicao`. Somente os códigos AB presentes nessa listagem poderão ser transmitidos no Modelo de Informação de Atendimento Individual.
 
 ### Versão 7.3.3
 
-#### 1. Atualização nas regras da Ficha de Atendimento Individual
+#### 1. Atualização nas regras do Modelo de Informação de Atendimento Individual
 
-A documentação da Ficha de Atendimento Individual foi atualizada para incluir a referência entre os campos `ficouEmObservacao` e `profissionalFinalizadorObservacao`. O campo `ficouEmObservacao` agora tem a indicação de vínculo com `profissionalFinalizadorObservacao`, e este é descrito como opcional.
+A documentação do Modelo de Informação de Atendimento Individual foi atualizada para incluir a referência entre os campos `ficouEmObservacao` e `profissionalFinalizadorObservacao`. O campo `ficouEmObservacao` agora tem a indicação de vínculo com `profissionalFinalizadorObservacao`, e este é descrito como opcional.
 
 ### Versão 7.3.2
 
@@ -145,9 +186,9 @@ Foram atualizadas as regras para aplicação dos imunobiológicos BCG, SCRV, VVS
 
 Foram atualizadas as regras para aplicação do imunobiológico "Nirsevimabe 0,5ml (cód. 115)", "Nirsevimabe 1,0ml (cód. 116)" e suas nomenclaturas, e alteração da descrição das siglas das doses relacionadas aos códigos de 59 a 82 para Unidades.
 
-#### 2. Novos campos na Ficha de Vacinação
+#### 2. Novos campos no Modelo de Informação de Vacinação
 
-Inclusão dos campos "Via de administração" e "Local de aplicação" na Ficha de Vacinação.
+Inclusão dos campos "Via de administração" e "Local de aplicação" no Modelo de Informação de Vacinação.
 
 ### Versão 7.2.3
 
@@ -178,13 +219,13 @@ Os exames estruturados do tipo quantitativo **Colesterol total**, **HDL**, **LDL
 
 Foram atualizadas as regras para aplicação do imunobiológico "Nirsevimabe 50mg (cód. 115)", "Nirsevimabe 100mg (cód. 116)" e "Vacina pneumo 23 (cód. 21)" e para o fabricante do imunobiológico "Vacina COVID-19-RNAm, Pfizer (Comirnaty) pediátrica menor de 5 anos (cód. 102)".
 
-#### 3. Adição do IVCF-20 na Ficha de Visita Domiciliar e Territorial
+#### 3. Adição do IVCF-20 no Modelo de Informação de Visita Domiciliar e Territorial
 
-Foram adicionadas as regras para a inclusão do IVCF-20(Índice de Vulnerabilidade Clínico-Funcional) na Ficha de Visita Domiciliar e Territorial.
+Foram adicionadas as regras para a inclusão do IVCF-20(Índice de Vulnerabilidade Clínico-Funcional) no Modelo de Informação de Visita Domiciliar e Territorial.
 
-#### 4. Inclusão de campos na Ficha de Vacinação
+#### 4. Inclusão de campos no Modelo de Informação de Vacinação
 
-Foram incluídos novos campos na ficha de vacinação:
+Foram incluídos novos campos no Modelo de Informação de Vacinação:
 
 - Campo "Condição maternal" que serve para agrupar os antigos campos “Gestante” e “Puérpera”;
 - Campo "Especialidade do profissional prescritor" que serve para o usuário informar o CBO do profissional que prescreveu a vacina. Este campo possui uma lista de :link[CBOs específicos]{id=dicionario anchor=cboprescritor};
@@ -218,7 +259,7 @@ Atualização de regras dos seguintes imunobiológicos:
 
 #### 2. Atualizações em procedimentos de evolução odontológica
 
-Disponibilização dos seguintes procedimentos do grupo `07 - Órteses, próteses e materiais especiais` para registro na Ficha de atendimento odontológico individual:
+Disponibilização dos seguintes procedimentos do grupo `07 - Órteses, próteses e materiais especiais` para registro no Modelo de Informação de Atendimento Odontológico Individual:
 
 - 07.01.07.001-3 - APARELHO FIXO BILATERAL PARA FECHAMENTO DE DIASTEMA;
 - 07.01.07.002-1 - APARELHO ORTOPÉDICO E ORTODÔNTICO REMOVÍVEL;
@@ -232,11 +273,11 @@ Disponibilização dos seguintes procedimentos do grupo `07 - Órteses, prótese
 
 #### 1. Atualização no modelo de dados para transmissão de procedimentos de Oferta de Cuidado Integrado
 
-Na estrutura dos arquivos da **Ficha de Atendimento Individual** e da **Ficha de Atendimento Odontológico Individual** foi incluído o modelo de dados que permite a **transmissão** de códigos SIGTAP do grupo **09 - Procedimentos para Ofertas de Cuidados Integrados**. 
+Na estrutura dos arquivos do **Modelo de Informação de Atendimento Individual** e do **Modelo de Informação de Atendimento Odontológico Individual** foi incluído o modelo de dados que permite a **transmissão** de códigos SIGTAP do grupo **09 - Procedimentos para Ofertas de Cuidados Integrados**. 
 
 #### 2. Ajustes nas regras de problemas e condições
 
-Na estrutura dos arquivos da **Ficha de Atendimento Individual**, **Ficha de Atendimento Odontológico Individual** e **Ficha de Atendimento Domiciliar** foram ajustadas as regras do modelo de dados ProblemaCondicao para contemplar as regras que estavam sendo aplicadas na validação durante a importação.
+Na estrutura dos arquivos do **Modelo de Informação de Atendimento Individual**, **Modelo de Informação de Atendimento Odontológico Individual** e **Modelo de Informação de Atendimento Domiciliar** foram ajustadas as regras do modelo de dados ProblemaCondicao para contemplar as regras que estavam sendo aplicadas na validação durante a importação.
 
 #### 3.  Atualizações em Temas para saúde de Atividade Coletiva
 
@@ -273,11 +314,11 @@ Foram incluídas novas regras para aplicação do imunobiológico Covid-19-inati
 
 ### Versão 6.3.7
 
-### 1. Atualizações em regras de vacinação
+#### 1. Atualizações em regras de vacinação
 
 Foi alterado o nome e a sigla da Vacina Varíola Bavarian Nordic - VVBN (cód. 100) para, respectivamente, Vacina varíola símia (atenuada) - VVS. Além disso, foram atualizadas as regras para aplicação dos imunobiológicos Vacina Influenza trivalente (cód. 33), Vacina Pneumo 13 (cód. 59) e Vacina Varíola Símia (atenuada) (cód. 100).
 
-### 2. Atualizações no cadastro individual
+#### 2. Atualizações no cadastro individual
 
 Foi incluída a opção de deficiência "TEA", referente ao Transtorno do Espectro Autista, e tornado obrigatório o preenchimento do campo "Está em situação de rua?".
 
@@ -285,13 +326,13 @@ Foi incluída a opção de deficiência "TEA", referente ao Transtorno do Espect
 
 #### 1. Inclusão de novo motivo de visita
 
-Foi incluída a opção "Pessoa idosa" como um dos motivos de visita da Ficha de Visita Domiciliar e Territorial.
+Foi incluída a opção "Pessoa idosa" como um dos motivos de visita do Modelo de Informação de Visita Domiciliar e Territorial.
 
 #### 2. Remoção de opção de Raça/cor.
 
-Com o objetivo de qualificar os cadastros de cidadão e considerando a [Portaria Nº 344 de 1º de fevereiro de 2017](https://bvsms.saude.gov.br/bvs/saudelegis/gm/2017/prt0344_01_02_2017.html), foi removida a possibilidade de informar "Sem informação" no campo "Raça/cor" para a Ficha de Cadastro Individual e a Ficha de Avaliação de Elegibilidade.
+Com o objetivo de qualificar os cadastros de cidadão e considerando a [Portaria Nº 344 de 1º de fevereiro de 2017](https://bvsms.saude.gov.br/bvs/saudelegis/gm/2017/prt0344_01_02_2017.html), foi removida a possibilidade de informar "Sem informação" no campo "Raça/cor" para o Modelo de Informação de Cadastro Individual e o Modelo de Informação de Avaliação de Elegibilidade.
 
-### 3. Novas regras para aplicação do imunobiológico Vacina influenza trivalente (33)
+#### 3. Novas regras para aplicação do imunobiológico Vacina influenza trivalente (33)
 
 Foram atualizadas as regras para aplicação do imunobiológico Vacina influenza trivalente (código 33), adicionando doses da estratégia "Rotina" e alterando doses disponíveis para as estratégias "Especial", "Campanha indiscriminada" e "Vacinação escolar".
 
@@ -303,7 +344,7 @@ Foram incluídas novas regras para aplicação do imunobiológico Hexa acelular 
 
 #### 2. Inclusão do procedimento Orientação Individual em Saúde (ABPG042)
 
-Foi incluído o procedimento **ABPG042 - Orientação Individual em Saúde** nos arquivos de estrutura da Ficha de Atendimento Odontológico Individual e da Ficha de Procedimentos.
+Foi incluído o procedimento **ABPG042 - Orientação Individual em Saúde** nos arquivos de estrutura do Modelo de Informação de Atendimento Odontológico Individual e do Modelo de Informação de Procedimentos.
 
 ### Versão 6.3.3
 
@@ -353,10 +394,10 @@ Foram incluídas novas regras para aplicação dos imunobiológicos Hexa acelula
 
 #### 2. Inclusão de sinais vitais, antropometria e glicemia capilar
 
-Foi incluído um grupo de informações chamado "medicoes" na Ficha de atendimento individual, Ficha de procedimentos e Ficha de atendimento odontológico individual. As seguintes alterações foram realizadas:
+Foi incluído um grupo de informações chamado "medicoes" no Modelo de Informação de Atendimento Individual, Modelo de Informação de Procedimentos e Modelo de Informação de Atendimento Odontológico Individual. As seguintes alterações foram realizadas:
 
-- Remoção dos campos "pesoAcompanhamentoNutricional" e "alturaAcompanhamentoNutricional" da Ficha de atendimento individual, Ficha de procedimentos e Ficha de atendimento odontológico individual;
-- Remoção do campo "perimetroCefalico" da Ficha de atendimento individual;
+- Remoção dos campos "pesoAcompanhamentoNutricional" e "alturaAcompanhamentoNutricional" do Modelo de Informação de Atendimento Individual, Modelo de Informação de Procedimentos e Modelo de Informação de Atendimento Odontológico Individual;
+- Remoção do campo "perimetroCefalico" do Modelo de Informação de Atendimento Individual;
 - Inclusão do grupo "medicoes" com os campos:
     - circunferenciaAbdominal: Circunferência abdominal do cidadão em centímetros;
     - perimetroPanturrilha: Perímetro da panturrilha do cidadão em centímetros;
@@ -378,10 +419,10 @@ Foi corrigida a documentação do LEDI com as referências corretas a competênc
 
 #### 4. Inclusão da lista de problemas e condições
 
-Foi incluído um grupo de informações chamado "problemasCondicoes" na Ficha de atendimento individual, Ficha de atendimento odontológico individual e Ficha de atendimento domiciliar. As seguintes alterações foram realizadas:
+Foi incluído um grupo de informações chamado "problemasCondicoes" no Modelo de Informação de Atendimento Individual, Modelo de Informação de Atendimento Odontológico Individual e Modelo de Informação de Atendimento Domiciliar. As seguintes alterações foram realizadas:
 
-- Remoção do grupo "problemaCondicaoAvaliada" da Ficha de atendimento individual;
-- Remoção dos campos "ciap" e "cid" da Ficha de atendimento domiciliar;
+- Remoção do grupo "problemaCondicaoAvaliada" do Modelo de Informação de Atendimento Individual;
+- Remoção dos campos "ciap" e "cid" do Modelo de Informação de Atendimento Domiciliar;
 - Inclusão do grupo "problemasCondicoes" com os campos:
     - uuidProblema: Código identificador único do problema ou condição;
     - uuidEvolucaoProblema: Código identificador único da evolução do problema ou condição;
@@ -395,7 +436,7 @@ Foi incluído um grupo de informações chamado "problemasCondicoes" na Ficha de
 
 #### 5. Inclusão dos turnos
 
-Foram incluídas novas regras relacionadas ao preenchimento das doses por turno (manhã, tarde, noite) na Ficha de atendimento individual e na Ficha de atendimento odontológico. As regras introduzem a obrigatoriedade de registrar doses separadas por turnos, além de determinar o formato e a validação da soma das doses em cada período.
+Foram incluídas novas regras relacionadas ao preenchimento das doses por turno (manhã, tarde, noite) no Modelo de Informação de Atendimento Individual e no Modelo de Informação de Atendimento Odontológico. As regras introduzem a obrigatoriedade de registrar doses separadas por turnos, além de determinar o formato e a validação da soma das doses em cada período.
 
 - Os campos adicionados foram:
     - **qtDoseManha**: Quantidade de doses do medicamento/princípio ativo a ser administrada durante o turno da manhã.

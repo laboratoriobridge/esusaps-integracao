@@ -1,25 +1,27 @@
 ---
 id: dicionario-fczm
-title: Ficha complementar - Síndrome neurológica por Zika / Microcefalia
+title: >-
+  Modelo de Informação Complementar - Síndrome Neurológica por Zika /
+  Microcefalia
 order: 13
 parent: estrutura_arquivos
 ---
 
-## FichaComplementarZikaMicrocefalia
+### FichaComplementarZikaMicrocefalia
 
-### \#1 headerTransport
+#### \#1 headerTransport
 Dados referentes ao profissional e a data do cadastro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |--- |--- |--- |--- |
 |UnicaLotacaoHeader |Sim |- |- |
 
-**Regra:** Somente as CBOs apresentadas na :link[Tabela 11 - CBOs que podem registrar ficha complementar - Síndrome neurológica por Zika / Microcefalia]{id=grupo_cbo anchor=ficha-complementar-s-ndrome-neurol-gica-por-zika-microcefalia} podem ser adicionadas no campo CBO do profissional.
+**Regra:** Somente as CBOs apresentadas na :link[Tabela 11 - CBOs que podem registrar o Modelo de Informação Complementar - Síndrome Neurológica por Zika / Microcefalia]{id=grupo_cbo anchor=modelo-de-informa-o-complementar-s-ndrome-neurol-gica-por-zika-microcefalia} podem ser adicionadas no campo CBO do profissional.
 
 **Referência:** :link[UnicaLotacaoHeader]{id=headerTransport anchor=unicalotacaoheader}.
 
-### \#2	uuidFicha
-Código UUID para identificar a ficha na base de dados nacional.
+#### \#2	uuidFicha
+Código UUID para identificar o registro na base de dados nacional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 |---| --- |---  | --- |
@@ -29,7 +31,7 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Referência:** [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
-### \#3	tpCdsOrigem
+#### \#3	tpCdsOrigem
 Tipo de origem dos dados do registro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -38,7 +40,7 @@ Tipo de origem dos dados do registro.
 
 Observações: Utilizar valor 3 (sistemas terceiros).
 
-### \#4	turno
+#### \#4	turno
 Código do turno onde aconteceu o atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -47,7 +49,7 @@ Código do turno onde aconteceu o atendimento.
 
 **Referência:** :link[Turno]{id=dicionario anchor=turno}.
 
-### \#5 cnsCidadao
+#### \#5 cnsCidadao
 CNS do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -61,7 +63,7 @@ CNS do cidadão.
 
 **Referência:** O algoritmo de validação está presente em :link{id=algoritmo_CNS}.
 
-### \#6 cnsResponsavelFamiliar
+#### \#6 cnsResponsavelFamiliar
 CNS do responsável do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -75,7 +77,7 @@ CNS do responsável do cidadão.
 
 **Referência:** O algoritmo de validação está presente em :link{id=algoritmo_CNS}.
 
-### \#7 dataRealizacaoTesteOlhinho
+#### \#7 dataRealizacaoTesteOlhinho
 Data de realização do "Teste do olhinho (TRV)".
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -87,9 +89,9 @@ Data de realização do "Teste do olhinho (TRV)".
 - Não pode ser anterior em 20 anos ou posterior à :link[dataAtendimento]{id=headerTransport anchor=5-dataatendimento};
 - Se este campo for preenchido, o campo [coResultadoTesteOlhinho](#8-coresultadotesteolhinho) é obrigatório.
 
-**Referência:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referência:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#8 coResultadoTesteOlhinho
+#### \#8 coResultadoTesteOlhinho
 Resultado do "Teste do olhinho (TRV)".
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -103,7 +105,7 @@ Resultado do "Teste do olhinho (TRV)".
 
 **Referência:** :link[testeOlhinho]{id=dicionario anchor=testeolhinho}.
 
-### \#9 dataRealizacaoExameFundoOlho
+#### \#9 dataRealizacaoExameFundoOlho
 Data de realização do "Exame de fundo de olho (02.11.06.010-0 - Fundoscopia)".
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -117,11 +119,11 @@ Data de realização do "Exame de fundo de olho (02.11.06.010-0 - Fundoscopia)".
 
 **Referências:**
 
-**1.** O código deste exame é compatível com a competência 03/2026 da tabela do SIGTAP, disponível em: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar).
+**1.** O código deste exame é compatível com a competência 06/2026 da tabela do SIGTAP, disponível em: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar).
 
-**2.** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**2.** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#10 coResultadoExameFundoOlho
+#### \#10 coResultadoExameFundoOlho
 Resultado do "Exame de fundo de olho (02.11.06.010-0 - Fundoscopia)".
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -135,7 +137,7 @@ Resultado do "Exame de fundo de olho (02.11.06.010-0 - Fundoscopia)".
 
 **Referência:** :link[exameFundoOlho]{id=dicionario anchor=examefundoolho}.
 
-### \#11 dataRealizacaoTesteOrelhinha
+#### \#11 dataRealizacaoTesteOrelhinha
 Data de realização do "Teste da orelhinha - PEATE (02.11.07.027-0 - Potencial evocado auditivo para triagem auditiva)".
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -149,11 +151,11 @@ Data de realização do "Teste da orelhinha - PEATE (02.11.07.027-0 - Potencial 
 
 **Referências:**
 
-**1.** O código deste exame é compatível com a competência 03/2026 da tabela do SIGTAP, disponível em: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar).
+**1.** O código deste exame é compatível com a competência 06/2026 da tabela do SIGTAP, disponível em: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar).
 
-**2.** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**2.** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#12 coResultadoTesteOrelhinha
+#### \#12 coResultadoTesteOrelhinha
 Resultado do "Teste da orelhinha - PEATE (02.11.07.027-0 - Potencial evocado auditivo para triagem auditiva)".
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -167,7 +169,7 @@ Resultado do "Teste da orelhinha - PEATE (02.11.07.027-0 - Potencial evocado aud
 
 **Referência:** :link[testeOrelhinha]{id=dicionario anchor=testeorelhinha}.
 
-### \#13 dataRealizacaoUSTransfontanela
+#### \#13 dataRealizacaoUSTransfontanela
 Data de realização do exame de imagem "US transfontanela (02.05.02.017-8 - Ultrassonografia transfontanela)".
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -181,11 +183,11 @@ Data de realização do exame de imagem "US transfontanela (02.05.02.017-8 - Ult
 
 **Referências:**
 
-**1.** O código deste exame é compatível com a competência 03/2026 da tabela do SIGTAP, disponível em: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar).
+**1.** O código deste exame é compatível com a competência 06/2026 da tabela do SIGTAP, disponível em: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar).
 
-**2.** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**2.** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#14 coResultadoUsTransfontanela
+#### \#14 coResultadoUsTransfontanela
 Resultado do exame de imagem "US transfontanela (02.05.02.017-8 - Ultrassonografia transfontanela)".
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -199,7 +201,7 @@ Resultado do exame de imagem "US transfontanela (02.05.02.017-8 - Ultrassonograf
 
 **Referência:** :link[usTransfontanela]{id=dicionario anchor=ustransfontanela}.
 
-### \#15 dataRealizacaoTomografiaComputadorizada
+#### \#15 dataRealizacaoTomografiaComputadorizada
 Data de realização do exame de imagem "Tomografia computadorizada (02.06.01.007-9 - Tomografia computadorizada do crânio)".
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -213,11 +215,11 @@ Data de realização do exame de imagem "Tomografia computadorizada (02.06.01.00
 
 **Referências:**
 
-**1.** O código deste exame é compatível com a competência 03/2026 da tabela do SIGTAP, disponível em: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar).
+**1.** O código deste exame é compatível com a competência 06/2026 da tabela do SIGTAP, disponível em: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar).
 
-**2.** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**2.** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#16 coResultadoTomografiaComputadorizada
+#### \#16 coResultadoTomografiaComputadorizada
 Resultado do exame de imagem "Tomografia computadorizada (02.06.01.007-9 - Tomografia computadorizada do crânio)".
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -231,7 +233,7 @@ Resultado do exame de imagem "Tomografia computadorizada (02.06.01.007-9 - Tomog
 
 **Referência:** :link[tomografiaComputadorizada]{id=dicionario anchor=tomografiacomputadorizada}.
 
-### \#17 dataRealizacaoRessonanciaMagnetica
+#### \#17 dataRealizacaoRessonanciaMagnetica
 Data de realização do exame de imagem "Ressonância magnética (02.07.01.006-4 - Ressonância magnética de crânio)".
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -245,11 +247,11 @@ Data de realização do exame de imagem "Ressonância magnética (02.07.01.006-4
 
 **Referências:**
 
-**1.** O código deste exame é compatível com a competência 03/2026 da tabela do SIGTAP, disponível em: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar).
+**1.** O código deste exame é compatível com a competência 06/2026 da tabela do SIGTAP, disponível em: [Tabela unificada SIGTAP](http://sigtap.datasus.gov.br/tabela-unificada/app/sec/procedimento/publicados/consultar).
 
-**2.** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**2.** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#18 coResultadoRessonanciaMagnetica
+#### \#18 coResultadoRessonanciaMagnetica
 Resultado do exame de imagem "Ressonância magnética (02.07.01.006-4 - Ressonância magnética de crânio)".
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -263,7 +265,7 @@ Resultado do exame de imagem "Ressonância magnética (02.07.01.006-4 - Ressonâ
 
 **Referência:** :link[ressonanciaMagnetica]{id=dicionario anchor=ressonanciamagnetica}.
 
-### \#19 cpfCidadao
+#### \#19 cpfCidadao
 
 CPF do cidadão.
 
@@ -276,7 +278,7 @@ CPF do cidadão.
 - Somente CPF válido será aceito;
 - Não pode ser preenchido se o campo [cnsCidadao](#5-cnscidadao) for preenchido.
 
-### \#20 cpfResponsavelFamiliar
+#### \#20 cpfResponsavelFamiliar
 
 CPF do responsável do cidadão.
 
@@ -289,7 +291,7 @@ CPF do responsável do cidadão.
 - Somente CPF válido será aceito;
 - Não pode ser preenchido se o campo [cnsResponsavelFamiliar](#6-cnsresponsavelfamiliar) for preenchido.
 
-### \#21 stNaoPossuiCpf
+#### \#21 stNaoPossuiCpf
 
 Marcador que indica que o CPF do cidadão não existe ou não está disponível no momento do cadastro.
 
@@ -297,7 +299,7 @@ Marcador que indica que o CPF do cidadão não existe ou não está disponível 
 | ---- | ----------- | ------ | ------ |
 |Boolean | Sim |- |- |
 
-### \#22 justificativaNaoPossuiCpf
+#### \#22 justificativaNaoPossuiCpf
 
 Justificativa para o cidadão não possuir ou não informar CPF.
 

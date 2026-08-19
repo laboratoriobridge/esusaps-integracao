@@ -1,6 +1,6 @@
 ---
 id: dicionario-fvd
-title: Ficha de Visita Domiciliar e Territorial
+title: Modelo de Informação de Visita Domiciliar e Territorial
 order: 9
 parent: estrutura_arquivos
 ---
@@ -8,10 +8,10 @@ import LediIvcfCampo from '../../_shared/ledi_ivcf_campo.mdx';
 import LediIvcfSecao from '../../_shared/ledi_ivcf_secao.mdx';
 
 
-## FichaVisitaDomiciliarMaster
+### FichaVisitaDomiciliarMaster
 
-### \#1 uuidFicha
-Código UUID para identificar a ficha na base de dados nacional.
+#### \#1 uuidFicha
+Código UUID para identificar o registro na base de dados nacional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
@@ -21,7 +21,7 @@ Código UUID para identificar a ficha na base de dados nacional.
 
 **Referência:** Para ver a referência sobre o UUID, acesse [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
-### \#2 tpCdsOrigem
+#### \#2 tpCdsOrigem
 Tipo de origem dos dados do registro.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -30,19 +30,19 @@ Tipo de origem dos dados do registro.
 
 **Regra:** Utilizar valor 3 (sistemas terceiros).
 
-### \#3 headerTransport
+#### \#3 headerTransport
 Profissional que realizou a visita.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
 | UnicaLotacaoHeader | Sim | - | - |
 
-**Regra:** Somente as CBOs apresentadas na :link[Tabela 7 - CBOs que podem registrar ficha de visita domiciliar e territorial]{id=grupo_cbo anchor=ficha-de-visita-domiciliar-e-territorial} podem ser adicionadas no campo CBO do profissional.
+**Regra:** Somente as CBOs apresentadas na :link[Tabela 7 - CBOs que podem registrar o Modelo de Informação de Visita Domiciliar e Territorial]{id=grupo_cbo anchor=modelo-de-informa-o-de-visita-domiciliar-e-territorial} podem ser adicionadas no campo CBO do profissional.
 
 **Referência:** :link[UnicaLotacaoHeader]{id=headerTransport anchor=unicalotacaoheader}.
 
-### \#4 visitasDomiciliares
-Lista de Fichas de Visita Domiciliar e Territorial.
+#### \#4 visitasDomiciliares
+Lista de registros de Visita Domiciliar e Territorial.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
@@ -50,9 +50,9 @@ Lista de Fichas de Visita Domiciliar e Territorial.
 
 **Referência:** [FichaVisitaDomiciliarChild](#fichavisitadomiciliarchild).
 
-## FichaVisitaDomiciliarChild
+### FichaVisitaDomiciliarChild
 
-### \#1 turno
+#### \#1 turno
 Código do turno onde aconteceu o atendimento.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -61,7 +61,7 @@ Código do turno onde aconteceu o atendimento.
 
 **Referência:** :link[Turno]{id=dicionario anchor=turno}.
 
-### \#2 numProntuario
+#### \#2 numProntuario
 Número do prontuário do cidadão na UBS.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -73,7 +73,7 @@ Número do prontuário do cidadão na UBS.
 * Somente letras e números;
 * Não deve ser preenchido se o campo [tipoDeImovel](#11-tipodeimovel) = `02` comércio, `03` terreno baldio, `04` Ponto Estratégico, `05` Escola, `06` Creche, `12` Estabelecimento religioso ou `13` CASAI.
 
-### \#3 cnsCidadao
+#### \#3 cnsCidadao
 CNS do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -89,7 +89,7 @@ CNS do cidadão.
 
 **Referência:** O algoritmo de validação está presente em :link{id=algoritmo_CNS}.
 
-### \#4 dtNascimento
+#### \#4 dtNascimento
 Data de nascimento do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -108,9 +108,9 @@ Data de nascimento do cidadão.
 	- Campo [motivosVisita](#7-motivosvisita) possuir pelo menos uma das opções `25` Egresso de internação ou `31` Orientação / Prevenção inseridas;
 	- Pelo menos um dos campos [pesoAcompanhamentoNutricional](#12-pesoacompanhamentonutricional) e [alturaAcompanhamentoNutricional](#13-alturaacompanhamentonutricional) for preenchido.
 
-**Referência:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referência:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos . Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#5 sexo
+#### \#5 sexo
 Código do sexo do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -130,14 +130,14 @@ Código do sexo do cidadão.
 
 **Referência:** :link[Sexo]{id=dicionario anchor=sexo}.
 
-### \#6 statusVisitaCompartilhadaOutroProfissional
+#### \#6 statusVisitaCompartilhadaOutroProfissional
 Marcador que indica se a visita foi compartilhada com outro profissional.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
 | Boolean | Não | - | - |
 
-### \#7 motivosVisita
+#### \#7 motivosVisita
 Código dos motivos da visita.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -162,7 +162,7 @@ Código dos motivos da visita.
 
 **Referência:** :link[MotivoVisita]{id=dicionario anchor=motivovisita}.
 
-### \#8 desfecho
+#### \#8 desfecho
 Código dos resultados da ação de visita.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -171,7 +171,7 @@ Código dos resultados da ação de visita.
 
 **Referência:** :link[Desfecho]{id=dicionario anchor=desfecho}.
 
-### \#9 microarea
+#### \#9 microarea
 
 Microárea na qual o cidadão se encontra.
 
@@ -181,14 +181,14 @@ Microárea na qual o cidadão se encontra.
 
 **Regra:** Não deve ser preenchido se o campo [stForaArea](#10-stforaarea) = `true`. Caso contrário, o preenchimento é obrigatório.
 
-### \#10 stForaArea
+#### \#10 stForaArea
 Marcador que indica que o cidadão está fora da área.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
 | Boolean | Não | - | - |
 
-### \#11 tipoDeImovel
+#### \#11 tipoDeImovel
 Indica o tipo de imóvel do domicílio.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -197,7 +197,7 @@ Indica o tipo de imóvel do domicílio.
 
 **Referência:** :link[tipoDeImovel]{id=dicionario anchor=tipodeimovel}.
 
-### \#12 pesoAcompanhamentoNutricional
+#### \#12 pesoAcompanhamentoNutricional
 Peso do cidadão em Quilogramas.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -212,7 +212,7 @@ Peso do cidadão em Quilogramas.
 * Não deve ser preenchido se o campo [tipoDeImovel](#11-tipodeimovel) = `02` comércio, `03` terreno baldio, `04` Ponto Estratégico, `05` Escola, `06` Creche, `12` Estabelecimento religioso ou `13` CASAI;
 * Não deve ser preenchido caso o campo [desfecho](#8-desfecho) = `3` Ausente ou `2` Visita Recusada.
 
-### \#13 alturaAcompanhamentoNutricional
+#### \#13 alturaAcompanhamentoNutricional
 Altura do cidadão em centímetros.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -227,7 +227,7 @@ Altura do cidadão em centímetros.
 * Não deve ser preenchido se o campo [tipoDeImovel](#11-tipodeimovel) = `02` comércio, `03` terreno baldio, `04` Ponto Estratégico, `05` Escola, `06` Creche, `12` Estabelecimento religioso ou `13` CASAI;
 * Não deve ser preenchido caso o campo [desfecho](#8-desfecho) = `3` Ausente ou `2` Visita Recusada.
 
-### \#14 cpfCidadao
+#### \#14 cpfCidadao
 
 CPF do cidadão.
 
@@ -242,7 +242,7 @@ CPF do cidadão.
 - Para visita periódica ou visita domiciliar para controle vetorial preencher este campo com o CPF do responsável familiar;
 - Não pode ser preenchido se o campo [cnsCidadao](#3-cnscidadao) for preenchido.
 
-### \#15 pressaoSistolica
+#### \#15 pressaoSistolica
 
 Pressão sistólica do cidadão.
 
@@ -257,7 +257,7 @@ Pressão sistólica do cidadão.
 - Não deve ser preenchido se o campo [tipoDeImovel](#11-tipodeimovel) = `02` comércio, `03` terreno baldio, `04` Ponto Estratégico, `05` Escola, `06` Creche, `12` Estabelecimento religioso ou `13` CASAI;
 - Não deve ser preenchido caso o campo [desfecho](#8-desfecho) = `3` Ausente ou `2` Visita Recusada.
 
-### \#16 pressaoDiastolica
+#### \#16 pressaoDiastolica
 
 Pressão diastólica do cidadão.
 
@@ -272,7 +272,7 @@ Pressão diastólica do cidadão.
 - Não deve ser preenchido se o campo [tipoDeImovel](#11-tipodeimovel) = `02` comércio, `03` terreno baldio, `04` Ponto Estratégico, `05` Escola, `06` Creche, `12` Estabelecimento religioso ou `13` CASAI;
 - Não deve ser preenchido caso o campo [desfecho](#8-desfecho) = `3` Ausente ou `2` Visita Recusada.
 
-### \#17 temperatura
+#### \#17 temperatura
 Aferição de temperatura do cidadão.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -286,7 +286,7 @@ Aferição de temperatura do cidadão.
 - Não deve ser preenchido se o campo [tipoDeImovel](#11-tipodeimovel) = `02` comércio, `03` terreno baldio, `04` Ponto Estratégico, `05` Escola, `06` Creche, `12` Estabelecimento religioso ou `13` CASAI;
 - Não deve ser preenchido caso o campo [desfecho](#8-desfecho) = `3` Ausente ou `2` Visita Recusada.
 
-### \#18 glicemia
+#### \#18 glicemia
 Glicemia capilar do cidadão em mg/dL.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -300,7 +300,7 @@ Glicemia capilar do cidadão em mg/dL.
 - Não deve ser preenchido se o campo [tipoDeImovel](#11-tipodeimovel) = `02` comércio, `03` terreno baldio, `04` Ponto Estratégico, `05` Escola, `06` Creche, `12` Estabelecimento religioso ou `13` CASAI;
 - Não deve ser preenchido caso o campo [desfecho](#8-desfecho) = `3` Ausente ou `2` Visita Recusada.
 
-### \#19 tipoGlicemia
+#### \#19 tipoGlicemia
 Momento da coleta da glicemia capilar.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
@@ -315,7 +315,7 @@ Momento da coleta da glicemia capilar.
 
 **Referência:** :link[TipoGlicemiaCapilar]{id=dicionario anchor=tipoglicemiacapilar}.
 
-### \#20 latitude
+#### \#20 latitude
 
 Informação da latitude do imóvel onde a visita foi realizada.
 
@@ -328,7 +328,7 @@ Informação da latitude do imóvel onde a visita foi realizada.
 - É de preenchimento obrigatório se o campo [longitude](#21-longitude) for preenchido;
 - Os valores são limitados por -90 a 90 e apresentam até 8 casas decimais.
 
-### \#21 longitude
+#### \#21 longitude
 
 Informação da longitude do imóvel onde a visita foi realizada.
 
@@ -341,20 +341,45 @@ Informação da longitude do imóvel onde a visita foi realizada.
 - É de preenchimento obrigatório se o campo [latitude](#20-latitude) for preenchido;
 - Os valores são limitados por -180 a 180 e apresentam até 8 casas decimais.
 
-### \#22 uuidOrigemCadastroDomiciliar
+#### \#22 uuidOrigemCadastroDomiciliar
 
-Código UUID Origem da ficha de cadastro domiciliar onde a visita foi realizada.
+Código UUID Origem do registro de cadastro domiciliar onde a visita foi realizada.
 
 | Tipo | Obrigatório | Mínimo | Máximo |
 | ---- | ----------- | ------ | ------ |
 | String | Não | 36 | 44 |
 
-**Regra:** Quando preenchido, deverá ser informado o valor do campo :link[UUID origem da ficha de cadastro domiciliar]{id=dicionario-fcd anchor=11-uuidfichaoriginadora} pertencente à :link{id=dicionario-fcd}.
+**Regra:** Quando preenchido, deverá ser informado o valor do campo :link[UUID origem do registro de cadastro domiciliar]{id=dicionario-fcd anchor=11-uuidfichaoriginadora} pertencente à :link{id=dicionario-fcd}.
 
 **Referência:** Para ver a referência sobre o UUID, acesse: [UUID Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
-### \#23 ivcf
+#### \#23 ivcf
 
 <LediIvcfCampo />
 
 <LediIvcfSecao />
+
+#### \#24 stNaoPossuiCpf
+
+Marcador que indica que o CPF do cidadão não existe ou não está disponível no momento do cadastro.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+| ---- | ----------- | ------ | ------ |
+|Boolean | Não |- |- |
+
+#### \#25 justificativaNaoPossuiCpf
+
+Justificativa para o cidadão não possuir ou não informar CPF.
+
+| Tipo | Obrigatório | Mínimo | Máximo |
+| ---- | ----------- | ------ | ------ |
+|Long  | Condicional |- |- |
+
+**Regras:** 
+
+- É permitido o envio apenas de justificativas que constam na listagem de referência;
+- Não pode ser preenchido se o campo [stNaoPossuiCpf](#24-stnaopossuicpf) = `false`;
+- É obrigatório se o campo [stNaoPossuiCpf](#24-stnaopossuicpf) = `true`;
+- Não é validado se o campo [stNaoPossuiCpf](#24-stnaopossuicpf) = `null`.
+
+**Referências:** :link[justificativaNaoPossuiCpf]{id=dicionario anchor=justificativanaopossuicpf}.

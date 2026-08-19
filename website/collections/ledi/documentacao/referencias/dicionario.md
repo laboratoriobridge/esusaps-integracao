@@ -608,9 +608,9 @@ parent: referencias
 | 8      | Instituição / Abrigo            | -                                                   |
 | 9      | Unidade prisional ou congêneres | -                                                   |
 | 10     | Unidade socioeducativa          | -                                                   |
-| 11     | Hospital                        | Utilizado apenas na Ficha de Atendimento Domiciliar |
-| 12     | Unidade de pronto atendimento   | Utilizado apenas na Ficha de Atendimento Domiciliar |
-| 13     | CACON / UNACON                  | Utilizado apenas na Ficha de Atendimento Domiciliar |
+| 11     | Hospital                        | Utilizado apenas no Modelo de Informação de Atendimento Domiciliar |
+| 12     | Unidade de pronto atendimento   | Utilizado apenas no Modelo de Informação de Atendimento Domiciliar |
+| 13     | CACON / UNACON                  | Utilizado apenas no Modelo de Informação de Atendimento Domiciliar |
 | 16     | UBSI                            | -                                                   |
 | 17     | UBSI Fluvial                    | -                                                   |
 | 18     | Sede de polo base tipo I        | -                                                   |
@@ -648,7 +648,7 @@ parent: referencias
 | 1      | AD 1       | -                                                       |
 | 2      | AD 2       | -                                                       |
 | 3      | AD 3       | -                                                       |
-| 4      | Inelegível | Utilizado apenas na Ficha de Avaliação de Elegibilidade |
+| 4      | Inelegível | Utilizado apenas no Modelo de Informação de Avaliação de Elegibilidade |
 
 ### MotivoSaida
 
@@ -762,22 +762,24 @@ parent: referencias
 
 ### PraticasEmSaude
 
-| Código | Descrição                                    | Observações |
-| ------ | -------------------------------------------- | ----------- |
-| 20     | Antropometria                                | -           |
-| 2      | Aplicação tópica de flúor                    | -           |
-| 23     | Desenvolvimento da linguagem                 | -           |
-| 9      | Escovação dental supervisionada              | -           |
-| 11     | Práticas corporais e Atividade física        | -           |
-| 25     | Programa Nacional de Controle do Tabagismo 1 | -           |
-| 26     | Programa Nacional de Controle do Tabagismo 2 | -           |
-| 27     | Programa Nacional de Controle do Tabagismo 3 | -           |
-| 28     | Programa Nacional de Controle do Tabagismo 4 | -           |
-| 22     | Saúde auditiva                               | -           |
-| 3      | Saúde ocular                                 | -           |
-| 24     | Verificação da situação vacinal              | -           |
-| 12     | Outras                                       | -           |
-| 30     | Outro procedimento coletivo                  | -           |
+| Código | Descrição                                              | Observações |
+|--------|--------------------------------------------------------|-------------|
+| 20     | Antropometria                                          | -           |
+| 2      | Aplicação tópica de flúor                              | -           |
+| 23     | Desenvolvimento da linguagem                           | -           |
+| 9      | Escovação dental supervisionada                        | -           |
+| 11     | Práticas corporais e Atividade física                  | -           |
+| 25     | Programa Nacional de Controle do Tabagismo 1           | -           |
+| 26     | Programa Nacional de Controle do Tabagismo 2           | -           |
+| 27     | Programa Nacional de Controle do Tabagismo 3           | -           |
+| 28     | Programa Nacional de Controle do Tabagismo 4           | -           |
+| 22     | Saúde auditiva                                         | -           |
+| 3      | Saúde ocular                                           | -           |
+| 24     | Verificação da situação vacinal                        | -           |
+| 12     | Outras                                                 | -           |
+| 30     | Outro procedimento coletivo                            | -           |
+| 33     | Fornecimento de kit bucal                              | -           |
+| 34     | Programa Nacional de Controle do Tabagismo Manutenção  | -           |
 
 ### ProblemaRins
 
@@ -959,19 +961,19 @@ parent: referencias
 
 | Código | Descrição                                                         | Observações |
 | ------ | ----------------------------------------------------------------- | ----------- |
-| 2      | Ficha de Cadastro Individual                                      | -           |
-| 3      | Ficha de Cadastro Domiciliar e Territorial                        | -           |
-| 4      | Ficha de Atendimento Individual                                   | -           |
-| 5      | Ficha de Atendimento Odontológico                                 | -           |
-| 6      | Ficha de Atividade Coletiva                                       | -           |
-| 7      | Ficha de Procedimentos                                            | -           |
-| 8      | Ficha de Visita Domiciliar e Territorial                          | -           |
-| 10     | Ficha de Atendimento Domiciliar                                   | -           |
-| 11     | Ficha de Avaliação de Elegibilidade                               | -           |
+| 2      | Modelo de Informação de Cadastro Individual                       | -           |
+| 3      | Modelo de Informação de Cadastro Domiciliar e Territorial         | -           |
+| 4      | Modelo de Informação de Atendimento Individual                    | -           |
+| 5      | Modelo de Informação de Atendimento Odontológico                  | -           |
+| 6      | Modelo de Informação de Atividade Coletiva                        | -           |
+| 7      | Modelo de Informação de Procedimentos                             | -           |
+| 8      | Modelo de Informação de Visita Domiciliar e Territorial           | -           |
+| 10     | Modelo de Informação de Atendimento Domiciliar                    | -           |
+| 11     | Modelo de Informação de Avaliação de Elegibilidade                | -           |
 | 12     | Marcadores de Consumo Alimentar                                   | -           |
-| 13     | Ficha complementar - Síndrome neurológica por Zika / Microcefalia | -           |
-| 14     | Ficha de Vacinação                                                | -           |
-| 16     | Ficha de Cuidado Compartilhado                                    | -           |
+| 13     | Modelo de Informação Complementar - Síndrome Neurológica por Zika / Microcefalia | -           |
+| 14     | Modelo de Informação de Vacinação                                 | -           |
+| 16     | Modelo de Informação de Cuidado Compartilhado                     | -           |
 
 ### TipoDeAcessoAoDomicilio
 
@@ -991,9 +993,9 @@ parent: referencias
 | 4      | Escuta inicial / Orientação                       | -                                                     |
 | 5      | Consulta no dia                                   | -                                                     |
 | 6      | Atendimento de urgência                           | -                                                     |
-| 7      | Atendimento programado                            | Utilizado apenas nas Fichas de Atendimento Domiciliar |
-| 8      | Atendimento não programado                        | Utilizado apenas nas Fichas de Atendimento Domiciliar |
-| 9      | Visita domiciliar pós-óbito                       | Utilizado apenas nas Fichas de Atendimento Domiciliar |
+| 7      | Atendimento programado                            | Utilizado apenas no Modelo de Informação de Atendimento Domiciliar |
+| 8      | Atendimento não programado                        | Utilizado apenas no Modelo de Informação de Atendimento Domiciliar |
+| 9      | Visita domiciliar pós-óbito                       | Utilizado apenas no Modelo de Informação de Atendimento Domiciliar |
 
 ### TipoDeConsultaOdonto
 
@@ -1083,7 +1085,9 @@ parent: referencias
 
 ### etnia
 
-A coluna "Código CADSUS" é uma referência ao código utilizado no manual [![](img/pdf.jpg)](Especificacao_CADSUS.pdf "Clique para visualizar o documento de Especificação Técnica para integração PIX/PDQ").
+A coluna "Código CADSUS" é uma referência ao código utilizado no manual <a href="Especificacao_CADSUS.pdf" title="Clique para visualizar o documento de Especificação Técnica para integração PIX/PDQ">
+![](img/pdf.jpg)
+</a>.
 
 | Código | Código CADSUS | Descrição                                                                            |
 | ------ | ------------- | ------------------------------------------------------------------------------------ |

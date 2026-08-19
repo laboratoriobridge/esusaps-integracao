@@ -39,6 +39,7 @@ A tabela `tb_fat_atvdd_coletiva_part` registra os **cidadãos participantes** de
 | st\_avaliacao\_alterada | :link[avaliacaoAlterada]{id=dicionario-fac anchor=3-avaliacaoalterada} | Indica se a avaliação do participante está alterada |
 | st\_pcnt\_cessou\_habito\_fumar | :link[cessouHabitoFumar]{id=dicionario-fac anchor=6-cessouhabitofumar} | Indica se o participante cessou o hábito de fumar |
 | st\_pcnt\_abandonou\_grupo | :link[abandonouGrupo]{id=dicionario-fac anchor=7-abandonougrupo} | Indica se o participante abandonou o grupo |
+| st\_nao\_possui\_cpf | :link[stNaoPossuiCpf]{id=dicionario-fac anchor=10-stnaopossuicpf} | Indica se o participante não possui CPF |
 
 ## 4. Dimensões da tabela
 
@@ -48,6 +49,7 @@ A tabela `tb_fat_atvdd_coletiva_part` registra os **cidadãos participantes** de
 | --------- | ------------------- |
 | co\_dim\_tipo\_atividade | Código do tipo de atividade. Campo `co_seq_dim_tipo_atividade` da `tb_dim_tipo_atividade` |
 | co\_dim\_participante\_sexo | Código do sexo do participante. Campo `co_seq_dim_faixa_sexo` da `tb_dim_sexo` |
+| co\_dim\_just\_nao\_possui\_cpf | Código da justificativa de não possuir CPF. Campo `co_seq_dim_just_nao_possui_cpf` da `tb_dim_just_nao_possui_cpf` |
 
 ### 4.2 Dimensões comuns a todas as tabelas fato da atividade coletiva
 

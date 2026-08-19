@@ -1,7 +1,7 @@
 ---
 id: ledi
 title: Layout e-SUS APS de Dados e Interface
-order: 1
+order: 4
 parent: integracao
 ---
 
@@ -15,9 +15,10 @@ Este documento descreve os atributos utilizados no **LEDI APS**:
 
 | Versão PEC e-SUS APS | Versão do LEDI APS compatível                                       | Datas de liberação   |
 |----------------------|---------------------------------------------------------------------|----------------------|
-| 5.5.21 ou superior   | :link[LEDI APS 8.4.2]{id=layout_ab}                               | 02/07/2026           |
-| 5.5.19 ou superior   | :link[LEDI APS 8.4.1]{id=layout_ab}                               | 23/06/2026           |
-| 5.5.17 ou superior   | [LEDI APS 8.4.0](https://integracao.esusaps.bridge.ufsc.tech/v840/) | 12/06/2026           |
+| 5.5.26 ou superior   | :link[LEDI APS 8.7.0]{id=layout_ab}                               | 13/08/2026           |
+| 5.5.25 ou superior   | [LEDI APS 8.6.0](https://integracao.esusaps.bridge.ufsc.tech/v860/) | 30/07/2026           |
+| 5.5.23 ou superior   | [LEDI APS 8.5.0](https://integracao.esusaps.bridge.ufsc.tech/v850/) | 16/07/2026           |
+| 5.5.21 ou superior   | [LEDI APS 8.4.2](https://integracao.esusaps.bridge.ufsc.tech/v842/) | 02/07/2026           |
 | 5.4.38 ou superior   | [LEDI APS 7.4.2](https://integracao.esusaps.bridge.ufsc.tech/v742/) | 14/05/2026           |
 | 5.4.36 ou superior   | [LEDI APS 7.4.1](https://integracao.esusaps.bridge.ufsc.tech/v741/) | 23/04/2026           |
 | 5.4.34 ou superior   | [LEDI APS 7.4.0](https://integracao.esusaps.bridge.ufsc.tech/v740/) | 26/03/2026           |

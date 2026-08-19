@@ -1,11 +1,11 @@
 ---
 id: thrift-xsd
-title: Registros Thrift / XSD por ficha
+title: Registros Thrift / XSD por Modelo de Informação
 order: 4
 parent: layout_ab
 ---
 
-### Ficha de Cadastro Individual
+### Modelo de Informação de Cadastro Individual
 
 | Dicionário de dados | Thrift | XSD |
 | ------------------- | ------ | --- |
@@ -16,7 +16,7 @@ parent: layout_ab
 |:link[InformacoesSocioDemograficas]{id=dicionario-fci anchor=informacoessociodemograficas}	|InformacoesSocioDemograficasThrift	| informacoessociodemograficas.xsd |
 |:link[SaidaCidadaoCadastro]{id=dicionario-fci anchor=saidacidadaocadastro} | SaidaCidadaoCadastroThrift | saidacidadaocadastro.xsd |
 
-### Ficha de Cadastro Domiciliar
+### Modelo de Informação de Cadastro Domiciliar
 
 | Dicionário de dados | Thrift | XSD |
 | ------------------- | ------ | --- |
@@ -26,7 +26,7 @@ parent: layout_ab
 | :link[CondicaoMoradia]{id=dicionario-fcd anchor=condicaomoradia} | CondicaoMoradiaThrift | condicaomoradia.xsd |
 | :link[InstituicaoPermanencia]{id=dicionario-fcd anchor=instituicaopermanencia} | InstituicaoPermanenciaThrift | instituicaopermanencia.xsd |
 
-### Ficha de Atendimento Individual
+### Modelo de Informação de Atendimento Individual
 
 | Dicionário de dados | Thrift | XSD |
 | ------------------- | ------ | --- |
@@ -38,7 +38,7 @@ parent: layout_ab
 | :link[Encaminhamentos]{id=dicionario-fai anchor=encaminhamentos} | EncaminhamentosThrift | encaminhamentos.xsd |
 | :link[ResultadosExames]{id=dicionario-fai anchor=resultadosexames} | ResultadosExamesThrift | resultadosexames.xsd |
 
-### Ficha de Atendimento Odontológico
+### Modelo de Informação de Atendimento Odontológico
 
 | Dicionário de dados | Thrift | XSD |
 | ------------------- | ------ | --- |
@@ -50,7 +50,7 @@ parent: layout_ab
 | :link[ResultadosExames]{id=dicionario-fao anchor=resultadosexames} | ResultadosExamesThrift | resultadosexames.xsd |
 | :link[ProblemaCondicao]{id=dicionario-fai anchor=problemacondicao} | ProblemaCondicaoAIThrift | problemacondicao.xsd |
 
-### Ficha de Atividade Coletiva
+### Modelo de Informação de Atividade Coletiva
 
 | Dicionário de dados | Thrift | XSD |
 | ------------------- | ------ | --- |
@@ -58,14 +58,14 @@ parent: layout_ab
 | :link[ParticipanteRowItem]{id=dicionario-fac anchor=participanterowitem} | ParticipanteRowItemThrift | participanterowitem.xsd |
 | :link[ProfissionalCboRowItem]{id=dicionario-fac anchor=profissionalcborowitem} | ProfissionalCboRowItemThrift | profissionalcborowitem.xsd |
 
-### Ficha de Procedimentos
+### Modelo de Informação de Procedimentos
 
 | Dicionário de dados | Thrift | XSD |
 | ------------------- | ------ | --- |
 |:link[FichaProcedimentoMaster]{id=dicionario-fp anchor=fichaprocedimentomaster}	|FichaProcedimentoMasterThrift	| fichaprocedimentomaster.xsd |
 |:link[FichaProcedimentoChild]{id=dicionario-fp anchor=fichaprocedimentochild}	|FichaProcedimentoChildThrift	| fichaprocedimentochild.xsd |
 
-### Ficha de Visita Domiciliar
+### Modelo de Informação de Visita Domiciliar
 
 |Dicionário de dados |Thrift |XSD |
 |--- |--- |--- |
@@ -86,14 +86,14 @@ parent: layout_ab
 |:link[PerguntaCriancasDeSeisVinteTresMesesEnum]{id=dicionario-mca anchor=perguntacriancasdeseisvintetresmesesenum}	|PerguntaCriancasDeSeisVinteTresMesesEnumThrift	| perguntacriancasdeseisvintetresmesesenum.xsd |
 |:link[PerguntaCriancasMenoresSeisMesesEnum]{id=dicionario-mca anchor=perguntacriancasmenoresseismesesenum}	|PerguntaCriancasMenoresSeisMesesEnumThrift	| perguntacriancasmenoresseismesesenum.xsd |
 
-### Ficha de Avaliação de Elegibilidade
+### Modelo de Informação de Avaliação de Elegibilidade
 
 | Dicionário de dados | Thrift | XSD |
 | ------------------- | ------ | --- |
 |:link[FichaAvaliacaoElegibilidade]{id=dicionario-fae anchor=fichaavaliacaoelegibilidade}	|FichaAvaliacaoElegibilidadeThrift	| fichaavaliacaoelegibilidade.xsd |
 |:link[EnderecoLocalPermanencia]{id=dicionario-fae anchor=enderecolocalpermanencia}	|EnderecoLocalPermanenciaThrift	| enderecolocalpermanencia.xsd |
 
-### Ficha de Atendimento Domiciliar
+### Modelo de Informação de Atendimento Domiciliar
 
 | Dicionário de dados | Thrift | XSD |
 | ------------------- | ------ | --- |
@@ -101,13 +101,13 @@ parent: layout_ab
 |:link[FichaAtendimentoDomiciliarChild]{id=dicionario-fad anchor=fichaatendimentodomiciliarchild}	|FichaAtendimentoDomiciliarChildThrift	| fichaatendimentodomiciliarchild.xsd |
 |:link[ProblemaCondicao]{id=dicionario-fai anchor=problemacondicao} | ProblemaCondicaoAIThrift | problemacondicao.xsd |
 
-### Ficha complementar - Síndrome neurológica por Zika / Microcefalia
+### Modelo de Informação Complementar - Síndrome Neurológica por Zika / Microcefalia
 
 | Dicionário de dados | Thrift | XSD |
 | ------------------- | ------ | --- |
 |:link[FichaComplementarZikaMicrocefalia]{id=dicionario-fczm anchor=fichacomplementarzikamicrocefalia}|FichaComplementarZikaMicrocefaliaThrift| fichacomplementarzikamicrocefalia.xsd|
 
-### Ficha de Vacinação
+### Modelo de Informação de Vacinação
 
 | Dicionário de dados | Thrift | XSD |
 | ------------------- | ------ | --- |

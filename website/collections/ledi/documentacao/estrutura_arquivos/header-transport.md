@@ -5,9 +5,9 @@ order: 1
 parent: estrutura_arquivos
 ---
 
-# UnicaLotacaoHeader
+## UnicaLotacaoHeader
 
-### \#1 profissionalCNS
+#### \#1 profissionalCNS
 
 CNS do profissional.
 
@@ -18,11 +18,11 @@ CNS do profissional.
 **Regras:**
 
 - CNS validado de acordo com o :link[algoritmo de validação]{id=algoritmo_CNS};
-- Somente fichas de profissionais com vínculo com o respectivo município são consideradas válidas.
+- Somente registros de profissionais com vínculo com o respectivo município são considerados válidos.
 
-**Observações:** Esta entidade é utilizada para representar o profissional responsável pelas fichas.
+**Observações:** Esta entidade é utilizada para representar o profissional responsável pelos registros.
 
-### \#2 cboCodigo_2002
+#### \#2 cboCodigo_2002
 
 Código do CBO do profissional.
 
@@ -30,13 +30,13 @@ Código do CBO do profissional.
 | ------ | ----------- | ------ | ------ |
 | String | Sim         | -      | -      |
 
-**Regras:** Somente as CBOs apresentadas na tabela da respectiva ficha podem ser adicionadas neste campo.
+**Regras:** Somente as CBOs apresentadas na tabela do respectivo modelo de informação podem ser adicionadas neste campo.
 
 **Referências:** :link{id=grupo_cbo}.
 
-**Observações:** Esta entidade é utilizada para representar o profissional responsável pelas fichas.
+**Observações:** Esta entidade é utilizada para representar o profissional responsável pelos registros.
 
-### \#3 cnes
+#### \#3 cnes
 
 Código do CNES do estabelecimento de saúde onde o profissional está lotado.
 
@@ -46,9 +46,9 @@ Código do CNES do estabelecimento de saúde onde o profissional está lotado.
 
 **Regras:** Deve ser preenchido com a mesma informação do campo :link[#3 cnesDadoSerializado]{id=camada-transporte anchor=3-cnesdadoserializado}.
 
-**Observações:** Esta entidade é utilizada para representar o profissional responsável pelas fichas.
+**Observações:** Esta entidade é utilizada para representar o profissional responsável pelos registros.
 
-### \#4 ine
+#### \#4 ine
 
 Código INE da equipe do profissional.
 
@@ -58,9 +58,9 @@ Código INE da equipe do profissional.
 
 **Regras:** Deve ser preenchido com a mesma informação do campo :link[#5 ineDadoSerializado]{id=camada-transporte anchor=5-inedadoserializado}.
 
-**Observações:** Esta entidade é utilizada para representar o profissional responsável pelas fichas.
+**Observações:** Esta entidade é utilizada para representar o profissional responsável pelos registros.
 
-### \#5 dataAtendimento
+#### \#5 dataAtendimento
 
 Data em que está sendo realizada a ação.
 
@@ -68,11 +68,11 @@ Data em que está sendo realizada a ação.
 | ---- | ----------- | ------ | ------ |
 | Long | Sim         | -      | -      |
 
-**Referências:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referências:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
 **Regras:** Não pode ser posterior à data atual.
 
-### \#6 codigoIbgeMunicipio
+#### \#6 codigoIbgeMunicipio
 
 Código IBGE do município.
 
@@ -86,7 +86,7 @@ Código IBGE do município.
 
 ---
 
-## LotacaoHeader
+### LotacaoHeader
 
 <a name = "#1-profissionalcnslotacaoheader"></a>
 
@@ -101,7 +101,7 @@ CNS do profissional.
 **Regras:**
 
 - CNS validado de acordo com o :link[algoritmo de validação]{id=algoritmo_CNS};
-- Somente fichas de profissionais com vínculo com o respectivo município são consideradas válidas.
+- Somente registros de profissionais com vínculo com o respectivo município são considerados válidos.
 
 <a name = "#2-cbocodigo_2002lotacaoheader"></a>
 
@@ -115,7 +115,7 @@ Código do CBO do profissional.
 
 **Regras:**
 
-- Se for registro de [lotacaoFormPrincipal](#1-lotacaoformprincipal) somente as :link{id=grupo_cbo} apresentadas na tabela da respectiva ficha podem ser adicionadas neste campo;
+- Se for registro de [lotacaoFormPrincipal](#1-lotacaoformprincipal) somente as :link{id=grupo_cbo} apresentadas na tabela do respectivo modelo de informação podem ser adicionadas neste campo;
 - Se for registro de [lotacaoFormAtendimentoCompartilhado](#2-lotacaoformatendimentocompartilhado) a referência é a :link[Lista com todas as CBOs]{id=cbo}.
 
 <a name = "#3-cneslotacaoheader"></a>
@@ -148,9 +148,9 @@ Código INE da equipe do profissional.
 - Se for registro de [lotacaoFormPrincipal](#1-lotacaoformprincipal), deve ser preenchido com a mesma informação do campo :link[#5 ineDadoSerializado]{id=camada-transporte anchor=5-inedadoserializado};
 - Se for registro de [lotacaoFormAtendimentoCompartilhado](#2-lotacaoformatendimentocompartilhado), pode ser preenchido com qualquer INE pertencente ao respectivo município.
 
-# VariasLotacoesHeader
+## VariasLotacoesHeader
 
-### \#1 lotacaoFormPrincipal
+#### \#1 lotacaoFormPrincipal
 
 Profissional responsável pelo atendimento.
 
@@ -160,9 +160,9 @@ Profissional responsável pelo atendimento.
 
 **Referências:** [LotacaoHeader](#lotacaoheader).
 
-**Observações:** Esta entidade é utilizada para representar o profissional responsável pela ficha.
+**Observações:** Esta entidade é utilizada para representar o profissional responsável pelo registro.
 
-### \#2 lotacaoFormAtendimentoCompartilhado
+#### \#2 lotacaoFormAtendimentoCompartilhado
 
 Profissional auxiliar no atendimento.
 
@@ -172,9 +172,9 @@ Profissional auxiliar no atendimento.
 
 **Referências:** [LotacaoHeader](#lotacaoheader).
 
-**Observações:** Esta entidade é utilizada para representar um profissional que auxiliou o profissional responsável pela ficha.
+**Observações:** Esta entidade é utilizada para representar um profissional que auxiliou o profissional responsável pelo registro.
 
-### \#3 dataAtendimento
+#### \#3 dataAtendimento
 
 Data em que está sendo realizada a ação.
 
@@ -184,9 +184,9 @@ Data em que está sendo realizada a ação.
 
 **Regras:** Não pode ser posterior à data atual.
 
-**Referências:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Current millis](https://currentmillis.com/).
+**Referências:** A data deve ser apresentada seguindo o padrão [Epoch](https://pt.wikipedia.org/wiki/Era_Unix), convertido em milissegundos. Para realizar a conversão, pode ser utilizado o conversor [Epoch Converter](https://www.epochconverter.com/).
 
-### \#4 codigoIbgeMunicipio
+#### \#4 codigoIbgeMunicipio
 
 Código IBGE do município.
 
@@ -198,9 +198,9 @@ Código IBGE do município.
 
 **Referências:** :link{id=municipios}.
 
-# LotacaoThrift
+## LotacaoThrift
 
-### \#1 CPF
+#### \#1 CPF
 
 CPF do profissional.
 
@@ -213,7 +213,7 @@ CPF do profissional.
 - Somente CPF válido;
 - Somente CPF já existente na base de dados será considerado válido.
 
-### \#2 CNS
+#### \#2 CNS
 
 CNS do profissional.
 
@@ -225,9 +225,9 @@ CNS do profissional.
 
 - CNS validado de acordo com o :link[algoritmo de validação]{id=algoritmo_CNS};
 - Somente CNS já existente na base de dados será considerado válido.
-- Somente fichas de profissionais com vínculo com o respectivo município são consideradas válidas.
+- Somente registros de profissionais com vínculo com o respectivo município são considerados válidos.
 
-### \#3 cboCodigo_2002
+#### \#3 cboCodigo_2002
 
 Código do CBO do profissional.
 
@@ -237,7 +237,7 @@ Código do CBO do profissional.
 
 **Regras:** Somente CBO Válido.
 
-### \#4 ine
+#### \#4 ine
 
 Código INE da equipe do profissional.
 
@@ -245,7 +245,7 @@ Código INE da equipe do profissional.
 | ------ | ----------- | ------ | ------ |
 | String | Não         | 10     | 10     |
 
-### \#5 cnes
+#### \#5 cnes
 
 Código do CNES do estabelecimento de saúde onde o profissional está lotado.
 
@@ -253,7 +253,7 @@ Código do CNES do estabelecimento de saúde onde o profissional está lotado.
 | ------ | ----------- | ------ | ------ |
 | String | Sim         | 7      | 7      |
 
-### \#6 codigoIbgeMunicipio
+#### \#6 codigoIbgeMunicipio
 
 Código IBGE do município.
 
