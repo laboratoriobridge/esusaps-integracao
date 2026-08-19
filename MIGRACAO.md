@@ -56,13 +56,59 @@ website/
     anchorSlug.ts                # âncoras "à moda kramdown" -> github-slugger
     generate-jekyll-redirects.ts # mapa de URLs antigas (.html) -> novas
   src/
-    remark/     # :link{}/:url{}/:nr/:page{} (equivalentes das tags Liquid)
+    remark/     # regras de conversão em tempo de build (ver abaixo)
     theme/      # breadcrumb + botão de impressão, paginação em pt-BR
     components/, utils/, pages/print/   # seleção e impressão de páginas
     data/integracao.ts                  # rótulos e SITE_VERSION
 scripts/publish-site.sh   # website/build -> raiz do repositório
 v<versão>/                # HTML congelado de versões anteriores — não migrar
 ```
+
+### Regras de conversão aplicadas no build
+
+O conteúdo em `collections/` é sincronizado do esus-aps-doc sem edição
+manual, então tudo que precisa ser ajustado vira **regra de build** — assim
+a próxima sincronização não desfaz o ajuste. As regras vivem em
+`website/src/remark/`:
+
+| Plugin | O que resolve |
+|---|---|
+| `resolveDocLinks` | `:link{}`/`:url{}` (as tags `{% link %}`/`{% url %}` do Jekyll) e âncoras "à moda kramdown" |
+| `numberedItems` | `:nr` (numeração automática de itens) |
+| `pageVariables` | `:page{field=…}` (`{{ page.x }}` do Jekyll) |
+| `demoteNumberedHeadings` | `# 1. Objetivo` era numeração de seção, não título de página — rebaixa um nível para ganhar `id` e entrar no TOC |
+| `changelogHeadings` | hierarquia das páginas de "principais alterações" (abaixo) |
+
+#### Hierarquia das páginas de "principais alterações"
+
+No Jekyll o nível de cada heading foi escolhido pelo tamanho da fonte, não
+pela estrutura — e é justamente do nível do heading que o Docusaurus monta o
+menu da direita (TOC, faixa padrão h2–h3). O que veio da conversão:
+
+- **LEDI**: as versões são `###`, mas três alterações também ficaram `###`
+  em vez de `####` — apareciam no menu misturadas às versões;
+- **DW**: todas as versões são `####`, abaixo da faixa do TOC — a página não
+  tinha menu nenhum.
+
+`changelogHeadings.ts` normaliza: **heading de versão vira h2** (único nível
+na faixa do TOC, então o menu lista exatamente uma entrada por versão) e
+**todo heading de alteração vira h4**, achatado num nível só — essas páginas
+são de dois níveis por construção (versão > alteração), e preservar a
+diferença de nível de origem preservaria o erro de digitação, deixando
+alterações irmãs em tamanhos diferentes dentro da mesma versão.
+
+Detalhe de implementação: o plugin roda em `beforeDefaultRemarkPlugins`. O
+TOC é extraído por um plugin interno do `@docusaurus/mdx-loader` que roda
+antes dos `remarkPlugins` normais — de lá, reescrever o nível do heading não
+teria efeito nenhum sobre o menu.
+
+Isso também explica por que `demoteNumberedHeadings` continua nos
+`remarkPlugins` normais (depois da extração do TOC): no resto do site o
+efeito colateral é desejável — o menu enxerga os níveis originais e mostra
+duas camadas (`1. Objetivo` > `1.1 Sub-item`), enquanto o HTML renderizado
+usa os níveis rebaixados. As âncoras são as mesmas nos dois casos, então os
+links continuam válidos. Nas páginas de changelog esse plugin é desligado:
+`changelogHeadings` já é dono da hierarquia delas.
 
 ### Diferenças em relação ao esus-aps-doc
 
@@ -108,6 +154,8 @@ find website/collections \( -name '*-piloto.*' -o -name 'dicionario-epa.*' \) -d
 Já validado:
 
 - build de produção limpo (`npm run build`) e `npm run typecheck` sem erros;
+- menu da direita das páginas de "principais alterações": 27 versões (LEDI)
+  e 17 versões (DW), uma entrada por versão e nada além disso;
 - 360 rotas geradas, cobrindo as 193 páginas hoje publicadas fora das
   pastas `v<versão>` (mesma árvore de navegação, mesmos títulos);
 - 167 redirecionamentos de URL antiga (`.html`) para a nova, com origem e

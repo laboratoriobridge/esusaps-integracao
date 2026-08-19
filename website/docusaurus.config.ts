@@ -6,6 +6,7 @@ import remarkResolveDocLinks from './src/remark/resolveDocLinks';
 import remarkNumberedItems from './src/remark/numberedItems';
 import remarkDemoteNumberedHeadings from './src/remark/demoteNumberedHeadings';
 import remarkPageVariables from './src/remark/pageVariables';
+import remarkChangelogHeadings from './src/remark/changelogHeadings';
 import {
   COLLECTIONS,
   DEFAULT_COLLECTION,
@@ -53,13 +54,16 @@ const collectionRemarkPlugins = [
   remarkNumberedItems,
 ];
 
-// `:page{field=...}` precisa resolver ANTES do plugin interno `contentTitle`
-// do mdx-loader (que extrai o texto do h1 pra metadata.title/paginação/TOC
-// via mdast-util-to-string, ainda sem entender diretivas). O mdx-loader roda
-// `options.remarkPlugins` só DEPOIS de contentTitle; `beforeDefaultRemarkPlugins`
-// é o único ponto de extensão anterior a ele (ver @docusaurus/mdx-loader
-// processor.js).
-const beforeDefaultRemarkPlugins = [remarkPageVariables];
+// Plugins que precisam rodar ANTES dos plugins internos do mdx-loader —
+// `beforeDefaultRemarkPlugins` é o único ponto de extensão anterior a eles
+// (ver @docusaurus/mdx-loader processor.js):
+//
+// - `:page{field=...}` precisa resolver antes do `contentTitle`, que extrai
+//   o texto do h1 pra metadata.title/paginação/TOC via mdast-util-to-string,
+//   ainda sem entender diretivas;
+// - a hierarquia dos changelogs precisa estar definida antes da extração do
+//   TOC, que é o que alimenta o menu da direita.
+const beforeDefaultRemarkPlugins = [remarkChangelogHeadings, remarkPageVariables];
 
 // Uma instância de plugin-content-docs por collection, exceto a default
 // (essa usa a instância do preset classic, configurada abaixo).
