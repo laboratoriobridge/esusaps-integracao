@@ -38,6 +38,8 @@ namespace br.gov.saude.esusab.ras.vacinacao
     private long _dataHoraFinalAtendimento;
     private string _cpfCidadao;
     private long _condicaoMaternal;
+    private bool _stNaoPossuiCpf;
+    private long _justificativaNaoPossuiCpf;
 
     public long Turno
     {
@@ -234,6 +236,32 @@ namespace br.gov.saude.esusab.ras.vacinacao
       }
     }
 
+    public bool StNaoPossuiCpf
+    {
+      get
+      {
+        return _stNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.stNaoPossuiCpf = true;
+        this._stNaoPossuiCpf = value;
+      }
+    }
+
+    public long JustificativaNaoPossuiCpf
+    {
+      get
+      {
+        return _justificativaNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.justificativaNaoPossuiCpf = true;
+        this._justificativaNaoPossuiCpf = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -255,6 +283,8 @@ namespace br.gov.saude.esusab.ras.vacinacao
       public bool dataHoraFinalAtendimento;
       public bool cpfCidadao;
       public bool condicaoMaternal;
+      public bool stNaoPossuiCpf;
+      public bool justificativaNaoPossuiCpf;
     }
 
     public FichaVacinacaoChildThrift() {
@@ -278,14 +308,14 @@ namespace br.gov.saude.esusab.ras.vacinacao
             case 1:
               if (field.Type == TType.I64) {
                 Turno = iprot.ReadI64();
-              } else { 
+              } else {
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
             case 2:
               if (field.Type == TType.String) {
                 NumProntuario = iprot.ReadString();
-              } else { 
+              } else {
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
@@ -388,6 +418,20 @@ namespace br.gov.saude.esusab.ras.vacinacao
               if (field.Type == TType.I64) {
                 CondicaoMaternal = iprot.ReadI64();
               } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 16:
+              if (field.Type == TType.Bool) {
+                StNaoPossuiCpf = iprot.ReadBool();
+              } else {
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 17:
+              if (field.Type == TType.I64) {
+                JustificativaNaoPossuiCpf = iprot.ReadI64();
+              } else {
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
@@ -539,6 +583,22 @@ namespace br.gov.saude.esusab.ras.vacinacao
           oprot.WriteI64(CondicaoMaternal);
           oprot.WriteFieldEnd();
         }
+        if (__isset.stNaoPossuiCpf) {
+          field.Name = "stNaoPossuiCpf";
+          field.Type = TType.Bool;
+          field.ID = 16;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteBool(StNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.justificativaNaoPossuiCpf) {
+          field.Name = "justificativaNaoPossuiCpf";
+          field.Type = TType.I64;
+          field.ID = 17;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(JustificativaNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -640,6 +700,18 @@ namespace br.gov.saude.esusab.ras.vacinacao
         __first = false;
         __sb.Append("CondicaoMaternal: ");
         __sb.Append(CondicaoMaternal);
+      }
+      if (__isset.stNaoPossuiCpf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("StNaoPossuiCpf: ");
+        __sb.Append(StNaoPossuiCpf);
+      }
+      if (__isset.justificativaNaoPossuiCpf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("JustificativaNaoPossuiCpf: ");
+        __sb.Append(JustificativaNaoPossuiCpf);
       }
       __sb.Append(")");
       return __sb.ToString();

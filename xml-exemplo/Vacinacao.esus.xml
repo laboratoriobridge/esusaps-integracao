@@ -24,6 +24,8 @@
             <turno>2</turno>
             <numProntuario>12</numProntuario>
             <cnsCidadao>767273769570018</cnsCidadao>
+            <stNaoPossuiCpf>true</stNaoPossuiCpf>
+            <justificativaNaoPossuiCpf>5</justificativaNaoPossuiCpf>
             <dtNascimento>1430838000000</dtNascimento>
             <sexo>1</sexo>
             <localAtendimento>1</localAtendimento>
@@ -53,8 +55,8 @@
         <vacinacoes>
             <turno>1</turno>
             <numProntuario>52</numProntuario>
-            <cnsCidadao>767273769570019</cnsCidadao>
             <cpfCidadao>31422733521</cpfCidadao>
+            <stNaoPossuiCpf>false</stNaoPossuiCpf>
             <dtNascimento>1430808000000</dtNascimento>
             <sexo>1</sexo>
             <localAtendimento>1</localAtendimento>
@@ -120,5 +122,5 @@
         <versaoSistema>5.4.14</versaoSistema>
         <nomeBancoDados>Oracle</nomeBancoDados>
     </ns2:originadora>
-    <versao major="7" minor="3" revision="0"/>
+    <versao major="8" minor="4" revision="0"/>
 </ns3:dadoTransporteTransportXml>

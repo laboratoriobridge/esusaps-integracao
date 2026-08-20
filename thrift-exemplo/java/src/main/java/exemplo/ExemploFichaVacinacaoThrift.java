@@ -33,7 +33,7 @@ public class ExemploFichaVacinacaoThrift {
 		dadoTransporteThrift.setDadoSerializado(fichaSerializada);
 
 		// Não esquecer de informar a versão da ficha a ser exportada (não é a versão do e-SUS AB)
-		VersaoThrift versaoThrift = new VersaoThrift(7, 3, 0);
+		VersaoThrift versaoThrift = new VersaoThrift(8, 4, 0);
 		dadoTransporteThrift.setVersao(versaoThrift);
 
 		return dadoTransporteThrift;
@@ -123,7 +123,9 @@ public class ExemploFichaVacinacaoThrift {
 		vacinacao1.setDtNascimento(dataNascimento1.getTimeInMillis());
 
 		vacinacao1.setLocalAtendimento(2);
-		vacinacao1.setCpfCidadao("81381513077");
+		vacinacao1.setCnsCidadao("767273769570018");
+		vacinacao1.setStNaoPossuiCpf(true);
+		vacinacao1.setJustificativaNaoPossuiCpf(5);
 		vacinacao1.setNumProntuario("35284");
 		vacinacao1.setSexo(0);
 		vacinacao1.setTurno(2);
@@ -150,6 +152,7 @@ public class ExemploFichaVacinacaoThrift {
 
 		vacinacao2.setLocalAtendimento(1);
 		vacinacao2.setCpfCidadao("61228957096");
+		vacinacao2.setStNaoPossuiCpf(false);
 		vacinacao2.setNumProntuario("43143");
 		vacinacao2.setSexo(1);
 		vacinacao2.setTurno(1);
