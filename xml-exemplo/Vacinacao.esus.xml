@@ -33,17 +33,17 @@
             <vacinas>
                 <imunobiologico>5</imunobiologico>
                 <estrategiaVacinacao>2</estrategiaVacinacao>
+                <dose>1</dose>
                 <lote>DEF01</lote>
                 <grupoAtendimento>84</grupoAtendimento>
                 <stRegistroAnterior>false</stRegistroAnterior>
-                <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
                 <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
                 <cid10MotivoIndicacao>A09</cid10MotivoIndicacao>
                 <stPesquisaClinica>false</stPesquisaClinica>
-                <stAplicadoExterior>false</stAplicadoExterior>
-                <viaAdministracao>10898</viaAdministracao>
-                <localAplicacao>16</localAplicacao>
+                <viaAdministracao>1</viaAdministracao>
+                <localAplicacao>17</localAplicacao>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440000</uuidRnds>
+                <coRndsFabricante>152</coRndsFabricante>
             </vacinas>
             <dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
             <dataHoraFinalAtendimento>1551538800000</dataHoraFinalAtendimento>
@@ -66,25 +66,22 @@
                 <lote>DEF01</lote>
                 <grupoAtendimento>99</grupoAtendimento>
                 <stRegistroAnterior>false</stRegistroAnterior>
-                <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
                 <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
                 <cid10MotivoIndicacao>Z23</cid10MotivoIndicacao>
                 <stPesquisaClinica>false</stPesquisaClinica>
-                <stAplicadoExterior>false</stAplicadoExterior>
-                <viaAdministracao>10907</viaAdministracao>
-                <localAplicacao>9</localAplicacao>
+                <viaAdministracao>5</viaAdministracao>
+                <localAplicacao>1</localAplicacao>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440002</uuidRnds>
+                <coRndsFabricante>152</coRndsFabricante>
             </vacinas>
             <vacinas>
                 <imunobiologico>87</imunobiologico>
-                <estrategiaVacinacao>2</estrategiaVacinacao>
+                <estrategiaVacinacao>1</estrategiaVacinacao>
                 <dose>1</dose>
                 <lote>ABC</lote>
                 <grupoAtendimento>112</grupoAtendimento>
                 <stRegistroAnterior>true</stRegistroAnterior>
                 <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
-                <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
-                <cid10MotivoIndicacao>Z23</cid10MotivoIndicacao>
                 <stPesquisaClinica>true</stPesquisaClinica>
                 <anvisaProtocoloEstudo>PROT-123</anvisaProtocoloEstudo>
                 <anvisaProtocoloVersao>1.0</anvisaProtocoloVersao>

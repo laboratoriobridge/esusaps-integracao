@@ -232,8 +232,8 @@ VacinaRowThrift.prototype.read = function(input) {
       }
       break;
       case 19:
-      if (ftype == Thrift.Type.I64) {
-        this.coRndsFabricante = input.readI64();
+      if (ftype == Thrift.Type.STRING) {
+        this.coRndsFabricante = input.readString();
       } else {
         input.skip(ftype);
       }
@@ -340,8 +340,8 @@ VacinaRowThrift.prototype.write = function(output) {
     output.writeFieldEnd();
   }
   if (this.coRndsFabricante !== null && this.coRndsFabricante !== undefined) {
-    output.writeFieldBegin('coRndsFabricante', Thrift.Type.I64, 19);
-    output.writeI64(this.coRndsFabricante);
+    output.writeFieldBegin('coRndsFabricante', Thrift.Type.STRING, 19);
+    output.writeString(this.coRndsFabricante);
     output.writeFieldEnd();
   }
   output.writeFieldStop();

@@ -56,7 +56,7 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
   private static final org.apache.thrift.protocol.TField ANVISA_NUMERO_REGISTRO_FIELD_DESC = new org.apache.thrift.protocol.TField("anvisaNumeroRegistro", org.apache.thrift.protocol.TType.STRING, (short)16);
   private static final org.apache.thrift.protocol.TField VIA_ADMINISTRACAO_FIELD_DESC = new org.apache.thrift.protocol.TField("viaAdministracao", org.apache.thrift.protocol.TType.I64, (short)17);
   private static final org.apache.thrift.protocol.TField LOCAL_APLICACAO_FIELD_DESC = new org.apache.thrift.protocol.TField("localAplicacao", org.apache.thrift.protocol.TType.I64, (short)18);
-  private static final org.apache.thrift.protocol.TField CO_RNDS_FABRICANTE_FIELD_DESC = new org.apache.thrift.protocol.TField("coRndsFabricante", org.apache.thrift.protocol.TType.I64, (short)19);
+  private static final org.apache.thrift.protocol.TField CO_RNDS_FABRICANTE_FIELD_DESC = new org.apache.thrift.protocol.TField("coRndsFabricante", org.apache.thrift.protocol.TType.STRING, (short)19);
 
   private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
   static {
@@ -82,7 +82,7 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
   private String anvisaNumeroRegistro; // optional
   private long viaAdministracao; // optional
   private long localAplicacao; // optional
-  private long coRndsFabricante; // optional
+  private String coRndsFabricante; // optional
 
   /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
   public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -207,7 +207,6 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
   private static final int __STPESQUISACLINICA_ISSET_ID = 7;
   private static final int __VIAADMINISTRACAO_ISSET_ID = 8;
   private static final int __LOCALAPLICACAO_ISSET_ID = 9;
-  private static final int __CORNDSFABRICANTE_ISSET_ID = 10;
   private short __isset_bitfield = 0;
   private static final _Fields optionals[] = {_Fields.IMUNOBIOLOGICO,_Fields.ESTRATEGIA_VACINACAO,_Fields.DOSE,_Fields.LOTE,_Fields.FABRICANTE,_Fields.GRUPO_ATENDIMENTO,_Fields.ST_REGISTRO_ANTERIOR,_Fields.DATA_REGISTRO_ANTERIOR,_Fields.ST_APLICADO_EXTERIOR,_Fields.UUID_RNDS,_Fields.CBO_PRESCRITOR_CODIGO2002,_Fields.CID10_MOTIVO_INDICACAO,_Fields.ST_PESQUISA_CLINICA,_Fields.ANVISA_PROTOCOLO_ESTUDO,_Fields.ANVISA_PROTOCOLO_VERSAO,_Fields.ANVISA_NUMERO_REGISTRO,_Fields.VIA_ADMINISTRACAO,_Fields.LOCAL_APLICACAO,_Fields.CO_RNDS_FABRICANTE};
   public static final Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
@@ -250,7 +249,7 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
     tmpMap.put(_Fields.LOCAL_APLICACAO, new org.apache.thrift.meta_data.FieldMetaData("localAplicacao", org.apache.thrift.TFieldRequirementType.OPTIONAL, 
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
     tmpMap.put(_Fields.CO_RNDS_FABRICANTE, new org.apache.thrift.meta_data.FieldMetaData("coRndsFabricante", org.apache.thrift.TFieldRequirementType.OPTIONAL,
-        new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
+        new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
     metaDataMap = Collections.unmodifiableMap(tmpMap);
     org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(VacinaRowThrift.class, metaDataMap);
   }
@@ -297,7 +296,9 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
     }
     this.viaAdministracao = other.viaAdministracao;
     this.localAplicacao = other.localAplicacao;
-    this.coRndsFabricante = other.coRndsFabricante;
+    if (other.isSetCoRndsFabricante()) {
+      this.coRndsFabricante = other.coRndsFabricante;
+    }
   }
 
   public VacinaRowThrift deepCopy() {
@@ -334,8 +335,7 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
     this.viaAdministracao = 0;
     setLocalAplicacaoIsSet(false);
     this.localAplicacao = 0;
-    setCoRndsFabricanteIsSet(false);
-    this.coRndsFabricante = 0;
+    this.coRndsFabricante = null;
   }
 
   public long getImunobiologico() {
@@ -742,26 +742,27 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
     __isset_bitfield = EncodingUtils.setBit(__isset_bitfield, __LOCALAPLICACAO_ISSET_ID, value);
   }
 
-  public long getCoRndsFabricante() {
+  public String getCoRndsFabricante() {
     return this.coRndsFabricante;
   }
 
-  public void setCoRndsFabricante(long coRndsFabricante) {
+  public void setCoRndsFabricante(String coRndsFabricante) {
     this.coRndsFabricante = coRndsFabricante;
-    setCoRndsFabricanteIsSet(true);
   }
 
   public void unsetCoRndsFabricante() {
-    __isset_bitfield = EncodingUtils.clearBit(__isset_bitfield, __CORNDSFABRICANTE_ISSET_ID);
+    this.coRndsFabricante = null;
   }
 
   /** Returns true if field coRndsFabricante is set (has been assigned a value) and false otherwise */
   public boolean isSetCoRndsFabricante() {
-    return EncodingUtils.testBit(__isset_bitfield, __CORNDSFABRICANTE_ISSET_ID);
+    return this.coRndsFabricante != null;
   }
 
   public void setCoRndsFabricanteIsSet(boolean value) {
-    __isset_bitfield = EncodingUtils.setBit(__isset_bitfield, __CORNDSFABRICANTE_ISSET_ID, value);
+    if (!value) {
+      this.coRndsFabricante = null;
+    }
   }
 
   public void setFieldValue(_Fields field, Object value) {
@@ -914,7 +915,7 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
       if (value == null) {
         unsetCoRndsFabricante();
       } else {
-        setCoRndsFabricante((Long)value);
+        setCoRndsFabricante((String)value);
       }
       break;
 
@@ -1213,7 +1214,7 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
     if (this_present_coRndsFabricante || that_present_coRndsFabricante) {
       if (!(this_present_coRndsFabricante && that_present_coRndsFabricante))
         return false;
-      if (this.coRndsFabricante != that.coRndsFabricante)
+      if (!this.coRndsFabricante.equals(that.coRndsFabricante))
         return false;
     }
 
@@ -1682,7 +1683,11 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
     if (isSetCoRndsFabricante()) {
       if (!first) sb.append(", ");
       sb.append("coRndsFabricante:");
-      sb.append(this.coRndsFabricante);
+      if (this.coRndsFabricante == null) {
+        sb.append("null");
+      } else {
+        sb.append(this.coRndsFabricante);
+      }
       first = false;
     }
     sb.append(")");
@@ -1875,8 +1880,8 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
             }
             break;
           case 19: // CO_RNDS_FABRICANTE
-            if (schemeField.type == org.apache.thrift.protocol.TType.I64) {
-              struct.coRndsFabricante = iprot.readI64();
+            if (schemeField.type == org.apache.thrift.protocol.TType.STRING) {
+              struct.coRndsFabricante = iprot.readString();
               struct.setCoRndsFabricanteIsSet(true);
             } else {
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
@@ -2001,10 +2006,12 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
         oprot.writeI64(struct.localAplicacao);
         oprot.writeFieldEnd();
       }
-      if (struct.isSetCoRndsFabricante()) {
-        oprot.writeFieldBegin(CO_RNDS_FABRICANTE_FIELD_DESC);
-        oprot.writeI64(struct.coRndsFabricante);
-        oprot.writeFieldEnd();
+      if (struct.coRndsFabricante != null) {
+        if (struct.isSetCoRndsFabricante()) {
+          oprot.writeFieldBegin(CO_RNDS_FABRICANTE_FIELD_DESC);
+          oprot.writeString(struct.coRndsFabricante);
+          oprot.writeFieldEnd();
+        }
       }
       oprot.writeFieldStop();
       oprot.writeStructEnd();
@@ -2137,7 +2144,7 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
         oprot.writeI64(struct.localAplicacao);
       }
       if (struct.isSetCoRndsFabricante()) {
-        oprot.writeI64(struct.coRndsFabricante);
+        oprot.writeString(struct.coRndsFabricante);
       }
     }
 
@@ -2218,7 +2225,7 @@ public class VacinaRowThrift implements org.apache.thrift.TBase<VacinaRowThrift,
         struct.setLocalAplicacaoIsSet(true);
       }
       if (incoming.get(18)) {
-        struct.coRndsFabricante = iprot.readI64();
+        struct.coRndsFabricante = iprot.readString();
         struct.setCoRndsFabricanteIsSet(true);
       }
     }

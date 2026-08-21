@@ -57,7 +57,7 @@ type VacinaRowThrift struct {
 	AnvisaNumeroRegistro    *string `thrift:"anvisaNumeroRegistro,16" json:"anvisaNumeroRegistro,omitempty"`
 	ViaAdministracao        *int64  `thrift:"viaAdministracao,17" json:"viaAdministracao,omitempty"`
 	LocalAplicacao          *int64  `thrift:"localAplicacao,18" json:"localAplicacao,omitempty"`
-	CoRndsFabricante        *int64  `thrift:"coRndsFabricante,19" json:"coRndsFabricante,omitempty"`
+	CoRndsFabricante        *string `thrift:"coRndsFabricante,19" json:"coRndsFabricante,omitempty"`
 }
 
 func NewVacinaRowThrift() *VacinaRowThrift {
@@ -226,9 +226,9 @@ func (p *VacinaRowThrift) GetLocalAplicacao() int64 {
 	return *p.LocalAplicacao
 }
 
-var VacinaRowThrift_CoRndsFabricante_DEFAULT int64
+var VacinaRowThrift_CoRndsFabricante_DEFAULT string
 
-func (p *VacinaRowThrift) GetCoRndsFabricante() int64 {
+func (p *VacinaRowThrift) GetCoRndsFabricante() string {
 	if !p.IsSetCoRndsFabricante() {
 		return VacinaRowThrift_CoRndsFabricante_DEFAULT
 	}
@@ -578,7 +578,7 @@ func (p *VacinaRowThrift) readField18(iprot thrift.TProtocol) error {
 }
 
 func (p *VacinaRowThrift) readField19(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadI64(); err != nil {
+	if v, err := iprot.ReadString(); err != nil {
 		return thrift.PrependError("error reading field 19: ", err)
 	} else {
 		p.CoRndsFabricante = &v
@@ -928,10 +928,10 @@ func (p *VacinaRowThrift) writeField18(oprot thrift.TProtocol) (err error) {
 
 func (p *VacinaRowThrift) writeField19(oprot thrift.TProtocol) (err error) {
 	if p.IsSetCoRndsFabricante() {
-		if err := oprot.WriteFieldBegin("coRndsFabricante", thrift.I64, 19); err != nil {
+		if err := oprot.WriteFieldBegin("coRndsFabricante", thrift.STRING, 19); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field begin error 19:coRndsFabricante: ", p), err)
 		}
-		if err := oprot.WriteI64(int64(*p.CoRndsFabricante)); err != nil {
+		if err := oprot.WriteString(string(*p.CoRndsFabricante)); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T.coRndsFabricante (19) field write error: ", p), err)
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {

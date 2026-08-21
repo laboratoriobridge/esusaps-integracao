@@ -63,7 +63,7 @@ class VacinaRowThrift:
     (16, TType.STRING, 'anvisaNumeroRegistro', None, None, ), # 16
     (17, TType.I64, 'viaAdministracao', None, None, ), # 17
     (18, TType.I64, 'localAplicacao', None, None, ), # 18
-    (19, TType.I64, 'coRndsFabricante', None, None, ), # 19
+    (19, TType.STRING, 'coRndsFabricante', None, None, ), # 19
   )
 
   def __init__(self, imunobiologico=None, estrategiaVacinacao=None, dose=None, lote=None, fabricante=None, grupoAtendimento=None, stRegistroAnterior=None, dataRegistroAnterior=None, stAplicadoExterior=None, uuidRnds=None, cboPrescritorCodigo2002=None, cid10MotivoIndicacao=None, stPesquisaClinica=None, anvisaProtocoloEstudo=None, anvisaProtocoloVersao=None, anvisaNumeroRegistro=None, viaAdministracao=None, localAplicacao=None, coRndsFabricante=None,):
@@ -187,8 +187,8 @@ class VacinaRowThrift:
         else:
           iprot.skip(ftype)
       elif fid == 19:
-        if ftype == TType.I64:
-          self.coRndsFabricante = iprot.readI64()
+        if ftype == TType.STRING:
+          self.coRndsFabricante = iprot.readString()
         else:
           iprot.skip(ftype)
       else:
@@ -274,8 +274,8 @@ class VacinaRowThrift:
       oprot.writeI64(self.localAplicacao)
       oprot.writeFieldEnd()
     if self.coRndsFabricante is not None:
-      oprot.writeFieldBegin('coRndsFabricante', TType.I64, 19)
-      oprot.writeI64(self.coRndsFabricante)
+      oprot.writeFieldBegin('coRndsFabricante', TType.STRING, 19)
+      oprot.writeString(self.coRndsFabricante)
       oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()

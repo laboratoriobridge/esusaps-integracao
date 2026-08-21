@@ -55,7 +55,7 @@ module Br
                 ANVISANUMEROREGISTRO => {:type => ::Thrift::Types::STRING, :name => 'anvisaNumeroRegistro', :optional => true},
                 VIAADMINISTRACAO => {:type => ::Thrift::Types::I64, :name => 'viaAdministracao', :optional => true},
                 LOCALAPLICACAO => {:type => ::Thrift::Types::I64, :name => 'localAplicacao', :optional => true},
-                CORNDSFABRICANTE => {:type => ::Thrift::Types::I64, :name => 'coRndsFabricante', :optional => true}
+                CORNDSFABRICANTE => {:type => ::Thrift::Types::STRING, :name => 'coRndsFabricante', :optional => true}
               }
 
               def struct_fields; FIELDS; end

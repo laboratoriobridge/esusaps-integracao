@@ -93,7 +93,7 @@ class VacinaRowThrift {
    */
   public $localAplicacao = null;
   /**
-   * @var int
+   * @var string
    */
   public $coRndsFabricante = null;
 
@@ -174,7 +174,7 @@ class VacinaRowThrift {
           ),
         19 => array(
           'var' => 'coRndsFabricante',
-          'type' => TType::I64,
+          'type' => TType::STRING,
           ),
         );
     }
@@ -385,8 +385,8 @@ class VacinaRowThrift {
           }
           break;
         case 19:
-          if ($ftype == TType::I64) {
-            $xfer += $input->readI64($this->coRndsFabricante);
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->coRndsFabricante);
           } else {
             $xfer += $input->skip($ftype);
           }
@@ -495,8 +495,8 @@ class VacinaRowThrift {
       $xfer += $output->writeFieldEnd();
     }
     if ($this->coRndsFabricante !== null) {
-      $xfer += $output->writeFieldBegin('coRndsFabricante', TType::I64, 19);
-      $xfer += $output->writeI64($this->coRndsFabricante);
+      $xfer += $output->writeFieldBegin('coRndsFabricante', TType::STRING, 19);
+      $xfer += $output->writeString($this->coRndsFabricante);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();
