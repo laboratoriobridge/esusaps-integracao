@@ -68,6 +68,8 @@ type
     procedure SetViaAdministracao( const Value: Int64);
     function GetLocalAplicacao: Int64;
     procedure SetLocalAplicacao( const Value: Int64);
+    function GetCoRndsFabricante: string;
+    procedure SetCoRndsFabricante( const Value: string);
 
     property Imunobiologico: Int64 read GetImunobiologico write SetImunobiologico;
     property EstrategiaVacinacao: Int64 read GetEstrategiaVacinacao write SetEstrategiaVacinacao;
@@ -87,6 +89,7 @@ type
     property AnvisaNumeroRegistro: string read GetAnvisaNumeroRegistro write SetAnvisaNumeroRegistro;
     property ViaAdministracao: Int64 read GetViaAdministracao write SetViaAdministracao;
     property LocalAplicacao: Int64 read GetLocalAplicacao write SetLocalAplicacao;
+    property CoRndsFabricante: string read GetCoRndsFabricante write SetCoRndsFabricante;
 
     function Get__isset_Imunobiologico: Boolean;
     function Get__isset_EstrategiaVacinacao: Boolean;
@@ -106,6 +109,7 @@ type
     function Get__isset_AnvisaNumeroRegistro: Boolean;
     function Get__isset_ViaAdministracao: Boolean;
     function Get__isset_LocalAplicacao: Boolean;
+    function Get__isset_CoRndsFabricante: Boolean;
 
     property __isset_Imunobiologico: Boolean read Get__isset_Imunobiologico;
     property __isset_EstrategiaVacinacao: Boolean read Get__isset_EstrategiaVacinacao;
@@ -125,6 +129,7 @@ type
     property __isset_AnvisaNumeroRegistro: Boolean read Get__isset_AnvisaNumeroRegistro;
     property __isset_ViaAdministracao: Boolean read Get__isset_ViaAdministracao;
     property __isset_LocalAplicacao: Boolean read Get__isset_LocalAplicacao;
+    property __isset_CoRndsFabricante: Boolean read Get__isset_CoRndsFabricante;
   end;
 
   TVacinaRowThriftImpl = class(TInterfacedObject, IBase, IVacinaRowThrift)
@@ -147,6 +152,7 @@ type
     FAnvisaNumeroRegistro: string;
     FViaAdministracao: Int64;
     FLocalAplicacao: Int64;
+    FCoRndsFabricante: string;
     
     F__isset_Imunobiologico: Boolean;
     F__isset_EstrategiaVacinacao: Boolean;
@@ -166,6 +172,7 @@ type
     F__isset_AnvisaNumeroRegistro: Boolean;
     F__isset_ViaAdministracao: Boolean;
     F__isset_LocalAplicacao: Boolean;
+    F__isset_CoRndsFabricante: Boolean;
     
     function GetImunobiologico: Int64;
     procedure SetImunobiologico( const Value: Int64);
@@ -203,6 +210,8 @@ type
     procedure SetViaAdministracao( const Value: Int64);
     function GetLocalAplicacao: Int64;
     procedure SetLocalAplicacao( const Value: Int64);
+    function GetCoRndsFabricante: string;
+    procedure SetCoRndsFabricante( const Value: string);
 
     function Get__isset_Imunobiologico: Boolean;
     function Get__isset_EstrategiaVacinacao: Boolean;
@@ -222,6 +231,7 @@ type
     function Get__isset_AnvisaNumeroRegistro: Boolean;
     function Get__isset_ViaAdministracao: Boolean;
     function Get__isset_LocalAplicacao: Boolean;
+    function Get__isset_CoRndsFabricante: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -251,6 +261,7 @@ type
     property AnvisaNumeroRegistro: string read GetAnvisaNumeroRegistro write SetAnvisaNumeroRegistro;
     property ViaAdministracao: Int64 read GetViaAdministracao write SetViaAdministracao;
     property LocalAplicacao: Int64 read GetLocalAplicacao write SetLocalAplicacao;
+    property CoRndsFabricante: string read GetCoRndsFabricante write SetCoRndsFabricante;
 
     // isset
     property __isset_Imunobiologico: Boolean read Get__isset_Imunobiologico;
@@ -271,6 +282,7 @@ type
     property __isset_AnvisaNumeroRegistro: Boolean read Get__isset_AnvisaNumeroRegistro;
     property __isset_ViaAdministracao: Boolean read Get__isset_ViaAdministracao;
     property __isset_LocalAplicacao: Boolean read Get__isset_LocalAplicacao;
+    property __isset_CoRndsFabricante: Boolean read Get__isset_CoRndsFabricante;
   end;
 
   IFichaVacinacaoChildThrift = interface(IBase)
@@ -884,6 +896,22 @@ begin
   Result := F__isset_LocalAplicacao;
 end;
 
+function TVacinaRowThriftImpl.GetCoRndsFabricante: string;
+begin
+  Result := FCoRndsFabricante;
+end;
+
+procedure TVacinaRowThriftImpl.SetCoRndsFabricante( const Value: string);
+begin
+  F__isset_CoRndsFabricante := True;
+  FCoRndsFabricante := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_CoRndsFabricante: Boolean;
+begin
+  Result := F__isset_CoRndsFabricante;
+end;
+
 procedure TVacinaRowThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1059,6 +1087,15 @@ begin
           if (field_.Type_ = TType.I64) then
           begin
             LocalAplicacao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        19: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            CoRndsFabricante := iprot.ReadString();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1247,6 +1284,15 @@ begin
     oprot.WriteI64(LocalAplicacao);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_CoRndsFabricante) then
+  begin
+    field_.Name := 'coRndsFabricante';
+    field_.Type_  := TType.String_;
+    field_.ID := 19;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(CoRndsFabricante);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1366,6 +1412,12 @@ begin
       _first1 := FALSE;
       _sb0.Append('LocalAplicacao: ');
       _sb0.Append(LocalAplicacao);
+    end;
+    if (__isset_CoRndsFabricante) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('CoRndsFabricante: ');
+      _sb0.Append(CoRndsFabricante);
     end;
     _sb0.Append(')');
     Result := _sb0.ToString;

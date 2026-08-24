@@ -182,12 +182,11 @@ public class ExemploFichaVacinacaoThrift {
 		vacina1.setEstrategiaVacinacao(2);
 		vacina1.setDose(1);
 		vacina1.setLote("DEF01");
-		vacina1.setFabricante("BUILD SUSTAINABILITY");
+		vacina1.setCoRndsFabricante("152");
 		vacina1.setStRegistroAnterior(false);
 		vacina1.setGrupoAtendimento(84);
 		vacina1.setViaAdministracao(1);
 		vacina1.setLocalAplicacao(17);
-		vacina1.setStAplicadoExterior(false);
 		vacina1.setCboPrescritorCodigo2002("225124");
 		vacina1.setCid10MotivoIndicacao("E511");
 		vacina1.setStPesquisaClinica(true);
@@ -201,12 +200,11 @@ public class ExemploFichaVacinacaoThrift {
 		vacina2.setEstrategiaVacinacao(1);
 		vacina2.setDose(9);
 		vacina2.setLote("ABC");
-		vacina2.setFabricante("AMERICAN JOIN ULTIMATE");
+		vacina2.setCoRndsFabricante("151");
 		vacina2.setStRegistroAnterior(false);
 		vacina2.setViaAdministracao(5);
 		vacina2.setLocalAplicacao(1);
 		vacina2.setGrupoAtendimento(84);
-		vacina2.setStAplicadoExterior(false);
 		vacina2.setStPesquisaClinica(false);
 		vacinas1.add(vacina2);				
 		
@@ -238,12 +236,11 @@ private static List<VacinaRowThrift> getVacinas2() {
 		vacina3.setEstrategiaVacinacao(1);
 		vacina3.setDose(9);
 		vacina3.setLote("ABC");
-		vacina3.setFabricante("AMERICAN JOIN ULTIMATE");
+		vacina3.setCoRndsFabricante("151");
 		vacina3.setViaAdministracao(3);
 		vacina3.setLocalAplicacao(3);
 		vacina3.setStRegistroAnterior(false);
 		vacina3.setGrupoAtendimento(5);
-		vacina3.setStAplicadoExterior(true);
 		vacina3.setStPesquisaClinica(false);
 		vacinas2.add(vacina3);				
 
@@ -252,21 +249,20 @@ private static List<VacinaRowThrift> getVacinas2() {
 		vacina4.setEstrategiaVacinacao(5);
 		vacina4.setDose(2);
 		vacina4.setLote("ABCD");
-		vacina4.setFabricante("PFIZER/BIONTECH");
+		vacina4.setCoRndsFabricante("142");
 		vacina4.setStRegistroAnterior(false);
-		vacina1.setViaAdministracao(6);
-		vacina1.setLocalAplicacao(6);
+		vacina4.setViaAdministracao(6);
+		vacina4.setLocalAplicacao(6);
 		vacina4.setGrupoAtendimento(95);
-		vacina4.setStAplicadoExterior(false);
 		vacina4.setStPesquisaClinica(false);
 		vacinas2.add(vacina4);		
 
 		VacinaRowThrift vacina5 = new VacinaRowThrift();
 		vacina5.setImunobiologico(87);
-		vacina5.setEstrategiaVacinacao(11);
+		vacina5.setEstrategiaVacinacao(1);
 		vacina5.setDose(1);
 		vacina5.setLote("ABC");
-		vacina5.setFabricante("PFIZER/BIONTECH");
+		vacina5.setCoRndsFabricante("142");
 		vacina5.setStRegistroAnterior(true);
 		vacina5.setDataRegistroAnterior(dataRegAnterior.getTimeInMillis());
 		vacina5.setStAplicadoExterior(true);

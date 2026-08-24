@@ -34,6 +34,7 @@ module Br
               ANVISANUMEROREGISTRO = 16
               VIAADMINISTRACAO = 17
               LOCALAPLICACAO = 18
+              CORNDSFABRICANTE = 19
 
               FIELDS = {
                 IMUNOBIOLOGICO => {:type => ::Thrift::Types::I64, :name => 'imunobiologico', :optional => true},
@@ -53,7 +54,8 @@ module Br
                 ANVISAPROTOCOLOVERSAO => {:type => ::Thrift::Types::STRING, :name => 'anvisaProtocoloVersao', :optional => true},
                 ANVISANUMEROREGISTRO => {:type => ::Thrift::Types::STRING, :name => 'anvisaNumeroRegistro', :optional => true},
                 VIAADMINISTRACAO => {:type => ::Thrift::Types::I64, :name => 'viaAdministracao', :optional => true},
-                LOCALAPLICACAO => {:type => ::Thrift::Types::I64, :name => 'localAplicacao', :optional => true}
+                LOCALAPLICACAO => {:type => ::Thrift::Types::I64, :name => 'localAplicacao', :optional => true},
+                CORNDSFABRICANTE => {:type => ::Thrift::Types::STRING, :name => 'coRndsFabricante', :optional => true}
               }
 
               def struct_fields; FIELDS; end

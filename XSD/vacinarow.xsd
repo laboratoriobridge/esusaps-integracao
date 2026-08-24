@@ -17,7 +17,10 @@
       <xs:element minOccurs="0" name="anvisaProtocoloVersao" type="xs:string"/>
       <xs:element minOccurs="0" name="anvisaNumeroRegistro" type="xs:string"/>
       <xs:element minOccurs="0" name="stAplicadoExterior" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="viaAdministracao" type="xs:long"/>
+      <xs:element minOccurs="0" name="localAplicacao" type="xs:long"/>
       <xs:element minOccurs="0" name="uuidRnds" type="xs:string"/>
+      <xs:element minOccurs="0" name="coRndsFabricante" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

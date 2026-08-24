@@ -37,6 +37,7 @@ var GoUnusedProtection__ int
 //  - AnvisaNumeroRegistro
 //  - ViaAdministracao
 //  - LocalAplicacao
+//  - CoRndsFabricante
 type VacinaRowThrift struct {
 	Imunobiologico          *int64  `thrift:"imunobiologico,1" json:"imunobiologico,omitempty"`
 	EstrategiaVacinacao     *int64  `thrift:"estrategiaVacinacao,2" json:"estrategiaVacinacao,omitempty"`
@@ -56,6 +57,7 @@ type VacinaRowThrift struct {
 	AnvisaNumeroRegistro    *string `thrift:"anvisaNumeroRegistro,16" json:"anvisaNumeroRegistro,omitempty"`
 	ViaAdministracao        *int64  `thrift:"viaAdministracao,17" json:"viaAdministracao,omitempty"`
 	LocalAplicacao          *int64  `thrift:"localAplicacao,18" json:"localAplicacao,omitempty"`
+	CoRndsFabricante        *string `thrift:"coRndsFabricante,19" json:"coRndsFabricante,omitempty"`
 }
 
 func NewVacinaRowThrift() *VacinaRowThrift {
@@ -223,6 +225,15 @@ func (p *VacinaRowThrift) GetLocalAplicacao() int64 {
 	}
 	return *p.LocalAplicacao
 }
+
+var VacinaRowThrift_CoRndsFabricante_DEFAULT string
+
+func (p *VacinaRowThrift) GetCoRndsFabricante() string {
+	if !p.IsSetCoRndsFabricante() {
+		return VacinaRowThrift_CoRndsFabricante_DEFAULT
+	}
+	return *p.CoRndsFabricante
+}
 func (p *VacinaRowThrift) IsSetImunobiologico() bool {
 	return p.Imunobiologico != nil
 }
@@ -293,6 +304,10 @@ func (p *VacinaRowThrift) IsSetViaAdministracao() bool {
 
 func (p *VacinaRowThrift) IsSetLocalAplicacao() bool {
 	return p.LocalAplicacao != nil
+}
+
+func (p *VacinaRowThrift) IsSetCoRndsFabricante() bool {
+	return p.CoRndsFabricante != nil
 }
 
 func (p *VacinaRowThrift) Read(iprot thrift.TProtocol) error {
@@ -379,6 +394,10 @@ func (p *VacinaRowThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 18:
 			if err := p.readField18(iprot); err != nil {
+				return err
+			}
+		case 19:
+			if err := p.readField19(iprot); err != nil {
 				return err
 			}
 		default:
@@ -558,6 +577,15 @@ func (p *VacinaRowThrift) readField18(iprot thrift.TProtocol) error {
 	return nil
 }
 
+func (p *VacinaRowThrift) readField19(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return thrift.PrependError("error reading field 19: ", err)
+	} else {
+		p.CoRndsFabricante = &v
+	}
+	return nil
+}
+
 func (p *VacinaRowThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("VacinaRowThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -614,6 +642,9 @@ func (p *VacinaRowThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField18(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField19(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -890,6 +921,21 @@ func (p *VacinaRowThrift) writeField18(oprot thrift.TProtocol) (err error) {
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 18:localAplicacao: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *VacinaRowThrift) writeField19(oprot thrift.TProtocol) (err error) {
+	if p.IsSetCoRndsFabricante() {
+		if err := oprot.WriteFieldBegin("coRndsFabricante", thrift.STRING, 19); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 19:coRndsFabricante: ", p), err)
+		}
+		if err := oprot.WriteString(string(*p.CoRndsFabricante)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.coRndsFabricante (19) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 19:coRndsFabricante: ", p), err)
 		}
 	}
 	return err
