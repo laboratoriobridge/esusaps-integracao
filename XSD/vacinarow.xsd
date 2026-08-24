@@ -7,6 +7,7 @@
       <xs:element minOccurs="0" name="dose" type="xs:long"/>
       <xs:element minOccurs="0" name="lote" type="xs:string"/>
       <xs:element minOccurs="0" name="fabricante" type="xs:string"/>
+      <xs:element minOccurs="0" name="coRndsFabricante" type="xs:string"/>
       <xs:element minOccurs="0" name="grupoAtendimento" type="xs:long"/>
       <xs:element minOccurs="0" name="stRegistroAnterior" type="xs:boolean"/>
       <xs:element minOccurs="0" name="dataRegistroAnterior" type="xs:long"/>
@@ -20,7 +21,6 @@
       <xs:element minOccurs="0" name="viaAdministracao" type="xs:long"/>
       <xs:element minOccurs="0" name="localAplicacao" type="xs:long"/>
       <xs:element minOccurs="0" name="uuidRnds" type="xs:string"/>
-      <xs:element minOccurs="0" name="coRndsFabricante" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

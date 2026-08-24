@@ -37,6 +37,7 @@
                 <estrategiaVacinacao>2</estrategiaVacinacao>
                 <dose>1</dose>
                 <lote>DEF01</lote>
+                <coRndsFabricante>152</coRndsFabricante>
                 <grupoAtendimento>84</grupoAtendimento>
                 <stRegistroAnterior>false</stRegistroAnterior>
                 <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
@@ -45,7 +46,6 @@
                 <viaAdministracao>1</viaAdministracao>
                 <localAplicacao>17</localAplicacao>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440000</uuidRnds>
-                <coRndsFabricante>152</coRndsFabricante>
             </vacinas>
             <dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
             <dataHoraFinalAtendimento>1551538800000</dataHoraFinalAtendimento>
@@ -66,6 +66,7 @@
                 <estrategiaVacinacao>2</estrategiaVacinacao>
                 <dose>1</dose>
                 <lote>DEF01</lote>
+                <coRndsFabricante>152</coRndsFabricante>
                 <grupoAtendimento>99</grupoAtendimento>
                 <stRegistroAnterior>false</stRegistroAnterior>
                 <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
@@ -74,13 +75,13 @@
                 <viaAdministracao>5</viaAdministracao>
                 <localAplicacao>1</localAplicacao>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440002</uuidRnds>
-                <coRndsFabricante>152</coRndsFabricante>
             </vacinas>
             <vacinas>
                 <imunobiologico>87</imunobiologico>
                 <estrategiaVacinacao>1</estrategiaVacinacao>
                 <dose>1</dose>
                 <lote>ABC</lote>
+                <coRndsFabricante>142</coRndsFabricante>
                 <grupoAtendimento>112</grupoAtendimento>
                 <stRegistroAnterior>true</stRegistroAnterior>
                 <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
@@ -90,7 +91,6 @@
                 <anvisaNumeroRegistro>REG-456</anvisaNumeroRegistro>
                 <stAplicadoExterior>true</stAplicadoExterior>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440006</uuidRnds>
-                <coRndsFabricante>142</coRndsFabricante>
             </vacinas>
             <dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
             <dataHoraFinalAtendimento>1551538800000</dataHoraFinalAtendimento>
