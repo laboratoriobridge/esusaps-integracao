@@ -30,7 +30,6 @@
             <sexo>1</sexo>
             <localAtendimento>1</localAtendimento>
             <viajante>true</viajante>
-            <comunicanteHanseniase>false</comunicanteHanseniase>
             <condicaoMaternal>1</condicaoMaternal>  <!-- 1 = Gestante -->
             <vacinas>
                 <imunobiologico>5</imunobiologico>
@@ -59,7 +58,6 @@
             <sexo>1</sexo>
             <localAtendimento>1</localAtendimento>
             <viajante>true</viajante>
-            <comunicanteHanseniase>false</comunicanteHanseniase>
             <condicaoMaternal>2</condicaoMaternal>  <!-- 2 = Gestante -->
             <vacinas>
                 <imunobiologico>5</imunobiologico>
@@ -78,18 +76,20 @@
             </vacinas>
             <vacinas>
                 <imunobiologico>87</imunobiologico>
-                <estrategiaVacinacao>1</estrategiaVacinacao>
+                <estrategiaVacinacao>2</estrategiaVacinacao>
                 <dose>1</dose>
                 <lote>ABC</lote>
                 <coRndsFabricante>142</coRndsFabricante>
                 <grupoAtendimento>112</grupoAtendimento>
-                <stRegistroAnterior>true</stRegistroAnterior>
-                <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
+                <stRegistroAnterior>false</stRegistroAnterior>
+                <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
+                <cid10MotivoIndicacao>Z23</cid10MotivoIndicacao>
                 <stPesquisaClinica>true</stPesquisaClinica>
                 <anvisaProtocoloEstudo>PROT-123</anvisaProtocoloEstudo>
                 <anvisaProtocoloVersao>1.0</anvisaProtocoloVersao>
                 <anvisaNumeroRegistro>REG-456</anvisaNumeroRegistro>
-                <stAplicadoExterior>true</stAplicadoExterior>
+                <viaAdministracao>6</viaAdministracao>
+                <localAplicacao>6</localAplicacao>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440006</uuidRnds>
             </vacinas>
             <dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>

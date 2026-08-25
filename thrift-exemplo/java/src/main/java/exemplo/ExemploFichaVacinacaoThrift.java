@@ -259,13 +259,15 @@ private static List<VacinaRowThrift> getVacinas2() {
 
 		VacinaRowThrift vacina5 = new VacinaRowThrift();
 		vacina5.setImunobiologico(87);
-		vacina5.setEstrategiaVacinacao(1);
+		vacina5.setEstrategiaVacinacao(2);
 		vacina5.setDose(1);
 		vacina5.setLote("ABC");
 		vacina5.setCoRndsFabricante("142");
-		vacina5.setStRegistroAnterior(true);
-		vacina5.setDataRegistroAnterior(dataRegAnterior.getTimeInMillis());
-		vacina5.setStAplicadoExterior(true);
+		vacina5.setStRegistroAnterior(false);
+		vacina5.setCboPrescritorCodigo2002("223505");
+		vacina5.setCid10MotivoIndicacao("Z23");
+		vacina5.setViaAdministracao(6);
+		vacina5.setLocalAplicacao(6);
 		vacina5.setStPesquisaClinica(false);
 		vacinas2.add(vacina5);
 		
