@@ -41,6 +41,7 @@ namespace br.gov.saude.esusab.ras.vacinacao
     private string _anvisaNumeroRegistro;
     private long _viaAdministracao;
     private long _localAplicacao;
+    private string _coRndsFabricante;
 
     public long Imunobiologico
     {
@@ -276,6 +277,19 @@ namespace br.gov.saude.esusab.ras.vacinacao
       }
     }
 
+    public string CoRndsFabricante
+    {
+      get
+      {
+        return _coRndsFabricante;
+      }
+      set
+      {
+        __isset.coRndsFabricante = true;
+        this._coRndsFabricante = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -300,6 +314,7 @@ namespace br.gov.saude.esusab.ras.vacinacao
       public bool anvisaNumeroRegistro;
       public bool viaAdministracao;
       public bool localAplicacao;
+      public bool coRndsFabricante;
     }
 
     public VacinaRowThrift() {
@@ -323,7 +338,7 @@ namespace br.gov.saude.esusab.ras.vacinacao
             case 1:
               if (field.Type == TType.I64) {
                 Imunobiologico = iprot.ReadI64();
-              } else { 
+              } else {
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
@@ -443,6 +458,13 @@ namespace br.gov.saude.esusab.ras.vacinacao
               if (field.Type == TType.I64) {
                 LocalAplicacao = iprot.ReadI64();
               } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 19:
+              if (field.Type == TType.String) {
+                CoRndsFabricante = iprot.ReadString();
+              } else {
                 TProtocolUtil.Skip(iprot, field.Type);
               }
               break;
@@ -611,6 +633,14 @@ namespace br.gov.saude.esusab.ras.vacinacao
           oprot.WriteI64(LocalAplicacao);
           oprot.WriteFieldEnd();
         }
+        if (CoRndsFabricante != null && __isset.coRndsFabricante) {
+          field.Name = "coRndsFabricante";
+          field.Type = TType.String;
+          field.ID = 19;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteString(CoRndsFabricante);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -730,6 +760,12 @@ namespace br.gov.saude.esusab.ras.vacinacao
         __first = false;
         __sb.Append("LocalAplicacao: ");
         __sb.Append(LocalAplicacao);
+      }
+      if (CoRndsFabricante != null && __isset.coRndsFabricante) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("CoRndsFabricante: ");
+        __sb.Append(CoRndsFabricante);
       }
       __sb.Append(")");
       return __sb.ToString();

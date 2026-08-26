@@ -33,7 +33,7 @@ public class ExemploFichaVacinacaoThrift {
 		dadoTransporteThrift.setDadoSerializado(fichaSerializada);
 
 		// Não esquecer de informar a versão da ficha a ser exportada (não é a versão do e-SUS AB)
-		VersaoThrift versaoThrift = new VersaoThrift(7, 3, 0);
+		VersaoThrift versaoThrift = new VersaoThrift(8, 4, 0);
 		dadoTransporteThrift.setVersao(versaoThrift);
 
 		return dadoTransporteThrift;
@@ -123,7 +123,9 @@ public class ExemploFichaVacinacaoThrift {
 		vacinacao1.setDtNascimento(dataNascimento1.getTimeInMillis());
 
 		vacinacao1.setLocalAtendimento(2);
-		vacinacao1.setCpfCidadao("81381513077");
+		vacinacao1.setCnsCidadao("767273769570018");
+		vacinacao1.setStNaoPossuiCpf(true);
+		vacinacao1.setJustificativaNaoPossuiCpf(5);
 		vacinacao1.setNumProntuario("35284");
 		vacinacao1.setSexo(0);
 		vacinacao1.setTurno(2);
@@ -150,6 +152,7 @@ public class ExemploFichaVacinacaoThrift {
 
 		vacinacao2.setLocalAtendimento(1);
 		vacinacao2.setCpfCidadao("61228957096");
+		vacinacao2.setStNaoPossuiCpf(false);
 		vacinacao2.setNumProntuario("43143");
 		vacinacao2.setSexo(1);
 		vacinacao2.setTurno(1);
@@ -179,12 +182,11 @@ public class ExemploFichaVacinacaoThrift {
 		vacina1.setEstrategiaVacinacao(2);
 		vacina1.setDose(1);
 		vacina1.setLote("DEF01");
-		vacina1.setFabricante("BUILD SUSTAINABILITY");
+		vacina1.setCoRndsFabricante("152");
 		vacina1.setStRegistroAnterior(false);
 		vacina1.setGrupoAtendimento(84);
 		vacina1.setViaAdministracao(1);
 		vacina1.setLocalAplicacao(17);
-		vacina1.setStAplicadoExterior(false);
 		vacina1.setCboPrescritorCodigo2002("225124");
 		vacina1.setCid10MotivoIndicacao("E511");
 		vacina1.setStPesquisaClinica(true);
@@ -198,12 +200,11 @@ public class ExemploFichaVacinacaoThrift {
 		vacina2.setEstrategiaVacinacao(1);
 		vacina2.setDose(9);
 		vacina2.setLote("ABC");
-		vacina2.setFabricante("AMERICAN JOIN ULTIMATE");
+		vacina2.setCoRndsFabricante("151");
 		vacina2.setStRegistroAnterior(false);
 		vacina2.setViaAdministracao(5);
 		vacina2.setLocalAplicacao(1);
 		vacina2.setGrupoAtendimento(84);
-		vacina2.setStAplicadoExterior(false);
 		vacina2.setStPesquisaClinica(false);
 		vacinas1.add(vacina2);				
 		
@@ -235,12 +236,11 @@ private static List<VacinaRowThrift> getVacinas2() {
 		vacina3.setEstrategiaVacinacao(1);
 		vacina3.setDose(9);
 		vacina3.setLote("ABC");
-		vacina3.setFabricante("AMERICAN JOIN ULTIMATE");
+		vacina3.setCoRndsFabricante("151");
 		vacina3.setViaAdministracao(3);
 		vacina3.setLocalAplicacao(3);
 		vacina3.setStRegistroAnterior(false);
 		vacina3.setGrupoAtendimento(5);
-		vacina3.setStAplicadoExterior(true);
 		vacina3.setStPesquisaClinica(false);
 		vacinas2.add(vacina3);				
 
@@ -249,24 +249,25 @@ private static List<VacinaRowThrift> getVacinas2() {
 		vacina4.setEstrategiaVacinacao(5);
 		vacina4.setDose(2);
 		vacina4.setLote("ABCD");
-		vacina4.setFabricante("PFIZER/BIONTECH");
+		vacina4.setCoRndsFabricante("142");
 		vacina4.setStRegistroAnterior(false);
-		vacina1.setViaAdministracao(6);
-		vacina1.setLocalAplicacao(6);
+		vacina4.setViaAdministracao(6);
+		vacina4.setLocalAplicacao(6);
 		vacina4.setGrupoAtendimento(95);
-		vacina4.setStAplicadoExterior(false);
 		vacina4.setStPesquisaClinica(false);
 		vacinas2.add(vacina4);		
 
 		VacinaRowThrift vacina5 = new VacinaRowThrift();
 		vacina5.setImunobiologico(87);
-		vacina5.setEstrategiaVacinacao(11);
+		vacina5.setEstrategiaVacinacao(2);
 		vacina5.setDose(1);
 		vacina5.setLote("ABC");
-		vacina5.setFabricante("PFIZER/BIONTECH");
-		vacina5.setStRegistroAnterior(true);
-		vacina5.setDataRegistroAnterior(dataRegAnterior.getTimeInMillis());
-		vacina5.setStAplicadoExterior(true);
+		vacina5.setCoRndsFabricante("142");
+		vacina5.setStRegistroAnterior(false);
+		vacina5.setCboPrescritorCodigo2002("223505");
+		vacina5.setCid10MotivoIndicacao("Z23");
+		vacina5.setViaAdministracao(6);
+		vacina5.setLocalAplicacao(6);
 		vacina5.setStPesquisaClinica(false);
 		vacinas2.add(vacina5);
 		

@@ -34,6 +34,7 @@ module Br
               ANVISANUMEROREGISTRO = 16
               VIAADMINISTRACAO = 17
               LOCALAPLICACAO = 18
+              CORNDSFABRICANTE = 19
 
               FIELDS = {
                 IMUNOBIOLOGICO => {:type => ::Thrift::Types::I64, :name => 'imunobiologico', :optional => true},
@@ -53,7 +54,8 @@ module Br
                 ANVISAPROTOCOLOVERSAO => {:type => ::Thrift::Types::STRING, :name => 'anvisaProtocoloVersao', :optional => true},
                 ANVISANUMEROREGISTRO => {:type => ::Thrift::Types::STRING, :name => 'anvisaNumeroRegistro', :optional => true},
                 VIAADMINISTRACAO => {:type => ::Thrift::Types::I64, :name => 'viaAdministracao', :optional => true},
-                LOCALAPLICACAO => {:type => ::Thrift::Types::I64, :name => 'localAplicacao', :optional => true}
+                LOCALAPLICACAO => {:type => ::Thrift::Types::I64, :name => 'localAplicacao', :optional => true},
+                CORNDSFABRICANTE => {:type => ::Thrift::Types::STRING, :name => 'coRndsFabricante', :optional => true}
               }
 
               def struct_fields; FIELDS; end
@@ -81,6 +83,8 @@ module Br
               DATAHORAFINALATENDIMENTO = 13
               CPFCIDADAO = 14
               CONDICAOMATERNAL = 15
+              STNAOPOSSUICPF = 16
+              JUSTIFICATIVANAOPOSSUICPF = 17
 
               FIELDS = {
                 TURNO => {:type => ::Thrift::Types::I64, :name => 'turno', :optional => true},
@@ -97,7 +101,9 @@ module Br
                 DATAHORAINICIALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraInicialAtendimento', :optional => true},
                 DATAHORAFINALATENDIMENTO => {:type => ::Thrift::Types::I64, :name => 'dataHoraFinalAtendimento', :optional => true},
                 CPFCIDADAO => {:type => ::Thrift::Types::STRING, :name => 'cpfCidadao', :optional => true},
-                CONDICAOMATERNAL => {:type => ::Thrift::Types::I64, :name => 'condicaoMaternal', :optional => true}
+                CONDICAOMATERNAL => {:type => ::Thrift::Types::I64, :name => 'condicaoMaternal', :optional => true},
+                STNAOPOSSUICPF => {:type => ::Thrift::Types::BOOL, :name => 'stNaoPossuiCpf', :optional => true},
+                JUSTIFICATIVANAOPOSSUICPF => {:type => ::Thrift::Types::I64, :name => 'justificativaNaoPossuiCpf', :optional => true}
               }
 
               def struct_fields; FIELDS; end

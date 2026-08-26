@@ -24,25 +24,24 @@
             <turno>2</turno>
             <numProntuario>12</numProntuario>
             <cnsCidadao>767273769570018</cnsCidadao>
+            <stNaoPossuiCpf>true</stNaoPossuiCpf>
+            <justificativaNaoPossuiCpf>5</justificativaNaoPossuiCpf>
             <dtNascimento>1430838000000</dtNascimento>
             <sexo>1</sexo>
             <localAtendimento>1</localAtendimento>
             <viajante>true</viajante>
-            <comunicanteHanseniase>false</comunicanteHanseniase>
             <condicaoMaternal>1</condicaoMaternal>  <!-- 1 = Gestante -->
             <vacinas>
                 <imunobiologico>5</imunobiologico>
                 <estrategiaVacinacao>2</estrategiaVacinacao>
-                <dose></dose>
+                <dose>1</dose>
                 <lote>DEF01</lote>
-                <fabricante>BUILD SUSTAINABILITY</fabricante>
+                <coRndsFabricante>152</coRndsFabricante>
                 <grupoAtendimento>84</grupoAtendimento>
                 <stRegistroAnterior>false</stRegistroAnterior>
-                <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
                 <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
                 <cid10MotivoIndicacao>A09</cid10MotivoIndicacao>
                 <stPesquisaClinica>false</stPesquisaClinica>
-                <stAplicadoExterior>false</stAplicadoExterior>
                 <viaAdministracao>1</viaAdministracao>
                 <localAplicacao>17</localAplicacao>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440000</uuidRnds>
@@ -53,47 +52,44 @@
         <vacinacoes>
             <turno>1</turno>
             <numProntuario>52</numProntuario>
-            <cnsCidadao>767273769570019</cnsCidadao>
             <cpfCidadao>31422733521</cpfCidadao>
+            <stNaoPossuiCpf>false</stNaoPossuiCpf>
             <dtNascimento>1430808000000</dtNascimento>
             <sexo>1</sexo>
             <localAtendimento>1</localAtendimento>
             <viajante>true</viajante>
-            <comunicanteHanseniase>false</comunicanteHanseniase>
             <condicaoMaternal>2</condicaoMaternal>  <!-- 2 = Gestante -->
             <vacinas>
                 <imunobiologico>5</imunobiologico>
                 <estrategiaVacinacao>2</estrategiaVacinacao>
                 <dose>1</dose>
                 <lote>DEF01</lote>
-                <fabricante>BUILD SUSTAINABILITY</fabricante>
+                <coRndsFabricante>152</coRndsFabricante>
                 <grupoAtendimento>99</grupoAtendimento>
                 <stRegistroAnterior>false</stRegistroAnterior>
-                <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
                 <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
                 <cid10MotivoIndicacao>Z23</cid10MotivoIndicacao>
                 <stPesquisaClinica>false</stPesquisaClinica>
-                <stAplicadoExterior>false</stAplicadoExterior>
                 <viaAdministracao>5</viaAdministracao>
                 <localAplicacao>1</localAplicacao>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440002</uuidRnds>
             </vacinas>
             <vacinas>
                 <imunobiologico>87</imunobiologico>
-                <estrategiaVacinacao>11</estrategiaVacinacao>
+                <estrategiaVacinacao>2</estrategiaVacinacao>
                 <dose>1</dose>
                 <lote>ABC</lote>
-                <fabricante>PFIZER/BIONTECH</fabricante>
+                <coRndsFabricante>142</coRndsFabricante>
                 <grupoAtendimento>112</grupoAtendimento>
-                <stRegistroAnterior>true</stRegistroAnterior>
-                <dataRegistroAnterior>1495542619000</dataRegistroAnterior>
+                <stRegistroAnterior>false</stRegistroAnterior>
                 <cboPrescritorCodigo2002>223505</cboPrescritorCodigo2002>
                 <cid10MotivoIndicacao>Z23</cid10MotivoIndicacao>
                 <stPesquisaClinica>true</stPesquisaClinica>
                 <anvisaProtocoloEstudo>PROT-123</anvisaProtocoloEstudo>
                 <anvisaProtocoloVersao>1.0</anvisaProtocoloVersao>
                 <anvisaNumeroRegistro>REG-456</anvisaNumeroRegistro>
-                <stAplicadoExterior>true</stAplicadoExterior>
+                <viaAdministracao>6</viaAdministracao>
+                <localAplicacao>6</localAplicacao>
                 <uuidRnds>550e8400-e29b-41d4-a716-446655440006</uuidRnds>
             </vacinas>
             <dataHoraInicialAtendimento>1551538800000</dataHoraInicialAtendimento>
@@ -120,5 +116,5 @@
         <versaoSistema>5.4.14</versaoSistema>
         <nomeBancoDados>Oracle</nomeBancoDados>
     </ns2:originadora>
-    <versao major="7" minor="3" revision="0"/>
+    <versao major="8" minor="4" revision="0"/>
 </ns3:dadoTransporteTransportXml>

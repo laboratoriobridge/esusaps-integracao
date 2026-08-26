@@ -28,6 +28,7 @@ struct VacinaRowThrift {
 	16:optional string anvisaNumeroRegistro;
 	17:optional i64 viaAdministracao;
 	18:optional i64 localAplicacao;
+	19:optional string coRndsFabricante;
 }
 
 struct FichaVacinacaoChildThrift {
@@ -46,6 +47,8 @@ struct FichaVacinacaoChildThrift {
 	13:optional i64 dataHoraFinalAtendimento;
 	14:optional string cpfCidadao;
 	15:optional i64 condicaoMaternal;
+	16:optional bool stNaoPossuiCpf;
+	17:optional i64 justificativaNaoPossuiCpf;
 }
 
 struct FichaVacinacaoMasterThrift {

@@ -40,6 +40,7 @@ class VacinaRowThrift:
    - anvisaNumeroRegistro
    - viaAdministracao
    - localAplicacao
+   - coRndsFabricante
   """
 
   thrift_spec = (
@@ -62,9 +63,10 @@ class VacinaRowThrift:
     (16, TType.STRING, 'anvisaNumeroRegistro', None, None, ), # 16
     (17, TType.I64, 'viaAdministracao', None, None, ), # 17
     (18, TType.I64, 'localAplicacao', None, None, ), # 18
+    (19, TType.STRING, 'coRndsFabricante', None, None, ), # 19
   )
 
-  def __init__(self, imunobiologico=None, estrategiaVacinacao=None, dose=None, lote=None, fabricante=None, grupoAtendimento=None, stRegistroAnterior=None, dataRegistroAnterior=None, stAplicadoExterior=None, uuidRnds=None, cboPrescritorCodigo2002=None, cid10MotivoIndicacao=None, stPesquisaClinica=None, anvisaProtocoloEstudo=None, anvisaProtocoloVersao=None, anvisaNumeroRegistro=None, viaAdministracao=None, localAplicacao=None,):
+  def __init__(self, imunobiologico=None, estrategiaVacinacao=None, dose=None, lote=None, fabricante=None, grupoAtendimento=None, stRegistroAnterior=None, dataRegistroAnterior=None, stAplicadoExterior=None, uuidRnds=None, cboPrescritorCodigo2002=None, cid10MotivoIndicacao=None, stPesquisaClinica=None, anvisaProtocoloEstudo=None, anvisaProtocoloVersao=None, anvisaNumeroRegistro=None, viaAdministracao=None, localAplicacao=None, coRndsFabricante=None,):
     self.imunobiologico = imunobiologico
     self.estrategiaVacinacao = estrategiaVacinacao
     self.dose = dose
@@ -83,6 +85,7 @@ class VacinaRowThrift:
     self.anvisaNumeroRegistro = anvisaNumeroRegistro
     self.viaAdministracao = viaAdministracao
     self.localAplicacao = localAplicacao
+    self.coRndsFabricante = coRndsFabricante
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -183,6 +186,11 @@ class VacinaRowThrift:
           self.localAplicacao = iprot.readI64()
         else:
           iprot.skip(ftype)
+      elif fid == 19:
+        if ftype == TType.STRING:
+          self.coRndsFabricante = iprot.readString()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -265,6 +273,10 @@ class VacinaRowThrift:
       oprot.writeFieldBegin('localAplicacao', TType.I64, 18)
       oprot.writeI64(self.localAplicacao)
       oprot.writeFieldEnd()
+    if self.coRndsFabricante is not None:
+      oprot.writeFieldBegin('coRndsFabricante', TType.STRING, 19)
+      oprot.writeString(self.coRndsFabricante)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -292,6 +304,7 @@ class VacinaRowThrift:
     value = (value * 31) ^ hash(self.anvisaNumeroRegistro)
     value = (value * 31) ^ hash(self.viaAdministracao)
     value = (value * 31) ^ hash(self.localAplicacao)
+    value = (value * 31) ^ hash(self.coRndsFabricante)
     return value
 
   def __repr__(self):
@@ -323,6 +336,8 @@ class FichaVacinacaoChildThrift:
    - dataHoraFinalAtendimento
    - cpfCidadao
    - condicaoMaternal
+   - stNaoPossuiCpf
+   - justificativaNaoPossuiCpf
   """
 
   thrift_spec = (
@@ -342,9 +357,11 @@ class FichaVacinacaoChildThrift:
     (13, TType.I64, 'dataHoraFinalAtendimento', None, None, ), # 13
     (14, TType.STRING, 'cpfCidadao', None, None, ), # 14
     (15, TType.I64, 'condicaoMaternal', None, None, ), # 15
+    (16, TType.BOOL, 'stNaoPossuiCpf', None, None, ), # 16
+    (17, TType.I64, 'justificativaNaoPossuiCpf', None, None, ), # 17
   )
 
-  def __init__(self, turno=None, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, localAtendimento=None, viajante=None, comunicanteHanseniase=None, gestante=None, puerpera=None, vacinas=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, condicaoMaternal=None,):
+  def __init__(self, turno=None, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, localAtendimento=None, viajante=None, comunicanteHanseniase=None, gestante=None, puerpera=None, vacinas=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, condicaoMaternal=None, stNaoPossuiCpf=None, justificativaNaoPossuiCpf=None,):
     self.turno = turno
     self.numProntuario = numProntuario
     self.cnsCidadao = cnsCidadao
@@ -360,6 +377,8 @@ class FichaVacinacaoChildThrift:
     self.dataHoraFinalAtendimento = dataHoraFinalAtendimento
     self.cpfCidadao = cpfCidadao
     self.condicaoMaternal = condicaoMaternal
+    self.stNaoPossuiCpf = stNaoPossuiCpf
+    self.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -451,6 +470,16 @@ class FichaVacinacaoChildThrift:
           self.condicaoMaternal = iprot.readI64()
         else:
           iprot.skip(ftype)
+      elif fid == 16:
+        if ftype == TType.BOOL:
+          self.stNaoPossuiCpf = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 17:
+        if ftype == TType.I64:
+          self.justificativaNaoPossuiCpf = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -524,6 +553,14 @@ class FichaVacinacaoChildThrift:
       oprot.writeFieldBegin('condicaoMaternal', TType.I64, 15)
       oprot.writeI64(self.condicaoMaternal)
       oprot.writeFieldEnd()
+    if self.stNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('stNaoPossuiCpf', TType.BOOL, 16)
+      oprot.writeBool(self.stNaoPossuiCpf)
+      oprot.writeFieldEnd()
+    if self.justificativaNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('justificativaNaoPossuiCpf', TType.I64, 17)
+      oprot.writeI64(self.justificativaNaoPossuiCpf)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -548,6 +585,8 @@ class FichaVacinacaoChildThrift:
     value = (value * 31) ^ hash(self.dataHoraFinalAtendimento)
     value = (value * 31) ^ hash(self.cpfCidadao)
     value = (value * 31) ^ hash(self.condicaoMaternal)
+    value = (value * 31) ^ hash(self.stNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.justificativaNaoPossuiCpf)
     return value
 
   def __repr__(self):

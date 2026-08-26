@@ -68,6 +68,8 @@ type
     procedure SetViaAdministracao( const Value: Int64);
     function GetLocalAplicacao: Int64;
     procedure SetLocalAplicacao( const Value: Int64);
+    function GetCoRndsFabricante: string;
+    procedure SetCoRndsFabricante( const Value: string);
 
     property Imunobiologico: Int64 read GetImunobiologico write SetImunobiologico;
     property EstrategiaVacinacao: Int64 read GetEstrategiaVacinacao write SetEstrategiaVacinacao;
@@ -87,6 +89,7 @@ type
     property AnvisaNumeroRegistro: string read GetAnvisaNumeroRegistro write SetAnvisaNumeroRegistro;
     property ViaAdministracao: Int64 read GetViaAdministracao write SetViaAdministracao;
     property LocalAplicacao: Int64 read GetLocalAplicacao write SetLocalAplicacao;
+    property CoRndsFabricante: string read GetCoRndsFabricante write SetCoRndsFabricante;
 
     function Get__isset_Imunobiologico: Boolean;
     function Get__isset_EstrategiaVacinacao: Boolean;
@@ -106,6 +109,7 @@ type
     function Get__isset_AnvisaNumeroRegistro: Boolean;
     function Get__isset_ViaAdministracao: Boolean;
     function Get__isset_LocalAplicacao: Boolean;
+    function Get__isset_CoRndsFabricante: Boolean;
 
     property __isset_Imunobiologico: Boolean read Get__isset_Imunobiologico;
     property __isset_EstrategiaVacinacao: Boolean read Get__isset_EstrategiaVacinacao;
@@ -125,6 +129,7 @@ type
     property __isset_AnvisaNumeroRegistro: Boolean read Get__isset_AnvisaNumeroRegistro;
     property __isset_ViaAdministracao: Boolean read Get__isset_ViaAdministracao;
     property __isset_LocalAplicacao: Boolean read Get__isset_LocalAplicacao;
+    property __isset_CoRndsFabricante: Boolean read Get__isset_CoRndsFabricante;
   end;
 
   TVacinaRowThriftImpl = class(TInterfacedObject, IBase, IVacinaRowThrift)
@@ -147,6 +152,7 @@ type
     FAnvisaNumeroRegistro: string;
     FViaAdministracao: Int64;
     FLocalAplicacao: Int64;
+    FCoRndsFabricante: string;
     
     F__isset_Imunobiologico: Boolean;
     F__isset_EstrategiaVacinacao: Boolean;
@@ -166,6 +172,7 @@ type
     F__isset_AnvisaNumeroRegistro: Boolean;
     F__isset_ViaAdministracao: Boolean;
     F__isset_LocalAplicacao: Boolean;
+    F__isset_CoRndsFabricante: Boolean;
     
     function GetImunobiologico: Int64;
     procedure SetImunobiologico( const Value: Int64);
@@ -203,6 +210,8 @@ type
     procedure SetViaAdministracao( const Value: Int64);
     function GetLocalAplicacao: Int64;
     procedure SetLocalAplicacao( const Value: Int64);
+    function GetCoRndsFabricante: string;
+    procedure SetCoRndsFabricante( const Value: string);
 
     function Get__isset_Imunobiologico: Boolean;
     function Get__isset_EstrategiaVacinacao: Boolean;
@@ -222,6 +231,7 @@ type
     function Get__isset_AnvisaNumeroRegistro: Boolean;
     function Get__isset_ViaAdministracao: Boolean;
     function Get__isset_LocalAplicacao: Boolean;
+    function Get__isset_CoRndsFabricante: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -251,6 +261,7 @@ type
     property AnvisaNumeroRegistro: string read GetAnvisaNumeroRegistro write SetAnvisaNumeroRegistro;
     property ViaAdministracao: Int64 read GetViaAdministracao write SetViaAdministracao;
     property LocalAplicacao: Int64 read GetLocalAplicacao write SetLocalAplicacao;
+    property CoRndsFabricante: string read GetCoRndsFabricante write SetCoRndsFabricante;
 
     // isset
     property __isset_Imunobiologico: Boolean read Get__isset_Imunobiologico;
@@ -271,6 +282,7 @@ type
     property __isset_AnvisaNumeroRegistro: Boolean read Get__isset_AnvisaNumeroRegistro;
     property __isset_ViaAdministracao: Boolean read Get__isset_ViaAdministracao;
     property __isset_LocalAplicacao: Boolean read Get__isset_LocalAplicacao;
+    property __isset_CoRndsFabricante: Boolean read Get__isset_CoRndsFabricante;
   end;
 
   IFichaVacinacaoChildThrift = interface(IBase)
@@ -304,6 +316,10 @@ type
     procedure SetCpfCidadao( const Value: string);
     function GetCondicaoMaternal: Int64;
     procedure SetCondicaoMaternal( const Value: Int64);
+    function GetStNaoPossuiCpf: Boolean;
+    procedure SetStNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaNaoPossuiCpf: Int64;
+    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
 
     property Turno: Int64 read GetTurno write SetTurno;
     property NumProntuario: string read GetNumProntuario write SetNumProntuario;
@@ -320,6 +336,8 @@ type
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property CondicaoMaternal: Int64 read GetCondicaoMaternal write SetCondicaoMaternal;
+    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
+    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
 
     function Get__isset_Turno: Boolean;
     function Get__isset_NumProntuario: Boolean;
@@ -336,6 +354,8 @@ type
     function Get__isset_DataHoraFinalAtendimento: Boolean;
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_CondicaoMaternal: Boolean;
+    function Get__isset_StNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
 
     property __isset_Turno: Boolean read Get__isset_Turno;
     property __isset_NumProntuario: Boolean read Get__isset_NumProntuario;
@@ -352,6 +372,8 @@ type
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_CondicaoMaternal: Boolean read Get__isset_CondicaoMaternal;
+    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
+    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
   end;
 
   TFichaVacinacaoChildThriftImpl = class(TInterfacedObject, IBase, IFichaVacinacaoChildThrift)
@@ -371,6 +393,8 @@ type
     FDataHoraFinalAtendimento: Int64;
     FCpfCidadao: string;
     FCondicaoMaternal: Int64;
+    FStNaoPossuiCpf: Boolean;
+    FJustificativaNaoPossuiCpf: Int64;
     
     F__isset_Turno: Boolean;
     F__isset_NumProntuario: Boolean;
@@ -387,6 +411,8 @@ type
     F__isset_DataHoraFinalAtendimento: Boolean;
     F__isset_CpfCidadao: Boolean;
     F__isset_CondicaoMaternal: Boolean;
+    F__isset_StNaoPossuiCpf: Boolean;
+    F__isset_JustificativaNaoPossuiCpf: Boolean;
     
     function GetTurno: Int64;
     procedure SetTurno( const Value: Int64);
@@ -418,6 +444,10 @@ type
     procedure SetCpfCidadao( const Value: string);
     function GetCondicaoMaternal: Int64;
     procedure SetCondicaoMaternal( const Value: Int64);
+    function GetStNaoPossuiCpf: Boolean;
+    procedure SetStNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaNaoPossuiCpf: Int64;
+    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
 
     function Get__isset_Turno: Boolean;
     function Get__isset_NumProntuario: Boolean;
@@ -434,6 +464,8 @@ type
     function Get__isset_DataHoraFinalAtendimento: Boolean;
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_CondicaoMaternal: Boolean;
+    function Get__isset_StNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -460,6 +492,8 @@ type
     property DataHoraFinalAtendimento: Int64 read GetDataHoraFinalAtendimento write SetDataHoraFinalAtendimento;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property CondicaoMaternal: Int64 read GetCondicaoMaternal write SetCondicaoMaternal;
+    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
+    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
 
     // isset
     property __isset_Turno: Boolean read Get__isset_Turno;
@@ -477,6 +511,8 @@ type
     property __isset_DataHoraFinalAtendimento: Boolean read Get__isset_DataHoraFinalAtendimento;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_CondicaoMaternal: Boolean read Get__isset_CondicaoMaternal;
+    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
+    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
   end;
 
   IFichaVacinacaoMasterThrift = interface(IBase)
@@ -860,6 +896,22 @@ begin
   Result := F__isset_LocalAplicacao;
 end;
 
+function TVacinaRowThriftImpl.GetCoRndsFabricante: string;
+begin
+  Result := FCoRndsFabricante;
+end;
+
+procedure TVacinaRowThriftImpl.SetCoRndsFabricante( const Value: string);
+begin
+  F__isset_CoRndsFabricante := True;
+  FCoRndsFabricante := Value;
+end;
+
+function TVacinaRowThriftImpl.Get__isset_CoRndsFabricante: Boolean;
+begin
+  Result := F__isset_CoRndsFabricante;
+end;
+
 procedure TVacinaRowThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1035,6 +1087,15 @@ begin
           if (field_.Type_ = TType.I64) then
           begin
             LocalAplicacao := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        19: begin
+          if (field_.Type_ = TType.String_) then
+          begin
+            CoRndsFabricante := iprot.ReadString();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1223,6 +1284,15 @@ begin
     oprot.WriteI64(LocalAplicacao);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_CoRndsFabricante) then
+  begin
+    field_.Name := 'coRndsFabricante';
+    field_.Type_  := TType.String_;
+    field_.ID := 19;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteString(CoRndsFabricante);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1342,6 +1412,12 @@ begin
       _first1 := FALSE;
       _sb0.Append('LocalAplicacao: ');
       _sb0.Append(LocalAplicacao);
+    end;
+    if (__isset_CoRndsFabricante) then begin
+      if not _first1 then _sb0.Append(',');
+      _first1 := FALSE;
+      _sb0.Append('CoRndsFabricante: ');
+      _sb0.Append(CoRndsFabricante);
     end;
     _sb0.Append(')');
     Result := _sb0.ToString;
@@ -1601,6 +1677,38 @@ begin
   Result := F__isset_CondicaoMaternal;
 end;
 
+function TFichaVacinacaoChildThriftImpl.GetStNaoPossuiCpf: Boolean;
+begin
+  Result := FStNaoPossuiCpf;
+end;
+
+procedure TFichaVacinacaoChildThriftImpl.SetStNaoPossuiCpf( const Value: Boolean);
+begin
+  F__isset_StNaoPossuiCpf := True;
+  FStNaoPossuiCpf := Value;
+end;
+
+function TFichaVacinacaoChildThriftImpl.Get__isset_StNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_StNaoPossuiCpf;
+end;
+
+function TFichaVacinacaoChildThriftImpl.GetJustificativaNaoPossuiCpf: Int64;
+begin
+  Result := FJustificativaNaoPossuiCpf;
+end;
+
+procedure TFichaVacinacaoChildThriftImpl.SetJustificativaNaoPossuiCpf( const Value: Int64);
+begin
+  F__isset_JustificativaNaoPossuiCpf := True;
+  FJustificativaNaoPossuiCpf := Value;
+end;
+
+function TFichaVacinacaoChildThriftImpl.Get__isset_JustificativaNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_JustificativaNaoPossuiCpf;
+end;
+
 procedure TFichaVacinacaoChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1760,6 +1868,24 @@ begin
           if (field_.Type_ = TType.I64) then
           begin
             CondicaoMaternal := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        16: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            StNaoPossuiCpf := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        17: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            JustificativaNaoPossuiCpf := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1929,6 +2055,24 @@ begin
     oprot.WriteI64(CondicaoMaternal);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_StNaoPossuiCpf) then
+  begin
+    field_.Name := 'stNaoPossuiCpf';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 16;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(StNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_JustificativaNaoPossuiCpf) then
+  begin
+    field_.Name := 'justificativaNaoPossuiCpf';
+    field_.Type_  := TType.I64;
+    field_.ID := 17;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(JustificativaNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -2030,6 +2174,18 @@ begin
       _first8 := FALSE;
       _sb7.Append('CondicaoMaternal: ');
       _sb7.Append(CondicaoMaternal);
+    end;
+    if (__isset_StNaoPossuiCpf) then begin
+      if not _first8 then _sb7.Append(',');
+      _first8 := FALSE;
+      _sb7.Append('StNaoPossuiCpf: ');
+      _sb7.Append(StNaoPossuiCpf);
+    end;
+    if (__isset_JustificativaNaoPossuiCpf) then begin
+      if not _first8 then _sb7.Append(',');
+      _first8 := FALSE;
+      _sb7.Append('JustificativaNaoPossuiCpf: ');
+      _sb7.Append(JustificativaNaoPossuiCpf);
     end;
     _sb7.Append(')');
     Result := _sb7.ToString;
