@@ -58,6 +58,8 @@ class FichaAvaliacaoElegibilidadeThrift:
    - cnsCuidador
    - cpfCidadao
    - cpfCuidador
+   - stNaoPossuiCpf
+   - justificativaNaoPossuiCpf
   """
 
   thrift_spec = (
@@ -99,9 +101,11 @@ class FichaAvaliacaoElegibilidadeThrift:
     (35, TType.STRING, 'cnsCuidador', None, None, ), # 35
     (36, TType.STRING, 'cpfCidadao', None, None, ), # 36
     (37, TType.STRING, 'cpfCuidador', None, None, ), # 37
+    (38, TType.BOOL, 'stNaoPossuiCpf', None, None, ), # 38
+    (39, TType.I64, 'justificativaNaoPossuiCpf', None, None, ), # 39
   )
 
-  def __init__(self, uuidFicha=None, tpCdsOrigem=None, cnsCidadao=None, nomeCidadao=None, nomeSocialCidadao=None, dataNascimentoCidadao=None, sexoCidadao=None, racaCorCidadao=None, nomeMaeCidadao=None, desconheceNomeMae=None, codigoIbgeMunicipioNascimento=None, nacionalidadeCidadao=None, emailCidadao=None, numeroNisPisPasep=None, endereco=None, atencaoDomiciliarProcedencia=None, atencaoDomiciliarModalidade=None, condicoesAvaliadas=None, cid10Principal=None, cid10SecundarioUm=None, cid10SecundarioDois=None, conclusaoDestinoElegivel=None, conclusaoDestinoInelegivel=None, cuidadorCidadao=None, turno=None, headerTransport=None, nomePaiCidadao=None, desconheceNomePai=None, dtNaturalizacao=None, portariaNaturalizacao=None, dtEntradaBrasil=None, paisNascimento=None, etnia=None, cnsCuidador=None, cpfCidadao=None, cpfCuidador=None,):
+  def __init__(self, uuidFicha=None, tpCdsOrigem=None, cnsCidadao=None, nomeCidadao=None, nomeSocialCidadao=None, dataNascimentoCidadao=None, sexoCidadao=None, racaCorCidadao=None, nomeMaeCidadao=None, desconheceNomeMae=None, codigoIbgeMunicipioNascimento=None, nacionalidadeCidadao=None, emailCidadao=None, numeroNisPisPasep=None, endereco=None, atencaoDomiciliarProcedencia=None, atencaoDomiciliarModalidade=None, condicoesAvaliadas=None, cid10Principal=None, cid10SecundarioUm=None, cid10SecundarioDois=None, conclusaoDestinoElegivel=None, conclusaoDestinoInelegivel=None, cuidadorCidadao=None, turno=None, headerTransport=None, nomePaiCidadao=None, desconheceNomePai=None, dtNaturalizacao=None, portariaNaturalizacao=None, dtEntradaBrasil=None, paisNascimento=None, etnia=None, cnsCuidador=None, cpfCidadao=None, cpfCuidador=None, stNaoPossuiCpf=None, justificativaNaoPossuiCpf=None,):
     self.uuidFicha = uuidFicha
     self.tpCdsOrigem = tpCdsOrigem
     self.cnsCidadao = cnsCidadao
@@ -138,6 +142,8 @@ class FichaAvaliacaoElegibilidadeThrift:
     self.cnsCuidador = cnsCuidador
     self.cpfCidadao = cpfCidadao
     self.cpfCuidador = cpfCuidador
+    self.stNaoPossuiCpf = stNaoPossuiCpf
+    self.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -340,6 +346,16 @@ class FichaAvaliacaoElegibilidadeThrift:
           self.cpfCuidador = iprot.readString()
         else:
           iprot.skip(ftype)
+      elif fid == 38:
+        if ftype == TType.BOOL:
+          self.stNaoPossuiCpf = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 39:
+        if ftype == TType.I64:
+          self.justificativaNaoPossuiCpf = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -500,6 +516,14 @@ class FichaAvaliacaoElegibilidadeThrift:
       oprot.writeFieldBegin('cpfCuidador', TType.STRING, 37)
       oprot.writeString(self.cpfCuidador)
       oprot.writeFieldEnd()
+    if self.stNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('stNaoPossuiCpf', TType.BOOL, 38)
+      oprot.writeBool(self.stNaoPossuiCpf)
+      oprot.writeFieldEnd()
+    if self.justificativaNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('justificativaNaoPossuiCpf', TType.I64, 39)
+      oprot.writeI64(self.justificativaNaoPossuiCpf)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -547,6 +571,8 @@ class FichaAvaliacaoElegibilidadeThrift:
     value = (value * 31) ^ hash(self.cnsCuidador)
     value = (value * 31) ^ hash(self.cpfCidadao)
     value = (value * 31) ^ hash(self.cpfCuidador)
+    value = (value * 31) ^ hash(self.stNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.justificativaNaoPossuiCpf)
     return value
 
   def __repr__(self):

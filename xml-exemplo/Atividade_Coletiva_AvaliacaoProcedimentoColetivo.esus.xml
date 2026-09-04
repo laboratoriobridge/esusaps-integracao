@@ -22,6 +22,8 @@
 		<publicoAlvo>5</publicoAlvo>
 		<participantes>
 			<cnsParticipante>767273769570018</cnsParticipante>
+			<stNaoPossuiCpf>true</stNaoPossuiCpf>
+			<justificativaNaoPossuiCpf>5</justificativaNaoPossuiCpf>
 			<dataNascimento>1430838000000</dataNascimento>
 			<avaliacaoAlterada>true</avaliacaoAlterada>
 			<peso>74.0</peso>
@@ -32,6 +34,7 @@
 		</participantes>
 		<participantes>
 			<cpfParticipante>68688625042</cpfParticipante>
+			<stNaoPossuiCpf>false</stNaoPossuiCpf>
 			<dataNascimento>978357600000</dataNascimento>
 			<avaliacaoAlterada>false</avaliacaoAlterada>
 			<cessouHabitoFumar>false</cessouHabitoFumar>

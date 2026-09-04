@@ -58,6 +58,8 @@ namespace br.gov.saude.esusab.ras.avaliacaoelegibilidade
     private string _cnsCuidador;
     private string _cpfCidadao;
     private string _cpfCuidador;
+    private bool _stNaoPossuiCpf;
+    private long _justificativaNaoPossuiCpf;
 
     public string UuidFicha { get; set; }
 
@@ -516,6 +518,32 @@ namespace br.gov.saude.esusab.ras.avaliacaoelegibilidade
       }
     }
 
+    public bool StNaoPossuiCpf
+    {
+      get
+      {
+        return _stNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.stNaoPossuiCpf = true;
+        this._stNaoPossuiCpf = value;
+      }
+    }
+
+    public long JustificativaNaoPossuiCpf
+    {
+      get
+      {
+        return _justificativaNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.justificativaNaoPossuiCpf = true;
+        this._justificativaNaoPossuiCpf = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -557,6 +585,8 @@ namespace br.gov.saude.esusab.ras.avaliacaoelegibilidade
       public bool cnsCuidador;
       public bool cpfCidadao;
       public bool cpfCuidador;
+      public bool stNaoPossuiCpf;
+      public bool justificativaNaoPossuiCpf;
     }
 
     public FichaAvaliacaoElegibilidadeThrift() {
@@ -853,6 +883,20 @@ namespace br.gov.saude.esusab.ras.avaliacaoelegibilidade
             case 37:
               if (field.Type == TType.String) {
                 CpfCuidador = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 38:
+              if (field.Type == TType.Bool) {
+                StNaoPossuiCpf = iprot.ReadBool();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 39:
+              if (field.Type == TType.I64) {
+                JustificativaNaoPossuiCpf = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -1180,6 +1224,22 @@ namespace br.gov.saude.esusab.ras.avaliacaoelegibilidade
           oprot.WriteString(CpfCuidador);
           oprot.WriteFieldEnd();
         }
+        if (__isset.stNaoPossuiCpf) {
+          field.Name = "stNaoPossuiCpf";
+          field.Type = TType.Bool;
+          field.ID = 38;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteBool(StNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.justificativaNaoPossuiCpf) {
+          field.Name = "justificativaNaoPossuiCpf";
+          field.Type = TType.I64;
+          field.ID = 39;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(JustificativaNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -1332,6 +1392,14 @@ namespace br.gov.saude.esusab.ras.avaliacaoelegibilidade
       if (CpfCuidador != null && __isset.cpfCuidador) {
         __sb.Append(", CpfCuidador: ");
         __sb.Append(CpfCuidador);
+      }
+      if (__isset.stNaoPossuiCpf) {
+        __sb.Append(", StNaoPossuiCpf: ");
+        __sb.Append(StNaoPossuiCpf);
+      }
+      if (__isset.justificativaNaoPossuiCpf) {
+        __sb.Append(", JustificativaNaoPossuiCpf: ");
+        __sb.Append(JustificativaNaoPossuiCpf);
       }
       __sb.Append(")");
       return __sb.ToString();

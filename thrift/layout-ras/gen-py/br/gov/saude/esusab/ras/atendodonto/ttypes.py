@@ -126,6 +126,8 @@ class FichaAtendimentoOdontologicoChildThrift:
    - ivcf
    - exame
    - solicitacoesOci
+   - stNaoPossuiCpf
+   - justificativaNaoPossuiCpf
   """
 
   thrift_spec = (
@@ -161,9 +163,11 @@ class FichaAtendimentoOdontologicoChildThrift:
     (29, TType.STRUCT, 'ivcf', (br.gov.saude.esusab.ras.common.ttypes.IvcfThrift, br.gov.saude.esusab.ras.common.ttypes.IvcfThrift.thrift_spec), None, ), # 29
     (30, TType.LIST, 'exame', (TType.STRUCT,(br.gov.saude.esusab.ras.common.ttypes.ExameThrift, br.gov.saude.esusab.ras.common.ttypes.ExameThrift.thrift_spec)), None, ), # 30
     (31, TType.LIST, 'solicitacoesOci', (TType.STRUCT,(br.gov.saude.esusab.ras.solicitacaooci.ttypes.SolicitacaoOciThrift, br.gov.saude.esusab.ras.solicitacaooci.ttypes.SolicitacaoOciThrift.thrift_spec)), None, ), # 31
+    (32, TType.BOOL, 'stNaoPossuiCpf', None, None, ), # 32
+    (33, TType.I64, 'justificativaNaoPossuiCpf', None, None, ), # 33
   )
 
-  def __init__(self, dtNascimento=None, cnsCidadao=None, numProntuario=None, gestante=None, necessidadesEspeciais=None, localAtendimento=None, tipoAtendimento=None, tiposEncamOdonto=None, tiposFornecimOdonto=None, tiposVigilanciaSaudeBucal=None, tiposConsultaOdonto=None, procedimentosRealizados=None, sexo=None, turno=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, medicoes=None, problemasCondicoes=None, ivcf=None, exame=None, solicitacoesOci=None,):
+  def __init__(self, dtNascimento=None, cnsCidadao=None, numProntuario=None, gestante=None, necessidadesEspeciais=None, localAtendimento=None, tipoAtendimento=None, tiposEncamOdonto=None, tiposFornecimOdonto=None, tiposVigilanciaSaudeBucal=None, tiposConsultaOdonto=None, procedimentosRealizados=None, sexo=None, turno=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, medicoes=None, problemasCondicoes=None, ivcf=None, exame=None, solicitacoesOci=None, stNaoPossuiCpf=None, justificativaNaoPossuiCpf=None,):
     self.dtNascimento = dtNascimento
     self.cnsCidadao = cnsCidadao
     self.numProntuario = numProntuario
@@ -189,6 +193,8 @@ class FichaAtendimentoOdontologicoChildThrift:
     self.ivcf = ivcf
     self.exame = exame
     self.solicitacoesOci = solicitacoesOci
+    self.stNaoPossuiCpf = stNaoPossuiCpf
+    self.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -388,6 +394,16 @@ class FichaAtendimentoOdontologicoChildThrift:
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
+      elif fid == 32:
+        if ftype == TType.BOOL:
+          self.stNaoPossuiCpf = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 33:
+        if ftype == TType.I64:
+          self.justificativaNaoPossuiCpf = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -531,6 +547,14 @@ class FichaAtendimentoOdontologicoChildThrift:
         iter76.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
+    if self.stNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('stNaoPossuiCpf', TType.BOOL, 32)
+      oprot.writeBool(self.stNaoPossuiCpf)
+      oprot.writeFieldEnd()
+    if self.justificativaNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('justificativaNaoPossuiCpf', TType.I64, 33)
+      oprot.writeI64(self.justificativaNaoPossuiCpf)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -565,6 +589,8 @@ class FichaAtendimentoOdontologicoChildThrift:
     value = (value * 31) ^ hash(self.ivcf)
     value = (value * 31) ^ hash(self.exame)
     value = (value * 31) ^ hash(self.solicitacoesOci)
+    value = (value * 31) ^ hash(self.stNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.justificativaNaoPossuiCpf)
     return value
 
   def __repr__(self):

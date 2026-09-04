@@ -19,6 +19,7 @@
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<turno>1</turno>
 		<cpfCidadao>31422733521</cpfCidadao>
+		<stNaoPossuiCpf>false</stNaoPossuiCpf>
 		<cpfResponsavelFamiliar>68688625042</cpfResponsavelFamiliar>
 		<dataRealizacaoTesteOlhinho>1551106800000</dataRealizacaoTesteOlhinho>
 		<coResultadoTesteOlhinho>1</coResultadoTesteOlhinho>

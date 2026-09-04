@@ -360,6 +360,8 @@ func (p *ProblemaCondicaoAvaliacaoAIThrift) String() string {
 //  - ProblemasCondicoes
 //  - Ivcf
 //  - SolicitacoesOci
+//  - StNaoPossuiCpf
+//  - JustificativaNaoPossuiCpf
 type FichaAtendimentoIndividualChildThrift struct {
 	NumeroProntuario   *string `thrift:"numeroProntuario,1" json:"numeroProntuario,omitempty"`
 	Cns                *string `thrift:"cns,2" json:"cns,omitempty"`
@@ -400,7 +402,9 @@ type FichaAtendimentoIndividualChildThrift struct {
 	ProblemasCondicoes                    []*common.ProblemaCondicaoThrift `thrift:"problemasCondicoes,40" json:"problemasCondicoes,omitempty"`
 	Ivcf                                  *common.IvcfThrift               `thrift:"ivcf,41" json:"ivcf,omitempty"`
 	// unused field # 42
-	SolicitacoesOci []*solicitacaooci.SolicitacaoOciThrift `thrift:"solicitacoesOci,43" json:"solicitacoesOci,omitempty"`
+	SolicitacoesOci           []*solicitacaooci.SolicitacaoOciThrift `thrift:"solicitacoesOci,43" json:"solicitacoesOci,omitempty"`
+	StNaoPossuiCpf            *bool                                  `thrift:"stNaoPossuiCpf,44" json:"stNaoPossuiCpf,omitempty"`
+	JustificativaNaoPossuiCpf *int64                                 `thrift:"justificativaNaoPossuiCpf,45" json:"justificativaNaoPossuiCpf,omitempty"`
 }
 
 func NewFichaAtendimentoIndividualChildThrift() *FichaAtendimentoIndividualChildThrift {
@@ -694,6 +698,24 @@ var FichaAtendimentoIndividualChildThrift_SolicitacoesOci_DEFAULT []*solicitacao
 func (p *FichaAtendimentoIndividualChildThrift) GetSolicitacoesOci() []*solicitacaooci.SolicitacaoOciThrift {
 	return p.SolicitacoesOci
 }
+
+var FichaAtendimentoIndividualChildThrift_StNaoPossuiCpf_DEFAULT bool
+
+func (p *FichaAtendimentoIndividualChildThrift) GetStNaoPossuiCpf() bool {
+	if !p.IsSetStNaoPossuiCpf() {
+		return FichaAtendimentoIndividualChildThrift_StNaoPossuiCpf_DEFAULT
+	}
+	return *p.StNaoPossuiCpf
+}
+
+var FichaAtendimentoIndividualChildThrift_JustificativaNaoPossuiCpf_DEFAULT int64
+
+func (p *FichaAtendimentoIndividualChildThrift) GetJustificativaNaoPossuiCpf() int64 {
+	if !p.IsSetJustificativaNaoPossuiCpf() {
+		return FichaAtendimentoIndividualChildThrift_JustificativaNaoPossuiCpf_DEFAULT
+	}
+	return *p.JustificativaNaoPossuiCpf
+}
 func (p *FichaAtendimentoIndividualChildThrift) IsSetNumeroProntuario() bool {
 	return p.NumeroProntuario != nil
 }
@@ -832,6 +854,14 @@ func (p *FichaAtendimentoIndividualChildThrift) IsSetIvcf() bool {
 
 func (p *FichaAtendimentoIndividualChildThrift) IsSetSolicitacoesOci() bool {
 	return p.SolicitacoesOci != nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) IsSetStNaoPossuiCpf() bool {
+	return p.StNaoPossuiCpf != nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) IsSetJustificativaNaoPossuiCpf() bool {
+	return p.JustificativaNaoPossuiCpf != nil
 }
 
 func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) error {
@@ -986,6 +1016,14 @@ func (p *FichaAtendimentoIndividualChildThrift) Read(iprot thrift.TProtocol) err
 			}
 		case 43:
 			if err := p.readField43(iprot); err != nil {
+				return err
+			}
+		case 44:
+			if err := p.readField44(iprot); err != nil {
+				return err
+			}
+		case 45:
+			if err := p.readField45(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1420,6 +1458,24 @@ func (p *FichaAtendimentoIndividualChildThrift) readField43(iprot thrift.TProtoc
 	return nil
 }
 
+func (p *FichaAtendimentoIndividualChildThrift) readField44(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 44: ", err)
+	} else {
+		p.StNaoPossuiCpf = &v
+	}
+	return nil
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) readField45(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI64(); err != nil {
+		return thrift.PrependError("error reading field 45: ", err)
+	} else {
+		p.JustificativaNaoPossuiCpf = &v
+	}
+	return nil
+}
+
 func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAtendimentoIndividualChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -1527,6 +1583,12 @@ func (p *FichaAtendimentoIndividualChildThrift) Write(oprot thrift.TProtocol) er
 		return err
 	}
 	if err := p.writeField43(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField44(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField45(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -2130,6 +2192,36 @@ func (p *FichaAtendimentoIndividualChildThrift) writeField43(oprot thrift.TProto
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 43:solicitacoesOci: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) writeField44(oprot thrift.TProtocol) (err error) {
+	if p.IsSetStNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("stNaoPossuiCpf", thrift.BOOL, 44); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 44:stNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.StNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.stNaoPossuiCpf (44) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 44:stNaoPossuiCpf: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAtendimentoIndividualChildThrift) writeField45(oprot thrift.TProtocol) (err error) {
+	if p.IsSetJustificativaNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("justificativaNaoPossuiCpf", thrift.I64, 45); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 45:justificativaNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteI64(int64(*p.JustificativaNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.justificativaNaoPossuiCpf (45) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 45:justificativaNaoPossuiCpf: ", p), err)
 		}
 	}
 	return err

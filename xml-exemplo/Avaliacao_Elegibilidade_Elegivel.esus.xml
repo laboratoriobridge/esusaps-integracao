@@ -27,6 +27,7 @@
 		<tpCdsOrigem>3</tpCdsOrigem>
 		<turno>1</turno>
 		<cpfCidadao>68688625042</cpfCidadao>
+		<stNaoPossuiCpf>false</stNaoPossuiCpf>
 		<dataNascimentoCidadao>662742000000</dataNascimentoCidadao>
 		<sexoCidadao>0</sexoCidadao>
 		<nomeCidadao>CIDADÃO VALIDAÇÃO LEDI</nomeCidadao>

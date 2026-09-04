@@ -100,6 +100,14 @@ class FichaComplementarZikaMicrocefaliaThrift {
    * @var string
    */
   public $cpfResponsavelFamiliar = null;
+  /**
+   * @var bool
+   */
+  public $stNaoPossuiCpf = null;
+  /**
+   * @var int
+   */
+  public $justificativaNaoPossuiCpf = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -185,6 +193,14 @@ class FichaComplementarZikaMicrocefaliaThrift {
           'var' => 'cpfResponsavelFamiliar',
           'type' => TType::STRING,
           ),
+        21 => array(
+          'var' => 'stNaoPossuiCpf',
+          'type' => TType::BOOL,
+          ),
+        22 => array(
+          'var' => 'justificativaNaoPossuiCpf',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -247,6 +263,12 @@ class FichaComplementarZikaMicrocefaliaThrift {
       }
       if (isset($vals['cpfResponsavelFamiliar'])) {
         $this->cpfResponsavelFamiliar = $vals['cpfResponsavelFamiliar'];
+      }
+      if (isset($vals['stNaoPossuiCpf'])) {
+        $this->stNaoPossuiCpf = $vals['stNaoPossuiCpf'];
+      }
+      if (isset($vals['justificativaNaoPossuiCpf'])) {
+        $this->justificativaNaoPossuiCpf = $vals['justificativaNaoPossuiCpf'];
       }
     }
   }
@@ -411,6 +433,20 @@ class FichaComplementarZikaMicrocefaliaThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 21:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->stNaoPossuiCpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 22:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->justificativaNaoPossuiCpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -525,6 +561,16 @@ class FichaComplementarZikaMicrocefaliaThrift {
     if ($this->cpfResponsavelFamiliar !== null) {
       $xfer += $output->writeFieldBegin('cpfResponsavelFamiliar', TType::STRING, 20);
       $xfer += $output->writeString($this->cpfResponsavelFamiliar);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->stNaoPossuiCpf !== null) {
+      $xfer += $output->writeFieldBegin('stNaoPossuiCpf', TType::BOOL, 21);
+      $xfer += $output->writeBool($this->stNaoPossuiCpf);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->justificativaNaoPossuiCpf !== null) {
+      $xfer += $output->writeFieldBegin('justificativaNaoPossuiCpf', TType::I64, 22);
+      $xfer += $output->writeI64($this->justificativaNaoPossuiCpf);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

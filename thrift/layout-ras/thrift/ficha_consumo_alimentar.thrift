@@ -104,6 +104,8 @@ struct FichaConsumoAlimentarThrift {
 	8:optional list<PerguntaQuestionarioCriancasDeSeisVinteTresMesesThrift> perguntasQuestionarioCriancasDeSeisVinteTresMeses;
 	9:optional list<PerguntaQuestionarioCriancasComMaisDoisAnosThrift> perguntasQuestionarioCriancasComMaisDoisAnos;
 	10:required string uuidFicha;
-	11:optional i32 tpCdsOrigem;      
-	12:optional string cpfCidadao;    
+	11:optional i32 tpCdsOrigem;
+	12:optional string cpfCidadao;
+	13:optional bool stNaoPossuiCpf;
+	14:optional i64 justificativaNaoPossuiCpf;
 }

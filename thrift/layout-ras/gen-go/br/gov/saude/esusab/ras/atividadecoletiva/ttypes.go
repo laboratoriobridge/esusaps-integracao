@@ -28,16 +28,20 @@ var GoUnusedProtection__ int
 //  - AbandonouGrupo
 //  - Sexo
 //  - CpfParticipante
+//  - StNaoPossuiCpf
+//  - JustificativaNaoPossuiCpf
 type ParticipanteRowItemThrift struct {
-	CnsParticipante   *string  `thrift:"cnsParticipante,1" json:"cnsParticipante,omitempty"`
-	DataNascimento    *int64   `thrift:"dataNascimento,2" json:"dataNascimento,omitempty"`
-	AvaliacaoAlterada *bool    `thrift:"avaliacaoAlterada,3" json:"avaliacaoAlterada,omitempty"`
-	Peso              *float64 `thrift:"peso,4" json:"peso,omitempty"`
-	Altura            *float64 `thrift:"altura,5" json:"altura,omitempty"`
-	CessouHabitoFumar *bool    `thrift:"cessouHabitoFumar,6" json:"cessouHabitoFumar,omitempty"`
-	AbandonouGrupo    *bool    `thrift:"abandonouGrupo,7" json:"abandonouGrupo,omitempty"`
-	Sexo              *int64   `thrift:"sexo,8" json:"sexo,omitempty"`
-	CpfParticipante   *string  `thrift:"cpfParticipante,9" json:"cpfParticipante,omitempty"`
+	CnsParticipante           *string  `thrift:"cnsParticipante,1" json:"cnsParticipante,omitempty"`
+	DataNascimento            *int64   `thrift:"dataNascimento,2" json:"dataNascimento,omitempty"`
+	AvaliacaoAlterada         *bool    `thrift:"avaliacaoAlterada,3" json:"avaliacaoAlterada,omitempty"`
+	Peso                      *float64 `thrift:"peso,4" json:"peso,omitempty"`
+	Altura                    *float64 `thrift:"altura,5" json:"altura,omitempty"`
+	CessouHabitoFumar         *bool    `thrift:"cessouHabitoFumar,6" json:"cessouHabitoFumar,omitempty"`
+	AbandonouGrupo            *bool    `thrift:"abandonouGrupo,7" json:"abandonouGrupo,omitempty"`
+	Sexo                      *int64   `thrift:"sexo,8" json:"sexo,omitempty"`
+	CpfParticipante           *string  `thrift:"cpfParticipante,9" json:"cpfParticipante,omitempty"`
+	StNaoPossuiCpf            *bool    `thrift:"stNaoPossuiCpf,10" json:"stNaoPossuiCpf,omitempty"`
+	JustificativaNaoPossuiCpf *int64   `thrift:"justificativaNaoPossuiCpf,11" json:"justificativaNaoPossuiCpf,omitempty"`
 }
 
 func NewParticipanteRowItemThrift() *ParticipanteRowItemThrift {
@@ -124,6 +128,24 @@ func (p *ParticipanteRowItemThrift) GetCpfParticipante() string {
 	}
 	return *p.CpfParticipante
 }
+
+var ParticipanteRowItemThrift_StNaoPossuiCpf_DEFAULT bool
+
+func (p *ParticipanteRowItemThrift) GetStNaoPossuiCpf() bool {
+	if !p.IsSetStNaoPossuiCpf() {
+		return ParticipanteRowItemThrift_StNaoPossuiCpf_DEFAULT
+	}
+	return *p.StNaoPossuiCpf
+}
+
+var ParticipanteRowItemThrift_JustificativaNaoPossuiCpf_DEFAULT int64
+
+func (p *ParticipanteRowItemThrift) GetJustificativaNaoPossuiCpf() int64 {
+	if !p.IsSetJustificativaNaoPossuiCpf() {
+		return ParticipanteRowItemThrift_JustificativaNaoPossuiCpf_DEFAULT
+	}
+	return *p.JustificativaNaoPossuiCpf
+}
 func (p *ParticipanteRowItemThrift) IsSetCnsParticipante() bool {
 	return p.CnsParticipante != nil
 }
@@ -158,6 +180,14 @@ func (p *ParticipanteRowItemThrift) IsSetSexo() bool {
 
 func (p *ParticipanteRowItemThrift) IsSetCpfParticipante() bool {
 	return p.CpfParticipante != nil
+}
+
+func (p *ParticipanteRowItemThrift) IsSetStNaoPossuiCpf() bool {
+	return p.StNaoPossuiCpf != nil
+}
+
+func (p *ParticipanteRowItemThrift) IsSetJustificativaNaoPossuiCpf() bool {
+	return p.JustificativaNaoPossuiCpf != nil
 }
 
 func (p *ParticipanteRowItemThrift) Read(iprot thrift.TProtocol) error {
@@ -208,6 +238,14 @@ func (p *ParticipanteRowItemThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 9:
 			if err := p.readField9(iprot); err != nil {
+				return err
+			}
+		case 10:
+			if err := p.readField10(iprot); err != nil {
+				return err
+			}
+		case 11:
+			if err := p.readField11(iprot); err != nil {
 				return err
 			}
 		default:
@@ -306,6 +344,24 @@ func (p *ParticipanteRowItemThrift) readField9(iprot thrift.TProtocol) error {
 	return nil
 }
 
+func (p *ParticipanteRowItemThrift) readField10(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 10: ", err)
+	} else {
+		p.StNaoPossuiCpf = &v
+	}
+	return nil
+}
+
+func (p *ParticipanteRowItemThrift) readField11(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI64(); err != nil {
+		return thrift.PrependError("error reading field 11: ", err)
+	} else {
+		p.JustificativaNaoPossuiCpf = &v
+	}
+	return nil
+}
+
 func (p *ParticipanteRowItemThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("ParticipanteRowItemThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -335,6 +391,12 @@ func (p *ParticipanteRowItemThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField9(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField10(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField11(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -476,6 +538,36 @@ func (p *ParticipanteRowItemThrift) writeField9(oprot thrift.TProtocol) (err err
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 9:cpfParticipante: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *ParticipanteRowItemThrift) writeField10(oprot thrift.TProtocol) (err error) {
+	if p.IsSetStNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("stNaoPossuiCpf", thrift.BOOL, 10); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 10:stNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.StNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.stNaoPossuiCpf (10) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 10:stNaoPossuiCpf: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *ParticipanteRowItemThrift) writeField11(oprot thrift.TProtocol) (err error) {
+	if p.IsSetJustificativaNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("justificativaNaoPossuiCpf", thrift.I64, 11); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 11:justificativaNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteI64(int64(*p.JustificativaNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.justificativaNaoPossuiCpf (11) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 11:justificativaNaoPossuiCpf: ", p), err)
 		}
 	}
 	return err

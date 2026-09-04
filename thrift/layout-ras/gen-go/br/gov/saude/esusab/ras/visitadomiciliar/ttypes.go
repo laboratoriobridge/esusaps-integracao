@@ -42,6 +42,8 @@ var GoUnusedProtection__ int
 //  - Longitude
 //  - UuidOrigemCadastroDomiciliar
 //  - Ivcf
+//  - StNaoPossuiCpf
+//  - JustificativaNaoPossuiCpf
 type FichaVisitaDomiciliarChildThrift struct {
 	Turno                                      *int64             `thrift:"turno,1" json:"turno,omitempty"`
 	NumProntuario                              *string            `thrift:"numProntuario,2" json:"numProntuario,omitempty"`
@@ -66,6 +68,8 @@ type FichaVisitaDomiciliarChildThrift struct {
 	Longitude                                  *float64           `thrift:"longitude,21" json:"longitude,omitempty"`
 	UuidOrigemCadastroDomiciliar               *string            `thrift:"uuidOrigemCadastroDomiciliar,22" json:"uuidOrigemCadastroDomiciliar,omitempty"`
 	Ivcf                                       *common.IvcfThrift `thrift:"ivcf,23" json:"ivcf,omitempty"`
+	StNaoPossuiCpf                             *bool              `thrift:"stNaoPossuiCpf,24" json:"stNaoPossuiCpf,omitempty"`
+	JustificativaNaoPossuiCpf                  *int64             `thrift:"justificativaNaoPossuiCpf,25" json:"justificativaNaoPossuiCpf,omitempty"`
 }
 
 func NewFichaVisitaDomiciliarChildThrift() *FichaVisitaDomiciliarChildThrift {
@@ -275,6 +279,24 @@ func (p *FichaVisitaDomiciliarChildThrift) GetIvcf() *common.IvcfThrift {
 	}
 	return p.Ivcf
 }
+
+var FichaVisitaDomiciliarChildThrift_StNaoPossuiCpf_DEFAULT bool
+
+func (p *FichaVisitaDomiciliarChildThrift) GetStNaoPossuiCpf() bool {
+	if !p.IsSetStNaoPossuiCpf() {
+		return FichaVisitaDomiciliarChildThrift_StNaoPossuiCpf_DEFAULT
+	}
+	return *p.StNaoPossuiCpf
+}
+
+var FichaVisitaDomiciliarChildThrift_JustificativaNaoPossuiCpf_DEFAULT int64
+
+func (p *FichaVisitaDomiciliarChildThrift) GetJustificativaNaoPossuiCpf() int64 {
+	if !p.IsSetJustificativaNaoPossuiCpf() {
+		return FichaVisitaDomiciliarChildThrift_JustificativaNaoPossuiCpf_DEFAULT
+	}
+	return *p.JustificativaNaoPossuiCpf
+}
 func (p *FichaVisitaDomiciliarChildThrift) IsSetTurno() bool {
 	return p.Turno != nil
 }
@@ -365,6 +387,14 @@ func (p *FichaVisitaDomiciliarChildThrift) IsSetUuidOrigemCadastroDomiciliar() b
 
 func (p *FichaVisitaDomiciliarChildThrift) IsSetIvcf() bool {
 	return p.Ivcf != nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) IsSetStNaoPossuiCpf() bool {
+	return p.StNaoPossuiCpf != nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) IsSetJustificativaNaoPossuiCpf() bool {
+	return p.JustificativaNaoPossuiCpf != nil
 }
 
 func (p *FichaVisitaDomiciliarChildThrift) Read(iprot thrift.TProtocol) error {
@@ -471,6 +501,14 @@ func (p *FichaVisitaDomiciliarChildThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 23:
 			if err := p.readField23(iprot); err != nil {
+				return err
+			}
+		case 24:
+			if err := p.readField24(iprot); err != nil {
+				return err
+			}
+		case 25:
+			if err := p.readField25(iprot); err != nil {
 				return err
 			}
 		default:
@@ -707,6 +745,24 @@ func (p *FichaVisitaDomiciliarChildThrift) readField23(iprot thrift.TProtocol) e
 	return nil
 }
 
+func (p *FichaVisitaDomiciliarChildThrift) readField24(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 24: ", err)
+	} else {
+		p.StNaoPossuiCpf = &v
+	}
+	return nil
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) readField25(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI64(); err != nil {
+		return thrift.PrependError("error reading field 25: ", err)
+	} else {
+		p.JustificativaNaoPossuiCpf = &v
+	}
+	return nil
+}
+
 func (p *FichaVisitaDomiciliarChildThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaVisitaDomiciliarChildThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -778,6 +834,12 @@ func (p *FichaVisitaDomiciliarChildThrift) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField23(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField24(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField25(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -1137,6 +1199,36 @@ func (p *FichaVisitaDomiciliarChildThrift) writeField23(oprot thrift.TProtocol) 
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 23:ivcf: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) writeField24(oprot thrift.TProtocol) (err error) {
+	if p.IsSetStNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("stNaoPossuiCpf", thrift.BOOL, 24); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 24:stNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.StNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.stNaoPossuiCpf (24) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 24:stNaoPossuiCpf: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaVisitaDomiciliarChildThrift) writeField25(oprot thrift.TProtocol) (err error) {
+	if p.IsSetJustificativaNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("justificativaNaoPossuiCpf", thrift.I64, 25); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 25:justificativaNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteI64(int64(*p.JustificativaNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.justificativaNaoPossuiCpf (25) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 25:justificativaNaoPossuiCpf: ", p), err)
 		}
 	}
 	return err

@@ -102,6 +102,10 @@ type
     procedure SetCpfCidadao( const Value: string);
     function GetCpfCuidador: string;
     procedure SetCpfCuidador( const Value: string);
+    function GetStNaoPossuiCpf: Boolean;
+    procedure SetStNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaNaoPossuiCpf: Int64;
+    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
 
     property UuidFicha: string read GetUuidFicha write SetUuidFicha;
     property TpCdsOrigem: Integer read GetTpCdsOrigem write SetTpCdsOrigem;
@@ -139,6 +143,8 @@ type
     property CnsCuidador: string read GetCnsCuidador write SetCnsCuidador;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property CpfCuidador: string read GetCpfCuidador write SetCpfCuidador;
+    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
+    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
 
     function Get__isset_TpCdsOrigem: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -175,6 +181,8 @@ type
     function Get__isset_CnsCuidador: Boolean;
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_CpfCuidador: Boolean;
+    function Get__isset_StNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
 
     property __isset_TpCdsOrigem: Boolean read Get__isset_TpCdsOrigem;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -211,6 +219,8 @@ type
     property __isset_CnsCuidador: Boolean read Get__isset_CnsCuidador;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_CpfCuidador: Boolean read Get__isset_CpfCuidador;
+    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
+    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
   end;
 
   TFichaAvaliacaoElegibilidadeThriftImpl = class(TInterfacedObject, IBase, IFichaAvaliacaoElegibilidadeThrift)
@@ -251,6 +261,8 @@ type
     FCnsCuidador: string;
     FCpfCidadao: string;
     FCpfCuidador: string;
+    FStNaoPossuiCpf: Boolean;
+    FJustificativaNaoPossuiCpf: Int64;
     
     F__isset_TpCdsOrigem: Boolean;
     F__isset_CnsCidadao: Boolean;
@@ -287,6 +299,8 @@ type
     F__isset_CnsCuidador: Boolean;
     F__isset_CpfCidadao: Boolean;
     F__isset_CpfCuidador: Boolean;
+    F__isset_StNaoPossuiCpf: Boolean;
+    F__isset_JustificativaNaoPossuiCpf: Boolean;
     
     function GetUuidFicha: string;
     procedure SetUuidFicha( const Value: string);
@@ -360,6 +374,10 @@ type
     procedure SetCpfCidadao( const Value: string);
     function GetCpfCuidador: string;
     procedure SetCpfCuidador( const Value: string);
+    function GetStNaoPossuiCpf: Boolean;
+    procedure SetStNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaNaoPossuiCpf: Int64;
+    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
 
     function Get__isset_TpCdsOrigem: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -396,6 +414,8 @@ type
     function Get__isset_CnsCuidador: Boolean;
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_CpfCuidador: Boolean;
+    function Get__isset_StNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -443,6 +463,8 @@ type
     property CnsCuidador: string read GetCnsCuidador write SetCnsCuidador;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property CpfCuidador: string read GetCpfCuidador write SetCpfCuidador;
+    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
+    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
 
     // isset
     property __isset_TpCdsOrigem: Boolean read Get__isset_TpCdsOrigem;
@@ -480,6 +502,8 @@ type
     property __isset_CnsCuidador: Boolean read Get__isset_CnsCuidador;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_CpfCuidador: Boolean read Get__isset_CpfCuidador;
+    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
+    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
   end;
 
 implementation
@@ -1064,6 +1088,38 @@ begin
   Result := F__isset_CpfCuidador;
 end;
 
+function TFichaAvaliacaoElegibilidadeThriftImpl.GetStNaoPossuiCpf: Boolean;
+begin
+  Result := FStNaoPossuiCpf;
+end;
+
+procedure TFichaAvaliacaoElegibilidadeThriftImpl.SetStNaoPossuiCpf( const Value: Boolean);
+begin
+  F__isset_StNaoPossuiCpf := True;
+  FStNaoPossuiCpf := Value;
+end;
+
+function TFichaAvaliacaoElegibilidadeThriftImpl.Get__isset_StNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_StNaoPossuiCpf;
+end;
+
+function TFichaAvaliacaoElegibilidadeThriftImpl.GetJustificativaNaoPossuiCpf: Int64;
+begin
+  Result := FJustificativaNaoPossuiCpf;
+end;
+
+procedure TFichaAvaliacaoElegibilidadeThriftImpl.SetJustificativaNaoPossuiCpf( const Value: Int64);
+begin
+  F__isset_JustificativaNaoPossuiCpf := True;
+  FJustificativaNaoPossuiCpf := Value;
+end;
+
+function TFichaAvaliacaoElegibilidadeThriftImpl.Get__isset_JustificativaNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_JustificativaNaoPossuiCpf;
+end;
+
 procedure TFichaAvaliacaoElegibilidadeThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1430,6 +1486,24 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        38: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            StNaoPossuiCpf := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        39: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            JustificativaNaoPossuiCpf := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1792,6 +1866,24 @@ begin
     oprot.WriteString(CpfCuidador);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_StNaoPossuiCpf) then
+  begin
+    field_.Name := 'stNaoPossuiCpf';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 38;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(StNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_JustificativaNaoPossuiCpf) then
+  begin
+    field_.Name := 'justificativaNaoPossuiCpf';
+    field_.Type_  := TType.I64;
+    field_.ID := 39;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(JustificativaNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1943,6 +2035,14 @@ begin
     if (__isset_CpfCuidador) then begin
       _sb10.Append(', CpfCuidador: ');
       _sb10.Append(CpfCuidador);
+    end;
+    if (__isset_StNaoPossuiCpf) then begin
+      _sb10.Append(', StNaoPossuiCpf: ');
+      _sb10.Append(StNaoPossuiCpf);
+    end;
+    if (__isset_JustificativaNaoPossuiCpf) then begin
+      _sb10.Append(', JustificativaNaoPossuiCpf: ');
+      _sb10.Append(JustificativaNaoPossuiCpf);
     end;
     _sb10.Append(')');
     Result := _sb10.ToString;

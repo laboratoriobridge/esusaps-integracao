@@ -45,4 +45,6 @@ struct FichaAvaliacaoElegibilidadeThrift {
 	35:optional string cnsCuidador;
 	36:optional string cpfCidadao;
 	37:optional string cpfCuidador;
+	38:optional bool stNaoPossuiCpf;
+	39:optional i64 justificativaNaoPossuiCpf;
 }

@@ -493,6 +493,8 @@ class FichaConsumoAlimentarThrift:
    - uuidFicha
    - tpCdsOrigem
    - cpfCidadao
+   - stNaoPossuiCpf
+   - justificativaNaoPossuiCpf
   """
 
   thrift_spec = (
@@ -509,9 +511,11 @@ class FichaConsumoAlimentarThrift:
     (10, TType.STRING, 'uuidFicha', None, None, ), # 10
     (11, TType.I32, 'tpCdsOrigem', None, None, ), # 11
     (12, TType.STRING, 'cpfCidadao', None, None, ), # 12
+    (13, TType.BOOL, 'stNaoPossuiCpf', None, None, ), # 13
+    (14, TType.I64, 'justificativaNaoPossuiCpf', None, None, ), # 14
   )
 
-  def __init__(self, headerTransport=None, cnsCidadao=None, dataNascimento=None, sexo=None, localAtendimento=None, perguntasQuestionarioCriancasMenoresSeisMeses=None, perguntasQuestionarioCriancasDeSeisVinteTresMeses=None, perguntasQuestionarioCriancasComMaisDoisAnos=None, uuidFicha=None, tpCdsOrigem=None, cpfCidadao=None,):
+  def __init__(self, headerTransport=None, cnsCidadao=None, dataNascimento=None, sexo=None, localAtendimento=None, perguntasQuestionarioCriancasMenoresSeisMeses=None, perguntasQuestionarioCriancasDeSeisVinteTresMeses=None, perguntasQuestionarioCriancasComMaisDoisAnos=None, uuidFicha=None, tpCdsOrigem=None, cpfCidadao=None, stNaoPossuiCpf=None, justificativaNaoPossuiCpf=None,):
     self.headerTransport = headerTransport
     self.cnsCidadao = cnsCidadao
     self.dataNascimento = dataNascimento
@@ -523,6 +527,8 @@ class FichaConsumoAlimentarThrift:
     self.uuidFicha = uuidFicha
     self.tpCdsOrigem = tpCdsOrigem
     self.cpfCidadao = cpfCidadao
+    self.stNaoPossuiCpf = stNaoPossuiCpf
+    self.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -607,6 +613,16 @@ class FichaConsumoAlimentarThrift:
           self.cpfCidadao = iprot.readString()
         else:
           iprot.skip(ftype)
+      elif fid == 13:
+        if ftype == TType.BOOL:
+          self.stNaoPossuiCpf = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 14:
+        if ftype == TType.I64:
+          self.justificativaNaoPossuiCpf = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -670,6 +686,14 @@ class FichaConsumoAlimentarThrift:
       oprot.writeFieldBegin('cpfCidadao', TType.STRING, 12)
       oprot.writeString(self.cpfCidadao)
       oprot.writeFieldEnd()
+    if self.stNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('stNaoPossuiCpf', TType.BOOL, 13)
+      oprot.writeBool(self.stNaoPossuiCpf)
+      oprot.writeFieldEnd()
+    if self.justificativaNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('justificativaNaoPossuiCpf', TType.I64, 14)
+      oprot.writeI64(self.justificativaNaoPossuiCpf)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -692,6 +716,8 @@ class FichaConsumoAlimentarThrift:
     value = (value * 31) ^ hash(self.uuidFicha)
     value = (value * 31) ^ hash(self.tpCdsOrigem)
     value = (value * 31) ^ hash(self.cpfCidadao)
+    value = (value * 31) ^ hash(self.stNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.justificativaNaoPossuiCpf)
     return value
 
   def __repr__(self):
