@@ -29,4 +29,6 @@ struct FichaComplementarZikaMicrocefaliaThrift {
 	18:optional i64 coResultadoRessonanciaMagnetica;
 	19:optional string cpfCidadao;
 	20:optional string cpfResponsavelFamiliar;
+	21:optional bool stNaoPossuiCpf;
+	22:optional i64 justificativaNaoPossuiCpf;
 }

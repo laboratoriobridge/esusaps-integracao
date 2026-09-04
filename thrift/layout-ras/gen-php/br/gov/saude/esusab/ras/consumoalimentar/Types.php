@@ -542,6 +542,14 @@ class FichaConsumoAlimentarThrift {
    * @var string
    */
   public $cpfCidadao = null;
+  /**
+   * @var bool
+   */
+  public $stNaoPossuiCpf = null;
+  /**
+   * @var int
+   */
+  public $justificativaNaoPossuiCpf = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -606,6 +614,14 @@ class FichaConsumoAlimentarThrift {
           'var' => 'cpfCidadao',
           'type' => TType::STRING,
           ),
+        13 => array(
+          'var' => 'stNaoPossuiCpf',
+          'type' => TType::BOOL,
+          ),
+        14 => array(
+          'var' => 'justificativaNaoPossuiCpf',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -641,6 +657,12 @@ class FichaConsumoAlimentarThrift {
       }
       if (isset($vals['cpfCidadao'])) {
         $this->cpfCidadao = $vals['cpfCidadao'];
+      }
+      if (isset($vals['stNaoPossuiCpf'])) {
+        $this->stNaoPossuiCpf = $vals['stNaoPossuiCpf'];
+      }
+      if (isset($vals['justificativaNaoPossuiCpf'])) {
+        $this->justificativaNaoPossuiCpf = $vals['justificativaNaoPossuiCpf'];
       }
     }
   }
@@ -775,6 +797,20 @@ class FichaConsumoAlimentarThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 13:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->stNaoPossuiCpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 14:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->justificativaNaoPossuiCpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -880,6 +916,16 @@ class FichaConsumoAlimentarThrift {
     if ($this->cpfCidadao !== null) {
       $xfer += $output->writeFieldBegin('cpfCidadao', TType::STRING, 12);
       $xfer += $output->writeString($this->cpfCidadao);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->stNaoPossuiCpf !== null) {
+      $xfer += $output->writeFieldBegin('stNaoPossuiCpf', TType::BOOL, 13);
+      $xfer += $output->writeBool($this->stNaoPossuiCpf);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->justificativaNaoPossuiCpf !== null) {
+      $xfer += $output->writeFieldBegin('justificativaNaoPossuiCpf', TType::I64, 14);
+      $xfer += $output->writeI64($this->justificativaNaoPossuiCpf);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

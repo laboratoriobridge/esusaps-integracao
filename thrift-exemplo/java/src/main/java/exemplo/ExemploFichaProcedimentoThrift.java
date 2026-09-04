@@ -133,6 +133,7 @@ public class ExemploFichaProcedimentoThrift {
 
 		atendimentoProcedimentoThrift1.setLocalAtendimento(2);
 		atendimentoProcedimentoThrift1.setCpfCidadao("81381513077");
+		atendimentoProcedimentoThrift1.setStNaoPossuiCpf(false);
 		atendimentoProcedimentoThrift1.setNumProntuario("35284");
 		atendimentoProcedimentoThrift1.setSexo(0);
 		atendimentoProcedimentoThrift1.setTurno(2);
@@ -158,6 +159,7 @@ public class ExemploFichaProcedimentoThrift {
 
 		atendimentoProcedimentoThrift2.setLocalAtendimento(1);
 		atendimentoProcedimentoThrift2.setCpfCidadao("61228957096");
+		atendimentoProcedimentoThrift2.setStNaoPossuiCpf(false);
 		atendimentoProcedimentoThrift2.setNumProntuario("43143");
 		atendimentoProcedimentoThrift2.setSexo(1);
 		atendimentoProcedimentoThrift2.setTurno(1);

@@ -61,6 +61,8 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
   private static final org.apache.thrift.protocol.TField MEDICOES_FIELD_DESC = new org.apache.thrift.protocol.TField("medicoes", org.apache.thrift.protocol.TType.STRUCT, (short)27);
   private static final org.apache.thrift.protocol.TField PROBLEMAS_CONDICOES_FIELD_DESC = new org.apache.thrift.protocol.TField("problemasCondicoes", org.apache.thrift.protocol.TType.LIST, (short)28);
   private static final org.apache.thrift.protocol.TField IVCF_FIELD_DESC = new org.apache.thrift.protocol.TField("ivcf", org.apache.thrift.protocol.TType.STRUCT, (short)29);
+  private static final org.apache.thrift.protocol.TField ST_NAO_POSSUI_CPF_FIELD_DESC = new org.apache.thrift.protocol.TField("stNaoPossuiCpf", org.apache.thrift.protocol.TType.BOOL, (short)32);
+  private static final org.apache.thrift.protocol.TField JUSTIFICATIVA_NAO_POSSUI_CPF_FIELD_DESC = new org.apache.thrift.protocol.TField("justificativaNaoPossuiCpf", org.apache.thrift.protocol.TType.I64, (short)33);
 
   private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
   static {
@@ -91,6 +93,8 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
   private br.gov.saude.esusab.ras.common.MedicoesThrift medicoes; // optional
   private List<br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift> problemasCondicoes; // optional
   private br.gov.saude.esusab.ras.common.IvcfThrift ivcf; // optional
+  private boolean stNaoPossuiCpf; // optional
+  private long justificativaNaoPossuiCpf; // optional
 
   /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
   public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -116,7 +120,9 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
     RESULTADOS_EXAMES((short)21, "resultadosExames"),
     MEDICOES((short)27, "medicoes"),
     PROBLEMAS_CONDICOES((short)28, "problemasCondicoes"),
-    IVCF((short)29, "ivcf");
+    IVCF((short)29, "ivcf"),
+    ST_NAO_POSSUI_CPF((short)32, "stNaoPossuiCpf"),
+    JUSTIFICATIVA_NAO_POSSUI_CPF((short)33, "justificativaNaoPossuiCpf");
 
     private static final Map<String, _Fields> byName = new HashMap<String, _Fields>();
 
@@ -177,6 +183,10 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
           return PROBLEMAS_CONDICOES;
         case 29: // IVCF
           return IVCF;
+        case 32: // ST_NAO_POSSUI_CPF
+          return ST_NAO_POSSUI_CPF;
+        case 33: // JUSTIFICATIVA_NAO_POSSUI_CPF
+          return JUSTIFICATIVA_NAO_POSSUI_CPF;
         default:
           return null;
       }
@@ -226,8 +236,10 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
   private static final int __TURNO_ISSET_ID = 6;
   private static final int __DATAHORAINICIALATENDIMENTO_ISSET_ID = 7;
   private static final int __DATAHORAFINALATENDIMENTO_ISSET_ID = 8;
+  private static final int __STNAOPOSSUICPF_ISSET_ID = 9;
+  private static final int __JUSTIFICATIVANAOPOSSUICPF_ISSET_ID = 10;
   private short __isset_bitfield = 0;
-  private static final _Fields optionals[] = {_Fields.DT_NASCIMENTO,_Fields.CNS_CIDADAO,_Fields.NUM_PRONTUARIO,_Fields.GESTANTE,_Fields.NECESSIDADES_ESPECIAIS,_Fields.LOCAL_ATENDIMENTO,_Fields.TIPO_ATENDIMENTO,_Fields.TIPOS_ENCAM_ODONTO,_Fields.TIPOS_FORNECIM_ODONTO,_Fields.TIPOS_VIGILANCIA_SAUDE_BUCAL,_Fields.TIPOS_CONSULTA_ODONTO,_Fields.PROCEDIMENTOS_REALIZADOS,_Fields.SEXO,_Fields.TURNO,_Fields.DATA_HORA_INICIAL_ATENDIMENTO,_Fields.DATA_HORA_FINAL_ATENDIMENTO,_Fields.CPF_CIDADAO,_Fields.MEDICAMENTOS,_Fields.ENCAMINHAMENTOS,_Fields.RESULTADOS_EXAMES,_Fields.MEDICOES,_Fields.PROBLEMAS_CONDICOES,_Fields.IVCF};
+  private static final _Fields optionals[] = {_Fields.DT_NASCIMENTO,_Fields.CNS_CIDADAO,_Fields.NUM_PRONTUARIO,_Fields.GESTANTE,_Fields.NECESSIDADES_ESPECIAIS,_Fields.LOCAL_ATENDIMENTO,_Fields.TIPO_ATENDIMENTO,_Fields.TIPOS_ENCAM_ODONTO,_Fields.TIPOS_FORNECIM_ODONTO,_Fields.TIPOS_VIGILANCIA_SAUDE_BUCAL,_Fields.TIPOS_CONSULTA_ODONTO,_Fields.PROCEDIMENTOS_REALIZADOS,_Fields.SEXO,_Fields.TURNO,_Fields.DATA_HORA_INICIAL_ATENDIMENTO,_Fields.DATA_HORA_FINAL_ATENDIMENTO,_Fields.CPF_CIDADAO,_Fields.MEDICAMENTOS,_Fields.ENCAMINHAMENTOS,_Fields.RESULTADOS_EXAMES,_Fields.MEDICOES,_Fields.PROBLEMAS_CONDICOES,_Fields.IVCF,_Fields.ST_NAO_POSSUI_CPF,_Fields.JUSTIFICATIVA_NAO_POSSUI_CPF};
   public static final Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
   static {
     Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> tmpMap = new EnumMap<_Fields, org.apache.thrift.meta_data.FieldMetaData>(_Fields.class);
@@ -284,8 +296,12 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
     tmpMap.put(_Fields.PROBLEMAS_CONDICOES, new org.apache.thrift.meta_data.FieldMetaData("problemasCondicoes", org.apache.thrift.TFieldRequirementType.OPTIONAL, 
         new org.apache.thrift.meta_data.ListMetaData(org.apache.thrift.protocol.TType.LIST, 
             new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, br.gov.saude.esusab.ras.common.ProblemaCondicaoThrift.class))));
-    tmpMap.put(_Fields.IVCF, new org.apache.thrift.meta_data.FieldMetaData("ivcf", org.apache.thrift.TFieldRequirementType.OPTIONAL, 
+    tmpMap.put(_Fields.IVCF, new org.apache.thrift.meta_data.FieldMetaData("ivcf", org.apache.thrift.TFieldRequirementType.OPTIONAL,
         new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, br.gov.saude.esusab.ras.common.IvcfThrift.class)));
+    tmpMap.put(_Fields.ST_NAO_POSSUI_CPF, new org.apache.thrift.meta_data.FieldMetaData("stNaoPossuiCpf", org.apache.thrift.TFieldRequirementType.OPTIONAL,
+        new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.BOOL)));
+    tmpMap.put(_Fields.JUSTIFICATIVA_NAO_POSSUI_CPF, new org.apache.thrift.meta_data.FieldMetaData("justificativaNaoPossuiCpf", org.apache.thrift.TFieldRequirementType.OPTIONAL,
+        new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
     metaDataMap = Collections.unmodifiableMap(tmpMap);
     org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(FichaAtendimentoOdontologicoChildThrift.class, metaDataMap);
   }
@@ -373,6 +389,8 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
     if (other.isSetIvcf()) {
       this.ivcf = new br.gov.saude.esusab.ras.common.IvcfThrift(other.ivcf);
     }
+    this.stNaoPossuiCpf = other.stNaoPossuiCpf;
+    this.justificativaNaoPossuiCpf = other.justificativaNaoPossuiCpf;
   }
 
   public FichaAtendimentoOdontologicoChildThrift deepCopy() {
@@ -413,6 +431,10 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
     this.medicoes = null;
     this.problemasCondicoes = null;
     this.ivcf = null;
+    setStNaoPossuiCpfIsSet(false);
+    this.stNaoPossuiCpf = false;
+    setJustificativaNaoPossuiCpfIsSet(false);
+    this.justificativaNaoPossuiCpf = 0;
   }
 
   public long getDtNascimento() {
@@ -1070,6 +1092,50 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
     }
   }
 
+  public boolean isStNaoPossuiCpf() {
+    return this.stNaoPossuiCpf;
+  }
+
+  public void setStNaoPossuiCpf(boolean stNaoPossuiCpf) {
+    this.stNaoPossuiCpf = stNaoPossuiCpf;
+    setStNaoPossuiCpfIsSet(true);
+  }
+
+  public void unsetStNaoPossuiCpf() {
+    __isset_bitfield = EncodingUtils.clearBit(__isset_bitfield, __STNAOPOSSUICPF_ISSET_ID);
+  }
+
+  /** Returns true if field stNaoPossuiCpf is set (has been assigned a value) and false otherwise */
+  public boolean isSetStNaoPossuiCpf() {
+    return EncodingUtils.testBit(__isset_bitfield, __STNAOPOSSUICPF_ISSET_ID);
+  }
+
+  public void setStNaoPossuiCpfIsSet(boolean value) {
+    __isset_bitfield = EncodingUtils.setBit(__isset_bitfield, __STNAOPOSSUICPF_ISSET_ID, value);
+  }
+
+  public long getJustificativaNaoPossuiCpf() {
+    return this.justificativaNaoPossuiCpf;
+  }
+
+  public void setJustificativaNaoPossuiCpf(long justificativaNaoPossuiCpf) {
+    this.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf;
+    setJustificativaNaoPossuiCpfIsSet(true);
+  }
+
+  public void unsetJustificativaNaoPossuiCpf() {
+    __isset_bitfield = EncodingUtils.clearBit(__isset_bitfield, __JUSTIFICATIVANAOPOSSUICPF_ISSET_ID);
+  }
+
+  /** Returns true if field justificativaNaoPossuiCpf is set (has been assigned a value) and false otherwise */
+  public boolean isSetJustificativaNaoPossuiCpf() {
+    return EncodingUtils.testBit(__isset_bitfield, __JUSTIFICATIVANAOPOSSUICPF_ISSET_ID);
+  }
+
+  public void setJustificativaNaoPossuiCpfIsSet(boolean value) {
+    __isset_bitfield = EncodingUtils.setBit(__isset_bitfield, __JUSTIFICATIVANAOPOSSUICPF_ISSET_ID, value);
+  }
+
   public void setFieldValue(_Fields field, Object value) {
     switch (field) {
     case DT_NASCIMENTO:
@@ -1256,6 +1322,22 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
       }
       break;
 
+    case ST_NAO_POSSUI_CPF:
+      if (value == null) {
+        unsetStNaoPossuiCpf();
+      } else {
+        setStNaoPossuiCpf((Boolean)value);
+      }
+      break;
+
+    case JUSTIFICATIVA_NAO_POSSUI_CPF:
+      if (value == null) {
+        unsetJustificativaNaoPossuiCpf();
+      } else {
+        setJustificativaNaoPossuiCpf((Long)value);
+      }
+      break;
+
     }
   }
 
@@ -1330,6 +1412,12 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
     case IVCF:
       return getIvcf();
 
+    case ST_NAO_POSSUI_CPF:
+      return isStNaoPossuiCpf();
+
+    case JUSTIFICATIVA_NAO_POSSUI_CPF:
+      return getJustificativaNaoPossuiCpf();
+
     }
     throw new IllegalStateException();
   }
@@ -1387,6 +1475,10 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
       return isSetProblemasCondicoes();
     case IVCF:
       return isSetIvcf();
+    case ST_NAO_POSSUI_CPF:
+      return isSetStNaoPossuiCpf();
+    case JUSTIFICATIVA_NAO_POSSUI_CPF:
+      return isSetJustificativaNaoPossuiCpf();
     }
     throw new IllegalStateException();
   }
@@ -1611,6 +1703,24 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
         return false;
     }
 
+    boolean this_present_stNaoPossuiCpf = true && this.isSetStNaoPossuiCpf();
+    boolean that_present_stNaoPossuiCpf = true && that.isSetStNaoPossuiCpf();
+    if (this_present_stNaoPossuiCpf || that_present_stNaoPossuiCpf) {
+      if (!(this_present_stNaoPossuiCpf && that_present_stNaoPossuiCpf))
+        return false;
+      if (this.stNaoPossuiCpf != that.stNaoPossuiCpf)
+        return false;
+    }
+
+    boolean this_present_justificativaNaoPossuiCpf = true && this.isSetJustificativaNaoPossuiCpf();
+    boolean that_present_justificativaNaoPossuiCpf = true && that.isSetJustificativaNaoPossuiCpf();
+    if (this_present_justificativaNaoPossuiCpf || that_present_justificativaNaoPossuiCpf) {
+      if (!(this_present_justificativaNaoPossuiCpf && that_present_justificativaNaoPossuiCpf))
+        return false;
+      if (this.justificativaNaoPossuiCpf != that.justificativaNaoPossuiCpf)
+        return false;
+    }
+
     return true;
   }
 
@@ -1732,6 +1842,16 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
     list.add(present_ivcf);
     if (present_ivcf)
       list.add(ivcf);
+
+    boolean present_stNaoPossuiCpf = true && (isSetStNaoPossuiCpf());
+    list.add(present_stNaoPossuiCpf);
+    if (present_stNaoPossuiCpf)
+      list.add(stNaoPossuiCpf);
+
+    boolean present_justificativaNaoPossuiCpf = true && (isSetJustificativaNaoPossuiCpf());
+    list.add(present_justificativaNaoPossuiCpf);
+    if (present_justificativaNaoPossuiCpf)
+      list.add(justificativaNaoPossuiCpf);
 
     return list.hashCode();
   }
@@ -1974,6 +2094,26 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
         return lastComparison;
       }
     }
+    lastComparison = Boolean.valueOf(isSetStNaoPossuiCpf()).compareTo(other.isSetStNaoPossuiCpf());
+    if (lastComparison != 0) {
+      return lastComparison;
+    }
+    if (isSetStNaoPossuiCpf()) {
+      lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.stNaoPossuiCpf, other.stNaoPossuiCpf);
+      if (lastComparison != 0) {
+        return lastComparison;
+      }
+    }
+    lastComparison = Boolean.valueOf(isSetJustificativaNaoPossuiCpf()).compareTo(other.isSetJustificativaNaoPossuiCpf());
+    if (lastComparison != 0) {
+      return lastComparison;
+    }
+    if (isSetJustificativaNaoPossuiCpf()) {
+      lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.justificativaNaoPossuiCpf, other.justificativaNaoPossuiCpf);
+      if (lastComparison != 0) {
+        return lastComparison;
+      }
+    }
     return 0;
   }
 
@@ -2185,6 +2325,18 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
       } else {
         sb.append(this.ivcf);
       }
+      first = false;
+    }
+    if (isSetStNaoPossuiCpf()) {
+      if (!first) sb.append(", ");
+      sb.append("stNaoPossuiCpf:");
+      sb.append(this.stNaoPossuiCpf);
+      first = false;
+    }
+    if (isSetJustificativaNaoPossuiCpf()) {
+      if (!first) sb.append(", ");
+      sb.append("justificativaNaoPossuiCpf:");
+      sb.append(this.justificativaNaoPossuiCpf);
       first = false;
     }
     sb.append(")");
@@ -2515,7 +2667,23 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
               struct.ivcf = new br.gov.saude.esusab.ras.common.IvcfThrift();
               struct.ivcf.read(iprot);
               struct.setIvcfIsSet(true);
-            } else { 
+            } else {
+              org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+            }
+            break;
+          case 32: // ST_NAO_POSSUI_CPF
+            if (schemeField.type == org.apache.thrift.protocol.TType.BOOL) {
+              struct.stNaoPossuiCpf = iprot.readBool();
+              struct.setStNaoPossuiCpfIsSet(true);
+            } else {
+              org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
+            }
+            break;
+          case 33: // JUSTIFICATIVA_NAO_POSSUI_CPF
+            if (schemeField.type == org.apache.thrift.protocol.TType.I64) {
+              struct.justificativaNaoPossuiCpf = iprot.readI64();
+              struct.setJustificativaNaoPossuiCpfIsSet(true);
+            } else {
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
             }
             break;
@@ -2738,6 +2906,16 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
           oprot.writeFieldEnd();
         }
       }
+      if (struct.isSetStNaoPossuiCpf()) {
+        oprot.writeFieldBegin(ST_NAO_POSSUI_CPF_FIELD_DESC);
+        oprot.writeBool(struct.stNaoPossuiCpf);
+        oprot.writeFieldEnd();
+      }
+      if (struct.isSetJustificativaNaoPossuiCpf()) {
+        oprot.writeFieldBegin(JUSTIFICATIVA_NAO_POSSUI_CPF_FIELD_DESC);
+        oprot.writeI64(struct.justificativaNaoPossuiCpf);
+        oprot.writeFieldEnd();
+      }
       oprot.writeFieldStop();
       oprot.writeStructEnd();
     }
@@ -2825,7 +3003,13 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
       if (struct.isSetIvcf()) {
         optionals.set(22);
       }
-      oprot.writeBitSet(optionals, 23);
+      if (struct.isSetStNaoPossuiCpf()) {
+        optionals.set(23);
+      }
+      if (struct.isSetJustificativaNaoPossuiCpf()) {
+        optionals.set(24);
+      }
+      oprot.writeBitSet(optionals, 25);
       if (struct.isSetDtNascimento()) {
         oprot.writeI64(struct.dtNascimento);
       }
@@ -2949,12 +3133,18 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
       if (struct.isSetIvcf()) {
         struct.ivcf.write(oprot);
       }
+      if (struct.isSetStNaoPossuiCpf()) {
+        oprot.writeBool(struct.stNaoPossuiCpf);
+      }
+      if (struct.isSetJustificativaNaoPossuiCpf()) {
+        oprot.writeI64(struct.justificativaNaoPossuiCpf);
+      }
     }
 
     @Override
     public void read(org.apache.thrift.protocol.TProtocol prot, FichaAtendimentoOdontologicoChildThrift struct) throws org.apache.thrift.TException {
       TTupleProtocol iprot = (TTupleProtocol) prot;
-      BitSet incoming = iprot.readBitSet(23);
+      BitSet incoming = iprot.readBitSet(25);
       if (incoming.get(0)) {
         struct.dtNascimento = iprot.readI64();
         struct.setDtNascimentoIsSet(true);
@@ -3134,6 +3324,14 @@ public class FichaAtendimentoOdontologicoChildThrift implements org.apache.thrif
         struct.ivcf = new br.gov.saude.esusab.ras.common.IvcfThrift();
         struct.ivcf.read(iprot);
         struct.setIvcfIsSet(true);
+      }
+      if (incoming.get(23)) {
+        struct.stNaoPossuiCpf = iprot.readBool();
+        struct.setStNaoPossuiCpfIsSet(true);
+      }
+      if (incoming.get(24)) {
+        struct.justificativaNaoPossuiCpf = iprot.readI64();
+        struct.setJustificativaNaoPossuiCpfIsSet(true);
       }
     }
   }

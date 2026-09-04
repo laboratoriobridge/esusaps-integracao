@@ -25,6 +25,8 @@ module Br
               ABANDONOUGRUPO = 7
               SEXO = 8
               CPFPARTICIPANTE = 9
+              STNAOPOSSUICPF = 10
+              JUSTIFICATIVANAOPOSSUICPF = 11
 
               FIELDS = {
                 CNSPARTICIPANTE => {:type => ::Thrift::Types::STRING, :name => 'cnsParticipante', :optional => true},
@@ -35,7 +37,9 @@ module Br
                 CESSOUHABITOFUMAR => {:type => ::Thrift::Types::BOOL, :name => 'cessouHabitoFumar', :optional => true},
                 ABANDONOUGRUPO => {:type => ::Thrift::Types::BOOL, :name => 'abandonouGrupo', :optional => true},
                 SEXO => {:type => ::Thrift::Types::I64, :name => 'sexo', :optional => true},
-                CPFPARTICIPANTE => {:type => ::Thrift::Types::STRING, :name => 'cpfParticipante', :optional => true}
+                CPFPARTICIPANTE => {:type => ::Thrift::Types::STRING, :name => 'cpfParticipante', :optional => true},
+                STNAOPOSSUICPF => {:type => ::Thrift::Types::BOOL, :name => 'stNaoPossuiCpf', :optional => true},
+                JUSTIFICATIVANAOPOSSUICPF => {:type => ::Thrift::Types::I64, :name => 'justificativaNaoPossuiCpf', :optional => true}
               }
 
               def struct_fields; FIELDS; end

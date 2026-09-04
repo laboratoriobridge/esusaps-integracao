@@ -36,6 +36,8 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
     private string _cpfCidadao;
     private br.gov.saude.esusab.ras.common.MedicoesThrift _medicoes;
     private br.gov.saude.esusab.ras.common.IvcfThrift _ivcf;
+    private bool _stNaoPossuiCpf;
+    private long _justificativaNaoPossuiCpf;
 
     public string NumProntuario
     {
@@ -206,6 +208,32 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
       }
     }
 
+    public bool StNaoPossuiCpf
+    {
+      get
+      {
+        return _stNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.stNaoPossuiCpf = true;
+        this._stNaoPossuiCpf = value;
+      }
+    }
+
+    public long JustificativaNaoPossuiCpf
+    {
+      get
+      {
+        return _justificativaNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.justificativaNaoPossuiCpf = true;
+        this._justificativaNaoPossuiCpf = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -225,6 +253,8 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
       public bool cpfCidadao;
       public bool medicoes;
       public bool ivcf;
+      public bool stNaoPossuiCpf;
+      public bool justificativaNaoPossuiCpf;
     }
 
     public FichaProcedimentoChildThrift() {
@@ -344,6 +374,20 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
               if (field.Type == TType.Struct) {
                 Ivcf = new br.gov.saude.esusab.ras.common.IvcfThrift();
                 Ivcf.Read(iprot);
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 18:
+              if (field.Type == TType.Bool) {
+                StNaoPossuiCpf = iprot.ReadBool();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 19:
+              if (field.Type == TType.I64) {
+                JustificativaNaoPossuiCpf = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -480,6 +524,22 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
           Ivcf.Write(oprot);
           oprot.WriteFieldEnd();
         }
+        if (__isset.stNaoPossuiCpf) {
+          field.Name = "stNaoPossuiCpf";
+          field.Type = TType.Bool;
+          field.ID = 18;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteBool(StNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.justificativaNaoPossuiCpf) {
+          field.Name = "justificativaNaoPossuiCpf";
+          field.Type = TType.I64;
+          field.ID = 19;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(JustificativaNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -569,6 +629,18 @@ namespace br.gov.saude.esusab.ras.atendprocedimentos
         __first = false;
         __sb.Append("Ivcf: ");
         __sb.Append(Ivcf== null ? "<null>" : Ivcf.ToString());
+      }
+      if (__isset.stNaoPossuiCpf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("StNaoPossuiCpf: ");
+        __sb.Append(StNaoPossuiCpf);
+      }
+      if (__isset.justificativaNaoPossuiCpf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("JustificativaNaoPossuiCpf: ");
+        __sb.Append(JustificativaNaoPossuiCpf);
       }
       __sb.Append(")");
       return __sb.ToString();

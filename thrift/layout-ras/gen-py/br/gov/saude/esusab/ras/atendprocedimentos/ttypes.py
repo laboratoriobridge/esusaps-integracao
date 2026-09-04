@@ -35,6 +35,8 @@ class FichaProcedimentoChildThrift:
    - cpfCidadao
    - medicoes
    - ivcf
+   - stNaoPossuiCpf
+   - justificativaNaoPossuiCpf
   """
 
   thrift_spec = (
@@ -56,9 +58,11 @@ class FichaProcedimentoChildThrift:
     None, # 15
     (16, TType.STRUCT, 'medicoes', (br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift, br.gov.saude.esusab.ras.common.ttypes.MedicoesThrift.thrift_spec), None, ), # 16
     (17, TType.STRUCT, 'ivcf', (br.gov.saude.esusab.ras.common.ttypes.IvcfThrift, br.gov.saude.esusab.ras.common.ttypes.IvcfThrift.thrift_spec), None, ), # 17
+    (18, TType.BOOL, 'stNaoPossuiCpf', None, None, ), # 18
+    (19, TType.I64, 'justificativaNaoPossuiCpf', None, None, ), # 19
   )
 
-  def __init__(self, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, localAtendimento=None, turno=None, statusEscutaInicialOrientacao=None, procedimentos=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicoes=None, ivcf=None,):
+  def __init__(self, numProntuario=None, cnsCidadao=None, dtNascimento=None, sexo=None, localAtendimento=None, turno=None, statusEscutaInicialOrientacao=None, procedimentos=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicoes=None, ivcf=None, stNaoPossuiCpf=None, justificativaNaoPossuiCpf=None,):
     self.numProntuario = numProntuario
     self.cnsCidadao = cnsCidadao
     self.dtNascimento = dtNascimento
@@ -72,6 +76,8 @@ class FichaProcedimentoChildThrift:
     self.cpfCidadao = cpfCidadao
     self.medicoes = medicoes
     self.ivcf = ivcf
+    self.stNaoPossuiCpf = stNaoPossuiCpf
+    self.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -154,6 +160,16 @@ class FichaProcedimentoChildThrift:
           self.ivcf.read(iprot)
         else:
           iprot.skip(ftype)
+      elif fid == 18:
+        if ftype == TType.BOOL:
+          self.stNaoPossuiCpf = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 19:
+        if ftype == TType.I64:
+          self.justificativaNaoPossuiCpf = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -219,6 +235,14 @@ class FichaProcedimentoChildThrift:
       oprot.writeFieldBegin('ivcf', TType.STRUCT, 17)
       self.ivcf.write(oprot)
       oprot.writeFieldEnd()
+    if self.stNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('stNaoPossuiCpf', TType.BOOL, 18)
+      oprot.writeBool(self.stNaoPossuiCpf)
+      oprot.writeFieldEnd()
+    if self.justificativaNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('justificativaNaoPossuiCpf', TType.I64, 19)
+      oprot.writeI64(self.justificativaNaoPossuiCpf)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -241,6 +265,8 @@ class FichaProcedimentoChildThrift:
     value = (value * 31) ^ hash(self.cpfCidadao)
     value = (value * 31) ^ hash(self.medicoes)
     value = (value * 31) ^ hash(self.ivcf)
+    value = (value * 31) ^ hash(self.stNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.justificativaNaoPossuiCpf)
     return value
 
   def __repr__(self):

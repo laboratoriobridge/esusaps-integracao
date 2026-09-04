@@ -112,6 +112,14 @@ class FichaVisitaDomiciliarChildThrift {
    * @var \br\gov\saude\esusab\ras\common\IvcfThrift
    */
   public $ivcf = null;
+  /**
+   * @var bool
+   */
+  public $stNaoPossuiCpf = null;
+  /**
+   * @var int
+   */
+  public $justificativaNaoPossuiCpf = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -213,6 +221,14 @@ class FichaVisitaDomiciliarChildThrift {
           'type' => TType::STRUCT,
           'class' => '\br\gov\saude\esusab\ras\common\IvcfThrift',
           ),
+        24 => array(
+          'var' => 'stNaoPossuiCpf',
+          'type' => TType::BOOL,
+          ),
+        25 => array(
+          'var' => 'justificativaNaoPossuiCpf',
+          'type' => TType::I64,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -284,6 +300,12 @@ class FichaVisitaDomiciliarChildThrift {
       }
       if (isset($vals['ivcf'])) {
         $this->ivcf = $vals['ivcf'];
+      }
+      if (isset($vals['stNaoPossuiCpf'])) {
+        $this->stNaoPossuiCpf = $vals['stNaoPossuiCpf'];
+      }
+      if (isset($vals['justificativaNaoPossuiCpf'])) {
+        $this->justificativaNaoPossuiCpf = $vals['justificativaNaoPossuiCpf'];
       }
     }
   }
@@ -479,6 +501,20 @@ class FichaVisitaDomiciliarChildThrift {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 24:
+          if ($ftype == TType::BOOL) {
+            $xfer += $input->readBool($this->stNaoPossuiCpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 25:
+          if ($ftype == TType::I64) {
+            $xfer += $input->readI64($this->justificativaNaoPossuiCpf);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -620,6 +656,16 @@ class FichaVisitaDomiciliarChildThrift {
       }
       $xfer += $output->writeFieldBegin('ivcf', TType::STRUCT, 23);
       $xfer += $this->ivcf->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->stNaoPossuiCpf !== null) {
+      $xfer += $output->writeFieldBegin('stNaoPossuiCpf', TType::BOOL, 24);
+      $xfer += $output->writeBool($this->stNaoPossuiCpf);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->justificativaNaoPossuiCpf !== null) {
+      $xfer += $output->writeFieldBegin('justificativaNaoPossuiCpf', TType::I64, 25);
+      $xfer += $output->writeI64($this->justificativaNaoPossuiCpf);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

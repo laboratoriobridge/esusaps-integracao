@@ -20,6 +20,8 @@
 		<temasParaReuniao>2</temasParaReuniao>
 		<participantes>
 			<cnsParticipante>767273769570018</cnsParticipante>
+			<stNaoPossuiCpf>true</stNaoPossuiCpf>
+			<justificativaNaoPossuiCpf>5</justificativaNaoPossuiCpf>
 			<dataNascimento>1430838000000</dataNascimento>
 			<avaliacaoAlterada>true</avaliacaoAlterada>
 			<peso>25.0</peso>
@@ -28,6 +30,7 @@
 		</participantes>
 		<participantes>
 			<cpfParticipante>68688625042</cpfParticipante>
+			<stNaoPossuiCpf>false</stNaoPossuiCpf>
 			<dataNascimento>1430838000000</dataNascimento>
 			<avaliacaoAlterada>false</avaliacaoAlterada>
 			<peso>24.0</peso>

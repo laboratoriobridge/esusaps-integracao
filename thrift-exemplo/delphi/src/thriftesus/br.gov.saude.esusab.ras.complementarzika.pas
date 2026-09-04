@@ -70,6 +70,10 @@ type
     procedure SetCpfCidadao( const Value: string);
     function GetCpfResponsavelFamiliar: string;
     procedure SetCpfResponsavelFamiliar( const Value: string);
+    function GetStNaoPossuiCpf: Boolean;
+    procedure SetStNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaNaoPossuiCpf: Int64;
+    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
 
     property HeaderTransport: IUnicaLotacaoHeaderThrift read GetHeaderTransport write SetHeaderTransport;
     property UuidFicha: string read GetUuidFicha write SetUuidFicha;
@@ -91,6 +95,8 @@ type
     property CoResultadoRessonanciaMagnetica: Int64 read GetCoResultadoRessonanciaMagnetica write SetCoResultadoRessonanciaMagnetica;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property CpfResponsavelFamiliar: string read GetCpfResponsavelFamiliar write SetCpfResponsavelFamiliar;
+    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
+    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
 
     function Get__isset_HeaderTransport: Boolean;
     function Get__isset_TpCdsOrigem: Boolean;
@@ -111,6 +117,8 @@ type
     function Get__isset_CoResultadoRessonanciaMagnetica: Boolean;
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_CpfResponsavelFamiliar: Boolean;
+    function Get__isset_StNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
 
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
     property __isset_TpCdsOrigem: Boolean read Get__isset_TpCdsOrigem;
@@ -131,6 +139,8 @@ type
     property __isset_CoResultadoRessonanciaMagnetica: Boolean read Get__isset_CoResultadoRessonanciaMagnetica;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_CpfResponsavelFamiliar: Boolean read Get__isset_CpfResponsavelFamiliar;
+    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
+    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
   end;
 
   TFichaComplementarZikaMicrocefaliaThriftImpl = class(TInterfacedObject, IBase, IFichaComplementarZikaMicrocefaliaThrift)
@@ -155,6 +165,8 @@ type
     FCoResultadoRessonanciaMagnetica: Int64;
     FCpfCidadao: string;
     FCpfResponsavelFamiliar: string;
+    FStNaoPossuiCpf: Boolean;
+    FJustificativaNaoPossuiCpf: Int64;
     
     F__isset_HeaderTransport: Boolean;
     F__isset_TpCdsOrigem: Boolean;
@@ -175,6 +187,8 @@ type
     F__isset_CoResultadoRessonanciaMagnetica: Boolean;
     F__isset_CpfCidadao: Boolean;
     F__isset_CpfResponsavelFamiliar: Boolean;
+    F__isset_StNaoPossuiCpf: Boolean;
+    F__isset_JustificativaNaoPossuiCpf: Boolean;
     
     function GetHeaderTransport: IUnicaLotacaoHeaderThrift;
     procedure SetHeaderTransport( const Value: IUnicaLotacaoHeaderThrift);
@@ -216,6 +230,10 @@ type
     procedure SetCpfCidadao( const Value: string);
     function GetCpfResponsavelFamiliar: string;
     procedure SetCpfResponsavelFamiliar( const Value: string);
+    function GetStNaoPossuiCpf: Boolean;
+    procedure SetStNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaNaoPossuiCpf: Int64;
+    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
 
     function Get__isset_HeaderTransport: Boolean;
     function Get__isset_TpCdsOrigem: Boolean;
@@ -236,6 +254,8 @@ type
     function Get__isset_CoResultadoRessonanciaMagnetica: Boolean;
     function Get__isset_CpfCidadao: Boolean;
     function Get__isset_CpfResponsavelFamiliar: Boolean;
+    function Get__isset_StNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -267,6 +287,8 @@ type
     property CoResultadoRessonanciaMagnetica: Int64 read GetCoResultadoRessonanciaMagnetica write SetCoResultadoRessonanciaMagnetica;
     property CpfCidadao: string read GetCpfCidadao write SetCpfCidadao;
     property CpfResponsavelFamiliar: string read GetCpfResponsavelFamiliar write SetCpfResponsavelFamiliar;
+    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
+    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
 
     // isset
     property __isset_HeaderTransport: Boolean read Get__isset_HeaderTransport;
@@ -288,6 +310,8 @@ type
     property __isset_CoResultadoRessonanciaMagnetica: Boolean read Get__isset_CoResultadoRessonanciaMagnetica;
     property __isset_CpfCidadao: Boolean read Get__isset_CpfCidadao;
     property __isset_CpfResponsavelFamiliar: Boolean read Get__isset_CpfResponsavelFamiliar;
+    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
+    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
   end;
 
 implementation
@@ -616,6 +640,38 @@ begin
   Result := F__isset_CpfResponsavelFamiliar;
 end;
 
+function TFichaComplementarZikaMicrocefaliaThriftImpl.GetStNaoPossuiCpf: Boolean;
+begin
+  Result := FStNaoPossuiCpf;
+end;
+
+procedure TFichaComplementarZikaMicrocefaliaThriftImpl.SetStNaoPossuiCpf( const Value: Boolean);
+begin
+  F__isset_StNaoPossuiCpf := True;
+  FStNaoPossuiCpf := Value;
+end;
+
+function TFichaComplementarZikaMicrocefaliaThriftImpl.Get__isset_StNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_StNaoPossuiCpf;
+end;
+
+function TFichaComplementarZikaMicrocefaliaThriftImpl.GetJustificativaNaoPossuiCpf: Int64;
+begin
+  Result := FJustificativaNaoPossuiCpf;
+end;
+
+procedure TFichaComplementarZikaMicrocefaliaThriftImpl.SetJustificativaNaoPossuiCpf( const Value: Int64);
+begin
+  F__isset_JustificativaNaoPossuiCpf := True;
+  FJustificativaNaoPossuiCpf := Value;
+end;
+
+function TFichaComplementarZikaMicrocefaliaThriftImpl.Get__isset_JustificativaNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_JustificativaNaoPossuiCpf;
+end;
+
 procedure TFichaComplementarZikaMicrocefaliaThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -813,6 +869,24 @@ begin
           if (field_.Type_ = TType.String_) then
           begin
             CpfResponsavelFamiliar := iprot.ReadString();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        21: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            StNaoPossuiCpf := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        22: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            JustificativaNaoPossuiCpf := iprot.ReadI64();
           end else
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1019,6 +1093,24 @@ begin
     oprot.WriteString(CpfResponsavelFamiliar);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_StNaoPossuiCpf) then
+  begin
+    field_.Name := 'stNaoPossuiCpf';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 21;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(StNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_JustificativaNaoPossuiCpf) then
+  begin
+    field_.Name := 'justificativaNaoPossuiCpf';
+    field_.Type_  := TType.I64;
+    field_.ID := 22;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(JustificativaNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1111,6 +1203,14 @@ begin
     if (__isset_CpfResponsavelFamiliar) then begin
       _sb0.Append(', CpfResponsavelFamiliar: ');
       _sb0.Append(CpfResponsavelFamiliar);
+    end;
+    if (__isset_StNaoPossuiCpf) then begin
+      _sb0.Append(', StNaoPossuiCpf: ');
+      _sb0.Append(StNaoPossuiCpf);
+    end;
+    if (__isset_JustificativaNaoPossuiCpf) then begin
+      _sb0.Append(', JustificativaNaoPossuiCpf: ');
+      _sb0.Append(JustificativaNaoPossuiCpf);
     end;
     _sb0.Append(')');
     Result := _sb0.ToString;

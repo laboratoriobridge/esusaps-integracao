@@ -32,6 +32,8 @@ namespace br.gov.saude.esusab.ras.atividadecoletiva
     private bool _abandonouGrupo;
     private long _sexo;
     private string _cpfParticipante;
+    private bool _stNaoPossuiCpf;
+    private long _justificativaNaoPossuiCpf;
 
     public string CnsParticipante
     {
@@ -150,6 +152,32 @@ namespace br.gov.saude.esusab.ras.atividadecoletiva
       }
     }
 
+    public bool StNaoPossuiCpf
+    {
+      get
+      {
+        return _stNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.stNaoPossuiCpf = true;
+        this._stNaoPossuiCpf = value;
+      }
+    }
+
+    public long JustificativaNaoPossuiCpf
+    {
+      get
+      {
+        return _justificativaNaoPossuiCpf;
+      }
+      set
+      {
+        __isset.justificativaNaoPossuiCpf = true;
+        this._justificativaNaoPossuiCpf = value;
+      }
+    }
+
 
     public Isset __isset;
     #if !SILVERLIGHT
@@ -165,6 +193,8 @@ namespace br.gov.saude.esusab.ras.atividadecoletiva
       public bool abandonouGrupo;
       public bool sexo;
       public bool cpfParticipante;
+      public bool stNaoPossuiCpf;
+      public bool justificativaNaoPossuiCpf;
     }
 
     public ParticipanteRowItemThrift() {
@@ -244,6 +274,20 @@ namespace br.gov.saude.esusab.ras.atividadecoletiva
             case 9:
               if (field.Type == TType.String) {
                 CpfParticipante = iprot.ReadString();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 10:
+              if (field.Type == TType.Bool) {
+                StNaoPossuiCpf = iprot.ReadBool();
+              } else { 
+                TProtocolUtil.Skip(iprot, field.Type);
+              }
+              break;
+            case 11:
+              if (field.Type == TType.I64) {
+                JustificativaNaoPossuiCpf = iprot.ReadI64();
               } else { 
                 TProtocolUtil.Skip(iprot, field.Type);
               }
@@ -341,6 +385,22 @@ namespace br.gov.saude.esusab.ras.atividadecoletiva
           oprot.WriteString(CpfParticipante);
           oprot.WriteFieldEnd();
         }
+        if (__isset.stNaoPossuiCpf) {
+          field.Name = "stNaoPossuiCpf";
+          field.Type = TType.Bool;
+          field.ID = 10;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteBool(StNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
+        if (__isset.justificativaNaoPossuiCpf) {
+          field.Name = "justificativaNaoPossuiCpf";
+          field.Type = TType.I64;
+          field.ID = 11;
+          oprot.WriteFieldBegin(field);
+          oprot.WriteI64(JustificativaNaoPossuiCpf);
+          oprot.WriteFieldEnd();
+        }
         oprot.WriteFieldStop();
         oprot.WriteStructEnd();
       }
@@ -406,6 +466,18 @@ namespace br.gov.saude.esusab.ras.atividadecoletiva
         __first = false;
         __sb.Append("CpfParticipante: ");
         __sb.Append(CpfParticipante);
+      }
+      if (__isset.stNaoPossuiCpf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("StNaoPossuiCpf: ");
+        __sb.Append(StNaoPossuiCpf);
+      }
+      if (__isset.justificativaNaoPossuiCpf) {
+        if(!__first) { __sb.Append(", "); }
+        __first = false;
+        __sb.Append("JustificativaNaoPossuiCpf: ");
+        __sb.Append(JustificativaNaoPossuiCpf);
       }
       __sb.Append(")");
       return __sb.ToString();

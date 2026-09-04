@@ -76,6 +76,8 @@ module Br
               PROBLEMASCONDICOES = 40
               IVCF = 41
               SOLICITACOESOCI = 43
+              STNAOPOSSUICPF = 44
+              JUSTIFICATIVANAOPOSSUICPF = 45
 
               FIELDS = {
                 NUMEROPRONTUARIO => {:type => ::Thrift::Types::STRING, :name => 'numeroProntuario', :optional => true},
@@ -112,7 +114,9 @@ module Br
                 MEDICOES => {:type => ::Thrift::Types::STRUCT, :name => 'medicoes', :class => ::Br::Gov::Saude::Esusab::Ras::Common::MedicoesThrift, :optional => true},
                 PROBLEMASCONDICOES => {:type => ::Thrift::Types::LIST, :name => 'problemasCondicoes', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Common::ProblemaCondicaoThrift}, :optional => true},
                 IVCF => {:type => ::Thrift::Types::STRUCT, :name => 'ivcf', :class => ::Br::Gov::Saude::Esusab::Ras::Common::IvcfThrift, :optional => true},
-                SOLICITACOESOCI => {:type => ::Thrift::Types::LIST, :name => 'solicitacoesOci', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Solicitacaooci::SolicitacaoOciThrift}, :optional => true}
+                SOLICITACOESOCI => {:type => ::Thrift::Types::LIST, :name => 'solicitacoesOci', :element => {:type => ::Thrift::Types::STRUCT, :class => ::Br::Gov::Saude::Esusab::Ras::Solicitacaooci::SolicitacaoOciThrift}, :optional => true},
+                STNAOPOSSUICPF => {:type => ::Thrift::Types::BOOL, :name => 'stNaoPossuiCpf', :optional => true},
+                JUSTIFICATIVANAOPOSSUICPF => {:type => ::Thrift::Types::I64, :name => 'justificativaNaoPossuiCpf', :optional => true}
               }
 
               def struct_fields; FIELDS; end

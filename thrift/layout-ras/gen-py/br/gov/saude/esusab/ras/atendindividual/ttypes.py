@@ -183,6 +183,8 @@ class FichaAtendimentoIndividualChildThrift:
    - problemasCondicoes
    - ivcf
    - solicitacoesOci
+   - stNaoPossuiCpf
+   - justificativaNaoPossuiCpf
   """
 
   thrift_spec = (
@@ -230,9 +232,11 @@ class FichaAtendimentoIndividualChildThrift:
     (41, TType.STRUCT, 'ivcf', (br.gov.saude.esusab.ras.common.ttypes.IvcfThrift, br.gov.saude.esusab.ras.common.ttypes.IvcfThrift.thrift_spec), None, ), # 41
     None, # 42
     (43, TType.LIST, 'solicitacoesOci', (TType.STRUCT,(br.gov.saude.esusab.ras.solicitacaooci.ttypes.SolicitacaoOciThrift, br.gov.saude.esusab.ras.solicitacaooci.ttypes.SolicitacaoOciThrift.thrift_spec)), None, ), # 43
+    (44, TType.BOOL, 'stNaoPossuiCpf', None, None, ), # 44
+    (45, TType.I64, 'justificativaNaoPossuiCpf', None, None, ), # 45
   )
 
-  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, finalizadorObservacao=None, tipoParticipacaoCidadao=None, tipoParticipacaoProfissionalConvidado=None, emultis=None, medicoes=None, problemasCondicoes=None, ivcf=None, solicitacoesOci=None,):
+  def __init__(self, numeroProntuario=None, cns=None, dataNascimento=None, localDeAtendimento=None, sexo=None, turno=None, tipoAtendimento=None, aleitamentoMaterno=None, dumDaGestante=None, idadeGestacional=None, atencaoDomiciliarModalidade=None, exame=None, vacinaEmDia=None, pic=None, ficouEmObservacao=None, nasfs=None, condutas=None, stGravidezPlanejada=None, nuGestasPrevias=None, nuPartos=None, racionalidadeSaude=None, dataHoraInicialAtendimento=None, dataHoraFinalAtendimento=None, cpfCidadao=None, medicamentos=None, encaminhamentos=None, resultadosExames=None, finalizadorObservacao=None, tipoParticipacaoCidadao=None, tipoParticipacaoProfissionalConvidado=None, emultis=None, medicoes=None, problemasCondicoes=None, ivcf=None, solicitacoesOci=None, stNaoPossuiCpf=None, justificativaNaoPossuiCpf=None,):
     self.numeroProntuario = numeroProntuario
     self.cns = cns
     self.dataNascimento = dataNascimento
@@ -268,6 +272,8 @@ class FichaAtendimentoIndividualChildThrift:
     self.problemasCondicoes = problemasCondicoes
     self.ivcf = ivcf
     self.solicitacoesOci = solicitacoesOci
+    self.stNaoPossuiCpf = stNaoPossuiCpf
+    self.justificativaNaoPossuiCpf = justificativaNaoPossuiCpf
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -507,6 +513,16 @@ class FichaAtendimentoIndividualChildThrift:
           iprot.readListEnd()
         else:
           iprot.skip(ftype)
+      elif fid == 44:
+        if ftype == TType.BOOL:
+          self.stNaoPossuiCpf = iprot.readBool()
+        else:
+          iprot.skip(ftype)
+      elif fid == 45:
+        if ftype == TType.I64:
+          self.justificativaNaoPossuiCpf = iprot.readI64()
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -684,6 +700,14 @@ class FichaAtendimentoIndividualChildThrift:
         iter69.write(oprot)
       oprot.writeListEnd()
       oprot.writeFieldEnd()
+    if self.stNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('stNaoPossuiCpf', TType.BOOL, 44)
+      oprot.writeBool(self.stNaoPossuiCpf)
+      oprot.writeFieldEnd()
+    if self.justificativaNaoPossuiCpf is not None:
+      oprot.writeFieldBegin('justificativaNaoPossuiCpf', TType.I64, 45)
+      oprot.writeI64(self.justificativaNaoPossuiCpf)
+      oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()
 
@@ -728,6 +752,8 @@ class FichaAtendimentoIndividualChildThrift:
     value = (value * 31) ^ hash(self.problemasCondicoes)
     value = (value * 31) ^ hash(self.ivcf)
     value = (value * 31) ^ hash(self.solicitacoesOci)
+    value = (value * 31) ^ hash(self.stNaoPossuiCpf)
+    value = (value * 31) ^ hash(self.justificativaNaoPossuiCpf)
     return value
 
   def __repr__(self):

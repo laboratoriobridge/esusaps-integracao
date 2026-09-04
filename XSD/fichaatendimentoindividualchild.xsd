@@ -36,6 +36,8 @@
             <xs:element minOccurs="0" name="numeroProntuario" type="xs:string"/>
             <xs:element minOccurs="0" name="cnsCidadao" type="xs:string"/>
             <xs:element minOccurs="0" name="cpfCidadao" type="xs:string"/>
+            <xs:element minOccurs="0" name="stNaoPossuiCpf" type="xs:boolean"/>
+            <xs:element minOccurs="0" name="justificativaNaoPossuiCpf" type="xs:long"/>
             <xs:element minOccurs="0" name="dataNascimento" type="xs:long"/>
             <xs:element minOccurs="0" name="localDeAtendimento" type="xs:long"/>
             <xs:element minOccurs="0" name="sexo" type="xs:long"/>

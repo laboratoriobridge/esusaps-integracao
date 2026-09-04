@@ -16,6 +16,7 @@
 			<codigoIbgeMunicipio>4205407</codigoIbgeMunicipio>
 		</headerTransport>
 		<cpfCidadao>31422733521</cpfCidadao>
+		<stNaoPossuiCpf>false</stNaoPossuiCpf>
 		<dataNascimento>1493992800000</dataNascimento>
 		<sexo>1</sexo>
 		<localAtendimento>1</localAtendimento>

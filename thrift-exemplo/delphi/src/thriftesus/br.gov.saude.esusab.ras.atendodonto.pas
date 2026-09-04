@@ -126,6 +126,10 @@ type
     procedure SetPesoAcompanhamentoNutricional( const Value: Double);
     function GetAlturaAcompanhamentoNutricional: Double;
     procedure SetAlturaAcompanhamentoNutricional( const Value: Double);
+    function GetStNaoPossuiCpf: Boolean;
+    procedure SetStNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaNaoPossuiCpf: Int64;
+    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
 
     property DtNascimento: Int64 read GetDtNascimento write SetDtNascimento;
     property CnsCidadao: string read GetCnsCidadao write SetCnsCidadao;
@@ -149,6 +153,8 @@ type
     property ResultadosExames: IThriftList<IResultadosExameThrift> read GetResultadosExames write SetResultadosExames;
     property PesoAcompanhamentoNutricional: Double read GetPesoAcompanhamentoNutricional write SetPesoAcompanhamentoNutricional;
     property AlturaAcompanhamentoNutricional: Double read GetAlturaAcompanhamentoNutricional write SetAlturaAcompanhamentoNutricional;
+    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
+    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
 
     function Get__isset_DtNascimento: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -172,6 +178,8 @@ type
     function Get__isset_ResultadosExames: Boolean;
     function Get__isset_PesoAcompanhamentoNutricional: Boolean;
     function Get__isset_AlturaAcompanhamentoNutricional: Boolean;
+    function Get__isset_StNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
 
     property __isset_DtNascimento: Boolean read Get__isset_DtNascimento;
     property __isset_CnsCidadao: Boolean read Get__isset_CnsCidadao;
@@ -195,6 +203,8 @@ type
     property __isset_ResultadosExames: Boolean read Get__isset_ResultadosExames;
     property __isset_PesoAcompanhamentoNutricional: Boolean read Get__isset_PesoAcompanhamentoNutricional;
     property __isset_AlturaAcompanhamentoNutricional: Boolean read Get__isset_AlturaAcompanhamentoNutricional;
+    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
+    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
   end;
 
   TFichaAtendimentoOdontologicoChildThriftImpl = class(TInterfacedObject, IBase, IFichaAtendimentoOdontologicoChildThrift)
@@ -221,7 +231,9 @@ type
     FResultadosExames: IThriftList<IResultadosExameThrift>;
     FPesoAcompanhamentoNutricional: Double;
     FAlturaAcompanhamentoNutricional: Double;
-    
+    FStNaoPossuiCpf: Boolean;
+    FJustificativaNaoPossuiCpf: Int64;
+
     F__isset_DtNascimento: Boolean;
     F__isset_CnsCidadao: Boolean;
     F__isset_NumProntuario: Boolean;
@@ -244,7 +256,9 @@ type
     F__isset_ResultadosExames: Boolean;
     F__isset_PesoAcompanhamentoNutricional: Boolean;
     F__isset_AlturaAcompanhamentoNutricional: Boolean;
-    
+    F__isset_StNaoPossuiCpf: Boolean;
+    F__isset_JustificativaNaoPossuiCpf: Boolean;
+
     function GetDtNascimento: Int64;
     procedure SetDtNascimento( const Value: Int64);
     function GetCnsCidadao: string;
@@ -289,6 +303,10 @@ type
     procedure SetPesoAcompanhamentoNutricional( const Value: Double);
     function GetAlturaAcompanhamentoNutricional: Double;
     procedure SetAlturaAcompanhamentoNutricional( const Value: Double);
+    function GetStNaoPossuiCpf: Boolean;
+    procedure SetStNaoPossuiCpf( const Value: Boolean);
+    function GetJustificativaNaoPossuiCpf: Int64;
+    procedure SetJustificativaNaoPossuiCpf( const Value: Int64);
 
     function Get__isset_DtNascimento: Boolean;
     function Get__isset_CnsCidadao: Boolean;
@@ -312,6 +330,8 @@ type
     function Get__isset_ResultadosExames: Boolean;
     function Get__isset_PesoAcompanhamentoNutricional: Boolean;
     function Get__isset_AlturaAcompanhamentoNutricional: Boolean;
+    function Get__isset_StNaoPossuiCpf: Boolean;
+    function Get__isset_JustificativaNaoPossuiCpf: Boolean;
   public
     constructor Create;
     destructor Destroy; override;
@@ -345,6 +365,8 @@ type
     property ResultadosExames: IThriftList<IResultadosExameThrift> read GetResultadosExames write SetResultadosExames;
     property PesoAcompanhamentoNutricional: Double read GetPesoAcompanhamentoNutricional write SetPesoAcompanhamentoNutricional;
     property AlturaAcompanhamentoNutricional: Double read GetAlturaAcompanhamentoNutricional write SetAlturaAcompanhamentoNutricional;
+    property StNaoPossuiCpf: Boolean read GetStNaoPossuiCpf write SetStNaoPossuiCpf;
+    property JustificativaNaoPossuiCpf: Int64 read GetJustificativaNaoPossuiCpf write SetJustificativaNaoPossuiCpf;
 
     // isset
     property __isset_DtNascimento: Boolean read Get__isset_DtNascimento;
@@ -369,6 +391,8 @@ type
     property __isset_ResultadosExames: Boolean read Get__isset_ResultadosExames;
     property __isset_PesoAcompanhamentoNutricional: Boolean read Get__isset_PesoAcompanhamentoNutricional;
     property __isset_AlturaAcompanhamentoNutricional: Boolean read Get__isset_AlturaAcompanhamentoNutricional;
+    property __isset_StNaoPossuiCpf: Boolean read Get__isset_StNaoPossuiCpf;
+    property __isset_JustificativaNaoPossuiCpf: Boolean read Get__isset_JustificativaNaoPossuiCpf;
   end;
 
   IFichaAtendimentoOdontologicoMasterThrift = interface(IBase)
@@ -953,6 +977,38 @@ begin
   Result := F__isset_AlturaAcompanhamentoNutricional;
 end;
 
+function TFichaAtendimentoOdontologicoChildThriftImpl.GetStNaoPossuiCpf: Boolean;
+begin
+  Result := FStNaoPossuiCpf;
+end;
+
+procedure TFichaAtendimentoOdontologicoChildThriftImpl.SetStNaoPossuiCpf( const Value: Boolean);
+begin
+  F__isset_StNaoPossuiCpf := True;
+  FStNaoPossuiCpf := Value;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.Get__isset_StNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_StNaoPossuiCpf;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.GetJustificativaNaoPossuiCpf: Int64;
+begin
+  Result := FJustificativaNaoPossuiCpf;
+end;
+
+procedure TFichaAtendimentoOdontologicoChildThriftImpl.SetJustificativaNaoPossuiCpf( const Value: Int64);
+begin
+  F__isset_JustificativaNaoPossuiCpf := True;
+  FJustificativaNaoPossuiCpf := Value;
+end;
+
+function TFichaAtendimentoOdontologicoChildThriftImpl.Get__isset_JustificativaNaoPossuiCpf: Boolean;
+begin
+  Result := F__isset_JustificativaNaoPossuiCpf;
+end;
+
 procedure TFichaAtendimentoOdontologicoChildThriftImpl.Read( const iprot: IProtocol);
 var
   field_ : IField;
@@ -1252,6 +1308,24 @@ begin
           begin
             TProtocolUtil.Skip(iprot, field_.Type_);
           end;
+        end;
+        32: begin
+          if (field_.Type_ = TType.Bool_) then
+          begin
+            StNaoPossuiCpf := iprot.ReadBool();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
+        end;
+        33: begin
+          if (field_.Type_ = TType.I64) then
+          begin
+            JustificativaNaoPossuiCpf := iprot.ReadI64();
+          end else
+          begin
+            TProtocolUtil.Skip(iprot, field_.Type_);
+          end;
         end
         else begin
           TProtocolUtil.Skip(iprot, field_.Type_);
@@ -1536,6 +1610,24 @@ begin
     oprot.WriteDouble(AlturaAcompanhamentoNutricional);
     oprot.WriteFieldEnd();
   end;
+  if (__isset_StNaoPossuiCpf) then
+  begin
+    field_.Name := 'stNaoPossuiCpf';
+    field_.Type_  := TType.Bool_;
+    field_.ID := 32;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteBool(StNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
+  if (__isset_JustificativaNaoPossuiCpf) then
+  begin
+    field_.Name := 'justificativaNaoPossuiCpf';
+    field_.Type_  := TType.I64;
+    field_.ID := 33;
+    oprot.WriteFieldBegin(field_);
+    oprot.WriteI64(JustificativaNaoPossuiCpf);
+    oprot.WriteFieldEnd();
+  end;
   oprot.WriteFieldStop();
   oprot.WriteStructEnd();
 end;
@@ -1679,6 +1771,18 @@ begin
       _first43 := FALSE;
       _sb42.Append('AlturaAcompanhamentoNutricional: ');
       _sb42.Append(AlturaAcompanhamentoNutricional);
+    end;
+    if (__isset_StNaoPossuiCpf) then begin
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('StNaoPossuiCpf: ');
+      _sb42.Append(StNaoPossuiCpf);
+    end;
+    if (__isset_JustificativaNaoPossuiCpf) then begin
+      if not _first43 then _sb42.Append(',');
+      _first43 := FALSE;
+      _sb42.Append('JustificativaNaoPossuiCpf: ');
+      _sb42.Append(JustificativaNaoPossuiCpf);
     end;
     _sb42.Append(')');
     Result := _sb42.ToString;

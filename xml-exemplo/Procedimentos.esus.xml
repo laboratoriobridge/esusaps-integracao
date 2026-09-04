@@ -18,6 +18,8 @@
 		<atendProcedimentos>
 			<numProntuario>010</numProntuario>
 			<cnsCidadao>167070651000006</cnsCidadao>
+			<stNaoPossuiCpf>true</stNaoPossuiCpf>
+			<justificativaNaoPossuiCpf>5</justificativaNaoPossuiCpf>
 			<dtNascimento>1149606000000</dtNascimento>
 			<sexo>0</sexo>
 			<localAtendimento>1</localAtendimento>
@@ -71,6 +73,7 @@
 		<atendProcedimentos>
 			<numProntuario>016</numProntuario>
 			<cpfCidadao>31422733521</cpfCidadao>
+			<stNaoPossuiCpf>false</stNaoPossuiCpf>
 			<dtNascimento>1149306000000</dtNascimento>
 			<sexo>0</sexo>
 			<localAtendimento>1</localAtendimento>

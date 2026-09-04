@@ -20,6 +20,8 @@
 		<atendimentosIndividuais>
 			<numeroProntuario>123</numeroProntuario>
 			<cnsCidadao>279573698530018</cnsCidadao>
+			<stNaoPossuiCpf>true</stNaoPossuiCpf>
+			<justificativaNaoPossuiCpf>5</justificativaNaoPossuiCpf>
 			<dataNascimento>978361200000</dataNascimento>
 			<localDeAtendimento>1</localDeAtendimento>
 			<sexo>1</sexo>
@@ -152,6 +154,7 @@
 		<atendimentosIndividuais>
 			<numeroProntuario>1234</numeroProntuario>
 			<cpfCidadao>68688625042</cpfCidadao>
+			<stNaoPossuiCpf>false</stNaoPossuiCpf>
 			<dataNascimento>978361200000</dataNascimento>
 			<localDeAtendimento>1</localDeAtendimento>
 			<sexo>1</sexo>

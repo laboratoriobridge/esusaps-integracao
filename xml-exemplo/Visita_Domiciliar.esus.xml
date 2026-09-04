@@ -21,6 +21,8 @@
 			<turno>1</turno>
 			<numProntuario>012</numProntuario>
 			<cnsCidadao>118080815620003</cnsCidadao>
+			<stNaoPossuiCpf>true</stNaoPossuiCpf>
+			<justificativaNaoPossuiCpf>5</justificativaNaoPossuiCpf>
 			<dtNascimento>868287600000</dtNascimento>
 			<sexo>1</sexo>
 			<statusVisitaCompartilhadaOutroProfissional>true</statusVisitaCompartilhadaOutroProfissional>
@@ -96,6 +98,8 @@
 			<turno>3</turno>
 			<numProntuario>1212</numProntuario>
 			<cnsCidadao>255412557650001</cnsCidadao>
+			<stNaoPossuiCpf>true</stNaoPossuiCpf>
+			<justificativaNaoPossuiCpf>8</justificativaNaoPossuiCpf>
 			<dtNascimento>-582541200000</dtNascimento>
 			<sexo>0</sexo>
 			<statusVisitaCompartilhadaOutroProfissional>true</statusVisitaCompartilhadaOutroProfissional>
@@ -119,6 +123,7 @@
 			<turno>3</turno>
 			<numProntuario>1212</numProntuario>
 			<cpfCidadao>31422733521</cpfCidadao>
+			<stNaoPossuiCpf>false</stNaoPossuiCpf>
 			<dtNascimento>-582540200000</dtNascimento>
 			<sexo>0</sexo>
 			<statusVisitaCompartilhadaOutroProfissional>true</statusVisitaCompartilhadaOutroProfissional>

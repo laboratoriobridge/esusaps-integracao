@@ -55,6 +55,8 @@ var GoUnusedProtection__ int
 //  - CnsCuidador
 //  - CpfCidadao
 //  - CpfCuidador
+//  - StNaoPossuiCpf
+//  - JustificativaNaoPossuiCpf
 type FichaAvaliacaoElegibilidadeThrift struct {
 	UuidFicha   string `thrift:"uuidFicha,1,required" json:"uuidFicha"`
 	TpCdsOrigem *int32 `thrift:"tpCdsOrigem,2" json:"tpCdsOrigem,omitempty"`
@@ -93,6 +95,8 @@ type FichaAvaliacaoElegibilidadeThrift struct {
 	CnsCuidador                   *string                                `thrift:"cnsCuidador,35" json:"cnsCuidador,omitempty"`
 	CpfCidadao                    *string                                `thrift:"cpfCidadao,36" json:"cpfCidadao,omitempty"`
 	CpfCuidador                   *string                                `thrift:"cpfCuidador,37" json:"cpfCuidador,omitempty"`
+	StNaoPossuiCpf                *bool                                  `thrift:"stNaoPossuiCpf,38" json:"stNaoPossuiCpf,omitempty"`
+	JustificativaNaoPossuiCpf     *int64                                 `thrift:"justificativaNaoPossuiCpf,39" json:"justificativaNaoPossuiCpf,omitempty"`
 }
 
 func NewFichaAvaliacaoElegibilidadeThrift() *FichaAvaliacaoElegibilidadeThrift {
@@ -411,6 +415,24 @@ func (p *FichaAvaliacaoElegibilidadeThrift) GetCpfCuidador() string {
 	}
 	return *p.CpfCuidador
 }
+
+var FichaAvaliacaoElegibilidadeThrift_StNaoPossuiCpf_DEFAULT bool
+
+func (p *FichaAvaliacaoElegibilidadeThrift) GetStNaoPossuiCpf() bool {
+	if !p.IsSetStNaoPossuiCpf() {
+		return FichaAvaliacaoElegibilidadeThrift_StNaoPossuiCpf_DEFAULT
+	}
+	return *p.StNaoPossuiCpf
+}
+
+var FichaAvaliacaoElegibilidadeThrift_JustificativaNaoPossuiCpf_DEFAULT int64
+
+func (p *FichaAvaliacaoElegibilidadeThrift) GetJustificativaNaoPossuiCpf() int64 {
+	if !p.IsSetJustificativaNaoPossuiCpf() {
+		return FichaAvaliacaoElegibilidadeThrift_JustificativaNaoPossuiCpf_DEFAULT
+	}
+	return *p.JustificativaNaoPossuiCpf
+}
 func (p *FichaAvaliacaoElegibilidadeThrift) IsSetTpCdsOrigem() bool {
 	return p.TpCdsOrigem != nil
 }
@@ -549,6 +571,14 @@ func (p *FichaAvaliacaoElegibilidadeThrift) IsSetCpfCidadao() bool {
 
 func (p *FichaAvaliacaoElegibilidadeThrift) IsSetCpfCuidador() bool {
 	return p.CpfCuidador != nil
+}
+
+func (p *FichaAvaliacaoElegibilidadeThrift) IsSetStNaoPossuiCpf() bool {
+	return p.StNaoPossuiCpf != nil
+}
+
+func (p *FichaAvaliacaoElegibilidadeThrift) IsSetJustificativaNaoPossuiCpf() bool {
+	return p.JustificativaNaoPossuiCpf != nil
 }
 
 func (p *FichaAvaliacaoElegibilidadeThrift) Read(iprot thrift.TProtocol) error {
@@ -710,6 +740,14 @@ func (p *FichaAvaliacaoElegibilidadeThrift) Read(iprot thrift.TProtocol) error {
 			}
 		case 37:
 			if err := p.readField37(iprot); err != nil {
+				return err
+			}
+		case 38:
+			if err := p.readField38(iprot); err != nil {
+				return err
+			}
+		case 39:
+			if err := p.readField39(iprot); err != nil {
 				return err
 			}
 		default:
@@ -1078,6 +1116,24 @@ func (p *FichaAvaliacaoElegibilidadeThrift) readField37(iprot thrift.TProtocol) 
 	return nil
 }
 
+func (p *FichaAvaliacaoElegibilidadeThrift) readField38(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadBool(); err != nil {
+		return thrift.PrependError("error reading field 38: ", err)
+	} else {
+		p.StNaoPossuiCpf = &v
+	}
+	return nil
+}
+
+func (p *FichaAvaliacaoElegibilidadeThrift) readField39(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadI64(); err != nil {
+		return thrift.PrependError("error reading field 39: ", err)
+	} else {
+		p.JustificativaNaoPossuiCpf = &v
+	}
+	return nil
+}
+
 func (p *FichaAvaliacaoElegibilidadeThrift) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("FichaAvaliacaoElegibilidadeThrift"); err != nil {
 		return thrift.PrependError(fmt.Sprintf("%T write struct begin error: ", p), err)
@@ -1188,6 +1244,12 @@ func (p *FichaAvaliacaoElegibilidadeThrift) Write(oprot thrift.TProtocol) error 
 		return err
 	}
 	if err := p.writeField37(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField38(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField39(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -1748,6 +1810,36 @@ func (p *FichaAvaliacaoElegibilidadeThrift) writeField37(oprot thrift.TProtocol)
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return thrift.PrependError(fmt.Sprintf("%T write field end error 37:cpfCuidador: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAvaliacaoElegibilidadeThrift) writeField38(oprot thrift.TProtocol) (err error) {
+	if p.IsSetStNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("stNaoPossuiCpf", thrift.BOOL, 38); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 38:stNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteBool(bool(*p.StNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.stNaoPossuiCpf (38) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 38:stNaoPossuiCpf: ", p), err)
+		}
+	}
+	return err
+}
+
+func (p *FichaAvaliacaoElegibilidadeThrift) writeField39(oprot thrift.TProtocol) (err error) {
+	if p.IsSetJustificativaNaoPossuiCpf() {
+		if err := oprot.WriteFieldBegin("justificativaNaoPossuiCpf", thrift.I64, 39); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field begin error 39:justificativaNaoPossuiCpf: ", p), err)
+		}
+		if err := oprot.WriteI64(int64(*p.JustificativaNaoPossuiCpf)); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T.justificativaNaoPossuiCpf (39) field write error: ", p), err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return thrift.PrependError(fmt.Sprintf("%T write field end error 39:justificativaNaoPossuiCpf: ", p), err)
 		}
 	}
 	return err

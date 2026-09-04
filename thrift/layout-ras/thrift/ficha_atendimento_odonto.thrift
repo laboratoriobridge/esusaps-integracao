@@ -40,6 +40,8 @@ struct FichaAtendimentoOdontologicoChildThrift {
 	29:optional common.IvcfThrift ivcf;
 	30:optional list<common.ExameThrift> exame;
 	31:optional list<solicitacao_oci.SolicitacaoOciThrift> solicitacoesOci;
+	32:optional bool stNaoPossuiCpf;
+	33:optional i64 justificativaNaoPossuiCpf;
 }
 
 struct FichaAtendimentoOdontologicoMasterThrift {
