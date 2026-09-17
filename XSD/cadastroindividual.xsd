@@ -24,6 +24,7 @@
       <xs:element maxOccurs="1" minOccurs="0" name="fichaAtualizada" type="xs:boolean"/>
       <xs:element maxOccurs="1" minOccurs="0" name="identificacaoUsuarioCidadao" type="identificacaoUsuarioCidadao:identificacaoUsuarioCidadaoTransport"/>
       <xs:element maxOccurs="1" minOccurs="0" name="informacoesSocioDemograficas" type="informacoesSocioDemograficas:informacoesSocioDemograficasTransport"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="informacoesSocioEconomicas" type="informacoesSocioEconomicas:informacoesSocioEconomicasTransport"/>
       <xs:element maxOccurs="1" minOccurs="0" name="saidaCidadaoCadastro" type="saidaCidadaoCadastro:saidaCidadaoCadastroTransport"/>
       <xs:element maxOccurs="1" minOccurs="0" name="statusTermoRecusaCadastroIndividualAtencaoBasica" type="xs:boolean"/>
       <xs:element maxOccurs="1" minOccurs="0" name="tpCdsOrigem" type="xs:int"/>
