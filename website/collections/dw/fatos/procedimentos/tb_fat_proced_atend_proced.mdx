@@ -1,0 +1,50 @@
+---
+id: RF-EDW.tb_fat_proced_atend_proced
+title: Tabela fato da lista dos procedimentos de um atendimento de procedimentos
+order: 3
+parent: RF-EDW.procedimentos
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_proced_atend_proced` é populada quando os dados de um :link[procedimento]{id=dicionario-fp} são processados. Os dados processados nessa tabela se referem apenas a procedimentos individualizados (quando há referência a um cidadão).
+
+## 2. Fatos
+
+### 2.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_proced\_atend\_proced | - | Código de identificação sequencial criado automaticamente pelo sistema |
+| co\_fat\_procedimento | - | Campo `co_seq_fat_procedimento` da `tb_fat_procedimentos` e `tb_fat_proced_atend` |
+| co\_fat\_cidadao\_pec | - | Campo `co_seq_fat_cidadao_pec` da `tb_fat_cidadao_pec` |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fp anchor=1-uuidficha}  | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | - | Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu\_uuid\_ficha |
+| nu\_atendimento | - | Uma ficha pode conter mais de um atendimento esse campo é utilizado para ordenar os atendimentos dentro um mesmo envio. Campo `nu_atendimento` da `tb_fat_proced_atend` |
+| nu\_cpf\_cidadao | :link[cpfCidadao]{id=dicionario-fp anchor=3-cpfcidadao} | CPF do cidadão |
+| nu\_cns | :link[cnsCidadao]{id=dicionario-fp anchor=2-cnscidadao} | CNS do cidadão |
+
+### 2.2 Métricas dos Fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| dt\_nascimento | :link[dtNascimento]{id=dicionario-fp anchor=4-dtnascimento} | Data de nascimento do cidadão |
+| st\_escuta\_inicial | :link[statusEscutaInicialOrientacao]{id=dicionario-fp anchor=8-statusescutainicialorientacao} | Status que indica a realização da escuta inicial |
+
+## 3. Dimensões da tabela
+
+### 3.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência | 
+| --------- | ------------------- | 
+| co\_dim\_sexo | Código do sexo. Campo `co_seq_dim_faixa_sexo` da `tb_dim_sexo` |
+| co\_dim\_turno | Código do turno do atendimento. Campo `co_seq_dim_faixa_turno` da `tb_dim_turno` | 
+| co\_dim\_local\_atendimento | Código do local de atendimento. Campo `co_seq_dim_local_atendimento` da `tb_dim_local_atendimento` | 
+| co\_dim\_procedimento | Código procedimento do atendimento. Campo `co_seq_dim_procedimento` da `tb_dim_procedimento` | 
+
+### 3.2 Dimensões comuns a todas as tabelas fato do procedimento
+
+<DimensoesEmComum />
+

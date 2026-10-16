@@ -1,0 +1,25 @@
+---
+id: RF-EDW.dim_uf
+title: Tabela de dimensão de UF
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_uf` é utilizada para armazenar as Unidades Federativas do Brasil. Os dados são importados do IBGE.
+
+## 2. Campos da tabela
+
+| Colunas DW | Referência |
+| ---------- | ---------- |
+| co\_seq\_dim\_uf | Código de identificação sequencial |
+| co\_uf | Código IBGE da UF |
+| no\_uf | Nome da UF |
+| no\_identificador | Identificador textual da UF |
+| sg\_uf | Sigla da UF |
+| ds\_filtro | Nome da UF sem acentuação, utilizado para filtros |
+| co\_dim\_pais | Código do país ao qual a UF pertence. Campo `co_seq_dim_pais` da `tb_dim_pais` |
+| st\_registro\_valido | <CampoStRegistroValido /> |

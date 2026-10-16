@@ -1,0 +1,26 @@
+---
+id: RF-EDW.dim_forma_farmaceutica
+title: Tabela de dimensão de forma farmacêutica
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_forma_farmaceutica` é utilizada para armazenar a forma farmacêutica dos medicamentos. Possui como referência a coluna de forma farmacêutica da :link[Tabela de medicamentos CATMAT]{id=catmat}.
+
+## 2. Regras
+
+:nr Quando um medicamento prescrito possui uma forma farmacêutica ou ela é informada em uma prescrição, a tabela é preenchida.
+
+## 3. Campos da tabela
+
+| Colunas DW | Referência      |
+| ---------- | --------------- |
+| co\_seq\_dim\_forma\_farmaceutica | Código de identificação sequencial |
+| co\_forma\_farmaceutica | Código identificador da forma farmacêutica |
+| no\_forma\_farmaceutica | Nome da forma farmacêutica |
+| no\_forma\_farmaceutica\_filtro | Nome da forma farmacêutica, sem acentos |
+| st\_registro\_valido | <CampoStRegistroValido /> |

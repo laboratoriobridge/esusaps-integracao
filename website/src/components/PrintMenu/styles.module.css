@@ -1,0 +1,68 @@
+.printMenu {
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--ifm-spacing-vertical);
+}
+
+.printMenuButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.875rem;
+  color: var(--ifm-font-color-base);
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-button-border-radius);
+  cursor: pointer;
+}
+
+.printMenuButton:hover {
+  border-color: var(--ifm-color-emphasis-500);
+}
+
+.printMenuButton:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.printMenuBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+.printMenuList {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  min-width: 15rem;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.printMenuItem {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.875rem;
+  color: var(--ifm-font-color-base);
+  text-align: left;
+  text-decoration: none;
+  background: none;
+  border: none;
+  border-radius: var(--ifm-global-radius);
+  cursor: pointer;
+}
+
+.printMenuItem:hover {
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  background: var(--ifm-color-emphasis-100);
+}

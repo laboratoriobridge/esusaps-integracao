@@ -1,0 +1,61 @@
+---
+id: RF-EDW.tb_fat_vacinacao_vacina
+title: Tabela fato das vacinas aplicadas
+order: 2
+parent: RF-EDW.vacinacao
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_vacinacao_vacina` registra cada **vacina aplicada** em um atendimento de vacinação processado. Cada linha representa uma vacina individual e está vinculada à `tb_fat_vacinacao` pelo campo `co_fat_vacinacao`.
+
+## 2. Regras
+
+:nr A `tb_fat_vacinacao_vacina` é preenchida quando é processado o registro de ao menos uma vacina em um atendimento de vacinação.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_vacinacao\_vacina | - | Código de identificação sequencial criado automaticamente pelo sistema |
+| co\_fat\_vacinacao | - | Código de identificação da vacinação. Campo `co_seq_fat_vacinacao` da `tb_fat_vacinacao` |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fv anchor=1-uuidficha} | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | - | Identificador universalmente único da camada de transporte de dados |
+| nu\_atendimento | - | Número sequencial do atendimento na ficha. Uma ficha pode conter mais de um atendimento, esse campo é utilizado para ordenar os atendimentos dentro de um mesmo envio |
+
+### 3.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| no\_lote | - | Número do lote da vacina aplicada |
+| st\_registro\_anterior | - | Indica se a vacina foi aplicada anteriormente (registro retroativo) |
+| st\_aplicado\_exterior | - | Indica se a vacina foi aplicada no exterior |
+| st\_pesquisa\_clinica | - | Indica se a vacina faz parte de uma pesquisa clínica |
+| ds\_anvisa\_protocolo\_estudo | - | Indica o número do protocolo do estudo clínico na Anvisa. |
+| ds\_anvisa\_protocolo\_versao | - | Indica o número da versão do protocolo do estudo na Anvisa. |
+| ds\_anvisa\_numero\_registro | - | Indica o número do registro sanitário da vacina na Anvisa. |
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência |
+| --------- | ------------------- |
+| co\_dim\_imunobiologico | Código do imunobiológico aplicado. Campo `co_seq_dim_imunobiologico` da `tb_dim_imunobiologico` |
+| co\_dim\_estrategia\_vacinacao | Código da estratégia de vacinação. Campo `co_seq_dim_estrategia_vacinacao` da `tb_dim_estrategia_vacinacao` |
+| co\_dim\_dose\_imunobiologico | Código da dose do imunobiológico aplicada. Campo `co_seq_dim_dose_imunobiologico` da `tb_dim_dose_imunobiologico` |
+| co\_dim\_grupo\_atendimento | Código do grupo de atendimento da vacinação. Campo `co_seq_dim_grupo_atendimento` da `tb_dim_grupo_atendimento` |
+| co\_dim\_tempo\_vacina\_aplicada | Data em que a vacina foi aplicada. Campo `co_seq_dim_tempo` da `tb_dim_tempo` |
+| co\_dim\_cbo\_prescritor | Código do CBO do profissional que prescreveu a vacina. Campo `co_seq_dim_cbo` da `tb_dim_cbo` |
+| co\_dim\_cid\_motivo\_indicacao | Código do CID10 que motivou a indicação da vacina. Campo `co_seq_dim_cid10` da `tb_dim_cid10` |
+| co\_dim\_via\_adm\_vacina | Código da via de administração da vacina. Campo `co_seq_dim_via_adm_vacina` da `tb_dim_via_adm_vacina` |
+| co\_dim\_local\_apl\_vacina | Código do local de aplicação da vacina. Campo `co_seq_dim_local_apl_vacina` da `tb_dim_local_apl_vacina` |
+| co\_dim\_imunobiologico\_fabrc | Código do fabricante do imunobiológico. Campo `co_seq_dim_imunobiologico_fabrc` da `tb_dim_imunobiologico_fabrc` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato da vacinação
+
+<DimensoesEmComum />

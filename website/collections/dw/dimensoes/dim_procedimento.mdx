@@ -1,0 +1,24 @@
+---
+id: RF-EDW.dim_procedimento
+title: Tabela de dimensão de procedimentos
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_procedimento` é utilizada para armazenar os procedimentos. Possui como referência a :link[Tabela Unificada SIGTAP]{id=referencias} do LEDI.
+
+## 2. Campos da tabela
+
+| Colunas DW | Referência      |
+| ---------- | --------------- |
+| co\_seq\_dim\_procedimento | Código de identificação sequencial |
+| co\_proced | Código do procedimento |
+| ds\_proced | Descrição do procedimento |
+| co\_seq\_dim\_proced\_ref\_ab | Código do procedimento AB referênciado ao procedimento SIGTAP |
+| co\_pai | - |
+| ds\_filtro | Concatenação entre código e descrição do procedimento, sem acento |
+| st\_registro\_valido | <CampoStRegistroValido /> |

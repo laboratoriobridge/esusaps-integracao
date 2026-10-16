@@ -1,0 +1,102 @@
+---
+id: RF-EDW.tb_fat_atendimento_odonto
+title: Tabela fato do atendimento odontológico
+order: 0
+parent: RF-EDW.atendimento_odontologico_individual
+---
+import DimensoesEmComum from '../../_shared/dimensoes_em_comum.mdx';
+
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atendimento_odonto` é populada sempre que os dados de um :link[atendimento odontológico]{id=dicionario-fao} são processados.  
+
+## 2. Regras
+
+:nr A `tb_fat_atendimento_odonto` é preenchida quando são processado(a)s:
+
+- Fichas de atendimento odontológico recebidas através da importação de sistemas terceiros ou outras instalações do PEC;
+- Registro de um atendimento odontológico;
+- Registro de uma escuta inicial com profissional de nível superior de odontologia;
+- Registro de um atendimento odontológico no CDS.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Coluna DW               | Referência LEDI | Referência sistema |
+| ----------------------- | --------------- | ------------------ |
+| co\_seq\_fat\_atd\_odnt | -               | Código de identificação sequencial criado automaticamente pelo sistema |
+| co\_fat\_cidadao\_pec   | -               | Campo `co_seq_fat_cidadao_pec` da `tb_fat_cidadao_pec` |
+| nu\_prontuario          | :link[numProntuario]{id=dicionario-fao anchor=3-numprontuario} | Número do prontuário criptografado |
+| nu\_uuid\_ficha         | :link[uuidFicha]{id=dicionario-fao anchor=1-uuidficha} | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp  | :link[uuidDadoSerializado]{id=camada-transporte anchor=1-uuiddadoserializado} | Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu\_uuid\_ficha |
+| nu\_atendimento         | -               | Uma ficha pode conter mais de um atendimento esse campo é utilizado para ordenar os atendimentos dentro um mesmo envio |
+| nu\_cpf\_cidadao        | :link[cpfCidadao]{id=dicionario-fao anchor=19-cpfcidadao} | CPF do cidadão |
+| nu\_cns                 | :link[cnsCidadao]{id=dicionario-fao anchor=2-cnscidadao} | CNS do cidadão |
+
+### 3.2 Métricas dos Fatos
+
+| Coluna DW                          | Referência LEDI | Referência sistema |
+| ---------------------------------- | --------------- | ------------------ |
+| dt\_nascimento                     | :link[dtNascimento]{id=dicionario-fao anchor=1-dtnascimento} | Data de nascimento do cidadão |
+| st\_paciente\_necessidades\_espec  | :link[necessidadesEspeciais]{id=dicionario-fao anchor=5-necessidadesespeciais} | Indica se o atendimento é a pessoa com necessidades especiais |
+| st\_gestante                       | :link[gestante]{id=dicionario-fao anchor=4-gestante} | Indica se o atendimento é a pessoa gestante |
+| st\_vigil\_abscesso\_dentoalveola  | :link[tiposVigilanciaSaudeBucal]{id=dicionario-fao anchor=10-tiposvigilanciasaudebucal} | Indica ação de vigilância em saúde bucal por abscesso dentoalveolar |
+| st\_vigil\_alterac\_tecidos\_moles | :link[tiposVigilanciaSaudeBucal]{id=dicionario-fao anchor=10-tiposvigilanciasaudebucal} | Indica ação de vigilância em saúde bucal por alteração em tecidos moles |
+| st\_vigil\_dor\_dente              | :link[tiposVigilanciaSaudeBucal]{id=dicionario-fao anchor=10-tiposvigilanciasaudebucal} | Indica ação de vigilância em saúde bucal por dor de dente |
+| st\_vigil\_fendas\_fissuras\_labio | :link[tiposVigilanciaSaudeBucal]{id=dicionario-fao anchor=10-tiposvigilanciasaudebucal} | Indica ação de vigilância em saúde bucal por fendas ou fissuras lábio palatais |
+| st\_vigil\_fluorose\_dentaria      | :link[tiposVigilanciaSaudeBucal]{id=dicionario-fao anchor=10-tiposvigilanciasaudebucal} | Indica ação de vigilância em saúde bucal por fluorose dentária moderada ou severa |
+| st\_vigil\_traumat\_dentoalveolar  | :link[tiposVigilanciaSaudeBucal]{id=dicionario-fao anchor=10-tiposvigilanciasaudebucal} | Indica ação de vigilância em saúde bucal por traumatismo dentoalveolar |
+| st\_vigil\_nao\_identificado       | :link[tiposVigilanciaSaudeBucal]{id=dicionario-fao anchor=10-tiposvigilanciasaudebucal} | Indica ação de vigilância em saúde bucal por motivo não identificado |
+| st\_fornecimento\_escova\_dental   | :link[tiposFornecimOdonto]{id=dicionario-fao anchor=9-tiposfornecimodonto} | Indica se foi realizado o fornecimento de escova dental |
+| st\_fornecimento\_creme\_dental    | :link[tiposFornecimOdonto]{id=dicionario-fao anchor=9-tiposfornecimodonto} | Indica se foi realizado o fornecimento de creme dental |
+| st\_fornecimento\_fio\_dental      | :link[tiposFornecimOdonto]{id=dicionario-fao anchor=9-tiposfornecimodonto} | Indica se foi realizado o fornecimento de fio dental |
+| nu\_peso                           | :link[peso]{id=dicionario-fao anchor=11-peso} | Peso do cidadão em quilogramas |
+| nu\_altura                         | :link[altura]{id=dicionario-fao anchor=12-altura} | Altura do cidadão em centímetros |
+| st\_conduta\_outros\_profissio\_ab | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica a conduta "Agendamento para outros profissionais AB"|
+| st\_conduta\_consulta\_agendada    | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica a conduta "Retorno para consulta agendada"|
+| st\_conduta\_agendamento\_grupos   | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica a conduta "Agendamento para grupos" |
+| st\_conduta\_agendamento\_nasf     | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica a conduta "Agendamento para eMulti"|
+| st\_conduta\_alta\_episodio        | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica a conduta "Alta do episódio" |
+| st\_conduta\_tratamento\_concluid  | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica a conduta "Tratamento concluído" |
+| st\_encaminhamento\_necess\_espec  | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica o encaminhamento "Atendimento à pacientes com necessidades especiais" |
+| st\_encaminhamento\_cirurgia\_bmf  | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica o encaminhamento "Cirurgia BMF" |
+| st\_encaminhamento\_endodontia     | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica o encaminhamento "Endodontia" |
+| st\_encaminhamento\_estomatologi   | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica o encaminhamento "Estomatologia" |
+| st\_encaminhamento\_implantodont   | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica o encaminhamento "Implantodontia" |
+| st\_encaminhamento\_odontopediat   | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica o encaminhamento "Odontopediatria" |
+| st\_encaminhamento\_ortod\_ortop   | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica o encaminhamento "Ortodontia / Ortopedia" |
+| st\_encaminhamento\_periodontia    | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica o encaminhamento "Periodontia" |
+| st\_encaminhamento\_protese\_dent  | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica o encaminhamento "Prótese dentária" |
+| st\_encaminhamento\_radiologia     | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica o encaminhamento "Radiologia" |
+| st\_encaminhamento\_outros         | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica o encaminhamento "Outros" |
+| st\_encaminhamento\_nao\_aplica    | - | - |
+| ds\_filtro\_cids                   | - | Agrupa todos as CID 10 registradas na Avaliação do atendimento |
+| ds\_filtro\_ciaps                  | - | Agrupa todas as CIAPs registradas na Avaliação do atendimento |
+| ds\_filtro\_procedimentos          | - | Agrupa todos os procedimentos registrados no atendimento |
+| dt\_inicial\_atendimento           | :link[dataHoraInicialAtendimento]{id=dicionario-fao anchor=17-datahorainicialatendimento} | Data e hora do início do atendimento no formato "YYYY-MM-DD HH:MM:SS.MMM"|
+| dt\_final\_atendimento             | :link[dataHoraFinalAtendimento]{id=dicionario-fao anchor=18-datahorafinalatendimento} | Data e hora do fim do atendimento no formato "YYYY-MM-DD HH:MM:SS.MMM" |
+| st\_conduta\_agendamento\_emulti   | :link[tiposEncamOdonto]{id=dicionario-fao anchor=8-tiposencamodonto} | Indica a conduta "Agendamento para eMulti" |
+| st\_nao\_possui\_cpf               | :link[stNaoPossuiCpf]{id=dicionario-fao anchor=29-stnaopossuicpf} | Indica se o cidadão não possui CPF |
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW                         | Dimensão referência |
+| --------------------------------- | ------------------- |
+| co\_dim\_faixa\_etaria            | Código da faixa etária. Campo `co_seq_dim_faixa_etaria` da `tb_dim_faixa_etaria` |
+| co\_dim\_sexo                     | Código do sexo. Campo `co_seq_dim_faixa_sexo` da `tb_dim_sexo` |
+| co\_dim\_turno                    | Código do turno do atendimento. Campo `co_seq_dim_turno` da `tb_dim_turno` |
+| co\_dim\_local\_atendimento       | Código do local de atendimento. Campo `co_seq_dim_local_atendimento` da `tb_dim_local_atendimento` |
+| co\_dim\_tipo\_atendimento        | Código do tipo de atendimento. Campo `co_seq_dim_tipo_atendimento` da `tb_dim_tipo_atendimento` |
+| co\_dim\_tipo\_consulta           | Código do tipo de atendimento. Campo `co_seq_dim_tipo_cnsulta_odonto` da `tb_dim_tipo_consulta_odonto` |
+| co\_dim\_tp\_particip\_cidadao    | Código do tipo de participação do cidadão. Campo `co_seq_dim_tp_particip_atend` da `tb_dim_tp_participacao_atend` |
+| co\_dim\_tp\_particip\_prof\_conv | Código do tipo de participação do profissional convidado. Campo `co_seq_dim_tp_particip_atend` da `tb_dim_tp_participacao_atend` |
+| co\_dim\_just\_nao\_possui\_cpf   | Código da justificativa de não possuir CPF. Campo `co_seq_dim_just_nao_possui_cpf` da `tb_dim_just_nao_possui_cpf` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato do atendimento odontológico
+
+<DimensoesEmComum />

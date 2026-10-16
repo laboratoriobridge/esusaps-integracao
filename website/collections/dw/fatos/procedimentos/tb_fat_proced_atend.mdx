@@ -1,0 +1,67 @@
+---
+id: RF-EDW.tb_fat_proced_atend
+title: Tabela fato dos atendimentos de procedimento (individualizados)
+order: 2
+parent: RF-EDW.procedimentos
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_proced_atend` é populada quando os dados de um :link[procedimento]{id=dicionario-fp} são processados. Os dados processados nessa tabela se referem apenas a procedimentos individualizados (quando há referência a um cidadão).
+
+## 2. Fatos
+
+### 2.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_proced\_atend | - | Código de identificação sequencial criado automaticamente pelo sistema |
+| co\_fat\_procedimento | - | Campo `co_seq_fat_procedimento` da `tb_fat_procedimentos` |
+| co\_fat\_cidadao\_pec | - | Campo `co_seq_fat_cidadao_pec` da `tb_fat_cidadao_pec` |
+| nu\_prontuario | :link[numProntuario]{id=dicionario-fp anchor=1-numprontuario} | Número do prontuário criptografado |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fp anchor=1-uuidficha}  | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | :link[uuidDadoSerializado]{id=camada-transporte anchor=1-uuiddadoserializado} | Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu\_uuid\_ficha |
+| nu\_atendimento | - | Uma ficha pode conter mais de um atendimento esse campo é utilizado para ordenar os atendimentos dentro um mesmo envio |
+| nu\_cpf\_cidadao | :link[cpfCidadao]{id=dicionario-fp anchor=3-cpfcidadao} | CPF do cidadão |
+| nu\_cns | :link[cnsCidadao]{id=dicionario-fp anchor=2-cnscidadao} | CNS do cidadão |
+
+### 2.2 Métricas dos Fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| dt\_nascimento | :link[dtNascimento]{id=dicionario-fp anchor=4-dtnascimento} | Data de nascimento do cidadão |
+| st\_escuta\_inicial | :link[statusEscutaInicialOrientacao]{id=dicionario-fp anchor=8-statusescutainicialorientacao} | Status que indica a realização da escuta inicial |
+| nu\_medicao\_circ\_abdominal | :link[circunferenciaAbdominal]{id=dicionario-fp anchor=1-circunferenciaabdominal} | Circunferência abdominal do cidadão em centímetros |
+| nu\_medicao\_perim\_pantrlha | :link[perimetroPanturrilha]{id=dicionario-fp anchor=2-perimetropanturrilha} | Perímetro da panturrilha do cidadão em centímetros |
+| nu\_medicao\_pressao\_sistolica | :link[pressaoArterialSistolica]{id=dicionario-fp anchor=3-pressaoarterialsistolica} | Pressão arterial sistólica do cidadão em mmHg |
+| nu\_medicao\_pressao\_diastolica | :link[pressaoArterialDiastolica]{id=dicionario-fp anchor=4-pressaoarterialdiastolica} | Pressão arterial diastólica do cidadão em mmHg |
+| nu\_medicao\_freq\_respiratoria | :link[frequenciaRespiratoria]{id=dicionario-fp anchor=5-frequenciarespiratoria} | Frequência respiratória do cidadão em MPM |
+| nu\_medicao\_freq\_cardiaca | :link[frequenciaCardiaca]{id=dicionario-fp anchor=6-frequenciacardiaca} | Frequência cardíaca do cidadão em BPM |
+| nu\_medicao\_temperatura | :link[temperatura]{id=dicionario-fp anchor=7-temperatura} | Temperatura do cidadão em ºC |
+| nu\_medicao\_saturacao\_o2 | :link[saturacaoO2]{id=dicionario-fp anchor=8-saturacaoo2} | Saturação de oxigênio do cidadão em percentual |
+| nu\_medicao\_glicemia | :link[glicemiaCapilar]{id=dicionario-fp anchor=9-glicemiacapilar} | Glicemia capilar do cidadão em mg/dL |
+| nu\_peso | :link[peso]{id=dicionario-fp anchor=11-peso} | Peso do cidadão em quilogramas |
+| nu\_altura | :link[altura]{id=dicionario-fp anchor=12-altura} | Altura do cidadão em centímetros |
+| nu\_perimetro\_cefalico | :link[perimetroCefalico]{id=dicionario-fp anchor=13-perimetrocefalico} | Perímetro cefálico do cidadão em centímetros |
+| ds\_filtro\_procedimento | :link[procedimentos]{id=dicionario-fp anchor=9-procedimentos} | Agrupa todos os procedimentos registrados no atendimento |
+| dt\_inicial\_atendimento | :link[dataHoraInicialAtendimento]{id=dicionario-fp anchor=10-datahorainicialatendimento} | Data e hora do início do atendimento no formato "YYYY-MM-DD HH:MM:SS.MMM"|
+| dt\_final\_atendimento | :link[dataHoraFinalAtendimento]{id=dicionario-fp anchor=11-datahorafinalatendimento} | Data e hora do fim do atendimento no formato "YYYY-MM-DD HH:MM:SS.MMM" |
+| st\_nao\_possui\_cpf | :link[stNaoPossuiCpf]{id=dicionario-fp anchor=14-stnaopossuicpf} | Indica se o cidadão não possui CPF |
+
+## 3. Dimensões da tabela
+
+### 3.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência | 
+| --------- | ------------------- | 
+| co\_dim\_sexo | Código do sexo. Campo `co_seq_dim_faixa_sexo` da `tb_dim_sexo` |
+| co\_dim\_turno | Código do turno do atendimento. Campo `co_seq_dim_faixa_turno` da `tb_dim_turno` | 
+| co\_dim\_local\_atendimento | Código do local de atendimento. Campo `co_seq_dim_local_atendimento` da `tb_dim_local_atendimento` | 
+| co\_dim\_faixa\_etaria | Código da faixa etária. Campo `co_seq_dim_faixa_etaria` da `tb_dim_faixa_etaria` |
+| co\_dim\_just\_nao\_possui\_cpf | Código da justificativa de não possuir CPF. Campo `co_seq_dim_just_nao_possui_cpf` da `tb_dim_just_nao_possui_cpf` |
+
+### 3.2 Dimensões comuns a todas as tabelas fato do procedimento
+
+<DimensoesEmComum />

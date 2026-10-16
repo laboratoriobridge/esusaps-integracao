@@ -1,0 +1,25 @@
+---
+id: RF-EDW.dim_inep
+title: Tabela de dimensão de estabelecimentos do INEP
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_inep` é utilizada para armazenar os estabelecimentos do INEP. Possui como referência a tabela do INEP disponível nas :link[referências]{id=referencias}.
+
+## 2. Regras
+
+:nr Quando um estabelecimento do INEP é preenchido em uma atividade coletiva a tabela é preenchida.
+
+## 3. Campos da tabela
+
+| Colunas DW | Referência      |
+| ---------- | --------------- |
+| co\_seq\_dim\_inep | Código de identificação sequencial |
+| nu\_identificador | Número identificador do INEP |
+| no\_estabelecimento | Nome do estabelecimento do INEP |
+| st\_registro\_valido | <CampoStRegistroValido /> |

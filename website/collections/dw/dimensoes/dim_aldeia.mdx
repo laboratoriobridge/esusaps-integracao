@@ -1,0 +1,22 @@
+---
+id: RF-EDW.dim_aldeia
+title: Tabela de dimensão de aldeia indígena
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_aldeia` é utilizada para armazenar as aldeias indígenas. A coluna `co_dim_polo_base` referencia o polo base ao qual a aldeia pertence.
+
+## 2. Campos da tabela
+
+| Colunas DW | Referência |
+| ---------- | ---------- |
+| co\_seq\_dim\_aldeia | Código de identificação sequencial |
+| nu\_identificador | Número identificador da aldeia |
+| ds\_aldeia | Descrição da aldeia |
+| co\_dim\_polo\_base | Código do polo base ao qual a aldeia pertence |
+| st\_registro\_valido | <CampoStRegistroValido /> |

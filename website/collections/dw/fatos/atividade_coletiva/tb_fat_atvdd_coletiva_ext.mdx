@@ -1,0 +1,100 @@
+---
+id: RF-EDW.tb_fat_atvdd_coletiva_ext
+title: Tabela fato das ações de saúde da atividade coletiva
+order: 3
+parent: RF-EDW.atividade_coletiva
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atvdd_coletiva_ext` é populada quando o tipo de atividade processada corresponde a uma **ação de saúde com usuários**. Cada registro armazena os públicos-alvo, temas para saúde e práticas em saúde selecionados.
+
+## 2. Regras
+
+:nr A `tb_fat_atvdd_coletiva_ext` é preenchida quando:
+
+- O tipo de atividade da `tb_fat_atividade_coletiva` vinculada refere-se a ações de saúde direcionadas aos usuários.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_atvdd\_cltv\_ext | - | Código de identificação sequencial da atividade coletiva em saúde |
+| co\_fat\_atividade\_coletiva | - | Campo `co_seq_fat_atividade_coletiva` da `tb_fat_atividade_coletiva` |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fac anchor=1-uuidficha} | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | - | Identificador universalmente único da camada de transporte de dados |
+
+### 3.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| st\_pblc\_alvo\_comunidade\_geral | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: comunidade em geral |
+| st\_pblc\_alvo\_crianca\_0\_3\_anos | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: criança de 0 a 3 anos |
+| st\_pblc\_alvo\_crianca\_4\_5\_anos | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: criança de 4 a 5 anos |
+| st\_pblc\_alvo\_crianca\_6\_11\_anos | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: criança de 6 a 11 anos |
+| st\_pblc\_alvo\_adolescente | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: adolescente |
+| st\_pblc\_alvo\_mulher | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: mulher |
+| st\_pblc\_alvo\_gestante | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: gestante |
+| st\_pblc\_alvo\_homem | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: homem |
+| st\_pblc\_alvo\_familiares | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: familiares |
+| st\_pblc\_alvo\_idoso | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: idoso |
+| st\_pblc\_alvo\_pessoa\_doen\_croni | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: pessoa com doença crônica |
+| st\_pblc\_alvo\_usuario\_tabaco | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: usuário de tabaco |
+| st\_pblc\_alvo\_usuario\_alcool | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: usuário de álcool |
+| st\_pblc\_alvo\_usuario\_outr\_drog | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: usuário de outras drogas |
+| st\_pblc\_alvo\_pes\_sofr\_trtm\_men | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: pessoa que sofre com transtorno mental |
+| st\_pblc\_alvo\_profiss\_educacao | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: profissional de educação |
+| st\_pblc\_alvo\_adol\_socied\_aber | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: adolescente em atendimento socioeducativo em meio aberto |
+| st\_pblc\_alvo\_adol\_socied\_fech | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: adolescente em atendimento socioeducativo em meio fechado |
+| st\_pblc\_alvo\_outros | :link[publicoAlvo]{id=dicionario-fac anchor=9-publicoalvo} | Indica público-alvo: outros |
+| st\_tema\_saude\_comb\_aedes\_aegyp | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: combate ao Aedes aegypti |
+| st\_tema\_saude\_agravos\_negligen | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: agravos negligenciados |
+| st\_tema\_saude\_aliment\_saudavel | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: alimentação saudável |
+| st\_tema\_saude\_pess\_doenc\_croni | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: pessoa com doenças crônicas |
+| st\_tema\_saude\_cidad\_dirt\_human | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: cidadania e direitos humanos |
+| st\_tema\_saude\_dependen\_quimica | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: dependência química |
+| st\_tema\_saude\_envelhecimento | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: envelhecimento |
+| st\_tema\_saude\_pant\_medic\_fitot | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: plantas medicinais/fitoterapia |
+| st\_tema\_saude\_preven\_violencia | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: prevenção da violência |
+| st\_tema\_saude\_saude\_ambiental | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: saúde ambiental |
+| st\_tema\_saude\_saude\_bucal | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: saúde bucal |
+| st\_tema\_saude\_saude\_trabalhad | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: saúde do trabalhador |
+| st\_tema\_saude\_saude\_mental | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: saúde mental |
+| st\_tema\_saude\_saude\_sex\_repro | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: saúde sexual e reprodutiva |
+| st\_tema\_saude\_seman\_saud\_esco | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: semana saúde na escola |
+| st\_tema\_saude\_amamentacao | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: amamentação |
+| st\_tema\_saude\_intro\_alimentar | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: introdução alimentar |
+| st\_tema\_saude\_outros | :link[temasParaSaude]{id=dicionario-fac anchor=16-temasparasaude} | Indica tema para saúde: outros |
+| st\_prat\_saude\_antropometria | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: antropometria |
+| st\_prat\_saude\_aplic\_topi\_fluor | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: aplicação tópica de flúor |
+| st\_prat\_saude\_desenv\_linguagem | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: teste de desenvolvimento de linguagem |
+| st\_prat\_saude\_escov\_supervisio | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: escovação dental supervisionada |
+| st\_prat\_saude\_prt\_corp\_atv\_fis | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: prática corporal / atividade física |
+| st\_prat\_saude\_pnct\_1 | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: PNCT 1ª consulta |
+| st\_prat\_saude\_pnct\_2 | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: PNCT consultas de acompanhamento |
+| st\_prat\_saude\_pnct\_3 | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: PNCT consulta de desfecho |
+| st\_prat\_saude\_pnct\_4 | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: PNCT abordagem intensiva |
+| st\_prat\_saude\_saude\_auditiva | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: saúde auditiva |
+| st\_prat\_saude\_saude\_ocular | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: saúde ocular |
+| st\_prat\_saude\_situacao\_vacinal | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: verificação de situação vacinal |
+| st\_prat\_saude\_fornec\_kit\_bucal | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: fornecimento de kit bucal |
+| st\_prat\_saude\_pnct\_manutencao | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: PNCT manutenção |
+| st\_prat\_saude\_outras | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: outras |
+| st\_prat\_saude\_outro\_procedimen | :link[praticasEmSaude]{id=dicionario-fac anchor=17-praticasemsaude} | Indica prática em saúde: outro procedimento (referencia `co_dim_procedimento`) |
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência |
+| --------- | ------------------- |
+| co\_dim\_tipo\_atividade | Código do tipo de atividade. Campo `co_seq_dim_tipo_atividade` da `tb_dim_tipo_atividade` |
+| co\_dim\_procedimento | Código do procedimento SIGTAP vinculado à prática em saúde. Campo `co_seq_dim_procedimento` da `tb_dim_procedimento` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato da atividade coletiva
+
+<DimensoesEmComum />

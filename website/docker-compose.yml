@@ -1,0 +1,10 @@
+services:
+  website:
+    build: .
+    container_name: esus-aps-doc-website
+    ports:
+      - "3000:3000"
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    command: npm run start -- --host 0.0.0.0

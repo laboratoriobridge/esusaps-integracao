@@ -1,0 +1,28 @@
+---
+id: RF-EDW.dim_ciap
+title: Tabela de dimensão de CIAP-2
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_ciap` é utilizada para armazenar as CIAP-2. Possui como referência a :link[Classificação Internacional de Atenção Primária - Segunda Edição (CIAP2)]{id=referencias} do LEDI.
+
+## 2. Regras
+
+:nr São armazenados todos os códigos AB presentes no CDS.
+
+:nr Quando uma CIAP-2 é informada em um atendimento a tabela é preenchida.
+
+## 3. Campos da tabela
+
+| Colunas DW | Referência      |
+| ---------- | --------------- |
+| co\_seq\_dim\_ciap | Código de identificação sequencial |
+| nu\_ciap | Número identificador da CIAP |
+| no\_ciap | Nome da CIAP |
+| st\_registro\_valido | <CampoStRegistroValido /> |
+| ds\_filtro | Concatenação entre o número e nome da CIAP, sem acentos |

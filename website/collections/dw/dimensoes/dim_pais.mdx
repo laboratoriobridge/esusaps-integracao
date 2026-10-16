@@ -1,0 +1,22 @@
+---
+id: RF-EDW.dim_pais
+title: Tabela de dimensão de país
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_pais` é utilizada para armazenar as países. Possui como referência a :link[Tabela de países]{id=paises} do LEDI.
+
+## 2. Campos da tabela
+
+| Colunas DW | Referência      |
+| ---------- | --------------- |
+| co\_seq\_dim\_pais | Código de identificação sequencial |
+| no\_pais | Nome do país |
+| co\_cadsus | Código identificador do país no CADSUS |
+| ds\_filtro | Nome do país, sem acento |
+| st\_registro\_valido | <CampoStRegistroValido /> |
