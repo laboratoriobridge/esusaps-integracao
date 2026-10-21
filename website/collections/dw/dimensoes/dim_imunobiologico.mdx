@@ -1,0 +1,27 @@
+---
+id: RF-EDW.dim_imunobiologico
+title: Tabela de dimensão de imunobiológico
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_imunobiologico` é utilizada para armazenar os imunobiológicos. Possui como referência a :link[Tabela de imunobiológicos]{id=dicionario anchor=imunobiologico}.
+
+## 2. Regras
+
+:nr Quando um imunobiológico é informado em um atendimento a tabela é preenchida.
+
+## 3. Campos da tabela
+
+| Colunas DW | Referência      |
+| ---------- | --------------- |
+| co\_seq\_dim\_imunobiologico | Código de identificação sequencial |
+| nu\_identificador | Número identificador do imunobiológico |
+| no\_imunobiologico | Nome do imunobiológico |
+| sg\_imunobiologico | Sigla do imunobiológico |
+| ds\_filtro | Concatenação entre o nome e sigla do imunobiológico, sem acentos |
+| st\_registro\_valido | <CampoStRegistroValido /> |

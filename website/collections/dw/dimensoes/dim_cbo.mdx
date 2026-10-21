@@ -1,0 +1,22 @@
+---
+id: RF-EDW.dim_cbo
+title: Tabela de dimensão de CBO
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_cbo` é utilizada para armazenar CBOs. Possui como referência a tabela de :link[CBO]{id=cbo} do LEDI.
+
+## 2. Campos da tabela
+
+| Colunas DW | Referência      |
+| ---------- | --------------- |
+| co\_seq\_dim\_cbo | Código de identificação sequencial |
+| nu\_cbo | Número identificador da CBO |
+| no\_cbo | Nome da CBO |
+| st\_registro\_valido | <CampoStRegistroValido /> |
+| ds\_filtro | Concatenação entre o número e nome da CBO, sem acentos |

@@ -1,0 +1,23 @@
+---
+id: RF-EDW.dim_vinculacao_equipes
+title: Tabela de dimensão de vinculação entre equipes
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_vinculacao_equipes` é utilizada para armazenar os vínculos entre equipes.
+
+## 2. Campos da tabela
+
+| Colunas DW | Referência |
+| ---------- | ---------- |
+| co\_seq\_dim\_vinculacao\_equipes | Código de identificação sequencial |
+| nu\_ine\_equipe | Número identificador da equipe (INE) |
+| nu\_ine\_equipe\_vinculada | Número identificador da equipe vinculada (INE) |
+| co\_dim\_equipe\_principal | Código de identificação da equipe principal. Campo `co_seq_dim_equipe` da `tb_dim_equipe` |
+| co\_dim\_equipe\_vinculada | Código de identificação da equipe vinculada. Campo `co_seq_dim_equipe` da `tb_dim_equipe` |
+| st\_registro\_valido | <CampoStRegistroValido /> |

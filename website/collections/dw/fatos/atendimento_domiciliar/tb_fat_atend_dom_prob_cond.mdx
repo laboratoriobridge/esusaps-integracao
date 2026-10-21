@@ -1,0 +1,55 @@
+---
+id: RF-EDW.tb_fat_atend_dom_prob_cond
+title: Tabela fato dos problemas e condições avaliadas no atendimento domiciliar
+order: 2
+parent: RF-EDW.atendimento_domiciliar
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atend_dom_prob_cond` registra os **problemas e condições avaliadas** de **CIAP2** e **CID10** de cada atendimento domiciliar. Cada linha representa um par CIAP2/CID10 registrado no atendimento.
+
+Esta tabela foi denominada `tb_fat_atend_dom_condicao_aval` até a versão 5.3.15, quando foi renomeada e expandida para suportar o controle de evolução de problemas.
+
+## 2. Regras
+
+:nr A `tb_fat_atend_dom_prob_cond` é preenchida quando é processado registro de atendimento domiciliar em que são informados CIDs ou CIAPs.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_atend\_dom\_prob\_cond | - | Código de identificação sequencial criado automaticamente pelo sistema (denominado `co_seq_fat_atnd_dom_condo_aval` até a v5.3.15) |
+| co\_fat\_atend\_domiciliar | - | Campo `co_seq_fat_atend_domiciliar` da `tb_fat_atendimento_domiciliar` |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fad anchor=1-uuidficha} | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | - | Identificador universalmente único da camada de transporte de dados |
+| nu\_atendimento | - | Número sequencial do atendimento na ficha |
+
+### 3.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| nu\_uuid\_problema | - | Identificador universalmente único do problema/condição na lista de problemas do cidadão |
+| co\_unico\_evolucao | - | Código único que identifica a evolução do problema |
+| co\_sequencial\_evolucao | - | Número sequencial da evolução do problema |
+| st\_avaliado | - | Indica se o problema foi avaliado neste atendimento |
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência |
+| --------- | ------------------- |
+| co\_dim\_cid | Código do CID10 avaliado. Campo `co_seq_dim_cid10` da `tb_dim_cid10` |
+| co\_dim\_ciap | Código do CIAP2 avaliado. Campo `co_seq_dim_ciap` da `tb_dim_ciap` |
+| co\_dim\_situacao\_problema | Código da situação do problema. Campo `co_seq_dim_situacao_problema` da `tb_dim_situacao_problema` |
+| co\_dim\_data\_inicio\_problema | Data de início do problema de forma estruturada. Campo `co_seq_dim_tempo` da `tb_dim_tempo` |
+| co\_dim\_data\_fim\_problema | Data de fim/resolução do problema de forma estruturada. Campo `co_seq_dim_tempo` da `tb_dim_tempo` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato do atendimento domiciliar
+
+<DimensoesEmComum />

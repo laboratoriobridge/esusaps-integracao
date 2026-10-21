@@ -1,0 +1,16 @@
+.treeList {
+  padding-left: 1.25rem;
+  margin: 0;
+  list-style: none;
+}
+
+.treeItem {
+  margin: 0.25rem 0;
+}
+
+.treeLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}

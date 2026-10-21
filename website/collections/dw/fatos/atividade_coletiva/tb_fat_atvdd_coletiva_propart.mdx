@@ -1,0 +1,44 @@
+---
+id: RF-EDW.tb_fat_atvdd_coletiva_propart
+title: Tabela fato dos profissionais participantes da atividade coletiva
+order: 4
+parent: RF-EDW.atividade_coletiva
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atvdd_coletiva_propart` registra os **profissionais participantes** de uma atividade coletiva que não o profissional responsável. Cada linha representa um profissional que participou da atividade.
+
+## 2. Regras
+
+:nr A `tb_fat_atvdd_coletiva_propart` é preenchida quando é processado um registro de atividade coletiva em que são informados profissionais participantes adicionais.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_atvdd\_cltv\_propart | - | Código de identificação sequencial do profissional participante de um atividade coletiva |
+| co\_fat\_atividade\_coletiva | - | Campo `co_seq_fat_atividade_coletiva` da `tb_fat_atividade_coletiva` |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fac anchor=1-uuidficha} | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | - | Identificador universalmente único da camada de transporte de dados |
+
+### 3.2 Métricas dos fatos
+
+Esta tabela não possui métricas próprias. Cada registro representa um profissional participante, sendo as dimensões `co_dim_profssinal_participante` e `co_dim_cbo_participante` as informações centrais da tabela.
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência |
+| --------- | ------------------- |
+| co\_dim\_profssinal\_participante | Código do profissional participante. Campo `co_seq_dim_profissional` da `tb_dim_profissional` |
+| co\_dim\_cbo\_participante | Código do CBO do profissional participante. Campo `co_seq_dim_cbo` da `tb_dim_cbo` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato da atividade coletiva
+
+<DimensoesEmComum />

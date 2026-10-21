@@ -1,0 +1,42 @@
+---
+id: RF-EDW.tb_fat_atend_odonto_problemas
+title: Tabela fato dos problemas e condições do atendimento odontológico
+order: 1
+parent: RF-EDW.atendimento_odontologico_individual
+---
+import MetadadosOdonto from '../../_shared/metadados_odonto.mdx';
+import DimProblemas from '../../_shared/dim_problemas.mdx';
+import DimensoesEmComum from '../../_shared/dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atend_odonto_problemas` só é preenchida quando são processados registros de problemas e/ou condições feitos em um :link[atendimento odontológico]{id=dicionario-fao} e o atendimento em questão é processado.
+
+## 2. Fatos
+
+### 2.1 Metadados dos fatos
+
+| Coluna DW                         | Referência LEDI | Referência sistema |
+| --------------------------------- | --------------- | ------------------ |
+| co\_seq\_fat\_atnd\_odonto\_probl | -               | Código de identificação sequencial dos problemas ou condições registrados |
+<MetadadosOdonto />
+| nu\_uuid\_problema | :link[uuidProblema]{id=dicionario-fao anchor=1-uuidproblema} | Código identificador único do problema ou condição |
+| co\_unico\_evolucao | :link[uuidEvolucaoProblema]{id=dicionario-fao anchor=2-uuidevolucaoproblema}  | Código identificador único da evolução do problema ou condição |
+| co\_sequencial\_evolucao | :link[coSequencialEvolucao]{id=dicionario-fao anchor=3-cosequencialevolucao}  | Código sequencial da evolução dentro do próprio problema e condição atual |
+
+### 2.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| st\_avaliado | :link[isAvaliado]{id=dicionario-fao anchor=9-isavaliado}  | Indica se o problema ou condição foi avaliado durante o atendimento |
+
+## 3. Dimensões da tabela
+
+### 3.1 Dimensões específicas dessa tabela
+
+<DimProblemas />
+
+### 3.2 Dimensões comuns a todas as tabelas fato do atendimento odontológico
+
+<DimensoesEmComum />

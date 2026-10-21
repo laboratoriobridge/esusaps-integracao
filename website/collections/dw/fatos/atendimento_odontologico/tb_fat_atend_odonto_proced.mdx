@@ -1,0 +1,50 @@
+---
+id: RF-EDW.tb_fat_atend_odonto_proced
+title: Tabela fato dos procedimentos do atendimento odontológico
+order: 1
+parent: RF-EDW.atendimento_odontologico_individual
+---
+import DimensoesEmComum from '../../_shared/dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atend_odonto_proced` só é preenchida quando são processados procedimentos registrados em um :link[atendimento odontológico]{id=dicionario-fao} e o atendimento em questão é processado.
+
+## 2. Fatos
+
+### 2.1 Metadados dos fatos
+
+| Coluna DW                           | Referência LEDI | Referência sistema |
+| ----------------------------------- | --------------- | ------------------ |
+| co\_seq\_fat\_atend\_odonto\_proced | -               | Código de identificação sequencial dos resultado de exame registrados |
+| co\_fat\_atd\_odnt                  | -               | Código de identificação sequencial do atendimento odontológico. Campo `co_seq_fat_atd_odnt` da `tb_fat_atendimento_odonto` |
+| co\_fat\_cidadao\_pec               | -               | Campo `co_seq_fat_cidadao_pec` da `tb_fat_cidadao_pec` |
+| nu\_uuid\_ficha                     | :link[uuidFicha]{id=dicionario-fao anchor=1-uuidficha} | Identificador universalmente único da camada de transporte de dados |
+| nu\_uuid\_dado\_transp              | -               | Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu\_uuid\_ficha |
+| nu\_atendimento                     | -               | Uma ficha pode conter mais de um atendimento esse campo é utilizado para ordenar os atendimentos dentro um mesmo envio |
+| nu\_cpf\_cidadao                    | :link[cpfCidadao]{id=dicionario-fao anchor=19-cpfcidadao} | CPF do cidadão |
+| nu\_cns                             | :link[cnsCidadao]{id=dicionario-fao anchor=2-cnscidadao}  | CNS do cidadão |
+
+### 2.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| qt\_procedimentos     | :link[quantidade]{id=dicionario-fao anchor=2-quantidade} | Quantidade de procedimentos realizados. |
+| dt\_inicial\_atendimento | :link[dataHoraInicialAtendimento]{id=dicionario-fao anchor=17-datahorainicialatendimento} | Data e hora do início do atendimento no formato "YYYY-MM-DD HH:MM:SS.MMM"|
+
+## 3. Dimensões da tabela
+
+### 3.1 Dimensões específicas dessa tabela
+
+| Coluna DW             | Dimensão referência |
+| --------------------- | ------------------- |
+| co\_dim\_procedimento | Código SIGTAP do procedimento realizado. Campo `co_seq_dim_procedimento` da `tb_dim_procedimento` |
+| co\_dim\_sexo | Código do sexo. Campo `co_seq_dim_faixa_sexo` da `tb_dim_sexo` |
+| co\_dim\_turno | Código do turno do atendimento. Campo `co_seq_dim_turno` da `tb_dim_turno` | 
+| co\_dim\_tipo\_atendimento | Código do tipo de atendimento. Campo `co_seq_dim_tipo_atendimento` da `tb_dim_tipo_atendimento` | 
+| co\_dim\_faixa\_etaria | Código da faixa etária. Campo `co_seq_dim_faixa_etaria` da `tb_dim_faixa_etaria` | 
+
+### 3.2 Dimensões comuns a todas as tabelas fato do atendimento odontológico
+
+<DimensoesEmComum />

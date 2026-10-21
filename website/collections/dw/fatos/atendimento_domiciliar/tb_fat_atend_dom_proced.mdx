@@ -1,0 +1,44 @@
+---
+id: RF-EDW.tb_fat_atend_dom_proced
+title: Tabela fato dos procedimentos do atendimento domiciliar
+order: 3
+parent: RF-EDW.atendimento_domiciliar
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atend_dom_proced` registra os **procedimentos** realizados em cada atendimento domiciliar. Cada linha representa um procedimento SIGTAP registrado no atendimento.
+
+## 2. Regras
+
+:nr A `tb_fat_atend_dom_proced` é preenchida quando é processado registro de atendimento domiciliar em que são informados procedimentos.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_atend\_dom\_proced | - | Código de identificação sequencial criado automaticamente pelo sistema |
+| co\_fat\_atend\_domiciliar | - | Campo `co_seq_fat_atend_domiciliar` da `tb_fat_atendimento_domiciliar` |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fad anchor=1-uuidficha} | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | - | Identificador universalmente único da camada de transporte de dados |
+| nu\_atendimento | - | Número sequencial do atendimento na ficha |
+
+### 3.2 Métricas dos fatos
+
+Esta tabela não possui métricas próprias. Cada registro representa um procedimento vinculado a um atendimento domiciliar, sendo o próprio procedimento (`co_dim_procedimento`) a informação central da tabela.
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência |
+| --------- | ------------------- |
+| co\_dim\_procedimento | Código do procedimento SIGTAP realizado. Campo `co_seq_dim_procedimento` da `tb_dim_procedimento` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato do atendimento domiciliar
+
+<DimensoesEmComum />

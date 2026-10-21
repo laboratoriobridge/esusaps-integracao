@@ -1,0 +1,47 @@
+---
+id: RF-EDW.tb_fat_atd_ind_problemas
+title: Tabela fato dos problemas e condições do atendimento individual
+order: 2
+parent: RF-EDW.atendimento_individual
+---
+import DimProblemas from '../../_shared/dim_problemas.mdx';
+import DimensoesEmComum from '../../_shared/dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atd_ind_problemas` só é preenchida quando são processados registros de problemas e/ou condições em um :link[atendimento individual]{id=dicionario-fai} e o atendimento em questão é processado.  
+
+## 2. Fatos
+
+### 2.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_atend\_ind\_problemas | - | Código de identificação sequencial dos problemas ou condições registrados |
+| co\_fat\_atd\_ind | - | Código de identificação sequencial do atendimento individual. Campo `co_seq_fat_atd_ind` da `tb_fat_atendimento_individual` |
+| co\_fat\_cidadao\_pec | - | Campo `co_seq_fat_cidadao_pec` da `tb_fat_cidadao_pec` |
+| nu\_cpf\_cidadao | :link[cpfCidadao]{id=dicionario-fai anchor=24-cpfcidadao} | CPF do cidadão |
+| nu\_cns | :link[cnsCidadao]{id=dicionario-fai anchor=2-cnscidadao} | CNS do cidadão |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fai anchor=3-uuidficha} | Identificador universalmente único da camada de transporte de dados |
+| nu\_uuid\_dado\_transp | - | Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu\_uuid\_ficha | 
+| nu\_atendimento | - | Uma ficha pode conter mais de um atendimento esse campo é utilizado para ordenar os atendimentos dentro um mesmo envio |
+| nu\_uuid\_problema | :link[uuidProblema]{id=dicionario-fai anchor=1-uuidproblema} | Código identificador único do problema ou condição |
+| co\_unico\_evolucao | :link[uuidEvolucaoProblema]{id=dicionario-fai anchor=2-uuidevolucaoproblema}  | Código identificador único da evolução do problema ou condição |
+| co\_sequencial\_evolucao | :link[coSequencialEvolucao]{id=dicionario-fai anchor=3-cosequencialevolucao}  | Código sequencial da evolução dentro do próprio problema e condição atual |
+
+### 2.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| st\_avaliado | :link[isAvaliado]{id=dicionario-fai anchor=9-isavaliado}  | Indica se o problema ou condição foi avaliado durante o atendimento |
+
+## 3. Dimensões da tabela
+
+### 3.1 Dimensões específicas dessa tabela
+
+<DimProblemas />
+
+### 3.2 Dimensões comuns a todas as tabelas fato do atendimento individual
+
+<DimensoesEmComum />

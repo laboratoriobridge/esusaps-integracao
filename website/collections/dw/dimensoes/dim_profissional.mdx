@@ -1,0 +1,26 @@
+---
+id: RF-EDW.dim_profissional
+title: Tabela de dimensão de profissionais
+order: 4
+parent: RF-EDW.dimensoes
+---
+import CampoStRegistroValido from './_campo_st_registro_valido.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_dim_profissional` é utilizada para armazenar os profissionais.
+
+## 2. Regras
+
+:nr A tabela é preenchida sempre que um profissional realiza um novo registro.
+
+## 3. Campos da tabela
+
+| Colunas DW | Referência      |
+| ---------- | --------------- |
+| co\_seq\_dim\_profissional | Código de identificação sequencial |
+| nu\_cns | CNS do profissional |
+| no\_profissional | Nome do profissional |
+| st\_registro\_valido | <CampoStRegistroValido /> |
+| ds\_filtro | Concatenação entre o código do IBGE, nome e UF do município, sem acentos |
