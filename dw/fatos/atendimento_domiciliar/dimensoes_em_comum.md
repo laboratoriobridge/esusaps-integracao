@@ -1,7 +1,7 @@
 | Coluna DW | Dimensão referência |
 | --------- | ------------------- |
 | co\_dim\_municipio | Código de identificação do município. Campo `co_seq_dim_municipio` da `tb_dim_municipio` |
-| co\_dim\_tipo\_ficha | Código de identificação do tipo de ficha. Campo `co_seq_dim_tipo_ficha` da `tb_dim_tipo_ficha` |
+| co\_dim\_tipo\_ficha | Código de identificação do tipo de modelo de informação. Campo `co_seq_dim_tipo_ficha` da `tb_dim_tipo_ficha` |
 | co\_dim\_profissional\_1 | Código de identificação do profissional responsável. Campo `co_seq_dim_profissional` da `tb_dim_profissional` |
 | co\_dim\_profissional\_2 | Código de identificação do profissional auxiliar. Campo `co_seq_dim_profissional` da `tb_dim_profissional` |
 | co\_dim\_cbo\_1 | Código de identificação do CBO profissional responsável. Campo `co_seq_dim_cbo` da `tb_dim_cbo` |

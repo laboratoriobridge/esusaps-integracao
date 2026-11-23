@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Visualizações</title>
-  <meta name="description" content="1. Visualizações">
+  <title>Problemas e condições</title>
+  <meta name="description" content="1. Objetivo">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://0.0.0.0:4000/dw/visualizacoes/">
+  <link rel="canonical" href="https://integracao.esusaps.bridge.ufsc.tech/dw/fatos/problemas_condicoes/">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 8.7.0</span>
+        <span class="label">versão 8.7.4</span>
       
     </a>
 
@@ -79,7 +79,11 @@
           
         
           
-            <li><a title="Visualizações" href="/dw/visualizacoes/index.html">Visualizações</a></li>
+            <li><a title="Fatos" href="/dw/fatos/index.html">Fatos</a></li>
+          
+        
+          
+            <li><a title="Problemas e condições" href="/dw/fatos/problemas_condicoes/index.html">Problemas e condições</a></li>
           
         
 
@@ -111,21 +115,21 @@
   <ul>
     
       <li>
-        <a title="Voltar para Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html" class="back-link">
+        <a title="Voltar para Fatos" href="/dw/fatos/index.html" class="back-link">
           <i class="icon icon-back"></i> Voltar
-          <small>(Data Warehouse Relatórios e-SUS APS PEC)</small>
+          <small>(Fatos)</small>
         </a>
       </li>
     
 
     <li>
-      <a class="open" title="Visualizações" href="/dw/visualizacoes/index.html">Visualizações</a>
+      <a class="open" title="Problemas e condições" href="/dw/fatos/problemas_condicoes/index.html">Problemas e condições</a>
       <ul>
         
           <li >
           
-            <a title="Tabela de acompanhamento de cidadãos vinculados" href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">
-              Tabela de acompanhamento de cidadãos vinculados
+            <a title="Tabela fato dos problemas e condições" href="/dw/fatos/problemas_condicoes/tb_fat_problema_condicao.html">
+              Tabela fato dos problemas e condições
             </a>
           </li>
         
@@ -144,33 +148,40 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Visualizações</h1>
+    <h1 class="post-title">Problemas e condições</h1>
     <p class="post-meta">
-      <a class="btn" href="/pdf.html?include=/dw/visualizacoes/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      <a class="btn" href="/pdf.html?include=/dw/fatos/problemas_condicoes/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 15/08/2024</span>
+        <span class="label" title="Data da última modificação">Alterado em 12/08/2026</span>
       
     </p>
   </header>
 
   <article class="post-content">
-    <h1 id="1-visualiza-es">1. Visualizações</h1>
+    <h1 id="1-objetivo">1. Objetivo</h1>
 
-<p>Nas Visualizações a maioria dos dados são populados de forma legível para o usuário. O processo de ETL é realizado e utilizando as regras de negócios estabelecidas pelo PEC, trazendo uma informação valiosa e estruturada que é utilizada pelo próprio e-SUS APS na construção de relatórios internos. Porém, nada impede que elas possam ser utilizadas também para construir relatórios dinâmicos.</p>
+<p>Os problemas e condições registrados na lista de problemas do cidadão podem ter origem em mais de uma estratégia de negócio. Cada uma delas possui sua própria tabela fato:</p>
 
-<p>A estrutura de Visualizações é composta pelas seguintes tabelas:</p>
+<ul>
+<li><a href="/dw/fatos/atendimento_individual/tb_fat_atd_ind_problemas.html">Tabela fato dos problemas e condições do atendimento individual</a>;</li>
+<li><a href="/dw/fatos/atendimento_odontologico/tb_fat_atend_odonto_problemas.html">Tabela fato dos problemas e condições do atendimento odontológico</a>;</li>
+<li><a href="/dw/fatos/atendimento_domiciliar/tb_fat_atend_dom_prob_cond.html">Tabela fato dos problemas e condições avaliadas no atendimento domiciliar</a>.</li>
+</ul>
 
-<table><thead>
-<tr>
-<th>Nome da Tabela</th>
-<th>Descrição</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><a href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">tb_acomp_cidadaos_vinculados</a></td>
-<td>Utilizada para identificar todos os cadastros de cidadãos que são acompanhados por alguma equipe. O uso dessa tabela é sugerido quando houver necessidade de criar relatórios que listam dados dos cidadãos ou que desejam filtrar cidadãos de determinadas equipes, garantindo assim uma consistência com os dados apresentados pelo PEC</td>
-</tr>
-</tbody></table>
+<p>Unindo essas três fontes, os registros são também reunidos em uma única tabela fato. Essa documentação tem como objetivo detalhar a estrutura do fato a seguir:</p>
+
+<ul>
+<li><a href="/dw/fatos/problemas_condicoes/tb_fat_problema_condicao.html">Tabela fato dos problemas e condições</a>.</li>
+</ul>
+
+<h1 id="2-conviv-ncia-entre-as-tabelas">2. Convivência entre as tabelas</h1>
+
+<p>Atualmente as três tabelas fato específicas continuam sendo populadas em paralelo à tabela única. Um mesmo problema ou condição é gravado nas duas estruturas, e nenhum dado deixa de existir nas tabelas de origem.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">IMPORTANTE: essa duplicidade é temporária. Futuramente os problemas e condições passarão a ser
+registrados somente na tb_fat_problema_condicao, e as tabelas fato específicas de cada estratégia
+de negócio serão descontinuadas.
+</code></pre></div>
+<p>Novas consultas e relatórios <strong>DEVEM</strong> utilizar a <a href="/dw/fatos/problemas_condicoes/tb_fat_problema_condicao.html">Tabela fato dos problemas e condições</a>, que já reúne as três origens e continuará disponível após a transição.</p>
 
   </article>
 

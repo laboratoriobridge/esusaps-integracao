@@ -10,7 +10,7 @@
   <meta name="description" content="1. Fatos">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://0.0.0.0:4000/dw/fatos/">
+  <link rel="canonical" href="https://integracao.esusaps.bridge.ufsc.tech/dw/fatos/">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 8.7.0</span>
+        <span class="label">versão 8.7.4</span>
       
     </a>
 
@@ -227,6 +227,13 @@
             </a>
           </li>
         
+          <li  class="has-subitems">
+          
+            <a title="Problemas e condições" href="/dw/fatos/problemas_condicoes/index.html">
+              Problemas e condições
+            </a>
+          </li>
+        
       </ul>
     </li>
   </ul>
@@ -246,7 +253,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 09/02/2026</span>
+        <span class="label" title="Data da última modificação">Alterado em 12/08/2026</span>
       
     </p>
   </header>
@@ -258,7 +265,7 @@
 
 <p>Os Fatos fazem referência para as dimensões, formando assim um esquema de estrela, onde o fato é a tabela central. Algumas estratégias de negócio podem ser formadas por mais de um fato, adquirindo o formato de constelação de fatos.</p>
 
-<p>Na perspectiva do sistema, algumas fichas podem ter mais de um registro de atendimento vinculado a ela. Na estrutura do DW, este cenário é representado de maneira linear, ou seja, cada registro corresponde a uma tupla na respectiva tabela.</p>
+<p>Na perspectiva do sistema, alguns modelos de informação podem ter mais de um registro de atendimento vinculado a eles. Na estrutura do DW, este cenário é representado de maneira linear, ou seja, cada registro corresponde a uma tupla na respectiva tabela.</p>
 
 <p>Neste contexto, a estrutura das tabelas pode ser diferente da estrutura do <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a>, principalmente no que diz respeito aos campos onde é permitido selecionar mais de uma opção. Para estes cenários, o DW apresenta uma coluna para cada opção do campo, sendo que se o valor for &quot;1&quot; indica que a respectiva opção foi selecionada e se o valor for &quot;0&quot; indica que não foi selecionada. Estes casos serão explicados de acordo com cada estratégia de negócio do e-SUS APS PEC:</p>
 
@@ -276,13 +283,18 @@
 <li><a href="/dw/fatos/ficha_complementar/index.html">Síndrome neurológica por Zika / Microcefalia</a>;</li>
 <li><a href="/dw/fatos/vacinacao/index.html">Vacinação</a>;</li>
 <li><a href="/dw/fatos/cuidado_compartilhado/index.html">Cuidado compartilhado</a>;</li>
-<li><a href="/dw/fatos/ivcf/index.html">IVCF-20</a>.</li>
+<li><a href="/dw/fatos/ivcf/index.html">IVCF-20</a>;</li>
+<li><a href="/dw/fatos/oci/index.html">Solicitação de Oferta de Cuidado Integrado</a>.</li>
+</ul>
+
+<p>Quando uma mesma informação pode ser registrada em mais de uma estratégia de negócio, os fatos de cada origem também são unificados em uma tabela fato única, que preserva o grão e a natureza dos dados de origem:</p>
+
+<ul>
+<li><a href="/dw/fatos/problemas_condicoes/index.html">Problemas e condições</a>.</li>
 </ul>
 
 <p>Existem algumas tabelas Fato que foram criadas com o objetivo de organizar e pré-processar as informações apresentadas nos relatórios existentes no e-SUS APS PEC, conforme apresentadas na Tabela 1. Porém, elas podem ser utilizadas também para construir relatórios dinâmicos, caso necessário.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">IMPORTANTE: Os relatórios operacionais foram descontinuados do Prontuário Eletrônico e-SUS APS. 
-Em breve as tabelas utilizadas para os relatórios operacionais serão descontinuadas.
-</code></pre></div>
+
 <table><thead>
 <tr>
 <th>Nome da Tabela</th>
@@ -291,7 +303,7 @@ Em breve as tabelas utilizadas para os relatórios operacionais serão descontin
 </thead><tbody>
 <tr>
 <td>tb_fat_fichas</td>
-<td>Utilizada apenas para registrar as fichas presentes no DW</td>
+<td>Utilizada apenas para registrar os modelos de informação presentes no DW</td>
 </tr>
 <tr>
 <td>tb_fat_cidadao</td>
@@ -335,18 +347,6 @@ Em breve as tabelas utilizadas para os relatórios operacionais serão descontin
 </tr>
 <tr>
 <td>tb_fat_consolidado_cidadao_fvd</td>
-<td>Utilizada nos relatórios operacionais</td>
-</tr>
-<tr>
-<td>tb_fat_rel_op_crianca</td>
-<td>Utilizada nos relatórios operacionais</td>
-</tr>
-<tr>
-<td>tb_fat_rel_op_gestante</td>
-<td>Utilizada nos relatórios operacionais</td>
-</tr>
-<tr>
-<td>tb_fat_rel_op_risco_cardio</td>
 <td>Utilizada nos relatórios operacionais</td>
 </tr>
 </tbody></table>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Origem dos dados</title>
+  <meta name="description" content="1. Objetivo">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://integracao.esusaps.bridge.ufsc.tech/dw/data_mart/origem_dos_dados.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 8.7.4</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
+          
+        
+          
+            <li><a title="Data Mart" href="/dw/data_mart/index.html">Data Mart</a></li>
+          
+        
+          
+            <li><a title="Origem dos dados" href="/dw/data_mart/origem_dos_dados.html">Origem dos dados</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Data Warehouse Relatórios e-SUS APS PEC)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Data Mart" href="/dw/data_mart/index.html">Data Mart</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Tabela base de condições de saúde" href="/dw/data_mart/tb_mrt_condicoes_saude.html">
+              Tabela base de condições de saúde
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de desenvolvimento infantil" href="/dw/data_mart/tb_mrt_desenv_infantil.html">
+              Tabela de desenvolvimento infantil
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de diabetes" href="/dw/data_mart/tb_mrt_diabetes.html">
+              Tabela de diabetes
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de gestante e puérpera" href="/dw/data_mart/tb_mrt_gestante_puerpera.html">
+              Tabela de gestante e puérpera
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de hipertensão" href="/dw/data_mart/tb_mrt_hipertensao.html">
+              Tabela de hipertensão
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela da pessoa idosa" href="/dw/data_mart/tb_mrt_idoso.html">
+              Tabela da pessoa idosa
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de saúde bucal" href="/dw/data_mart/tb_mrt_saude_bucal.html">
+              Tabela de saúde bucal
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de saúde da mulher" href="/dw/data_mart/tb_mrt_saude_mulher.html">
+              Tabela de saúde da mulher
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de vacinas" href="/dw/data_mart/tb_mrt_vacina.html">
+              Tabela de vacinas
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Origem dos dados" href="/dw/data_mart/origem_dos_dados.html">
+              Origem dos dados
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Origem dos dados</h1>
+    <p class="post-meta">
+      <a class="btn" href="/pdf.html?include=/dw/data_mart/origem_dos_dados.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 30/07/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="1-objetivo">1. Objetivo</h1>
+
+<p>As tabelas do <a href="/dw/data_mart/index.html">Data Mart</a> não recebem dados diretamente de um único modelo de informação. Cada coluna é derivada de um ou mais fatos do DW, aplicando filtros próprios da temática.</p>
+
+<p>Esta página reúne as definições <strong>transversais</strong>, utilizadas por mais de uma tabela do Data Mart:</p>
+
+<ul>
+<li>os locais do sistema onde cada informação pode ser registrada;</li>
+<li>os blocos de origem reaproveitados entre temáticas, como consultas, medições e visitas domiciliares.</li>
+</ul>
+
+<p>A seção &quot;Origem dos dados&quot; de cada tabela do Data Mart referencia estas definições, informando apenas o que é específico daquela temática.</p>
+
+<h1 id="2-locais-de-registro">2. Locais de registro</h1>
+
+<p>Uma mesma informação pode chegar ao DW por caminhos diferentes. A tabela abaixo relaciona os locais citados na documentação das temáticas.</p>
+
+<table><thead>
+<tr>
+<th>Local de registro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Atendimento individual do Prontuário Eletrônico e-SUS APS</td>
+<td>Inclui o Atendimento individual, o Atendimento de Observação, a Escuta Inicial e o Registro tardio</td>
+</tr>
+<tr>
+<td>Atendimento odontológico do Prontuário Eletrônico e-SUS APS</td>
+<td>Inclui o Atendimento odontológico individual e o Registro tardio</td>
+</tr>
+<tr>
+<td>Atendimento de procedimentos do Prontuário Eletrônico e-SUS APS</td>
+<td>Registro de procedimentos realizado diretamente no Prontuário Eletrônico e-SUS APS</td>
+</tr>
+<tr>
+<td>Atendimento de vacinação do Prontuário Eletrônico e-SUS APS</td>
+<td>Registro de aplicação de imunobiológicos no Prontuário Eletrônico e-SUS APS</td>
+</tr>
+<tr>
+<td>Atividade coletiva do Prontuário Eletrônico e-SUS APS</td>
+<td>Registro de atividade coletiva realizado no Prontuário Eletrônico e-SUS APS</td>
+</tr>
+<tr>
+<td>Cadastro individual do Prontuário Eletrônico e-SUS APS</td>
+<td>Cadastro do cidadão realizado no módulo de cidadão do Prontuário Eletrônico e-SUS APS</td>
+</tr>
+<tr>
+<td>CDS</td>
+<td>Coleta de Dados Simplificada, com os módulos de cadastro individual, cadastro domiciliar e territorial, atendimento individual, atendimento odontológico, procedimentos, visita domiciliar e territorial e atividade coletiva</td>
+</tr>
+<tr>
+<td>Aplicativo e-SUS Território</td>
+<td>Registro de cadastro e de visita domiciliar e territorial pelo aplicativo</td>
+</tr>
+<tr>
+<td>Aplicativo e-SUS Vacinação</td>
+<td>Registro de aplicação de imunobiológicos pelo aplicativo</td>
+</tr>
+<tr>
+<td>Aplicativo e-SUS Atividade Coletiva</td>
+<td>Registro de atividade coletiva pelo aplicativo</td>
+</tr>
+<tr>
+<td>Importação de um Prontuário Eletrônico e-SUS APS para outro</td>
+<td>Migração de dados entre instalações do Prontuário Eletrônico e-SUS APS</td>
+</tr>
+<tr>
+<td>Importação <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a></td>
+<td>Recebimento dos modelos de informação de sistemas terceiros</td>
+</tr>
+</tbody></table>
+
+<p>Quando a documentação de uma temática cita a importação <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a>, os modelos de informação envolvidos são identificados pelas siglas:</p>
+
+<table><thead>
+<tr>
+<th>Sigla</th>
+<th>Modelo de informação</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>MICI</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">Cadastro Individual</a></td>
+</tr>
+<tr>
+<td>MICDT</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">Cadastro Domiciliar e Territorial</a></td>
+</tr>
+<tr>
+<td>MIAI</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fai.html">Atendimento Individual</a></td>
+</tr>
+<tr>
+<td>MIAOI</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fao.html">Atendimento Odontológico Individual</a></td>
+</tr>
+<tr>
+<td>MIP</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fp.html">Procedimentos</a></td>
+</tr>
+<tr>
+<td>MIVDT</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fvd.html">Visita Domiciliar e Territorial</a></td>
+</tr>
+<tr>
+<td>MIAC</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fac.html">Atividade Coletiva</a></td>
+</tr>
+<tr>
+<td>MIV</td>
+<td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fv.html">Vacinação</a></td>
+</tr>
+</tbody></table>
+
+<h1 id="3-blocos-de-origem-transversais">3. Blocos de origem transversais</h1>
+
+<p>Os blocos abaixo se repetem em várias tabelas do Data Mart. A documentação de cada temática referencia o bloco e acrescenta apenas o filtro específico, como a janela temporal ou a lista de CIAP/CID.</p>
+
+<h2 id="3-1-consulta-m-dica-ou-de-enfermagem">3.1 Consulta médica ou de enfermagem</h2>
+
+<p><strong>Fato de origem:</strong> <a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a>.</p>
+
+<p><strong>Regra:</strong> o atendimento é classificado pelo CBO da lotação do profissional, considerando os CBOs de médico ou de enfermeiro.</p>
+
+<p><strong>Locais de registro:</strong> Atendimento individual do Prontuário Eletrônico e-SUS APS, Atendimento individual do CDS, Importação de um Prontuário Eletrônico e-SUS APS para outro, Importação pela MIAI.</p>
+
+<h2 id="3-2-consulta-odontol-gica">3.2 Consulta odontológica</h2>
+
+<p><strong>Fato de origem:</strong> <a href="/dw/fatos/atendimento_odontologico/index.html">Atendimento odontológico</a>.</p>
+
+<p><strong>Regra:</strong> o atendimento é classificado pelos CBOs de cirurgião-dentista.</p>
+
+<p><strong>Locais de registro:</strong> Atendimento odontológico do Prontuário Eletrônico e-SUS APS, Atendimento odontológico do CDS, Importação de um Prontuário Eletrônico e-SUS APS para outro, Importação pela MIAOI.</p>
+
+<h2 id="3-3-visita-domiciliar">3.3 Visita domiciliar</h2>
+
+<p><strong>Fato de origem:</strong> <a href="/dw/fatos/visita_domiciliar/index.html">Visita domiciliar</a>.</p>
+
+<p><strong>Locais de registro:</strong> Aplicativo e-SUS Território, Visita domiciliar e territorial do CDS, Importação de um Prontuário Eletrônico e-SUS APS para outro, Importação pela MIVDT.</p>
+
+<h2 id="3-4-medi-o-de-peso-e-de-altura">3.4 Medição de peso e de altura</h2>
+
+<p><strong>Fatos de origem:</strong> <a href="/dw/fatos/procedimentos/index.html">Procedimentos</a>, <a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a>, <a href="/dw/fatos/atendimento_odontologico/index.html">Atendimento odontológico</a>, <a href="/dw/fatos/atividade_coletiva/index.html">Atividade coletiva</a> e <a href="/dw/fatos/visita_domiciliar/index.html">Visita domiciliar</a>.</p>
+
+<p><strong>Locais de registro:</strong> Atendimento de procedimentos, Atendimento de Observação, Atendimento individual, Escuta Inicial e Atendimento odontológico do Prontuário Eletrônico e-SUS APS, Atividade coletiva do Prontuário Eletrônico e-SUS APS e do CDS, Aplicativo e-SUS Atividade Coletiva, Aplicativo e-SUS Território, Visita domiciliar e territorial do CDS, Importação de um Prontuário Eletrônico e-SUS APS para outro, Importação pelas MIAI, MIP, MIAOI, MIVDT e MIAC.</p>
+
+<p><strong>Procedimentos SIGTAP equivalentes:</strong> a medição também é considerada registrada quando existir um dos procedimentos abaixo em atendimento de procedimentos do CDS, importação de um Prontuário Eletrônico e-SUS APS para outro ou MIP.</p>
+
+<table><thead>
+<tr>
+<th>Procedimento SIGTAP</th>
+<th>Considerado como</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>01.01.04.008-3 - Medição de peso</td>
+<td>Medição de peso</td>
+</tr>
+<tr>
+<td>01.01.04.007-5 - Medição de altura</td>
+<td>Medição de altura</td>
+</tr>
+<tr>
+<td>01.01.04.002-4 - Avaliação antropométrica</td>
+<td>Medição de peso e de altura</td>
+</tr>
+</tbody></table>
+
+<p>Quando a temática exigir <strong>peso e altura simultâneos</strong>, é necessário o registro dos dois procedimentos de medição no mesmo atendimento, ou o registro da avaliação antropométrica.</p>
+
+<h2 id="3-5-medi-o-de-press-o-arterial">3.5 Medição de pressão arterial</h2>
+
+<p><strong>Fatos de origem:</strong> <a href="/dw/fatos/procedimentos/index.html">Procedimentos</a>, <a href="/dw/fatos/atendimento_individual/index.html">Atendimento individual</a>, <a href="/dw/fatos/atendimento_odontologico/index.html">Atendimento odontológico</a> e <a href="/dw/fatos/visita_domiciliar/index.html">Visita domiciliar</a>.</p>
+
+<p><strong>Locais de registro:</strong> Atendimento de procedimentos, Atendimento de Observação, Atendimento individual, Escuta Inicial e Atendimento odontológico do Prontuário Eletrônico e-SUS APS, Aplicativo e-SUS Território, Visita domiciliar e territorial do CDS, Importação de um Prontuário Eletrônico e-SUS APS para outro, Importação pelas MIAI, MIP, MIAOI e MIVDT.</p>
+
+<p><strong>Procedimento SIGTAP equivalente:</strong> 03.01.10.003-9 - Aferição da pressão arterial.</p>
+
+<h2 id="3-6-exame-ou-procedimento-identificado-por-sigtap">3.6 Exame ou procedimento identificado por SIGTAP</h2>
+
+<p>Várias colunas registram a data do último exame ou procedimento de um determinado grupo. Todas seguem o mesmo padrão.</p>
+
+<p><strong>Fatos de origem:</strong> <a href="/dw/fatos/procedimentos/index.html">Procedimentos</a>, fato de exames do atendimento individual e fato de procedimentos do atendimento individual.</p>
+
+<p><strong>Regra:</strong> a data considerada é a do próprio fato de origem, filtrando pelos códigos SIGTAP definidos por cada temática. As temáticas distinguem, quando aplicável, a <strong>solicitação</strong> do exame da <strong>avaliação</strong> do resultado.</p>
+
+<p><strong>Locais de registro:</strong> Resultados ou solicitações de exames do Atendimento de Observação e do Atendimento individual do Prontuário Eletrônico e-SUS APS, Exames do atendimento individual do CDS, Atendimento de procedimentos do CDS, Importação de um Prontuário Eletrônico e-SUS APS para outro, Importação pelas MIAI e MIP. Alguns testes rápidos também podem ser registrados no Plano dos atendimentos do Prontuário Eletrônico e-SUS APS.</p>
+
+<h2 id="3-7-aplica-o-de-imunobiol-gico">3.7 Aplicação de imunobiológico</h2>
+
+<p><strong>Fato de origem:</strong> <a href="/dw/fatos/vacinacao/index.html">Vacinação</a>.</p>
+
+<p><strong>Regra:</strong> as aplicações são filtradas pelos imunobiológicos de interesse de cada temática, conforme descrito na <a href="/dw/data_mart/tb_mrt_vacina.html">Tabela de vacinas</a>.</p>
+
+<p><strong>Locais de registro:</strong> Atendimento de vacinação do Prontuário Eletrônico e-SUS APS, Aplicativo e-SUS Vacinação, Importação de um Prontuário Eletrônico e-SUS APS para outro, Importação pela MIV.</p>
+
+<h2 id="3-8-dados-de-cadastro-do-cidad-o">3.8 Dados de cadastro do cidadão</h2>
+
+<p><strong>Origem:</strong> <a href="/dw/ods/tb_ods_cidadaos_vinculados.html">Tabela de cidadãos vinculados</a>.</p>
+
+<p><strong>Aplica-se a:</strong> nome, CPF, CNS, data de nascimento, idade, sexo, identidade de gênero, raça/cor, telefone, endereço e microárea.</p>
+
+<p><strong>Locais de registro:</strong> Cadastro individual do Prontuário Eletrônico e-SUS APS e do CDS, Aplicativo e-SUS Território, Importação de um Prontuário Eletrônico e-SUS APS para outro, Importação pela MICI. Microárea e endereço também podem vir do núcleo familiar, através do acompanhamento do território ou da importação pela MICDT.</p>
+
+<h1 id="4-grupos-de-c-digos">4. Grupos de códigos</h1>
+
+<p>Os grupos abaixo são os filtros aplicados pelo processamento antes da persistência. A documentação de cada tabela do Data Mart cita o grupo pelo nome; a composição de cada um está aqui.</p>
+
+<h2 id="4-1-grupos-de-ciap2-e-cid10">4.1 Grupos de CIAP2 e CID10</h2>
+
+<h3 id="condi-es-de-diabetes">Condições de diabetes</h3>
+
+<p>Utilizado pela <a href="/dw/data_mart/tb_mrt_diabetes.html">Tabela de diabetes</a> e pelo critério de inclusão da temática.</p>
+
+<p><strong>CIAP2:</strong> T89, T90, W85.</p>
+
+<p><strong>CID10:</strong> E10, E11, E12, E13, E14, E100, E101, E102, E103, E104, E105, E106, E107, E108, E109, E110, E111, E112, E113, E114, E115, E116, E117, E118, E119, E120, E121, E122, E123, E124, E125, E126, E127, E128, E129, E130, E131, E132, E133, E134, E135, E136, E137, E138, E139, E140, E141, E142, E143, E144, E145, E146, E147, E148, E149, E232, N251, O24, O240, O241, O242, O243, O244, O249, P702.</p>
+
+<h3 id="condi-es-de-hipertens-o">Condições de hipertensão</h3>
+
+<p>Utilizado pela <a href="/dw/data_mart/tb_mrt_hipertensao.html">Tabela de hipertensão</a> e pelo critério de inclusão da temática.</p>
+
+<p><strong>CIAP2:</strong> K86, K87.</p>
+
+<p><strong>CID10:</strong> I10, I11, I12, I13, I15, I110, I119, I120, I129, I130, I131, I132, I139, I150, I151, I152, I158, I159, O10, O11, O16, O100, O101, O102, O103, O104, O109.</p>
+
+<h3 id="sa-de-sexual-e-reprodutiva">Saúde sexual e reprodutiva</h3>
+
+<p>Utilizado pela <a href="/dw/data_mart/tb_mrt_saude_mulher.html">Tabela de saúde da mulher</a>.</p>
+
+<p><strong>CIAP2:</strong> B25, W02, W10, W11, W12, W13, W14, W15, W79, W82, X01, X02, X03, X04, X05, X06, X07, X08, X09, X10, X11, X12, X13, X23, X24, X82, X89, Y14.</p>
+
+<p><strong>CID10:</strong> N80, N91, N92, N93, N94, N95, N96, N97, N800, N801, N802, N803, N804, N805, N806, N808, N809, N910, N911, N912, N913, N914, N915, N920, N921, N922, N923, N924, N925, N926, N930, N938, N939, N940, N941, N942, N943, N944, N945, N946, N948, N949, N950, N951, N952, N953, N958, N959, N970, N971, N972, N973, N974, N978, N979, O03, O04, R102, T742, Y050, Y051, Y052, Y053, Y054, Y055, Y056, Y057, Y058, Y059, Z30, Z31, Z70, Z123, Z124, Z205, Z206, Z300, Z301, Z302, Z303, Z304, Z305, Z308, Z309, Z310, Z311, Z312, Z313, Z314, Z315, Z316, Z318, Z319, Z320, Z600, Z630, Z640, Z700, Z701, Z702, Z703, Z708, Z709, Z717, Z725.</p>
+
+<h3 id="alto-risco-gestacional">Alto risco gestacional</h3>
+
+<p>Utilizado pela <a href="/dw/data_mart/tb_mrt_gestante_puerpera.html">Tabela de gestante e puérpera</a> para definir a coluna <code>st_alto_risco</code>.</p>
+
+<p><strong>CIAP2:</strong> W71, W72, W73, W75, W76, W79, W80, W81, W84, W85.</p>
+
+<p><strong>CID10:</strong> Z35, Z350, Z351, Z352, Z353, Z354, Z355, Z356, Z357, Z358, Z359.</p>
+
+<h3 id="in-cio-de-gesta-o">Início de gestação</h3>
+
+<p>Utilizado pela <a href="/dw/data_mart/tb_mrt_gestante_puerpera.html">Tabela de gestante e puérpera</a>.</p>
+
+<p><strong>CIAP2:</strong> W78, W79, W81, W84, W85.</p>
+
+<p><strong>CID10:</strong> O10, O11, O12, O13, O14, O15, O16, O20, O21, O22, O23, O24, O25, O26, O28, O29, O30, O31, O32, O33, O34, O35, O36, O40, O41, O43, O44, O46, O47, O48, O98, O120, O121, O122, O140, O141, O149, O150, O151, O159, O200, O208, O209, O210, O211, O212, O218, O219, O220, O221, O222, O223, O224, O225, O228, O229, O230, O231, O232, O233, O234, O235, O239, O240, O241, O242, O243, O244, O249, O260, O261, O263, O264, O265, O268, O269, O280, O281, O282, O283, O284, O285, O288, O289, O290, O291, O292, O293, O294, O295, O296, O298, O299, O300, O301, O302, O308, O309, O311, O312, O318, O320, O321, O322, O323, O324, O325, O326, O328, O329, O330, O331, O332, O333, O334, O335, O336, O337, O338, O339, O340, O341, O342, O343, O344, O345, O346, O347, O348, O349, O350, O351, O352, O353, O354, O355, O356, O357, O358, O359, O360, O361, O362, O363, O365, O366, O367, O368, O369, O410, O411, O418, O419, O430, O431, O438, O439, O440, O441, O460, O468, O469, O470, O471, O479, O752, O753, O990, O991, O992, O993, O994, O995, O996, O997, Z33, Z34, Z35, Z36, Z321, Z340, Z348, Z349, Z350, Z351, Z352, Z353, Z354, Z357, Z358, Z359, Z640.</p>
+
+<h3 id="desfecho-de-gesta-o">Desfecho de gestação</h3>
+
+<p>Utilizado pela <a href="/dw/data_mart/tb_mrt_gestante_puerpera.html">Tabela de gestante e puérpera</a> para determinar a data de desfecho e as consultas de puerpério.</p>
+
+<p><strong>CIAP2:</strong> P29, W18, W19, W70, W82, W83, W90, W91, W92, W93, W94, W95, W96.</p>
+
+<p><strong>CID10:</strong> F53, F530, F531, F538, F539, M830, O02, O03, O04, O05, O06, O10, O85, O86, O87, O90, O91, O92, O94, O98, O99, O021, O100, O101, O102, O103, O104, O109, O152, O266, O722, O723, O860, O861, O862, O863, O864, O868, O870, O871, O872, O873, O878, O879, O900, O901, O902, O903, O904, O905, O908, O909, O910, O911, O912, O920, O921, O922, O923, O924, O925, O926, O927, O998, Z39, Z303, Z391, Z392.</p>
+
+<h2 id="4-2-grupos-de-procedimentos-sigtap">4.2 Grupos de procedimentos SIGTAP</h2>
+
+<table><thead>
+<tr>
+<th>Grupo</th>
+<th>Procedimentos</th>
+<th>Utilizado por</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Hemoglobina glicada</td>
+<td>02.02.01.050-3 - Dosagem de hemoglobina glicosilada</td>
+<td><a href="/dw/data_mart/tb_mrt_diabetes.html">Tabela de diabetes</a></td>
+</tr>
+<tr>
+<td>Avaliação dos pés</td>
+<td>03.01.04.009-5 - Exame do pé diabético</td>
+<td><a href="/dw/data_mart/tb_mrt_diabetes.html">Tabela de diabetes</a></td>
+</tr>
+<tr>
+<td>Suplementação de Vitamina A</td>
+<td>01.01.04.005-9 - Administração de Vitamina A</td>
+<td><a href="/dw/data_mart/tb_mrt_desenv_infantil.html">Tabela de desenvolvimento infantil</a></td>
+</tr>
+<tr>
+<td>Ecografia obstétrica</td>
+<td>02.05.02.014-3 - Ultrassonografia obstétrica; 02.05.02.015-1 - Ultrassonografia obstétrica com doppler colorido e pulsado; 02.05.01.005-9 - Ultrassonografia doppler de fluxo obstétrico</td>
+<td><a href="/dw/data_mart/tb_mrt_gestante_puerpera.html">Tabela de gestante e puérpera</a></td>
+</tr>
+<tr>
+<td>HIV</td>
+<td>02.14.01.004-0; 02.13.01.001-1; 02.13.01.050-0; 02.02.03.029-6; 02.02.03.030-0; 02.02.03.102-0; 02.14.01.005-8; 02.02.03.004-0; 02.02.03.107-1; 02.14.01.027-9; 02.13.01.078-0</td>
+<td><a href="/dw/data_mart/tb_mrt_gestante_puerpera.html">Tabela de gestante e puérpera</a> e <a href="/dw/data_mart/tb_mrt_saude_mulher.html">Tabela de saúde da mulher</a></td>
+</tr>
+<tr>
+<td>Sífilis</td>
+<td>02.14.01.008-2; 02.02.03.109-8; 02.02.03.111-0; 02.02.03.112-8; 02.02.03.113-6; 02.02.03.117-9; 02.14.01.007-4; 03.01.10.024-1; 02.14.01.025-2</td>
+<td><a href="/dw/data_mart/tb_mrt_gestante_puerpera.html">Tabela de gestante e puérpera</a> e <a href="/dw/data_mart/tb_mrt_saude_mulher.html">Tabela de saúde da mulher</a></td>
+</tr>
+<tr>
+<td>Hepatite B</td>
+<td>02.02.03.098-9; 02.13.01.020-8; 02.02.03.089-0; 02.02.03.063-6; 02.02.03.064-4; 02.02.03.078-4; 02.02.03.097-0; 02.14.01.010-4; 02.14.01.023-6</td>
+<td><a href="/dw/data_mart/tb_mrt_gestante_puerpera.html">Tabela de gestante e puérpera</a> e <a href="/dw/data_mart/tb_mrt_saude_mulher.html">Tabela de saúde da mulher</a></td>
+</tr>
+<tr>
+<td>Hepatite C</td>
+<td>02.02.03.067-9; 02.14.01.009-0; 02.14.01.030-9; 02.02.03.005-9; 02.02.03.108-0</td>
+<td><a href="/dw/data_mart/tb_mrt_gestante_puerpera.html">Tabela de gestante e puérpera</a> e <a href="/dw/data_mart/tb_mrt_saude_mulher.html">Tabela de saúde da mulher</a></td>
+</tr>
+<tr>
+<td>Rastreio de câncer de colo de útero</td>
+<td>02.03.01.008-6 - Exame citopatológico cérvico-vaginal/microflora (rastreamento); 02.03.01.001-9 - Exame citopatológico cérvico-vaginal/microflora; 02.01.02.003-3 - Coleta de material para exame citopatológico de colo de útero; 02.01.02.008-4 - Entrega de material obtido por autocoleta para exame molecular de HPV; 02.01.02.007-6 - Coleta de material do colo do útero para exame molecular de HPV</td>
+<td><a href="/dw/data_mart/tb_mrt_saude_mulher.html">Tabela de saúde da mulher</a></td>
+</tr>
+<tr>
+<td>Rastreio de câncer de mama</td>
+<td>02.04.03.018-8 - Mamografia bilateral para rastreamento</td>
+<td><a href="/dw/data_mart/tb_mrt_saude_mulher.html">Tabela de saúde da mulher</a></td>
+</tr>
+<tr>
+<td>Primeira consulta odontológica</td>
+<td>03.01.01.015-3 - Primeira consulta odontológica programática</td>
+<td><a href="/dw/data_mart/tb_mrt_saude_bucal.html">Tabela de saúde bucal</a></td>
+</tr>
+<tr>
+<td>Tratamento restaurador atraumático</td>
+<td>03.07.01.007-4 - Tratamento Restaurador Atraumático (TRA/ART)</td>
+<td><a href="/dw/data_mart/tb_mrt_saude_bucal.html">Tabela de saúde bucal</a></td>
+</tr>
+<tr>
+<td>Escovação dental supervisionada</td>
+<td>01.01.02.003-1 - Ação coletiva de escovação dental supervisionada</td>
+<td><a href="/dw/data_mart/tb_mrt_saude_bucal.html">Tabela de saúde bucal</a></td>
+</tr>
+<tr>
+<td>Exodontia de dente permanente</td>
+<td>04.14.02.013-8 - Exodontia de dente permanente; 04.14.02.014-6 - Exodontia múltipla com alveoloplastia por sextante</td>
+<td><a href="/dw/data_mart/tb_mrt_saude_bucal.html">Tabela de saúde bucal</a></td>
+</tr>
+<tr>
+<td>Procedimentos odontológicos preventivos</td>
+<td>01.01.02.005-8 - Aplicação de cariostático; 01.01.02.006-6 - Aplicação de selante; 01.01.02.007-4 - Aplicação tópica de flúor; 01.01.02.008-2 - Evidenciação de placa bacteriana; 01.01.02.009-0 - Selamento provisório de cavidade dentária; 01.01.02.010-4 - Orientação de higiene bucal</td>
+<td><a href="/dw/data_mart/tb_mrt_saude_bucal.html">Tabela de saúde bucal</a></td>
+</tr>
+</tbody></table>
+
+<p>Os grupos de HIV, sífilis, hepatite B e hepatite C contemplam testes rápidos, sorologias e testes moleculares. Vários dos testes rápidos também podem ser registrados no Plano dos atendimentos do Prontuário Eletrônico e-SUS APS, e não apenas como exame avaliado.</p>
+
+<h2 id="4-3-grupos-de-imunobiol-gicos">4.3 Grupos de imunobiológicos</h2>
+
+<p>Aplicam-se à <a href="/dw/data_mart/tb_mrt_vacina.html">Tabela de vacinas</a>, que persiste somente as aplicações pertencentes a estes grupos.</p>
+
+<table><thead>
+<tr>
+<th>Grupo</th>
+<th>Imunobiológicos</th>
+<th>Temática</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Influenza</td>
+<td>Vacina influenza trivalente; Vacina influenza tetravalente</td>
+<td>Pessoa Idosa, considerando apenas os últimos 12 meses</td>
+</tr>
+<tr>
+<td>dTpa</td>
+<td>Vacina dTpa adulto</td>
+<td>Gestação e Puerpério</td>
+</tr>
+<tr>
+<td>HPV</td>
+<td>Vacina HPV quadrivalente; Vacina HPV nonavalente</td>
+<td>Saúde da Mulher</td>
+</tr>
+<tr>
+<td>Difteria, Tétano, Pertussis, Hepatite B e Haemophilus influenzae B</td>
+<td>Vacina hepatite B; Vacina Hib; Vacina penta (DTP/HepB/Hib); Vacina penta acelular (DTPa/VIP/Hib); Vacina DTP/Hib; Vacina hexa (DTPa/HepB/VIP/Hib); Vacina DTP; Vacina DTPa infantil; Vacina DTPa/VIP</td>
+<td>Desenvolvimento Infantil</td>
+</tr>
+<tr>
+<td>Poliomielite</td>
+<td>Vacina polio injetável; Vacina penta acelular (DTPa/VIP/Hib); Vacina hexa (DTPa/HepB/VIP/Hib); Vacina DTPa/VIP</td>
+<td>Desenvolvimento Infantil</td>
+</tr>
+<tr>
+<td>Sarampo, Caxumba e Rubéola</td>
+<td>Vacina sarampo, caxumba, rubéola; Vacina sarampo, caxumba, rubéola e varicela</td>
+<td>Desenvolvimento Infantil</td>
+</tr>
+<tr>
+<td>Pneumocócica</td>
+<td>Vacina pneumo 10; Vacina pneumo 13; Vacina pneumo 15; Vacina pneumo 20</td>
+<td>Desenvolvimento Infantil</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/js/lunr.min.js"></script>
+
+    <script src="/js/site.js" type="text/javascript"></script>    
+    <script src="/js/search-index.js" type="text/javascript"></script>
+    <script src="/js/busca.js"></script>
+  </body>
+</html>

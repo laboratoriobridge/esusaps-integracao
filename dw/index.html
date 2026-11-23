@@ -10,7 +10,7 @@
   <meta name="description" content="1. Objetivo">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://0.0.0.0:4000/dw/">
+  <link rel="canonical" href="https://integracao.esusaps.bridge.ufsc.tech/dw/">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 8.7.0</span>
+        <span class="label">versão 8.7.4</span>
       
     </a>
 
@@ -141,8 +141,15 @@
         
           <li  class="has-subitems">
           
-            <a title="Visualizações" href="/dw/visualizacoes/index.html">
-              Visualizações
+            <a title="ODS" href="/dw/ods/index.html">
+              ODS
+            </a>
+          </li>
+        
+          <li  class="has-subitems">
+          
+            <a title="Data Mart" href="/dw/data_mart/index.html">
+              Data Mart
             </a>
           </li>
         
@@ -165,7 +172,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 11/09/2026</span>
+        <span class="label" title="Data da última modificação">Alterado em 23/11/2026</span>
       
     </p>
   </header>
@@ -175,11 +182,23 @@
 
 <p>Esta seção descreve a estrutura de Data Warehouse (DW) onde são armazenados os dados para a geração dos relatórios.</p>
 
-<p>O DW é uma base de dados contendo vários componentes. Possui uma arquitetura multidimensional, onde encontram-se as <a href="/dw/dimensoes/index.html">Dimensões</a> e <a href="/dw/fatos/index.html">Fatos</a>. Estas estruturas são alguns dos elementos do DW, são dependentes entre si e permitem o armazenamento dos dados. Além disso, temos as <a href="/dw/visualizacoes/index.html">Visualizações</a> que são estruturas que, diferente das dimensões e fatos, são independentes, construídas própriamente para tratar de domínios específicos, consolidando eventos e já repassando o que o Prontuário Eletrônico do Cidadão considera como verdade sobre esses domínios.</p>
+<p>O DW é uma base de dados contendo vários componentes, organizados em camadas com responsabilidades distintas:</p>
 
-<p>Através de um sistema de <a href="https://pt.wikipedia.org/wiki/Extract,_transform,_load">ETL</a>, as informações são extraídas de arquivos conforme descritos na estrutura <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a> e armazenadas nas tabelas Fatos e Dimensões. Enquanto isso, as tabelas de Visualizações são populadas com dados de diversas origens, independente de estarem no PEC ou no DW.</p>
+<ul>
+<li><a href="/dw/fatos/index.html">Fatos</a> e <a href="/dw/dimensoes/index.html">Dimensões</a> formam a arquitetura multidimensional do DW. São estruturas dependentes entre si e armazenam os eventos processados a partir dos modelos de informação;</li>
+<li>o <a href="/dw/data_mart/index.html">Data Mart</a> é a camada de <em>serving</em>, com tabelas derivadas e pré-computadas para consumo direto por telas, consultas e relatórios;</li>
+<li>o <a href="/dw/ods/index.html">ODS</a> mantém o estado operacional corrente do PEC, integrado a partir da base transacional.</li>
+</ul>
 
-<p>As Dimensões possuem características descritivas dentro do DW. São responsáveis por qualificar as informações provenientes das tabelas Fatos. As tabelas Fatos possuem características quantitativa dentro do DW. A partir delas, são extraídas métricas que são cruzadas com os dados das Dimensões, gerando informações significativas para a avaliação do usuário. Todos os dados históricos no DW ficam armazenadas nas tabelas Fatos. As visualizações não possuem dados históricos, sendo especificamente a situação em que se encontra os dados com base no último processamento dos relatórios.</p>
+<p>Através de um sistema de <a href="https://pt.wikipedia.org/wiki/Extract,_transform,_load">ETL</a>, as informações são extraídas de arquivos conforme descritos na estrutura <a href="/ledi/index.html">Layout e-SUS APS de Dados e Interface</a> e armazenadas nas tabelas Fatos e Dimensões. A partir delas, um processamento assíncrono aplica as regras de negócio do PEC e materializa as tabelas do Data Mart. As tabelas do ODS, por sua vez, são populadas diretamente a partir dos dados transacionais do PEC.</p>
+
+<p>As Dimensões possuem características descritivas dentro do DW. São responsáveis por qualificar as informações provenientes das tabelas Fatos. As tabelas Fatos possuem características quantitativa dentro do DW. A partir delas, são extraídas métricas que são cruzadas com os dados das Dimensões, gerando informações significativas para a avaliação do usuário. Todos os dados históricos no DW ficam armazenadas nas tabelas Fatos.</p>
+
+<p>As tabelas do Data Mart e do ODS não possuem dados históricos: elas refletem a situação corrente dos dados de acordo com o último processamento realizado.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">IMPORTANTE: até a versão 5.5.25 do e-SUS APS PEC existia uma seção denominada "Visualizações",
+que foi substituída pelo conceito de ODS.
+</code></pre></div>
+<p>As alterações da estrutura estão descritas em <a href="/dw/principais_alteracoes.html">Principais alterações entre versões</a>.</p>
 
   </article>
 
