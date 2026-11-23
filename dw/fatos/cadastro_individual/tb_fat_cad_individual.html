@@ -10,7 +10,7 @@
   <meta name="description" content="1. Objetivo">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://0.0.0.0:4000/dw/fatos/cadastro_individual/tb_fat_cad_individual.html">
+  <link rel="canonical" href="https://integracao.esusaps.bridge.ufsc.tech/dw/fatos/cadastro_individual/tb_fat_cad_individual.html">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 8.7.0</span>
+        <span class="label">versão 8.7.4</span>
       
     </a>
 
@@ -156,7 +156,7 @@
     <p class="post-meta">
       <a class="btn" href="/pdf.html?include=/dw/fatos/cadastro_individual/tb_fat_cad_individual.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 13/07/2026</span>
+        <span class="label" title="Data da última modificação">Alterado em 30/07/2026</span>
       
     </p>
   </header>
@@ -171,7 +171,7 @@
 <p><strong>1. </strong> A <code>tb_fat_cad_individual</code> é preenchida quando são processado(a)s:</p>
 
 <ul>
-<li>Fichas de cadastro individual recebidas através da importação de sistemas terceiros,  outras instalações do PEC e-SUS-APS ou aplicativo e-SUS Território;</li>
+<li>Modelos de informação de cadastro individual recebidos através da importação de sistemas terceiros,  outras instalações do PEC e-SUS-APS ou aplicativo e-SUS Território;</li>
 <li>Registro da criação de um cadastro individual no CDS ou no módulo Cadastro individual,</li>
 <li>Registro de atualização de um cadastro individual no CDS, módulo de Cadastro individual, Acompanhamento do Território, Reterritorialização ou Unificação de prontuários.</li>
 </ul>
@@ -200,7 +200,7 @@
 <tr>
 <td>nu_uuid_ficha_origem</td>
 <td><a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html#10-uuidfichaoriginadora">uuidFichaOriginadora</a></td>
-<td>Identificador universalmente único da ficha de origem do cadastro</td>
+<td>Identificador universalmente único do modelo de informação de origem do cadastro</td>
 </tr>
 <tr>
 <td>nu_uuid_dado_transp</td>
@@ -626,7 +626,7 @@
 <tr>
 <td>st_ficha_inativa</td>
 <td>-</td>
-<td>Indica se a ficha de cadastro está inativa</td>
+<td>Indica se o modelo de informação de cadastro está inativo</td>
 </tr>
 <tr>
 <td>st_gerado_automaticamente</td>
@@ -796,7 +796,7 @@
 </tr>
 <tr>
 <td>co_dim_tipo_ficha</td>
-<td>Código de identificação do tipo de ficha. Campo <code>co_seq_dim_tipo_ficha</code> da <code>tb_dim_tipo_ficha</code></td>
+<td>Código de identificação do tipo de modelo de informação. Campo <code>co_seq_dim_tipo_ficha</code> da <code>tb_dim_tipo_ficha</code></td>
 </tr>
 <tr>
 <td>co_dim_profissional</td>

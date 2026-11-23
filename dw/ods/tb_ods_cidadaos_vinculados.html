@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Tabela de acompanhamento de cidadãos vinculados</title>
+  <title>Tabela de cidadãos vinculados</title>
   <meta name="description" content="1. Dados">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://0.0.0.0:4000/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">
+  <link rel="canonical" href="https://integracao.esusaps.bridge.ufsc.tech/dw/ods/tb_ods_cidadaos_vinculados.html">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 8.7.0</span>
+        <span class="label">versão 8.7.4</span>
       
     </a>
 
@@ -79,11 +79,11 @@
           
         
           
-            <li><a title="Visualizações" href="/dw/visualizacoes/index.html">Visualizações</a></li>
+            <li><a title="ODS" href="/dw/ods/index.html">ODS</a></li>
           
         
           
-            <li><a title="Tabela de acompanhamento de cidadãos vinculados" href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">Tabela de acompanhamento de cidadãos vinculados</a></li>
+            <li><a title="Tabela de cidadãos vinculados" href="/dw/ods/tb_ods_cidadaos_vinculados.html">Tabela de cidadãos vinculados</a></li>
           
         
 
@@ -123,13 +123,13 @@
     
 
     <li>
-      <a class="open" title="Visualizações" href="/dw/visualizacoes/index.html">Visualizações</a>
+      <a class="open" title="ODS" href="/dw/ods/index.html">ODS</a>
       <ul>
         
           <li class="active">
           
-            <a title="Tabela de acompanhamento de cidadãos vinculados" href="/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html">
-              Tabela de acompanhamento de cidadãos vinculados
+            <a title="Tabela de cidadãos vinculados" href="/dw/ods/tb_ods_cidadaos_vinculados.html">
+              Tabela de cidadãos vinculados
             </a>
           </li>
         
@@ -148,11 +148,11 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Tabela de acompanhamento de cidadãos vinculados</h1>
+    <h1 class="post-title">Tabela de cidadãos vinculados</h1>
     <p class="post-meta">
-      <a class="btn" href="/pdf.html?include=/dw/visualizacoes/acompanhamento_cidadaos_vinculados.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      <a class="btn" href="/pdf.html?include=/dw/ods/tb_ods_cidadaos_vinculados.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
       
-        <span class="label" title="Data da última modificação">Alterado em 19/06/2026</span>
+        <span class="label" title="Data da última modificação">Alterado em 30/07/2026</span>
       
     </p>
   </header>
@@ -162,9 +162,13 @@
 
 <p>Esta estratégia de negócio refere-se ao <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fci.html">Cadastro Individual do Cidadão</a>, que pode ser realizado diretamente no módulo de Cadastro Individual do CDS ou do PEC. Em sua composição também são utilizados dados do <a href="/ledi/documentacao/estrutura_arquivos/dicionario-fcd.html">Cadastro Domiciliar e Territorial</a> para composição de informações como endereço, microárea e estrutura do núcleo familiar.</p>
 
+<p>A <code>tb_ods_cidadaos_vinculados</code> pertence à camada de <a href="/dw/ods/index.html">ODS</a>: mantém o estado corrente de vinculação e cadastro do cidadão, integrado a partir da base transacional (OLTP) do PEC.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">IMPORTANTE: esta tabela era denominada tb_acomp_cidadaos_vinculados até a versão 5.5.25
+do e-SUS APS PEC. Consultas e relatórios que utilizavam o nome anterior devem ser atualizados.
+</code></pre></div>
 <h1 id="2-regras">2. Regras</h1>
 
-<p><strong>1. </strong> Os <strong>Cidadãos</strong> estão armazenados na <code>tb_acomp_cidadaos_vinculados</code>.</p>
+<p><strong>1. </strong> Os <strong>Cidadãos</strong> estão armazenados na <code>tb_ods_cidadaos_vinculados</code>.</p>
 
 <p><strong>2. </strong> Somente são considerados cidadãos que possuem vínculo com alguma equipe em seu cadastro.</p>
 
@@ -175,6 +179,8 @@
 <p><strong>5. </strong> Dados referente ao &quot;Cadastro Domiciliar e Territorial&quot; serão preenchidos somente para cidadãos que estejam devidamente estruturados em um núcleo familiar. A gestão do núcleo também pode ser realizada através do <a href="https://esusaps.freshdesk.com/support/solutions/articles/48001245078-acompanhamento-do-territ%C3%B3rio">acompanhamento do território</a>.</p>
 
 <p><strong>6. </strong> A estrutura comporta tanto os dados de endereço do &quot;Cadastro individual&quot; quanto do &quot;Cadastro Domiciliar e Territorial&quot;, o PEC sempre prioriza os dados do domicílio (quando existem) em relação aos dados do cadastro individual.</p>
+
+<p><strong>7. </strong> A tabela não preserva histórico: cada cidadão possui um único registro, que reflete o estado corrente do seu cadastro e do seu vínculo com a equipe.</p>
 
 <h1 id="3-estrutura">3. Estrutura</h1>
 
@@ -431,9 +437,59 @@
 <td>Nome da <a href="/ledi/documentacao/referencias/dicionario.html#racacor">Raça/Cor</a> do cidadão.</td>
 </tr>
 <tr>
+<td>co_tipo_endereco_tb_cidadao</td>
+<td>inteiro</td>
+<td>Código do tipo de endereço definido no &quot;Cadastro Simplificado do Cidadão¹&quot;.</td>
+</tr>
+<tr>
+<td>no_dsei_tb_cidadao</td>
+<td>texto</td>
+<td>Nome do DSEI definido no &quot;Cadastro Simplificado do Cidadão¹&quot;.</td>
+</tr>
+<tr>
+<td>no_polo_base_tb_cidadao</td>
+<td>texto</td>
+<td>Nome do polo base definido no &quot;Cadastro Simplificado do Cidadão¹&quot;.</td>
+</tr>
+<tr>
+<td>no_aldeia_tb_cidadao</td>
+<td>texto</td>
+<td>Nome da aldeia definida no &quot;Cadastro Simplificado do Cidadão¹&quot;.</td>
+</tr>
+<tr>
+<td>nu_familia_tb_cidadao</td>
+<td>texto</td>
+<td>Número da família definido no &quot;Cadastro Simplificado do Cidadão¹&quot;.</td>
+</tr>
+<tr>
+<td>co_tipo_endereco_domicilio</td>
+<td>inteiro</td>
+<td>Código do tipo de endereço definido no &quot;Cadastro Domiciliar e Territorial&quot; que o cidadão está vinculado.</td>
+</tr>
+<tr>
+<td>no_dsei_domicilio</td>
+<td>texto</td>
+<td>Nome do DSEI definido no &quot;Cadastro Domiciliar e Territorial&quot; que o cidadão está vinculado.</td>
+</tr>
+<tr>
+<td>no_polo_base_domicilio</td>
+<td>texto</td>
+<td>Nome do polo base definido no &quot;Cadastro Domiciliar e Territorial&quot; que o cidadão está vinculado.</td>
+</tr>
+<tr>
+<td>no_aldeia_domicilio</td>
+<td>texto</td>
+<td>Nome da aldeia definida no &quot;Cadastro Domiciliar e Territorial&quot; que o cidadão está vinculado.</td>
+</tr>
+<tr>
 <td>co_fat_cidadao_pec</td>
 <td>inteiro</td>
 <td>Código identificador do cidadão nas tabelas fato, relacionado a outras tabelas de fato, como <code>tb_fat_atendimento_individual</code></td>
+</tr>
+<tr>
+<td>st_reprocessar_vinculo</td>
+<td>inteiro</td>
+<td>Coluna de controle interno do processamento. Indica se o registro precisa ser reprocessado (0 - Não; 1 - Sim).</td>
 </tr>
 </tbody></table>
 

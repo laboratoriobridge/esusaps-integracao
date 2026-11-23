@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Data Mart</title>
+  <meta name="description" content="1. Data Mart">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://integracao.esusaps.bridge.ufsc.tech/dw/data_mart/">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 8.7.4</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
+          
+        
+          
+            <li><a title="Data Mart" href="/dw/data_mart/index.html">Data Mart</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Data Warehouse Relatórios e-SUS APS PEC)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Data Mart" href="/dw/data_mart/index.html">Data Mart</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Tabela base de condições de saúde" href="/dw/data_mart/tb_mrt_condicoes_saude.html">
+              Tabela base de condições de saúde
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de desenvolvimento infantil" href="/dw/data_mart/tb_mrt_desenv_infantil.html">
+              Tabela de desenvolvimento infantil
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de diabetes" href="/dw/data_mart/tb_mrt_diabetes.html">
+              Tabela de diabetes
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de gestante e puérpera" href="/dw/data_mart/tb_mrt_gestante_puerpera.html">
+              Tabela de gestante e puérpera
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de hipertensão" href="/dw/data_mart/tb_mrt_hipertensao.html">
+              Tabela de hipertensão
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela da pessoa idosa" href="/dw/data_mart/tb_mrt_idoso.html">
+              Tabela da pessoa idosa
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de saúde bucal" href="/dw/data_mart/tb_mrt_saude_bucal.html">
+              Tabela de saúde bucal
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de saúde da mulher" href="/dw/data_mart/tb_mrt_saude_mulher.html">
+              Tabela de saúde da mulher
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de vacinas" href="/dw/data_mart/tb_mrt_vacina.html">
+              Tabela de vacinas
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Origem dos dados" href="/dw/data_mart/origem_dos_dados.html">
+              Origem dos dados
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Data Mart</h1>
+    <p class="post-meta">
+      <a class="btn" href="/pdf.html?include=/dw/data_mart/index.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 12/08/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="1-data-mart">1. Data Mart</h1>
+
+<p>O Data Mart é a camada de <em>serving</em> do DW: um conjunto de tabelas derivadas e <strong>pré-computadas</strong> para consumo direto por telas, consultas e relatórios do Prontuário Eletrônico e-SUS APS.</p>
+
+<p>Enquanto as tabelas <a href="/dw/fatos/index.html">Fatos</a> armazenam os eventos ocorridos e as <a href="/dw/dimensoes/index.html">Dimensões</a> os qualificam, as tabelas do Data Mart consolidam esses eventos aplicando as regras de negócio do domínio, entregando o resultado já calculado. Um processamento assíncrono percorre os fatos e materializa, por exemplo:</p>
+
+<ul>
+<li>o último e o penúltimo evento relevante;</li>
+<li>o último valor clínico registrado;</li>
+<li>contagens dentro de janelas temporais;</li>
+<li>indicadores e estados derivados;</li>
+<li>datas de expiração para reprocessamento.</li>
+</ul>
+
+<p>O nome das tabelas desta camada é formado pelo prefixo <code>tb_mrt_</code> seguido do nome do respectivo assunto, por exemplo: <code>tb_mrt_diabetes</code>.</p>
+
+<p>O prefixo <code>mrt</code> representa <strong>pertencimento à camada</strong>. Ou seja, <code>tb_mrt_diabetes</code> não significa que a tabela isoladamente constitui um data mart completo, mas sim que o assunto &quot;diabetes&quot; pertence ao Data Mart.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">IMPORTANTE: as tabelas do Data Mart são atualizadas de forma assíncrona pelo processamento
+do Prontuário Eletrônico e-SUS APS. Elas não refletem imediatamente as alterações realizadas no sistema.
+A coluna dt_atualizacao indica quando cada registro foi atualizado pela última vez.
+</code></pre></div>
+<h1 id="2-caracter-sticas">2. Características</h1>
+
+<p><strong>1. </strong> São produzidas por processamento assíncrono, utilizando predominantemente o DW como fonte.</p>
+
+<p><strong>2. </strong> Aplicam as regras de negócio do domínio antes da persistência, pré-calculando informações que seriam custosas ou complexas em tempo de consulta.</p>
+
+<p><strong>3. </strong> Contêm apenas a população relevante para a temática, e podem restringir os dados a janelas temporais específicas.</p>
+
+<p><strong>4. </strong> Não representam o estado transacional imediato do Prontuário Eletrônico e-SUS APS.</p>
+
+<p><strong>5. </strong> Não armazenam histórico: com exceção da <a href="/dw/data_mart/tb_mrt_vacina.html">Tabela de vacinas</a>, cada cidadão possui um único registro corrente por temática, que é recalculado e sobrescrito a cada processamento.</p>
+
+<p><strong>6. </strong> O grão é um contrato próprio de cada tabela e está documentado individualmente.</p>
+
+<h1 id="3-organiza-o">3. Organização</h1>
+
+<p>A <a href="/dw/data_mart/tb_mrt_condicoes_saude.html">Tabela base de condições de saúde</a> é a tabela base da camada. Ela possui um registro para cada cidadão e concentra as colunas <code>st_</code> que definem a quais temáticas o cidadão pertence. As demais tabelas detalham cada temática e só possuem registro para os cidadãos elegíveis a ela.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">                          tb_fat_* / tb_dim_*
+                                   │
+                                   ▼
+                       tb_fat_problema_condicao
+                                   │
+                                   ▼
+                        tb_mrt_condicoes_saude
+                    (população e marcadores por temática)
+                                   │
+     ┌──────────────┬──────────────┼──────────────┬──────────────┐
+     ▼              ▼              ▼              ▼              ▼
+tb_mrt_diabetes  tb_mrt_idoso  tb_mrt_vacina   ...           tb_mrt_*
+</code></pre></div>
+<p>Todas as tabelas se relacionam com a <code>tb_fat_cidadao_pec</code> através da coluna <code>co_fat_cidadao_pec</code>.</p>
+
+<h1 id="4-tabelas">4. Tabelas</h1>
+
+<table><thead>
+<tr>
+<th>Nome da Tabela</th>
+<th>Grão</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="/dw/data_mart/tb_mrt_condicoes_saude.html">tb_mrt_condicoes_saude</a></td>
+<td>1:1 com o cidadão</td>
+<td>Tabela base do Data Mart. Concentra dados gerais de saúde e os marcadores que definem as temáticas a que cada cidadão pertence</td>
+</tr>
+<tr>
+<td><a href="/dw/data_mart/tb_mrt_desenv_infantil.html">tb_mrt_desenv_infantil</a></td>
+<td>1:1 com o cidadão</td>
+<td>Acompanhamento do desenvolvimento infantil de crianças menores de 60 meses</td>
+</tr>
+<tr>
+<td><a href="/dw/data_mart/tb_mrt_diabetes.html">tb_mrt_diabetes</a></td>
+<td>1:1 com o cidadão</td>
+<td>Acompanhamento de cidadãos com diabetes mellitus</td>
+</tr>
+<tr>
+<td><a href="/dw/data_mart/tb_mrt_gestante_puerpera.html">tb_mrt_gestante_puerpera</a></td>
+<td>1:1 com o cidadão</td>
+<td>Acompanhamento do pré-natal e do puerpério</td>
+</tr>
+<tr>
+<td><a href="/dw/data_mart/tb_mrt_hipertensao.html">tb_mrt_hipertensao</a></td>
+<td>1:1 com o cidadão</td>
+<td>Acompanhamento de cidadãos com hipertensão arterial</td>
+</tr>
+<tr>
+<td><a href="/dw/data_mart/tb_mrt_idoso.html">tb_mrt_idoso</a></td>
+<td>1:1 com o cidadão</td>
+<td>Acompanhamento da pessoa idosa, incluindo o resultado do IVCF-20</td>
+</tr>
+<tr>
+<td><a href="/dw/data_mart/tb_mrt_saude_bucal.html">tb_mrt_saude_bucal</a></td>
+<td>1:1 com o cidadão</td>
+<td>Acompanhamento da saúde bucal</td>
+</tr>
+<tr>
+<td><a href="/dw/data_mart/tb_mrt_saude_mulher.html">tb_mrt_saude_mulher</a></td>
+<td>1:1 com o cidadão</td>
+<td>Acompanhamento da saúde da mulher, incluindo rastreamento de câncer de colo de útero e de mama</td>
+</tr>
+<tr>
+<td><a href="/dw/data_mart/tb_mrt_vacina.html">tb_mrt_vacina</a></td>
+<td>N:1 com o cidadão</td>
+<td>Aplicações de vacinas relevantes para as temáticas atendidas pelo Data Mart</td>
+</tr>
+</tbody></table>
+
+<h1 id="5-colunas-comuns">5. Colunas comuns</h1>
+
+<p>As colunas abaixo aparecem em mais de uma tabela do Data Mart e possuem sempre o mesmo significado.</p>
+
+<table><thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_fat_cidadao_pec</td>
+<td>inteiro</td>
+<td>Código identificador do cidadão. Campo <code>co_seq_fat_cidadao_pec</code> da <code>tb_fat_cidadao_pec</code>. Nas tabelas 1:1 é também a chave primária</td>
+</tr>
+<tr>
+<td>dt_atualizacao</td>
+<td>data e hora</td>
+<td>Data e hora da última atualização do registro pelo processamento. Não faz parte do grão da tabela</td>
+</tr>
+<tr>
+<td>dt_proxima_expiracao</td>
+<td>data</td>
+<td>Data em que o dado mais antigo dentro da janela temporal da tabela sai dessa janela. Utilizada pelo processamento para disparar o reprocessamento automático do cidadão, sem necessidade de um novo registro no sistema. Nulo quando não há dados na janela</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/js/lunr.min.js"></script>
+
+    <script src="/js/site.js" type="text/javascript"></script>    
+    <script src="/js/search-index.js" type="text/javascript"></script>
+    <script src="/js/busca.js"></script>
+  </body>
+</html>

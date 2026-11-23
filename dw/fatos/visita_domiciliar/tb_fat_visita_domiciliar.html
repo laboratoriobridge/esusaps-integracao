@@ -10,7 +10,7 @@
   <meta name="description" content="1. Objetivo">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://0.0.0.0:4000/dw/fatos/visita_domiciliar/tb_fat_visita_domiciliar.html">
+  <link rel="canonical" href="https://integracao.esusaps.bridge.ufsc.tech/dw/fatos/visita_domiciliar/tb_fat_visita_domiciliar.html">
   <link rel="icon" type="image/png" href="/img/logo-esus.png">
 
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
@@ -29,7 +29,7 @@
       <img src="/img/logo-esus.png" alt="e-SUS">
       <span class="title-text">Integração e-SUS APS PEC</span>
       
-        <span class="label">versão 8.7.0</span>
+        <span class="label">versão 8.7.4</span>
       
     </a>
 
@@ -171,7 +171,7 @@
 <p><strong>1. </strong> A <code>tb_fat_visita_domiciliar</code> é preenchida quando são processadas:</p>
 
 <ul>
-<li>Fichas de visita domiciliar recebidas através da importação de sistemas terceiros ou outras instalações do PEC e-SUS-APS;</li>
+<li>Modelos de informação de visita domiciliar recebidos através da importação de sistemas terceiros ou outras instalações do PEC e-SUS-APS;</li>
 <li>Registro de uma visita domiciliar pelo ACS no CDS;</li>
 <li>Registro de uma visita domiciliar no aplicativo e-SUS Território.</li>
 </ul>
@@ -496,7 +496,12 @@
 <tr>
 <td>st_processado_origem_fcd</td>
 <td>-</td>
-<td>Indica se o registro foi processado a partir de uma Ficha de Cadastro Domiciliar</td>
+<td>Indica se o registro foi processado a partir de um Modelo de Informação de Cadastro Domiciliar e Territorial</td>
+</tr>
+<tr>
+<td>st_nao_possui_cpf</td>
+<td>-</td>
+<td>Indica se o cidadão não possui CPF</td>
 </tr>
 </tbody></table>
 
@@ -514,7 +519,7 @@
 </tr>
 <tr>
 <td>co_dim_tipo_ficha</td>
-<td>Código de identificação do tipo de ficha. Campo <code>co_seq_dim_tipo_ficha</code> da <code>tb_dim_tipo_ficha</code></td>
+<td>Código de identificação do tipo de modelo de informação. Campo <code>co_seq_dim_tipo_ficha</code> da <code>tb_dim_tipo_ficha</code></td>
 </tr>
 <tr>
 <td>co_dim_profissional</td>

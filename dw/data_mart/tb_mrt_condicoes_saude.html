@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tabela base de condições de saúde</title>
+  <meta name="description" content="1. Objetivo">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://integracao.esusaps.bridge.ufsc.tech/dw/data_mart/tb_mrt_condicoes_saude.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 8.7.4</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
+          
+        
+          
+            <li><a title="Data Mart" href="/dw/data_mart/index.html">Data Mart</a></li>
+          
+        
+          
+            <li><a title="Tabela base de condições de saúde" href="/dw/data_mart/tb_mrt_condicoes_saude.html">Tabela base de condições de saúde</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Data Warehouse Relatórios e-SUS APS PEC)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Data Mart" href="/dw/data_mart/index.html">Data Mart</a>
+      <ul>
+        
+          <li class="active">
+          
+            <a title="Tabela base de condições de saúde" href="/dw/data_mart/tb_mrt_condicoes_saude.html">
+              Tabela base de condições de saúde
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de desenvolvimento infantil" href="/dw/data_mart/tb_mrt_desenv_infantil.html">
+              Tabela de desenvolvimento infantil
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de diabetes" href="/dw/data_mart/tb_mrt_diabetes.html">
+              Tabela de diabetes
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de gestante e puérpera" href="/dw/data_mart/tb_mrt_gestante_puerpera.html">
+              Tabela de gestante e puérpera
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de hipertensão" href="/dw/data_mart/tb_mrt_hipertensao.html">
+              Tabela de hipertensão
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela da pessoa idosa" href="/dw/data_mart/tb_mrt_idoso.html">
+              Tabela da pessoa idosa
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de saúde bucal" href="/dw/data_mart/tb_mrt_saude_bucal.html">
+              Tabela de saúde bucal
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de saúde da mulher" href="/dw/data_mart/tb_mrt_saude_mulher.html">
+              Tabela de saúde da mulher
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de vacinas" href="/dw/data_mart/tb_mrt_vacina.html">
+              Tabela de vacinas
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Origem dos dados" href="/dw/data_mart/origem_dos_dados.html">
+              Origem dos dados
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Tabela base de condições de saúde</h1>
+    <p class="post-meta">
+      <a class="btn" href="/pdf.html?include=/dw/data_mart/tb_mrt_condicoes_saude.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 13/08/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="1-objetivo">1. Objetivo</h1>
+
+<p>A <code>tb_mrt_condicoes_saude</code> é a tabela base do <a href="/dw/data_mart/index.html">Data Mart</a>. Ela possui um registro para cada cidadão processado e cumpre dois papéis:</p>
+
+<ul>
+<li>concentrar dados gerais de saúde do cidadão, como os últimos atendimentos e as últimas medições antropométricas e de pressão arterial;</li>
+<li>materializar os marcadores (colunas <code>st_</code>) que definem a quais temáticas o cidadão pertence.</li>
+</ul>
+
+<p>As demais tabelas do Data Mart partem da população definida nesta tabela e só possuem registro para os cidadãos elegíveis à respectiva temática.</p>
+
+<h1 id="2-regras">2. Regras</h1>
+
+<p><strong>1. </strong> O grão é de um registro corrente por cidadão, com relacionamento 1:1 com a <code>tb_fat_cidadao_pec</code>.</p>
+
+<p><strong>2. </strong> As colunas de último atendimento são classificadas pelo CBO da lotação do profissional que realizou o atendimento.</p>
+
+<p><strong>3. </strong> A coluna <code>dt_ultimo_atendimento</code> corresponde à maior data entre <code>dt_ultimo_atend_medico</code>, <code>dt_ultimo_atend_enfermagem</code> e <code>dt_ultimo_atend_odonto</code>.</p>
+
+<p><strong>4. </strong> A população da tabela é composta por todos os cidadãos vinculados a alguma equipe, conforme a <a href="/dw/ods/tb_ods_cidadaos_vinculados.html">Tabela de cidadãos vinculados</a>.</p>
+
+<p><strong>5. </strong> As colunas <code>st_</code> são os marcadores de pertencimento às temáticas e seguem os <a href="#3-crit-rios-de-inclus-o-nas-tem-ticas">critérios de inclusão</a>. Um mesmo cidadão pode pertencer a mais de uma temática simultaneamente.</p>
+
+<p><strong>6. </strong> A coluna <code>dt_proxima_expiracao</code> cumpre nesta tabela o mesmo papel das colunas de mesmo nome das tabelas temáticas, e adicionalmente contempla a próxima transição etária do cidadão. A transição etária não gera modelo de informação nem expiração de evento, por isso precisa ser registrada nesta tabela, onde todo cidadão vinculado possui registro.</p>
+
+<h1 id="3-crit-rios-de-inclus-o-nas-tem-ticas">3. Critérios de inclusão nas temáticas</h1>
+
+<p>Cada coluna <code>st_</code> recebe o valor 1 quando o cidadão atende ao critério de inclusão da respectiva temática, e 0 caso contrário. É esse marcador que determina se o cidadão terá registro na tabela temática correspondente.</p>
+
+<table><thead>
+<tr>
+<th>Coluna</th>
+<th>Temática</th>
+<th>Critério de inclusão</th>
+<th>Avaliado a partir de</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>st_diabetes</td>
+<td><a href="/dw/data_mart/tb_mrt_diabetes.html">Diabetes</a></td>
+<td>Cidadão que em algum momento teve avaliação de CIAP2 ou CID10 pertencente ao <a href="/dw/data_mart/origem_dos_dados.html#condi-es-de-diabetes">grupo de condições de diabetes</a></td>
+<td><a href="/dw/fatos/problemas_condicoes/tb_fat_problema_condicao.html">Tabela fato dos problemas e condições</a>, contemplando problemas e condições do atendimento individual, odontológico e domiciliar</td>
+</tr>
+<tr>
+<td>st_hipertensao</td>
+<td><a href="/dw/data_mart/tb_mrt_hipertensao.html">Hipertensão</a></td>
+<td>Cidadão que em algum momento teve avaliação de CIAP2 ou CID10 pertencente ao <a href="/dw/data_mart/origem_dos_dados.html#condi-es-de-hipertens-o">grupo de condições de hipertensão</a></td>
+<td><a href="/dw/fatos/problemas_condicoes/tb_fat_problema_condicao.html">Tabela fato dos problemas e condições</a>, contemplando problemas e condições do atendimento individual, odontológico e domiciliar</td>
+</tr>
+<tr>
+<td>st_idoso</td>
+<td><a href="/dw/data_mart/tb_mrt_idoso.html">Pessoa Idosa</a></td>
+<td>Cidadão com 60 anos de idade ou mais</td>
+<td>Data de nascimento do cadastro do cidadão</td>
+</tr>
+<tr>
+<td>st_desenvolvimento_infantil</td>
+<td><a href="/dw/data_mart/tb_mrt_desenv_infantil.html">Desenvolvimento Infantil</a></td>
+<td>Cidadão de 0 a 4 anos de idade, ou seja, com menos de 60 meses</td>
+<td>Data de nascimento do cadastro do cidadão</td>
+</tr>
+<tr>
+<td>st_saude_bucal</td>
+<td><a href="/dw/data_mart/tb_mrt_saude_bucal.html">Saúde Bucal</a></td>
+<td>Cidadão com registro de alguma consulta odontológica</td>
+<td>Fato de <a href="/dw/fatos/atendimento_odontologico/index.html">atendimento odontológico individual</a></td>
+</tr>
+<tr>
+<td>st_saude_mulher</td>
+<td><a href="/dw/data_mart/tb_mrt_saude_mulher.html">Saúde da Mulher</a></td>
+<td>Cidadão de 14 a 69 anos de idade que atenda a <strong>uma</strong> das condições: sexo feminino, exceto quando a identidade de gênero for &quot;mulher transgênero&quot;; sexo indeterminado, independente da identidade de gênero; ou sexo masculino com identidade de gênero &quot;homem transgênero&quot;</td>
+<td>Sexo, identidade de gênero e data de nascimento do cadastro do cidadão</td>
+</tr>
+<tr>
+<td>st_gestante_puerpera</td>
+<td><a href="/dw/data_mart/tb_mrt_gestante_puerpera.html">Gestação e Puerpério</a></td>
+<td>Cidadão com pré-natal ativo no módulo de atendimento do Prontuário Eletrônico e-SUS APS</td>
+<td>Registro de pré-natal do atendimento do Prontuário Eletrônico e-SUS APS</td>
+</tr>
+</tbody></table>
+
+<p>A avaliação dos critérios é refeita a cada processamento. Um cidadão pode entrar ou sair de uma temática ao longo do tempo, seja por transição etária, seja por novos registros clínicos.</p>
+
+<h1 id="4-estrutura">4. Estrutura</h1>
+
+<table><thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_fat_cidadao_pec</td>
+<td>inteiro</td>
+<td>Chave primária da tabela. Código identificador do cidadão. Campo <code>co_seq_fat_cidadao_pec</code> da <code>tb_fat_cidadao_pec</code></td>
+</tr>
+<tr>
+<td>dt_ultimo_atend_medico</td>
+<td>data</td>
+<td>Data do último atendimento com profissional médico</td>
+</tr>
+<tr>
+<td>dt_ultimo_atend_enfermagem</td>
+<td>data</td>
+<td>Data do último atendimento com profissional enfermeiro</td>
+</tr>
+<tr>
+<td>dt_ultimo_atend_odonto</td>
+<td>data</td>
+<td>Data do último atendimento com cirurgião-dentista</td>
+</tr>
+<tr>
+<td>dt_ultimo_atendimento</td>
+<td>data</td>
+<td>Data do último atendimento, sendo a maior data entre médico, enfermagem e odontológico</td>
+</tr>
+<tr>
+<td>dt_ultima_visita</td>
+<td>data</td>
+<td>Data da última visita domiciliar</td>
+</tr>
+<tr>
+<td>nu_ultimo_peso</td>
+<td>texto</td>
+<td>Valor do último peso registrado</td>
+</tr>
+<tr>
+<td>dt_ultima_medicao_peso</td>
+<td>data</td>
+<td>Data da última medição de peso</td>
+</tr>
+<tr>
+<td>nu_ultima_altura</td>
+<td>texto</td>
+<td>Valor da última altura registrada</td>
+</tr>
+<tr>
+<td>dt_ultima_medicao_altura</td>
+<td>data</td>
+<td>Data da última medição de altura</td>
+</tr>
+<tr>
+<td>nu_ultima_pressao_arterial</td>
+<td>texto</td>
+<td>Valor da última pressão arterial registrada</td>
+</tr>
+<tr>
+<td>dt_ultima_medicao_pa</td>
+<td>data</td>
+<td>Data da última medição de pressão arterial</td>
+</tr>
+<tr>
+<td>st_diabetes</td>
+<td>inteiro</td>
+<td>Se o cidadão pertence à temática de diabetes, conforme o <a href="#3-crit-rios-de-inclus-o-nas-tem-ticas">critério de inclusão</a> (0 - Não; 1 - Sim)</td>
+</tr>
+<tr>
+<td>st_hipertensao</td>
+<td>inteiro</td>
+<td>Se o cidadão pertence à temática de hipertensão, conforme o <a href="#3-crit-rios-de-inclus-o-nas-tem-ticas">critério de inclusão</a> (0 - Não; 1 - Sim)</td>
+</tr>
+<tr>
+<td>st_idoso</td>
+<td>inteiro</td>
+<td>Se o cidadão pertence à temática da pessoa idosa, conforme o <a href="#3-crit-rios-de-inclus-o-nas-tem-ticas">critério de inclusão</a> (0 - Não; 1 - Sim)</td>
+</tr>
+<tr>
+<td>st_desenvolvimento_infantil</td>
+<td>inteiro</td>
+<td>Se o cidadão pertence à temática de desenvolvimento infantil, conforme o <a href="#3-crit-rios-de-inclus-o-nas-tem-ticas">critério de inclusão</a> (0 - Não; 1 - Sim)</td>
+</tr>
+<tr>
+<td>st_saude_bucal</td>
+<td>inteiro</td>
+<td>Se o cidadão pertence à temática de saúde bucal, conforme o <a href="#3-crit-rios-de-inclus-o-nas-tem-ticas">critério de inclusão</a> (0 - Não; 1 - Sim)</td>
+</tr>
+<tr>
+<td>st_saude_mulher</td>
+<td>inteiro</td>
+<td>Se o cidadão pertence à temática de saúde da mulher, conforme o <a href="#3-crit-rios-de-inclus-o-nas-tem-ticas">critério de inclusão</a> (0 - Não; 1 - Sim)</td>
+</tr>
+<tr>
+<td>st_gestante_puerpera</td>
+<td>inteiro</td>
+<td>Se o cidadão pertence à temática de gestação e puerpério, conforme o <a href="#3-crit-rios-de-inclus-o-nas-tem-ticas">critério de inclusão</a> (0 - Não; 1 - Sim)</td>
+</tr>
+<tr>
+<td>dt_atualizacao</td>
+<td>data e hora</td>
+<td>Data e hora da última atualização do registro</td>
+</tr>
+<tr>
+<td>st_lookup_etl</td>
+<td>inteiro</td>
+<td>Coluna de controle interno do processamento. Indica se o registro precisa ser reprocessado (0 - Não; 1 - Sim)</td>
+</tr>
+<tr>
+<td>ds_vigencia_bolsa_familia</td>
+<td>texto</td>
+<td>Vigência do Bolsa Família no padrão <code>AAAA0S</code>, por exemplo <code>202401</code>. Preenchida somente quando o cidadão é beneficiário</td>
+</tr>
+<tr>
+<td>dt_proxima_expiracao</td>
+<td>data</td>
+<td>Menor data futura em que algum dado do registro vence e as temáticas do cidadão precisam ser reavaliadas, incluindo a próxima transição etária. Nulo quando nenhum vencimento se aplica, como no caso de cidadão sem data de nascimento conhecida ou acima do último limite de idade</td>
+</tr>
+</tbody></table>
+
+<h1 id="5-origem-dos-dados">5. Origem dos dados</h1>
+
+<p>Os blocos de origem citados na coluna &quot;Origem&quot; estão descritos em <a href="/dw/data_mart/origem_dos_dados.html">Origem dos dados</a>, que detalha os fatos consultados e os locais do sistema onde a informação pode ser registrada.</p>
+
+<table><thead>
+<tr>
+<th>Colunas</th>
+<th>Origem</th>
+<th>Regra de seleção</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>dt_ultimo_atend_medico<br>dt_ultimo_atend_enfermagem</td>
+<td><a href="/dw/data_mart/origem_dos_dados.html#3-1-consulta-m-dica-ou-de-enfermagem">Consulta médica ou de enfermagem</a></td>
+<td>Data do último atendimento de cada categoria profissional, sem filtro de CIAP ou CID</td>
+</tr>
+<tr>
+<td>dt_ultimo_atend_odonto</td>
+<td><a href="/dw/data_mart/origem_dos_dados.html#3-2-consulta-odontol-gica">Consulta odontológica</a></td>
+<td>Data do último atendimento odontológico</td>
+</tr>
+<tr>
+<td>dt_ultimo_atendimento</td>
+<td><a href="/dw/data_mart/origem_dos_dados.html#3-1-consulta-m-dica-ou-de-enfermagem">Consulta médica ou de enfermagem</a><br><a href="/dw/data_mart/origem_dos_dados.html#3-2-consulta-odontol-gica">Consulta odontológica</a></td>
+<td>Maior data entre as três colunas anteriores. Não consulta os fatos diretamente</td>
+</tr>
+<tr>
+<td>dt_ultima_visita</td>
+<td><a href="/dw/data_mart/origem_dos_dados.html#3-3-visita-domiciliar">Visita domiciliar</a></td>
+<td>Data da última visita domiciliar, sem filtro de motivo</td>
+</tr>
+<tr>
+<td>nu_ultimo_peso<br>dt_ultima_medicao_peso<br>nu_ultima_altura<br>dt_ultima_medicao_altura</td>
+<td><a href="/dw/data_mart/origem_dos_dados.html#3-4-medi-o-de-peso-e-de-altura">Medição de peso e de altura</a></td>
+<td>Último valor registrado de cada medida e a respectiva data. Peso e altura são avaliados de forma independente, não sendo exigido registro simultâneo</td>
+</tr>
+<tr>
+<td>nu_ultima_pressao_arterial<br>dt_ultima_medicao_pa</td>
+<td><a href="/dw/data_mart/origem_dos_dados.html#3-5-medi-o-de-press-o-arterial">Medição de pressão arterial</a></td>
+<td>Último valor de pressão arterial registrado e a respectiva data</td>
+</tr>
+<tr>
+<td>ds_vigencia_bolsa_familia</td>
+<td>Importação do Bolsa Família</td>
+<td>Não possui fato de origem no DW. A vigência é obtida da importação do arquivo de beneficiários do Bolsa Família</td>
+</tr>
+<tr>
+<td>st_diabetes<br>st_hipertensao<br>st_idoso<br>st_desenvolvimento_infantil<br>st_saude_bucal<br>st_saude_mulher<br>st_gestante_puerpera</td>
+<td><a href="#3-crit-rios-de-inclus-o-nas-tem-ticas">Critérios de inclusão</a></td>
+<td>Marcadores de pertencimento às temáticas, avaliados segundo os critérios de inclusão</td>
+</tr>
+</tbody></table>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/js/lunr.min.js"></script>
+
+    <script src="/js/site.js" type="text/javascript"></script>    
+    <script src="/js/search-index.js" type="text/javascript"></script>
+    <script src="/js/busca.js"></script>
+  </body>
+</html>

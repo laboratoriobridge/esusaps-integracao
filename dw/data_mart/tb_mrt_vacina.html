@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tabela de vacinas</title>
+  <meta name="description" content="1. Objetivo">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://integracao.esusaps.bridge.ufsc.tech/dw/data_mart/tb_mrt_vacina.html">
+  <link rel="icon" type="image/png" href="/img/logo-esus.png">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>  
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <span class="title-text">Integração e-SUS APS PEC</span>
+      
+        <span class="label">versão 8.7.4</span>
+      
+    </a>
+
+    <nav class="site-nav">
+      <a href="javascript: void" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/pdf.html"><i class="icon-pdf"></i> Gerar PDF</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="breadcrumb-placeholder">
+  <div class="wrapper breadcrumb-wrapper">
+    <ol class="breadcrumb">
+      <img src="/img/logo-esus.png" alt="e-SUS">
+      <li><a href="/">Home</a></li>
+
+      
+        
+          
+            <li><a title="Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html">Data Warehouse Relatórios e-SUS APS PEC</a></li>
+          
+        
+          
+            <li><a title="Data Mart" href="/dw/data_mart/index.html">Data Mart</a></li>
+          
+        
+          
+            <li><a title="Tabela de vacinas" href="/dw/data_mart/tb_mrt_vacina.html">Tabela de vacinas</a></li>
+          
+        
+
+      
+    </ol>
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+
+        
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <form action="/search.html" method="get">
+  <input type="search" placeholder="Pesquisar..." name="query" id="quick-search" autocomplete="off">
+</form>
+
+<ul id="search-results"></ul>
+
+<div class="menu">
+  
+
+
+
+  
+
+  <ul>
+    
+      <li>
+        <a title="Voltar para Data Warehouse Relatórios e-SUS APS PEC" href="/dw/index.html" class="back-link">
+          <i class="icon icon-back"></i> Voltar
+          <small>(Data Warehouse Relatórios e-SUS APS PEC)</small>
+        </a>
+      </li>
+    
+
+    <li>
+      <a class="open" title="Data Mart" href="/dw/data_mart/index.html">Data Mart</a>
+      <ul>
+        
+          <li >
+          
+            <a title="Tabela base de condições de saúde" href="/dw/data_mart/tb_mrt_condicoes_saude.html">
+              Tabela base de condições de saúde
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de desenvolvimento infantil" href="/dw/data_mart/tb_mrt_desenv_infantil.html">
+              Tabela de desenvolvimento infantil
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de diabetes" href="/dw/data_mart/tb_mrt_diabetes.html">
+              Tabela de diabetes
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de gestante e puérpera" href="/dw/data_mart/tb_mrt_gestante_puerpera.html">
+              Tabela de gestante e puérpera
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de hipertensão" href="/dw/data_mart/tb_mrt_hipertensao.html">
+              Tabela de hipertensão
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela da pessoa idosa" href="/dw/data_mart/tb_mrt_idoso.html">
+              Tabela da pessoa idosa
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de saúde bucal" href="/dw/data_mart/tb_mrt_saude_bucal.html">
+              Tabela de saúde bucal
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Tabela de saúde da mulher" href="/dw/data_mart/tb_mrt_saude_mulher.html">
+              Tabela de saúde da mulher
+            </a>
+          </li>
+        
+          <li class="active">
+          
+            <a title="Tabela de vacinas" href="/dw/data_mart/tb_mrt_vacina.html">
+              Tabela de vacinas
+            </a>
+          </li>
+        
+          <li >
+          
+            <a title="Origem dos dados" href="/dw/data_mart/origem_dos_dados.html">
+              Origem dos dados
+            </a>
+          </li>
+        
+      </ul>
+    </li>
+  </ul>
+
+
+</div>
+
+          </div>
+        </div>
+        
+
+        <div class="content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Tabela de vacinas</h1>
+    <p class="post-meta">
+      <a class="btn" href="/pdf.html?include=/dw/data_mart/tb_mrt_vacina.html"><i class="icon-pdf"></i> Gerar PDF desta página</a>
+      
+        <span class="label" title="Data da última modificação">Alterado em 14/08/2026</span>
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="1-objetivo">1. Objetivo</h1>
+
+<p>A <code>tb_mrt_vacina</code> materializa as aplicações de vacina <strong>relevantes para as temáticas atendidas pelo <a href="/dw/data_mart/index.html">Data Mart</a></strong>, já com os dados do imunobiológico e da dose desnormalizados.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">IMPORTANTE: esta tabela não é o histórico completo de vacinação do cidadão nem a representação
+canônica de todas as aplicações registradas no DW. Sua população e seu conteúdo são recortados
+pelas regras descritas abaixo.
+</code></pre></div>
+<p>Para consultar todas as aplicações de vacina processadas, utilize as tabelas fato de <a href="/dw/fatos/vacinacao/index.html">Vacinação</a>.</p>
+
+<h1 id="2-regras">2. Regras</h1>
+
+<p><strong>1. </strong> Diferente das demais tabelas do Data Mart, o grão é próximo ao evento de aplicação: um registro por aplicação de vacina, com relacionamento <strong>N:1</strong> com a <code>tb_fat_cidadao_pec</code>.</p>
+
+<p><strong>2. </strong> Somente são processados cidadãos pertencentes às temáticas, gestante e puérpera, pessoa idosa, saúde da mulher e desenvolvimento infantil, conforme os marcadores da <a href="/dw/data_mart/tb_mrt_condicoes_saude.html">Tabela base de condições de saúde</a>.</p>
+
+<p><strong>3. </strong> Somente são considerados os imunobiológicos pertencentes aos grupos de interesse dessas temáticas.</p>
+
+<p><strong>4. </strong> São aplicadas regras de janela específicas por imunobiológico antes da persistência. No caso da influenza, são mantidas apenas as aplicações dos últimos 12 meses.</p>
+
+<p><strong>5. </strong> Os dados do imunobiológico e da dose são desnormalizados a partir da <code>tb_dim_imunobiologico</code> e da <code>tb_dim_dose_imunobiologico</code>.</p>
+
+<p><strong>6. </strong> Esta tabela não possui a coluna <code>dt_atualizacao</code>, pois seus registros representam aplicações e são substituídos integralmente a cada processamento do cidadão.</p>
+
+<h1 id="3-estrutura">3. Estrutura</h1>
+
+<table><thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>co_seq_mrt_vacina</td>
+<td>inteiro</td>
+<td>Chave primária. Código sequencial da tabela</td>
+</tr>
+<tr>
+<td>co_fat_cidadao_pec</td>
+<td>inteiro</td>
+<td>Código identificador do cidadão. Campo <code>co_seq_fat_cidadao_pec</code> da <code>tb_fat_cidadao_pec</code></td>
+</tr>
+<tr>
+<td>nu_identificador_imuno</td>
+<td>inteiro</td>
+<td>Identificador do imunobiológico. Campo <code>nu_identificador</code> da <code>tb_dim_imunobiologico</code></td>
+</tr>
+<tr>
+<td>no_dose</td>
+<td>texto</td>
+<td>Nome da dose aplicada, por exemplo &quot;Dose única&quot; ou &quot;1ª Dose&quot;</td>
+</tr>
+<tr>
+<td>nu_ordem_dose</td>
+<td>inteiro</td>
+<td>Ordem numérica da dose, utilizada para ordenação</td>
+</tr>
+<tr>
+<td>dt_vacina_aplicada</td>
+<td>data</td>
+<td>Data de aplicação da vacina</td>
+</tr>
+<tr>
+<td>no_imunobiologico</td>
+<td>texto</td>
+<td>Nome do imunobiológico aplicado</td>
+</tr>
+<tr>
+<td>sg_imunobiologico</td>
+<td>texto</td>
+<td>Sigla do imunobiológico aplicado</td>
+</tr>
+<tr>
+<td>dt_proxima_expiracao</td>
+<td>data</td>
+<td>Data em que a aplicação mais antiga sai da janela de relevância. Nulo quando não há dados na janela</td>
+</tr>
+</tbody></table>
+
+<h1 id="4-origem-dos-dados">4. Origem dos dados</h1>
+
+<p>Os blocos de origem e os grupos de imunobiológicos citados abaixo estão descritos em <a href="/dw/data_mart/origem_dos_dados.html">Origem dos dados</a>.</p>
+
+<table><thead>
+<tr>
+<th>Colunas</th>
+<th>Origem</th>
+<th>Regra de seleção</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>dt_vacina_aplicada<br>nu_identificador_imuno</td>
+<td><a href="/dw/data_mart/origem_dos_dados.html#3-7-aplica-o-de-imunobiol-gico">Aplicação de imunobiológico</a></td>
+<td>Aplicações pertencentes aos grupos de imunobiológicos de interesse das temáticas atendidas</td>
+</tr>
+<tr>
+<td>no_imunobiologico<br>sg_imunobiologico</td>
+<td><a href="/dw/data_mart/origem_dos_dados.html#3-7-aplica-o-de-imunobiol-gico">Aplicação de imunobiológico</a></td>
+<td>Nome e sigla desnormalizados da <code>tb_dim_imunobiologico</code></td>
+</tr>
+<tr>
+<td>no_dose<br>nu_ordem_dose</td>
+<td><a href="/dw/data_mart/origem_dos_dados.html#3-7-aplica-o-de-imunobiol-gico">Aplicação de imunobiológico</a></td>
+<td>Dose aplicada, desnormalizada da <code>tb_dim_dose_imunobiologico</code>. A ordem numérica é utilizada para ordenação na exibição</td>
+</tr>
+</tbody></table>
+
+<p>Os grupos de imunobiológicos persistidos e a temática que motiva cada um estão relacionados em <a href="/dw/data_mart/origem_dos_dados.html">Origem dos dados</a>. Somente o grupo influenza aplica janela temporal, limitada aos últimos 12 meses.</p>
+
+  </article>
+
+</div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="/js/lunr.min.js"></script>
+
+    <script src="/js/site.js" type="text/javascript"></script>    
+    <script src="/js/search-index.js" type="text/javascript"></script>
+    <script src="/js/busca.js"></script>
+  </body>
+</html>
