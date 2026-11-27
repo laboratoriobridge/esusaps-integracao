@@ -1,0 +1,36 @@
+.page {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--ifm-spacing-vertical) var(--ifm-spacing-horizontal) 6rem;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.filterInput {
+  flex: 1;
+  max-width: 20rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+  color: var(--ifm-font-color-base);
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+}
+
+.printBar {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: var(--ifm-background-surface-color);
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}

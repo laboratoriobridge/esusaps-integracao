@@ -1,0 +1,33 @@
+---
+id: RF-EDW.tb_fat_atend_odonto_encaminham
+title: Tabela fato dos encaminhamentos do atendimento odontológico
+order: 1
+parent: RF-EDW.atendimento_odontologico_individual
+---
+import MetadadosOdonto from '../../_shared/metadados_odonto.mdx';
+import DimEncaminhamentos from '../../_shared/dim_encaminhamentos.mdx';
+import DimensoesEmComum from '../../_shared/dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_atend_odonto_encaminham` só é preenchida quando são processados registros de encaminhamento para serviço especializado feitos em um :link[atendimento odontológico]{id=dicionario-fao} e o atendimento em questão é processado.
+
+## 2. Fatos
+
+### 2.1 Metadados dos fatos
+
+| Coluna DW                          | Referência LEDI | Referência sistema |
+| ---------------------------------- | --------------- | ------------------ |
+| co\_seq\_fat\_atd\_odo\_encaminham | -               | Código de identificação sequencial dos encaminhamentos registrados |
+<MetadadosOdonto />
+
+## 3. Dimensões da tabela
+
+### 3.1 Dimensões específicas dessa tabela
+
+<DimEncaminhamentos />
+
+### 3.2 Dimensões comuns a todas as tabelas fato do atendimento odontológico
+
+<DimensoesEmComum />

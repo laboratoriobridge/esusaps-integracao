@@ -1,0 +1,54 @@
+---
+id: RF-EDW.tb_fat_procedimento
+title: Tabela fato dos procedimentos (individualizados e consolidados)
+order: 1
+parent: RF-EDW.procedimentos
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_procedimento` é populada sempre que os dados de um :link[procedimento]{id=dicionario-fp} são processados. Os dados processados nessa tabela podem se referir tanto a procedimentos individualizados (quando há referência a um cidadão), quanto a procedimentos consolidados (quando não há referência a um cidadão).
+
+## 2. Regras
+
+:nr A `tb_fat_procedimento` é preenchida quando são processado(a)s:
+
+- Fichas de procedimento recebidas através da importação de sistemas terceiros ou outras instalações do PEC e-SUS-APS;
+- Registro de um atendimento que possua ao menos um procedimento SIGTAP ou AB no **Plano** ou na **Finalização do atendimento**;
+- Registro de uma escuta inicial com profissional de nível médio que não seja de odontologia;
+- Registro de ao menos um procedimento individualizado no CDS;
+- Registro de ao menos um procedimento consolidado no CDS.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_procedimento | - | Código de identificação sequencial criado automaticamente pelo sistema |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fp anchor=1-uuidficha}  | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | - | Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC terá o mesmo valor do campo nu\_uuid\_ficha | 
+
+### 3.2 Métricas dos Fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| nr\_proc\_consdd\_pressao\_arteria | :link[numTotalAfericaoPa]{id=dicionario-fp anchor=5-numtotalafericaopa} | Quantidade de aferições de pressão realizadas |
+| nr\_proc\_consdd\_glicemia\_capila | :link[numTotalGlicemiaCapilar]{id=dicionario-fp anchor=6-numtotalglicemiacapilar} | Quantidade de aferições de glicemia capilar realizadas |
+| nr\_proc\_consdd\_temperatura | :link[numTotalAfericaoTemperatura]{id=dicionario-fp anchor=7-numtotalafericaotemperatura} | Quantidade de aferições de temperatura realizadas |
+| nr\_proc\_consdd\_medicao\_altura | :link[numTotalMedicaoAltura]{id=dicionario-fp anchor=8-numtotalmedicaoaltura} | Quantidade de aferições de altura realizadas |
+| nr\_proc\_consdd\_curativo\_simple | :link[numTotalCurativoSimples]{id=dicionario-fp anchor=9-numtotalcurativosimples} | Quantidade de curativos simples realizados |
+| nr\_proc\_consdd\_medicao\_peso | :link[numTotalMedicaoPeso]{id=dicionario-fp anchor=10-numtotalmedicaopeso} | Quantidade de aferições de peso realizadas |
+| nr\_proc\_consdd\_mate\_exame\_labo | :link[numTotalColetaMaterialParaExameLaboratorial]{id=dicionario-fp anchor=11-numtotalcoletamaterialparaexamelaboratorial} | Quantidade de coletas para exame laboratorial realizadas |
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+Essa tabela não possui dimensões específicas.
+
+### 4.2 Dimensões comuns a todas as tabelas fato do procedimento
+
+<DimensoesEmComum />

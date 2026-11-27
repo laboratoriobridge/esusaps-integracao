@@ -1,0 +1,69 @@
+---
+id: RF-EDW.tb_fat_vacinacao
+title: Tabela fato da vacinação
+order: 1
+parent: RF-EDW.vacinacao
+---
+import DimensoesEmComum from './_dimensoes_em_comum.mdx';
+
+
+## 1. Objetivo
+
+A tabela `tb_fat_vacinacao` é populada sempre que os dados de um registro de :link[Vacinação]{id=dicionario-fv} são processados. Ela armazena o cabeçalho do atendimento de vacinação.
+
+## 2. Regras
+
+:nr A `tb_fat_vacinacao` é preenchida quando são processado(a)s:
+
+- Fichas de vacinação recebidas através da importação de sistemas terceiros, outras instalações do PEC e-SUS-APS ou do aplicativo e-SUS Vacinação;
+- Registro de um atendimento de vacinação no CDS;
+- Registro de um atendimento de vacinação no módulo de vacinação do PEC e-SUS-APS.
+
+## 3. Fatos
+
+### 3.1 Metadados dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| co\_seq\_fat\_vacinacao | - | Código de identificação sequencial criado automaticamente pelo sistema |
+| nu\_uuid\_ficha | :link[uuidFicha]{id=dicionario-fv anchor=1-uuidficha} | Identificador universalmente único do registro |
+| nu\_uuid\_dado\_transp | :link[uuidDadoSerializado]{id=camada-transporte anchor=1-uuiddadoserializado} | Identificador universalmente único da camada de transporte de dados. Caso o registro seja gerado dentro do PEC e-SUS-APS, terá o mesmo valor do campo nu\_uuid\_ficha |
+| co\_fat\_cidadao\_pec | - | Código de identificação sequencial do cidadão. Campo `co_seq_fat_cidadao_pec` da `tb_fat_cidadao_pec` |
+| nu\_cns | :link[cnsCidadao]{id=dicionario-fv anchor=3-cnscidadao} | CNS do cidadão |
+| nu\_cpf\_cidadao | :link[cpfCidadao]{id=dicionario-fv anchor=12-cpfcidadao} | CPF do cidadão |
+| nu\_prontuario | :link[numProntuario]{id=dicionario-fv anchor=2-numprontuario} | Número do prontuário do cidadão criptografado |
+| nu\_atendimento | - | Número sequencial do atendimento na ficha. Uma ficha pode conter mais de um atendimento, esse campo é utilizado para ordenar os atendimentos dentro um mesmo envio |
+| dt\_inicial\_atendimento | :link[dataHoraInicialAtendimento]{id=dicionario-fv anchor=10-datahorainicialatendimento} | Data e hora de início do atendimento no formato YYYY-MM-DD HH:MM:SS.MMM |
+| dt\_final\_atendimento | :link[dataHoraFinalAtendimento]{id=dicionario-fv anchor=11-datahorafinalatendimento} | Data e hora de término do atendimento no formato YYYY-MM-DD HH:MM:SS.MMM |
+
+### 3.2 Métricas dos fatos
+
+| Colunas DW | Referência LEDI | Referência sistema |
+| ---------- | --------------- | ------------------ |
+| dt\_nascimento | :link[dtNascimento]{id=dicionario-fv anchor=4-dtnascimento} | Data de nascimento do cidadão |
+| st\_viajante | :link[viajante]{id=dicionario-fv anchor=7-viajante} | Indica se o cidadão é viajante |
+| st\_comunicante\_hanseniase | :link[comunicanteHanseniase]{id=dicionario-fv anchor=8-comunicantehanseniase} | Indica se o cidadão é comunicante de hanseníase |
+| ds\_filtro\_imunobiologico | - | Campo de filtro com os imunobiológicos aplicados |
+| ds\_filtro\_estrategia\_vacinacao | - | Campo de filtro com as estratégias de vacinação utilizadas |
+| ds\_filtro\_dose\_imunobiologico | - | Campo de filtro com as doses dos imunobiológicos |
+| ds\_filtro\_lote | - | Campo de filtro com os lotes das vacinas |
+| ds\_filtro\_fabricante | - | Campo de filtro com os fabricantes das vacinas |
+| ds\_filtro\_grupo\_atendimento | - | Campo de filtro com os grupos de atendimento |
+| st\_nao\_possui\_cpf | - | Indica se o cidadão não possui CPF |
+
+## 4. Dimensões da tabela
+
+### 4.1 Dimensões específicas dessa tabela
+
+| Coluna DW | Dimensão referência |
+| --------- | ------------------- |
+| co\_dim\_faixa\_etaria | Código da faixa etária do cidadão. Campo `co_seq_dim_faixa_etaria` da `tb_dim_faixa_etaria` |
+| co\_dim\_sexo | Código do sexo do cidadão. Campo `co_seq_dim_faixa_sexo` da `tb_dim_sexo` |
+| co\_dim\_local\_atendimento | Código do local de atendimento. Campo `co_seq_dim_local_atendimento` da `tb_dim_local_atendimento` |
+| co\_dim\_turno | Código do turno do atendimento. Campo `co_seq_dim_turno` da `tb_dim_turno` |
+| co\_dim\_condicao\_maternal | Código da condição maternal da cidadã. Campo `co_seq_dim_condicao_maternal` da `tb_dim_condicao_maternal` |
+| co\_dim\_just\_nao\_possui\_cpf | Código da justificativa de não possuir CPF. Campo `co_seq_dim_just_nao_possui_cpf` da `tb_dim_just_nao_possui_cpf` |
+
+### 4.2 Dimensões comuns a todas as tabelas fato da vacinação
+
+<DimensoesEmComum />

@@ -2,3 +2,4 @@ html/_site/
 _site/
 .sass-cache/
 integracao-private/
+.claude/
